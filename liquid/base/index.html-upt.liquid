@@ -1,0 +1,245 @@
+{{ 'shop/base' | javascript_include_tag }}
+
+<main class="l-container js-main-container upthome" role="main">
+    {{ 'notice' | flash: 'control-alert alert-success', 'text u-color__bg--bg u-color__text--alert' }}
+  {{ 'alert' | flash: 'control-alert alert-danger', 'text u-color__bg--bg u-color__text--alert' }}
+  {{ content_for_index }}
+
+  {% comment %} welcome modal {% endcomment %}
+  {% comment %} {% unless customer_signed_in %}
+    <div class="c-welcome_modal">
+      <div class="c-welcome_modal__overlay"></div>
+      <div class="c-welcome_modal__win u-color__bg--base">
+        <div class="c-welcome_modal__win__title u-font__both">NEWS LETTER</div>
+        <div class="c-welcome_modal__win__lead">新商品、お得なお知らせなどを定期的に配信中、<br />今機会に是非登録してください。</div>
+        <form class="c-subscribe_form">
+          <input class="c-subscribe_form__input u-color__bg--base u-color__border--input" type="email">
+          <button class="c-subscribe_form__btn u-color__bg--accent u-color__text--base">登録</button>
+        </form>
+        <button class="c-welcome_modal__win__btn"><i class="u-icon--close"></i></button>
+      </div>
+    </div>
+  {% endunless %} {% endcomment %}
+  {% comment %} end of welcome modal {% endcomment %}
+
+  <section class="upthome__fv" id="js-uptHome">
+    <div class="upthome__fvblc">
+        <ul class="upthome__fvblc--sns">
+            <li>
+                <a href="https://www.instagram.com/_upt_official/" class="main__sns--insta" target="_blank">Instagram</a>
+            </li>
+            <li>
+                <a href="https://twitter.com/_upt_official" class="main__sns--twitter" target="_blank">Twitter</a>
+            </li>
+            <li>
+                <a href="https://www.youtube.com/channel/UCK78cTfeqqzgKOT1OVKhw8Q" class="main__sns--youtube" target="_blank">Twitter</a>
+            </li>
+        </ul>   
+        <span href="/shop/" class="upthome__fv--logo">UPt</span>
+    </div>
+    </section>
+    <section class="uptline"></section>
+
+
+    <section class="upthome__intro" id="ABOUT">
+        <div class="upthome__intro--inner">
+            <div class="upthome__intro--blc">
+                <div class="upthome__intro--txtblc">
+                    <div class="upthome__intro--txtblc-inner">
+                <h3 class="upthome__intro--ttl">化粧なんて、なんとなくでいい</h3>
+                <p class="upthome__intro--txt">歳を重ねていくのは素敵なことだ</p>
+                <p class="upthome__intro--txt">泣きたい気持ちをを堪える日々や<br>にがく悲しい思い出も</p>
+                <p class="upthome__intro--txt">張り裂けそうな愛情や<br>穏やかさに包まれた愛しい経験も</p>
+                <p class="upthome__intro--txt">出会いや別れ<br>味わい深い出来事のひとつひとつが<br>きっと顔に表れてくる</p>
+                <p class="upthome__intro--txt">だから、化粧なんてなんとなくでいい</p>
+                <p class="upthome__intro--txt">だけどなんとなくじゃ納得できないから<br>日々が化粧に費やされてしまう<br>
+                    受け入れるしなやかな精神と<br>それを補うパートナーがほしい</p>
+                <p class="upthome__intro--txt">毎日歯を磨くように<br>シャワーを浴びるように<br>手間を減らしてシンプルに<br>
+                    なるだけナチュラルに生活の一部に</p>
+                <p class="upthome__intro--txt">これは、そんなわたしの願いを込めた<br>大切な贈り物のようなもの</p>
+
+                </div>
+            </div>
+            </div>
+            <div class="upthome__intro--img">
+
+                
+                    <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_about-pc.png" alt="" class="pcImg">
+                
+
+                
+                    <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_about-sp.png" alt="" class="spImg">
+                
+            </div>
+        </div>
+    </section>
+    <section class="uptline"></section>
+
+
+    <section class="upthome__set">
+        <div class="upthome__set--img">
+            <div class="upthome__set--img-in">   
+                <div class="upthome__set--img-feature"></div>
+                <p>BUY NOW</p>
+            </div>
+        </div>
+        <div class="upthome__set--blc">
+            <div class="upthome__set--blc-flex">
+                <div class="upthome__set--blc-con">
+                    <div class="upthome__set--sblc">
+                    <p class="upt__name">Upt<br>SKINCARE SET</p>
+                    <p class="upt__price">¥7,590 (tax in)</p>
+                    </div>
+                    <div class="upthome__set--sblc02">
+                        <p class="upt__sname">SET ITEM</p>
+                        <div class="upthome__set--ssblc">
+                            <p class="upt__sname--sub minw">1.</p>
+                            <div>
+                                <p class="upt__sname--sub">BALANCING TONER</p>
+                                <p class="upt__sname--jp">バランシングトナー</p>
+                                <p class="upt__sname--jp italic">155mL</p>
+                            </div>
+                        </div>
+                        <div class="upthome__set--ssblc">
+                            <p class="upt__sname--sub minw">2.</p>
+                            <div>
+                                <p class="upt__sname--sub">CONDITIONING MILK</p>
+                                <p class="upt__sname--jp">コンディショニングミルク</p>
+                                <p class="upt__sname--jp italic">120mL</p>
+                            </div>
+                        </div>
+                        <div class="upthome__set--ssblc">
+                            <p class="upt__sname--sub minw">3.</p>
+                            <div>
+                                <p class="upt__sname--sub">MOISTURIZING CREAM</p>
+                                <p class="upt__sname--jp">モイスチャライジングクリーム</p>
+                                <p class="upt__sname--jp italic">40g</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="upthome__set--blc-btm">
+                <a href="/shop/products/upt_skincareset" >
+                    <span>
+                    VIEW MORE
+                    </span>
+                </a>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="uptline"></section>
+
+  
+    <section class="upthome__products">
+        <ul class="upthome__products--blc">
+            <li>
+                <div>
+                    
+                        <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/home_prodcut01.png" alt="">
+                    
+                    <div class="upthome__products--nameblc">
+                        <p class="upthome__products--name">BALANCING TONER</p>
+                        <p class="upthome__products--jpname">バランシングトナー<span class="italic">155mL</span></p>
+                    </div>
+                </div>
+                <a href="">
+                    <span>VIEW MORE</span>
+                </a>
+            </li>
+            <li>
+                <div>
+                    
+                        <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/home_prodcut02.png" alt="">
+                    
+                    <div class="upthome__products--nameblc">
+                        <p class="upthome__products--name">CONDITIONING MILK</p>
+                        <p class="upthome__products--jpname">コンディショニングミルク<span class="italic">120mL</span></p>
+                    </div>
+                </div>
+                <a href="">
+                    <span>VIEW MORE</span>
+                </a>
+            </li>
+            <li>
+                <div>
+                    
+                        <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/home_prodcut03.png" alt="">
+                    
+                    <div class="upthome__products--nameblc">
+                        <p class="upthome__products--name">MOISTURIZING CREAM</p>
+                        <p class="upthome__products--jpname">モイスチャライジングクリーム<span class="italic">40g</span></p>
+                    </div>
+                </div>
+                <a href="">
+                    <span>VIEW MORE</span>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    
+    <section id="PRODUCER" class="upthome__producer">
+        <div class="upthome__producer--inner">
+
+        </div>
+    </section>
+
+
+    <section class="upthome__yumi"> 
+        <div class="upthome__yumi--blc">
+            
+                <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_producer-pc.png" alt="" class="pcImg">
+            
+
+            
+                <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_producer-sp.png" alt="" class="spImg">
+            
+        </div>
+        <div class="upthome__yumi--blc right">
+            <div class="upthome__yumi--sblc">
+                <p class="upthome__yumi--txt">年齢を重ねることは、老いていくとか、<br>
+                    人生の残り時間が減っていくと<br>
+                    感じることもあるかもしれません。<br>
+                    でもそれだけではなく、<br>
+                    日々人生を重ねて、経験や思い出を増やして、<br>
+                    豊かになることでもあると思うのです。<br>
+                    美しさとは、内面や人生が滲み出てこそ<br>
+                    際立つものだと考えます。<br>
+                    <br>
+                    お肌は自分を表現する一つの要素に過ぎない。<br>
+                    だけどとても大切な要素。<br>
+                    <br>
+                    Uptが、持って生まれたものを愛すること、<br>
+                    受け入れて更新していく事に繋がれば、<br>
+                    とても嬉しいです。</p>
+
+                <p class="upthome__yumi--sign">Yumi Adachi</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="uptline"></section>
+
+
+    <section class="upthome__illust">
+        <p class="upthome__illust--ttl">安達 祐実（あだち ゆみ）</p>
+        <p class="upthome__illust--txt">1981年9月14日生まれ。2歳からキッズモデルとして活動を始め、94年の日本テレビ系ドラマ『家なき子』で本格的にブレイク。同作品の台詞は、新語・流行語大賞にも選ばれるなど社会現象となった。以降も幅広い役をこなす実力派俳優として数々のドラマ、映画に出演する他、ファッションブランドのプロデュース等、活動は多岐に渡る。</p>
+    </section>
+
+
+
+
+
+  {% comment %} movie modal {% endcomment %}
+  <div class="c-movie_modal">
+    <div class="c-movie_modal__inner">
+      <i class="c-movie_modal__inner__close u-icon--close u-color__text--base js-close-movie"></i>
+      <div class="c-movie_modal__inner__content">
+        <div id='ytplayer-modal'></div>
+      </div>
+    </div>
+  </div>
+  {% comment %} end of movie modal {% endcomment %}
+</main>
+<script src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/home.js"></script>

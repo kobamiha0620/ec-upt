@@ -1,0 +1,2573 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Shippori+Mincho:wght@400;500;600;700;800&family=Sorts+Mill+Goudy&display=swap");
+@-webkit-keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.monserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.fadein00 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.fadein01 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.fadein02 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.fadein03 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.fadein04 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.uptfootersns {
+  padding: 50px 0 68px;
+}
+.uptfootersns__ttl {
+  text-align: center;
+  color: #FF583B;
+  font-weight: 600;
+  font-size: 1.6875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  margin: 0 auto 58px;
+}
+@media screen and (max-width: 768px) {
+  .uptfootersns {
+    padding: 13.3vw 0 17.8vw;
+  }
+  .uptfootersns__ttl {
+    margin: 0 auto 10vw;
+    font-size: 1.3125rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+}
+.uptfootersns__list {
+  display: flex;
+  justify-content: space-between;
+  max-height: 78px;
+  width: 100%;
+  height: 5.9vh;
+  padding: 0;
+  width: clamp(220px, 28%, 254px);
+}
+.uptfootersns__list--wrapper {
+  display: flex;
+  justify-content: center;
+}
+.uptfootersns__list li {
+  margin: 0;
+  width: 40px;
+  height: 36px;
+  max-width: 40px;
+  max-height: 36px;
+}
+.uptfootersns__list li a {
+  display: block;
+  max-width: 40px;
+  max-height: 36px;
+  width: 40px;
+  height: 36px;
+}
+.uptfootersns__list li a:hover {
+  opacity: 0.7;
+}
+.uptfootersns__list li img {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .uptfootersns__list {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    width: clamp(180px, 58vw, 230px);
+    padding: 0;
+    max-height: 7.5vw;
+  }
+  .uptfootersns__list li {
+    margin: 0;
+    width: 8.6vw;
+    height: 7.5vw;
+  }
+  .uptfootersns__list li a {
+    display: block;
+    width: 8.6vw;
+    height: 7.5vw;
+  }
+  .uptfootersns__list li img {
+    width: 100%;
+  }
+}
+
+.uptfooter {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  background: #32667A;
+  padding: 34px 0 10px;
+}
+.uptfooter__links {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 26px;
+}
+.uptfooter__links li a {
+  display: inline-block;
+  color: #FFF;
+  padding: 0 1em;
+  border-right: 1px #FFF solid;
+  font-size: 0.625rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.uptfooter__links li a:hover {
+  opacity: 0.8;
+}
+.uptfooter__links li:last-child a {
+  border: none;
+}
+.uptfooter__copy {
+  text-align: center;
+}
+.uptfooter__copy small {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 0.6875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+@media screen and (max-width: 768px) {
+  .uptfooter {
+    padding: 9.8vw 0 10px;
+  }
+  .uptfooter__links {
+    display: block;
+    margin: 0 0 7.9vw;
+  }
+  .uptfooter__links li {
+    text-align: center;
+  }
+  .uptfooter__links li a {
+    padding: 0;
+    border: none;
+    font-size: 0.625rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .uptfooter__copy {
+    text-align: center;
+  }
+  .uptfooter__copy small {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 0.6875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+}
+
+.l-header {
+  border-bottom: none;
+}
+
+.uptheader {
+  background-position: 0 bottom;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/header_line-pc.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+.uptheader .l-header__inner__block__item--menu:not(:last-child) {
+  margin-right: 0;
+}
+.uptheader.bg__header {
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/header_pc_bg2.svg");
+}
+.uptheader .uptblc__inner {
+  background: none;
+}
+.uptheader .uptheader__anounce {
+  background: #FF583B;
+  padding: 8px 60px;
+  overflow: hidden;
+  color: #FFF;
+  display: flex;
+  align-items: center;
+}
+.uptheader .uptheader__anounce .c-announce_bar__text {
+  color: #FFF;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  display: inline-block;
+  /* 必須 */
+  padding-left: 100%;
+  /* 右端から文字をスタートさせるため */
+  white-space: nowrap;
+  /* 改行が起こらないように対策 */
+  line-height: 1em;
+  /* 行間（高さ）を1文字分にする */
+  -webkit-animation: scroll 17s linear infinite;
+          animation: scroll 17s linear infinite;
+  font-size: 0.75rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.2em;
+}
+.uptheader .uptheader__anounce .c-announce_bar__close {
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/top_close.png");
+  background-size: 10px 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  display: block;
+  top: 7px;
+}
+.uptheader .uptheader__anounce .u-icon--close:before {
+  content: "";
+}
+@media screen and (max-width: 768px) {
+  .uptheader .uptheader__anounce {
+    padding: 8px;
+  }
+  .uptheader .uptheader__anounce .c-announce_bar__text {
+    -webkit-animation: scroll 7s linear infinite;
+            animation: scroll 7s linear infinite;
+  }
+  .uptheader .uptheader__anounce .c-announce_bar__close {
+    right: 8px;
+  }
+}
+.uptheader .uptheader__icons {
+  display: flex;
+  border: none;
+  justify-content: space-between;
+  padding: 14px 38px 30px 30px;
+  align-items: center;
+}
+.uptheader .uptheader__icons--logo a {
+  background-size: 100% auto;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/logo.svg");
+  width: 50px;
+  height: 27px;
+  opacity: 0;
+}
+.uptheader .uptheader__icons--logo a:hover {
+  opacity: 0.7;
+}
+.uptheader .uptheader__icons .js-logo {
+  opacity: 0;
+  -webkit-animation: fadeOutAnime 1s ease 0s 1 forwards;
+          animation: fadeOutAnime 1s ease 0s 1 forwards;
+}
+.uptheader .uptheader__icons .js-logo.active {
+  opacity: 1;
+  -webkit-animation: fadeInAnime 1s ease 0s 1 forwards;
+          animation: fadeInAnime 1s ease 0s 1 forwards;
+}
+.uptheader .uptheader__icons--btns {
+  display: flex;
+  align-items: center;
+}
+.uptheader .uptheader__icons--btns a {
+  margin: 0 0;
+}
+@media screen and (max-width: 768px) {
+  .uptheader .uptheader__icons--logo a {
+    width: 13.4vw;
+    height: 7.2vw;
+  }
+}
+.uptheader .uptgmenu {
+  height: 100vh;
+}
+.uptheader .uptgmenu .c-gmenu__container {
+  overflow-x: hidden;
+}
+.uptheader .uptgmenu .c-gmenu__container__inner {
+  padding: 0;
+  background: rgba(255, 255, 255, 0);
+}
+.uptheader .uptgmenu__head {
+  margin: 0 -20px;
+  padding: 14px 38px 30px 30px;
+  justify-content: flex-end;
+  display: flex;
+  align-items: center;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/gmenu_bg-pc.svg");
+  background-size: 100% auto;
+  background-position: 0 bottom;
+  background-repeat: no-repeat;
+}
+.uptheader .uptgmenu__head a {
+  display: inline-block;
+}
+.uptheader .uptgmenu .c-gmenu__container {
+  padding: 0;
+  margin: 0;
+}
+.uptheader .uptgmenu .c-gmenu__container__close {
+  position: relative;
+  right: auto;
+  top: auto;
+}
+.uptheader .uptgmenu__inner {
+  width: 100%;
+  padding: 0 20px;
+  height: 100%;
+  background: #F7F8F8 !important;
+}
+.uptheader .uptgmenu__innerline {
+  border-right: 1px #32667A solid;
+  border-left: 1px #32667A solid;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+.uptheader .uptgmenu__upper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.uptheader .uptgmenu__upperlinks {
+  text-align: center;
+  margin: 0 0 10px;
+}
+.uptheader .uptgmenu__upperlinks li {
+  margin-bottom: 10px;
+}
+.uptheader .uptgmenu__upperlinks li a {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  color: #FFF;
+  color: #32667A;
+  font-weight: 600;
+  font-size: 1.3125rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.uptheader .uptgmenu__sns {
+  padding: 40px 0 0;
+}
+.uptheader .uptgmenu__sns__ttl {
+  text-align: center;
+  color: #32667A;
+  font-weight: 600;
+  font-size: 1.3125rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  margin: 0 auto 42px;
+}
+@media screen and (max-width: 768px) {
+  .uptheader .uptgmenu__sns {
+    padding: 13.3vw 0 0;
+  }
+  .uptheader .uptgmenu__sns__ttl {
+    margin: 0 auto 10vw;
+    font-size: 1.125rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+}
+.uptheader .uptgmenu__sns__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+.uptheader .uptgmenu__sns__list--wrapper {
+  width: 158px;
+  margin: 0 auto;
+}
+.uptheader .uptgmenu__sns__list li {
+  margin: 0;
+}
+.uptheader .uptgmenu__sns__list li a {
+  display: block;
+  width: 30px;
+  height: 25px;
+}
+.uptheader .uptgmenu__sns__list li a:hover {
+  opacity: 0.7;
+}
+.uptheader .uptgmenu__sns__list li img {
+  width: 100%;
+}
+.uptheader .uptgmenu__btm {
+  background: #32667A;
+  width: 480px;
+  padding: 36px 0 10px;
+  margin: 0 -21px;
+}
+.uptheader .uptgmenu__btm--logo {
+  text-align: center;
+}
+.uptheader .uptgmenu__btm--logo a {
+  background-size: 100% auto;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/logo_gmenu.svg");
+  width: 81px;
+  height: 44px;
+  display: inline-block;
+}
+.uptheader .uptgmenu__btm--links {
+  text-align: center;
+  margin: 30px 0 20px;
+}
+.uptheader .uptgmenu__btm--links li {
+  line-height: 0;
+  font-size: 0;
+  margin: 0 0 10px;
+}
+.uptheader .uptgmenu__btm--links a {
+  line-height: 1;
+  color: #FFF;
+  font-size: 0.625rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.uptheader .uptgmenu__btm--copy {
+  text-align: center;
+  color: #FFF;
+  line-height: 0;
+}
+.uptheader .uptgmenu__btm--copy small {
+  line-height: 1;
+  font-size: 0.6875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-family: Montserrat;
+}
+@media screen and (max-width: 768px) {
+  .uptheader .uptgmenu__head {
+    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/gmenu_bg-sp.svg");
+    padding: 3.4vw 10.4vw 5vw 10.6vw;
+    margin: 0 -4vw;
+    min-height: 7.8vw;
+  }
+  .uptheader .uptgmenu__inner {
+    padding: 0 4vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .uptheader .uptgmenu__upperlinks li {
+    margin-bottom: 8px;
+  }
+  .uptheader .uptgmenu__upperlinks li a {
+    font-size: 1.125rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .uptheader .uptgmenu__btm {
+    width: 100vw;
+    margin: 0 -4vw;
+    margin-top: auto;
+    padding-bottom: 10vh;
+  }
+}
+.uptheader .c-gmenu {
+  position: fixed;
+  top: 0;
+  overflow: hidden;
+  transform: translateX(0);
+  transition: left 0s 0.4s, opacity 0.4s, transform 0.4s;
+}
+.uptheader .c-gmenu.is-active {
+  transition: left 0s, opacity 0.4s, transform 0.4s;
+  right: 0 !important;
+}
+.uptheader .c-gmenu__container {
+  float: right;
+}
+.uptheader .c-gmenu .u-icon--close {
+  width: 26px;
+  height: 16px;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/closemenu.svg");
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.uptheader .c-gmenu .u-icon--close::before {
+  content: "";
+}
+@media screen and (max-width: 768px) {
+  .uptheader .c-gmenu__container {
+    width: 100%;
+  }
+}
+.uptheader .u-icon--cart {
+  width: 25px;
+  height: 25px;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/icon_cart.svg");
+  background-size: 21px 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-right: 18px;
+  margin-left: 12px;
+}
+.uptheader .u-icon--cart::before {
+  content: "";
+}
+.uptheader .u-icon--account {
+  width: 25px;
+  height: 25px;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/icon_mypage.svg");
+  background-size: 20px 20px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.uptheader .u-icon--account::before {
+  content: "";
+}
+.uptheader .u-icon--menu {
+  width: 26px;
+  height: 18px;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/openmenu.svg");
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.uptheader .u-icon--menu::before {
+  content: "";
+}
+@media screen and (max-width: 1024px) {
+  .uptheader {
+    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/header_tb_bgline.svg");
+  }
+  .uptheader.bg__header {
+    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/header_tb_bg2.svg");
+  }
+}
+@media screen and (max-width: 768px) {
+  .uptheader {
+    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/gmenu_bg-sp.svg");
+  }
+  .uptheader.bg__header {
+    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/header_sp_bg2.svg");
+  }
+  .uptheader .uptheader__icons {
+    padding: 3.4vw 6.4vw 5vw 6.6vw;
+  }
+}
+
+/* アニメーション（右から左に移動） */
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.gmenu__sns--insta {
+  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/icon_menu_insta.svg") no-repeat 0 0;
+  background-size: 100% auto;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+}
+.gmenu__sns--twitter {
+  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/icon_menu_twitter.svg") no-repeat 0 0;
+  background-size: 100% auto;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+}
+.gmenu__sns--youtube {
+  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/icon_menu_youtube.svg") no-repeat 0 0;
+  background-size: 100% auto;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+}
+
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeOutAnime {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOutAnime {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.upthome__fv {
+  margin: 0 calc(50% - 50vw);
+  width: 100vw;
+  background-size: 100% auto;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/fv_pc04.png");
+  line-height: 0;
+  font-size: 0;
+  margin-top: -100px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-position: center bottom;
+  background-color: #D4D2DF;
+  background-size: auto 100%;
+  height: 100vh;
+}
+.upthome__fv--logo {
+  background-size: 100% auto;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/fv_logo.svg");
+  width: clamp(246px, 30%, 409px);
+  background-position: center bottom;
+  height: clamp(133px, 16vw, 221px);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: clamp(30px, 5%, 38px);
+  opacity: 1;
+  -webkit-animation: fadeInAnime 2s ease 0s 1 forwards;
+          animation: fadeInAnime 2s ease 0s 1 forwards;
+}
+.upthome__fv--logo.is-hidden {
+  opacity: 0;
+  -webkit-animation: fadeOutAnime 1s ease 0s 1 forwards;
+          animation: fadeOutAnime 1s ease 0s 1 forwards;
+}
+.upthome__fvblc {
+  line-height: 0;
+  font-size: 0;
+  border-right: solid 1px #32667A;
+  border-left: solid 1px #32667A;
+  width: clamp(600px, 90vw, 1100px);
+  position: relative;
+  height: 100vh;
+}
+.upthome__fvblc--sns {
+  width: 19px;
+  line-height: 0;
+  font-size: 0;
+  position: fixed;
+  bottom: 10px;
+  right: 9.5vw;
+}
+.upthome__fvblc--sns li {
+  width: 19px;
+  height: 15px;
+  margin-bottom: 20px;
+}
+.upthome__fvblc--sns li a {
+  display: block;
+  width: 19px;
+  height: 16px;
+}
+.upthome__intro--inner {
+  width: clamp(600px, 90vw, 1100px);
+  margin: 0 auto;
+  display: flex;
+  align-items: stretch;
+}
+.upthome__intro--blc {
+  display: flex;
+  min-width: 297px;
+  width: 44%;
+  max-width: 44%;
+}
+.upthome__intro--txtblc {
+  background: #F7F8F8;
+  width: 100%;
+  border-right: solid 1px #32667A;
+  background: #F7F8F8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upthome__intro--txtblc-inner {
+  width: 297px;
+  min-width: 297px;
+  padding: 100px 0;
+}
+.upthome__intro--ttl {
+  color: #32667A;
+  font-size: 1rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  margin: 0 0 24px;
+}
+.upthome__intro--txt {
+  color: #32667A;
+  font-size: 0.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0 0 18px;
+}
+.upthome__intro--img {
+  width: 56%;
+  max-width: 56%;
+  min-height: 56%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.upthome__intro--img img {
+  border: solid 1px #FF583B;
+  border-radius: 267px;
+  width: 86%;
+}
+.upthome__intro--img .pcImg {
+  display: block;
+}
+.upthome__intro--img .spImg {
+  display: none;
+}
+.upthome__set {
+  display: flex;
+  align-items: stretch;
+  background-color: #F6F6F4;
+}
+.upthome__set--img {
+  border-right: solid 1px #32667A;
+  width: 60%;
+}
+.upthome__set--img-in {
+  padding-top: 109%;
+  width: 100%;
+  position: relative;
+  background-size: 100% auto;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/home_setimg-pc.png");
+}
+.upthome__set--img-in p {
+  display: inline-block;
+  background-size: 100% auto;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/home_set-feature-txt.png");
+  width: 75px;
+  height: 46px;
+  position: absolute;
+  top: 61px;
+  left: 47px;
+}
+.upthome__set--img-feature {
+  background-size: 100% auto;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/home_set-feature.svg");
+  width: 126px;
+  height: 126px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-animation: rotation 10s infinite linear;
+          animation: rotation 10s infinite linear;
+}
+.upthome__set--sblc {
+  width: 100%;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/dashed.svg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: 0 bottom;
+  padding: 15% 0 12% 13%;
+  background-color: #F7F8F8;
+}
+.upthome__set--sblc .upt__name {
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+.upthome__set--sblc02 {
+  padding: 12% 0 0 13%;
+  background-color: #F7F8F8;
+}
+.upthome__set--sblc02 .upt__sname {
+  margin-bottom: 5.5%;
+}
+.upthome__set--sblc02 .upt__sname--sub.minw {
+  min-width: 24px;
+  width: 24px;
+  display: block;
+}
+.upthome__set--ssblc {
+  display: flex;
+  margin-bottom: 3.6%;
+}
+.upthome__set--ssblc p {
+  line-height: 1.2;
+  white-space: nowrap;
+}
+.upthome__set--ssblc .upt__sname--sub {
+  margin-bottom: 5px;
+}
+.upthome__set--blc {
+  width: 40%;
+}
+.upthome__set--blc-flex {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.upthome__set--blc-btm {
+  margin-top: auto;
+  border-top: solid 1px #32667A;
+}
+.upthome__set--blc-btm a {
+  display: flex;
+  background: #FF583B;
+  color: #FFF;
+  text-align: center;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: 1.375rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  padding: 27px 0;
+  line-height: 1;
+  justify-content: center;
+  align-items: center;
+}
+.upthome__set--blc-btm a span {
+  display: inline-block;
+  padding-right: 46px;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 27px 14px;
+  background-position: right center;
+}
+.upthome__set--blc-btm a:hover {
+  opacity: 0.7;
+}
+.upthome__products--blc {
+  display: flex;
+}
+.upthome__products--blc li {
+  display: flex;
+  flex-direction: column;
+  width: 33.33%;
+  min-width: 33.33%;
+  border-right: solid 1px #32667A;
+}
+.upthome__products--blc li:last-child {
+  border: none;
+}
+.upthome__products--blc li img {
+  width: 100%;
+  border-radius: 50%;
+  border: solid 1px #32667A;
+}
+.upthome__products--blc li a {
+  display: none !important;
+  background: #FF583B;
+  color: #FFF;
+  text-align: center;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: 1.0625rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  padding: 15px 0;
+  line-height: 1;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  border-top: solid 1px #32667A;
+}
+.upthome__products--blc li a span {
+  display: inline-block;
+  padding-right: 48px;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 23px 12px;
+  background-position: right center;
+}
+.upthome__products--blc li a:hover {
+  opacity: 0.7;
+}
+.upthome__products--nameblc {
+  padding: 20px 0 15px;
+}
+.upthome__products--name {
+  text-align: center;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: 0.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  color: #32667A;
+  letter-spacing: 0.1em;
+}
+.upthome__products--jpname {
+  text-align: center;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: 0.8125rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  color: #32667A;
+}
+.upthome__products--jpname span {
+  display: inline-block;
+  padding-left: 1em;
+  letter-spacing: 0.1em;
+}
+.upthome__producer {
+  width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  border-top: solid 1px #32667A;
+  border-bottom: solid 1px #32667A;
+  overflow: hidden;
+  position: relative;
+  height: 256px;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/bg_yumi-pc.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% auto;
+}
+.upthome__producer--inner {
+  border-right: solid 1px #32667A;
+  border-left: solid 1px #32667A;
+  width: clamp(600px, 90vw, 1100px);
+  margin: 0 auto;
+  height: 256px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.upthome__yumi {
+  margin: 0 auto;
+  background: #F7F8F8;
+  display: flex;
+  align-items: stretch;
+  flex-direction: row-reverse;
+}
+.upthome__yumi .uptline {
+  display: none;
+}
+.upthome__yumi--blc {
+  width: 50%;
+  min-width: 50%;
+}
+.upthome__yumi--blc.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: solid 1px #32667A;
+}
+.upthome__yumi--sblc {
+  width: clamp(403px, 58%, 322px);
+}
+.upthome__yumi--txt {
+  font-size: 0.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 2.4;
+  color: #32667A;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .upthome__yumi--txt {
+    line-height: 2;
+    font-size: 0.75rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+}
+.upthome__yumi--sign {
+  background-size: 100% auto;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/sign_yumi.svg");
+  width: 131px;
+  height: 33px;
+  margin: 28px auto 0;
+}
+.upthome__yumi .pcImg {
+  display: block;
+}
+.upthome__yumi .spImg {
+  display: none;
+}
+.upthome__illust {
+  width: 88%;
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.upthome__illust p {
+  text-align: center;
+  color: #32667A;
+  font-size: 0.6875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  .upthome__fv {
+    background-size: 100% auto;
+    display: block;
+    white-space: nowrap;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/fv_sp02.png");
+    background-position: center bottom;
+    height: 90vh;
+    margin-top: calc(-16.5vw - 30px);
+    justify-content: center;
+    background-size: auto 100%;
+    display: flex;
+  }
+  .upthome__fv--logo {
+    background-size: 100% auto;
+    display: block;
+    white-space: nowrap;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/fv_logo.svg");
+    width: 64.5vw;
+    height: 34.6vw;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 11.5vw;
+  }
+  .upthome__fvblc {
+    width: 92vw;
+    height: 90vh;
+  }
+  .upthome__fvblc--sns {
+    display: none;
+  }
+  .upthome__intro--inner {
+    width: 100%;
+    display: block;
+  }
+  .upthome__intro--blc {
+    display: block;
+    min-width: 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+  .upthome__intro--txtblc {
+    border-right: none;
+    display: block;
+  }
+  .upthome__intro--txtblc-inner {
+    min-width: 70vw;
+    width: 70vw;
+    max-width: 297px;
+    margin: 0 auto;
+    padding: 18.6vw 0;
+  }
+  .upthome__intro--txtblc-inner p {
+    white-space: nowrap;
+  }
+  .upthome__intro--img {
+    border-top: solid 1px #32667A;
+    margin: 0 -4vw;
+    width: 100vw;
+    max-width: 100vw;
+    min-height: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6.4vw 0;
+  }
+  .upthome__intro--img img {
+    border-radius: 42vw;
+    width: 85vw;
+  }
+  .upthome__set {
+    display: block;
+    background-color: transparent;
+  }
+  .upthome__set--img {
+    border-right: none;
+    width: 100%;
+  }
+  .upthome__set--img-in {
+    width: 100%;
+    padding-top: 0;
+    height: 118vw;
+    position: relative;
+    background-size: 100% auto;
+    display: block;
+    white-space: nowrap;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/home_setimg-sp.png");
+  }
+  .upthome__set--img-in p {
+    display: inline-block;
+    width: 66px;
+    height: 40px;
+    position: absolute;
+    top: 24px;
+    left: 17px;
+  }
+  .upthome__set--img-feature {
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    top: -10px;
+    left: -7px;
+  }
+  .upthome__set--sblc {
+    width: 100%;
+    padding: 15vw 0 12% 12vw;
+    background-color: transparent;
+  }
+  .upthome__set--sblc .upt__name {
+    line-height: 1.4;
+    margin-bottom: 5px;
+  }
+  .upthome__set--sblc02 {
+    padding: 12% 0 15vw 12vw;
+    background-color: transparent;
+  }
+  .upthome__set--sblc02 .upt__sname {
+    margin-bottom: 5.5%;
+  }
+  .upthome__set--sblc02 .upt__sname--sub.minw {
+    min-width: 24px;
+    width: 24px;
+    display: block;
+  }
+  .upthome__set--ssblc {
+    display: flex;
+    margin-bottom: 3.6%;
+  }
+  .upthome__set--blc {
+    width: 100vw;
+    margin: 0 -4vw;
+    padding: 0 4vw;
+    background-color: transparent;
+    border-top: solid 1px #32667A;
+  }
+  .upthome__set--blc-flex {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .upthome__set--blc-btm {
+    margin-right: 1px;
+    border-right: solid 1px #32667A;
+  }
+  .upthome__set--blc-btm a {
+    font-size: 1.5625rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .upthome__set--blc-btm a span {
+    padding-right: 50px;
+    background-size: 32px 16px;
+  }
+  .upthome__products--blc {
+    display: block;
+  }
+  .upthome__products--blc li {
+    display: block;
+    width: 100%;
+    min-width: 100%;
+    border-right: none;
+    border-bottom: solid 1px #32667A;
+  }
+  .upthome__products--blc li:last-child {
+    border: none;
+  }
+  .upthome__products--blc li a {
+    width: 100%;
+    display: block;
+  }
+  .upthome__products--nameblc {
+    padding: 20px 0 15px;
+  }
+  .upthome__products--name {
+    text-align: center;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-size: 0.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-weight: 600;
+    color: #32667A;
+    letter-spacing: 0.1em;
+  }
+  .upthome__products--jpname {
+    text-align: center;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-size: 0.8125rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-weight: 400;
+    color: #32667A;
+  }
+  .upthome__products--jpname span {
+    display: inline-block;
+    padding-left: 1em;
+    letter-spacing: 0.1em;
+  }
+  .upthome__producer {
+    height: 55vw;
+    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/bg_yumi-sp02.png");
+    background-position: 0 0;
+  }
+  .upthome__producer .pcImg {
+    display: none !important;
+  }
+  .upthome__producer .spImg {
+    display: block !important;
+  }
+  .upthome__producer--inner {
+    border-right: solid 1px #32667A;
+    border-left: solid 1px #32667A;
+    width: 92vw;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 55vw;
+  }
+  .upthome__illust {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 5vw;
+  }
+  .upthome__yumi {
+    border-right: none;
+    border-left: none;
+    margin: 0 auto;
+    background: #F7F8F8;
+    display: block;
+    align-items: stretch;
+  }
+  .upthome__yumi .uptline {
+    display: block;
+  }
+  .upthome__yumi--blc {
+    width: 100%;
+  }
+  .upthome__yumi--blc + .upthome__yumi--blc {
+    border-right: none;
+    border-left: none;
+  }
+  .upthome__yumi--blc.right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+  }
+  .upthome__yumi--sblc {
+    width: 100%;
+    padding: 18vw 0;
+  }
+  .upthome__yumi--sign {
+    background-size: 100% auto;
+    display: block;
+    white-space: nowrap;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/sign_yumi.svg");
+    width: 131px;
+    height: 33px;
+    margin: 28px auto 0;
+  }
+  .upthome__yumi .pcImg {
+    display: block;
+  }
+  .upthome__yumi .spImg {
+    display: none;
+  }
+}
+
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutAnime {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+* {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+* p {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+
+.uptprodcut .uptblc__buyblc__spborder {
+  display: none;
+}
+.uptprodcut .uptblc__buyblc {
+  display: flex;
+  align-items: stretch;
+}
+.uptprodcut .uptblc__buyblc--img {
+  width: 50%;
+  min-width: 50%;
+  border-right: solid 1px #32667A;
+}
+.uptprodcut .uptblc__buyblc--s {
+  width: 50%;
+  min-width: 50%;
+  display: flex;
+  justify-content: ceter;
+  align-items: center;
+}
+.uptprodcut .uptblc__buyblc--rblc {
+  width: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.uptprodcut .uptblc__buyblc--contents {
+  display: flex;
+  padding: 0 16% 0 13%;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.uptprodcut .uptblc__buyblc--txt00 {
+  font-size: 2.5rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+.uptprodcut .uptblc__buyblc--txt01 {
+  font-size: 1rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1;
+  color: #32667A;
+  margin: 0 0 22px;
+  letter-spacing: 0.1em;
+}
+.uptprodcut .uptblc__buyblc--txt02 {
+  font-size: 1rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1.4;
+  color: #32667A;
+  margin: 0 0 26px;
+  letter-spacing: 0.1em;
+}
+.uptprodcut .uptblc__buyblc--txt03 {
+  font-size: 1.4375rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1;
+  color: #32667A;
+}
+.uptprodcut .uptblc__buyblc--btn {
+  margin-top: auto;
+  border-top: solid 1px #32667A;
+  width: 100%;
+}
+.uptprodcut .uptblc__buyblc--btn button {
+  display: flex;
+  width: 100%;
+  background: #FF583B;
+  color: #FFF;
+  text-align: center;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-size: 1.375rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  padding: 27px 0;
+  line-height: 1;
+  justify-content: center;
+  align-items: center;
+}
+.uptprodcut .uptblc__buyblc--btn button span {
+  height: 10px;
+  display: inline-block;
+  padding-right: 46px;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 27px 14px;
+  background-position: right center;
+}
+.uptprodcut .uptblc__buyblc--btn button:hover {
+  opacity: 0.7;
+}
+@media screen and (max-width: 1024px) {
+  .uptprodcut .uptblc__buyblc--txt00 {
+    font-size: 1.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    line-height: 1.3;
+    margin: 0 0 12px;
+  }
+  .uptprodcut .uptblc__buyblc--txt01 {
+    font-size: 0.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 0 0 16px;
+  }
+  .uptprodcut .uptblc__buyblc--txt02 {
+    font-size: 0.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 0 0 20px;
+  }
+  .uptprodcut .uptblc__buyblc--txt03 {
+    font-size: 1.25rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+}
+@media screen and (max-width: 768px) {
+  .uptprodcut .uptblc__buyblc {
+    display: block;
+  }
+  .uptprodcut .uptblc__buyblc--img {
+    width: 100%;
+    min-width: 100%;
+    border-right: none;
+  }
+  .uptprodcut .uptblc__buyblc__spborder {
+    border-bottom: solid 1px #32667A;
+    width: 100vw;
+    height: 1px;
+    margin: 0 -4vw;
+    display: block;
+  }
+  .uptprodcut .uptblc__buyblc--s {
+    width: 100%;
+    min-width: 100%;
+    border-right: none;
+    display: flex;
+    justify-content: ceter;
+    align-items: center;
+  }
+  .uptprodcut .uptblc__buyblc--rblc {
+    width: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .uptprodcut .uptblc__buyblc--contents {
+    display: flex;
+    padding: 12.5vw 10vw;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .uptprodcut .uptblc__buyblc--txt00 {
+    font-size: 1.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    line-height: 1.5;
+    margin: 0 0 6vw;
+  }
+  .uptprodcut .uptblc__buyblc--txt01 {
+    font-size: 1rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 0 0 5vw;
+  }
+  .uptprodcut .uptblc__buyblc--txt02 {
+    font-size: 1rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 0 0 8vw;
+  }
+  .uptprodcut .uptblc__buyblc--txt03 {
+    font-size: 1.4375rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .uptprodcut .uptblc__buyblc--btn {
+    margin-top: auto;
+    border-top: solid 1px #32667A;
+    width: 100%;
+  }
+  .uptprodcut .uptblc__buyblc--btn button {
+    display: flex;
+    width: 100%;
+    background: #FF583B;
+    color: #FFF;
+    text-align: center;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-size: 1.375rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-weight: 600;
+    padding: 27px 0;
+    line-height: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  .uptprodcut .uptblc__buyblc--btn button span {
+    height: 10px;
+    display: inline-block;
+    padding-right: 46px;
+    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/arrow.png");
+    background-repeat: no-repeat;
+    background-size: 27px 14px;
+    background-position: right center;
+  }
+}
+.uptprodcut .uptproduct__fv {
+  margin-top: -30px;
+}
+.uptprodcut .uptprodcut__intro--txt {
+  text-align: center;
+  font-size: 1.125rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  color: #32667A;
+  padding: 28px;
+  line-height: 1;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.uptprodcut .uptprodcut__intro--txt br {
+  display: none;
+}
+.uptprodcut .uptprodcut__intro--relative {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  padding: 8.5%;
+}
+.uptprodcut .uptprodcut__intro--relative img {
+  width: 100%;
+  border-radius: 220px;
+  border: solid 1px #32667A;
+  z-index: 2;
+}
+.uptprodcut .uptprodcut__intro--border {
+  position: absolute;
+  width: 50%;
+  border-right: 1px #32667A solid;
+  min-width: 50%;
+  top: 0;
+  left: 0;
+}
+.uptprodcut .uptprodcut__intro--border.active {
+  height: 100%;
+  -webkit-animation-name: borderAnime;
+          animation-name: borderAnime;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+@media screen and (max-width: 768px) {
+  .uptprodcut .uptprodcut__intro--txt {
+    padding: 12.5vw 0 6.4vw;
+    line-height: 1.67;
+  }
+  .uptprodcut .uptprodcut__intro--txt br {
+    display: block;
+  }
+  .uptprodcut .uptprodcut__intro--relative {
+    padding: 14vw 6.7vw;
+  }
+  .uptprodcut .uptprodcut__intro--relative img {
+    border-radius: 58.4vw;
+  }
+  .uptprodcut .uptprodcut__intro--border.active {
+    -webkit-animation-name: borderAnime;
+            animation-name: borderAnime;
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+  }
+}
+.uptprodcut .uptproduct__setitem--blc {
+  display: flex;
+  align-items: stretch;
+}
+.uptprodcut .uptproduct__setitem--blc.reverse {
+  flex-direction: row-reverse;
+}
+.uptprodcut .uptproduct__setitem--blc-s {
+  width: 50%;
+  min-width: 50%;
+}
+.uptprodcut .uptproduct__setitem--blc-s.border {
+  border-right: solid 1px #32667A;
+}
+.uptprodcut .uptproduct__setitem--blc-s.img {
+  background: #E1E9EF;
+}
+.uptprodcut .uptproduct__setitem--blc + .uptproduct__setitem--blc {
+  border-top: solid 1px #32667A;
+}
+.uptprodcut .uptproduct__setitem--img img {
+  width: 100%;
+  border-radius: 50%;
+  border: solid 1px #32667A;
+}
+.uptprodcut .uptproduct__setitem--exp {
+  padding: 14% 12.3%;
+  position: relative;
+  height: 100%;
+}
+.uptprodcut .uptproduct__setitem--name {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 40px;
+}
+.uptprodcut .uptproduct__setitem--name p {
+  line-height: 1;
+  color: #32667A;
+  letter-spacing: 0.1em;
+}
+.uptprodcut .uptproduct__setitem--name-img {
+  width: clamp(56px, 64px, 12%);
+  padding: 3px;
+}
+.uptprodcut .uptproduct__setitem--name-img img {
+  width: 100%;
+}
+.uptprodcut .uptproduct__setitem--name01 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.uptprodcut .uptproduct__setitem--name02 {
+  font-size: 1rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  margin: 12px 0;
+  line-height: 1.4;
+}
+.uptprodcut .uptproduct__setitem--name02 br {
+  display: none;
+}
+.uptprodcut .uptproduct__setitem--name03 {
+  font-size: 1.0625rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.uptprodcut .uptproduct__setitem--setsumei h3 {
+  color: #32667A;
+  font-size: 0.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 1em;
+}
+.uptprodcut .uptproduct__setitem--setsumei p {
+  color: #32667A;
+  font-size: 0.8125rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1.3;
+}
+.uptprodcut .uptproduct__setitem--absolute {
+  position: absolute;
+  width: 75.4%;
+  bottom: 14%;
+  left: 50%;
+  background: #F7F8F8;
+  border-bottom: solid 1px #32667A;
+  transform: translate(-50%, 0);
+}
+.uptprodcut .uptproduct__setitem--list-ttl {
+  font-size: 0.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  color: #32667A;
+  line-height: 1;
+  display: flex;
+  letter-spacing: 0.1em;
+  justify-content: space-between;
+  align-items: center;
+}
+.uptprodcut .uptproduct__setitem--list-ttl span {
+  display: inline-block;
+  background-size: 100% auto;
+  display: block;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/setitem_plus.svg") no-repeat 0 0;
+  width: 12px;
+  height: 12px;
+}
+.uptprodcut .uptproduct__setitem--list-txt {
+  font-size: 0.75rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1.3;
+  color: #32667A;
+  padding-top: 5%;
+  display: none;
+}
+.uptprodcut .uptproduct__setitem--list li {
+  border-top: solid 1px #32667A;
+  padding: 4.6% 8%;
+}
+.uptprodcut .uptproduct__setitem--list .active .uptproduct__setitem--list-ttl span {
+  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/setitem_minus.svg") no-repeat 0 0;
+  width: 12px;
+  height: 1px;
+}
+@media screen and (max-width: 1024px) {
+  .uptprodcut .uptproduct__setitem--exp {
+    padding: 10%;
+  }
+  .uptprodcut .uptproduct__setitem--name {
+    margin: 0 0 40px;
+  }
+  .uptprodcut .uptproduct__setitem--name-img {
+    width: 14%;
+    min-width: 14%;
+  }
+  .uptprodcut .uptproduct__setitem--name-img img {
+    width: 100%;
+  }
+  .uptprodcut .uptproduct__setitem--name01 {
+    font-size: 1.125rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .uptprodcut .uptproduct__setitem--name02 {
+    font-size: 0.8125rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 6px 0;
+  }
+  .uptprodcut .uptproduct__setitem--name02 br {
+    display: none;
+  }
+  .uptprodcut .uptproduct__setitem--name03 {
+    font-size: 0.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .uptprodcut .uptproduct__setitem--setsumei h3 {
+    font-size: 0.8125rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 0 0 8px;
+  }
+  .uptprodcut .uptproduct__setitem--setsumei p {
+    font-size: 0.75rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    line-height: 1.3;
+  }
+  .uptprodcut .uptproduct__setitem--absolute {
+    position: absolute;
+    width: 80%;
+    bottom: 10%;
+    left: 50%;
+  }
+  .uptprodcut .uptproduct__setitem--list-ttl {
+    font-size: 0.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    color: #32667A;
+    line-height: 1;
+    display: flex;
+    letter-spacing: 0.1em;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .uptprodcut .uptproduct__setitem--list-ttl span {
+    display: inline-block;
+    background-size: 100% auto;
+    display: block;
+    white-space: nowrap;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/setitem_plus.svg") no-repeat 0 0;
+    width: 12px;
+    height: 12px;
+  }
+  .uptprodcut .uptproduct__setitem--list-txt {
+    font-size: 0.75rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    padding-top: 5%;
+  }
+  .uptprodcut .uptproduct__setitem--list li {
+    padding: 4% 5%;
+  }
+  .uptprodcut .uptproduct__setitem--list .active .uptproduct__setitem--list-ttl span {
+    background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/setitem_minus.svg") no-repeat 0 0;
+    width: 12px;
+    height: 1px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .uptprodcut .uptproduct__setitem--blc {
+    display: block;
+  }
+  .uptprodcut .uptproduct__setitem--blc-s {
+    width: 100%;
+    min-width: 100%;
+  }
+  .uptprodcut .uptproduct__setitem--blc-s.border {
+    border-right: none;
+    border-bottom: solid 1px #32667A;
+  }
+  .uptprodcut .uptproduct__setitem--blc-s.blc02 {
+    border-bottom: solid 1px #32667A;
+    border-top: solid 1px #32667A;
+  }
+  .uptprodcut .uptproduct__setitem--blc + .uptproduct__setitem--blc {
+    border-top: none;
+  }
+  .uptprodcut .uptproduct__setitem--exp {
+    padding: 13vw 5.8vw 52vw;
+  }
+  .uptprodcut .uptproduct__setitem--name {
+    margin: 0 0 28px;
+  }
+  .uptprodcut .uptproduct__setitem--name p {
+    line-height: 1;
+    color: #32667A;
+    letter-spacing: 0.1em;
+  }
+  .uptprodcut .uptproduct__setitem--name-img {
+    width: 15.2vw;
+    min-width: 15.2vw;
+  }
+  .uptprodcut .uptproduct__setitem--name01 {
+    line-height: 1.3;
+  }
+  .uptprodcut .uptproduct__setitem--name02 {
+    margin: 12px 0;
+    line-height: 1.3 !important;
+  }
+  .uptprodcut .uptproduct__setitem--name02 br {
+    display: block;
+  }
+  .uptprodcut .uptproduct__setitem--absolute {
+    width: 80vw;
+    bottom: 13vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .uptprodcut .uptproduct__setitem--list-ttl {
+    font-size: 0.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    color: #32667A;
+    line-height: 1;
+    display: flex;
+    letter-spacing: 0.1em;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .uptprodcut .uptproduct__setitem--list-ttl span {
+    display: inline-block;
+    background-size: 100% auto;
+    display: block;
+    white-space: nowrap;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/setitem_plus.svg") no-repeat 0 0;
+    width: 12px;
+    height: 12px;
+  }
+  .uptprodcut .uptproduct__setitem--list-txt {
+    font-size: 0.75rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    line-height: 1.3;
+    color: #32667A;
+    padding-top: 5%;
+    display: none;
+  }
+  .uptprodcut .uptproduct__setitem--list li {
+    border-top: solid 1px #32667A;
+    padding: 4.6% 8%;
+  }
+  .uptprodcut .uptproduct__setitem--list .active .uptproduct__setitem--list-ttl span {
+    background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/setitem_minus.svg") no-repeat 0 0;
+    width: 12px;
+    height: 1px;
+  }
+}
+.uptprodcut .uptproduct__point--con {
+  width: 100%;
+  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_prodcut-concept-pc02.png") no-repeat 0 bottom;
+  background-size: 100% auto;
+  padding-bottom: 52%;
+}
+.uptprodcut .uptproduct__point--contxt {
+  display: flex;
+  padding: 4.6% 4.6% 0;
+  justify-content: space-between;
+}
+.uptprodcut .uptproduct__point--contxt01 {
+  width: 28%;
+  min-width: 28%;
+}
+.uptprodcut .uptproduct__point--contxt02 {
+  width: 36.5%;
+  min-width: 36.5%;
+}
+.uptprodcut .uptproduct__point--contxt03 {
+  width: 28%;
+  min-width: 28%;
+}
+.uptprodcut .uptproduct__point--ttl {
+  text-align: center;
+  color: #FF583B;
+  font-size: 1.3125rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  line-height: 1;
+  margin: 0 0 16px;
+}
+.uptprodcut .uptproduct__point--subttl {
+  text-align: center;
+  color: #FF583B;
+  font-size: 0.9375rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  margin: 0 0 20px;
+}
+.uptprodcut .uptproduct__point--border {
+  display: block;
+  width: 1px;
+  height: 73px;
+  background-color: #FF583B;
+  margin: 0 auto 16px;
+}
+.uptprodcut .uptproduct__point--txt {
+  color: #FF583B;
+  font-size: 0.8125rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1.33;
+}
+.uptprodcut .uptproduct__point--txt span {
+  font-size: 0.8em;
+}
+@media screen and (max-width: 768px) {
+  .uptprodcut .uptproduct__point--con {
+    width: 100%;
+    background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_prodcut-concept-sp.png") no-repeat 0 bottom;
+    background-size: 100% auto;
+    padding-bottom: 89vw;
+  }
+  .uptprodcut .uptproduct__point--contxt {
+    display: block;
+    padding: 11.46vw 8.8vw 0;
+  }
+  .uptprodcut .uptproduct__point--contxt01 {
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 12.5vw;
+  }
+  .uptprodcut .uptproduct__point--contxt02 {
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 12.5vw;
+  }
+  .uptprodcut .uptproduct__point--contxt03 {
+    width: 100%;
+    min-width: 100%;
+    margin-bottom: 0;
+  }
+  .uptprodcut .uptproduct__point--ttl {
+    margin: 0 auto 3.4vw;
+  }
+  .uptprodcut .uptproduct__point--subttl {
+    margin: 0 auto 5vw;
+  }
+  .uptprodcut .uptproduct__point--border {
+    height: 10.6vw;
+    margin: 0 auto 5vw;
+  }
+}
+
+@-webkit-keyframes borderAnime {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+@keyframes borderAnime {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+/*** The new CSS reset - version 1.7.2 (last updated 23.6.2022) ***/
+*:where(:not(html, iframe, canvas, img, svg, video):not(svg*, symbol*)) {
+  all: unset;
+  display: revert;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+a, button {
+  cursor: revert;
+}
+
+ol, ul, menu {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+input, textarea {
+  -webkit-user-select: auto;
+}
+
+textarea {
+  white-space: revert;
+}
+
+meter {
+  -webkit-appearance: revert;
+  -moz-appearance: revert;
+       appearance: revert;
+}
+
+::-moz-placeholder {
+  color: unset;
+}
+
+::placeholder {
+  color: unset;
+}
+
+:where([hidden]) {
+  display: none;
+}
+
+:where([contenteditable]:not([contenteditable=false])) {
+  -moz-user-modify: read-write;
+  -webkit-user-modify: read-write;
+  overflow-wrap: break-word;
+  -webkit-line-break: after-white-space;
+  -webkit-user-select: auto;
+}
+
+:where([draggable=true]) {
+  -webkit-user-drag: element;
+}
+
+a {
+  outline: none;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+  outline: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+
+.main__sns {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  height: 7.8vh;
+  width: 31.75vh;
+  max-width: 342px;
+  max-height: 82px;
+  background: #F7F8F8;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: clamp(62px, 11.5vh, 125px);
+}
+.main__sns li {
+  margin: 0;
+  width: 4.72vh;
+  height: 3.88vh;
+  max-width: 51px;
+  max-height: 42px;
+}
+.main__sns li a {
+  display: block;
+  max-width: 51px;
+  max-height: 42px;
+  width: 100%;
+  height: 100%;
+}
+.main__sns li a:hover {
+  opacity: 0.7;
+}
+.main__sns li img {
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .main__sns {
+    display: flex;
+    margin: 0 auto 26.8vw;
+    justify-content: space-between;
+    width: 79vw;
+    background: #F7F8F8;
+    border-radius: 20px;
+    padding: 4.6vw;
+    height: auto;
+    max-height: 88px;
+  }
+  .main__sns li {
+    margin: 0;
+    width: 12vw;
+    height: auto;
+    max-width: 51px;
+    max-height: 42px;
+  }
+  .main__sns li a {
+    display: block;
+    max-width: 51px;
+    max-height: 42px;
+    height: 9.8vw;
+    width: 12.1vw;
+  }
+  .main__sns li img {
+    width: 100%;
+  }
+}
+.main__sns--insta {
+  white-space: nowrap;
+  text-indent: -9999px;
+  display: block;
+  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/icon_pcInsta.svg") no-repeat 0 0;
+  background-size: 100% auto;
+}
+.main__sns--twitter {
+  white-space: nowrap;
+  text-indent: -9999px;
+  display: block;
+  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/icon_pctwitter.svg") no-repeat 0 0;
+  background-size: 100% auto;
+}
+.main__sns--youtube {
+  white-space: nowrap;
+  text-indent: -9999px;
+  display: block;
+  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/icon_pcyoutube.svg") no-repeat 0 0;
+  background-size: 100% auto;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeInAnime-moto {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeInAnime-moto {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*-----------矢印表示----------*/
+.slick-next {
+  right: 15vw !important;
+  top: 49vw !important;
+  height: 36px !important;
+  width: 13px !important;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/nextswiper.svg") !important;
+  background-size: 100% auto;
+}
+.slick-next:before {
+  content: "" !important;
+}
+
+.slick-prev {
+  left: 14.5vw !important;
+  top: 49vw !important;
+  height: 36px !important;
+  width: 13px !important;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/prevswiper.svg") !important;
+  background-size: 100% auto;
+}
+.slick-prev:before {
+  content: "" !important;
+}
+
+.slick-arrow {
+  z-index: 2 !important;
+}
+
+a {
+  outline: none;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+
+.uptblc {
+  width: 100vw;
+}
+.uptblc.top {
+  border-top: solid 1px #32667A;
+}
+.uptblc.btm {
+  border-bottom: solid 1px #32667A;
+}
+.uptblc__inner {
+  border-right: solid 1px #32667A;
+  border-left: solid 1px #32667A;
+  width: clamp(600px, 90vw, 1100px);
+  margin: 0 auto;
+  background: #F7F8F8;
+  height: 100%;
+}
+.uptblc__ttl {
+  font-size: 1.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  text-align: center;
+  color: #32667A;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-weight: 600;
+  padding: 40px 0;
+  border-bottom: solid 1px #32667A;
+}
+@media screen and (max-width: 768px) {
+  .uptblc {
+    padding: 0 4vw;
+  }
+  .uptblc__inner {
+    width: 100%;
+  }
+  .uptblc__ttl {
+    padding: 7.5vw 0;
+  }
+}
+
+.pc {
+  display: block;
+}
+
+.sp {
+  display: none;
+}
+
+.italic {
+  font-style: oblique;
+}
+
+.upt__name {
+  font-size: 1.75rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  color: #32667A;
+  letter-spacing: 1px;
+}
+.upt__sname {
+  font-size: 1.5rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  color: #32667A;
+  letter-spacing: 1px;
+}
+.upt__sname--sub {
+  font-size: 1.0625rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  color: #32667A;
+  letter-spacing: 1px;
+}
+.upt__sname--jp {
+  font-size: 0.9375rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  color: #32667A;
+  letter-spacing: 1px;
+}
+.upt__price {
+  font-style: oblique;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  color: #32667A;
+  letter-spacing: 1px;
+  font-size: 1.5625rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  letter-spacing: 1px;
+}
+
+.pcImg {
+  display: block;
+}
+
+.spImg {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .pc {
+    display: none;
+  }
+  .sp {
+    display: none;
+  }
+  .pcImg {
+    display: none;
+  }
+  .spImg {
+    display: block;
+  }
+}
+* {
+  cursor: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/cursor.svg", auto) !important;
+}
+
+.uptplane {
+  width: 100vw;
+}
+.uptplane.top {
+  border-top: solid 1px #32667A;
+}
+.uptplane.btm {
+  border-bottom: solid 1px #32667A;
+}
+.uptplane .p-page_header {
+  padding-right: 0;
+  padding-left: 0;
+}
+.uptplane__inner {
+  border-right: solid 1px #32667A;
+  border-left: solid 1px #32667A;
+  width: clamp(600px, 90vw, 1100px);
+  margin: 0 auto;
+  background: #F7F8F8;
+  height: 100%;
+  padding-bottom: 100px;
+  margin-bottom: -100px;
+}
+.uptplane__ttl {
+  font-size: 1.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  text-align: center;
+  color: #32667A;
+  letter-spacing: 1px;
+  line-height: 1;
+  font-weight: 600;
+  padding: 40px 0;
+  border-bottom: solid 1px #32667A;
+  border-top: solid 1px #32667A;
+}
+.uptplane__ttl h1 {
+  color: #32667A !important;
+}
+@media screen and (max-width: 768px) {
+  .uptplane {
+    padding: 0 4vw;
+  }
+  .uptplane__inner {
+    width: 100%;
+  }
+  .uptplane__ttl {
+    padding: 6vw 0;
+    font-size: 1.25rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+}
+
+body {
+  cursor: none; /*本物のカーソルを非表示に*/
+}
+@media screen and (max-width: 768px) {
+  body {
+    cursor: auto;
+  }
+  body #cursor {
+    display: none;
+  }
+  body #js-sns {
+    display: none;
+  }
+}
+
+#cursor {
+  position: fixed; /* 絶対位置になるように指定 */
+  z-index: 201; /* 重なり順を上に指定。他の要素に合わせて数字を大きくしてください。 */
+  pointer-events: none; /*【重要】マウス直下に常に画像があるので、全てをクリックできなくなる。noneにして対応*/
+}
+
+.uptline {
+  width: 100vw;
+  height: 1px;
+  border-bottom: solid #32667A 1px;
+  margin: 0 calc(50% - 50vw);
+}
+
+* a, * button {
+  cursor: none;
+}
+
+.c-gmenu__overlay {
+  cursor: none;
+}
+
+#js-sns {
+  opacity: 1;
+  -webkit-animation: fadeInAnime 1s ease 0s 1 forwards;
+          animation: fadeInAnime 1s ease 0s 1 forwards;
+}
+#js-sns.hiden {
+  opacity: 0;
+  -webkit-animation: fadeOutAnime 1s ease 0s 1 forwards;
+          animation: fadeOutAnime 1s ease 0s 1 forwards;
+}

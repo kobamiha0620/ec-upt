@@ -1,0 +1,94 @@
+{{ 'shop/customer/base' | javascript_include_tag }}
+
+<div class="uptplane">
+    <div class="uptplane__inner">
+<main class="l-container" role="main">
+  <div class="l-container__row u-margin__top--60">
+    {{ 'notice' | flash: 'control-alert alert-success', 'text u-color__bg--bg u-color__text--alert' }}
+    {{ 'alert' | flash: 'control-alert alert-danger', 'text u-color__bg--bg u-color__text--alert' }}
+    {{ 'error' | flash: 'control-alert alert-danger', 'text u-color__bg--bg u-color__text--alert' }}
+    <div class="p-account">
+      <div class="p-account__inner">
+        <div class="p-account__inner__menu u-color__border--border">
+          {% include 'ec_force/shop/snippets/sidebar.html' %}
+        </div>
+        <div class="p-account__inner__content">
+          <ul class="c-breadcrumbs">
+            <li class="c-breadcrumbs__item u-text--link">
+              <a class="c-breadcrumbs__item__inner" href="/shop/customer">{{ 'account.general.mypage.value' | t }}</a>
+            </li>
+            <li class="c-breadcrumbs__item u-text--body">
+              <span class="c-breadcrumbs__item__inner">{{ 'products.favorites.favorite_list.value' | t }}</span>
+            </li>
+          </ul>
+          <div class="p-favorite">
+            <header class="p-favorite__header">
+              <div class="p-list_header__inner">
+                <h1 class="p-list_header__inner__title u-text--head">{{ 'products.favorites.favorite_list.value' | t }}</h1>
+                <div class="c-list_tool">
+                  <div class="c-list_tool__num u-text--subhead">{{ 'general.searches.all_search_result.value' | t }}{{ favorites.size }}{{ 'general.searches.search_result_count.value' | t }}</div>
+                  {% comment %}
+                  <form class="c-list_tool__sort">
+                    <div class="c-list_tool__sort__label">並び替え：</div>
+                    <label class="c-list_tool__sort__wrap">
+                      <select class="c-list_tool__sort__wrap__select u-color__border--input">
+                        <option>新着順</option>
+                      </select>
+                    </label>
+                  </form>
+                  {% endcomment %}
+                </div>
+              </div>
+            </header>
+            <div class="p-favorite__list">
+              {% if favorites.size == 0 %}
+                <span class="u-text--body">{{ 'products.favorites.no_product.value' | t }}</span>
+              {% endif %}
+              <ul class="p-product_list__list">
+                {% for favorite in favorites %}
+                  {% assign product = favorite.product %}
+                  <li class="p-product_list__list__item">
+                    {% include 'ec_force/shop/snippets/product.html' %}
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
+            <div class="p-favorite__bottom">
+              <div class="c-pagination">
+                <ul class="c-pagination__list u-color__border--border u-color--head">
+                  {% if paginate.previous %}
+                    <li class="c-pagination__list__item">
+                      <a class="c-pagination__list__item__prev" href="{{ paginate.previous.url }}">
+                        <i class="u-icon--arrow"></i>
+                      </a>
+                    </li>
+                  {% endif %}
+                  {% for page in paginate.parts %}
+                    <li class="c-pagination__list__item u-color__border--main {% if paginate.current_page == page.title %} is-active{% endif %}">
+                      {% if paginate.current_page == page.title %}
+                        <span class="c-pagination__list__item__page">{{ page.title }}</span>
+                      {% elsif page.is_link %}
+                        <a class="c-pagination__list__item__page" href="{{ page.url }}">{{ page.title }}</a>
+                      {% else %}
+                        <span class="c-pagination__list__item__page">{{ page.title }}</span>
+                      {% endif %}
+                    </li>
+                  {% endfor %}
+                  {% if paginate.next %}
+                    <li class="c-pagination__list__item">
+                      <a class="c-pagination__list__item__next" href="{{ paginate.next.url }}">
+                        <i class="u-icon--arrow"></i>
+                      </a>
+                    </li>
+                  {% endif %}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+</div>
+</div>

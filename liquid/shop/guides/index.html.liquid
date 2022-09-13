@@ -1,0 +1,39 @@
+{{ 'shop/info' | javascript_include_tag }}
+
+<main class="l-container" role="main">
+  <div class="l-container__row u-margin__top--60">
+    <header class="p-page_header">
+      <div class="p-page_header__inner">
+        <h1 class="p-page_header__inner__title u-text--head">{{ 'base_info.pages.use_guide.value' | t }}</h1>
+      </div>
+    </header>
+  </div>
+  <div class="l-container__row u-margin__top--60 u-margin__bottom--100">
+    <section class="p-page_content">
+      <div class="p-page_content__inner">
+        <ul>
+          <!-- ご利用ガイド -->
+          {% for guide in guides %}
+            <li>
+              <!-- タイトル -->
+              <h2 class="u-text--subhead">{{ guide.title }}</h2>
+              <p>
+                <!-- 内容 -->
+                <pre class="u-text--body">{{ guide.text }}</pre>
+              </p>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+  </div>
+</main>
+
+{% content_for meta_description %}
+{% endcontent_for %}
+
+{% content_for meta_keywords %}
+{% endcontent_for %}
+
+{% content_for title %}
+{% endcontent_for %}

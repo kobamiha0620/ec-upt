@@ -1,0 +1,179 @@
+@use "./module/variable"as var;
+
+html {
+    height: -webkit-fill-available;
+}
+
+body {
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+}
+
+body {
+    background: var.$bg;
+    width: 100vw;
+    margin: 0;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.bg {
+    &__repeatWrapper {
+        position: fixed;
+        top: 0;
+        right: 0;
+    }
+
+    &__repeatInner {
+        position: relative;
+    }
+
+    &__repeatBlc {
+        width: 100vw;
+
+    }
+
+}
+
+.bgw1 {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+
+    .maskbg1 {
+        -webkit-mask-image: url(var.$imgpath + "bg1_mask.png");
+        mask-image: url(var.$imgpath + "bg1_mask.png");
+        mask-size: 100% auto;
+        mask-position: center top;
+        @media screen and (max-width: var.$spbp) {
+            -webkit-mask-image: url(var.$imgpath + "bg1_mask.png");
+            mask-image: url(var.$imgpath + "bg1_mask.png");
+            mask-position: center top -24vw;
+            mask-size: 200% auto;
+
+        }
+    }
+
+    img {
+        height: auto;
+        width: 2290px;
+        margin: 0;
+        font-size: 0;
+        line-height: 0;
+
+        @media screen and (max-width: var.$spbp) {
+            width: 205%;
+        }
+    }
+
+}
+
+.bgw2 {
+    margin: 0;
+    font-size: 0;
+    line-height: 0;
+
+    .maskbg2 {
+        -webkit-mask-image: url(var.$imgpath + "bg2_mask.png");
+        mask-image: url(var.$imgpath + "bg2_mask.png");
+        mask-size: 100% auto;
+        mask-position: center top;
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @media screen and (max-width: var.$spbp) {
+            -webkit-mask-image: url(var.$imgpath + "bg2_mask.png");
+            mask-image: url(var.$imgpath + "bg2_mask.png");
+            mask-position: center top -24vw;
+            mask-size: 100% auto;
+
+        }
+    }
+
+    img {
+        height: auto;
+        width: 2100px;
+        margin: 0;
+        font-size: 0;
+        line-height: 0;
+
+        @media screen and (max-width: var.$spbp) {
+            width: 205%;
+        }
+    }
+}
+
+.bgw1 img:first-child {
+    animation: loop 600s -300s linear infinite;
+}
+
+.bgw1 img:last-child {
+    animation: loop2 600s linear infinite;
+}
+
+.bgw2 img:first-child {
+    animation: loop 300s -150s linear infinite;
+}
+
+.bgw2 img:last-child {
+    animation: loop2 300s linear infinite;
+}
+@media screen and (max-width: var.$spbp) {
+    .bgw1 img:first-child {
+        animation: loop 1400s -700s linear infinite;
+    }
+    
+    .bgw1 img:last-child {
+        animation: loop2 1400s linear infinite;
+    }
+    
+    .bgw2 img:first-child {
+        animation: loop 700s -350s linear infinite;
+    }
+    
+    .bgw2 img:last-child {
+        animation: loop2 700s linear infinite;
+    }
+}
+
+@keyframes loop {
+    0% {
+        transform: translateY(100%);
+    }
+
+    to {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes loop2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-200%);
+    }
+}
+
+
+.pc {
+    display: block;
+}
+
+.sp {
+    display: none;
+}
+
+@media screen and (max-width: var.$spbp) {
+    .sp {
+        display: block;
+    }
+
+    .pc {
+        display: none;
+    }
+}

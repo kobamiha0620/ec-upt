@@ -1,0 +1,167 @@
+.u-text--head {
+  color: #494949 !important;
+  font-size: 24px !important;
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  
+}
+.u-color--head {
+  color: #494949 !important;
+}
+.u-text--subhead {
+  color: #494949 !important;
+  font-size: 17px !important;
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  
+}
+.u-text--body {
+  color: #9A9A9A !important;
+  font-size: 13px !important;
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  
+}
+.u-text--strong {
+  color: #494949 !important;
+  font-size: 13px !important;
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  
+}
+.u-text--link {
+  color: #386F81 !important;
+  font-size: 13px !important;
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  
+}
+.u-text--head--overlay {
+  color: #FFFFFF !important;
+  font-size: 24px !important;
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  
+}
+.u-text--subhead--overlay {
+  color: #FFFFFF !important;
+  font-size: 17px !important;
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  
+}
+.u-text--body--overlay {
+  color: #FFFFFF !important;
+  font-size: 13px !important;
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  
+}
+.u-text--color--overlay {
+  color: #FFFFFF !important;
+}
+.u-color__btn--bg {
+  background: #386F81 !important;
+}
+.u-color__btn--bg--overlay {
+  background: #386F81 !important;
+}
+.u-color__btn {
+  color: #386F81 !important;
+}
+.u-text--btn {
+  color: #FFFFFF !important;
+  font-size: 13px !important;
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  
+}
+.u-text--btn--overlay {
+  color: #FFFFFF !important;
+  font-size: 13px !important;
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  
+}
+.u-color__btn--text {
+  color: #FFFFFF !important;
+}
+.u-color__btn--text--bg {
+  background: #FFFFFF !important;
+}
+.u-text--input {
+  color: #9A9A9A !important;
+  font-size: 13px !important;
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  
+}
+.u-color--input {
+  color: #9A9A9A !important;
+}
+.u-color__input--bg {
+  background: #FFFFFF !important;
+}
+.u-color__border--input {
+  border-color: #BDC1C2 !important;
+}
+.u-color__bg--base {
+  background: #FFFFFF !important;
+}
+.u-color__bg--main {
+  background: #FFFFFF !important;
+}
+.u-color__border--border {
+  border-color: #D8DDDF !important;
+}
+.u-color__border--main {
+  border-color: #D8DDDF !important;
+}
+.u-font--head {
+  font-size: 24px !important;
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  
+}
+.u-font--subhead {
+  font-size: 17px !important;
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  
+}
+.u-font--body {
+  font-size: 13px !important;
+  font-family: '游ゴシック体', 'Yu Gothic', YuGothic, 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', Meiryo, 'MS Pゴシック', 'MS PGothic', sans-serif;
+  
+}
+.u-font--bold {
+  font-weight: bold;
+}
+.c-product_item__actions .c-product_item__form--cart {
+  display: none;
+}
+
+
+
+
+
+/*================ Fonts ================*/
+
+/*================ Headings ================*/
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: "游ゴシック", serif;
+}
+
+/*================ Variables ================*/
+:root {
+  --color-text-head: #494949;
+  --color-text-body: #9A9A9A;
+  --color-text-overlay: #FFFFFF;
+  --color-btn-bg: #386F81;
+  --color-btn-text: #FFFFFF;
+  --color-input-text: #9A9A9A;
+  --color-input-border: #BDC1C2;
+  --color-page-bg: #FFFFFF;
+  --color-page-border: #D8DDDF;
+}
+
+.c-steps_to_order--theme {
+  --theme-color: var(--color-btn-bg) !important;
+  --text-color: var(--color-btn-text) !important;
+}
+
+.p-movie--theme {
+  --theme-color: var(--color-btn-bg);
+}

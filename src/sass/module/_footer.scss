@@ -1,0 +1,161 @@
+@use "./module/variable"as var;
+
+.uptfootersns{
+    padding: 50px 0 68px;
+    &__ttl{
+        text-align: center;
+        color: var.$bc;
+        font-weight: 600;
+        @include var.fz(27);
+        margin: 0 auto 58px;
+    }
+    @media screen and (max-width: var.$spbp) {
+        padding: 13.3vw 0 17.8vw;
+
+        &__ttl{
+            margin: 0 auto 10vw;
+            @include var.fz(21);
+        }
+    }
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        max-height: 78px;
+        width: 100%;
+        height: 5.9vh;
+        padding: 0;
+        width: clamp(220px, 28%, 254px);
+
+        &--wrapper{
+            display: flex;
+            justify-content: center;
+        }
+        li {
+            margin: 0;
+            width: 40px;
+            height: 36px;
+            max-width: 40px;
+            max-height: 36px;
+            a {
+                display: block;
+                max-width: 40px;
+                max-height: 36px;
+                width: 40px;
+                height: 36px;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: var.$spbp) {
+
+
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-between;
+            width: clamp( 180px, 58vw, 230px);
+            padding: 0;
+            max-height: 7.5vw;
+            li {
+                margin: 0;
+                width: 8.6vw;
+                height: 7.5vw;
+
+                a {
+                    display: block;
+                    width: 8.6vw;
+                    height: 7.5vw;
+
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+}
+.uptfooter{
+    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+    background: var.$bg_dark;
+    padding: 34px 0 10px;
+    &__links{
+        display: flex;
+        justify-content: center;
+        margin: 0 0 26px;
+        li{
+
+            a{
+                display: inline-block;
+                color: #FFF;
+                padding: 0 1em;
+                border-right: 1px #FFF solid;
+                @include var.fz(10);
+                &:hover{
+                    opacity: 0.8;
+                }
+            }
+            &:last-child{
+                a{
+                    border: none;
+                }
+            }
+        }
+        
+    }
+    &__copy{
+        text-align: center;
+        small{
+            color: #FFF;
+            font-family: Montserrat;
+            @include var.fz(11);
+        }
+    
+    }
+    //SP
+    @media screen and (max-width: var.$spbp) {
+        padding: 9.8vw 0 10px;
+        &__links{
+            display: block;
+            margin: 0 0 7.9vw;
+            li{
+                text-align: center;
+                a{
+                    padding: 0;
+                    border: none;
+                    @include var.fz(10);
+                }
+
+            }
+            
+        }
+        &__copy{
+            text-align: center;
+            small{
+                color: #FFF;
+                font-family: Montserrat;
+                @include var.fz(11);
+            }
+        
+        }
+    }
+}
+
+
+
+//タブレット
+@media screen and (max-width: var.$tabw) {
+
+}
+
+//SP
+@media screen and (max-width: var.$spbp) {
+
+}

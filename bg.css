@@ -1,0 +1,288 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@-webkit-keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.monserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.fadein00 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.fadein01 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.fadein02 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.fadein03 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.fadein04 {
+  -webkit-animation-name: fadeInAnime;
+          animation-name: fadeInAnime;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+body {
+  background: #F7F8F8;
+  width: 100vw;
+  margin: 0;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.bg__repeatWrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+.bg__repeatInner {
+  position: relative;
+}
+.bg__repeatBlc {
+  width: 100vw;
+}
+
+.bgw1 {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+}
+.bgw1 .maskbg1 {
+  -webkit-mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg1_mask.png");
+  mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg1_mask.png");
+  -webkit-mask-size: 100% auto;
+          mask-size: 100% auto;
+  -webkit-mask-position: center top;
+          mask-position: center top;
+}
+@media screen and (max-width: 768px) {
+  .bgw1 .maskbg1 {
+    -webkit-mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg1_mask.png");
+    mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg1_mask.png");
+    -webkit-mask-position: center top -24vw;
+            mask-position: center top -24vw;
+    -webkit-mask-size: 200% auto;
+            mask-size: 200% auto;
+  }
+}
+.bgw1 img {
+  height: auto;
+  width: 2290px;
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+}
+@media screen and (max-width: 768px) {
+  .bgw1 img {
+    width: 205%;
+  }
+}
+
+.bgw2 {
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+}
+.bgw2 .maskbg2 {
+  -webkit-mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg2_mask.png");
+  mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg2_mask.png");
+  -webkit-mask-size: 100% auto;
+          mask-size: 100% auto;
+  -webkit-mask-position: center top;
+          mask-position: center top;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media screen and (max-width: 768px) {
+  .bgw2 .maskbg2 {
+    -webkit-mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg2_mask.png");
+    mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg2_mask.png");
+    -webkit-mask-position: center top -24vw;
+            mask-position: center top -24vw;
+    -webkit-mask-size: 100% auto;
+            mask-size: 100% auto;
+  }
+}
+.bgw2 img {
+  height: auto;
+  width: 2100px;
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+}
+@media screen and (max-width: 768px) {
+  .bgw2 img {
+    width: 205%;
+  }
+}
+
+.bgw1 img:first-child {
+  -webkit-animation: loop 600s -300s linear infinite;
+          animation: loop 600s -300s linear infinite;
+}
+
+.bgw1 img:last-child {
+  -webkit-animation: loop2 600s linear infinite;
+          animation: loop2 600s linear infinite;
+}
+
+.bgw2 img:first-child {
+  -webkit-animation: loop 300s -150s linear infinite;
+          animation: loop 300s -150s linear infinite;
+}
+
+.bgw2 img:last-child {
+  -webkit-animation: loop2 300s linear infinite;
+          animation: loop2 300s linear infinite;
+}
+
+@media screen and (max-width: 768px) {
+  .bgw1 img:first-child {
+    -webkit-animation: loop 1400s -700s linear infinite;
+            animation: loop 1400s -700s linear infinite;
+  }
+  .bgw1 img:last-child {
+    -webkit-animation: loop2 1400s linear infinite;
+            animation: loop2 1400s linear infinite;
+  }
+  .bgw2 img:first-child {
+    -webkit-animation: loop 700s -350s linear infinite;
+            animation: loop 700s -350s linear infinite;
+  }
+  .bgw2 img:last-child {
+    -webkit-animation: loop2 700s linear infinite;
+            animation: loop2 700s linear infinite;
+  }
+}
+@-webkit-keyframes loop {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+@keyframes loop {
+  0% {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+@-webkit-keyframes loop2 {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200%);
+  }
+}
+@keyframes loop2 {
+  0% {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-200%);
+  }
+}
+.pc {
+  display: block;
+}
+
+.sp {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .sp {
+    display: block;
+  }
+  .pc {
+    display: none;
+  }
+}

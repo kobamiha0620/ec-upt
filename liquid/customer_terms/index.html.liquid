@@ -1,0 +1,38 @@
+{{ 'shop/info' | javascript_include_tag }}
+
+
+<main class="l-container" role="main">
+  <div class="l-container__row u-margin__top--60">
+    <header class="p-page_header">
+      <div class="p-page_header__inner">
+        <h1 class="p-page_header__inner__title u-text--head">{{ 'base_info.pages.customer_term.value' | t }}</h1>
+      </div>
+    </header>
+  </div>
+  <div class="l-container__row u-margin__top--60 u-margin__bottom--100">
+    <section class="p-page_content">
+      <div class="p-page_content__inner">
+        <ul>
+          <!-- 利用規約項目一覧 -->
+          {% for customer_term in customer_terms %}
+            <li>
+              <!-- 利用規約項目 タイトル -->
+              <h2 class="u-text--subhead">{{ customer_term.title }}</h2>
+              <!-- 利用規約項目 規約内容 -->
+              <span class="u-text--body"><pre>{{ customer_term.text }}</pre></span>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </section>
+  </div>
+</main>
+
+{% content_for meta_description %}
+{% endcontent_for %}
+
+{% content_for meta_keywords %}
+{% endcontent_for %}
+
+{% content_for title %}
+{% endcontent_for %}

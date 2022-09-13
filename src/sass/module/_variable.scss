@@ -1,0 +1,97 @@
+$basic: #444444;
+$bc: #FF583B;
+$bc2: #32667A;
+
+$spbp: 768px;
+$pcbp: 1080px;
+$tabw: 1024px;
+$bg: #F7F8F8;
+$bg_dark: #32667A;
+$bg2: #d8d8e4;
+// $imgpath: '/ec_force/assets/images/uptorigin/';
+
+$imgpath: 'https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/';
+
+@mixin bg(){
+    background-size: 100% auto;
+    display: block;
+    white-space: nowrap;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+}
+@mixin fz($size) {
+	font-size: calc($size / 16) + rem;
+    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+
+}
+
+@keyframes fadeInAnime{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');  
+
+.monserrat{
+    font-family: 'Montserrat', sans-serif;
+}
+
+//フェードイ
+.fadein00 {
+    animation-name: fadeInAnime;
+    animation-duration:3s;
+    animation-delay: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+}
+    
+.fadein01 {
+    animation-name: fadeInAnime;
+    animation-duration:3s;
+    animation-delay: 1.0s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+    animation-iteration-count: 1;
+
+}
+
+.fadein02 {
+    animation-name: fadeInAnime;
+    animation-duration:3s;
+    animation-delay: 1.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+    animation-iteration-count: 1;
+
+}
+    
+.fadein03 {
+    animation-name: fadeInAnime;
+    animation-duration:3s;
+    animation-delay: 2.0s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+
+    animation-iteration-count: 1;
+
+}
+    
+.fadein04 {
+    animation-name: fadeInAnime;
+    animation-duration:3s;
+    animation-delay: 2.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+
+}
+    
+

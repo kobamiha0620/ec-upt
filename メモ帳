@@ -1,0 +1,22 @@
+サイトマップに存在しないページ（URL)は作成できません。
+アップロード先のURL
+ {{ file_root_path }}
+
+{% include 'bg' %}
+
+<h2>{{ page.title }}</h2>
+
+{{ 画像名.jpg | asset_url | img_tag }}
+
+{% if user %}
+  Hello {{ user.name }}!
+{% endif %}
+
+
+JSタグ
+{{ 'shop/info' | javascript_include_tag }}
+
+
+PASS:
+6TsZuxkp5HMY
+
