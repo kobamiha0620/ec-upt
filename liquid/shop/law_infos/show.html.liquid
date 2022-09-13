@@ -1,0 +1,98 @@
+{{ 'shop/info' | javascript_include_tag }}
+
+<main class="l-container" role="main">
+  <div class="l-container__row u-margin__top--60">
+    <header class="p-page_header">
+      <div class="p-page_header__inner">
+        <h1 class="p-page_header__inner__title u-text--head">{{ 'base_info.law_info.law_info.value' | t }}</h1>
+      </div>
+    </header>
+  </div>
+  <div class="l-container__row u-margin__top--60 u-margin__bottom--100">
+    <section class="p-page_table">
+      <div class="p-page_table__inner">
+        <table class="c-table">
+          <tbody>
+            <!-- 販売業者名 -->
+            <tr class="u-color__border--border">
+              <th class="u-text--strong">{{ 'base_info.law_info.company_name.value' | t }}</th>
+              <td class="u-text--body">{{ law_info.company_name }}</td>
+            </tr>
+            <!-- 販売責任者 -->
+            <tr class="u-color__border--border">
+              <th class="u-text--strong">{{ 'base_info.law_info.manager.value' | t }}</th>
+              <td class="u-text--body">{{ law_info.manager }}</td>
+            </tr>
+            <!-- 所在地 -->
+            <tr class="u-color__border--border">
+              <th class="u-text--strong">{{ 'base_info.general.address.value' | t }}</th>
+              <td class="u-text--body">
+                <!-- 所在地(郵便番号) -->
+                {{ 'base_info.general.post_mark.value' | t }}{{ law_info.zip01 }}{{ 'base_info.general.zip_code_delimiter.value' | t }}{{ law_info.zip02 }}{{ 'base_info.general.zip_code_end.value' | t }}
+                <!-- 所在地(住所) -->
+                {{ law_info.prefecture_name }}
+                {{ law_info.addr01 }}
+                {{ law_info.addr02 }}
+              </td>
+            </tr>
+            <!-- 電話番号 -->
+            <tr class="u-color__border--border">
+              <th class="u-text--strong">{{ 'customer.general.tel.value' | t }}</th>
+              <td class="u-text--body">{{ law_info.tel }}</td>
+            </tr>
+            <!-- FAX番号(任意) -->
+            {% unless law_info.fax == blank %}
+            <tr class="u-color__border--border">
+              <th class="u-text--strong">{{ 'customer.general.fax.value' | t }}</th>
+              <td class="u-text--body">{{ law_info.fax }}</td>
+            </tr>
+            {% endunless %}
+            <!-- メールアドレス -->
+            <tr class="u-color__border--border">
+              <th class="u-text--strong">{{ 'customer.general.email.value' | t }}</th>
+              <td class="u-text--body">{{ law_info.email }}</td>
+            </tr>
+            <!-- サイト名 -->
+            <tr class="u-color__border--border">
+              <th class="u-text--strong">{{ 'base_info.law_info.shop_name.value' | t }}</th>
+              <td class="u-text--body">{{ law_info.shop_name }}</td>
+            </tr>
+            <!-- ホームページURL -->
+            <tr class="u-color__border--border">
+              <th class="u-text--strong">{{ 'base_info.law_info.url.value' | t }}</th>
+              <td class="u-text--body">{{ law_info.url }}</td>
+            </tr>
+            <!-- 販売価格 -->
+            <tr class="u-color__border--border">
+              <th class="u-text--strong">{{ 'base_info.law_info.price.value' | t }}</th>
+              <td class="u-text--body"><pre>{{ law_info.price }}</pre></td>
+            </tr>
+            <!-- 販売数量 -->
+            <tr class="u-color__border--border">
+              <th class="u-text--strong">{{ 'base_info.law_info.quantity.value' | t }}</th>
+              <td class="u-text--body"><pre>{{ law_info.quantity }}</pre></td>
+            </tr>
+            <!-- 任意項目(任意) -->
+            {% for law_term in law_info.law_terms %}
+              <tr class="u-color__border--border">
+                <!-- タイトル -->
+                <th class="u-text--strong">{{ law_term.title }}</th>
+                <!-- 内容 -->
+                <td class="u-text--body"><pre>{{ law_term.text }}</pre></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+</main>
+
+{% content_for meta_description %}
+{% endcontent_for %}
+
+{% content_for meta_keywords %}
+{% endcontent_for %}
+
+{% content_for title %}
+{% endcontent_for %}

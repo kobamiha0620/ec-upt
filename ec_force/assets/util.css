@@ -1,0 +1,155 @@
+.u-font__jp {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.u-font__en {
+  font-family: "Alata", sans-serif;
+}
+
+.u-font__both {
+  font-family: "Alata", "Noto Sans JP", sans-serif;
+}
+
+.u-color__text--base {
+  color: #FFFFFF;
+}
+
+.u-color__bg--base {
+  background: #FFFFFF;
+}
+
+.u-color__border--base {
+  border-color: #FFFFFF;
+}
+
+.u-color__text--main {
+  color: #000000;
+}
+
+.u-color__bg--main {
+  background: #000000;
+}
+
+.u-color__border--main {
+  border-color: #000000;
+}
+
+.u-color__text--accent {
+  color: #386F81;
+}
+
+.u-color__bg--accent {
+  background: #386F81;
+}
+
+.u-color__border--accent {
+  border-color: #386F81;
+}
+
+.u-color__text--accent-light {
+  color: rgba(56, 111, 129, 0.16);
+}
+
+.u-color__bg--accent-light {
+  background: rgba(56, 111, 129, 0.16);
+}
+
+.u-color__border--accent-light {
+  border-color: rgba(56, 111, 129, 0.16);
+}
+
+.u-color__text--sub {
+  color: #868686;
+}
+
+.u-color__bg--sub {
+  background: #868686;
+}
+
+.u-color__border--sub {
+  border-color: #868686;
+}
+
+.u-color__text--border {
+  color: #D8DDDF;
+}
+
+.u-color__bg--border {
+  background: #D8DDDF;
+}
+
+.u-color__border--border {
+  border-color: #D8DDDF;
+}
+
+.u-color__text--input {
+  color: #BDC1C2;
+}
+
+.u-color__bg--input {
+  background: #BDC1C2;
+}
+
+.u-color__border--input {
+  border-color: #BDC1C2;
+}
+
+.u-color__text--bg {
+  color: #F4F8FA;
+}
+
+.u-color__bg--bg {
+  background: #F4F8FA;
+}
+
+.u-color__border--bg {
+  border-color: #F4F8FA;
+}
+
+.u-color__text--link {
+  color: #386F81;
+}
+
+.u-color__bg--link {
+  background: #386F81;
+}
+
+.u-color__border--link {
+  border-color: #386F81;
+}
+
+.u-color__text--alert {
+  color: #E21E1E;
+}
+
+.u-color__bg--alert {
+  background: #E21E1E;
+}
+
+.u-color__border--alert {
+  border-color: #E21E1E;
+}
+
+.u-color__text--alert-light {
+  color: rgba(226, 30, 30, 0.1);
+}
+
+.u-color__bg--alert-light {
+  background: rgba(226, 30, 30, 0.1);
+}
+
+.u-color__border--alert-light {
+  border-color: rgba(226, 30, 30, 0.1);
+}
+
+.u-color__text--line {
+  color: #00b900;
+}
+
+.u-color__bg--line {
+  background: #00b900;
+}
+
+.u-color__border--line {
+  border-color: #00b900;
+}

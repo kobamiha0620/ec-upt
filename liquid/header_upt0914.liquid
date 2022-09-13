@@ -1,0 +1,400 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<header class="l-header u-color__bg--base u-color__border--border logo--{{section.settings.align_logo}}" data-section-id='header' data-section-type='header-section'>
+    <div class="uptheader bg__header">
+{% if production != true and customize_preview_mode %}
+<div class="customize_notice">
+<p>※プレビュー表示が崩れた場合は、一度保存してください。</p>
+</div>
+{% endif %}
+
+  
+  {% comment %} To use the inversion result in an if condition {% endcomment %}
+  {% if shop_root %}
+    {% assign top = false %}
+  {% else %}
+    {% assign top = true %}
+  {% endif %}
+
+  {% comment %} annoucement bar {% endcomment %}
+  {% if section.settings.message == true or section.settings.message == 'true' %}
+    {% comment %} Converted to boolean for use in if conditions {% endcomment %}
+    {% if section.settings.top_only_message == false or section.settings.top_only_message == 'false' %}
+      {% assign top_only_message_flg = false %}
+    {% else %}
+      {% assign top_only_message_flg = true %}
+    {% endif %}
+    {% unless top and top_only_message_flg %} {% comment %} unless a && !b {% endcomment %}
+      <div class="c-announce_bar uptheader__anounce">
+        <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use escape{% endcomment %}
+        <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
+      </div>
+    {% endunless %}
+  {% endif %}
+{% comment %} end of announcement bar {% endcomment %}
+
+  {% if section.settings.banner == true or section.settings.banner == 'true' %}
+    {% if smartphone %}
+      {% assign header_banner = section.settings.banner_sp %}
+    {% else %}
+      {% assign header_banner = section.settings.banner_pc %}
+    {% endif %}
+    {% if header_banner.size > 0 %}
+      {% comment %} Converted to boolean for use in if conditions {% endcomment %}
+      {% if section.settings.top_only_banner == false or section.settings.top_only_banner == 'false' %}
+        {% assign top_only_banner_flg = false %}
+      {% else %}
+        {% assign top_only_banner_flg = true %}
+      {% endif %}
+
+      {% unless top and top_only_banner_flg %} {% comment %} unless a && !b {% endcomment %}
+        <div class="p-banner p-banner--header">
+          {% assign image_url = header_banner | generate_image_url: theme_file_root_path %}
+          <p class="p-banner__image" style="background-image: url('{{ image_url }}')"></p>
+          {% if section.settings.banner_link.size > 0 %}
+          <a class="p-banner__link" href="{{section.settings.banner_link}}"></a>
+          {% endif %}
+        </div>
+      {% endunless %}
+    {% endif %}
+  {% endif %}
+
+ 
+<div class="uptblc">
+    <div class="uptblc__inner">
+        <div class="uptheader__icons">
+            <div class="uptheader__icons--logo">
+                <a href="/shop/" class="js-logo active">Upt</a>
+            </div>
+            <div class="uptheader__icons--btns">
+                <div class="l-header__inner__block u-color--head">
+                    <a class="l-header__inner__block__item" href="/shop/customer">
+                        <i class="u-icon--account"></i>
+                    </a>
+                    <a class="l-header__inner__block__item" href="/shop/cart">
+                        <i class="u-icon--cart"></i>
+                        {% comment %} {% if order.completed? %}
+                            <span class="count u-color__bg--alert u-color__text--base">0</span>
+                        {% else %}
+                            <span class="count u-color__bg--alert u-color__text--base">{% if current_order %}{{ current_order.quantity }}{% else %}{{ order.quantity }}{% endif %}</span>
+                        {% endif %} {% endcomment %}
+                    </a>
+                </div>
+                <div class="l-header__inner__block u-color--head">
+                    <button class="l-header__inner__block__item--menu" type="button">
+                        <i class="u-icon--menu"></i>
+                    </button>
+                    <div style="display: none;">
+                        <button class="l-header__inner__block__item--search" type="button">
+                            <i class="u-icon--search"></i>
+                          </button>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+
+  {% comment %} global nav {% endcomment %}
+  <div class="c-gmenu uptgmenu">
+    <div class="c-gmenu__overlay js-close-menu"></div>
+    <nav class="c-gmenu__container u-color__bg--base">
+        <div class="uptgmenu__inner">
+            <div class="uptgmenu__innerline">
+                <div class="uptgmenu__contents">
+
+                    <section class="uptgmenu__head">
+                        <a href="/shop/customer">
+                            <i class="u-icon--account"></i>
+                        </a>
+                        <a href="/shop/cart">
+                            <i class="u-icon--cart"></i>
+                        </a>   
+                        <button class="c-gmenu__container__close u-color--head js-close-menu">
+                            <i class="u-icon--close"></i>
+                        </button>
+                    </section>
+
+
+                    <div class="c-gmenu__container__inner">
+                            <div style="display: none;">
+
+                            {% unless customer_signed_in %}
+                            <ul class="c-gmenu__container__inner__list u-color__border--border">
+                            <li class="c-gmenu__container__inner__list__item u-color__border--border">
+                                <ul class="c-gmenu__container__inner__list__item__child">
+                                <li class="c-gmenu__container__inner__list__item__child__item">
+                                    <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead" href="/shop/customers/sign_up">
+                                    <span>会員登録</span>
+                                    </a>
+                                </li>
+                                <li class="c-gmenu__container__inner__list__item__child__item">
+                                    <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead" href="/shop/customers/sign_in">
+                                    <span>{{ 'account.general.login.value' | t }}</span>
+                                    </a>
+                                </li>
+                                </ul>
+                            </li>
+                            <li class="c-gmenu__container__inner__list__item u-color__border--border">
+                                <ul class="c-gmenu__container__inner__list__item__child">
+                                <li class="c-gmenu__container__inner__list__item__child__item">
+                                    <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead" href="/shop/contact/draft">
+                                    <span>{{ 'contact.general.contact_title.value' | t }}</span>
+                                    </a>
+                                </li>
+                                </ul>
+                            </li>
+                            </ul>
+                            {% else %}
+                            <ul class="c-gmenu__container__inner__list u-color__border--border">
+                            <li class="c-gmenu__container__inner__list__item u-color__border--border">
+                                <ul class="c-gmenu__container__inner__list__item__child">
+                                <li class="c-gmenu__container__inner__list__item__child__item">
+                                    <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead" href="/shop/customer/favorites">
+                                    <span>{{ 'products.favorites.favorite_list.value' | t }}</span>
+                                    </a>
+                                </li>
+                                <li class="c-gmenu__container__inner__list__item__child__item">
+                                    <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead" href="/shop/customer/orders">
+                                    <span>{{ 'orders.history.purchase_history.value' | t }}</span>
+                                    </a>
+                                </li>
+                                </ul>
+                            </li>
+                            <li class="c-gmenu__container__inner__list__item u-color__border--border">
+                                <ul class="c-gmenu__container__inner__list__item__child">
+                                <li class="c-gmenu__container__inner__list__item__child__item">
+                                    <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead" href="/shop/customer/edit">
+                                    <span>{{ 'account.general.member_info.value' | t }}</span>
+                                    </a>
+                                </li>
+                                <li class="c-gmenu__container__inner__list__item__child__item">
+                                    <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead" href="/shop/customer/cards">
+                                    <span>{{ 'payments.credit_card.credit_card_info.value' | t }}</span>
+                                    </a>
+                                </li>
+                                <li class="c-gmenu__container__inner__list__item__child__item">
+                                    <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead" href="/shop/customer/password/edit">
+                                    <span>{{ 'account.password.password_change.value' | t }}</span>
+                                    </a>
+                                </li>
+                                <li class="c-gmenu__container__inner__list__item__child__item">
+                                    <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead" href="/shop/customer/subs_orders">
+                                    <span>{{ 'subs_orders.general.subs_orders.value' | t }}</span>
+                                    </a>
+                                </li>
+                                </ul>
+                            </li>
+                            <li class="c-gmenu__container__inner__list__item u-color__border--border">
+                                <ul class="c-gmenu__container__inner__list__item__child">
+                                <li class="c-gmenu__container__inner__list__item__child__item">
+                                    <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead" href="/shop/contact/draft">
+                                    <span>{{ 'contact.general.contact_title.value' | t }}</span>
+                                    </a>
+                                </li>
+                                <li class="c-gmenu__container__inner__list__item__child__item">
+                                    <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead" href="/shop/customers/sign_out">
+                                    <span>{{ 'account.general.logout.value' | t }}</span>
+                                    </a>
+                                </li>
+                                </ul>
+                            </li>
+                            </ul>
+                            {% endunless %}
+                        </div>
+                    </div>
+                    <section class="uptgmenu__upper">
+                        <ul class="uptgmenu__upperlinks">
+                            <li>
+                                <a href="/shop/products">PRODUCTS</a>
+                            </li>
+                            <li>
+                                <a href="/shop#ABOUT">ABOUT</a>
+                            </li>
+                            <li>
+                                <a href="/shop#PRODUCER">PRODUCER</a>
+                            </li>
+                            <li>
+                                <a href="/shop/cart">CART</a>
+                            </li>
+                            <li>
+                                <a href="/shop/contact/draft">CONTACT</a>
+                            </li>
+                        </ul>
+                        <div class="uptgmenu__sns">
+                            <h2 class="uptgmenu__sns__ttl">FOLLOW US</h2>
+                            <div class="uptgmenu__sns__list--wrapper">
+                            <ul class="uptgmenu__sns__list">
+                                <li>
+                                    <a href="https://www.instagram.com/_upt_official/" class="gmenu__sns--insta" target="_blank">Instagram</a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/_upt_official" class="gmenu__sns--twitter" target="_blank">Twitter</a>
+                                </li>
+                                <li>
+                                    <a href="https://www.youtube.com/channel/UCK78cTfeqqzgKOT1OVKhw8Q" class="gmenu__sns--youtube" target="_blank">Twitter</a>
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                    </section>
+                </div>
+                <section class="uptgmenu__btm">
+                    <p class="uptgmenu__btm--logo"><a href="/shop/">Upt</a></p>
+                    <ul class="uptgmenu__btm--links">
+                        <li>
+                            <a href="/shop/guide/">ご利用ガイド</a>
+                        </li>
+                        <li>
+                            <a href="/shop/law_info/">特定商取引に基づく表記</a>
+                        </li>
+                        <li>
+                            <a href="/shop/privacy/">プライバシーポリシー</a>
+                        </li>
+                        <li>
+                            <a href="/shop/customer_term/">利用規約</a>
+                        </li>
+                    </ul>
+                    <p class="uptgmenu__btm--copy"><small>© 2022 Upt All Rights Reserved</small></p>
+
+                </section>
+            </div>
+        </div>
+
+    </nav>
+  </div>
+
+  {% comment %} search menu {% endcomment %}
+  <div style="display: none;">
+  <div class="p-search_menu u-text--body">
+    <div class="p-search_menu__overlay js-close-menu"></div>
+    <nav class="p-search_menu__container u-color__bg--base">
+
+      <form class="p-search_menu__form" id="ec_force_product_search" action="/shop/search" accept-charset="UTF-8" method="get">
+        <div class="p-search_menu__container__inner is-search">
+            <p class="p-search_menu__container__inner__heading u-text--subhead u-font--bold">絞り込み検索</p>
+            <div class="p-search_menu__container__inner__search u-color__border--border">
+              <div class="p-search_menu__container__inner__search__part">
+                <div class="p-search_menu__container__inner__search__part__label">
+                  <span class="label_title u-text--subhead u-font--bold">キーワード</span>
+                </div>
+                <div class="p-search_menu__container__inner__search__part__content">
+                  <div class="input_wrap is-text">
+                    <input class="u-text--input u-color__input--bg u-color__border--input" type="search" name="q[freeword]" id="q_freeword" placeholder="{{ 'general.searches.placeholder.value' | t }}">
+                  </div>
+                </div>
+              </div>
+              <div class="p-search_menu__container__inner__search__part">
+                <div class="p-search_menu__container__inner__search__part__label">
+                  <span class="label_title u-text--subhead u-font--bold">カテゴリー</span>
+                </div>
+                <div class="p-search_menu__container__inner__search__part__content">
+                  <div class="input_wrap is-select">
+                    <select class="u-text--input u-color__input--bg u-color__border--input" name="q[products_product_categories_product_category_id_eq]">
+                      <option value="">選択してください。</option>
+                      {% for category in product_categories %}
+                        {% if category.product_category_visibility %}
+                          {% assign category_id = category.id | downcase %}
+                          <option value='{{ category.id }}' {% if params["q"]["products_product_categories_product_category_id_eq"] == category_id %} selected {% endif %}>{{ category.name }}</option>
+                        {% endif %}
+                      {% endfor %}
+                    </select>
+                  </div>
+                </div>
+              </div>
+              {% if settings.settings.search.settings.search_sales_price == true or settings.settings.search.settings.search_sales_price == 'true' %}
+                <div class="p-search_menu__container__inner__search__part">
+                  <div class="p-search_menu__container__inner__search__part__label">
+                    <span class="label_title u-text--subhead u-font--bold">販売価格</span>
+                  </div>
+                  <div class="p-search_menu__container__inner__search__part__content">
+                    <div class="input_wrap is-range">
+                      <input
+                        class="u-text--input u-color__input--bg u-color__border--input c-gmenu__sales_price"
+                        placeholder="{{ 'general.searches.minimum_price.value' | t }}"
+                        type="number"
+                        name="q[sales_price_start]"
+                        value={{ params["q"]["sales_price_start"] }}
+                      >
+                      <span class="p-search_menu__from_to">〜</span>
+                      <input
+                        class="u-text--input u-color__input--bg u-color__border--input c-gmenu__sales_price"
+                        placeholder="{{ 'general.searches.maximum_price.value' | t }}"
+                        type="number"
+                        name="q[sales_price_end]"
+                        value={{ params["q"]["sales_price_end"] }}
+                      >
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+              <div class="p-search_menu__container__inner__search__part p-search_menu__container__inner__search__part--flex">
+                {% if settings.settings.search.settings.search_in_stock == true or settings.settings.search.settings.search_in_stock == 'true' %}
+                  <div class="p-search_menu__container__inner__search__part__content">
+                    <label class='c-form_table__checkbox checkbox-inline p-search_menu__label'>
+                      <input type="checkbox" name="q[variants_stock_items]" class='u-color__border--input' {% if params["q"]["variants_stock_items"] == "on" %} checked="checked" {% endif %}>
+                      <span class="c-form_table__checkbox__frame u-color__btn"></span>
+                      <span class="u-text--subhead u-font--bold">{{ 'general.searches.stock_item.value' | t }}</span>
+                    </label>
+                  </div>
+                {% endif %}
+                {% if settings.settings.search.settings.search_with_review == true or settings.settings.search.settings.search_with_review == 'true' %}
+                  <div class="p-search_menu__container__inner__search__part__content">
+                    <label class='c-form_table__checkbox checkbox-inline p-search_menu__label'>
+                      <input type="checkbox" name="q[reviews]" class='u-color__border--input' {% if params["q"]["reviews"] == "on" %} checked="checked" {% endif %}>
+                      <span class="c-form_table__checkbox__frame u-color__btn"></span>
+                      <span class="u-text--subhead u-font--bold">{{ 'general.searches.review.value' | t }}</span>
+                    </label>
+                  </div>
+                {% endif %}
+              </div>
+              {% if settings.settings.search.settings.search_label == true or settings.settings.search.settings.search_label == 'true' %}
+                <div class="p-search_menu__container__inner__search__part">
+                  <div class="p-search_menu__container__inner__search__part__label">
+                    <span class="label_title u-text--subhead u-font--bold">タグ</span>
+                  </div>
+                  <div class="p-search_menu__container__inner__search__part__content">
+                    <div class="p-search_menu__tags">
+                      {% for product_label in product_labels %}
+                        <input
+                          type="checkbox"
+                          name="q[labels_id_in][]"
+                          id="q_labels_id_in_{{ product_label.id }}"
+                          class="u-color__border--input p-search_menu__checkbox"
+                          value="{{ product_label.id }}"
+                        >
+                        <label class="p-search_menu__label p-search_menu__label--tags c-form_table__checkbox checkbox-inline" for="q_labels_id_in_{{ product_label.id }}">
+                          <span>{{ product_label.name }}</span>
+                        </label>
+                      {% endfor %}
+                    </div>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+            <button type="button" class="p-search_menu__container__close u-color--head">
+              <i class="u-icon--close"></i>
+            </button>
+            <div class="p-search_menu__container__searchbtn">
+              <button name="button" class="u-color__text--base u-color__bg--sub js-gmenu-search-reset" type="button">
+                <span>リセット</span>
+              </button>
+              <button name="button" class="u-color__text--base u-color__bg--accent js-gmenu-search-submit" type="submit">
+                <span>絞り込み</span>
+              </button>
+            </div>
+        </div>
+      </form>
+      <button class="p-search_menu__container__close js-close-menu">
+        <i class="u-icon--close"></i>
+      </button>
+    </nav>
+  </div>
+</div>
+</div>
+
+</header>
+<div class="uptplane">
+    <div class="uptplane__inner">

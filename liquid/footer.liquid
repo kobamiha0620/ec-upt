@@ -1,0 +1,110 @@
+<footer class="l-footer u-color__border--border footer_bg" data-section-id='footer' data-section-type='footer-section'>
+  <style>
+    .footer_bg {
+      background: {{section.settings.color_footer_bg}};
+    }
+    .footer_head {
+      color: {{section.settings.color_footer_head}};
+    }
+    .footer_link {
+      color: {{section.settings.color_footer_link}};
+    }
+    .footer_body {
+      color: {{section.settings.color_footer_body}};
+    }
+  </style>
+  <div class="l-footer__info">
+    <div class="l-footer__info__store">
+      <div class="l-footer__info__store__logo" style="max-width: {{section.settings.image_max_width}}px">
+        {% if section.settings.image.size > 0 %}
+          {% assign image_url = section.settings.image | generate_image_url: theme_file_root_path %}
+          <img src="{{ image_url }}" alt="{{ base_info.shop_name }}">
+        {% else %}
+          {% if smartphone %}
+            {% if base_info.mobile_logo and base_info.mobile_logo.url %}
+              <img src="{{ base_info.mobile_logo.url }}" alt="{{ base_info.shop_name }}">
+            {% endif %}
+          {% else %}
+            {% if base_info.logo and base_info.logo.url %}
+              <img src="{{ base_info.logo.url }}" alt="{{ base_info.shop_name }}">
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      </div>
+      <div class="l-footer__info__store__sns">
+        {% if section.settings.facebook_account_text.size > 0 %}
+          <a class="l-footer__info__store__sns__item" href="{{section.settings.facebook_account_text}}" target="_blank" rel="noopener noreferrer nofollow">
+            <i class="u-icon--facebook footer_link"></i>
+          </a>
+        {% endif %}
+        {% if section.settings.twitter_account_text.size > 0 %}
+          <a class="l-footer__info__store__sns__item" href="{{section.settings.twitter_account_text}}" target="_blank" rel="noopener noreferrer nofollow">
+            <i class="u-icon--twitter footer_link"></i>
+          </a>
+        {% endif %}
+        {% if section.settings.instagram_account_text.size > 0 %}
+          <a class="l-footer__info__store__sns__item" href="{{section.settings.instagram_account_text}}" target="_blank" rel="noopener noreferrer nofollow">
+            <i class="u-icon--instagram footer_link"></i>
+          </a>
+        {% endif %}
+        {% if section.settings.line_account_text.size > 0 %}
+          <a class="l-footer__info__store__sns__item" href="{{section.settings.line_account_text}}" target="_blank" rel="noopener noreferrer nofollow">
+            <i class="u-icon--line footer_link"></i>
+          </a>
+        {% endif %}
+      </div>
+      <div class="u-font--body footer_body">{{ base_info.copyright }}</div>
+    </div>
+  </div>
+  <div class="l-footer__menu u-color__border--border">
+    {% if section.settings.category == true or section.settings.category == 'true' %}
+      <div class="c-footer_menu u-color__border--border">
+        <div class="c-footer_menu__title u-font--subhead footer_head">{{ section.settings.category_title | escape }}</div>
+        <ul class="c-footer_menu__list">
+          {% for product_category in visible_product_categories %}
+            <li class="c-footer_menu__list__item">
+              <a class="c-footer_menu__list__item__inner u-font--body footer_link" href="/shop/product_categories/{{ product_category.id }}">{{ product_category.name | escape }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+    {% for menu in section.settings.footer_menu %}
+      <div class="c-footer_menu u-color__border--border">
+        <div class="c-footer_menu__title u-font--subhead footer_head">{{ menu.head | escape }}</div>
+        <ul class="c-footer_menu__list">
+          {% unless menu.link_text1 == "" or menu.link_text1 == null %}
+            <li class="c-footer_menu__list__item">
+              <a class="c-footer_menu__list__item__inner u-font--body footer_link" href="{{menu.link_url1}}">{{ menu.link_text1 | escape }}</a>
+            </li>
+          {% endunless %}
+          {% unless menu.link_text2 == "" or menu.link_text2 == null %}
+            <li class="c-footer_menu__list__item">
+              <a class="c-footer_menu__list__item__inner u-font--body footer_link" href="{{menu.link_url2}}">{{ menu.link_text2 | escape }}</a>
+            </li>
+          {% endunless %}
+          {% unless menu.link_text3 == "" or menu.link_text3 == null %}
+            <li class="c-footer_menu__list__item">
+              <a class="c-footer_menu__list__item__inner u-font--body footer_link" href="{{menu.link_url3}}">{{ menu.link_text3 | escape }}</a>
+            </li>
+          {% endunless %}
+          {% unless menu.link_text4 == "" or menu.link_text4 == null %}
+            <li class="c-footer_menu__list__item">
+              <a class="c-footer_menu__list__item__inner u-font--body footer_link" href="{{menu.link_url4}}">{{ menu.link_text4 | escape }}</a>
+            </li>
+          {% endunless %}
+          {% unless menu.link_text5 == "" or menu.link_text5 == null %}
+            <li class="c-footer_menu__list__item">
+              <a class="c-footer_menu__list__item__inner u-font--body footer_link" href="{{menu.link_url5}}">{{ menu.link_text5 | escape }}</a>
+            </li>
+          {% endunless %}
+          {% unless menu.link_text6 == "" or menu.link_text6 == null %}
+            <li class="c-footer_menu__list__item">
+              <a class="c-footer_menu__list__item__inner u-font--body footer_link" href="{{menu.link_url6}}">{{ menu.link_text6 | escape }}</a>
+            </li>
+          {% endunless %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</footer>

@@ -1,0 +1,44 @@
+{{ 'shop/info' | javascript_include_tag }}
+
+<div class="uptplane">
+    <div class="uptplane__inner">
+        <main class="l-container" role="main">
+            <div class="l-container__row u-margin__top--60">
+            <h1 class="uptplane__ttl">{{ 'base_info.pages.customer_term.value' | t }}</h1>
+        </div>
+        <div class="l-container__row u-margin__top--60">
+            <section class="p-page_content">
+            <div class="p-page_content__inner">
+                <ul>
+                <!-- 利用規約項目一覧 -->
+                {% for customer_term in customer_terms %}
+                    <li>
+                    <!-- 利用規約項目 タイトル -->
+                    <h2 class="u-text--subhead">{{ customer_term.title }}</h2>
+                    <!-- 利用規約項目 規約内容 -->
+                    <span class="u-text--body"><pre>{{ customer_term.text }}</pre></span>
+                    </li>
+                {% endfor %}
+                </ul>
+            </div>
+            </section>
+        </div>
+        </main>
+    </div>
+</div>
+
+{% content_for meta_description %}
+{% endcontent_for %}
+
+{% content_for meta_keywords %}
+{% endcontent_for %}
+
+{% content_for title %}
+{% endcontent_for %}
+
+
+<style>
+    .u-text--subhead::before{
+        content: ""!important;
+    }
+</style>

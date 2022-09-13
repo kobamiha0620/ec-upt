@@ -1,0 +1,112 @@
+<%
+// 以下の設定値を記入のこと
+
+var pageinit = {
+  title : '' ,
+  keywords : '' ,
+  description : '' ,
+  ogurl : '' ,
+  path: '',
+  ogimage : '' ,
+  path : '' ,
+  ecforce : 'false',
+  category : ['about'] ,
+  pagename : '',
+  css: [],
+  js:[],
+  jsfunc:['setPhotoChanger ();','startScroll ();','setVideo();']
+};
+%>
+<!-- Footer -->
+<div class="uptplane">
+    <div class="uptplane__inner">
+<main class="l-container" role="main">
+
+
+    <header class="p-page_header uptplane__ttl">
+        <div class="p-page_header__inner">
+          <!-- プライバシーポリシー -->
+          <h1 class="p-page_header__inner__title u-text--head">{{ 'base_info.privacy.privacy_policy.value' | t }}</h1>
+        </div>
+      </header>
+    <div class="l-container__row u-margin__top--60">
+      <section class="p-page_table">
+        <div class="p-page_table__inner">
+          <table class="c-table">
+            <tbody>
+              <!-- 販売業者名 -->
+              <tr class="u-color__border--border">
+                <th class="u-text--strong">販売業者名</th>
+                <td class="u-text--body">株式会社mano mano</td>
+              </tr>
+              <!-- 販売責任者 -->
+              <tr class="u-color__border--border">
+                <th class="u-text--strong">販売責任者</th>
+                <td class="u-text--body">野村　諭史</td>
+              </tr>
+              <!-- 所在地 -->
+              <tr class="u-color__border--border">
+                <th class="u-text--strong">所在地</th>
+                <td class="u-text--body">
+                  <!-- 所在地(郵便番号) -->
+                  〒&nbsp;150-0001&nbsp;
+                  <!-- 所在地(住所) -->
+                  東京都
+                  渋谷区
+                  神宮前5-46-1
+                </td>
+              </tr>
+              <!-- 電話番号 -->
+              <tr class="u-color__border--border">
+                <th class="u-text--strong">電話番号</th>
+                <td class="u-text--body">0120-811-047</td>
+              </tr>
+              <!-- FAX番号(任意) -->
+              
+              <!-- メールアドレス -->
+              <tr class="u-color__border--border">
+                <th class="u-text--strong">メールアドレス</th>
+                <td class="u-text--body">info@mano-mano.co.jp</td>
+              </tr>
+              <!-- サイト名 -->
+              <tr class="u-color__border--border">
+                <th class="u-text--strong">サイト名</th>
+                <td class="u-text--body">Upt</td>
+              </tr>
+              <!-- ホームページURL -->
+              <tr class="u-color__border--border">
+                <th class="u-text--strong">ホームページURL</th>
+                <td class="u-text--body">https://uptofficial.jp/</td>
+              </tr>
+              <!-- 販売価格 -->
+              <tr class="u-color__border--border">
+                <th class="u-text--strong">販売価格</th>
+                <td class="u-text--body"><pre>各商品ページをご参照ください</pre></td>
+              </tr>
+              <!-- 販売数量 -->
+              <tr class="u-color__border--border">
+                <th class="u-text--strong">販売数量</th>
+                <td class="u-text--body"><pre>各商品ページをご参照ください</pre></td>
+              </tr>
+              <!-- 任意項目(任意) -->
+              
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+
+
+
+
+</main>
+
+</div>
+</div>
+
+
+<style>
+    .u-text--subhead::before{
+        content: "";
+    }
+</style>
