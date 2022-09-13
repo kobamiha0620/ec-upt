@@ -710,9 +710,8 @@ h1, h2, h3{
         display: block;
     }
 }
-*{
-    cursor:  url(var.$imgpath + '0914/cursor.svg', auto)!important;
-}
+
+
 
 
 .uptplane{
@@ -801,11 +800,22 @@ body {
 *{
     a,button{
         cursor: none;
+  
+        @media screen and (max-width: var.$spbp) {
+            cursor: auto;
+            &:hover{
+                opacity: 1!important;
+            }
+        }
     }
-    
+
 }
 .c-gmenu__overlay{
     cursor: none;
+    @media screen and (max-width: var.$spbp) {
+        cursor: auto;
+
+    }
 }
 
 #js-sns{
@@ -817,3 +827,11 @@ body {
     }
 }            
 
+
+main{
+    padding-top: 99px;
+    @media screen and (max-width: var.$spbp) {
+        padding-top: 90px;
+    }
+
+}

@@ -16,13 +16,13 @@
         display: flex;
         align-items: stretch;
         &--img{
-            width: 50%;
-            min-width: 50%;
+            width: 55%;
+            min-width: 55%;
             border-right: solid 1px var.$bg_dark; 
         }
         &--s{
-            width: 50%;
-            min-width: 50%;
+            width: 45%;
+            min-width: 45%;
             display: flex;
             justify-content: ceter;
             align-items: center;
@@ -42,7 +42,7 @@
             height: 100%;
         }
         &--txt00{
-            @include var.fz(40);
+            @include var.fz(38);
             line-height: 1.5;
             margin: 0 0 12px;
         }

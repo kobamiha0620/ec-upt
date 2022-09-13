@@ -67,7 +67,7 @@ function compile(done) {
 
   function bsInit(done) {
     bs.init({
-      index : "./dest/html/product01.html",
+      index : "./dest/html/index.html",
       server: true,
     });
     done();

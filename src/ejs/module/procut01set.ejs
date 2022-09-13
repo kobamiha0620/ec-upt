@@ -31,11 +31,11 @@ var pageinit = {
         <div class="uptblc__buyblc">
             <div class="uptblc__buyblc--img">
                 <% if (pageinit.ecforce !== 'true') { %>
-                    <img src="/ec_force/assets/images/uptorigin/0914/product_setimage.png" alt="" class="pcImg">
+                    <img src="/ec_force/assets/images/uptorigin/0914/product_setimage.jpg" alt="" class="pcImg">
                     <img src="/ec_force/assets/images/uptorigin/0914/product_setimage-sp.png" alt="" class="spImg">
                 <% } else { %>
                     {% if product.id == 5 %}
-                    <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/product_setimage.png" alt="" class="pcImg">
+                    <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/product_setimage.jpg" alt="" class="pcImg">
                     <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/product_setimage-sp.png" alt="" class="spImg">
                     {% endif %}
                 <% } %>
@@ -264,15 +264,15 @@ var pageinit = {
         <p class="uptprodcut__intro--txt">スキンケアを、<br>⼼安らぐ時間に</p>
         <div class="uptprodcut__intro--relative">
         <% if (pageinit.ecforce !== 'true') { %>
-            <img src="/ec_force/assets/images/uptorigin/0914/img_product-yumipc02.png" alt="" class="pcImg">
+            <img src="/ec_force/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="" class="pcImg">
         <% } else { %>
-            <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_product-yumipc02.png" alt="" class="pcImg">
+            <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="" class="pcImg">
         <% } %>
 
         <% if (pageinit.ecforce !== 'true') { %>
-            <img src="/ec_force/assets/images/uptorigin/0914/img_product-yumisp02.png" alt="" class="spImg">
+            <img src="/ec_force/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="" class="spImg">
         <% } else { %>
-            <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_product-yumisp02.png" alt="" class="spImg">
+            <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="" class="spImg">
         <% } %>
             <div class="uptprodcut__intro--border" id="js-border"></div>
         </div>
@@ -526,7 +526,6 @@ var pageinit = {
 <% if (pageinit.ecforce === 'true') { %>
 
     <link rel="stylesheet" href="{{ theme_file_root_path }}/assets/product.css" type="text/css">
-    <script src="{{ theme_file_root_path }}/assets/uptproduct.js" type="text/javascript"></script>
     
     {% content_for meta_description %}
     {% endcontent_for %}

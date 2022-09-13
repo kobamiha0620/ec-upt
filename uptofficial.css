@@ -351,9 +351,6 @@
 .uptheader .uptgmenu {
   height: 100vh;
 }
-.uptheader .uptgmenu .c-gmenu__container {
-  overflow-x: hidden;
-}
 .uptheader .uptgmenu .c-gmenu__container__inner {
   padding: 0;
   background: rgba(255, 255, 255, 0);
@@ -371,10 +368,6 @@
 }
 .uptheader .uptgmenu__head a {
   display: inline-block;
-}
-.uptheader .uptgmenu .c-gmenu__container {
-  padding: 0;
-  margin: 0;
 }
 .uptheader .uptgmenu .c-gmenu__container__close {
   position: relative;
@@ -413,6 +406,9 @@
   font-weight: 600;
   font-size: 1.3125rem;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.uptheader .uptgmenu__upperlinks li a:hover {
+  opacity: 0.7;
 }
 .uptheader .uptgmenu__sns {
   padding: 40px 0 0;
@@ -702,7 +698,7 @@
   white-space: nowrap;
   text-indent: -9999px;
   background-repeat: no-repeat;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/fv_pc04.png");
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/fv_pc04.jpg");
   line-height: 0;
   font-size: 0;
   margin-top: -100px;
@@ -713,7 +709,7 @@
   flex-direction: column;
   background-position: center bottom;
   background-color: #D4D2DF;
-  background-size: auto 100%;
+  background-size: auto calc(100% - 30px);
   height: 100vh;
 }
 .upthome__fv--logo {
@@ -796,7 +792,7 @@
   color: #32667A;
   font-size: 1rem;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0 0 24px;
 }
 .upthome__intro--txt {
@@ -1120,7 +1116,7 @@
     white-space: nowrap;
     text-indent: -9999px;
     background-repeat: no-repeat;
-    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/fv_sp02.png");
+    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/fv_sp.jpg");
     background-position: center bottom;
     height: 90vh;
     margin-top: calc(-16.5vw - 30px);
@@ -1316,7 +1312,7 @@
   }
   .upthome__producer {
     height: 55vw;
-    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/bg_yumi-sp02.png");
+    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/bg_yumi-sp02.jpg");
     background-position: 0 0;
   }
   .upthome__producer .pcImg {
@@ -1420,13 +1416,13 @@
   align-items: stretch;
 }
 .uptprodcut .uptblc__buyblc--img {
-  width: 50%;
-  min-width: 50%;
+  width: 55%;
+  min-width: 55%;
   border-right: solid 1px #32667A;
 }
 .uptprodcut .uptblc__buyblc--s {
-  width: 50%;
-  min-width: 50%;
+  width: 45%;
+  min-width: 45%;
   display: flex;
   justify-content: ceter;
   align-items: center;
@@ -1446,7 +1442,7 @@
   height: 100%;
 }
 .uptprodcut .uptblc__buyblc--txt00 {
-  font-size: 2.5rem;
+  font-size: 2.375rem;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
   line-height: 1.5;
   margin: 0 0 12px;
@@ -2469,10 +2465,6 @@ h1, h2, h3 {
     display: block;
   }
 }
-* {
-  cursor: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/cursor.svg", auto) !important;
-}
-
 .uptplane {
   width: 100vw;
 }
@@ -2556,9 +2548,22 @@ body {
 * a, * button {
   cursor: none;
 }
+@media screen and (max-width: 768px) {
+  * a, * button {
+    cursor: auto;
+  }
+  * a:hover, * button:hover {
+    opacity: 1 !important;
+  }
+}
 
 .c-gmenu__overlay {
   cursor: none;
+}
+@media screen and (max-width: 768px) {
+  .c-gmenu__overlay {
+    cursor: auto;
+  }
 }
 
 #js-sns {
@@ -2570,4 +2575,13 @@ body {
   opacity: 0;
   -webkit-animation: fadeOutAnime 1s ease 0s 1 forwards;
           animation: fadeOutAnime 1s ease 0s 1 forwards;
+}
+
+main {
+  padding-top: 99px;
+}
+@media screen and (max-width: 768px) {
+  main {
+    padding-top: 90px;
+  }
 }

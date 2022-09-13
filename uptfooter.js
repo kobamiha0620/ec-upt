@@ -20,10 +20,12 @@ $(function(){
     
         }  
     }
+    snslocate();
+
     $(window).on('resize scroll',function(event){
         snslocate();
     });
-          //カーソル画像
+    //カーソル画像
     const cursor =$("#cursor");                // カーソルになる要素を指定
     $(document).on("mousemove",function(e){ // マウスカーソルが動いた時に実行
     let x=e.clientX - 11;                      // カーソルの横座標を取得

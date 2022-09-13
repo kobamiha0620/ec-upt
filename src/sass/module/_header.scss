@@ -5,8 +5,7 @@
     border-bottom: none;
 }
 
-.c-gmenu__container {
-}
+
 .header__inner__block__item{
 
 }
@@ -133,7 +132,6 @@
     .uptgmenu {
         height: 100vh;
         .c-gmenu__container{
-            overflow-x: hidden;
         }
         .c-gmenu__container__inner{
             padding: 0;
@@ -156,8 +154,7 @@
             }
         }
         .c-gmenu__container{
-            padding: 0;
-            margin: 0;
+            
         }
         .c-gmenu__container__close {
             position: relative;
@@ -199,6 +196,9 @@
                     color: var.$bg_dark;
                     font-weight: 600;
                     @include var.fz(21);
+                    &:hover{
+                        opacity: 0.7;
+                    }
                 }
             }
         }

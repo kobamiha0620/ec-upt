@@ -8,7 +8,7 @@
         margin: 0 calc(50% - 50vw);
         width: 100vw;
         @include var.bg;
-        background-image: url(var.$imgpath + '0914/fv_pc04.png');
+        background-image: url(var.$imgpath + '0914/fv_pc04.jpg');
         line-height: 0;
         font-size: 0;
         // padding-top: 100%;
@@ -20,7 +20,7 @@
         flex-direction: column;
         background-position: center bottom;
         background-color: #D4D2DF;
-        background-size: auto 100%;
+        background-size: auto calc(100% - 30px);
         height: 100vh;
         &--logo{
             @include var.bg;
@@ -99,7 +99,7 @@
         &--ttl{
             color: var.$bg_dark;
             @include var.fz(16);
-            font-weight: 400;
+            font-weight: 500;
             margin: 0 0 24px;
         }
         &--txt{
@@ -427,8 +427,8 @@
     @media screen and (max-width: var.$spbp) {
         &__fv{
             @include var.bg;
-            background-image: url(var.$imgpath + '0914/fv_sp02.png');
-            background-position: center bottom;
+            background-image: url(var.$imgpath + '0914/fv_sp.jpg');
+            background-position: center bottom ;
             height: 90vh;
             margin-top: calc(-16.5vw - 30px);
             justify-content: center;
@@ -641,7 +641,7 @@
         
     &__producer{
         height: 55vw;
-        background-image: url(var.$imgpath + '0914/bg_yumi-sp02.png');
+        background-image: url(var.$imgpath + '0914/bg_yumi-sp02.jpg');
         background-position: 0 0;
         .pcImg{
             display: none!important;
