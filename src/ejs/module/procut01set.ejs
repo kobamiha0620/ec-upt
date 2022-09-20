@@ -31,12 +31,12 @@ var pageinit = {
         <div class="uptblc__buyblc">
             <div class="uptblc__buyblc--img">
                 <% if (pageinit.ecforce !== 'true') { %>
-                    <img src="/ec_force/assets/images/uptorigin/0914/product_setimage.jpg" alt="" class="pcImg">
-                    <img src="/ec_force/assets/images/uptorigin/0914/product_setimage-sp.png" alt="" class="spImg">
+                    <img src="/assets/images/uptorigin/0914/product_setimage.jpg" alt="" class="pcImg">
+                    <img src="/assets/images/uptorigin/0914/product_setimage-sp.png" alt="" class="spImg">
                 <% } else { %>
                     {% if product.id == 5 %}
-                    <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/product_setimage.jpg" alt="" class="pcImg">
-                    <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/product_setimage-sp.png" alt="" class="spImg">
+                    <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/product_setimage.jpg" alt="" class="pcImg">
+                    <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/product_setimage-sp.png" alt="" class="spImg">
                     {% endif %}
                 <% } %>
             </div>
@@ -180,7 +180,7 @@ var pageinit = {
                                     {% for related_product in product.active_related_products %}
                                 
                                     <!-- 関連商品画像(任意) -->
-                                    <a href="/shop/products/{{ related_product.master.sku }}">
+                                    <a href="//products/{{ related_product.master.sku }}">
                                         {% if related_product.thumbnail.url %}
                                         {% assign src = related_product.thumbnail.url %}
                                         {% else %}
@@ -190,7 +190,7 @@ var pageinit = {
                                     </a>
                                 
                                     <!-- 関連商品名 -->
-                                    <a href="/shop/products/{{ related_product.master.sku }}">{{ related_product.name | truncate: 35 }}</a>
+                                    <a href="//products/{{ related_product.master.sku }}">{{ related_product.name | truncate: 35 }}</a>
                                 
                                     <!-- 販売価格 -->
                                     {{ related_product.master.list_price | number_to_currency: format: '%n %u' }}
@@ -264,15 +264,15 @@ var pageinit = {
         <p class="uptprodcut__intro--txt">スキンケアを、<br>⼼安らぐ時間に</p>
         <div class="uptprodcut__intro--relative">
         <% if (pageinit.ecforce !== 'true') { %>
-            <img src="/ec_force/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="" class="pcImg">
+            <img src="/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="" class="pcImg">
         <% } else { %>
-            <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="" class="pcImg">
+            <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="" class="pcImg">
         <% } %>
 
         <% if (pageinit.ecforce !== 'true') { %>
-            <img src="/ec_force/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="" class="spImg">
+            <img src="/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="" class="spImg">
         <% } else { %>
-            <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="" class="spImg">
+            <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="" class="spImg">
         <% } %>
             <div class="uptprodcut__intro--border" id="js-border"></div>
         </div>
@@ -287,9 +287,9 @@ var pageinit = {
                     <div class="uptproduct__setitem--blc-s border img">
                         <div class="uptproduct__setitem--img">
                             <% if (pageinit.ecforce !== 'true') { %>
-                                <img src="/ec_force/assets/images/uptorigin/0914/img_set01.png" alt="">
+                                <img src="/assets/images/uptorigin/0914/img_set01.png" alt="">
                             <% } else { %>
-                                <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_set01.png" alt="">
+                                <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/img_set01.png" alt="">
                             <% } %>
                         </div>
                     </div>
@@ -303,9 +303,9 @@ var pageinit = {
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
                                 <% if (pageinit.ecforce !== 'true') { %>
-                                    <img src="/ec_force/assets/images/uptorigin/0914/point_set01.png" alt="">
+                                    <img src="/assets/images/uptorigin/0914/point_set01.png" alt="">
                                 <% } else { %>
-                                    <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/point_set01.png" alt="">
+                                    <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/point_set01.png" alt="">
                                 <% } %>
                                 </div>
                             </div>
@@ -347,9 +347,9 @@ var pageinit = {
                     <div class="uptproduct__setitem--blc-s img blc02">
                         <div class="uptproduct__setitem--img">
                             <% if (pageinit.ecforce !== 'true') { %>
-                                <img src="/ec_force/assets/images/uptorigin/0914/img_set02.png" alt="">
+                                <img src="/assets/images/uptorigin/0914/img_set02.png" alt="">
                             <% } else { %>
-                                <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_set02.png" alt="">
+                                <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/img_set02.png" alt="">
                             <% } %>
                         </div>
                     </div>
@@ -363,9 +363,9 @@ var pageinit = {
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
                                 <% if (pageinit.ecforce !== 'true') { %>
-                                    <img src="/ec_force/assets/images/uptorigin/0914/point_set02.png" alt="">
+                                    <img src="/assets/images/uptorigin/0914/point_set02.png" alt="">
                                 <% } else { %>
-                                    <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/point_set02.png" alt="">
+                                    <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/point_set02.png" alt="">
                                 <% } %>
                                 </div>
                             </div>
@@ -408,9 +408,9 @@ var pageinit = {
                     <div class="uptproduct__setitem--blc-s border img">
                         <div class="uptproduct__setitem--img">
                             <% if (pageinit.ecforce !== 'true') { %>
-                                <img src="/ec_force/assets/images/uptorigin/0914/img_set03.png" alt="">
+                                <img src="/assets/images/uptorigin/0914/img_set03.png" alt="">
                             <% } else { %>
-                                <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_set03.png" alt="">
+                                <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/img_set03.png" alt="">
                             <% } %>
                         </div>
                     </div>
@@ -424,9 +424,9 @@ var pageinit = {
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
                                 <% if (pageinit.ecforce !== 'true') { %>
-                                    <img src="/ec_force/assets/images/uptorigin/0914/point_set03.png" alt="">
+                                    <img src="/assets/images/uptorigin/0914/point_set03.png" alt="">
                                 <% } else { %>
-                                    <img src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/point_set03.png" alt="">
+                                    <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/point_set03.png" alt="">
                                 <% } %>
                                 </div>
                             </div>
@@ -477,17 +477,14 @@ var pageinit = {
                     <p class="uptproduct__point--ttl">TEXTURE</p>
                     <p class="uptproduct__point--subttl">つけ心地の良さを最優先</p>
                     <span class="uptproduct__point--border"></span>
-                    <p class="uptproduct__point--txt">つけ心地の良さを最優先
-                        スキンケア後のベタつき感を減らし、メイクの前でも寝る前でも邪魔をしない気持ちのいい手触りに仕上げました。
+                    <p class="uptproduct__point--txt">スキンケア後のベタつき感を減らし、メイクの前でも寝る前でも邪魔をしない気持ちのいい手触りに仕上げました。
                         重さやベタつき感がなく、お肌に馴染みうるおいが続きます。</p>
                 </li>
                 <li class="uptproduct__point--contxt02">
                     <p class="uptproduct__point--ttl">COMPONENT</p>
                     <p class="uptproduct__point--subttl">最適なバランスを探究</p>
                     <span class="uptproduct__point--border"></span>
-                    <p class="uptproduct__point--txt">最適なバランスを探究
-
-                        毎日のスキンケアを手軽に、年代問わず使ってほしいからシンプルな処方にこだわりました。
+                    <p class="uptproduct__point--txt">毎日のスキンケアを手軽に、年代問わず使ってほしいからシンプルな処方にこだわりました。
                         厳選した3種のペプチド<span>※1</span> / ビタミンC誘導体<span>※2</span> / ナイアシンアミド / 5種のナノセラミド<span>※3</span>の4つを保湿成分としてバランス良く配合し、水の代わりに可能な限り温泉水を使用することで、皮膚にうるおいを与えハリツヤのあるお肌に導きます。
                         <br><span>
                         ※1 アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３　※2 パルミチン酸アスコルビルリン酸３Ｎａ　※3 セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ</span></p>
@@ -496,9 +493,7 @@ var pageinit = {
                     <p class="uptproduct__point--ttl">FRAGRANCE</p>
                     <p class="uptproduct__point--subttl">甘すぎない爽やかな香りを</p>
                     <span class="uptproduct__point--border"></span>
-                    <p class="uptproduct__point--txt">甘すぎない爽やかな香りを
-
-                        ゼラニウム<span>※1</span> &イランイラン<span>※2</span> の天然精油を配合し、つけた瞬間心地よい香りで包み込みます。
+                    <p class="uptproduct__point--txt">ゼラニウム<span>※1</span> &イランイラン<span>※2</span> の天然精油を配合し、つけた瞬間心地よい香りで包み込みます。
                         甘すぎないエキゾチックな香りが心にも身体にもなじむよう。
                         3ステップ終えたあとにほど良く香りが残るようにこだわりました。
                         <br>
@@ -539,9 +534,9 @@ var pageinit = {
 
 
 <% if (pageinit.ecforce !== 'true') { %>
-    <script src="/ec_force/assets/uptproduct.js"></script>
+    <script src="/assets/uptproduct.js"></script>
 <% } else { %>
-    <script src="{{ file_root_path }}/themes/upt_origin_20220816132124/ec_force/assets/uptproduct.js"></script>
+    <script src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/uptproduct.js"></script>
 <% } %>
 
 

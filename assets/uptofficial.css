@@ -241,7 +241,7 @@
 
 .uptheader {
   background-position: 0 bottom;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/header_line-pc.svg");
+  background-image: url("/assets/images/uptorigin/0914/header_line-pc.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
@@ -249,7 +249,7 @@
   margin-right: 0;
 }
 .uptheader.bg__header {
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/header_pc_bg2.svg");
+  background-image: url("/assets/images/uptorigin/0914/header_pc_bg2.svg");
 }
 .uptheader .uptblc__inner {
   background: none;
@@ -280,7 +280,7 @@
   letter-spacing: 0.2em;
 }
 .uptheader .uptheader__anounce .c-announce_bar__close {
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/top_close.png");
+  background-image: url("/assets/images/uptorigin/0914/top_close.png");
   background-size: 10px 10px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -317,7 +317,7 @@
   white-space: nowrap;
   text-indent: -9999px;
   background-repeat: no-repeat;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/logo.svg");
+  background-image: url("/assets/images/uptorigin/0914/logo.svg");
   width: 50px;
   height: 27px;
   opacity: 0;
@@ -361,7 +361,7 @@
   justify-content: flex-end;
   display: flex;
   align-items: center;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/gmenu_bg-pc.svg");
+  background-image: url("/assets/images/uptorigin/0914/gmenu_bg-pc.svg");
   background-size: 100% auto;
   background-position: 0 bottom;
   background-repeat: no-repeat;
@@ -470,7 +470,7 @@
   white-space: nowrap;
   text-indent: -9999px;
   background-repeat: no-repeat;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/logo_gmenu.svg");
+  background-image: url("/assets/images/uptorigin/0914/logo_gmenu.svg");
   width: 81px;
   height: 44px;
   display: inline-block;
@@ -503,7 +503,7 @@
 }
 @media screen and (max-width: 768px) {
   .uptheader .uptgmenu__head {
-    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/gmenu_bg-sp.svg");
+    background-image: url("/assets/images/uptorigin/0914/gmenu_bg-sp.svg");
     padding: 3.4vw 10.4vw 5vw 10.6vw;
     margin: 0 -4vw;
     min-height: 7.8vw;
@@ -535,8 +535,7 @@
   transition: left 0s 0.4s, opacity 0.4s, transform 0.4s;
 }
 .uptheader .c-gmenu.is-active {
-  transition: left 0s, opacity 0.4s, transform 0.4s;
-  right: 0 !important;
+  right: 0;
 }
 .uptheader .c-gmenu__container {
   float: right;
@@ -547,7 +546,7 @@
   display: block;
   white-space: nowrap;
   text-indent: -9999px;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/closemenu.svg");
+  background-image: url("/assets/images/uptorigin/0914/closemenu.svg");
   background-size: 100% auto;
   background-position: center center;
   background-repeat: no-repeat;
@@ -566,7 +565,7 @@
   display: block;
   white-space: nowrap;
   text-indent: -9999px;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/icon_cart.svg");
+  background-image: url("/assets/images/uptorigin/0914/icon_cart.svg");
   background-size: 21px 20px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -582,7 +581,7 @@
   display: block;
   white-space: nowrap;
   text-indent: -9999px;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/icon_mypage.svg");
+  background-image: url("/assets/images/uptorigin/0914/icon_mypage.svg");
   background-size: 20px 20px;
   background-position: center center;
   background-repeat: no-repeat;
@@ -596,7 +595,7 @@
   display: block;
   white-space: nowrap;
   text-indent: -9999px;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/openmenu.svg");
+  background-image: url("/assets/images/uptorigin/0914/openmenu.svg");
   background-size: 100% auto;
   background-position: center center;
   background-repeat: no-repeat;
@@ -606,18 +605,18 @@
 }
 @media screen and (max-width: 1024px) {
   .uptheader {
-    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/header_tb_bgline.svg");
+    background-image: url("/assets/images/uptorigin/0914/header_tb_bgline.svg");
   }
   .uptheader.bg__header {
-    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/header_tb_bg2.svg");
+    background-image: url("/assets/images/uptorigin/0914/header_tb_bg2.svg");
   }
 }
 @media screen and (max-width: 768px) {
   .uptheader {
-    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/gmenu_bg-sp.svg");
+    background-image: url("/assets/images/uptorigin/0914/gmenu_bg-sp.svg");
   }
   .uptheader.bg__header {
-    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/header_sp_bg2.svg");
+    background-image: url("/assets/images/uptorigin/0914/header_sp_bg2.svg");
   }
   .uptheader .uptheader__icons {
     padding: 3.4vw 6.4vw 5vw 6.6vw;
@@ -642,7 +641,7 @@
   }
 }
 .gmenu__sns--insta {
-  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/icon_menu_insta.svg") no-repeat 0 0;
+  background: url("/assets/images/uptorigin/0914/icon_menu_insta.svg") no-repeat 0 0;
   background-size: 100% auto;
   display: block;
   white-space: nowrap;
@@ -650,7 +649,7 @@
   background-repeat: no-repeat;
 }
 .gmenu__sns--twitter {
-  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/icon_menu_twitter.svg") no-repeat 0 0;
+  background: url("/assets/images/uptorigin/0914/icon_menu_twitter.svg") no-repeat 0 0;
   background-size: 100% auto;
   display: block;
   white-space: nowrap;
@@ -658,7 +657,7 @@
   background-repeat: no-repeat;
 }
 .gmenu__sns--youtube {
-  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/icon_menu_youtube.svg") no-repeat 0 0;
+  background: url("/assets/images/uptorigin/0914/icon_menu_youtube.svg") no-repeat 0 0;
   background-size: 100% auto;
   display: block;
   white-space: nowrap;
@@ -698,7 +697,7 @@
   white-space: nowrap;
   text-indent: -9999px;
   background-repeat: no-repeat;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/fv_pc04.jpg");
+  background-image: url("/assets/images/uptorigin/0914/fv_pc04.jpg");
   line-height: 0;
   font-size: 0;
   margin-top: -100px;
@@ -718,7 +717,7 @@
   white-space: nowrap;
   text-indent: -9999px;
   background-repeat: no-repeat;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/fv_logo.svg");
+  background-image: url("/assets/images/uptorigin/0914/fv_logo.svg");
   width: clamp(246px, 30%, 409px);
   background-position: center bottom;
   height: clamp(133px, 16vw, 221px);
@@ -840,7 +839,7 @@
   white-space: nowrap;
   text-indent: -9999px;
   background-repeat: no-repeat;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/home_setimg-pc.png");
+  background-image: url("/assets/images/uptorigin/0914/home_setimg-pc.png");
 }
 .upthome__set--img-in p {
   display: inline-block;
@@ -849,7 +848,7 @@
   white-space: nowrap;
   text-indent: -9999px;
   background-repeat: no-repeat;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/home_set-feature-txt.png");
+  background-image: url("/assets/images/uptorigin/0914/home_set-feature-txt.png");
   width: 75px;
   height: 46px;
   position: absolute;
@@ -862,7 +861,7 @@
   white-space: nowrap;
   text-indent: -9999px;
   background-repeat: no-repeat;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/home_set-feature.svg");
+  background-image: url("/assets/images/uptorigin/0914/home_set-feature.svg");
   width: 126px;
   height: 126px;
   position: absolute;
@@ -876,7 +875,7 @@
 }
 .upthome__set--sblc {
   width: 100%;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/dashed.svg");
+  background-image: url("/assets/images/uptorigin/0914/dashed.svg");
   background-size: 100% auto;
   background-repeat: no-repeat;
   background-position: 0 bottom;
@@ -940,7 +939,7 @@
 .upthome__set--blc-btm a span {
   display: inline-block;
   padding-right: 46px;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/arrow.png");
+  background-image: url("/assets/images/uptorigin/0914/arrow.png");
   background-repeat: no-repeat;
   background-size: 27px 14px;
   background-position: right center;
@@ -985,7 +984,7 @@
 .upthome__products--blc li a span {
   display: inline-block;
   padding-right: 48px;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/arrow.png");
+  background-image: url("/assets/images/uptorigin/0914/arrow.png");
   background-repeat: no-repeat;
   background-size: 23px 12px;
   background-position: right center;
@@ -1026,7 +1025,7 @@
   overflow: hidden;
   position: relative;
   height: 256px;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/bg_yumi-pc.png");
+  background-image: url("/assets/images/uptorigin/0914/bg_yumi-pc.png");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100% auto;
@@ -1041,6 +1040,23 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.upthome__producer .producer__inner {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: flex-end;
+}
+.upthome__producer .producer__inner div {
+  height: 79px;
+}
+.upthome .about__inner {
+  position: absolute;
+  bottom: 0;
+  height: 79px;
+}
+.upthome .about__inner div {
+  height: 79px;
 }
 .upthome__yumi {
   margin: 0 auto;
@@ -1085,7 +1101,7 @@
   white-space: nowrap;
   text-indent: -9999px;
   background-repeat: no-repeat;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/sign_yumi.svg");
+  background-image: url("/assets/images/uptorigin/0914/sign_yumi.svg");
   width: 131px;
   height: 33px;
   margin: 28px auto 0;
@@ -1116,7 +1132,7 @@
     white-space: nowrap;
     text-indent: -9999px;
     background-repeat: no-repeat;
-    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/fv_sp.jpg");
+    background-image: url("/assets/images/uptorigin/0914/fv_sp.jpg");
     background-position: center bottom;
     height: 90vh;
     margin-top: calc(-16.5vw - 30px);
@@ -1130,7 +1146,7 @@
     white-space: nowrap;
     text-indent: -9999px;
     background-repeat: no-repeat;
-    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/fv_logo.svg");
+    background-image: url("/assets/images/uptorigin/0914/fv_logo.svg");
     width: 64.5vw;
     height: 34.6vw;
     position: absolute;
@@ -1202,7 +1218,7 @@
     white-space: nowrap;
     text-indent: -9999px;
     background-repeat: no-repeat;
-    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/home_setimg-sp.png");
+    background-image: url("/assets/images/uptorigin/0914/home_setimg-sp.png");
   }
   .upthome__set--img-in p {
     display: inline-block;
@@ -1312,7 +1328,7 @@
   }
   .upthome__producer {
     height: 55vw;
-    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/bg_yumi-sp02.jpg");
+    background-image: url("/assets/images/uptorigin/0914/bg_yumi-sp02.jpg");
     background-position: 0 0;
   }
   .upthome__producer .pcImg {
@@ -1331,6 +1347,12 @@
     top: 50%;
     transform: translate(-50%, -50%);
     height: 55vw;
+  }
+  .upthome__producer .producer__inner div {
+    height: 6vw;
+  }
+  .upthome .about__inner div {
+    height: 6vw;
   }
   .upthome__illust {
     width: 100%;
@@ -1372,7 +1394,7 @@
     white-space: nowrap;
     text-indent: -9999px;
     background-repeat: no-repeat;
-    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/sign_yumi.svg");
+    background-image: url("/assets/images/uptorigin/0914/sign_yumi.svg");
     width: 131px;
     height: 33px;
     margin: 28px auto 0;
@@ -1382,6 +1404,69 @@
   }
   .upthome__yumi .spImg {
     display: none;
+  }
+}
+
+.modal__bg {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 101;
+  left: 0;
+  top: 0;
+  overflow: auto;
+}
+.modal__btn {
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0);
+}
+.modal__btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.modal__contents {
+  position: fixed;
+  display: block;
+  z-index: 102;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 48.5vh;
+  height: 70vh;
+}
+.modal__contents--inner {
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  width: 100%;
+  height: 100%;
+}
+.modal__contents--inner img {
+  border-radius: 20px;
+  -o-object-fit: content;
+     object-fit: content;
+  height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .modal__contents {
+    width: 80vw;
+    max-height: 70vh;
+  }
+  .modal__contents--inner {
+    position: relative;
+  }
+  .modal__contents--inner img {
+    border-radius: 5vw;
+    width: 100%;
+    height: auto;
+  }
+  .modal__contents__btn:hover {
+    background-color: rgba(255, 255, 255, 0);
   }
 }
 
@@ -1493,7 +1578,7 @@
   height: 10px;
   display: inline-block;
   padding-right: 46px;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/arrow.png");
+  background-image: url("/assets/images/uptorigin/0914/arrow.png");
   background-repeat: no-repeat;
   background-size: 27px 14px;
   background-position: right center;
@@ -1605,7 +1690,7 @@
     height: 10px;
     display: inline-block;
     padding-right: 46px;
-    background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/arrow.png");
+    background-image: url("/assets/images/uptorigin/0914/arrow.png");
     background-repeat: no-repeat;
     background-size: 27px 14px;
     background-position: right center;
@@ -1794,7 +1879,7 @@
   white-space: nowrap;
   text-indent: -9999px;
   background-repeat: no-repeat;
-  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/setitem_plus.svg") no-repeat 0 0;
+  background: url("/assets/images/uptorigin/0914/setitem_plus.svg") no-repeat 0 0;
   width: 12px;
   height: 12px;
 }
@@ -1811,7 +1896,7 @@
   padding: 4.6% 8%;
 }
 .uptprodcut .uptproduct__setitem--list .active .uptproduct__setitem--list-ttl span {
-  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/setitem_minus.svg") no-repeat 0 0;
+  background: url("/assets/images/uptorigin/0914/setitem_minus.svg") no-repeat 0 0;
   width: 12px;
   height: 1px;
 }
@@ -1878,7 +1963,7 @@
     white-space: nowrap;
     text-indent: -9999px;
     background-repeat: no-repeat;
-    background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/setitem_plus.svg") no-repeat 0 0;
+    background: url("/assets/images/uptorigin/0914/setitem_plus.svg") no-repeat 0 0;
     width: 12px;
     height: 12px;
   }
@@ -1891,7 +1976,7 @@
     padding: 4% 5%;
   }
   .uptprodcut .uptproduct__setitem--list .active .uptproduct__setitem--list-ttl span {
-    background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/setitem_minus.svg") no-repeat 0 0;
+    background: url("/assets/images/uptorigin/0914/setitem_minus.svg") no-repeat 0 0;
     width: 12px;
     height: 1px;
   }
@@ -1963,7 +2048,7 @@
     white-space: nowrap;
     text-indent: -9999px;
     background-repeat: no-repeat;
-    background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/setitem_plus.svg") no-repeat 0 0;
+    background: url("/assets/images/uptorigin/0914/setitem_plus.svg") no-repeat 0 0;
     width: 12px;
     height: 12px;
   }
@@ -1980,14 +2065,14 @@
     padding: 4.6% 8%;
   }
   .uptprodcut .uptproduct__setitem--list .active .uptproduct__setitem--list-ttl span {
-    background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/setitem_minus.svg") no-repeat 0 0;
+    background: url("/assets/images/uptorigin/0914/setitem_minus.svg") no-repeat 0 0;
     width: 12px;
     height: 1px;
   }
 }
 .uptprodcut .uptproduct__point--con {
   width: 100%;
-  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_prodcut-concept-pc02.png") no-repeat 0 bottom;
+  background: url("/assets/images/uptorigin/0914/img_prodcut-concept-pc02.png") no-repeat 0 bottom;
   background-size: 100% auto;
   padding-bottom: 52%;
 }
@@ -1997,12 +2082,12 @@
   justify-content: space-between;
 }
 .uptprodcut .uptproduct__point--contxt01 {
-  width: 28%;
+  width: 29%;
   min-width: 28%;
 }
 .uptprodcut .uptproduct__point--contxt02 {
-  width: 36.5%;
-  min-width: 36.5%;
+  width: 35.5%;
+  min-width: 35.5%;
 }
 .uptprodcut .uptproduct__point--contxt03 {
   width: 28%;
@@ -2046,7 +2131,7 @@
 @media screen and (max-width: 768px) {
   .uptprodcut .uptproduct__point--con {
     width: 100%;
-    background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/0914/img_prodcut-concept-sp.png") no-repeat 0 bottom;
+    background: url("/assets/images/uptorigin/0914/img_prodcut-concept-sp.png") no-repeat 0 bottom;
     background-size: 100% auto;
     padding-bottom: 89vw;
   }
@@ -2249,21 +2334,21 @@ body {
   white-space: nowrap;
   text-indent: -9999px;
   display: block;
-  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/icon_pcInsta.svg") no-repeat 0 0;
+  background: url("/assets/images/uptorigin/icon_pcInsta.svg") no-repeat 0 0;
   background-size: 100% auto;
 }
 .main__sns--twitter {
   white-space: nowrap;
   text-indent: -9999px;
   display: block;
-  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/icon_pctwitter.svg") no-repeat 0 0;
+  background: url("/assets/images/uptorigin/icon_pctwitter.svg") no-repeat 0 0;
   background-size: 100% auto;
 }
 .main__sns--youtube {
   white-space: nowrap;
   text-indent: -9999px;
   display: block;
-  background: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/icon_pcyoutube.svg") no-repeat 0 0;
+  background: url("/assets/images/uptorigin/icon_pcyoutube.svg") no-repeat 0 0;
   background-size: 100% auto;
 }
 
@@ -2314,7 +2399,7 @@ body {
   top: 49vw !important;
   height: 36px !important;
   width: 13px !important;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/nextswiper.svg") !important;
+  background-image: url("/assets/images/uptorigin/nextswiper.svg") !important;
   background-size: 100% auto;
 }
 .slick-next:before {
@@ -2326,7 +2411,7 @@ body {
   top: 49vw !important;
   height: 36px !important;
   width: 13px !important;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/prevswiper.svg") !important;
+  background-image: url("/assets/images/uptorigin/prevswiper.svg") !important;
   background-size: 100% auto;
 }
 .slick-prev:before {

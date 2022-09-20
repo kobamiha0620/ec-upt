@@ -348,8 +348,8 @@
         transition: left 0s 0.4s, opacity 0.4s, transform 0.4s;
 
         &.is-active {
-            transition: left 0s, opacity 0.4s, transform 0.4s;
-            right: 0 !important;
+            // transition: left 0s, opacity 0.4s, transform 0.4s;
+            right: 0;
         }
 
         &__container {

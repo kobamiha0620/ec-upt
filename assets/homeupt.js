@@ -64,9 +64,30 @@ $(function () {
 
     };
 
-
+    $('a[href^="#"]').click(function(){
+      var speed = 500;
+      var href= $(this).attr("href");
+      var target = $(href == "#" || href == "" ? 'html' : href);
+      var position = target.offset().top;
+      $("html, body").animate({scrollTop:position}, speed, "swing");
+      return false;
+    });
     
+    // function modal(){
+    //   const modal = $('#homeModal');
+    //   const bg = $('#modal_bg');
+    //   $('#js_closemodal').on('click', function(){
+    //     modal.fadeOut();
+    //     bg.fadeOut();
+    //   });
+    //   bg.on('click', function(){
+    //     modal.fadeOut();
+    //     bg.fadeOut();
 
+    //   });
+    // }
+
+    // modal();
 
 });
 
@@ -92,5 +113,7 @@ aboutLink.onclick = () => {
     location = '/shop/#ABOUT'
   }
 }
+
+
 
 // ------------------------------------------------------------------------------

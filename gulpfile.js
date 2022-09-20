@@ -33,7 +33,7 @@ function compile(done) {
       .pipe(sassGlob())                  // glob機能を使って@useや@forwardを省略する
       .pipe(sass())                      // sassのコンパイルをする
       .pipe(autoprefixer())              // ベンダープレフィックスを自動付与する
-      .pipe(dest("./"));
+      .pipe(dest("./assets/"));
   
     done();
   }
@@ -58,7 +58,7 @@ function compile(done) {
     .pipe(plumber())
     .pipe(ejs({}, {}, { ext: '.html' }))
     .pipe(rename({ extname: ".html" })) //拡張子をhtmlに
-    .pipe(gulp.dest("./dest/html")); //出力先
+    .pipe(gulp.dest("./")); //出力先
 
     done();
 
@@ -67,7 +67,7 @@ function compile(done) {
 
   function bsInit(done) {
     bs.init({
-      index : "./dest/html/index.html",
+      index : "./index.html",
       server: true,
     });
     done();
@@ -85,7 +85,7 @@ function compile(done) {
 
 //   }"../assets/css/
   const watchTask = (done) => {
-	watch(["./**", "!./uptofficial.css", "!./uptofficial0914.css","!./bg.css", "!./dest/**"], series(ejsmode, compile, bsReload));
+	watch(["./**", "!./assets/uptofficial.css", "!./index.html","!./product01.html", "!./terms.html", "!./module/**",  "!./assets/bg.css", "!./assets/**"], series(ejsmode, compile, bsReload));
 
 	done();
 };

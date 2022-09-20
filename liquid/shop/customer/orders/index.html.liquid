@@ -11,7 +11,7 @@
           {% paginate orders_all by 10 %}
             <ul class="c-breadcrumbs">
               <li class="c-breadcrumbs__item u-text--link">
-                <a class="c-breadcrumbs__item__inner" href="/shop/customer">{{ 'account.general.mypage.value' | t }}</a>
+                <a class="c-breadcrumbs__item__inner" href="//customer">{{ 'account.general.mypage.value' | t }}</a>
               </li>
               <li class="c-breadcrumbs__item u-text--body">
                 <span class="c-breadcrumbs__item__inner">{{ 'orders.history.purchase_history.value' | t }}</span>
@@ -31,12 +31,12 @@
                   <div class="p-history_list__item__header u-color__bg--bg">
                     <div class="p-history_list__item__header__id u-text--subhead">{{ order.number }}</div>
                     <time class="p-history_list__item__header__date u-text--body">{{ order.completed_at | date:'%Y/%m/%d' }}</time>
-                    <a class="p-history_list__item__header__btn u-text--btn u-color__btn--bg" href="/shop/customer/orders/{{ order.number }}">{{ 'orders.general.view_order_detail.value' | t }}</a>
+                    <a class="p-history_list__item__header__btn u-text--btn u-color__btn--bg" href="//customer/orders/{{ order.number }}">{{ 'orders.general.view_order_detail.value' | t }}</a>
                   </div>
                   <div class="p-history_list__item__detail">
                     {% for order_item in order.order_items %}
                       <div class="c-cart_item u-color__border--border">
-                        <a class="c-cart_item__img" href="/shop/products/{{ order_item.product.master.sku }}">
+                        <a class="c-cart_item__img" href="//products/{{ order_item.product.master.sku }}">
                           {% if order_item.variant.thumbnails.first.url %}
                             {% assign thumbnail = order_item.variant.thumbnails.first.url  %}
                           {% elsif order_item.product.master.thumbnails.url %}
@@ -65,7 +65,7 @@
                             {% endfor %}
                             {{ _category }}
                           </div>
-                          <a class="c-cart_item__info__title u-text--subhead" href="/shop/products/{{ order_item.product.master.sku }}">{{ order_item.product.name }}</a>
+                          <a class="c-cart_item__info__title u-text--subhead" href="//products/{{ order_item.product.master.sku }}">{{ order_item.product.name }}</a>
                           <div class="c-cart_item__info__variant u-text--body">
                             {% assign option_cnt = 0 %}
                             {% for option_value in order_item.variant.option_values %}

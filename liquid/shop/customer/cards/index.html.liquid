@@ -1,0 +1,220 @@
+{{ 'shop/customer/cards' | javascript_include_tag }}
+
+<main class="l-container" role="main" id="customers-card-index-view">
+  <div id="TokenJs"></div>
+  <div class="l-container__row u-margin__top--60 u-margin__bottom--100">
+    {{ 'notice' | flash: 'control-alert alert-success', 'text u-color__bg--bg u-color__text--alert' }}
+    {{ 'alert' | flash: 'control-alert alert-danger', 'text u-color__bg--bg u-color__text--alert' }}
+    {{ 'error' | flash: 'control-alert alert-danger', 'text u-color__bg--bg u-color__text--alert' }}
+    <div class="p-account">
+      <div class="p-account__inner">
+        <div class="p-account__inner__menu u-color__border--border">
+          {% include 'ec_force/shop/snippets/sidebar.html' %}
+        </div>
+        <div class="p-account__inner__content">
+          <ul class="c-breadcrumbs">
+            <li class="c-breadcrumbs__item u-text--link">
+              <a class="c-breadcrumbs__item__inner" href="//customer">{{ 'account.general.mypage.value' | t }}</a>
+            </li>
+            <li class="c-breadcrumbs__item u-text--body">
+              <span class="c-breadcrumbs__item__inner">{{ 'payments.credit_card.credit_card_info.value' | t }}</span>
+            </li>
+          </ul>
+          <h1 class="p-account__inner__content__title u-text--head">{{ 'payments.credit_card.credit_card_info.value' | t }}</h1>
+          <p class="p-account__inner__content__lead u-text--body">{{ 'payments.credit_card.can_register_up_to_5_cards.value' | t }}</p>
+          <!-- 定期支払い方法が変更できる設定の場合もしくはクレジットカードの変更が許可されていない場合 -->
+          {% if base_info.payment_method_changeable_on_mypage? or !base_info.credit_card_editable? %}
+            <p class="p-account__inner__content__lead u-text--body">{{ 'subs_orders.credit_card.apply_subs_order_lead_text.value' | t }}</p>
+          {% endif %}
+          <div class="p-payment_list">
+            <!-- クレジットカード新規登録 -->
+            {% if current_customer.credit_cards.size < 5 %}
+              <div class="p-payment_list__add">
+                <button class="p-payment_list__add__btn u-text--btn u-color__btn--bg" type="button">{{ 'payments.credit_card.add_card.value' | t }}</button>
+                <div class="p-payment_list__add__win" style="display: none;">
+                  <form class="p-payment_list__add__win__form" action="/shop/customer/cards" id="new-card" method="post">
+                    {% csrf_meta_tags %}
+                    <div id="card-error-message"></div>
+                    <input id="access-token" name="card[access_token]" type="hidden" value="">
+                    <input id="check-access-token" type="hidden" value="" class="validate[ajax[creditcardCheckMyPage]]" data-prompt-position="inline" data-prompt-target="card-error-message">
+                    <input id="gateway-card-seq" name="card[gateway_card_seq]" type="hidden" value="">
+                    <div class="p-payment_list__add__win__form__text u-text--body"><span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span>{{ 'general.message.input_required.value' | t }}</div>
+                    <table class="c-form_table">
+                      <tbody>
+                        <!-- カード番号 -->
+                        <tr>
+                          <th class="u-text--body">{{ 'payments.credit_card.card_number.value' | t }}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span></th>
+                          <td>
+                            {% if ecforce_payment_available %}
+                              <div id="ecforce-payment-card-number-error"></div>
+                              <div id="ecforce-view-input-card-number">
+                                <div class="ecforce-payment-card-number">
+                                  <div id="card-number"></div>
+                                </div>
+                                <input id="number" style="display: none;" class="validate[required]" name="card[number]" data-prompt-position="inline" data-prompt-target="ecforce-payment-card-number-error">
+                              </div>
+                            {% else %}
+                              <input class="u-text--input u-color__input--bg u-color__border--input validate[required,maxSize[16]]" type="text" id="number" name="card[number]">
+                            {% endif %}
+                          </td>
+                        </tr>
+                        <!-- カード有効期限 -->
+                        <tr>
+                          <th class="u-text--body">{{ 'general.general.expired.value' | t }}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span></th>
+                          <td>
+                            {% if ecforce_payment_available %}
+                              <div id="expire-validation" class="ecforce-input-card-info">
+                                <div id="ecforce-payment-card-expiry-error"></div>
+                                <div class="ecforce-payment-card-expiry">
+                                  <div id="card-expiry"></div>
+                                </div>
+                                <input type="hidden" id ="ecforce-payment-expiry" class="validate_req validate[required]" data-prompt-position="inline" data-prompt-target="ecforce-payment-card-expiry-error" disabled>
+                                <input type="hidden" id="month" name="card[month]">
+                                <input type="hidden" id="year" name="card[year]">
+                              </div>
+                            {% else %}
+                              <div class="c-form_table__tel">
+                                <label class="c-form_table__select">
+                                  <select class="u-text--input u-color__input--bg u-color__border--input validate[required]" id="month" name="card[month]">
+                                    <option value="">--</option>
+                                    {% for m in (1..12) %}
+                                      <option value='{{ m }}'>{{ m }}</option>
+                                    {% endfor %}
+                                  </select>
+                                </label>
+                                <span class="u-text--body">{{ 'customer.general.month.value' | t }}</span>
+                                <label class="c-form_table__select">
+                                  <select class="u-text--input u-color__input--bg u-color__border--input validate[required]" id="year" name="card[year]">
+                                    <option value="">--</option>
+                                    {% assign now_year = "now" | date: "%Y" | minus: 2000 %}
+                                    {% assign later_15_years = "now" | date: "%Y" | plus: 15 | minus: 2000 %}
+                                    {% for y in (now_year..later_15_years) %}
+                                      <option value='{{ y }}'>{{ y }}</option>
+                                    {% endfor %}
+                                  </select>
+                                </label>
+                                <span class="u-text--body">{{ 'customer.general.year.value' | t }}</span>
+                              </div>
+                            {% endif %}
+                          </td>
+                        </tr>
+                        <!-- カード名義 -->
+                        <tr>
+                          <th class="u-text--body">{{ 'payments.credit_card.card_name.value' | t }}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span></th>
+                          <td>
+                            {% if ecforce_payment_available %}
+                              <div id="ecforce-payment-card-name-error"></div>
+                              <input class="validate[required,custom[onlyLetterSp]] ecforce-payment-card-name" id="name" name="card[name]" placeholder="例）HANAKO YAMADA" data-prompt-position="inline" data-prompt-target="ecforce-payment-card-name-error">
+                            {% else %}
+                              <input class="u-text--input u-color__input--bg u-color__border--input validate[required,custom[onlyLetterSp]]" id="name" name="card[name]" type="text">
+                            {% endif %}
+                          </td>
+                        </tr>
+                        <!-- セキュリティコード -->
+                        <tr id="view-input-card-cvv" style="display: none;">
+                          {% if ecforce_payment_available %}
+                            {% if use_cvc == 'true' %}
+                              <th class="u-text--body">{{ 'payments.credit_card.security_code.value' | t }}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span></th>
+                              <td>
+                                <div id="cvv-validation" class="ecforce-input-card-info">
+                                  <div id="ecforce-payment-card-cvv-error"></div>
+                                  <div class="ecforce-payment-card-cvv">
+                                    <div id="card-cvv"></div>
+                                  </div>
+                                  <input type="hidden" id="cvv" class="validate_req validate[required]" data-prompt-position="inline" data-prompt-target="ecforce-payment-card-cvv-error" disabled>
+                                </div>
+                                <p class="u-text--body">{{ 'payments.credit_card.security_code_description.value' | t }}</p>
+                                <img src="{{ theme_file_root_path }}/assets/images/cvv_example.jpg">
+                              </td>
+                            {% endif %}
+                          {% else %}
+                            <th class="u-text--body">{{ 'payments.credit_card.security_code.value' | t }}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span></th>
+                            <td>
+                              <input class="u-text--input u-color__input--bg u-color__border--input validate[required]" id="cvv" name="cvv" type="text">
+                              <p class="u-text--body">{{ 'payments.credit_card.security_code_description.value' | t }}</p>
+                              <img src="{{ theme_file_root_path }}/assets/images/cvv_example.jpg">
+                            </td>
+                          {% endif %}
+                        </tr>
+                        <!-- デフォルト -->
+                        <tr>
+                          <th class="u-text--body></th>
+                          <td>
+                            <div class="c-form_table__newsletter">
+                              <label class="c-form_table__checkbox">
+                                {% if cards.size == 0 %}
+                                  <input type="hidden" name="card[default]" id="default" value="1">
+                                  <input class="u-color__border--input" type="checkbox" checked disabled>
+                                {% else %}
+                                  <input type="hidden" name="card[default]" id="default" value="0">
+                                  <input class="u-color__border--input" type="checkbox" name="card[default]">
+                                {% endif %}
+                                <span class="c-form_table__checkbox__frame u-color__btn"></span>
+                                <span class="c-form_table__checkbox__text u-text--body">{{ 'general.action.set_default.value' | t }}</span>
+                              </label>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <!-- 送信リンク -->
+                    <div class="p-payment_list__add__win__form__bottom">
+                      <button class="p-payment_list__add__win__form__bottom__btn u-text--btn u-color__btn--bg" id="submit" type="submit">{{ 'general.action.add.value' | t }}</button>
+                      <button class="p-account__inner__content__form__bottom__link u-text--link" type="button">{{ 'general.action.cancel_addition.value' | t }}</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            {% endif %}
+            {% if current_customer.credit_cards.size > 0 %}
+            <table class="c-account_table u-color__border--border">
+              <tbody>
+                <tr class="u-color__border--border u-color__bg--bg">
+                  {% comment %}<th class="u-text--body>決済会社カードID</th>{% endcomment %}
+                  <th class="u-text--strong">{{ 'payments.credit_card.card_number.value' | t }}</th>
+                  <th class="u-text--strong">{{ 'general.general.expired.value' | t }}</th>
+                  <th class="u-text--strong">{{ 'general.general.default.value' | t }}</th>
+                  <th class="u-text--strong">{{ 'general.general.registered_at.value' | t }}</th>
+                  <th class="u-text--strong">{{ 'general.general.updated_at.value' | t }}</th>
+                  <th class="u-text--strong"></th>
+                  <th class="u-text--strong"></th>
+                </tr>
+                {% for card in cards %}
+                  <tr class="u-color__border--border">
+                    {% comment %}<td class="u-text--body>9de0825dd6</td>{% endcomment %}
+                    <td class="u-text--body" data-title="{{ 'payments.credit_card.card_number.value' | t }}：">{{ card.display_number }}</td>
+                    <td class="u-text--body" data-title="{{ 'general.general.expired.value' | t }}：">{{ card.month }}/{{ card.year }}</td>
+                    <td class="u-text--body" data-title="{{ 'general.general.default.value' | t }}：">
+                      {% if card.default %}
+                        ○
+                      {% else %}
+                        -
+                      {% endif %}
+                    </td>
+                    <td class="u-text--body" data-title="{{ 'general.general.registered_at.value' | t }}：">{{ card.created_at | date: "%Y/%m/%d" }}</td>
+                    <td class="u-text--body" data-title="{{ 'general.general.updated_at.value' | t }}：">{{ card.updated_at | date: "%Y/%m/%d" }}</td>
+                    <td class="u-text--body">
+                      <a class="c-account_table__edit u-color__text--accent" href="//customer/cards/{{ card.id }}/edit">
+                        <i class="u-icon--edit"></i>
+                        <span class="u-font--body">{{ 'general.action.edit.value' | t }}</span>
+                      </a>
+                    </td>
+                    <td class="u-text--body">
+                      <a class="c-account_table__delete js-notransition" data-confirm="{{ 'general.message.is_really_delete.value' | t }}" rel="nofollow" data-method="delete" href="//customer/cards/{{ card.id }}">
+                        <i class="u-icon--close u-color--head"></i>
+                        <span class="u-text--link">{{ 'general.action.delete.value' | t }}</span>
+                      </a>
+                    </td>
+                  </tr>
+                {% endfor %}
+              {% else %}
+                <p class="p-account__inner__content__lead u-text--body">{{ 'payments.credit_card.not_exist_credit_card.value' | t }}</p>
+              {% endif %}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

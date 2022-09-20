@@ -1,22 +1,4 @@
-<%
-// 以下の設定値を記入のこと
 
-var pageinit = {
-  title : '' ,
-  keywords : '' ,
-  description : '' ,
-  ogurl : '' ,
-  path: '',
-  ogimage : '' ,
-  path : '' ,
-  ecforce : 'false',
-  category : ['about'] ,
-  pagename : '',
-  css: [],
-  js:[],
-  jsfunc:['setPhotoChanger ();','startScroll ();','setVideo();']
-};
-%>
 <!-- Footer -->
     <ul class="upthome__fvblc--sns" id="js-sns">
         <li>
@@ -77,16 +59,10 @@ var pageinit = {
 
 </footer>
 <!-- Footer -->
-<% if (pageinit.ecforce !== 'true') { %>
+
     <div id="cursor">
     <img src="/assets/images/uptorigin/0914/cursor.svg" alt="">
     <script src="/assets/uptfooter.js"></script>
 
 </div>
-<% } else { %>
-    <div id="cursor">
-        <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/cursor.svg" alt="">
-    </div>
-    <script src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/uptfooter.js"></script>
 
-<% } %>

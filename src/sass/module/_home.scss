@@ -357,6 +357,24 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+
+        }
+        .producer__inner{
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: flex-end;
+            div{
+                height: 79px;
+            }
+        }
+    }
+    .about__inner{
+        position: absolute;
+        bottom: 0;
+        height: 79px;
+        div{
+            height: 79px;
         }
     }
     &__yumi{
@@ -661,7 +679,22 @@
             height: 55vw;
 
         }
+        .producer__inner{
+
+            div{
+                height: 6vw;
+            }
+        }
+
+
     }
+    .about__inner{
+                
+                div{
+                    height: 6vw;
+
+                }
+            }
         &__illust{
             width: 100%;
             max-width: 100%;
@@ -717,6 +750,78 @@
         }
     }
 
+}
+
+.modal{
+
+    &__bg{
+        background-color: rgba(255,255,255,0.2);
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        z-index: 101;
+        left: 0;
+        top: 0;
+        overflow: auto;
+
+    }
+    &__btn{
+        display: block;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: rgba(255,255,255,0);
+
+        &:hover{
+            background-color: rgba(255,255,255,0.1);
+        }
+    }
+ 
+    &__contents{
+        position: fixed;
+        display: block;
+        z-index: 102;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 48.5vh;
+        height: 70vh;
+
+        
+        &--inner{
+            position: relative;
+            font-size: 0;
+            line-height: 0;
+            width: 100%;
+            height: 100%;
+            img{
+                border-radius: 20px;
+                object-fit: content;
+                height: 100%;
+
+            }
+        }
+        @media screen and (max-width: var.$spbp) {
+            width: 80vw;
+            max-height: 70vh;
+
+            &--inner{
+                position: relative;
+                img{
+                    border-radius: 5vw;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+            &__btn{
+                &:hover{
+                    background-color: rgba(255,255,255,0);
+                }
+            }
+        }
+    }
 }
 
 //タブレット

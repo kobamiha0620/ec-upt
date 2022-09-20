@@ -1,20 +1,20 @@
 @use "./module/variable"as var;
 
 html {
-    height: -webkit-fill-available;
+    // height: -webkit-fill-available;
 }
 
 body {
-    min-height: 100vh;
-    min-height: -webkit-fill-available;
+    // min-height: 100vh;
+    // min-height: -webkit-fill-available;
 }
 
 body {
     background: var.$bg;
-    width: 100vw;
-    margin: 0;
-    position: relative;
-    overflow-x: hidden;
+    // width: 100vw;
+    // margin: 0;
+    // position: relative;
+    // overflow-x: hidden;
 }
 
 .bg {

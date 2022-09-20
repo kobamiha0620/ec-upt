@@ -94,21 +94,8 @@
           animation-iteration-count: 1;
 }
 
-html {
-  height: -webkit-fill-available;
-}
-
-body {
-  min-height: 100vh;
-  min-height: -webkit-fill-available;
-}
-
 body {
   background: #F7F8F8;
-  width: 100vw;
-  margin: 0;
-  position: relative;
-  overflow-x: hidden;
 }
 
 .bg__repeatWrapper {
@@ -131,8 +118,8 @@ body {
   line-height: 0;
 }
 .bgw1 .maskbg1 {
-  -webkit-mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg1_mask.png");
-  mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg1_mask.png");
+  -webkit-mask-image: url("/assets/images/uptorigin/bg1_mask.png");
+  mask-image: url("/assets/images/uptorigin/bg1_mask.png");
   -webkit-mask-size: 100% auto;
           mask-size: 100% auto;
   -webkit-mask-position: center top;
@@ -140,8 +127,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   .bgw1 .maskbg1 {
-    -webkit-mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg1_mask.png");
-    mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg1_mask.png");
+    -webkit-mask-image: url("/assets/images/uptorigin/bg1_mask.png");
+    mask-image: url("/assets/images/uptorigin/bg1_mask.png");
     -webkit-mask-position: center top -24vw;
             mask-position: center top -24vw;
     -webkit-mask-size: 200% auto;
@@ -167,8 +154,8 @@ body {
   line-height: 0;
 }
 .bgw2 .maskbg2 {
-  -webkit-mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg2_mask.png");
-  mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg2_mask.png");
+  -webkit-mask-image: url("/assets/images/uptorigin/bg2_mask.png");
+  mask-image: url("/assets/images/uptorigin/bg2_mask.png");
   -webkit-mask-size: 100% auto;
           mask-size: 100% auto;
   -webkit-mask-position: center top;
@@ -179,8 +166,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   .bgw2 .maskbg2 {
-    -webkit-mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg2_mask.png");
-    mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/upt_origin_20220816132124/ec_force/assets/images/uptorigin/bg2_mask.png");
+    -webkit-mask-image: url("/assets/images/uptorigin/bg2_mask.png");
+    mask-image: url("/assets/images/uptorigin/bg2_mask.png");
     -webkit-mask-position: center top -24vw;
             mask-position: center top -24vw;
     -webkit-mask-size: 100% auto;

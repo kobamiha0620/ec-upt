@@ -54,7 +54,7 @@
                           <li class="p-mypage__block__subscription__item u-color__bg--bg">
                             <div class="p-mypage__block__subscription__item__label u-text--body">{{ 'delivery.next.scheduled.value' | t }}</div>
                             <div class="p-mypage__block__subscription__item__date u-text--body">{{ subs_order.scheduled_to_be_delivered_at | date: "%Y.%m.%d" }}{{ 'delivery.next.to_delivery_plan_products.value' | t }}</div>
-                            <a class="p-mypage__block__subscription__item__btn u-text--btn u-color__btn--bg" href="/shop/customer/subs_orders/{{ subs_order.number }}">{{ 'general.action.view_detail.value' | t }}</a>
+                            <a class="p-mypage__block__subscription__item__btn u-text--btn u-color__btn--bg" href="//customer/subs_orders/{{ subs_order.number }}">{{ 'general.action.view_detail.value' | t }}</a>
                           </li>
                         {% endif %}
                     {% endfor %}
@@ -75,12 +75,12 @@
                       <div class="p-history_list__item__header u-color__bg--bg">
                         <div class="p-history_list__item__header__id u-text--subhead">{{ order.number }}</div>
                         <time class="p-history_list__item__header__date u-text--body">{{ order.completed_at | date:'%Y/%m/%d' }}</time>
-                        <a class="p-history_list__item__header__btn u-text--btn u-color__btn--bg" href="/shop/customer/orders/{{ order.number }}">{{ 'orders.general.view_order_detail.value' | t }}</a>
+                        <a class="p-history_list__item__header__btn u-text--btn u-color__btn--bg" href="//customer/orders/{{ order.number }}">{{ 'orders.general.view_order_detail.value' | t }}</a>
                       </div>
                       <div class="p-history_list__item__detail">
                         {% for item in order.order_items %}
                           <div class="c-cart_item u-color__border--border">
-                            <a class="c-cart_item__img" href="/shop/products/{{ item.product.master.sku }}">
+                            <a class="c-cart_item__img" href="//products/{{ item.product.master.sku }}">
                               {% if item.variant.thumbnails.first.url %}
                                 {% assign thumbnail = item.variant.thumbnails.first.url  %}
                               {% elsif item.product.master.thumbnails.url %}
@@ -109,7 +109,7 @@
                                 {% endfor %}
                                 {{ _category }}
                               </div>
-                              <a class="c-cart_item__info__title u-text--subhead" href="/shop/products/{{ item.product.master.sku }}">{{ item.product.name }}</a>
+                              <a class="c-cart_item__info__title u-text--subhead" href="//products/{{ item.product.master.sku }}">{{ item.product.name }}</a>
                               <div class="c-cart_item__info__variant u-text--body">
                                 {% assign option_cnt = 0 %}
                                   {% for option_value in item.variant.option_values %}
