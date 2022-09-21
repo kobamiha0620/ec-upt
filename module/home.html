@@ -1,15 +1,38 @@
 
 <!-- home -->
 
+    {{ 'shop/base' | javascript_include_tag }}
+
 
 <main class="l-container js-main-container upthome" role="main">
+    
+        {{ 'notice' | flash: 'control-alert alert-success', 'text u-color__bg--bg u-color__text--alert' }}
+        {{ 'alert' | flash: 'control-alert alert-danger', 'text u-color__bg--bg u-color__text--alert' }}
+        {{ content_for_index }}
+      
+        {% comment %} welcome modal {% endcomment %}
+        {% comment %} {% unless customer_signed_in %}
+          <div class="c-welcome_modal">
+            <div class="c-welcome_modal__overlay"></div>
+            <div class="c-welcome_modal__win u-color__bg--base">
+              <div class="c-welcome_modal__win__title u-font__both">NEWS LETTER</div>
+              <div class="c-welcome_modal__win__lead">新商品、お得なお知らせなどを定期的に配信中、<br />今機会に是非登録してください。</div>
+              <form class="c-subscribe_form">
+                <input class="c-subscribe_form__input u-color__bg--base u-color__border--input" type="email">
+                <button class="c-subscribe_form__btn u-color__bg--accent u-color__text--base">登録</button>
+              </form>
+              <button class="c-welcome_modal__win__btn"><i class="u-icon--close"></i></button>
+            </div>
+          </div>
+        {% endunless %} {% endcomment %}
+        {% comment %} end of welcome modal {% endcomment %}
     
 
 
     <section class="upthome__fv" id="js-uptHome">
     <div class="upthome__fvblc">
  
-        <span href="//" class="upthome__fv--logo">UPt</span>
+        <h1 href="/" class="upthome__fv--logo">Upt</h1>
 
 
         <div class="about__inner">
@@ -27,7 +50,7 @@
             <div class="upthome__intro--blc">
                 <div class="upthome__intro--txtblc">
                     <div class="upthome__intro--txtblc-inner">
-                <h3 class="upthome__intro--ttl">化粧なんて、なんとなくでいい</h3>
+                <h2 class="upthome__intro--ttl">化粧なんて、なんとなくでいい</h2>
                 <p class="upthome__intro--txt">歳を重ねていくのは素敵なことだ</p>
                 <p class="upthome__intro--txt">泣きたい気持ちを堪える日々や<br>にがく悲しい思い出も</p>
                 <p class="upthome__intro--txt">張り裂けそうな愛情や<br>穏やかさに包まれた愛しい経験も</p>
@@ -45,11 +68,11 @@
             <div class="upthome__intro--img">
 
                 
-                    <img src="/assets/images/uptorigin/0914/img_about-pc.png" alt="" class="pcImg">
+                    <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/img_about-pc.png" alt="" class="pcImg">
                 
 
                 
-                    <img src="/assets/images/uptorigin/0914/img_about-sp.png" alt="" class="spImg">
+                    <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/img_about-sp.png" alt="" class="spImg">
                 
             </div>
         </div>
@@ -59,17 +82,17 @@
 
     <section class="upthome__set">
         <div class="upthome__set--img">
-            <div class="upthome__set--img-in">   
+            <a href="/shop/products/upt_skincareset" class="upthome__set--img-in">   
                 <div class="upthome__set--img-feature"></div>
                 <p>BUY NOW</p>
-            </div>
+            </a>
         </div>
         <div class="upthome__set--blc">
             <div class="upthome__set--blc-flex">
                 <div class="upthome__set--blc-con">
                     <div class="upthome__set--sblc">
-                    <p class="upt__name">Upt<br>SKINCARE SET</p>
-                    <p class="upt__price">¥7,590 (tax in)</p>
+                    <h2 class="upt__name">Upt<br>SKINCARE SET</h2>
+                    <h3 class="upt__price">¥7,590 (tax in)</h3>
                     </div>
                     <div class="upthome__set--sblc02">
                         <p class="upt__sname">SET ITEM</p>
@@ -100,9 +123,11 @@
                     </div>
                 </div>
                 <div class="upthome__set--blc-btm">
-                <a href="//products/upt_skincareset" >
+                <a href="/shop/products/upt_skincareset" >
                     <span>
-                    VIEW MORE
+                    VIEW MORE<br>
+                    <pre>もっと見る</pre>
+
                     </span>
                 </a>
             </div>
@@ -117,7 +142,7 @@
             <li>
                 <div>
                     
-                        <img src="/assets/images/uptorigin/0914/home_prodcut01.png" alt="">
+                        <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/home_prodcut01.png" alt="">
                     
                     <div class="upthome__products--nameblc">
                         <p class="upthome__products--name">BALANCING TONER</p>
@@ -131,7 +156,7 @@
             <li>
                 <div>
                     
-                        <img src="/assets/images/uptorigin/0914/home_prodcut02.png" alt="">
+                        <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/home_prodcut02.png" alt="">
                     
                     <div class="upthome__products--nameblc">
                         <p class="upthome__products--name">CONDITIONING MILK</p>
@@ -145,7 +170,7 @@
             <li>
                 <div>
                     
-                        <img src="/assets/images/uptorigin/0914/home_prodcut03.png" alt="">
+                        <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/home_prodcut03.png" alt="">
                     
                     <div class="upthome__products--nameblc">
                         <p class="upthome__products--name">MOISTURIZING CREAM</p>
@@ -195,11 +220,11 @@
 
         <div class="upthome__yumi--blc">
             
-                <img src="/assets/images/uptorigin/0914/img_producer-pc02.jpg" alt="" class="pcImg">
+                <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/img_producer-pc02.jpg" alt="" class="pcImg">
             
 
             
-                <img src="/assets/images/uptorigin/0914/img_producer-sp02.jpg" alt="" class="spImg">
+                <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/img_producer-sp02.jpg" alt="" class="spImg">
             
         </div>
     </section>
@@ -208,10 +233,12 @@
 
 
     <section class="upthome__illust">
-        <p class="upthome__illust--ttl">安達 祐実（あだち ゆみ）</p>
+        <h2 class="upthome__illust--ttl">安達 祐実（あだち ゆみ）</h2>
         <p class="upthome__illust--txt">1981年9月14日生まれ。2歳からキッズモデルとして活動を始め、94年の日本テレビ系ドラマ『家なき子』で本格的にブレイク。同作品の台詞は、新語・流行語大賞にも選ばれるなど社会現象となった。以降も幅広い役をこなす実力派俳優として数々のドラマ、映画に出演する他、ファッションブランドのプロデュース等、活動は多岐に渡る。</p>
     </section>
 
+    
+    {% comment %} movie modal {% endcomment %}
     
 
     <div class="c-movie_modal">
@@ -224,6 +251,9 @@
     </div>
     
 
+    {% comment %} end of movie modal {% endcomment %}
+    
+
   </main>
 
 
@@ -231,7 +261,7 @@
 
   <!-- home -->
 
-    <script src="/assets/homeupt.js"></script>
+    <script src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/homeupt.js"></script>
 
 
 

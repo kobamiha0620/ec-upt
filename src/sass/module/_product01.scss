@@ -722,3 +722,30 @@
         height: 100%;
     }
 }
+
+
+////------修正　０９２２
+
+
+
+#btn-add{
+    display: flex!important;
+    padding: 20px 0;
+    .txt{
+        line-height: 1.2;
+        display: inline-block;
+        .stxt{
+            font-weight: 400;
+            @include var.fz(14);    
+            letter-spacing: 0.1em;
+            background: none;
+            padding-right: 0;
+            display: inline-block;
+        }
+    }
+}
+
+
+.uptproduct__setitem--name01{
+    color: var.$bc2;
+}

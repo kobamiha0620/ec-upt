@@ -835,3 +835,20 @@ main{
     }
 
 }
+
+
+////------修正　０９２２
+
+  .u-text--input{
+    font-size: 16px!important;
+  }
+  .p-checkout_confirm__float{
+    padding-top: 15px;
+    padding-bottom: 16px;
+    .u-color__bg--accent{
+        background: var.$bc;
+    }
+    button{
+        @include var.fz(16);
+    }
+  }

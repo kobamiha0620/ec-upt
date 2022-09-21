@@ -9,7 +9,7 @@ var pageinit = {
   path: '',
   ogimage : '' ,
   path : '' ,
-  ecforce : 'false',
+  ecforce : 'true',
   category : ['about'] ,
   pagename : '',
   css: [],
@@ -98,14 +98,14 @@ var pageinit = {
 
                 <div class="uptheader__icons">
                     <div class="uptheader__icons--logo">
-                        <a href="//" class="js-logo active">Upt</a>
+                        <a href="/" class="js-logo active">Upt</a>
                     </div>
                     <div class="uptheader__icons--btns">
                         <div class="l-header__inner__block u-color--head">
-                            <a class="l-header__inner__block__item" href="//customer">
+                            <a class="l-header__inner__block__item" href="/shop/customer">
                                 <i class="u-icon--account"></i>
                             </a>
-                            <a class="l-header__inner__block__item" href="//cart">
+                            <a class="l-header__inner__block__item" href="/shop/cart">
                                 <i class="u-icon--cart"></i>
                                 <% if (pageinit.ecforce === 'true') { %>
                                 {% comment %} {% if order.completed? %}
@@ -145,10 +145,10 @@ var pageinit = {
                 <div class="uptgmenu__inner">
                     <div class="uptgmenu__innerline">
                         <section class="uptgmenu__head">
-                            <a href="//customer">
+                            <a href="/shop/customer">
                                 <i class="u-icon--account"></i>
                             </a>
-                            <a href="//cart">
+                            <a href="/shop/cart">
                                 <i class="u-icon--cart"></i>
                             </a>
                             <button class="c-gmenu__container__close u-color--head js-close-menu">
@@ -165,13 +165,13 @@ var pageinit = {
                                         <ul class="c-gmenu__container__inner__list__item__child">
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customers/sign_up">
+                                                    href="/shop/customers/sign_up">
                                                     <span>会員登録</span>
                                                 </a>
                                             </li>
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customers/sign_in">
+                                                    href="/shop/customers/sign_in">
                                                     <span>{{ 'account.general.login.value' | t }}</span>
                                                 </a>
                                             </li>
@@ -181,7 +181,7 @@ var pageinit = {
                                         <ul class="c-gmenu__container__inner__list__item__child">
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//contact/draft">
+                                                    href="/shop/contact/draft">
                                                     <span>{{ 'contact.general.contact_title.value' | t }}</span>
                                                 </a>
                                             </li>
@@ -194,13 +194,13 @@ var pageinit = {
                                         <ul class="c-gmenu__container__inner__list__item__child">
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customer/favorites">
+                                                    href="/shop/customer/favorites">
                                                     <span>{{ 'products.favorites.favorite_list.value' | t }}</span>
                                                 </a>
                                             </li>
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customer/orders">
+                                                    href="/shop/customer/orders">
                                                     <span>{{ 'orders.history.purchase_history.value' | t }}</span>
                                                 </a>
                                             </li>
@@ -210,25 +210,25 @@ var pageinit = {
                                         <ul class="c-gmenu__container__inner__list__item__child">
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customer/edit">
+                                                    href="/shop/customer/edit">
                                                     <span>{{ 'account.general.member_info.value' | t }}</span>
                                                 </a>
                                             </li>
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customer/cards">
+                                                    href="/shop/customer/cards">
                                                     <span>{{ 'payments.credit_card.credit_card_info.value' | t }}</span>
                                                 </a>
                                             </li>
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customer/password/edit">
+                                                    href="/shop/customer/password/edit">
                                                     <span>{{ 'account.password.password_change.value' | t }}</span>
                                                 </a>
                                             </li>
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customer/subs_orders">
+                                                    href="/shop/customer/subs_orders">
                                                     <span>{{ 'subs_orders.general.subs_orders.value' | t }}</span>
                                                 </a>
                                             </li>
@@ -238,13 +238,13 @@ var pageinit = {
                                         <ul class="c-gmenu__container__inner__list__item__child">
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//contact/draft">
+                                                    href="/shop/contact/draft">
                                                     <span>{{ 'contact.general.contact_title.value' | t }}</span>
                                                 </a>
                                             </li>
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customers/sign_out">
+                                                    href="/shop/customers/sign_out">
                                                     <span>{{ 'account.general.logout.value' | t }}</span>
                                                 </a>
                                             </li>
@@ -258,7 +258,7 @@ var pageinit = {
                             <div>
                             <ul class="uptgmenu__upperlinks">
                                 <li>
-                                    <a href="//products/upt_skincareset">PRODUCTS</a>
+                                    <a href="/shop/products/upt_skincareset">PRODUCTS</a>
                                 </li>
                                 <li>
                                     <a href="/#ABOUT">ABOUT</a>
@@ -267,10 +267,10 @@ var pageinit = {
                                     <a href="/#PRODUCER">PRODUCER</a>
                                 </li>
                                 <li>
-                                    <a href="//cart">CART</a>
+                                    <a href="/shop/cart">CART</a>
                                 </li>
                                 <li>
-                                    <a href="//contact/draft">CONTACT</a>
+                                    <a href="/shop/contact/draft">CONTACT</a>
                                 </li>
                             </ul>
                             <div class="uptgmenu__sns">
@@ -295,23 +295,23 @@ var pageinit = {
                         </div>
                         </section>
                         <section class="uptgmenu__btm">
-                            <p class="uptgmenu__btm--logo"><a href="//">Upt</a></p>
+                            <p class="uptgmenu__btm--logo"><a href="/">Upt</a></p>
                             <ul class="uptgmenu__btm--links">
-                                <li>
-                                    <a href="//faq/">FAQ</a>
-                                </li>
-                                <li>
-                                    <a href="//guide/">ご利用ガイド</a>
-                                </li>
 
                                 <li>
-                                    <a href="//law_info/">特定商取引に基づく表記</a>
+                                    <a href="/shop/faq/">FAQ / </a> <a href="/shop/guide/">ご利用ガイド</a>
                                 </li>
                                 <li>
-                                    <a href="//privacy/">プライバシーポリシー</a>
+                                    <a href="https://mano-mano.co.jp/" target="_blank">会社概要</a>
                                 </li>
                                 <li>
-                                    <a href="//customer_term/">利用規約</a>
+                                    <a href="/shop/law_info/">特定商取引に基づく表記</a>
+                                </li>
+                                <li>
+                                    <a href="/shop/privacy/">プライバシーポリシー</a>
+                                </li>
+                                <li>
+                                    <a href="/shop/customer_term/">利用規約</a>
                                 </li>
                             </ul>
                             <p class="uptgmenu__btm--copy"><small>© 2022 Upt All Rights Reserved</small></p>

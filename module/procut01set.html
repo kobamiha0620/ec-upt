@@ -1,5 +1,7 @@
 
 
+{{ 'shop/products' | javascript_include_tag }}
+{% assign p = product %}
 
 
 <!-- product01 -->
@@ -10,8 +12,10 @@
         <div class="uptblc__buyblc">
             <div class="uptblc__buyblc--img">
                 
-                    <img src="/assets/images/uptorigin/0914/product_setimage.jpg" alt="" class="pcImg">
-                    <img src="/assets/images/uptorigin/0914/product_setimage-sp.png" alt="" class="spImg">
+                    {% if product.id == 5 %}
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/product_setimage.jpg" alt="" class="pcImg">
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/product_setimage-sp.png" alt="" class="spImg">
+                    {% endif %}
                 
             </div>
             <div class="uptblc__buyblc__spborder"></div>
@@ -20,11 +24,14 @@
                     <div class="uptblc__buyblc--contents">
                         <div>
                             
-                            <p class="upt__name uptblc__buyblc--txt00">Upt<br>SKINCARE SET</p>
-                            <p class="uptblc__buyblc--txt01">ウプト スキンケアセット</p>
+                            {% if product.id == 5 %}
+                            <h2 class="upt__name uptblc__buyblc--txt00">Upt<br>SKINCARE SET</h2>
+                            <h3 class="uptblc__buyblc--txt01">ウプト スキンケアセット</h3>
                             <p class="uptblc__buyblc--txt02">肌に密度の⾼いうるおいを与えるスマートスキンケアセット。3つのアイテムをライン使いしていただくことで保湿⼒とテクスチャーの良さをより実感いただけます。</p>
 
                             <p class="upt__price uptblc__buyblc--txt03">¥7,590 (tax in)</p>
+
+                            {% endif %}
                         
 
                         <div style="display: none;">
@@ -145,7 +152,7 @@
                                     {% for related_product in product.active_related_products %}
                                 
                                     <!-- 関連商品画像(任意) -->
-                                    <a href="//products/{{ related_product.master.sku }}">
+                                    <a href="/shop/products/{{ related_product.master.sku }}">
                                         {% if related_product.thumbnail.url %}
                                         {% assign src = related_product.thumbnail.url %}
                                         {% else %}
@@ -155,7 +162,7 @@
                                     </a>
                                 
                                     <!-- 関連商品名 -->
-                                    <a href="//products/{{ related_product.master.sku }}">{{ related_product.name | truncate: 35 }}</a>
+                                    <a href="/shop/products/{{ related_product.master.sku }}">{{ related_product.name | truncate: 35 }}</a>
                                 
                                     <!-- 販売価格 -->
                                     {{ related_product.master.list_price | number_to_currency: format: '%n %u' }}
@@ -209,8 +216,8 @@
                                 </div>
                                 <!-- カート追加 -->
                                 
-                                    <button id="btn-add">ADD TO CART<span></span></button>
-                                    
+                                    <button id="btn-add" style='display:none;'><p class="txt">ADD TO CART <br><span class="stxt">購入はこちらから</span></p><span></span></button>
+                                
 
                             </form>
 
@@ -224,14 +231,14 @@
     <section class="uptline"></section>
 
     <section id="js-prodcutFv" class="uptprodcut__intro">
-        <p class="uptprodcut__intro--txt">スキンケアを、<br>⼼安らぐ時間に</p>
+        <h2 class="uptprodcut__intro--txt">スキンケアを、<br>⼼安らぐ時間に</h2>
         <div class="uptprodcut__intro--relative">
         
-            <img src="/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="" class="pcImg">
+            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="" class="pcImg">
         
 
         
-            <img src="/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="" class="spImg">
+            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="" class="spImg">
         
             <div class="uptprodcut__intro--border" id="js-border"></div>
         </div>
@@ -246,7 +253,7 @@
                     <div class="uptproduct__setitem--blc-s border img">
                         <div class="uptproduct__setitem--img">
                             
-                                <img src="/assets/images/uptorigin/0914/img_set01.png" alt="">
+                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set01.png" alt="">
                             
                         </div>
                     </div>
@@ -254,13 +261,13 @@
                         <div class="uptproduct__setitem--exp">
                             <div class="uptproduct__setitem--name">
                                 <div class="uptproduct__setitem--name-txt">
-                                    <p class="uptproduct__setitem--name01">BALANCING TONER</p>
+                                    <h3 class="uptproduct__setitem--name01">BALANCING TONER</h3>
                                     <p class="uptproduct__setitem--name02">バランシングトナー<br>〈化粧⽔〉</p>
                                     <p class="uptproduct__setitem--name03 italic">155mL</p>
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
                                 
-                                    <img src="/assets/images/uptorigin/0914/point_set01.png" alt="">
+                                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set01.png" alt="">
                                 
                                 </div>
                             </div>
@@ -302,7 +309,7 @@
                     <div class="uptproduct__setitem--blc-s img blc02">
                         <div class="uptproduct__setitem--img">
                             
-                                <img src="/assets/images/uptorigin/0914/img_set02.png" alt="">
+                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set02.png" alt="">
                             
                         </div>
                     </div>
@@ -310,13 +317,13 @@
                         <div class="uptproduct__setitem--exp">
                             <div class="uptproduct__setitem--name">
                                 <div class="uptproduct__setitem--name-txt">
-                                    <p class="uptproduct__setitem--name01">CONDITIONING MILK</p>
+                                    <h3 class="uptproduct__setitem--name01">CONDITIONING MILK</h3>
                                     <p class="uptproduct__setitem--name02">コンディショニングミルク<br>〈乳液〉</p>
                                     <p class="uptproduct__setitem--name03 italic">120mL</p>
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
                                 
-                                    <img src="/assets/images/uptorigin/0914/point_set02.png" alt="">
+                                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set02.png" alt="">
                                 
                                 </div>
                             </div>
@@ -359,7 +366,7 @@
                     <div class="uptproduct__setitem--blc-s border img">
                         <div class="uptproduct__setitem--img">
                             
-                                <img src="/assets/images/uptorigin/0914/img_set03.png" alt="">
+                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set03.png" alt="">
                             
                         </div>
                     </div>
@@ -367,13 +374,13 @@
                         <div class="uptproduct__setitem--exp">
                             <div class="uptproduct__setitem--name">
                                 <div class="uptproduct__setitem--name-txt">
-                                    <p class="uptproduct__setitem--name01">MOISTURIZING CREAM</p>
+                                    <h3 class="uptproduct__setitem--name01">MOISTURIZING CREAM</h3>
                                     <p class="uptproduct__setitem--name02">モイスチャライジングクリーム<br>〈クリーム〉</p>
                                     <p class="uptproduct__setitem--name03 italic">40g</p>
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
                                 
-                                    <img src="/assets/images/uptorigin/0914/point_set03.png" alt="">
+                                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set03.png" alt="">
                                 
                                 </div>
                             </div>
@@ -385,7 +392,7 @@
                             </div>
 
                             <div class="uptproduct__setitem--absolute">
-                                <ul class="uptproduct__setitem--list" id="js-accordion02">
+                                <ul class="uptproduct__setitem--list" id="js-accordion03">
                                     <li>
                                         <p class="uptproduct__setitem--list-ttl">使用感<span></span></p>
                                         <div class="uptproduct__setitem--list-txt">
@@ -421,14 +428,14 @@
         <div class="uptproduct__point--con">
             <ul class="uptproduct__point--contxt"> 
                 <li class="uptproduct__point--contxt01">
-                    <p class="uptproduct__point--ttl">TEXTURE</p>
+                    <h3 class="uptproduct__point--ttl">TEXTURE</h3>
                     <p class="uptproduct__point--subttl">つけ心地の良さを最優先</p>
                     <span class="uptproduct__point--border"></span>
                     <p class="uptproduct__point--txt">スキンケア後のベタつき感を減らし、メイクの前でも寝る前でも邪魔をしない気持ちのいい手触りに仕上げました。
                         重さやベタつき感がなく、お肌に馴染みうるおいが続きます。</p>
                 </li>
                 <li class="uptproduct__point--contxt02">
-                    <p class="uptproduct__point--ttl">COMPONENT</p>
+                    <h3 class="uptproduct__point--ttl">COMPONENT</h3>
                     <p class="uptproduct__point--subttl">最適なバランスを探究</p>
                     <span class="uptproduct__point--border"></span>
                     <p class="uptproduct__point--txt">毎日のスキンケアを手軽に、年代問わず使ってほしいからシンプルな処方にこだわりました。
@@ -437,7 +444,7 @@
                         ※1 アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３　※2 パルミチン酸アスコルビルリン酸３Ｎａ　※3 セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ</span></p>
                 </li>
                 <li class="uptproduct__point--contxt03">
-                    <p class="uptproduct__point--ttl">FRAGRANCE</p>
+                    <h3 class="uptproduct__point--ttl">FRAGRANCE</h3>
                     <p class="uptproduct__point--subttl">甘すぎない爽やかな香りを</p>
                     <span class="uptproduct__point--border"></span>
                     <p class="uptproduct__point--txt">ゼラニウム<span>※1</span> &イランイラン<span>※2</span> の天然精油を配合し、つけた瞬間心地よい香りで包み込みます。
@@ -453,13 +460,35 @@
 
     
 
+        {% comment %} review {% endcomment %}
+        {% if base_info.use_review? %}
+        {% section 'products_show_review' %}
+        {% endif %}
+        {% comment %} 関連商品 {% endcomment %}
+        {% if base_info.use_related_products_on_detail? and p.active_related_products.size != 0 %}
+        {% section 'products_show_recommend' %}
+        {% endif %}
+    
+
 </main>
 <!-- product01 -->
 
 
+    <link rel="stylesheet" href="{{ theme_file_root_path }}/assets/product.css" type="text/css">
+    
+    {% content_for meta_description %}
+    {% endcontent_for %}
+    
+    {% content_for meta_keywords %}
+    {% endcontent_for %}
+    
+    {% content_for title %}
+    {% endcontent_for %}
 
 
-    <script src="/assets/uptproduct.js"></script>
+
+
+    <script src="{{ theme_file_root_path }}/assets/uptproduct.js"></script>
 
 
 

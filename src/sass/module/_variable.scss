@@ -8,9 +8,8 @@ $tabw: 1024px;
 $bg: #F7F8F8;
 $bg_dark: #32667A;
 $bg2: #d8d8e4;
-$imgpath: '/assets/images/uptorigin/';
-
-// $imgpath: 'https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/0922_20220920155336/ec_force/assets/images/uptorigin/';
+// $imgpath: '/assets/images/uptorigin/';
+$imgpath: 'https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/0922_20220920155336/ec_force/assets/images/uptorigin/';
 
 @mixin bg(){
     background-size: 100% auto;
@@ -22,7 +21,6 @@ $imgpath: '/assets/images/uptorigin/';
 @mixin fz($size) {
 	font-size: calc($size / 16) + rem;
     font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
-
 }
 
 @keyframes fadeInAnime{
@@ -94,4 +92,3 @@ $imgpath: '/assets/images/uptorigin/';
 
 }
     
-

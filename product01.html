@@ -140,10 +140,66 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="uptheader bg__header">
 
         
+
+
+        {% if production != true and customize_preview_mode %}
+        <div class="customize_notice">
+            <p>※プレビュー表示が崩れた場合は、一度保存してください。</p>
+        </div>
+        {% endif %}
+
+        {% comment %} To use the inversion result in an if condition {% endcomment %}
+        {% if shop_root %}
+        {% assign top = false %}
+        {% else %}
+        {% assign top = true %}
+        {% endif %}
+
+        {% comment %} annoucement bar {% endcomment %}
+        {% if section.settings.message == true or section.settings.message == 'true' %}
+        {% comment %} Converted to boolean for use in if conditions {% endcomment %}
+        {% if section.settings.top_only_message == false or section.settings.top_only_message == 'false' %}
+        {% assign top_only_message_flg = false %}
+        {% else %}
+        {% assign top_only_message_flg = true %}
+        {% endif %}
+        {% unless top and top_only_message_flg %} {% comment %} unless a && !b {% endcomment %}
         <div class="c-announce_bar uptheader__anounce">
-            <div class="c-announce_bar__text">NEWS 22.09.14 Upt start!!</div>
+            <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use
+            escape{% endcomment %}
             <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
         </div>
+
+        {% endunless %}
+        {% endif %}
+        {% comment %} end of announcement bar {% endcomment %}
+
+        {% if section.settings.banner == true or section.settings.banner == 'true' %}
+        {% if smartphone %}
+        {% assign header_banner = section.settings.banner_sp %}
+        {% else %}
+        {% assign header_banner = section.settings.banner_pc %}
+        {% endif %}
+        {% if header_banner.size > 0 %}
+        {% comment %} Converted to boolean for use in if conditions {% endcomment %}
+        {% if section.settings.top_only_banner == false or section.settings.top_only_banner == 'false' %}
+        {% assign top_only_banner_flg = false %}
+        {% else %}
+        {% assign top_only_banner_flg = true %}
+        {% endif %}
+
+        {% unless top and top_only_banner_flg %} {% comment %} unless a && !b {% endcomment %}
+        <div class="p-banner p-banner--header">
+            {% assign image_url = header_banner | generate_image_url: theme_file_root_path %}
+            <p class="p-banner__image" style="background-image: url('{{ image_url }}')"></p>
+            {% if section.settings.banner_link.size > 0 %}
+            <a class="p-banner__link" href="{{section.settings.banner_link}}"></a>
+            {% endif %}
+        </div>
+        {% endunless %}
+        {% endif %}
+        {% endif %}
+
         
 
 
@@ -153,15 +209,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
                 <div class="uptheader__icons">
                     <div class="uptheader__icons--logo">
-                        <a href="//" class="js-logo active">Upt</a>
+                        <a href="/" class="js-logo active">Upt</a>
                     </div>
                     <div class="uptheader__icons--btns">
                         <div class="l-header__inner__block u-color--head">
-                            <a class="l-header__inner__block__item" href="//customer">
+                            <a class="l-header__inner__block__item" href="/shop/customer">
                                 <i class="u-icon--account"></i>
                             </a>
-                            <a class="l-header__inner__block__item" href="//cart">
+                            <a class="l-header__inner__block__item" href="/shop/cart">
                                 <i class="u-icon--cart"></i>
+                                
+                                {% comment %} {% if order.completed? %}
+                                <span class="count u-color__bg--alert u-color__text--base">0</span>
+                                {% else %}
+                                <span
+                                    class="count u-color__bg--alert u-color__text--base">{% if current_order %}{{ current_order.quantity }}{% else %}{{ order.quantity }}{% endif %}</span>
+                                {% endif %} {% endcomment %}
                                 
                             </a>
                         </div>
@@ -183,6 +246,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         
+        {% comment %} global nav {% endcomment %}
+        
         <div class="c-gmenu uptgmenu">
             <div class="c-gmenu__overlay js-close-menu"></div>
 
@@ -191,10 +256,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <div class="uptgmenu__inner">
                     <div class="uptgmenu__innerline">
                         <section class="uptgmenu__head">
-                            <a href="//customer">
+                            <a href="/shop/customer">
                                 <i class="u-icon--account"></i>
                             </a>
-                            <a href="//cart">
+                            <a href="/shop/cart">
                                 <i class="u-icon--cart"></i>
                             </a>
                             <button class="c-gmenu__container__close u-color--head js-close-menu">
@@ -211,13 +276,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <ul class="c-gmenu__container__inner__list__item__child">
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customers/sign_up">
+                                                    href="/shop/customers/sign_up">
                                                     <span>会員登録</span>
                                                 </a>
                                             </li>
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customers/sign_in">
+                                                    href="/shop/customers/sign_in">
                                                     <span>{{ 'account.general.login.value' | t }}</span>
                                                 </a>
                                             </li>
@@ -227,7 +292,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <ul class="c-gmenu__container__inner__list__item__child">
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//contact/draft">
+                                                    href="/shop/contact/draft">
                                                     <span>{{ 'contact.general.contact_title.value' | t }}</span>
                                                 </a>
                                             </li>
@@ -240,13 +305,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <ul class="c-gmenu__container__inner__list__item__child">
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customer/favorites">
+                                                    href="/shop/customer/favorites">
                                                     <span>{{ 'products.favorites.favorite_list.value' | t }}</span>
                                                 </a>
                                             </li>
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customer/orders">
+                                                    href="/shop/customer/orders">
                                                     <span>{{ 'orders.history.purchase_history.value' | t }}</span>
                                                 </a>
                                             </li>
@@ -256,25 +321,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <ul class="c-gmenu__container__inner__list__item__child">
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customer/edit">
+                                                    href="/shop/customer/edit">
                                                     <span>{{ 'account.general.member_info.value' | t }}</span>
                                                 </a>
                                             </li>
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customer/cards">
+                                                    href="/shop/customer/cards">
                                                     <span>{{ 'payments.credit_card.credit_card_info.value' | t }}</span>
                                                 </a>
                                             </li>
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customer/password/edit">
+                                                    href="/shop/customer/password/edit">
                                                     <span>{{ 'account.password.password_change.value' | t }}</span>
                                                 </a>
                                             </li>
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customer/subs_orders">
+                                                    href="/shop/customer/subs_orders">
                                                     <span>{{ 'subs_orders.general.subs_orders.value' | t }}</span>
                                                 </a>
                                             </li>
@@ -284,13 +349,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <ul class="c-gmenu__container__inner__list__item__child">
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//contact/draft">
+                                                    href="/shop/contact/draft">
                                                     <span>{{ 'contact.general.contact_title.value' | t }}</span>
                                                 </a>
                                             </li>
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
-                                                    href="//customers/sign_out">
+                                                    href="/shop/customers/sign_out">
                                                     <span>{{ 'account.general.logout.value' | t }}</span>
                                                 </a>
                                             </li>
@@ -304,7 +369,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div>
                             <ul class="uptgmenu__upperlinks">
                                 <li>
-                                    <a href="//products/upt_skincareset">PRODUCTS</a>
+                                    <a href="/shop/products/upt_skincareset">PRODUCTS</a>
                                 </li>
                                 <li>
                                     <a href="/#ABOUT">ABOUT</a>
@@ -313,10 +378,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <a href="/#PRODUCER">PRODUCER</a>
                                 </li>
                                 <li>
-                                    <a href="//cart">CART</a>
+                                    <a href="/shop/cart">CART</a>
                                 </li>
                                 <li>
-                                    <a href="//contact/draft">CONTACT</a>
+                                    <a href="/shop/contact/draft">CONTACT</a>
                                 </li>
                             </ul>
                             <div class="uptgmenu__sns">
@@ -341,23 +406,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         </section>
                         <section class="uptgmenu__btm">
-                            <p class="uptgmenu__btm--logo"><a href="//">Upt</a></p>
+                            <p class="uptgmenu__btm--logo"><a href="/">Upt</a></p>
                             <ul class="uptgmenu__btm--links">
-                                <li>
-                                    <a href="//faq/">FAQ</a>
-                                </li>
-                                <li>
-                                    <a href="//guide/">ご利用ガイド</a>
-                                </li>
 
                                 <li>
-                                    <a href="//law_info/">特定商取引に基づく表記</a>
+                                    <a href="/shop/faq/">FAQ / </a> <a href="/shop/guide/">ご利用ガイド</a>
                                 </li>
                                 <li>
-                                    <a href="//privacy/">プライバシーポリシー</a>
+                                    <a href="https://mano-mano.co.jp/" target="_blank">会社概要</a>
                                 </li>
                                 <li>
-                                    <a href="//customer_term/">利用規約</a>
+                                    <a href="/shop/law_info/">特定商取引に基づく表記</a>
+                                </li>
+                                <li>
+                                    <a href="/shop/privacy/">プライバシーポリシー</a>
+                                </li>
+                                <li>
+                                    <a href="/shop/customer_term/">利用規約</a>
                                 </li>
                             </ul>
                             <p class="uptgmenu__btm--copy"><small>© 2022 Upt All Rights Reserved</small></p>
@@ -367,6 +432,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </nav>
         </div>
+        
+
+        {% comment %} search menu {% endcomment %}
         
 
         <div style="display: none;">
@@ -526,6 +594,8 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
       
 
+{{ 'shop/products' | javascript_include_tag }}
+{% assign p = product %}
 
 
 <!-- product01 -->
@@ -536,8 +606,10 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
         <div class="uptblc__buyblc">
             <div class="uptblc__buyblc--img">
                 
-                    <img src="/assets/images/uptorigin/0914/product_setimage.jpg" alt="" class="pcImg">
-                    <img src="/assets/images/uptorigin/0914/product_setimage-sp.png" alt="" class="spImg">
+                    {% if product.id == 5 %}
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/product_setimage.jpg" alt="" class="pcImg">
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/product_setimage-sp.png" alt="" class="spImg">
+                    {% endif %}
                 
             </div>
             <div class="uptblc__buyblc__spborder"></div>
@@ -546,11 +618,14 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                     <div class="uptblc__buyblc--contents">
                         <div>
                             
-                            <p class="upt__name uptblc__buyblc--txt00">Upt<br>SKINCARE SET</p>
-                            <p class="uptblc__buyblc--txt01">ウプト スキンケアセット</p>
+                            {% if product.id == 5 %}
+                            <h2 class="upt__name uptblc__buyblc--txt00">Upt<br>SKINCARE SET</h2>
+                            <h3 class="uptblc__buyblc--txt01">ウプト スキンケアセット</h3>
                             <p class="uptblc__buyblc--txt02">肌に密度の⾼いうるおいを与えるスマートスキンケアセット。3つのアイテムをライン使いしていただくことで保湿⼒とテクスチャーの良さをより実感いただけます。</p>
 
                             <p class="upt__price uptblc__buyblc--txt03">¥7,590 (tax in)</p>
+
+                            {% endif %}
                         
 
                         <div style="display: none;">
@@ -671,7 +746,7 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                                     {% for related_product in product.active_related_products %}
                                 
                                     <!-- 関連商品画像(任意) -->
-                                    <a href="//products/{{ related_product.master.sku }}">
+                                    <a href="/shop/products/{{ related_product.master.sku }}">
                                         {% if related_product.thumbnail.url %}
                                         {% assign src = related_product.thumbnail.url %}
                                         {% else %}
@@ -681,7 +756,7 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                                     </a>
                                 
                                     <!-- 関連商品名 -->
-                                    <a href="//products/{{ related_product.master.sku }}">{{ related_product.name | truncate: 35 }}</a>
+                                    <a href="/shop/products/{{ related_product.master.sku }}">{{ related_product.name | truncate: 35 }}</a>
                                 
                                     <!-- 販売価格 -->
                                     {{ related_product.master.list_price | number_to_currency: format: '%n %u' }}
@@ -735,8 +810,8 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                                 </div>
                                 <!-- カート追加 -->
                                 
-                                    <button id="btn-add">ADD TO CART<span></span></button>
-                                    
+                                    <button id="btn-add" style='display:none;'><p class="txt">ADD TO CART <br><span class="stxt">購入はこちらから</span></p><span></span></button>
+                                
 
                             </form>
 
@@ -750,14 +825,14 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
     <section class="uptline"></section>
 
     <section id="js-prodcutFv" class="uptprodcut__intro">
-        <p class="uptprodcut__intro--txt">スキンケアを、<br>⼼安らぐ時間に</p>
+        <h2 class="uptprodcut__intro--txt">スキンケアを、<br>⼼安らぐ時間に</h2>
         <div class="uptprodcut__intro--relative">
         
-            <img src="/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="" class="pcImg">
+            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="" class="pcImg">
         
 
         
-            <img src="/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="" class="spImg">
+            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="" class="spImg">
         
             <div class="uptprodcut__intro--border" id="js-border"></div>
         </div>
@@ -772,7 +847,7 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                     <div class="uptproduct__setitem--blc-s border img">
                         <div class="uptproduct__setitem--img">
                             
-                                <img src="/assets/images/uptorigin/0914/img_set01.png" alt="">
+                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set01.png" alt="">
                             
                         </div>
                     </div>
@@ -780,13 +855,13 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                         <div class="uptproduct__setitem--exp">
                             <div class="uptproduct__setitem--name">
                                 <div class="uptproduct__setitem--name-txt">
-                                    <p class="uptproduct__setitem--name01">BALANCING TONER</p>
+                                    <h3 class="uptproduct__setitem--name01">BALANCING TONER</h3>
                                     <p class="uptproduct__setitem--name02">バランシングトナー<br>〈化粧⽔〉</p>
                                     <p class="uptproduct__setitem--name03 italic">155mL</p>
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
                                 
-                                    <img src="/assets/images/uptorigin/0914/point_set01.png" alt="">
+                                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set01.png" alt="">
                                 
                                 </div>
                             </div>
@@ -828,7 +903,7 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                     <div class="uptproduct__setitem--blc-s img blc02">
                         <div class="uptproduct__setitem--img">
                             
-                                <img src="/assets/images/uptorigin/0914/img_set02.png" alt="">
+                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set02.png" alt="">
                             
                         </div>
                     </div>
@@ -836,13 +911,13 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                         <div class="uptproduct__setitem--exp">
                             <div class="uptproduct__setitem--name">
                                 <div class="uptproduct__setitem--name-txt">
-                                    <p class="uptproduct__setitem--name01">CONDITIONING MILK</p>
+                                    <h3 class="uptproduct__setitem--name01">CONDITIONING MILK</h3>
                                     <p class="uptproduct__setitem--name02">コンディショニングミルク<br>〈乳液〉</p>
                                     <p class="uptproduct__setitem--name03 italic">120mL</p>
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
                                 
-                                    <img src="/assets/images/uptorigin/0914/point_set02.png" alt="">
+                                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set02.png" alt="">
                                 
                                 </div>
                             </div>
@@ -885,7 +960,7 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                     <div class="uptproduct__setitem--blc-s border img">
                         <div class="uptproduct__setitem--img">
                             
-                                <img src="/assets/images/uptorigin/0914/img_set03.png" alt="">
+                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set03.png" alt="">
                             
                         </div>
                     </div>
@@ -893,13 +968,13 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                         <div class="uptproduct__setitem--exp">
                             <div class="uptproduct__setitem--name">
                                 <div class="uptproduct__setitem--name-txt">
-                                    <p class="uptproduct__setitem--name01">MOISTURIZING CREAM</p>
+                                    <h3 class="uptproduct__setitem--name01">MOISTURIZING CREAM</h3>
                                     <p class="uptproduct__setitem--name02">モイスチャライジングクリーム<br>〈クリーム〉</p>
                                     <p class="uptproduct__setitem--name03 italic">40g</p>
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
                                 
-                                    <img src="/assets/images/uptorigin/0914/point_set03.png" alt="">
+                                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set03.png" alt="">
                                 
                                 </div>
                             </div>
@@ -911,7 +986,7 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                             </div>
 
                             <div class="uptproduct__setitem--absolute">
-                                <ul class="uptproduct__setitem--list" id="js-accordion02">
+                                <ul class="uptproduct__setitem--list" id="js-accordion03">
                                     <li>
                                         <p class="uptproduct__setitem--list-ttl">使用感<span></span></p>
                                         <div class="uptproduct__setitem--list-txt">
@@ -947,14 +1022,14 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
         <div class="uptproduct__point--con">
             <ul class="uptproduct__point--contxt"> 
                 <li class="uptproduct__point--contxt01">
-                    <p class="uptproduct__point--ttl">TEXTURE</p>
+                    <h3 class="uptproduct__point--ttl">TEXTURE</h3>
                     <p class="uptproduct__point--subttl">つけ心地の良さを最優先</p>
                     <span class="uptproduct__point--border"></span>
                     <p class="uptproduct__point--txt">スキンケア後のベタつき感を減らし、メイクの前でも寝る前でも邪魔をしない気持ちのいい手触りに仕上げました。
                         重さやベタつき感がなく、お肌に馴染みうるおいが続きます。</p>
                 </li>
                 <li class="uptproduct__point--contxt02">
-                    <p class="uptproduct__point--ttl">COMPONENT</p>
+                    <h3 class="uptproduct__point--ttl">COMPONENT</h3>
                     <p class="uptproduct__point--subttl">最適なバランスを探究</p>
                     <span class="uptproduct__point--border"></span>
                     <p class="uptproduct__point--txt">毎日のスキンケアを手軽に、年代問わず使ってほしいからシンプルな処方にこだわりました。
@@ -963,7 +1038,7 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                         ※1 アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３　※2 パルミチン酸アスコルビルリン酸３Ｎａ　※3 セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ</span></p>
                 </li>
                 <li class="uptproduct__point--contxt03">
-                    <p class="uptproduct__point--ttl">FRAGRANCE</p>
+                    <h3 class="uptproduct__point--ttl">FRAGRANCE</h3>
                     <p class="uptproduct__point--subttl">甘すぎない爽やかな香りを</p>
                     <span class="uptproduct__point--border"></span>
                     <p class="uptproduct__point--txt">ゼラニウム<span>※1</span> &イランイラン<span>※2</span> の天然精油を配合し、つけた瞬間心地よい香りで包み込みます。
@@ -979,13 +1054,35 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
     
 
+        {% comment %} review {% endcomment %}
+        {% if base_info.use_review? %}
+        {% section 'products_show_review' %}
+        {% endif %}
+        {% comment %} 関連商品 {% endcomment %}
+        {% if base_info.use_related_products_on_detail? and p.active_related_products.size != 0 %}
+        {% section 'products_show_recommend' %}
+        {% endif %}
+    
+
 </main>
 <!-- product01 -->
 
 
+    <link rel="stylesheet" href="{{ theme_file_root_path }}/assets/product.css" type="text/css">
+    
+    {% content_for meta_description %}
+    {% endcontent_for %}
+    
+    {% content_for meta_keywords %}
+    {% endcontent_for %}
+    
+    {% content_for title %}
+    {% endcontent_for %}
 
 
-    <script src="/assets/uptproduct.js"></script>
+
+
+    <script src="{{ theme_file_root_path }}/assets/uptproduct.js"></script>
 
 
 
@@ -1029,23 +1126,27 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
         </div>
     </div> 
 </div>
+
 <footer class="uptfooter" data-section-id='footer' data-section-type='footer-section'>
 
     <ul class="uptfooter__links">
         <li>
-            <a href="/faq/">FAQ</a>
+            <a href="/shop/faq/">FAQ</a>
         </li>
         <li>
-            <a href="/guide/">ご利用ガイド</a>
+            <a href="/shop/guide/">ご利用ガイド</a>
         </li>
         <li>
-            <a href="/law_info/">特定商取引に基づく表記</a>
+            <a href="https://mano-mano.co.jp/" target="_blank">会社概要</a>
         </li>
         <li>
-            <a href="/privacy/">プライバシーポリシー</a>
+            <a href="/shop/law_info/">特定商取引に基づく表記</a>
         </li>
         <li>
-            <a href="/customer_term/">利用規約</a>
+            <a href="/shop/privacy/">プライバシーポリシー</a>
+        </li>
+        <li>
+            <a href="/shop/customer_term/">利用規約</a>
         </li>
 
     </ul>
@@ -1057,10 +1158,10 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 <!-- Footer -->
 
     <div id="cursor">
-    <img src="/assets/images/uptorigin/0914/cursor.svg" alt="">
-    <script src="/assets/uptfooter.js"></script>
+        <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/cursor.svg" alt="">
+    </div>
+    <script src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/uptfooter.js"></script>
 
-</div>
 
 
 

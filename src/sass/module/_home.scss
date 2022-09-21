@@ -853,3 +853,30 @@
         opacity: 0;
     }
 }
+
+
+
+// 0922---------------
+.upthome__set--blc-btm a{
+    line-height: 1.4;
+    display: block;
+    padding: 20px 0;
+    pre{
+        @include var.fz(14);
+        font-weight: 400;
+    
+    }  
+}
+
+h1.upthome__fv--logo{
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+h2.upthome__illust--ttl{
+    text-align: center;
+    color: var.$bg_dark;
+    @include var.fz(11);
+    line-height: 1.6;
+}        
