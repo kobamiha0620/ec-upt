@@ -1,0 +1,54 @@
+ 
+
+<section class="uptproduct__fv">
+    <!-- ここから -->
+    <div class="uptblc__buyblc">
+        <div class="uptblc__buyblc--img">
+            <img src="/assets/images/uptorigin/0914/product_setimage.jpg" alt="" class="pcImg">
+            <img src="/assets/images/uptorigin/0914/product_setimage-sp.png" alt="" class="spImg">
+        </div>
+
+        <div class="uptblc__buyblc__spborder"></div>
+
+        <div class="uptblc__buyblc--s">
+            <div class="uptblc__buyblc--rblc">
+                <div class="uptblc__buyblc--contents">
+                    <div>
+                    <h2 class="upt__name uptblc__buyblc--txt00">Upt<br>SKINCARE SET</h2>
+                    <h3 class="uptblc__buyblc--txt01">ウプト スキンケアセット</h3>
+                    <p class="uptblc__buyblc--txt02">肌に密度の⾼いうるおいを与えるスマートスキンケアセット。3つのアイテムをライン使いしていただくことで保湿⼒とテクスチャーの良さをより実感いただけます。</p>
+
+                    <p class="upt__price uptblc__buyblc--txt03">¥7,590 (tax in)</p>
+                
+
+                    <div class="uptblc__buyblc--btn">
+                        <!-- 商品選択フォーム -->
+                        <form action="/shop/cart/add" method="post">
+                            <div style="display: none">
+                            <!-- 規格選択 -->
+                            <input id="variant-id" type="hidden" name="variant_id" value="{{ product.master.id }}">
+                            <div id="option_types"></div>
+
+                            <!-- 数量選択 -->
+                            <label>数量</label>
+                            <input id="text-out-of-stock" value="在庫切れ" disabled style="display:none;">
+                            <select id="quantity" name="quantity" style="display:none;"></select>
+
+                            <!-- 再入荷お知らせ -->
+                            <a id="btn-stock-waiting-list" href="javascript:void(0);" style='display:none;'>再入荷お知らせ</a>
+                            </div>
+                            <!-- /display: none -->
+                            
+                            <!-- カート追加 -->
+                            <button id="btn-add"><p class="txt">購入はこちら</p><span></span></button>
+
+                        </form>
+
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ここまで -->
+</section>

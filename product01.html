@@ -140,66 +140,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="uptheader bg__header">
 
         
-
-
-        {% if production != true and customize_preview_mode %}
-        <div class="customize_notice">
-            <p>※プレビュー表示が崩れた場合は、一度保存してください。</p>
-        </div>
-        {% endif %}
-
-        {% comment %} To use the inversion result in an if condition {% endcomment %}
-        {% if shop_root %}
-        {% assign top = false %}
-        {% else %}
-        {% assign top = true %}
-        {% endif %}
-
-        {% comment %} annoucement bar {% endcomment %}
-        {% if section.settings.message == true or section.settings.message == 'true' %}
-        {% comment %} Converted to boolean for use in if conditions {% endcomment %}
-        {% if section.settings.top_only_message == false or section.settings.top_only_message == 'false' %}
-        {% assign top_only_message_flg = false %}
-        {% else %}
-        {% assign top_only_message_flg = true %}
-        {% endif %}
-        {% unless top and top_only_message_flg %} {% comment %} unless a && !b {% endcomment %}
         <div class="c-announce_bar uptheader__anounce">
-            <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use
-            escape{% endcomment %}
+            <div class="c-announce_bar__text">NEWS 22.09.14 Upt start!!</div>
             <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
         </div>
-
-        {% endunless %}
-        {% endif %}
-        {% comment %} end of announcement bar {% endcomment %}
-
-        {% if section.settings.banner == true or section.settings.banner == 'true' %}
-        {% if smartphone %}
-        {% assign header_banner = section.settings.banner_sp %}
-        {% else %}
-        {% assign header_banner = section.settings.banner_pc %}
-        {% endif %}
-        {% if header_banner.size > 0 %}
-        {% comment %} Converted to boolean for use in if conditions {% endcomment %}
-        {% if section.settings.top_only_banner == false or section.settings.top_only_banner == 'false' %}
-        {% assign top_only_banner_flg = false %}
-        {% else %}
-        {% assign top_only_banner_flg = true %}
-        {% endif %}
-
-        {% unless top and top_only_banner_flg %} {% comment %} unless a && !b {% endcomment %}
-        <div class="p-banner p-banner--header">
-            {% assign image_url = header_banner | generate_image_url: theme_file_root_path %}
-            <p class="p-banner__image" style="background-image: url('{{ image_url }}')"></p>
-            {% if section.settings.banner_link.size > 0 %}
-            <a class="p-banner__link" href="{{section.settings.banner_link}}"></a>
-            {% endif %}
-        </div>
-        {% endunless %}
-        {% endif %}
-        {% endif %}
-
         
 
 
@@ -218,13 +162,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             </a>
                             <a class="l-header__inner__block__item" href="/shop/cart">
                                 <i class="u-icon--cart"></i>
-                                
-                                {% comment %} {% if order.completed? %}
-                                <span class="count u-color__bg--alert u-color__text--base">0</span>
-                                {% else %}
-                                <span
-                                    class="count u-color__bg--alert u-color__text--base">{% if current_order %}{{ current_order.quantity }}{% else %}{{ order.quantity }}{% endif %}</span>
-                                {% endif %} {% endcomment %}
                                 
                             </a>
                         </div>
@@ -245,8 +182,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         </div>
 
-        
-        {% comment %} global nav {% endcomment %}
         
         <div class="c-gmenu uptgmenu">
             <div class="c-gmenu__overlay js-close-menu"></div>
@@ -369,13 +304,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div>
                             <ul class="uptgmenu__upperlinks">
                                 <li>
-                                    <a href="/shop/products/upt_skincareset">PRODUCTS</a>
+                                    <a href="/shop/products">PRODUCTS</a>
                                 </li>
                                 <li>
-                                    <a href="/#ABOUT">ABOUT</a>
+                                    <a href="/shop#ABOUT">ABOUT</a>
                                 </li>
                                 <li>
-                                    <a href="/#PRODUCER">PRODUCER</a>
+                                    <a href="/shop#PRODUCER">PRODUCER</a>
                                 </li>
                                 <li>
                                     <a href="/shop/cart">CART</a>
@@ -406,7 +341,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </div>
                         </section>
                         <section class="uptgmenu__btm">
-                            <p class="uptgmenu__btm--logo"><a href="/">Upt</a></p>
+                            <h1 class="uptgmenu__btm--logo"><a href="/">Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト。</a></h1>
                             <ul class="uptgmenu__btm--links">
 
                                 <li>
@@ -432,9 +367,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </nav>
         </div>
-        
-
-        {% comment %} search menu {% endcomment %}
         
 
         <div style="display: none;">
@@ -592,248 +524,592 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 </script>
       <script src="/assets/shop/products-541dbf0acdea75307e1d693cbebd23c17efd835f54456c0517a53db5253a0297.js"></script>
 
+
+
       
+      
+
+
+
+
+
 
 {{ 'shop/products' | javascript_include_tag }}
 {% assign p = product %}
 
 
-<!-- product01 -->
+
 <main class="l-container js-main-container uptprodcut" role="main" id="product-show-view">
+
+<!-- セット商品 -->
+    
+    {% if product.id == 5 %}
+    
+
+
+    
+        <section class="uptproduct__fv">
+            <!-- ここから -->
+            <div class="uptblc__buyblc">
+                <div class="uptblc__buyblc--img">
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/product_setimage.jpg" alt="" class="pcImg">
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/product_setimage-sp.png" alt="" class="spImg">
+                </div>
+        
+                <div class="uptblc__buyblc__spborder"></div>
+        
+                <div class="uptblc__buyblc--s">
+                    <div class="uptblc__buyblc--rblc">
+                        <div class="uptblc__buyblc--contents">
+                            <div>
+                                
+                            <h2 class="upt__name uptblc__buyblc--txt00">Upt<br>SKINCARE SET</h2>
+                            <h2 class="uptblc__buyblc--txt01">ウプト スキンケアセット</h2>
+                            <p class="uptblc__buyblc--txt02">肌に密度の⾼いうるおいを与えるスマートスキンケアセット。3つのアイテムをライン使いしていただくことで保湿⼒とテクスチャーの良さをより実感いただけます。</p>
+        
+                            <p class="upt__price uptblc__buyblc--txt03">¥7,590 (tax in)</p>
+                        
+        
+                            <div class="uptblc__buyblc--btn">
+                                <!-- 商品選択フォーム -->
+                                <form action="/shop/cart/add" method="post">
+                                    <div style="display: none">
+                                    <!-- 規格選択 -->
+                                    <input id="variant-id" type="hidden" name="variant_id" value="{{ product.master.id }}">
+                                    <div id="option_types"></div>
+        
+                                    <!-- 数量選択 -->
+                                    <label>数量</label>
+                                    <input id="text-out-of-stock" value="在庫切れ" disabled style="display:none;">
+                                    <select id="quantity" name="quantity" style="display:none;"></select>
+        
+                                    <!-- 再入荷お知らせ -->
+                                    <a id="btn-stock-waiting-list" href="javascript:void(0);" style='display:none;'>再入荷お知らせ</a>
+                                    </div>
+                                    <!-- /display: none -->
+                                    
+                                    <!-- カート追加 -->
+                                    <button id="btn-add"><p class="txt">購入はこちら</p><span></span></button>
+        
+                                </form>
+        
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ここまで -->
+        </section>
+    
+
+
+    {% endif %}
+
+<!-- /セット商品 -->
+
+
+<!-- トナー化粧品 -->
+
+    {% if product.id == 2 %}
+    
+
+
+    
+
 
     <section class="uptproduct__fv">
         <!-- ここから -->
         <div class="uptblc__buyblc">
             <div class="uptblc__buyblc--img">
-                
-                    {% if product.id == 5 %}
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/product_setimage.jpg" alt="" class="pcImg">
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/product_setimage-sp.png" alt="" class="spImg">
-                    {% endif %}
-                
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_toner.jpg" alt="" class="pcImg">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_toner-sp.jpg" alt="" class="spImg">
             </div>
+
             <div class="uptblc__buyblc__spborder"></div>
+
             <div class="uptblc__buyblc--s">
                 <div class="uptblc__buyblc--rblc">
                     <div class="uptblc__buyblc--contents">
-                        <div>
-                            
-                            {% if product.id == 5 %}
-                            <h2 class="upt__name uptblc__buyblc--txt00">Upt<br>SKINCARE SET</h2>
-                            <h3 class="uptblc__buyblc--txt01">ウプト スキンケアセット</h3>
-                            <p class="uptblc__buyblc--txt02">肌に密度の⾼いうるおいを与えるスマートスキンケアセット。3つのアイテムをライン使いしていただくことで保湿⼒とテクスチャーの良さをより実感いただけます。</p>
-
-                            <p class="upt__price uptblc__buyblc--txt03">¥7,590 (tax in)</p>
-
-                            {% endif %}
+                        <div class="uptblc__buyblc--single">
+                            <div class="uptblc__buyblc--singleblc">
+                                <h2 class="upt__name uptblc__buyblc--single-ttl">BALANCING<br>TONER</h2>
+                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set01.png" alt="">
+                            </div>
+                            <h2 class="uptblc__buyblc--single-jp">ウプト バランシングトナー<br>〈化粧⽔〉</h2>
+                            <p class="uptblc__buyblc--single-it">155mL</p>
+                            <p class="uptblc__buyblc--single-txt">適量を手に取り、両手でお顔全体を包み込むようにハンドプレスして優しくなじませて。これは今日の疲れを忘れるリラックスタイムだから。お肌が潤いで満ちるまで好きなだけ重ね付けして。</p>
+                            <p class="upt__price uptblc__buyblc--txt03">¥2,420 (tax in)</p>
                         
 
-                        <div style="display: none;">
-                            <div id="product-show-view">
+                            <div class="uptblc__buyblc--btn">
+                                <!-- 商品選択フォーム -->
+                                <form action="/shop/cart/add" method="post">
+                                    <div style="display: none">
+                                    <!-- 規格選択 -->
+                                    <input id="variant-id" type="hidden" name="variant_id" value="{{ product.master.id }}">
+                                    <div id="option_types"></div>
 
-                                <!-- 商品画像(任意) -->
-                                {% if product.thumbnail.url %}
-                                    {% assign src = product.thumbnail.url %}
-                                {% else %}
-                                    {% assign src = 'missing' | image_url %}
-                                {% endif %}
-                                <img src="{{ src }}" id="main-img">
-                                <div id="sub-images-view"></div>
-                                
-                                <!-- 商品名 -->
-                                {{ product.name }}
-                                
-                                <!-- 販売価格 -->
-                                <span id="sales-price">{{ product.first_price | number_to_currency: format: '%n %u' }}</span>
-                                <!-- 販売価格(税込) -->
-                                <span id="sales-price-include-tax">{{ product.first_price_include_tax | number_to_currency: format: '%n %u' }}</span>
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                
-                                    <!-- レビュー一覧 -->
-                                    {% assign is_readable = product.id | check_review_reading_rule %}
-                                    {% if is_readable %}
-                                
-                                    {% if reviews.size == 0 %}
-                                        この商品のレビューはありません。
-                                    {% else %}
-                                        <!-- レビュー件数(任意) -->
-                                        {{ reviews.size }} 件のレビュー
-                                
-                                        <!-- レビュー平均点(任意) -->
-                                        {{ product.average_star }}
-                                
-                                        {% for review in reviews %}
-                                
-                                        <!-- レビュータイトル -->
-                                        {{ review.title }}
-                                
-                                        <!-- レビュー投稿日時(任意) -->
-                                        {{ review.created_at | date: '%Y/%m/%d %H:%M:%S' }}
-                                
-                                        <!-- 投稿者 -->
-                                        {{ review.name }}
-                                
-                                        <!-- 評価 -->
-                                        {{ review.display_star }}
-                                
-                                        <!-- レビューコメント -->
-                                        {{ review.comment | simple_format }}
-                                
-                                        {% endfor %}
-                                    {% endif %}
-                                
-                                
-                                    <!-- レビュー投稿フォーム -->
-                                    {% assign is_writable = product.id | check_review_writing_rule %}
-                                    {% if is_writable %}
-                                
-                                    <!-- フラッシュメッセージ -->
-                                    {{ 'notice' | flash: 'alert alert-success', 'text' }}
-                                    {{ 'alert' | flash: 'alert alert-danger', 'text' }}
-                                    {{ 'error' | flash: 'alert alert-danger', 'text' }}
-                                
-                                    <form action="/shop/products/{{ product.id }}/review" method="post">
-                                
-                                        <!-- 投稿者名 -->
-                                        <label for="review_name">投稿者名</label>
-                                        <input class="validate[required]" type="text" name="review[name]" id="review_name">
-                                
-                                        <!-- メールアドレス -->
-                                        <label for="review_email">メールアドレス</label>
-                                        <input class="validate[required,custom[email]]" type="text" {% if customer_signed_in %}disabled{% endif %} name="email" value="{{ current_customer.email }}" id="review_email">
-                                
-                                        <!-- 評価 -->
-                                        <label for="review_star">おすすめレベル</label>
-                                        <select class="validate[required,custom[number]]" name="review[star]" id="review_star">
-                                        <option value="5">★★★★★</option>
-                                        <option value="4">★★★★</option>
-                                        <option value="3">★★★</option>
-                                        <option value="2">★★</option>
-                                        <option value="1">★</option>
-                                        </select>
-                                
-                                        <!-- タイトル -->
-                                        <label for="review_title">タイトル</label>
-                                        <input class="validate[required,maxSize[20]]" type="text" name="review[title]" id="review_title">
-                                
-                                        <!-- コメント -->
-                                        <label for="review_comment">コメント</label>
-                                        <textarea class="validate[required,maxSize[400]]" name="review[comment]" id="review_comment"></textarea>
-                                
-                                        <!-- 投稿ボタン -->
-                                        <button name="button" type="submit">投稿する</button>
-                                
-                                    </form>
-                                    {% endif %}
-                                    {% endif %}
+                                    <!-- 数量選択 -->
+                                    <label>数量</label>
+                                    <input id="text-out-of-stock" value="在庫切れ" disabled style="display:none;">
+                                    <select id="quantity" name="quantity" style="display:none;"></select>
 
-                                
-                                
-                                <!-- 関連商品 -->
-                                {% if base_info.use_related_products_on_detail? and product.active_related_products.size != 0 %}
-                                
-                                    <!-- 関連商品一覧 -->
-                                    {% for related_product in product.active_related_products %}
-                                
-                                    <!-- 関連商品画像(任意) -->
-                                    <a href="/shop/products/{{ related_product.master.sku }}">
-                                        {% if related_product.thumbnail.url %}
-                                        {% assign src = related_product.thumbnail.url %}
-                                        {% else %}
-                                        {% assign src = 'missing' | image_url %}
-                                        {% endif %}
-                                        <img src="{{ src }}">
-                                    </a>
-                                
-                                    <!-- 関連商品名 -->
-                                    <a href="/shop/products/{{ related_product.master.sku }}">{{ related_product.name | truncate: 35 }}</a>
-                                
-                                    <!-- 販売価格 -->
-                                    {{ related_product.master.list_price | number_to_currency: format: '%n %u' }}
-                                
+                                    <!-- 再入荷お知らせ -->
+                                    <a id="btn-stock-waiting-list" href="javascript:void(0);" style='display:none;'>再入荷お知らせ</a>
+                                    </div>
+                                    <!-- /display: none -->
+                                    
                                     <!-- カート追加 -->
-                                    <form action="/shop/cart/add" method="post">
-                                        <input name="variant_id" type="hidden" value="{{ related_product.related_product_variants_id }}">
-                                        <button>カートに追加する</button>
-                                    </form>
-                                    {% endfor %}
-                                {% endif %}
-                                
-                                </div>
-                                
-                                <!-- お気に入り登録 -->
-                                {% assign is_favorite = product.id | check_current_customer_favorite %}
-                                {% if is_favorite %}
-                                    {% if customer_signed_in %}
-                                    <form action="/shop/products/{{ product.master.sku }}/unfavorite?customer_return_to=%2Fshop%2Fproducts%2F{{ product.master.sku }}" method="post">
-                                        <button data-disable-with="解除中..." type="submit">
-                                        お気に入りに追加済み
-                                        </button>
-                                    </form>
-                                    {% endif %}
-                                {% else %}
-                                    <form action="/shop/products/{{ product.master.sku }}/favorite?customer_return_to=%2Fshop%2Fproducts%2F{{ product.master.sku }}" method="post">
-                                    <button data-disable-with="登録中..." type="submit">
-                                        お気に入りに追加
-                                    </button>
-                                    </form>
-                                {% endif %}
+                                    <button id="btn-add"><p class="txt">購入はこちら</p><span></span></button>
+
+                                </form>
+
+                            </div>
                         </div>
-                    </div>
-                    </div>
-                    <div class="uptblc__buyblc--btn">
-
-                            <!-- 商品選択フォーム -->
-                            <form action="/shop/cart/add" method="post">
-                                <div style="display: none">
-                                <!-- 規格選択 -->
-                                <input id="variant-id" type="hidden" name="variant_id" value="{{ product.master.id }}">
-                                <div id="option_types"></div>
-
-                                <!-- 数量選択 -->
-                                <label>数量</label>
-                                <input id="text-out-of-stock" value="在庫切れ" disabled style="display:none;">
-                                <select id="quantity" name="quantity" style="display:none;"></select>
-
-                                <!-- 再入荷お知らせ -->
-                                <a id="btn-stock-waiting-list" href="javascript:void(0);" style='display:none;'>再入荷お知らせ</a>
-                                </div>
-                                <!-- カート追加 -->
-                                
-                                    <button id="btn-add" style='display:none;'><p class="txt">ADD TO CART <br><span class="stxt">購入はこちらから</span></p><span></span></button>
-                                
-
-                            </form>
-
                     </div>
                 </div>
             </div>
         </div>
         <!-- ここまで -->
-
     </section>
-    <section class="uptline"></section>
+
+
+    <section class="uptproduct__ex">
+
+        <div class="uptproduct__extop">
+            <div class="uptproduct__extop--img">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_toner-ex.jpg" alt="" class="pcImg">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_toner-ex-sp.jpg" alt="" class="spImg">
+            </div>
+            <div class="uptproduct__ex--line">
+                <div class="uptproduct__extop--inner">
+                    <div>
+                        <p class="uptproduct__ex--ttl">水ってやっぱり気持ちいい</p>
+                        <p class="uptproduct__ex--txt">真夏の炎天下、汗だくの帰宅。カラカラの身体で大急ぎでお水を飲んだあのころの記憶……。スキンケアの基礎となる化粧水だから、パシャパシャと水浴びをするような、乾いた喉を潤すような、そんな感覚にしたかった。
+                            だからできるだけとろみをなくしたサラッとした肌触りで、しっかり潤わせてくれることが大事。何度重ね付けしても、気持ちいい。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uptproduct__exbtm">
+            <div class="uptproduct__ex--line02">
+                <div class="uptproduct__exbtm--no">
+                    <p class="uptproduct__exbtm--subttl">5つのフリー処方</p>
+                    <div class="uptproduct__exbtm--noimg">
+                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_toner.svg" alt="" class="pcImg">
+                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_toner-sp.svg" alt="" class="spImg">
+                    </div>
+                </div>
+            </div>
+            <div class="uptproduct__exbtm--seibun">
+                <p class="uptproduct__ex--ttl2">成分</p>
+                <p class="uptproduct__ex--txt2">温泉水、水、ＢＧ、グリセリン、ジグリセリン、ペンチレングリコール、プロパンジオール、セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ、サッカロミセス／コメ発酵液、アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３、パルミチン酸アスコルビルリン酸３Ｎａ、ナイアシンアミド、加水分解ヒアルロン酸アルキル（Ｃ１２－１３）グリセリル、ヒアルロン酸ジメチルシラノール、ヒアルロン酸Ｎａ、水溶性プロテオグリカン、ＰＥＧ－８、ベタイン、ＰＣＡ－Ｎａ、デキストラン、ポリクオタニウム－５１、フィトステロールズ、ＰＥＧ－２０ソルビタンココエート、水添レシチン、ＰＥＧ－６０水添ヒマシ油、クエン酸Ｎａ、クエン酸、カプリルヒドロキサム酸、ペンテト酸５Ｎａ、フェノキシエタノール、イランイラン花油、ニオイテンジクアオイ油</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    {% endif %}
+
+<!-- /トナー化粧品 -->
+
+
+<!-- ミルク乳液 -->
+
+    {% if product.id == 3 %}
+    
+
+
+    
+
+
+    <section class="uptproduct__fv">
+        <!-- ここから -->
+        <div class="uptblc__buyblc">
+            <div class="uptblc__buyblc--img">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_milk.jpg" alt="" class="pcImg">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_milk-sp.jpg" alt="" class="spImg">
+            </div>
+
+            <div class="uptblc__buyblc__spborder"></div>
+
+            <div class="uptblc__buyblc--s">
+                <div class="uptblc__buyblc--rblc">
+                    <div class="uptblc__buyblc--contents">
+                        <div class="uptblc__buyblc--single">
+                            <div class="uptblc__buyblc--singleblc">
+                                <h2 class="upt__name uptblc__buyblc--single-ttl">CONDITIONING<br>MILK</h2>
+                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set02.png" alt="">
+                            </div>
+                            <h2 class="uptblc__buyblc--single-jp">ウプト コンディショニングミルク<br>〈乳液〉</h2>
+                            <p class="uptblc__buyblc--single-it">120mL</p>
+                            <p class="uptblc__buyblc--single-txt">適量を手に取り、お顔全体に優しくなじませて。
+                                乾燥やハリ不足を感じる部分には重ね付けを。首やデコルテまでしっかり保湿すれば、朝まで心地良い潤いを感じられるはず。</p>
+                            <p class="upt__price uptblc__buyblc--txt03">¥2,420 (tax in)</p>
+                        
+
+                            <div class="uptblc__buyblc--btn">
+                                <!-- 商品選択フォーム -->
+                                <form action="/shop/cart/add" method="post">
+                                    <div style="display: none">
+                                    <!-- 規格選択 -->
+                                    <input id="variant-id" type="hidden" name="variant_id" value="{{ product.master.id }}">
+                                    <div id="option_types"></div>
+
+                                    <!-- 数量選択 -->
+                                    <label>数量</label>
+                                    <input id="text-out-of-stock" value="在庫切れ" disabled style="display:none;">
+                                    <select id="quantity" name="quantity" style="display:none;"></select>
+
+                                    <!-- 再入荷お知らせ -->
+                                    <a id="btn-stock-waiting-list" href="javascript:void(0);" style='display:none;'>再入荷お知らせ</a>
+                                    </div>
+                                    <!-- /display: none -->
+                                    
+                                    <!-- カート追加 -->
+                                    <button id="btn-add"><p class="txt">購入はこちら</p><span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ここまで -->
+    </section>
+
+
+    <section class="uptproduct__ex">
+
+        <div class="uptproduct__extop">
+            <div class="uptproduct__extop--img">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_milk-ex.jpg" alt="" class="pcImg">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_milk-ex-sp.jpg" alt="" class="spImg">
+            </div>
+            <div class="uptproduct__ex--line">
+                <div class="uptproduct__extop--inner">
+                    <div>
+                        <p class="uptproduct__ex--ttl">さらさらのミルクが欲しかった</p>
+                        <p class="uptproduct__ex--txt">どうしても乳液が苦手だった。
+                            肌のうるおいを保つために必要なのはわかるけど、使い心地と仕上がりを両立した商品が難しいのではないかという思い。<br>
+                            だから、ミルク感はちゃんとキープしながら、出来るだけさらさらと、しっかり肌に馴染むものを目指して何度も調整した理想のさらさら感に。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uptproduct__exbtm">
+            <div class="uptproduct__ex--line02">
+                <div class="uptproduct__exbtm--no">
+                    <p class="uptproduct__exbtm--subttl">5つのフリー処方</p>
+                    <div class="uptproduct__exbtm--noimg">
+                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_toner.svg" alt="" class="pcImg">
+                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_toner-sp.svg" alt="" class="spImg">
+                    </div>
+                </div>
+            </div>
+            <div class="uptproduct__exbtm--seibun">
+                <p class="uptproduct__ex--ttl2">成分</p>
+                <p class="uptproduct__ex--txt2">水、温泉水、ＢＧ、グリセリン、ベタイン、エチルヘキシルグリセリン、カプリル酸グリセリル、セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ、アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３、スクワラン、リン酸アスコルビルＭｇ、パルミチン酸アスコルビルリン酸３Ｎａ、３－Ｏ－エチルアスコルビン酸、ナイアシンアミド、デキストラン、ラウロイルグルタミン酸ジ（フィトステリル／オクチルドデシル）、フィトステロールズ、ミリスチン酸オクチルドデシル、ジフェニルシロキシフェニルトリメチコン、ジメチコン、カルボマー、キサンタンガム、ＰＥＧ－２０ソルビタンココエート、水添レシチン、ＰＥＧ－６０水添ヒマシ油、水酸化Ｋ、フェノキシエタノール、イランイラン花油、ニオイテンジクアオイ油</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    {% endif %}
+
+<!-- /ミルク乳液 -->
+
+
+
+<!-- クリーム -->
+
+    {% if product.id == 4 %}
+    
+
+
+    
+
+
+    <section class="uptproduct__fv">
+        <!-- ここから -->
+        <div class="uptblc__buyblc">
+            <div class="uptblc__buyblc--img">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_cream.jpg" alt="" class="pcImg">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_cream-sp.jpg" alt="" class="spImg">
+            </div>
+
+            <div class="uptblc__buyblc__spborder"></div>
+
+            <div class="uptblc__buyblc--s">
+                <div class="uptblc__buyblc--rblc">
+                    <div class="uptblc__buyblc--contents">
+                        <div class="uptblc__buyblc--single">
+                            <div class="uptblc__buyblc--singleblc">
+                                <h2 class="upt__name uptblc__buyblc--single-ttl">MOISTURIZING<br>CREAM</h2>
+                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set03.png" alt="">
+                            </div>
+                            <h2 class="uptblc__buyblc--single-jp">ウプト モイスチャライジングクリーム<br>〈クリーム〉</h2>
+                            <p class="uptblc__buyblc--single-it">40g</p>
+                            <p class="uptblc__buyblc--single-txt">手のひらで温めてからお顔全体になじませて。
+                                お顔全体に広げたあとに、ゼラニウム＆イランイランの香りを感じながら深呼吸をすると“わたし、今日もがんばった”って思える。</p>
+                            <p class="upt__price uptblc__buyblc--txt03">¥2,750 (tax in)</p>
+                        
+
+                            <div class="uptblc__buyblc--btn">
+                                <!-- 商品選択フォーム -->
+                                <form action="/shop/cart/add" method="post">
+                                    <div style="display: none">
+                                    <!-- 規格選択 -->
+                                    <input id="variant-id" type="hidden" name="variant_id" value="{{ product.master.id }}">
+                                    <div id="option_types"></div>
+
+                                    <!-- 数量選択 -->
+                                    <label>数量</label>
+                                    <input id="text-out-of-stock" value="在庫切れ" disabled style="display:none;">
+                                    <select id="quantity" name="quantity" style="display:none;"></select>
+
+                                    <!-- 再入荷お知らせ -->
+                                    <a id="btn-stock-waiting-list" href="javascript:void(0);" style='display:none;'>再入荷お知らせ</a>
+                                    </div>
+                                    <!-- /display: none -->
+                                    
+                                    <!-- カート追加 -->
+                                    <button id="btn-add"><p class="txt">購入はこちら</p><span></span></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ここまで -->
+    </section>
+
+
+    <section class="uptproduct__ex">
+
+        <div class="uptproduct__extop">
+            <div class="uptproduct__extop--img">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_cream-ex.jpg" alt="" class="pcImg">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_cream-ex-sp.jpg" alt="" class="spImg">
+            </div>
+            <div class="uptproduct__ex--line">
+                <div class="uptproduct__extop--inner">
+                    <div>
+                        <p class="uptproduct__ex--ttl">なるだけ手間をなくせるように</p>
+                        <p class="uptproduct__ex--txt">子供のこと、仕事のこと、みんな忙しい日々をおくっているから、できるだけスキンケアの手数を減らしたくて。<br>
+                            3ステップでまとめるのが目標だったから、クリームでいかに潤いを留めるかが重要だった。<br>
+                            こってりしすぎず、ほど良く滑らかなテクスチャーは“1日のご褒美”のような心地よさ。<br>
+                            水分をしっかり留めて保ってくれる。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uptproduct__exbtm">
+            <div class="uptproduct__ex--line02">
+                <div class="uptproduct__exbtm--no">
+                    <p class="uptproduct__exbtm--subttl">3つのフリー処方</p>
+                    <div class="uptproduct__exbtm--noimg">
+                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_cream.svg" alt="" class="pcImg">
+                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_cream-sp.svg" alt="" class="spImg">
+                    </div>
+                </div>
+            </div>
+            <div class="uptproduct__exbtm--seibun">
+                <p class="uptproduct__ex--ttl2">成分</p>
+                <p class="uptproduct__ex--txt2">温泉水、ミネラルオイル、スクワラン、ＢＧ、ベヘニルアルコール、ジメチコン、ＰＥＧ－１５０、マルチトール、セテアリルアルコール、ペンチレングリコール、ステアリン酸グリセリル、ステアロイルグルタミン酸Ｎａ、エチルヘキシルグリセリン、カプリル酸グリセリル、セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ、アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３、パルミチン酸アスコルビルリン酸３Ｎａ、ナイアシンアミド、エリンギウムマリチムムカルス培養液、加水分解コラーゲン、水溶性コラーゲン、水溶性コラーゲンクロスポリマー、デキストラン、マカデミアナッツ脂肪酸フィトステリル、フィトステロールズ、水、水添レシチン、グリセリン、ＥＤＴＡ－２Ｎａ、フェノキシエタノール、イランイラン花油、ニオイテンジクアオイ油</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    {% endif %}
+
+<!-- /クリーム -->
+
+
+
+<!-- 共通block displaynone-->
+<div style="display: none;">
+    <div id="product-show-view">
+
+        <!-- 商品画像(任意) -->
+        {% if product.thumbnail.url %}
+            {% assign src = product.thumbnail.url %}
+        {% else %}
+            {% assign src = 'missing' | image_url %}
+        {% endif %}
+        <img src="{{ src }}" id="main-img">
+        <div id="sub-images-view"></div>
+        
+        <!-- 商品名 -->
+        {{ product.name }}
+        
+        <!-- 販売価格 -->
+        <span id="sales-price">{{ product.first_price | number_to_currency: format: '%n %u' }}</span>
+        <!-- 販売価格(税込) -->
+        <span id="sales-price-include-tax">{{ product.first_price_include_tax | number_to_currency: format: '%n %u' }}</span>
+        
+        
+
+        
+            <!-- レビュー一覧 -->
+            {% assign is_readable = product.id | check_review_reading_rule %}
+            {% if is_readable %}
+        
+            {% if reviews.size == 0 %}
+                この商品のレビューはありません。
+            {% else %}
+                <!-- レビュー件数(任意) -->
+                {{ reviews.size }} 件のレビュー
+        
+                <!-- レビュー平均点(任意) -->
+                {{ product.average_star }}
+        
+                {% for review in reviews %}
+        
+                <!-- レビュータイトル -->
+                {{ review.title }}
+        
+                <!-- レビュー投稿日時(任意) -->
+                {{ review.created_at | date: '%Y/%m/%d %H:%M:%S' }}
+        
+                <!-- 投稿者 -->
+                {{ review.name }}
+        
+                <!-- 評価 -->
+                {{ review.display_star }}
+        
+                <!-- レビューコメント -->
+                {{ review.comment | simple_format }}
+        
+                {% endfor %}
+            {% endif %}
+        
+        
+            <!-- レビュー投稿フォーム -->
+            {% assign is_writable = product.id | check_review_writing_rule %}
+            {% if is_writable %}
+        
+            <!-- フラッシュメッセージ -->
+            {{ 'notice' | flash: 'alert alert-success', 'text' }}
+            {{ 'alert' | flash: 'alert alert-danger', 'text' }}
+            {{ 'error' | flash: 'alert alert-danger', 'text' }}
+        
+            <form action="/shop/products/{{ product.id }}/review" method="post">
+        
+                <!-- 投稿者名 -->
+                <label for="review_name">投稿者名</label>
+                <input class="validate[required]" type="text" name="review[name]" id="review_name">
+        
+                <!-- メールアドレス -->
+                <label for="review_email">メールアドレス</label>
+                <input class="validate[required,custom[email]]" type="text" {% if customer_signed_in %}disabled{% endif %} name="email" value="{{ current_customer.email }}" id="review_email">
+        
+                <!-- 評価 -->
+                <label for="review_star">おすすめレベル</label>
+                <select class="validate[required,custom[number]]" name="review[star]" id="review_star">
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★</option>
+                <option value="3">★★★</option>
+                <option value="2">★★</option>
+                <option value="1">★</option>
+                </select>
+        
+                <!-- タイトル -->
+                <label for="review_title">タイトル</label>
+                <input class="validate[required,maxSize[20]]" type="text" name="review[title]" id="review_title">
+        
+                <!-- コメント -->
+                <label for="review_comment">コメント</label>
+                <textarea class="validate[required,maxSize[400]]" name="review[comment]" id="review_comment"></textarea>
+        
+                <!-- 投稿ボタン -->
+                <button name="button" type="submit">投稿する</button>
+        
+            </form>
+            {% endif %}
+            {% endif %}
+
+        
+        
+        <!-- 関連商品 -->
+        {% if base_info.use_related_products_on_detail? and product.active_related_products.size != 0 %}
+        
+            <!-- 関連商品一覧 -->
+            {% for related_product in product.active_related_products %}
+        
+            <!-- 関連商品画像(任意) -->
+            <a href="/shop/products/{{ related_product.master.sku }}">
+                {% if related_product.thumbnail.url %}
+                {% assign src = related_product.thumbnail.url %}
+                {% else %}
+                {% assign src = 'missing' | image_url %}
+                {% endif %}
+                <img src="{{ src }}">
+            </a>
+        
+            <!-- 関連商品名 -->
+            <a href="/shop/products/{{ related_product.master.sku }}">{{ related_product.name | truncate: 35 }}</a>
+        
+            <!-- 販売価格 -->
+            {{ related_product.master.list_price | number_to_currency: format: '%n %u' }}
+        
+            <!-- カート追加 -->
+            <form action="/shop/cart/add" method="post">
+                <input name="variant_id" type="hidden" value="{{ related_product.related_product_variants_id }}">
+                <button>カートに追加する</button>
+            </form>
+            {% endfor %}
+        {% endif %}
+        
+        </div>
+        
+        <!-- お気に入り登録 -->
+        {% assign is_favorite = product.id | check_current_customer_favorite %}
+        {% if is_favorite %}
+            {% if customer_signed_in %}
+            <form action="/shop/products/{{ product.master.sku }}/unfavorite?customer_return_to=%2Fshop%2Fproducts%2F{{ product.master.sku }}" method="post">
+                <button data-disable-with="解除中..." type="submit">
+                お気に入りに追加済み
+                </button>
+            </form>
+            {% endif %}
+        {% else %}
+            <form action="/shop/products/{{ product.master.sku }}/favorite?customer_return_to=%2Fshop%2Fproducts%2F{{ product.master.sku }}" method="post">
+            <button data-disable-with="登録中..." type="submit">
+                お気に入りに追加
+            </button>
+            </form>
+        {% endif %}
+</div>  
+<section class="uptline"></section>
+<!-- /共通block displaynone -->
+
+
+    
+<!-- セット商品 -->
+
+{% if product.id == 5 %}
+
+
 
     <section id="js-prodcutFv" class="uptprodcut__intro">
         <h2 class="uptprodcut__intro--txt">スキンケアを、<br>⼼安らぐ時間に</h2>
         <div class="uptprodcut__intro--relative">
-        
             <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="" class="pcImg">
-        
-
-        
             <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="" class="spImg">
-        
             <div class="uptprodcut__intro--border" id="js-border"></div>
         </div>
 
@@ -846,9 +1122,7 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                 <div class="uptproduct__setitem--blc">
                     <div class="uptproduct__setitem--blc-s border img">
                         <div class="uptproduct__setitem--img">
-                            
-                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set01.png" alt="">
-                            
+                            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set01.png" alt="">
                         </div>
                     </div>
                     <div class="uptproduct__setitem--blc-s">
@@ -860,9 +1134,7 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                                     <p class="uptproduct__setitem--name03 italic">155mL</p>
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
-                                
                                     <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set01.png" alt="">
-                                
                                 </div>
                             </div>
 
@@ -902,9 +1174,7 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                 <div class="uptproduct__setitem--blc reverse">
                     <div class="uptproduct__setitem--blc-s img blc02">
                         <div class="uptproduct__setitem--img">
-                            
-                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set02.png" alt="">
-                            
+                            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set02.png" alt="">
                         </div>
                     </div>
                     <div class="uptproduct__setitem--blc-s border">
@@ -916,9 +1186,7 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                                     <p class="uptproduct__setitem--name03 italic">120mL</p>
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
-                                
                                     <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set02.png" alt="">
-                                
                                 </div>
                             </div>
 
@@ -959,9 +1227,7 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                 <div class="uptproduct__setitem--blc">
                     <div class="uptproduct__setitem--blc-s border img">
                         <div class="uptproduct__setitem--img">
-                            
-                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set03.png" alt="">
-                            
+                            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set03.png" alt="">
                         </div>
                     </div>
                     <div class="uptproduct__setitem--blc-s">
@@ -973,16 +1239,13 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                                     <p class="uptproduct__setitem--name03 italic">40g</p>
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
-                                
                                     <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set03.png" alt="">
-                                
                                 </div>
                             </div>
 
                             <div class="uptproduct__setitem--setsumei">
                                 <h3>なるだけ手間をなくせるように</h3>
-                                <p>お肌全体をうるおいヴェールで包みこみ、吸い付くようなしなやかなお肌へ。
-                                    </p>
+                                <p>お肌全体をうるおいヴェールで包みこみ、吸い付くようなしなやかなお肌へ。</p>
                             </div>
 
                             <div class="uptproduct__setitem--absolute">
@@ -1016,7 +1279,16 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
     </section>
 
     <section class="uptline"></section>
+    <script src="{{ theme_file_root_path }}/assets/uptproduct.js"></script>
 
+
+
+
+{% endif %}
+
+<!-- /セット商品 -->
+
+<!-- 共通block/point -->
     <section class="uptproduct__point">
         <h2 class="uptblc__ttl">POINT</h2>
         <div class="uptproduct__point--con">
@@ -1051,7 +1323,137 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
         </div>
 
     </section>
+    <section class="uptline"></section>
+<!-- //共通block/point -->
 
+
+    <section class="uptproduct__others">
+        <h2 class="uptblc__ttl">OTHER ITEM</h2>
+        <div class="uptproduct__others--con">
+
+    <!-- 共通部分・商品ページ -->
+    <section class="upthome__products">
+        <ul class="upthome__products--blc">
+
+    <!-- セット化粧品 -->
+    
+        {% if product.id != 5 %}
+    
+           
+    
+
+        <li>
+            <div>
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_prosductset.jpg" alt="">
+
+                <div class="upthome__products--nameblc">
+                    <p class="upthome__products--name">Upt SKINCARE SET</p>
+                    <p class="upthome__products--jpname">ウプト スキンケアセット</p>
+                </div>
+            </div>
+            <a href="/shop/products/upt_skincareset" class="upthome__products--linkbtn">
+                <span>詳細はこちら</span>
+            </a>
+        </li>
+    
+        
+    
+        {% endif %}
+    
+    <!-- /セット化粧品 -->
+
+    <!-- トナー化粧品 -->
+    
+    {% if product.id != 2 %}
+    
+           
+    
+
+            <li>
+                <div>
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut01.png" alt="">
+
+                    <div class="upthome__products--nameblc">
+                        <p class="upthome__products--name">BALANCING TONER</p>
+                        <p class="upthome__products--jpname">バランシングトナー<span class="italic">155mL</span></p>
+                    </div>
+                </div>
+                <a href="/shop/products/4595121188110" class="upthome__products--linkbtn">
+                    <span>詳細はこちら</span>
+                </a>
+            </li>
+        
+    
+    
+            {% endif %}
+    
+    <!-- /トナー化粧品 -->
+
+
+
+    <!-- ミルク乳液 -->
+    
+        {% if product.id != 3 %}
+        
+               
+        
+    
+
+            <li>
+                <div>
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut02.png" alt="">
+
+                    <div class="upthome__products--nameblc">
+                        <p class="upthome__products--name">CONDITIONING MILK</p>
+                        <p class="upthome__products--jpname">コンディショニングミルク<span class="italic">120mL</span></p>
+                    </div>
+                </div>
+                <a href="/shop/products/4595121188127" class="upthome__products--linkbtn">
+                    <span>詳細はこちら</span>
+                </a>
+            </li>
+        
+
+    
+            {% endif %}
+    
+    <!-- /ミルク乳液 -->
+
+    <!-- クリーム -->
+    
+        {% if product.id != 4 %}
+        
+                
+        
+    
+
+        <li>
+            <div>
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut03.png" alt="">
+
+                <div class="upthome__products--nameblc">
+                    <p class="upthome__products--name">MOISTURIZING CREAM</p>
+                    <p class="upthome__products--jpname">モイスチャライジングクリーム<span class="italic">40g</span></p>
+                </div>
+            </div>
+            <a href="/shop/products/4595121188134" class="upthome__products--linkbtn">
+                <span>詳細はこちら</span>
+            </a>
+        </li>
+        
+
+        
+            {% endif %}
+    
+    <!-- /クリーム -->
+
+
+        </ul>
+    </section>
+    <!-- 共通部分・商品ページ -->
+
+        </div>
+    </section>
     
 
         {% comment %} review {% endcomment %}
@@ -1065,6 +1467,8 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
     
 
 </main>
+
+
 <!-- product01 -->
 
 
@@ -1082,15 +1486,13 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
 
 
-    <script src="{{ theme_file_root_path }}/assets/uptproduct.js"></script>
+<!-- /共通block -->
 
 
 
 
 
-
-
-
+      
       
 <!-- Footer -->
     <ul class="upthome__fvblc--sns" id="js-sns">
@@ -1158,10 +1560,10 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 <!-- Footer -->
 
     <div id="cursor">
-        <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/cursor.svg" alt="">
-    </div>
-    <script src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/uptfooter.js"></script>
+    <img src="/assets/images/uptorigin/0914/cursor.svg" alt="">
+    <script src="/assets/uptfooter.js"></script>
 
+</div>
 
 
 
@@ -1169,6 +1571,7 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
       
     </div>
 
+    
     
     
   </body>

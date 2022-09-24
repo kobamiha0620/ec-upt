@@ -72,25 +72,61 @@ $(function () {
       $("html, body").animate({scrollTop:position}, speed, "swing");
       return false;
     });
+  
+  // 日付がたったかどうかチェック
+  function hasOneDayPassed(){
+    // 今日の日付 
+    var date = new Date().toLocaleDateString();
+  
+    // if there's a date in localstorage and it's equal to the above: 
+    // inferring a day has yet to pass since both dates are equal.
+    if( localStorage.yourapp_date == date ) 
+        return false;
+  
+    // this portion of logic occurs when a day has passed
+    localStorage.yourapp_date = date;
+    return true;
+  }
+  
+  function modal(){
+    const modal = $('#js_modal');
+    const bg = $('#modal_bg');
+    modal.fadeIn();
+    bg.fadeIn();
+
+    $('#js_closemodal').on('click', function(){
+      modal.fadeOut();
+      bg.fadeOut();
+    });
+   bg.on('click', function(){
+      modal.fadeOut();
+      bg.fadeOut();
+    });
+    $('#modalcontents').on('click', function(){
+      modal.fadeOut();
+      bg.fadeOut();
+      window.location.href = '/shop/products/';
+    });
+  }
+  
+  // some function which should run once a day
+  function runOncePerDay(){
+    if( !hasOneDayPassed() ) 
+    // your code below
+    return false;
+    modal();
+
+
+  }
+  
+  
+  runOncePerDay(); // run the code
+
+  runOncePerDay(); // does not run the code
+
+
     
-    // function modal(){
-    //   const modal = $('#homeModal');
-    //   const bg = $('#modal_bg');
-    //   $('#js_closemodal').on('click', function(){
-    //     modal.fadeOut();
-    //     bg.fadeOut();
-    //   });
-    //   bg.on('click', function(){
-    //     modal.fadeOut();
-    //     bg.fadeOut();
-
-    //   });
-    // }
-
-    // modal();
-
 });
-
 
   
 

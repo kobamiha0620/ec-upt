@@ -9,7 +9,7 @@ var pageinit = {
   path: '',
   ogimage : '' ,
   path : '' ,   
-  ecforce : 'true',
+  ecforce : 'false',
   category : ['main'] ,
   pagename : '',
   css: [],
@@ -17,13 +17,21 @@ var pageinit = {
   jsfunc:['setPhotoChanger ();','startScroll ();','setVideo();']
 };
 %>
+<%
+var imgpath = '{{ theme_file_root_path }}';
+%>
+
+
 <!-- home -->
-<% if (pageinit.ecforce == 'true') { %>
+<% if (pageinit.ecforce === 'true') { %>
+
     {{ 'shop/base' | javascript_include_tag }}
 <% } %>
 
+
 <main class="l-container js-main-container upthome" role="main">
-    <% if (pageinit.ecforce == 'true') { %>
+   <% if (pageinit.ecforce === 'true') { %>
+
         {{ 'notice' | flash: 'control-alert alert-success', 'text u-color__bg--bg u-color__text--alert' }}
         {{ 'alert' | flash: 'control-alert alert-danger', 'text u-color__bg--bg u-color__text--alert' }}
         {{ content_for_index }}
@@ -50,8 +58,11 @@ var pageinit = {
     <section class="upthome__fv" id="js-uptHome">
     <div class="upthome__fvblc">
  
-        <h1 href="/" class="upthome__fv--logo">Upt</h1>
+        <h2 href="/" class="upthome__fv--logo">安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト。</h2>
 
+        <div class="upthome__fv--feature"></div>
+        <p class="upthome__fv--feature-txt">Produced by YumiAdachi</p>
+    
 
         <div class="about__inner">
             <div id="ABOUT"></div>
@@ -88,13 +99,13 @@ var pageinit = {
                 <% if (pageinit.ecforce !== 'true') { %>
                     <img src="/assets/images/uptorigin/0914/img_about-pc.png" alt="" class="pcImg">
                 <% } else { %>
-                    <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/img_about-pc.png" alt="" class="pcImg">
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_about-pc.png" alt="" class="pcImg">
                 <% } %>
 
                 <% if (pageinit.ecforce !== 'true') { %>
                     <img src="/assets/images/uptorigin/0914/img_about-sp.png" alt="" class="spImg">
                 <% } else { %>
-                    <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/img_about-sp.png" alt="" class="spImg">
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_about-sp.png" alt="" class="spImg">
                 <% } %>
             </div>
         </div>
@@ -105,17 +116,15 @@ var pageinit = {
     <section class="upthome__set">
         <div class="upthome__set--img">
             <a href="/shop/products/upt_skincareset" class="upthome__set--img-in">   
-                <div class="upthome__set--img-feature"></div>
-                <p>BUY NOW</p>
             </a>
         </div>
         <div class="upthome__set--blc">
             <div class="upthome__set--blc-flex">
                 <div class="upthome__set--blc-con">
-                    <div class="upthome__set--sblc">
+                    <a href="/shop/products/upt_skincareset" class="upthome__set--sblc" style="display: block;">
                     <h2 class="upt__name">Upt<br>SKINCARE SET</h2>
                     <h3 class="upt__price">¥7,590 (tax in)</h3>
-                    </div>
+                    </a>
                     <div class="upthome__set--sblc02">
                         <p class="upt__sname">SET ITEM</p>
                         <div class="upthome__set--ssblc">
@@ -145,20 +154,16 @@ var pageinit = {
                     </div>
                 </div>
                 <div class="upthome__set--blc-btm">
-                <a href="/shop/products/upt_skincareset" >
-                    <span>
-                    VIEW MORE<br>
-                    <pre>もっと見る</pre>
-
-                    </span>
-                </a>
-            </div>
+                    <a href="/shop/products/upt_skincareset" class="upthome__set--linkbtn">
+                        <span>詳細はこちら</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
     <section class="uptline"></section>
 
-  
+    <!-- 共通部分・商品ページ -->
     <section class="upthome__products">
         <ul class="upthome__products--blc">
             <li>
@@ -166,15 +171,15 @@ var pageinit = {
                     <% if (pageinit.ecforce !== 'true') { %>
                         <img src="/assets/images/uptorigin/0914/home_prodcut01.png" alt="">
                     <% } else { %>
-                        <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/home_prodcut01.png" alt="">
+                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut01.png" alt="">
                     <% } %>
                     <div class="upthome__products--nameblc">
                         <p class="upthome__products--name">BALANCING TONER</p>
                         <p class="upthome__products--jpname">バランシングトナー<span class="italic">155mL</span></p>
                     </div>
                 </div>
-                <a href="">
-                    <span>VIEW MORE</span>
+                <a href="/shop/products/4595121188110" class="upthome__products--linkbtn">
+                    <span>詳細はこちら</span>
                 </a>
             </li>
             <li>
@@ -182,15 +187,15 @@ var pageinit = {
                     <% if (pageinit.ecforce !== 'true') { %>
                         <img src="/assets/images/uptorigin/0914/home_prodcut02.png" alt="">
                     <% } else { %>
-                        <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/home_prodcut02.png" alt="">
+                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut02.png" alt="">
                     <% } %>
                     <div class="upthome__products--nameblc">
                         <p class="upthome__products--name">CONDITIONING MILK</p>
                         <p class="upthome__products--jpname">コンディショニングミルク<span class="italic">120mL</span></p>
                     </div>
                 </div>
-                <a href="">
-                    <span>VIEW MORE</span>
+                <a href="/shop/products/4595121188127" class="upthome__products--linkbtn">
+                    <span>詳細はこちら</span>
                 </a>
             </li>
             <li>
@@ -198,19 +203,20 @@ var pageinit = {
                     <% if (pageinit.ecforce !== 'true') { %>
                         <img src="/assets/images/uptorigin/0914/home_prodcut03.png" alt="">
                     <% } else { %>
-                        <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/home_prodcut03.png" alt="">
+                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut03.png" alt="">
                     <% } %>
                     <div class="upthome__products--nameblc">
                         <p class="upthome__products--name">MOISTURIZING CREAM</p>
                         <p class="upthome__products--jpname">モイスチャライジングクリーム<span class="italic">40g</span></p>
                     </div>
                 </div>
-                <a href="">
-                    <span>VIEW MORE</span>
+                <a href="/shop/products/4595121188134" class="upthome__products--linkbtn">
+                    <span>詳細はこちら</span>
                 </a>
             </li>
         </ul>
     </section>
+    <!-- 共通部分・商品ページ -->
 
     
     <section class="upthome__producer">
@@ -250,13 +256,13 @@ var pageinit = {
             <% if (pageinit.ecforce !== 'true') { %>
                 <img src="/assets/images/uptorigin/0914/img_producer-pc02.jpg" alt="" class="pcImg">
             <% } else { %>
-                <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/img_producer-pc02.jpg" alt="" class="pcImg">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_producer-pc02.jpg" alt="" class="pcImg">
             <% } %>
 
             <% if (pageinit.ecforce !== 'true') { %>
                 <img src="/assets/images/uptorigin/0914/img_producer-sp02.jpg" alt="" class="spImg">
             <% } else { %>
-                <img src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/0914/img_producer-sp02.jpg" alt="" class="spImg">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_producer-sp02.jpg" alt="" class="spImg">
             <% } %>
         </div>
     </section>
@@ -269,7 +275,8 @@ var pageinit = {
         <p class="upthome__illust--txt">1981年9月14日生まれ。2歳からキッズモデルとして活動を始め、94年の日本テレビ系ドラマ『家なき子』で本格的にブレイク。同作品の台詞は、新語・流行語大賞にも選ばれるなど社会現象となった。以降も幅広い役をこなす実力派俳優として数々のドラマ、映画に出演する他、ファッションブランドのプロデュース等、活動は多岐に渡る。</p>
     </section>
 
-    <% if (pageinit.ecforce == 'true') { %>
+   <% if (pageinit.ecforce === 'true') { %>
+
     {% comment %} movie modal {% endcomment %}
     <% } %>
 
@@ -281,13 +288,31 @@ var pageinit = {
         </div>
       </div>
     </div>
-    <% if (pageinit.ecforce == 'true') { %>
+   <% if (pageinit.ecforce === 'true') { %>
+
 
     {% comment %} end of movie modal {% endcomment %}
     <% } %>
 
   </main>
 
+  <div class="modal__bg js_modal_close" id="modal_bg" style="display: none;"></div>
+  <div class="modal"  style="display: none;"  id="js_modal">
+
+    <div class="modal-content">
+        <div class="modal__contents">
+            <div class="modal__contents--inner">
+                <img src="https://placehold.jp/320x450.png" id="modalcontents" alt="" class="pcImg">
+                <img src="https://placehold.jp/320x450.png" id="modalcontents" alt="" class="spImg">
+
+                <!-- <img src="<#%= imgpath %>/assets/images/uptorigin/0914/popup_pc.jpg" alt="" class="pcImg">
+                <img src="<#%= imgpath %>/assets/images/uptorigin/0914/popup_sp.jpg" alt="" class="spImg"> -->
+                <div class="modal__btn js_modal_close" id="js_closemodal"></div>
+  
+            </div>
+        </div>
+    </div>
+  </div>
 
 
 
@@ -295,7 +320,7 @@ var pageinit = {
 <% if (pageinit.ecforce !== 'true') { %>
     <script src="/assets/homeupt.js"></script>
 <% } else { %>
-    <script src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/homeupt.js"></script>
+    <script src="{{ theme_file_root_path }}/assets/homeupt.js"></script>
 <% } %>
 
 

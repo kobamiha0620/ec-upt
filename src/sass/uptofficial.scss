@@ -1,14 +1,15 @@
 // @use "./module/reset";
-@use "./module/variable" as var;
+@use "./module/variable"as var;
 
 @use "./module/*";
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Shippori+Mincho:wght@400;500;600;700;800&family=Sorts+Mill+Goudy&display=swap');
 
-body{
+body {
     font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
 
 }
-.main{
+
+.main {
     &__sns {
         display: flex;
         margin: 0 auto;
@@ -21,6 +22,7 @@ body{
         border-radius: 20px;
         padding: 20px;
         margin-bottom: clamp(62px, 11.5vh, 125px);
+
         li {
             margin: 0;
             width: 4.72vh;
@@ -94,6 +96,7 @@ body{
             background: url(var.$imgpath + "icon_pctwitter.svg") no-repeat 0 0;
             background-size: 100% auto;
         }
+
         &--youtube {
             white-space: nowrap;
             text-indent: -9999px;
@@ -103,6 +106,7 @@ body{
         }
     }
 }
+
 // .main {
 //     position: absolute;
 //     top: 0;
@@ -308,7 +312,7 @@ body{
 //             -webkit-transform: translate(-50%, -50%);
 //             -ms-transform: translate(-50%, -50%);
 //         }
-        
+
 //         // SP
 //         @media screen and (max-width: var.$spbp) {
 //             margin: 0 auto;
@@ -385,7 +389,7 @@ body{
 //                 width: 100%;
 //                 position: absolute;
 //                 top: 0;
-            
+
 //             }
 
 //         }
@@ -466,7 +470,7 @@ body{
 
 //             }
 //         }
-    
+
 
 
 //     }
@@ -525,7 +529,7 @@ body{
 
 
 
-@keyframes fadeInAnime{
+@keyframes fadeInAnime {
     0% {
         opacity: 0;
     }
@@ -534,7 +538,8 @@ body{
         opacity: 1;
     }
 }
-@keyframes fadeInAnime-moto{
+
+@keyframes fadeInAnime-moto {
     0% {
         opacity: 1;
     }
@@ -548,68 +553,79 @@ body{
 
 //slick
 /*-----------矢印表示----------*/
-.slick-next{ 
-    right: 15vw!important; 
-    top: 49vw!important;
-    height: 36px!important; 
-    width: 13px!important; 
-    background-image: url(var.$imgpath + 'nextswiper.svg')!important;
+.slick-next {
+    right: 15vw !important;
+    top: 49vw !important;
+    height: 36px !important;
+    width: 13px !important;
+    background-image: url(var.$imgpath + 'nextswiper.svg') !important;
     background-size: 100% auto;
-    &:before{
-        content: ""!important;
+
+    &:before {
+        content: "" !important;
     }
 
 }
-.slick-prev{ left: 14.5vw!important; 
-    top: 49vw!important;
-    height: 36px!important; 
-    width: 13px!important; 
-    background-image: url(var.$imgpath + 'prevswiper.svg')!important;
+
+.slick-prev {
+    left: 14.5vw !important;
+    top: 49vw !important;
+    height: 36px !important;
+    width: 13px !important;
+    background-image: url(var.$imgpath + 'prevswiper.svg') !important;
     background-size: 100% auto;
-    &:before{
-        content: ""!important;
+
+    &:before {
+        content: "" !important;
     }
 }
-.slick-arrow{ z-index:2!important; }
+
+.slick-arrow {
+    z-index: 2 !important;
+}
 
 
-a {outline:none;}
+a {
+    outline: none;
+}
+
 *:focus {
     outline: none;
-  }
-
-
-  a {
-    -webkit-tap-highlight-color:rgba(0,0,0,0);
-    // cursor:pointer;
-  }
-
-  
-
-
-  //タブレット
-@media screen and (max-width: var.$tabw) {
-
 }
+
+
+a {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    // cursor:pointer;
+}
+
+
+
+
+//タブレット
+@media screen and (max-width: var.$tabw) {}
 
 //SP
-@media screen and (max-width: var.$spbp) {
+@media screen and (max-width: var.$spbp) {}
 
-}
-
-h1, h2, h3{
+h1,
+h2,
+h3 {
     font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
 }
 
-.uptblc{
+.uptblc {
     width: 100vw;
-    &.top{
+
+    &.top {
         border-top: solid 1px var.$bg_dark;
     }
-    &.btm{
+
+    &.btm {
         border-bottom: solid 1px var.$bg_dark;
     }
-    &__inner{
+
+    &__inner {
         border-right: solid 1px var.$bg_dark;
         border-left: solid 1px var.$bg_dark;
         width: clamp(600px, 90vw, 1100px);
@@ -617,7 +633,8 @@ h1, h2, h3{
         background: var.$bg;
         height: 100%;
     }
-    &__ttl{
+
+    &__ttl {
         @include var.fz(30);
         text-align: center;
         color: var.$bg_dark;
@@ -627,53 +644,64 @@ h1, h2, h3{
         padding: 40px 0;
         border-bottom: solid 1px var.$bg_dark;
     }
+
     @media screen and (max-width: var.$spbp) {
         padding: 0 4vw;
-        &__inner{
+
+        &__inner {
             width: 100%;
         }
-        &__ttl{
+
+        &__ttl {
             padding: 7.5vw 0;
         }
     }
 }
-.pc{
+
+.pc {
     display: block;
 }
-.sp{
+
+.sp {
     display: none;
 }
-.italic{
+
+.italic {
     font-style: oblique;
 }
-.upt{
 
-    &__name{
+.upt {
+
+    &__name {
         @include var.fz(28);
         font-weight: 600;
         color: var.$bg_dark;
         letter-spacing: 1px;
     }
-    &__sname{
+
+    &__sname {
         @include var.fz(24);
         font-weight: 600;
         color: var.$bg_dark;
         letter-spacing: 1px;
-        &--sub{
+
+        &--sub {
             @include var.fz(17);
             font-weight: 600;
             color: var.$bg_dark;
             letter-spacing: 1px;
-            }
-        &--jp{
+        }
+
+        &--jp {
             @include var.fz(15);
             font-weight: 400;
             color: var.$bg_dark;
-            letter-spacing: 1px;    
-                
+            letter-spacing: 1px;
+
         }
     }
-    &__price{
+
+    &__price {
         font-style: oblique;
         font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
         color: var.$bg_dark;
@@ -684,29 +712,32 @@ h1, h2, h3{
     }
 }
 
-.pcImg{
+.pcImg {
     display: block;
 }
-.spImg{
+
+.spImg {
     display: none;
 }
-//タブレット
-@media screen and (max-width: var.$tabw) {
 
-}
+//タブレット
+@media screen and (max-width: var.$tabw) {}
 
 //SP
 @media screen and (max-width: var.$spbp) {
-    .pc{
+    .pc {
         display: none;
     }
-    .sp{
+
+    .sp {
         display: none;
     }
-    .pcImg{
+
+    .pcImg {
         display: none;
     }
-    .spImg{
+
+    .spImg {
         display: block;
     }
 }
@@ -714,19 +745,23 @@ h1, h2, h3{
 
 
 
-.uptplane{
+.uptplane {
     width: 100vw;
-    &.top{
+
+    &.top {
         border-top: solid 1px var.$bg_dark;
     }
-    &.btm{
+
+    &.btm {
         border-bottom: solid 1px var.$bg_dark;
     }
-    .p-page_header{
+
+    .p-page_header {
         padding-right: 0;
         padding-left: 0;
     }
-    &__inner{
+
+    &__inner {
         border-right: solid 1px var.$bg_dark;
         border-left: solid 1px var.$bg_dark;
         width: clamp(600px, 90vw, 1100px);
@@ -737,7 +772,8 @@ h1, h2, h3{
         margin-bottom: -100px;
         // position: relative;
     }
-    &__ttl{
+
+    &__ttl {
         @include var.fz(30);
         text-align: center;
         color: var.$bg_dark;
@@ -747,18 +783,22 @@ h1, h2, h3{
         padding: 40px 0;
         border-bottom: solid 1px var.$bg_dark;
         border-top: solid 1px var.$bg_dark;
-        h1{
-            color: var.$bg_dark!important;
+
+        h1 {
+            color: var.$bg_dark !important;
 
         }
 
     }
+
     @media screen and (max-width: var.$spbp) {
         padding: 0 4vw;
-        &__inner{
+
+        &__inner {
             width: 100%;
         }
-        &__ttl{
+
+        &__ttl {
             padding: 6vw 0;
             @include var.fz(20);
 
@@ -769,67 +809,82 @@ h1, h2, h3{
 
 
 body {
-    cursor: none;  /*本物のカーソルを非表示に*/
+    cursor: none;
+
+    /*本物のカーソルを非表示に*/
     // cursor:  url(var.$imgpath + '0914/cursor.svg', auto);
     @media screen and (max-width: var.$spbp) {
         cursor: auto;
-        #cursor{
+
+        #cursor {
             display: none;
         }
-        #js-sns{
+
+        #js-sns {
             display: none;
         }
-    }   
+    }
 
 }
 
-#cursor{
-    position: fixed;     /* 絶対位置になるように指定 */
-    z-index: 201;          /* 重なり順を上に指定。他の要素に合わせて数字を大きくしてください。 */
-    pointer-events: none;/*【重要】マウス直下に常に画像があるので、全てをクリックできなくなる。noneにして対応*/
-  }
-  
+#cursor {
+    position: fixed;
+    /* 絶対位置になるように指定 */
+    z-index: 201;
+    /* 重なり順を上に指定。他の要素に合わせて数字を大きくしてください。 */
+    pointer-events: none;
+    /*【重要】マウス直下に常に画像があるので、全てをクリックできなくなる。noneにして対応*/
+}
 
-  .uptline{
-      
+
+.uptline {
+
     width: 100vw;
     height: 1px;
     border-bottom: solid var.$bg_dark 1px;
     margin: 0 calc(50% - 50vw);
 }
-*{
-    a,button{
+
+* {
+
+    a,
+    button {
         cursor: none;
-  
+
         @media screen and (max-width: var.$spbp) {
             cursor: auto;
-            &:hover{
-                opacity: 1!important;
+
+            &:hover {
+                opacity: 1 !important;
             }
         }
     }
 
 }
-.c-gmenu__overlay{
+
+.c-gmenu__overlay {
     cursor: none;
+
     @media screen and (max-width: var.$spbp) {
         cursor: auto;
 
     }
 }
 
-#js-sns{
+#js-sns {
     opacity: 1;
-    animation: fadeInAnime 1s ease 0s 1 forwards;    
-    &.hiden{
+    animation: fadeInAnime 1s ease 0s 1 forwards;
+
+    &.hiden {
         opacity: 0;
-        animation: fadeOutAnime 1s ease 0s 1 forwards;     
+        animation: fadeOutAnime 1s ease 0s 1 forwards;
     }
-}            
+}
 
 
-main{
+main {
     padding-top: 99px;
+
     @media screen and (max-width: var.$spbp) {
         padding-top: 90px;
     }
@@ -839,16 +894,26 @@ main{
 
 ////------修正　０９２２
 
-  .u-text--input{
-    font-size: 16px!important;
-  }
-  .p-checkout_confirm__float{
+.u-text--input {
+    font-size: 16px !important;
+}
+
+.p-checkout_confirm__float {
     padding-top: 15px;
     padding-bottom: 16px;
-    .u-color__bg--accent{
+
+    .u-color__bg--accent {
         background: var.$bc;
     }
-    button{
+
+    button {
         @include var.fz(16);
     }
-  }
+}
+
+// 0926---------------
+.upthome__set--ssblc .upt__sname--sub {
+    margin-bottom: 3px;
+}
+
+@media screen and (max-width: var.$spbp) {}

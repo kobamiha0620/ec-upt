@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="375" height="232" viewBox="0 0 375 232">
+  <g id="グループ_222" data-name="グループ 222" transform="translate(-248 -1152)">
+    <rect id="長方形_75" data-name="長方形 75" width="375" height="232" transform="translate(248 1152)" fill="none"/>
+    <g id="グループ_221" data-name="グループ 221" transform="translate(28 -4)">
+      <g id="グループ_186" data-name="グループ 186" transform="translate(248 1157)">
+        <circle id="楕円形_25" data-name="楕円形 25" cx="40" cy="40" r="40" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+        <g id="グループ_185" data-name="グループ 185" transform="translate(18.732 16.759)">
+          <path id="パス_501" data-name="パス 501" d="M7957.247,7940.215l-10.637-6.731-10.632,6.731v11.441l10.632,6.732,10.637-6.732Z" transform="translate(-7935.978 -7915.314)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <path id="パス_502" data-name="パス 502" d="M7959.923,7935.642l-10.632-6.732-10.637,6.732v11.438l10.637,6.732,10.632-6.732Z" transform="translate(-7928.022 -7928.909)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <path id="パス_503" data-name="パス 503" d="M7962.6,7940.215l-10.634-6.731-10.632,6.731v11.441l10.632,6.732,10.634-6.732Z" transform="translate(-7920.07 -7915.314)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <path id="パス_504" data-name="パス 504" d="M7942.785,7935.959v5.255l4.884,3.093" transform="translate(-7915.766 -7907.962)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+        </g>
+        <line id="線_104" data-name="線 104" x1="56.527" y2="56.527" transform="translate(11.736 11.736)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+      <text id="パラベン" transform="translate(288 1259)" fill="#ff583b" font-size="14" font-family="HiraginoSans-W5, Hiragino Sans" letter-spacing="0.08em"><tspan x="-29.68" y="0">パラベン</tspan></text>
+      <g id="グループ_189" data-name="グループ 189" transform="translate(368 1157)">
+        <circle id="楕円形_26" data-name="楕円形 26" cx="40" cy="40" r="40" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+        <g id="グループ_188" data-name="グループ 188" transform="translate(24.971 16.961)">
+          <path id="長方形_56" data-name="長方形 56" d="M1.225,0H28.833a1.225,1.225,0,0,1,1.225,1.225V39.9a.621.621,0,0,1-.621.621H.621A.621.621,0,0,1,0,39.9V1.225A1.225,1.225,0,0,1,1.225,0Z" transform="translate(0 5.562)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <rect id="長方形_57" data-name="長方形 57" width="15.374" height="5.561" transform="translate(7.341)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <g id="グループ_187" data-name="グループ 187" transform="translate(0 16.152)">
+            <line id="線_105" data-name="線 105" x2="30.057" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+            <line id="線_106" data-name="線 106" x2="30.057" transform="translate(0 17.05)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          </g>
+        </g>
+        <line id="線_107" data-name="線 107" x1="56.527" y2="56.527" transform="translate(11.736 11.736)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+      <text id="アルコール" transform="translate(408 1259)" fill="#ff583b" font-size="14" font-family="HiraginoSans-W5, Hiragino Sans" letter-spacing="0.08em"><tspan x="-36.68" y="0">アルコール</tspan></text>
+      <g id="グループ_192" data-name="グループ 192" transform="translate(488 1157)">
+        <circle id="楕円形_27" data-name="楕円形 27" cx="40" cy="40" r="40" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+        <g id="グループ_191" data-name="グループ 191" transform="translate(20.985 18.254)">
+          <path id="パス_505" data-name="パス 505" d="M8019.351,7929.287h-3.942a6.5,6.5,0,0,0-4.6,1.9l-15.666,15.667a6.512,6.512,0,0,0-1.906,4.6v11.406a9.911,9.911,0,0,0,9.914,9.911h18.2a9.911,9.911,0,0,0,9.915-9.911V7941.2A11.914,11.914,0,0,0,8019.351,7929.287Z" transform="translate(-7993.235 -7929.287)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <rect id="長方形_58" data-name="長方形 58" width="3.348" height="11.385" transform="translate(9.656 5.089) rotate(45)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <rect id="長方形_59" data-name="長方形 59" width="3.691" height="7.468" transform="translate(5.661 3.862) rotate(45)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <g id="グループ_190" data-name="グループ 190" transform="translate(10.077 21.607)">
+            <rect id="長方形_60" data-name="長方形 60" width="13.004" height="9.017" transform="translate(2.437 2.435)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+            <line id="線_108" data-name="線 108" y1="2.436" x2="2.436" transform="translate(15.441)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+            <line id="線_109" data-name="線 109" y1="2.436" x2="2.436" transform="translate(0 11.453)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+            <line id="線_110" data-name="線 110" x1="2.436" y1="2.436" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+            <line id="線_111" data-name="線 111" x1="2.436" y1="2.436" transform="translate(15.441 11.453)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          </g>
+          <path id="パス_506" data-name="パス 506" d="M8011.946,7936.536a5.633,5.633,0,0,0-5.992-5.762h-2.4a5.634,5.634,0,0,0-5.98,5.76,3.428,3.428,0,0,0,3.517,3.17h7.35A3.422,3.422,0,0,0,8011.946,7936.536Z" transform="translate(-7980.383 -7924.862)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+        </g>
+        <line id="線_112" data-name="線 112" x1="56.527" y2="56.527" transform="translate(11.736 11.736)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+      <text id="鉱物油" transform="translate(528 1259)" fill="#ff583b" font-size="14" font-family="HiraginoSans-W5, Hiragino Sans" letter-spacing="0.08em"><tspan x="-22.12" y="0">鉱物油</tspan></text>
+      <g id="グループ_195" data-name="グループ 195" transform="translate(308 1284)">
+        <circle id="楕円形_28" data-name="楕円形 28" cx="40" cy="40" r="40" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+        <g id="グループ_194" data-name="グループ 194" transform="translate(22.468 17.269)">
+          <rect id="長方形_61" data-name="長方形 61" width="8.105" height="9.604" transform="translate(12.804 2.286)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <circle id="楕円形_29" data-name="楕円形 29" cx="6.766" cy="6.766" r="6.766" transform="translate(25.254)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <rect id="長方形_62" data-name="長方形 62" width="15.446" height="5.441" transform="translate(9.135 11.891)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <rect id="長方形_63" data-name="長方形 63" width="4.343" height="1.967" transform="translate(20.91 6.01)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <rect id="長方形_64" data-name="長方形 64" width="10.862" height="3.762" transform="translate(11.426 41.701)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <rect id="長方形_65" data-name="長方形 65" width="33.715" height="24.361" rx="12" transform="translate(0 17.331)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <rect id="長方形_66" data-name="長方形 66" width="2.059" height="3.953" transform="translate(10.746 5.112)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <g id="グループ_193" data-name="グループ 193" transform="translate(4.488 3.815)">
+            <line id="線_113" data-name="線 113" x1="2.717" y1="2.332" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+            <line id="線_114" data-name="線 114" x1="2.717" y2="2.332" transform="translate(0 4.214)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          </g>
+        </g>
+        <line id="線_115" data-name="線 115" x1="56.527" y2="56.527" transform="translate(11.736 11.736)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+      <text id="合成香料" transform="translate(348 1386)" fill="#ff583b" font-size="14" font-family="HiraginoSans-W5, Hiragino Sans" letter-spacing="0.08em"><tspan x="-29.68" y="0">合成香料</tspan></text>
+      <g id="グループ_184" data-name="グループ 184" transform="translate(428 1284)">
+        <circle id="楕円形_21" data-name="楕円形 21" cx="40" cy="40" r="40" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+        <g id="グループ_183" data-name="グループ 183" transform="translate(20.161 17.564)">
+          <path id="パス_500" data-name="パス 500" d="M8062.64,7929.11v9.989a14.749,14.749,0,0,1-1.7,6.877l-10.6,20.2a5.329,5.329,0,0,0,4.722,7.8h29a5.328,5.328,0,0,0,4.717-7.8l-10.6-20.2a14.813,14.813,0,0,1-1.7-6.877v-9.989" transform="translate(-8049.722 -7929.109)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <line id="線_101" data-name="線 101" x1="20.999" transform="translate(9.34)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <line id="線_102" data-name="線 102" x1="22.477" transform="translate(8.601 21.859)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <circle id="楕円形_22" data-name="楕円形 22" cx="2.255" cy="2.255" r="2.255" transform="translate(22.79 35.614)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <circle id="楕円形_23" data-name="楕円形 23" cx="1.922" cy="1.922" r="1.922" transform="translate(15.784 29.903)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+          <circle id="楕円形_24" data-name="楕円形 24" cx="1.228" cy="1.228" r="1.228" transform="translate(23.837 26.444)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+        </g>
+        <line id="線_103" data-name="線 103" x1="56.527" y2="56.527" transform="translate(11.736 11.736)" fill="none" stroke="#ff583b" stroke-linejoin="round" stroke-width="1.5"/>
+      </g>
+      <text id="合成色素" transform="translate(468 1386)" fill="#ff583b" font-size="14" font-family="HiraginoSans-W5, Hiragino Sans" letter-spacing="0.08em"><tspan x="-29.68" y="0">合成色素</tspan></text>
+    </g>
+  </g>
+</svg>
