@@ -518,9 +518,34 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
 <!-- home -->
 
 
+    {{ 'shop/base' | javascript_include_tag }}
+
+
 
 <main class="l-container js-main-container upthome" role="main">
    
+
+        {{ 'notice' | flash: 'control-alert alert-success', 'text u-color__bg--bg u-color__text--alert' }}
+        {{ 'alert' | flash: 'control-alert alert-danger', 'text u-color__bg--bg u-color__text--alert' }}
+        {{ content_for_index }}
+      
+        {% comment %} welcome modal {% endcomment %}
+        {% comment %} {% unless customer_signed_in %}
+          <div class="c-welcome_modal">
+            <div class="c-welcome_modal__overlay"></div>
+            <div class="c-welcome_modal__win u-color__bg--base">
+              <div class="c-welcome_modal__win__title u-font__both">NEWS LETTER</div>
+              <div class="c-welcome_modal__win__lead">新商品、お得なお知らせなどを定期的に配信中、<br />今機会に是非登録してください。</div>
+              <form class="c-subscribe_form">
+                <input class="c-subscribe_form__input u-color__bg--base u-color__border--input" type="email">
+                <button class="c-subscribe_form__btn u-color__bg--accent u-color__text--base">登録</button>
+              </form>
+              <button class="c-welcome_modal__win__btn"><i class="u-icon--close"></i></button>
+            </div>
+          </div>
+        {% endunless %} {% endcomment %}
+        {% comment %} end of welcome modal {% endcomment %}
+    
 
 
     <section class="upthome__fv" id="js-uptHome">
@@ -565,11 +590,11 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
             <div class="upthome__intro--img">
 
                 
-                    <img src="/assets/images/uptorigin/0914/img_about-pc.png" alt="" class="pcImg">
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_about-pc.png" alt="" class="pcImg">
                 
 
                 
-                    <img src="/assets/images/uptorigin/0914/img_about-sp.png" alt="" class="spImg">
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_about-sp.png" alt="" class="spImg">
                 
             </div>
         </div>
@@ -633,42 +658,42 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
             <li>
                 <div>
                     
-                        <img src="/assets/images/uptorigin/0914/home_prodcut01.png" alt="">
+                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/home_prodcut01b.jpg" alt="">
                     
                     <div class="upthome__products--nameblc">
                         <p class="upthome__products--name">BALANCING TONER</p>
                         <p class="upthome__products--jpname">バランシングトナー<span class="italic">155mL</span></p>
                     </div>
                 </div>
-                <a href="/shop/products/4595121188110" class="upthome__products--linkbtn">
+                <a href="/shop/products/balancing_toner" class="upthome__products--linkbtn">
                     <span>詳細はこちら</span>
                 </a>
             </li>
             <li>
                 <div>
                     
-                        <img src="/assets/images/uptorigin/0914/home_prodcut02.png" alt="">
+                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut02.png" alt="">
                     
                     <div class="upthome__products--nameblc">
                         <p class="upthome__products--name">CONDITIONING MILK</p>
                         <p class="upthome__products--jpname">コンディショニングミルク<span class="italic">120mL</span></p>
                     </div>
                 </div>
-                <a href="/shop/products/4595121188127" class="upthome__products--linkbtn">
+                <a href="/shop/products/conditioning_milk" class="upthome__products--linkbtn">
                     <span>詳細はこちら</span>
                 </a>
             </li>
             <li>
                 <div>
                     
-                        <img src="/assets/images/uptorigin/0914/home_prodcut03.png" alt="">
+                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut03.png" alt="">
                     
                     <div class="upthome__products--nameblc">
                         <p class="upthome__products--name">MOISTURIZING CREAM</p>
                         <p class="upthome__products--jpname">モイスチャライジングクリーム<span class="italic">40g</span></p>
                     </div>
                 </div>
-                <a href="/shop/products/4595121188134" class="upthome__products--linkbtn">
+                <a href="/shop/products/moisturizing_cream" class="upthome__products--linkbtn">
                     <span>詳細はこちら</span>
                 </a>
             </li>
@@ -712,11 +737,11 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
 
         <div class="upthome__yumi--blc">
             
-                <img src="/assets/images/uptorigin/0914/img_producer-pc02.jpg" alt="" class="pcImg">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_producer-pc02.jpg" alt="" class="pcImg">
             
 
             
-                <img src="/assets/images/uptorigin/0914/img_producer-sp02.jpg" alt="" class="spImg">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_producer-sp02.jpg" alt="" class="spImg">
             
         </div>
     </section>
@@ -731,6 +756,9 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
 
    
 
+    {% comment %} movie modal {% endcomment %}
+    
+
     <div class="c-movie_modal">
       <div class="c-movie_modal__inner">
         <i class="c-movie_modal__inner__close u-icon--close u-color__text--base js-close-movie"></i>
@@ -741,6 +769,10 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
     </div>
    
 
+
+    {% comment %} end of movie modal {% endcomment %}
+    
+
   </main>
 
   <div class="modal__bg js_modal_close" id="modal_bg" style="display: none;"></div>
@@ -750,7 +782,7 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
         <div class="modal__contents">
             <div class="modal__contents--inner">
                 <img src="https://placehold.jp/320x450.png" id="modalcontents" alt="" class="pcImg">
-                <img src="https://placehold.jp/320x450.png" id="modalcontents" alt="" class="spImg">
+                <img src="https://placehold.jp/320x450.png" id="modalcontentsSp" alt="" class="spImg">
 
                 <!-- <img src="<#%= imgpath /assets/images/uptorigin/0914/popup_pc.jpg" alt="" class="pcImg">
                 <img src="<#%= imgpath /assets/images/uptorigin/0914/popup_sp.jpg" alt="" class="spImg"> -->
@@ -765,7 +797,7 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
 
   <!-- home -->
 
-    <script src="/assets/homeupt.js"></script>
+    <script src="{{ theme_file_root_path }}/assets/homeupt.js"></script>
 
 
 

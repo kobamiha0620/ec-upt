@@ -1020,6 +1020,10 @@
                 justify-content: center;
                 border-right: none;
             }
+            &--txt2{
+                @include var.fz(10);
+                line-height: 1.46;
+            }
         }
     }
 }

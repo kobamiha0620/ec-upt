@@ -107,6 +107,11 @@ $(function () {
       bg.fadeOut();
       window.location.href = '/shop/products/';
     });
+    $('#modalcontentsSp').on('click', function(){
+      modal.fadeOut();
+      bg.fadeOut();
+      window.location.href = '/shop/products/';
+    });
   }
   
   // some function which should run once a day

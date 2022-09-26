@@ -9,7 +9,7 @@ var pageinit = {
   path: '',
   ogimage : '' ,
   path : '' ,   
-  ecforce : 'false',
+  ecforce : 'true',
   category : ['main'] ,
   pagename : '',
   css: [],
@@ -19,6 +19,8 @@ var pageinit = {
 %>
 <%
 var imgpath = '{{ theme_file_root_path }}';
+// var imgpath = '';
+
 %>
 
 
@@ -169,16 +171,16 @@ var imgpath = '{{ theme_file_root_path }}';
             <li>
                 <div>
                     <% if (pageinit.ecforce !== 'true') { %>
-                        <img src="/assets/images/uptorigin/0914/home_prodcut01.png" alt="">
+                        <img src="/assets/images/uptorigin/0926/home_prodcut01b.jpg" alt="">
                     <% } else { %>
-                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut01.png" alt="">
+                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/home_prodcut01b.jpg" alt="">
                     <% } %>
                     <div class="upthome__products--nameblc">
                         <p class="upthome__products--name">BALANCING TONER</p>
                         <p class="upthome__products--jpname">バランシングトナー<span class="italic">155mL</span></p>
                     </div>
                 </div>
-                <a href="/shop/products/4595121188110" class="upthome__products--linkbtn">
+                <a href="/shop/products/balancing_toner" class="upthome__products--linkbtn">
                     <span>詳細はこちら</span>
                 </a>
             </li>
@@ -194,7 +196,7 @@ var imgpath = '{{ theme_file_root_path }}';
                         <p class="upthome__products--jpname">コンディショニングミルク<span class="italic">120mL</span></p>
                     </div>
                 </div>
-                <a href="/shop/products/4595121188127" class="upthome__products--linkbtn">
+                <a href="/shop/products/conditioning_milk" class="upthome__products--linkbtn">
                     <span>詳細はこちら</span>
                 </a>
             </li>
@@ -210,7 +212,7 @@ var imgpath = '{{ theme_file_root_path }}';
                         <p class="upthome__products--jpname">モイスチャライジングクリーム<span class="italic">40g</span></p>
                     </div>
                 </div>
-                <a href="/shop/products/4595121188134" class="upthome__products--linkbtn">
+                <a href="/shop/products/moisturizing_cream" class="upthome__products--linkbtn">
                     <span>詳細はこちら</span>
                 </a>
             </li>
@@ -303,7 +305,7 @@ var imgpath = '{{ theme_file_root_path }}';
         <div class="modal__contents">
             <div class="modal__contents--inner">
                 <img src="https://placehold.jp/320x450.png" id="modalcontents" alt="" class="pcImg">
-                <img src="https://placehold.jp/320x450.png" id="modalcontents" alt="" class="spImg">
+                <img src="https://placehold.jp/320x450.png" id="modalcontentsSp" alt="" class="spImg">
 
                 <!-- <img src="<#%= imgpath %>/assets/images/uptorigin/0914/popup_pc.jpg" alt="" class="pcImg">
                 <img src="<#%= imgpath %>/assets/images/uptorigin/0914/popup_sp.jpg" alt="" class="spImg"> -->

@@ -2621,6 +2621,11 @@ h2.upthome__illust--ttl {
     justify-content: center;
     border-right: none;
   }
+  .uptproduct__ex--txt2 {
+    font-size: 0.625rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    line-height: 1.46;
+  }
 }
 
 main#productIndex .c-product_item__actions {
