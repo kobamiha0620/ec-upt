@@ -349,7 +349,7 @@
             }
         }
         &--setsumei{
-            h3{
+            &-ttl{
                 color: var.$bg_dark;
                 @include var.fz(14);
                 font-weight: bold;
@@ -1026,4 +1026,19 @@
             }
         }
     }
+}
+
+.uptproduct__ex--ttl{
+    @include var.fz(16);
+    font-weight: 500;
+    margin: 0 0 24px;
+    @media screen and (max-width: var.$spbp) {
+
+    }
+
+}
+.uptproduct__ex--txt{
+    @include var.fz(14);
+    font-weight: 400;
+    line-height: 1.5;
 }

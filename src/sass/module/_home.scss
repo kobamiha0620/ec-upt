@@ -278,7 +278,6 @@
 
                 }
                 a{
-                    // display: none!important;
                     background: var.$bc;
                     color: #FFF;
                     text-align: center;
@@ -1001,7 +1000,13 @@ h2.upthome__illust--ttl{
                 a{
                     border-top: none;
                     font-weight: 400;
-                    
+                    background: none;
+                    display: block;
+                    margin: 0;
+                    padding: 0;
+                    &:hover{
+                        opacity: 0.8;
+                    }
                 }
             }
         }
@@ -1010,6 +1015,7 @@ h2.upthome__illust--ttl{
             background: var.$bc;
             border-radius: 40px;
             margin: 0 9.7% 30px;
+            background: var.$bc;
         }
     }
     @media screen and (max-width: var.$spbp){
@@ -1029,4 +1035,23 @@ h2.upthome__illust--ttl{
             }
         }
     }
+}
+
+.upthome__set--img{
+    a{
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+
+.upthome__products--linkbtn{
+    background: var.$bc;
+    color: #FFF;
+    text-align: center;
+    padding: 15px 0;
+    line-height: 1;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
 }

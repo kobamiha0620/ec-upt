@@ -17,6 +17,11 @@ var pageinit = {
   jsfunc:['setPhotoChanger ();','startScroll ();','setVideo();']
 };
 %>
+<%
+// var imgpath = '{{ theme_file_root_path }}';
+var imgpath = '';
+
+%>
 <!-- Footer -->
     <ul class="upthome__fvblc--sns" id="js-sns">
         <li>
@@ -81,16 +86,8 @@ var pageinit = {
 
 </footer>
 <!-- Footer -->
-<% if (pageinit.ecforce !== 'true') { %>
-    <div id="cursor">
-    <img src="/assets/images/uptorigin/0914/cursor.svg" alt="">
-    <script src="/assets/uptfooter.js"></script>
 
-</div>
-<% } else { %>
     <div id="cursor">
-        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/cursor.svg" alt="">
+        <img src="<%= imgpath %>/assets/images/uptorigin/0914/cursor.svg" alt="カーソル" width="22px" height="22px">
     </div>
-    <script src="{{ theme_file_root_path }}/assets/uptfooter.js"></script>
-
-<% } %>
+    <script src="<%= imgpath %>/assets/uptfooter.js"></script>

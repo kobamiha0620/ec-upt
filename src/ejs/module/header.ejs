@@ -103,9 +103,12 @@ var pageinit = {
                     <div class="uptheader__icons--btns">
                         <div class="l-header__inner__block u-color--head">
                             <a class="l-header__inner__block__item" href="/shop/customer">
+                                <span class="headingttl">マイページ</span>
                                 <i class="u-icon--account"></i>
                             </a>
                             <a class="l-header__inner__block__item" href="/shop/cart">
+                                <span class="headingttl">カート</span>
+
                                 <i class="u-icon--cart"></i>
                                 <% if (pageinit.ecforce === 'true') { %>
                                 {% comment %} {% if order.completed? %}
@@ -146,9 +149,13 @@ var pageinit = {
                     <div class="uptgmenu__innerline">
                         <section class="uptgmenu__head">
                             <a href="/shop/customer">
+                                <span class="headingttl">マイページ</span>
+
                                 <i class="u-icon--account"></i>
                             </a>
                             <a href="/shop/cart">
+                                <span class="headingttl">カート</span>
+
                                 <i class="u-icon--cart"></i>
                             </a>
                             <button class="c-gmenu__container__close u-color--head js-close-menu">
@@ -166,12 +173,14 @@ var pageinit = {
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
                                                     href="/shop/customers/sign_up">
+                                                    
                                                     <span>会員登録</span>
                                                 </a>
                                             </li>
                                             <li class="c-gmenu__container__inner__list__item__child__item">
                                                 <a class="c-gmenu__container__inner__list__item__child__item__inner u-text--subhead"
                                                     href="/shop/customers/sign_in">
+                                                    <span class="headingttl">ログイン</span>
                                                     <span>{{ 'account.general.login.value' | t }}</span>
                                                 </a>
                                             </li>
@@ -274,7 +283,7 @@ var pageinit = {
                                 </li>
                             </ul>
                             <div class="uptgmenu__sns">
-                                <h2 class="uptgmenu__sns__ttl">FOLLOW US</h2>
+                                <p class="uptgmenu__sns__ttl">FOLLOW US</p>
                                 <div class="uptgmenu__sns__list--wrapper">
                                     <ul class="uptgmenu__sns__list">
                                         <li>
@@ -295,7 +304,7 @@ var pageinit = {
                         </div>
                         </section>
                         <section class="uptgmenu__btm">
-                            <h1 class="uptgmenu__btm--logo"><a href="/">Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト。</a></h1>
+                            <p class="uptgmenu__btm--logo"><a href="/">Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト。</a></p>
                             <ul class="uptgmenu__btm--links">
 
                                 <li>

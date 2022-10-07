@@ -17,48 +17,36 @@ var pageinit = {
   jsfunc:['setPhotoChanger ();','startScroll ();','setVideo();']
 };
 %>
+<%
+var imgpath = '{{ theme_file_root_path }}';
+// var imgpath = '';
 
+%>
 
 <!-- BGとして ここから -->
 <div class="bg__repeatWrapper">
     <div class="bg__repeatBlc">
         <div class="bgw1">
             <div class="maskbg1">
-                <% if (pageinit.ecforce !== 'true') { %>
-                    <img class="" src="/assets/images/uptorigin/bg01b-min.jpg" alt="">
-                    <img class="" src="/assets/images/uptorigin/bg01b-min.jpg" alt="">
-                <% } else { %>
-                    <img class="" src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/bg01b-min.jpg" alt="">
-                    <img class="" src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/bg01b-min.jpg" alt="">
-                <% } %>
+                <img class="" src="<%= imgpath %>/assets/images/uptorigin/bg01b-min.jpg" alt="背景画像1" width="auto" height="auto">
+                <img class="" src="<%= imgpath %>/assets/images/uptorigin/bg01b-min.jpg" alt="背景画像1" width="auto" height="auto">
             </div>
         </div>
 
         <div class="bgw2">
             <div class="pc">
                 <div class="maskbg2">
-                    <% if (pageinit.ecforce !== 'true') { %>
-                        <img class="" src="/assets/images/uptorigin/bg02b.png" alt="">
-                        <img class="" src="/assets/images/uptorigin/bg02b.png" alt="">
-    
-                    <% } else { %>
-                        <img class="" src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/bg02b.png" alt="">
-                        <img class="" src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/bg02b.png" alt="">    
-                    <% } %>
+                    <img class="" src="<%= imgpath %>/assets/images/uptorigin/0914/bg02b.jpg" alt="背景画像2" width="auto" height="auto">
+                    <img class="" src="<%= imgpath %>/assets/images/uptorigin/0914/bg02b.jpg" alt="背景画像2" width="auto" height="auto">
+
                 </div>
 
             </div>
             <div class="sp">
                 <div class="maskbg2">
-                    <% if (pageinit.ecforce !== 'true') { %>
+                    <img class="" src="<%= imgpath %>/assets/images/uptorigin/bg03spb.png" alt="背景画像2" width="auto" height="auto">
+                    <img class="" src="<%= imgpath %>/assets/images/uptorigin/bg03spb.png" alt="背景画像2" width="auto" height="auto">
 
-                        <img class="" src="/assets/images/uptorigin/bg03spb.png" alt="">
-                        <img class="" src="/assets/images/uptorigin/bg03spb.png" alt="">
-                    <% } else { %>
-                        <img class="" src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/bg03spb.png" alt="">
-                        <img class="" src="{{ file_root_path }}/themes/0922_20220920155336/ec_force/assets/images/uptorigin/bg03spb.png" alt="">
-    
-                    <% } %>
 
                 </div>
             </div>

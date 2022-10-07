@@ -1619,12 +1619,20 @@ h2.upthome__illust--ttl {
 .upthome__products--blc li a {
   border-top: none;
   font-weight: 400;
+  background: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+.upthome__products--blc li a:hover {
+  opacity: 0.8;
 }
 .upthome__products--linkbtn {
   display: block;
   background: #FF583B;
   border-radius: 40px;
   margin: 0 9.7% 30px;
+  background: #FF583B;
 }
 @media screen and (max-width: 768px) {
   .upthome__products--blc li {
@@ -1638,6 +1646,21 @@ h2.upthome__illust--ttl {
     background: #FF583B;
     border-radius: 40px;
   }
+}
+
+.upthome__set--img a:hover {
+  opacity: 0.8;
+}
+
+.upthome__products--linkbtn {
+  background: #FF583B;
+  color: #FFF;
+  text-align: center;
+  padding: 15px 0;
+  line-height: 1;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
 }
 
 * {
@@ -1993,7 +2016,7 @@ h2.upthome__illust--ttl {
   font-size: 1.0625rem;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
-.uptprodcut .uptproduct__setitem--setsumei h3 {
+.uptprodcut .uptproduct__setitem--setsumei-ttl {
   color: #32667A;
   font-size: 0.875rem;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
@@ -2628,6 +2651,19 @@ h2.upthome__illust--ttl {
   }
 }
 
+.uptproduct__ex--ttl {
+  font-size: 1rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  margin: 0 0 24px;
+}
+.uptproduct__ex--txt {
+  font-size: 0.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
 main#productIndex .c-product_item__actions {
   display: none;
 }
@@ -3174,4 +3210,12 @@ main {
 
 .upthome__set--ssblc .upt__sname--sub {
   margin-bottom: 3px;
+}
+
+.headingttl {
+  white-space: nowrap;
+  text-indent: -9999px;
+  width: 0;
+  height: 0;
+  display: none;
 }

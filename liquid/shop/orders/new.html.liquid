@@ -1,0 +1,155 @@
+{{ 'shop/orders' | javascript_include_tag }}
+
+<main class="l-container" role="main" id="new-view">
+  <div id="TokenJs"></div>
+  <div class="l-container__row u-margin__top--80 u-margin_sp__top--40">
+    <div class="c-steps_to_order c-steps_to_order--theme">
+      <div class="c-steps_to_order__step c-steps_to_order__step--1">
+      <p class="c-steps_to_order__number u-font__en is-active">1</p>
+        <p class="c-steps_to_order__text">ご注文内容の<br>入力</p>
+      </div>
+      <div class="c-steps_to_order__step c-steps_to_order__step--2">
+        <p class="c-steps_to_order__number u-font__en">2</p>
+        <p class="c-steps_to_order__text">ご注文内容の<br>確認</p>
+      </div>
+      <div class="c-steps_to_order__step c-steps_to_order__step--3">
+        <p class="c-steps_to_order__number u-font__en">3</p>
+        <p class="c-steps_to_order__text">ご注文<br>完了</p>
+      </div>
+    </div>
+  </div>
+  <div class="l-container__row u-margin__top--60">
+    {{ 'notice' | flash: 'control-alert alert-success', 'text u-color__bg--bg u-color__text--alert' }}
+    {{ 'alert' | flash: 'control-alert alert-danger', 'text u-color__bg--bg u-color__text--alert' }}
+    <header class="p-page_header">
+      <div class="p-page_header__inner">
+        <h1 class="p-page_header__inner__title u-text--head">{{ 'orders.general.checkout.value' | t }}</h1>
+        <p class="p-page_header__inner__lead u-text--body"><span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span>{{ 'general.message.input_required.value' | t }}</p>
+      </div>
+    </header>
+  </div>
+  <div class="l-container__row u-margin__top--60 u-margin__bottom--100">
+    <!-- AmazonPay -->
+    <div id="AmazonPayWidgetJs"></div>
+    {% if amazon_pay_available or amazon_pay_v2_available %}
+      <div id="AmazonPayOneClickOrderArea" style="display: none;">
+        <div class="amazon_pay_box u-color__bg--bg">
+          <div class="amazon_pay_title u-text--subhead">{{ 'payments.amazon_pay.amazon_pay_title.value' | t }}</div>
+          <div class="amazon_pay_button_wrapper">
+            <div class="amazon_pay_button_area">
+              <div class="amazon_pay_payments_area">
+                <div class="amazon_pay_subtitle u-text--body">{{ 'payments.amazon_pay.amazon_pay_sub_title.value' | t }}</div>
+                <div class="amazon_pay_button_all" id="AmazonPayButtonAll"></div>
+              </div>
+            </div>
+          </div>
+          <div class="amazon_pay_message u-text--body">{{ 'payments.amazon_pay.amazon_pay_message.value' | t }}</div>
+        </div>
+        <div class="amazon_pay_not_use_message u-text--body">{{ 'payments.amazon_pay.amazon_pay_not_use_message.value' | t }}</div>
+      </div>
+    {% endif %}
+    <!-- AmazonPay -->
+
+    {% if line_settings['display_btn'] == '1' %}
+      {% if customer_signed_in == false and encrypted_line_id == null %}
+        <hr class="mt15 mb5">
+        <div class="alert">
+          {{ line_settings['information_context'] }}
+        <!-- LINE ID 連携ボタン（リンク） -->
+        </div>
+        <div class="line_new_ec">
+          <div class="button-container">
+            <a class="button btn-line line-token-set-btn" href="#">
+              <span class="before-btn-line" style="background-image:url('{{ theme_file_root_path }}/assets/images/login-line.png')"></span>
+              {{ 'account.line.line_id.value' | t }}
+              <span class="after-btn-line"></span>
+            </a>
+          </div>
+        </div>
+      {% elsif customer_signed_in == true and current_customer.line_id? == false %}
+        <hr class="mt15 mb5">
+        <div class="alert">
+          {{ line_settings['information_context'] }}
+          <!-- LINE ID 連携ボタン（リンク） -->
+        </div>
+        <div class="line_new_ec">
+          <div class="button-container">
+            <a class="button btn-line line-token-set-btn" href="#">
+              <span class="before-btn-line" style="background-image:url('{{ theme_file_root_path }}/assets/images/login-line.png')"></span>
+              {{ 'account.line.line_id.value' | t }}
+              <span class="after-btn-line"></span>
+            </a>
+          </div>
+        </div>
+      {% endif %}
+      <br>
+    {% endif %}
+    <form class="p-checkout" role="form" action="/shop/order" method="post">
+      <input name="_method" type="hidden" value="put">
+      <input name="order[state]" type="hidden" value="new">
+      {% if order.error_messages != empty %}
+        <div class="control-alert alert-danger">
+          {% for error_message in order.error_messages %}
+            <p class="text u-color__bg--bg u-color__text--alert">{{ error_message }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+      <div class="control-alert alert-danger" id="preview-error" style="display:none;">
+        <p class="text u-color__bg--bg u-color__text--alert" id="preview-error-message" />
+      </div>
+
+      <section class="p-checkout__list">
+
+        {% include 'ec_force/shop/orders/view_billing_information.html' %}
+
+        {% include 'ec_force/shop/orders/view_shipping_information.html' %}
+
+        {% include 'ec_force/shop/orders/view_wrapping_information.html' %}
+
+        {% include 'ec_force/shop/orders/view_point_redeem.html' %}
+
+        {% include 'ec_force/shop/orders/view_coupon.html' %}
+
+        {% include 'ec_force/shop/orders/view_invite_code.html' %}
+
+        {% include 'ec_force/shop/orders/view_payment_information.html' %}
+
+        {% include 'ec_force/shop/orders/view_shipping_carrier.html' %}
+
+        {% include 'ec_force/shop/orders/view_payment_schedule.html' %}
+
+        {% include 'ec_force/shop/orders/view_remark.html' %}
+
+        {% include 'ec_force/shop/orders/view_optin.html' %}
+
+        {% include 'ec_force/shop/orders/view_checklists.html' %}
+
+        {% include 'ec_force/shop/orders/view_terms.html' %}
+
+      </section>
+      {% if set %}
+        <section class="p-checkout__bottom is-new-view">
+          <div class="p-checkout__bottom__wrapper_newview">
+            <div class="p-checkout__bottom__backbtn_wrap">
+              <a class="p-checkout__bottom__back u-text--link" href="/shop/cart">{{ 'orders.general.to_cart.value' | t }}</a>
+            </div>
+            <div class="p-checkout__bottom__buttons_wrap">
+              <input class="p-checkout__bottom__submit u-color__text--base u-color__bg--accent" id="submit" type="submit" value="{{ 'orders.general.to_confirm.value' | t }}">
+              <a
+                href="/shop/sets/{{ set.id }}"
+                class="p-checkout__bottom__select u-color__text--base u-color__bg--sub"
+              >
+                <span>商品を再選択</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      {% else %}
+        <section class="p-checkout__bottom">
+          <input class="p-checkout__bottom__submit u-text--btn u-color__btn--bg" id="submit" type="submit" value="{{ 'orders.general.to_confirm.value' | t }}">
+          <a class="p-checkout__bottom__back u-text--link" href="/shop/cart">{{ 'orders.general.to_cart.value' | t }}</a>
+        </section>
+      {% endif %}
+    </form>
+  </div>
+</main>

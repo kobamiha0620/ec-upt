@@ -1,0 +1,263 @@
+<div id='view-billing-information' class="p-checkout__list__block u-color__border--border">
+  <div class="p-checkout__list__block__inner">
+    <h2 class="p-checkout__list__block__inner__title u-text--subhead">{{ 'account.general.input_customer_info.value' | t }}</h2>
+    <table class="c-form_table">
+      <tbody>
+        <!-- お名前 -->
+        <tr class="hide-on-amazon-pay">
+          <th class="u-text--body">{{ 'customer.general.name.value' | t }}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span></th>
+          <td>
+            <div class="c-form_table__name {% if shop_form_settings['name_1_field'] %} is-single{% endif %}">
+              {% if shop_form_settings['name_1_field'] %}
+                <input class="u-text--input u-color__input--bg u-color__border--input validate[required]" type="text" placeholder="{{ 'customer.placeholder.full_name.value' | t }}" id='order_billing_address_attributes_name01' name='order[billing_address_attributes][name01]' value="{% if order.billing_address %}{{ order.billing_address.full_name }}{% else %}{{ order.customer.billing_address.full_name }}{% endif %}">
+              {% else %}
+                <input class="u-text--input u-color__input--bg u-color__border--input validate[required]" type="text" placeholder="{{ 'customer.placeholder.family_name.value' | t }}" id='order_billing_address_attributes_name01' name='order[billing_address_attributes][name01]' value="{% if order.billing_address %}{{ order.billing_address.name01 }}{% else %}{{ order.customer.billing_address.name01 }}{% endif %}">
+                <input class="u-text--input u-color__input--bg u-color__border--input validate[required]" type="text" placeholder="{{ 'customer.placeholder.name.value' | t }}" id='order_billing_address_attributes_name02' name='order[billing_address_attributes][name02]' value="{% if order.billing_address %}{{ order.billing_address.name02 }}{% else %}{{ order.customer.billing_address.name02 }}{% endif %}">
+              {% endif %}
+            </div>
+          </td>
+        </tr>
+        <!-- フリガナ -->
+        <tr class="hide-on-amazon-pay">
+          <th class="u-text--body">{{ 'customer.general.kana.value' | t }}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span></th>
+          <td>
+            <div class="c-form_table__name {% if shop_form_settings['kana_1_field'] %} is-single{% endif %}">
+              {% if shop_form_settings['kana_1_field'] %}
+                <input class="u-text--input u-color__input--bg u-color__border--input validate[required,custom[katakana]]" type="text" placeholder="{{ 'customer.placeholder.full_kana_name.value' | t }}" id='order_billing_address_attributes_kana01' name='order[billing_address_attributes][kana01]' value='{% if order.billing_address %}{{ order.billing_address.kana01 }}{% else %}{{ order.customer.billing_address.kana01 }}{% endif %}'>
+              {% else %}
+                <input class="u-text--input u-color__input--bg u-color__border--input validate[required,custom[katakana]]" type="text" placeholder="{{ 'customer.placeholder.family_kana_name.value' | t }}" id='order_billing_address_attributes_kana01' name='order[billing_address_attributes][kana01]' value='{% if order.billing_address %}{{ order.billing_address.kana01 }}{% else %}{{ order.customer.billing_address.kana01 }}{% endif %}'>
+                <input class="u-text--input u-color__input--bg u-color__border--input validate[required,custom[katakana]]" type="text" placeholder="{{ 'customer.placeholder.kana_name.value' | t }}" id='order_billing_address_attributes_kana02' name='order[billing_address_attributes][kana02]' value='{% if order.billing_address %}{{ order.billing_address.kana02 }}{% else %}{{ order.customer.billing_address.kana02 }}{% endif %}'>
+              {% endif %}
+            </div>
+          </td>
+        </tr>
+        <!-- 郵便番号 -->
+        <tr class="hide-on-amazon-pay">
+          <th class="u-text--body">{{ 'customer.general.zip.value' | t }}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span></th>
+          <td>
+            <div class="c-form_table__postcode {% if shop_form_settings['zip_1_field'] %} is-single{% endif %}">
+              <span class="u-text--body">&#12306;</span>
+              {% if shop_form_settings['zip_1_field'] %}
+                <input class="u-text--input u-color__input--bg u-color__border--input validate[required,custom[integer]]" type="text" id='order_billing_address_attributes_zip01' maxlength='7' name='order[billing_address_attributes][zip01]' placeholder='{{ 'customer.placeholder.full_zip.value' | t }}' value='{% if order.billing_address %}{{ order.billing_address.full_zip }}{% else %}{{ order.customer.billing_address.full_zip }}{% endif %}'>
+              {% else %}
+                <input class="u-text--input u-color__input--bg u-color__border--input validate[required,custom[integer]]" type="text" id='order_billing_address_attributes_zip01' maxlength='3' name='order[billing_address_attributes][zip01]' placeholder='{{ 'customer.placeholder.zip01.value' | t }}' value='{% if order.billing_address %}{{ order.billing_address.zip01 }}{% else %}{{ order.customer.billing_address.zip01 }}{% endif %}'>
+                <span class="u-text--body">&ndash;</span>
+                <input class="u-text--input u-color__input--bg u-color__border--input validate[required,custom[integer]]" type="text" id='order_billing_address_attributes_zip02' maxlength='4' name='order[billing_address_attributes][zip02]' placeholder='{{ 'customer.placeholder.zip02.value' | t }}' value='{% if order.billing_address %}{{ order.billing_address.zip02 }}{% else %}{{ order.customer.billing_address.zip02 }}{% endif %}'>
+              {% endif %}
+            </div>
+          </td>
+        </tr>
+        <!-- 都道府県 -->
+        <tr class="hide-on-amazon-pay">
+          <th class="u-text--body">{{ 'customer.general.prefecture.value' | t }}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span></th>
+          <td>
+            <label class="c-form_table__select">
+              <select class="u-text--input u-color__input--bg u-color__border--input validate[required]" id='order_billing_address_attributes_prefecture_name' name='order[billing_address_attributes][prefecture_id]'>
+                <option value="">{{ 'general.message.please_selected_option.value' | t }}</option>
+                {% for prefecture in prefectures %}
+                {% if order.billing_address %}
+                  <option value='{{ prefecture.id }}' {% if prefecture.id == order.billing_address.prefecture_id %}selected{% endif %}>{{ prefecture.name }}</option>
+                {% elsif order.customer.billing_address %}
+                  <option value='{{ prefecture.id }}' {% if prefecture.id == order.customer.billing_address.prefecture_id %}selected{% endif %}>{{ prefecture.name }}</option>
+                {% else %}
+                  <option value='{{ prefecture.id }}'>{{ prefecture.name }}</option>
+                {% endif %}
+              {% endfor %}
+              </select>
+            </label>
+          </td>
+        </tr>
+        <!-- 住所1 -->
+        <tr class="hide-on-amazon-pay">
+          <th class="u-text--body">{{ shop_form_settings['addr01_label'] }}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span></th>
+          <td><input class="u-text--input u-color__input--bg u-color__border--input validate[required]" type="text" id='order_billing_address_attributes_addr01' name='order[billing_address_attributes][addr01]' value='{% if order.billing_address %}{{ order.billing_address.addr01 }}{% else %}{{ order.customer.billing_address.addr01 }}{% endif %}' placeholder="{{ shop_form_settings['addr01_placeholder'] }}"></td>
+        </tr>
+        <!-- 住所2 -->
+        <tr class="hide-on-amazon-pay">
+          <th class="u-text--body">
+            {{ shop_form_settings['addr02_label'] }}
+            {% if shop_form_settings['addr02_require'] %}
+              <span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span>
+            {% endif %}
+          </th>
+          <td>
+            {% if shop_form_settings['addr03'] %}
+              <input class='u-text--input u-color__input--bg u-color__border--input {% if shop_form_settings["addr02_require"] %}validate[required]{% endif %}' type="text" id='order_billing_address_attributes_addr02' name='order[billing_address_attributes][addr02]' value='{% if order.billing_address %}{{ order.billing_address.addr02 }}{% elsif order.customer.billing_address %}{{ order.customer.billing_address.addr02 }}{% endif %}' placeholder="{{ shop_form_settings['addr02_placeholder'] }}">
+            {% else %}
+              <input class='u-text--input u-color__input--bg u-color__border--input {% if shop_form_settings["addr02_require"] %}validate[required]{% endif %}' type="text" id='order_billing_address_attributes_addr02' name='order[billing_address_attributes][addr02]' value="{% if order.billing_address %}{{ order.billing_address.addr02 }}{{ order.billing_address.addr03 }}{% elsif order.customer.billing_address %}{{ order.customer.billing_address.addr02 }}{{ order.customer.billing_address.addr03 }}{% endif %}" placeholder="{{ shop_form_settings['addr02_placeholder'] }}">
+            {% endif %}
+          </td>
+        </tr>
+        <!-- 住所3 -->
+        {% if shop_form_settings['addr03'] %}
+          <tr class="hide-on-amazon-pay">
+            <th class="u-text--body">{{ shop_form_settings['addr03_label'] }}</th>
+            <td><input class="u-text--input u-color__input--bg u-color__border--input" type="text" id='order_billing_address_attributes_addr03' name='order[billing_address_attributes][addr03]' value='{% if order.billing_address %}{{ order.billing_address.addr03 }}{% else %}{{ order.customer.billing_address.addr03 }}{% endif %}' placeholder="{{ shop_form_settings['addr03_placeholder'] }}"></td>
+          </tr>
+        {% endif %}
+        <!-- 電話番号 -->
+        <tr class="hide-on-amazon-pay">
+          <th class="u-text--body">{{ 'customer.general.tel.value' | t }}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span></th>
+          <td>
+            <div class="c-form_table__tel {% if shop_form_settings['tel_1_field'] %} is-single{% endif %}">
+              {% if shop_form_settings['tel_1_field'] %}
+                <input class="u-text--input u-color__input--bg u-color__border--input validate[required,custom[integer]]" type="tel" maxlength='12' name='order[billing_address_attributes][tel01]' placeholder='{{ 'customer.placeholder.full_tel.value' | t }}' value='{% if order.billing_address %}{{ order.billing_address.full_tel }}{% else %}{{ order.customer.billing_address.full_tel }}{% endif %}'>
+              {% else %}
+                <input class="u-text--input u-color__input--bg u-color__border--input validate[required,custom[integer]]" type="tel" maxlength='5' name='order[billing_address_attributes][tel01]' placeholder='{{ 'customer.placeholder.tel01.value' | t }}' value='{% if order.billing_address %}{{ order.billing_address.tel01 }}{% else %}{{ order.customer.billing_address.tel01 }}{% endif %}'>
+                <span class="u-text--body">&ndash;</span>
+                <input class="u-text--input u-color__input--bg u-color__border--input validate[required,custom[integer]]" type="tel" maxlength='4' name='order[billing_address_attributes][tel02]' placeholder='{{ 'customer.placeholder.tel02.value' | t }}' value='{% if order.billing_address %}{{ order.billing_address.tel02 }}{% else %}{{ order.customer.billing_address.tel02 }}{% endif %}'>
+                <span class="u-text--body">&ndash;</span>
+                <input class="u-text--input u-color__input--bg u-color__border--input validate[required,custom[integer]]" type="tel" maxlength='4' name='order[billing_address_attributes][tel03]' placeholder='{{ 'customer.placeholder.tel03.value' | t }}' value='{% if order.billing_address %}{{ order.billing_address.tel03 }}{% else %}{{ order.customer.billing_address.tel03 }}{% endif %}'>
+              {% endif %}
+            </div>
+          </td>
+        </tr>
+        <!-- FAX番号 -->
+        {% if shop_form_settings['fax'] %}
+          <tr class="hide-on-amazon-pay">
+            <th class="u-text--body">{{ 'customer.general.fax.value' | t }}</th>
+            <td>
+              <div class="c-form_table__tel {% if shop_form_settings['fax_1_field'] %} is-single{% endif %}">
+                {% if shop_form_settings['fax_1_field'] %}
+                  <input class="u-text--input u-color__input--bg u-color__border--input validate[custom[integer]]" type="tel" maxlength='12' name='order[billing_address_attributes][fax01]' placeholder='{{ 'customer.placeholder.full_tel.value' | t }}' value='{% if order.billing_address %}{{ order.billing_address.full_fax }}{% else %}{{ order.customer.billing_address.full_fax }}{% endif %}'>
+                {% else %}
+                  <input class="u-text--input u-color__input--bg u-color__border--input validate[custom[integer]]" type="tel" maxlength='5' name='order[billing_address_attributes][fax01]' placeholder='{{ 'customer.placeholder.tel01.value' | t }}' value='{% if order.billing_address %}{{ order.billing_address.fax01 }}{% else %}{{ order.customer.billing_address.fax01 }}{% endif %}'>
+                  <span class="u-text--body">&ndash;</span>
+                  <input class="u-text--input u-color__input--bg u-color__border--input validate[custom[integer]]" type="tel" maxlength='4' name='order[billing_address_attributes][fax02]' placeholder='{{ 'customer.placeholder.tel02.value' | t }}' value='{% if order.billing_address %}{{ order.billing_address.fax02 }}{% else %}{{ order.customer.billing_address.fax02 }}{% endif %}'>
+                  <span class="u-text--body">&ndash;</span>
+                  <input class="u-text--input u-color__input--bg u-color__border--input validate[custom[integer]]" type="tel" maxlength='4' name='order[billing_address_attributes][fax03]' placeholder='{{ 'customer.placeholder.tel03.value' | t }}' value='{% if order.billing_address %}{{ order.billing_address.fax03 }}{% else %}{{ order.customer.billing_address.fax03 }}{% endif %}'>
+                {% endif %}
+              </div>
+            </td>
+          </tr>
+        {% endif %}
+        <!-- 会社名 -->
+        {% if shop_form_settings['company'] %}
+          <tr>
+            <th class="u-text--body">{{ 'customer.general.company_name.value' | t }}</th>
+            <td><input class="u-text--input u-color__input--bg u-color__border--input" type="text" name='order[billing_address_attributes][company_name]' placeholder='{{ 'customer.placeholder.company.value' | t }}' value='{% if order.billing_address %}{{ order.billing_address.company_name }}{% else %}{{ order.customer.billing_address.company_name }}{% endif %}'></td>
+          </tr>
+        {% endif %}
+        <!-- メールアドレス -->
+        <tr>
+          <th class="u-text--body">{{ 'customer.general.email.value' | t }}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span></th>
+          <td>
+          {% if customer_signed_in %}
+            <input name='order[email]' type='hidden' value='{{ current_customer.email }}'>
+            <input name='order[customer_attributes][email]' type='hidden' value='{{ current_customer.email }}'>
+            <input class="u-text--input u-color__input--bg u-color__border--input" disabled id='email' type='email' value='{{ current_customer.email }}' placeholder="">
+          {% else %}
+            <input name='order[email]' class="u-text--input u-color__input--bg u-color__border--input js-email-autocomplete validate[required,custom[email],ajax[emailCheck]]" id='email' type='email' value='{% if order.email %}{{ order.email }}{% elsif line_email %}{{ line_email }}{% endif %}' placeholder="{{ 'customer.placeholder.email.value' | t }}">
+            <input name='order[customer_attributes][email]' type='hidden' value='{{ order.email }}' id='customer_email'>
+          {% endif %}
+          </td>
+        </tr>
+        <!-- メールアドレス（確認） -->
+        <tr>
+          <th class="u-text--body">{{ 'customer.general.confirm_email.value' | t }}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span></th>
+          <td>
+            {% if customer_signed_in %}
+              <input class='u-text--input u-color__input--bg u-color__border--input' disabled name='order[email_confirmation]' type='email' value='{{ current_customer.email }}' placeholder="{{ 'customer.placeholder.email.value' | t }}">
+            {% else %}
+              <input class='u-text--input u-color__input--bg u-color__border--input js-email-autocomplete validate[required,custom[email],equals[email],ajax[emailCheck]]' name='order[email_confirmation]' type='email' value='{% if order.email %}{{ order.email }}{% elsif line_email %}{{ line_email }}{% endif %}' placeholder="{{ 'customer.placeholder.email.value' | t }}">
+            {% endif %}
+          </td>
+        </tr>
+        
+        <!-- パスワード -->
+        <tr>
+          {% unless customer_signed_in %}
+
+            <th class="u-text--body">パスワード<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span></th>
+            <td>
+                <label>パスワード</label>
+                <input class='u-text--input u-color__input--bg u-color__border--input validate[required]' type='password' placeholder='パスワード' name='order[customer_attributes][password]'>
+            
+            </td>
+          {% endunless %}
+        </tr>
+
+            
+        <!-- 性別 -->
+        {% if shop_form_settings['sex'] %}
+          <tr>
+            <th class="u-text--body">{{ 'customer.general.sex.value' | t }}{% if shop_form_settings['sex_require'] %}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span>{% endif %}</th>
+            <td>
+              <label class="c-form_table__select">
+                <select class="u-text--input u-color__input--bg u-color__border--input{% if shop_form_settings['sex_require'] %} validate[required]{% endif %}" name='order[customer_attributes][sex_id]'>
+                  <option value="">{{ 'general.message.please_selected_option.value' | t }}</option>
+                  <option value="1"{% if order.customer.sex.id == 1 %} selected{% endif %}>{{ 'customer.general.man.value' | t }}</option>
+                  <option value="2"{% if order.customer.sex.id == 2 %} selected{% endif %}>{{ 'customer.general.woman.value' | t }}</option>
+                </select>
+              </label>
+            </td>
+          </tr>
+        {% endif %}
+        <!-- 職業 -->
+        {% if shop_form_settings['job'] %}
+          <tr>
+            <th class="u-text--body">{{ 'customer.general.job.value' | t }}{% if shop_form_settings['job_require'] %}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span>{% endif %}</th>
+            <td>
+              <label class="c-form_table__select">
+                <select class="u-text--input u-color__input--bg u-color__border--input {% if shop_form_settings['job_require'] %}validate[required]{% endif %}" name='order[customer_attributes][job_id]'>
+                  <option value=''>{{ 'general.message.please_selected_option.value' | t }}</option>
+                  {% for j in jobs %}
+                    <option value="{{ j.id }}" {% if order.customer.job.id == j.id %}selected{% endif %}>{{ j.name }}</option>
+                  {% endfor %}
+                </select>
+              </label>
+            </td>
+          </tr>
+        {% endif %}
+        <!-- 生年月日 -->
+        {% if shop_form_settings["birth"] or order.age_check_required? %}
+          <tr>
+            <th class="u-text--body">{{ 'customer.general.birth.value' | t }}{% if order.age_check_required? %}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span>{% elsif shop_form_settings["birth_require"] %}<span class="u-color__text--alert">{{ 'general.general.required.value' | t }}</span>{% endif %}</th>
+            <td>
+              <div class="c-form_table__tel">
+                <label class="c-form_table__select">
+                  <select class='u-text--input u-color__input--bg u-color__border--input{% if order.age_check_required? %} validate[required,custom[ageCheck]]{% elsif shop_form_settings["birth_require"] %} validate[required]{% else %} validate[condRequired[order_customer_attributes_birth_2i,order_customer_attributes_birth_3i]]{% endif %}' id='order_customer_attributes_birth_1i' name='order[customer_attributes][birth(1i)]'>
+                    {% if birth_year_default_value == 0 %}
+                      <option value="">----</option>
+                    {% endif %}
+                    {% assign now_year = "now" | date: "%Y" %}
+                    {% assign past_100_years = "now" | date: "%Y" | minus: 100 %}
+                    {% for y in (past_100_years..now_year) %}
+                      {% if birth_year_default_value == y %}
+                        {% if order.customer.birth_year == null %}
+                          <option value="" selected="true">----</option>
+                        {% else %}
+                          <option value="">----</option>
+                        {% endif %}
+                      {% endif %}
+                      <option value="{{ y }}" {% if order.customer.birth_year == y %}selected{% endif %}>{{ y }}</option>
+                    {% endfor %}
+                  </select>
+                </label>
+                <span class="u-text--body">{{ 'customer.general.year.value' | t }}</span>
+                <label class="c-form_table__select">
+                  <select class='u-text--input u-color__input--bg u-color__border--input{% if order.age_check_required? %} validate[required,custom[ageCheck]]{% elsif shop_form_settings["birth_require"] %} validate[required]{% else %} validate[condRequired[order_customer_attributes_birth_1i,order_customer_attributes_birth_3i]]{% endif %}' id='order_customer_attributes_birth_2i' name='order[customer_attributes][birth(2i)]'>
+                    <option value=''>--</option>
+                    {% for m in (1..12) %}
+                      <option value="{{ m }}" {% if order.customer.birth_month == m %}selected{% endif %}>{{ m }}</option>
+                    {% endfor %}
+                  </select>
+                </label>
+                <span class="u-text--body">{{ 'customer.general.month.value' | t }}</span>
+                <label class="c-form_table__select">
+                  <select class='u-text--input u-color__input--bg u-color__border--input{% if order.age_check_required? %} validate[required,custom[ageCheck]]{% elsif shop_form_settings["birth_require"] %} validate[required]{% else %} validate[condRequired[order_customer_attributes_birth_1i,order_customer_attributes_birth_2i]]{% endif %}' id='order_customer_attributes_birth_3i' name='order[customer_attributes][birth(3i)]'>
+                    <option value=''>--</option>
+                    {% for d in (1..31) %}
+                      <option value="{{ d }}" {% if order.customer.birth_day == d %}selected{% endif %}>{{ d }}</option>
+                    {% endfor %}
+                  </select>
+                </label>
+                <span class="u-text--body">{{ 'customer.general.day.value' | t }}</span>
+              </div>
+            </td>
+          </tr>
+        {% endif %}
+      </tbody>
+    </table>
+  </div>
+</div>

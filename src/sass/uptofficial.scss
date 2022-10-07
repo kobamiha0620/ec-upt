@@ -917,3 +917,12 @@ main {
 }
 
 @media screen and (max-width: var.$spbp) {}
+
+
+.headingttl{
+    white-space: nowrap;
+    text-indent: -9999px;
+    width: 0;
+    height: 0;
+    display: none;
+}
