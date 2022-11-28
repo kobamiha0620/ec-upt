@@ -8,7 +8,7 @@
             <div class="c-cart_submit">
               {% if customer_signed_in and customize_preview_mode != true %}
                 <div class="c-cart_submit__block u-color__border--border">
-                  <a class="c-cart_submit__block__submit u-text--btn u-color__btn--bg" href="/shop/order/new" style="background:#FF583B!important;">{{ 'orders.general.to_checkout.value' | t }}</a>
+                  <a class="c-cart_submit__block__submit u-text--btn u-color__btn--bg" style="background:  #FF583B!important;" href="/shop/order/new">{{ 'orders.general.to_checkout.value' | t }}</a>
                 </div>
               {% else %}
                 {% if section.settings.login_form_on_top %}
@@ -21,7 +21,7 @@
                     <div class="c-form_input">
                       <input class="c-cart_submit__block__input u-text--input u-color__input--bg u-color__border--input validate[required,minSize[8]]" type="password" placeholder="{{ 'customer.placeholder.password.value' | t }}" id="customer_password" name="customer[password]">
                     </div>
-                    <button class="c-cart_submit__block__submit u-text--btn u-color__btn--bg" type="submit">{{ 'account.general.login_and_purchase.value' | t }}</button>
+                    <button class="c-cart_submit__block__submit u-text--btn u-color__btn--bg" style="background:  #FF583B!important;" type="submit">{{ 'account.general.login_and_purchase.value' | t }}</button>
                   </form>
                   {% comment %} <div class="c-cart_submit__block u-color__border--border">
                     <a class="c-cart_submit__block__submit u-text--btn u-color__btn--bg" href="/shop/customers/sign_in?customer_return_to=%2Fshop%2Forder%2Fnew">{{ 'account.general.register_and_purchase.value' | t }}</a>
@@ -30,9 +30,9 @@
                     {% endif %}
                   </div> {% endcomment %}
                   <div class="c-cart_submit__block u-color__border--border">
-                    <a class="c-cart_submit__block__submit u-text--btn u-color__btn--bg" href="/shop/order/new">{{ 'account.general.register_and_purchase.value' | t }}</a>
+                    <a class="c-cart_submit__block__submit u-text--btn u-color__btn--bg" style="background:  #FF583B!important;" href="/shop/order/new">{{ 'account.general.register_and_purchase.value' | t }}</a>
                     {% if section.settings.guest == true or section.settings.guest == 'true' %}
-                      <a class="c-cart_submit__block__link u-text--link" href="/shop/order/new">{{ 'account.general.not_register_and_purchase.value' | t }}</a>
+                      <a class="c-cart_submit__block__link u-text--link" style="background:  #FF583B!important;" href="/shop/order/new">{{ 'account.general.not_register_and_purchase.value' | t }}</a>
                     {% endif %}
                   </div>
                 {% else %}
@@ -43,7 +43,7 @@
                     {% endif %}
                   </div> {% endcomment %}
                   <div class="c-cart_submit__block u-color__border--border">
-                    <a class="c-cart_submit__block__submit u-text--btn u-color__btn--bg" href="/shop/order/new">{{ 'account.general.register_and_purchase.value' | t }}</a>
+                    <a class="c-cart_submit__block__submit u-text--btn u-color__btn--bg" style="background:  #FF583B!important;" href="/shop/order/new">{{ 'account.general.register_and_purchase.value' | t }}</a>
                     {% if section.settings.guest == true or section.settings.guest == 'true' %}
                       <a class="c-cart_submit__block__link u-text--link" href="/shop/order/new?register_as_member=0">{{ 'account.general.not_register_and_purchase.value' | t }}</a>
                     {% endif %}

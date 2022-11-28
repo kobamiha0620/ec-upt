@@ -543,16 +543,11 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
 
 
-{{ 'shop/products' | javascript_include_tag }}
-{% assign p = product %}
-
 
 
 <main class="l-container js-main-container uptprodcut" role="main" id="product-show-view">
 
 <!-- セット商品 -->
-    
-    {% if product.id == 5 %}
     
 
 
@@ -613,15 +608,11 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
     
 
 
-    {% endif %}
-
 <!-- /セット商品 -->
 
 
 <!-- トナー化粧品 -->
 
-    {% if product.id == 2 %}
-    
 
 
     
@@ -722,15 +713,11 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
     
 
 
-    {% endif %}
-
 <!-- /トナー化粧品 -->
 
 
 <!-- ミルク乳液 -->
 
-    {% if product.id == 3 %}
-    
 
 
     
@@ -833,16 +820,12 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
     
 
 
-    {% endif %}
-
 <!-- /ミルク乳液 -->
 
 
 
 <!-- クリーム -->
 
-    {% if product.id == 4 %}
-    
 
 
     
@@ -945,8 +928,6 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
     
 
-
-    {% endif %}
 
 <!-- /クリーム -->
 
@@ -1112,8 +1093,6 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
     
 <!-- セット商品 -->
-
-{% if product.id == 5 %}
 
 
 
@@ -1296,8 +1275,6 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
 
 
-{% endif %}
-
 <!-- /セット商品 -->
 
 <!-- 共通block/point -->
@@ -1349,8 +1326,6 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
     <!-- セット化粧品 -->
     
-        {% if product.id != 5 %}
-    
            
     
 
@@ -1372,13 +1347,9 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
     
         
     
-        {% endif %}
-    
     <!-- /セット化粧品 -->
 
     <!-- トナー化粧品 -->
-    
-    {% if product.id != 2 %}
     
            
     
@@ -1401,16 +1372,12 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
         
     
     
-            {% endif %}
-    
     <!-- /トナー化粧品 -->
 
 
 
     <!-- ミルク乳液 -->
     
-        {% if product.id != 3 %}
-        
                
         
     
@@ -1433,14 +1400,10 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
         
 
     
-            {% endif %}
-    
     <!-- /ミルク乳液 -->
 
     <!-- クリーム -->
     
-        {% if product.id != 4 %}
-        
                 
         
     
@@ -1463,8 +1426,6 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
         
 
         
-            {% endif %}
-    
     <!-- /クリーム -->
 
 
@@ -1476,32 +1437,10 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
     </section>
     
 
-        {% comment %} review {% endcomment %}
-        {% if base_info.use_review? %}
-        {% section 'products_show_review' %}
-        {% endif %}
-        {% comment %} 関連商品 {% endcomment %}
-        {% if base_info.use_related_products_on_detail? and p.active_related_products.size != 0 %}
-        {% section 'products_show_recommend' %}
-        {% endif %}
-    
-
 </main>
 
 
 <!-- product01 -->
-
-
-    <link rel="stylesheet" href="{{ theme_file_root_path }}/assets/product.css" type="text/css">
-    
-    {% content_for meta_description %}
-    {% endcontent_for %}
-    
-    {% content_for meta_keywords %}
-    {% endcontent_for %}
-    
-    {% content_for title %}
-    {% endcontent_for %}
 
 
 

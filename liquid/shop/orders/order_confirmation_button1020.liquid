@@ -1,0 +1,49 @@
+<section data-section-id="order_confirmation_button" data-section-type="order_confirmation_button">
+  {% if section.settings.floating_view == true or section.settings.floating_view == "true" %}
+  <form class="p-checkout_confirm__form" action="/shop/order/confirm" method="post" accept-charset="UTF-8">
+    <div class="p-checkout_confirm__float">
+      <div class="p-checkout_confirm__float_content">
+        {% authenticity_token_tag %}
+        <input name="_method" type="hidden" value="put">
+        {% if customize_preview_mode %}
+          <p class="p-checkout_confirm__total">合計&nbsp;<span class="p-checkout_confirm__price u-font__en">&yen;x,xxx</span></p>
+        {% else %}
+          <p class="p-checkout_confirm__total">合計&nbsp;<span class="p-checkout_confirm__price u-font__en">&yen;{{ order.total | number_with_delimiter }}</span></p>
+        {% endif %}
+        <button class="p-checkout_confirm__submit u-color__text--base u-color__bg--accent" type="submit">{{ 'orders.general.confirm_order.value' | t }}</button>
+      </div>
+    </div>
+    <div class="p-checkout_confirm__static p-checkout_confirm__inner__list__block--bottom">
+      {% authenticity_token_tag %}
+      <input name="_method" type="hidden" value="put">
+      <button class="p-checkout_confirm__inner__list__block__submit u-text--btn u-color__btn--bg" type="submit">{{ 'orders.general.confirm_order.value' | t }}</button>
+    </div>
+  </form>
+  {% else %}
+    <form class="p-checkout_confirm__inner__list__block--bottom" action="/shop/order/confirm" method="post" accept-charset="UTF-8">
+      {% authenticity_token_tag %}
+      <input name="_method" type="hidden" value="put">
+      <button class="p-checkout_confirm__inner__list__block__submit u-text--btn u-color__btn--bg" type="submit">{{ 'orders.general.confirm_order.value' | t }}</button>
+    </form>
+  {% endif %}
+  <a style="display: none;" class="p-checkout_confirm__inner__list__block__back u-text--link" href="/shop/order">{{ 'general.action.fix_input_content.value' | t }}</a>
+</section>
+
+<style>
+  .p-checkout_confirm__static{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  #AmazonPayButton, .amazon_pay_button_sp_ec{
+    height: 45px; width: 200px; margin: 30px auto; position: relative;
+    display: block;
+  }
+  @media screen and (max-width: 720px){
+    .c-steps_to_order__number::before, .c-steps_to_order__number::after {
+      width: max(24px, min(12vw, 80px));
+    }
+  }
+
+
+</style>

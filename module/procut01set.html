@@ -5,16 +5,11 @@
 
 
 
-{{ 'shop/products' | javascript_include_tag }}
-{% assign p = product %}
-
 
 
 <main class="l-container js-main-container uptprodcut" role="main" id="product-show-view">
 
 <!-- セット商品 -->
-    
-    {% if product.id == 5 %}
     
 
 
@@ -75,15 +70,11 @@
     
 
 
-    {% endif %}
-
 <!-- /セット商品 -->
 
 
 <!-- トナー化粧品 -->
 
-    {% if product.id == 2 %}
-    
 
 
     
@@ -184,15 +175,11 @@
     
 
 
-    {% endif %}
-
 <!-- /トナー化粧品 -->
 
 
 <!-- ミルク乳液 -->
 
-    {% if product.id == 3 %}
-    
 
 
     
@@ -295,16 +282,12 @@
     
 
 
-    {% endif %}
-
 <!-- /ミルク乳液 -->
 
 
 
 <!-- クリーム -->
 
-    {% if product.id == 4 %}
-    
 
 
     
@@ -407,8 +390,6 @@
 
     
 
-
-    {% endif %}
 
 <!-- /クリーム -->
 
@@ -574,8 +555,6 @@
 
     
 <!-- セット商品 -->
-
-{% if product.id == 5 %}
 
 
 
@@ -758,8 +737,6 @@
 
 
 
-{% endif %}
-
 <!-- /セット商品 -->
 
 <!-- 共通block/point -->
@@ -811,8 +788,6 @@
 
     <!-- セット化粧品 -->
     
-        {% if product.id != 5 %}
-    
            
     
 
@@ -834,13 +809,9 @@
     
         
     
-        {% endif %}
-    
     <!-- /セット化粧品 -->
 
     <!-- トナー化粧品 -->
-    
-    {% if product.id != 2 %}
     
            
     
@@ -863,16 +834,12 @@
         
     
     
-            {% endif %}
-    
     <!-- /トナー化粧品 -->
 
 
 
     <!-- ミルク乳液 -->
     
-        {% if product.id != 3 %}
-        
                
         
     
@@ -895,14 +862,10 @@
         
 
     
-            {% endif %}
-    
     <!-- /ミルク乳液 -->
 
     <!-- クリーム -->
     
-        {% if product.id != 4 %}
-        
                 
         
     
@@ -925,8 +888,6 @@
         
 
         
-            {% endif %}
-    
     <!-- /クリーム -->
 
 
@@ -938,32 +899,10 @@
     </section>
     
 
-        {% comment %} review {% endcomment %}
-        {% if base_info.use_review? %}
-        {% section 'products_show_review' %}
-        {% endif %}
-        {% comment %} 関連商品 {% endcomment %}
-        {% if base_info.use_related_products_on_detail? and p.active_related_products.size != 0 %}
-        {% section 'products_show_recommend' %}
-        {% endif %}
-    
-
 </main>
 
 
 <!-- product01 -->
-
-
-    <link rel="stylesheet" href="{{ theme_file_root_path }}/assets/product.css" type="text/css">
-    
-    {% content_for meta_description %}
-    {% endcontent_for %}
-    
-    {% content_for meta_keywords %}
-    {% endcontent_for %}
-    
-    {% content_for title %}
-    {% endcontent_for %}
 
 
 

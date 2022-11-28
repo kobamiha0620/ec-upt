@@ -1,8 +1,8 @@
 {{ 'shop/carts' | javascript_include_tag }}
 
 <main class="l-container js-main-container" role="main" id="cart-show-view">
-  <div class="l-container__row u-margin__top--60">
-    {{ 'notice' | flash: 'control-alert alert-success', 'text u-color__bg--bg u-color__text--alert' }}
+  <div class="l-container__row mt30">
+    {% comment %} {{ 'notice' | flash: 'control-alert alert-success', 'text u-color__bg--bg u-color__text--alert' }} {% endcomment %}
     {{ 'alert' | flash: 'control-alert alert-danger', 'text u-color__bg--bg u-color__text--alert' }}
     {{ 'error' | flash: 'control-alert alert-danger', 'text u-color__bg--bg u-color__text--alert' }}
     {{ 'order_errors' | flash: 'control-alert alert-danger', 'text u-color__bg--bg u-color__text--alert' }}
@@ -12,10 +12,12 @@
       </div>
     </header>
   </div>
-  <div class="l-container__row u-margin__top--60">
+  <div class="l-container__row mt60_0">
     {% section 'carts_show_content' %}
   </div>
-  {% if current_customer != null %}
+  <div class="cart__height"></div>
+
+  {% comment %} {% if current_customer != null %}
     <div class="l-container__row u-margin__top--60 u-margin__bottom--100">
 
       <section class="p-browsing_history">
@@ -167,7 +169,7 @@
       </section>
 
     </div>
-  {% endif %}
+  {% endif %} {% endcomment %}
 
 
   {% comment %} related product {% endcomment %}
@@ -195,3 +197,26 @@
 
 {% content_for title %}
 {% endcontent_for %}
+
+<style>
+
+
+  .mt30{
+    margin-top: 60px;
+  }
+  .mt60_0{
+    margin-top: 60px;
+  }
+  @media screen and (max-width: 720px){
+    .mt30{
+      margin-top: 30px;
+    }
+    .mt60_0{
+      margin-top: 0;
+    }
+    .p-cart_content__inner__side{
+      margin-top: 10px;
+
+    }
+  }
+</style>

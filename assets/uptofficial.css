@@ -1527,8 +1527,8 @@ h2.upthome__illust--ttl {
   white-space: nowrap;
   text-indent: -9999px;
   background-repeat: no-repeat;
-  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/0926_20220921163713/ec_force/assets/images/uptorigin/0926/fv__feature.svg");
-  width: 96px;
+  background-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/0926_20220921163713/ec_force/assets/images/uptorigin/0926/fv_feature2.svg");
+  width: 100px;
   height: 62px;
   position: absolute;
   top: 158px;
@@ -1549,7 +1549,7 @@ h2.upthome__illust--ttl {
             animation: rotation 10s infinite linear;
   }
   .upthome__fv--feature-txt {
-    width: 19.5vw;
+    width: 20.3vw;
     height: 12.8vw;
     position: absolute;
     top: 35vw;

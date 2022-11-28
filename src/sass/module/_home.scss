@@ -894,8 +894,8 @@ h2.upthome__illust--ttl{
             animation: rotation 10s infinite linear;
             &-txt{
                 @include var.bg;
-                background-image: url(var.$imgpath + '0926/fv__feature.svg');
-                width: 96px;
+                background-image: url(var.$imgpath + '0926/fv_feature2.svg');
+                width: 100px;
                 height: 62px;
                 position: absolute;
 
@@ -916,7 +916,7 @@ h2.upthome__illust--ttl{
                 right: 6vw;
                 animation: rotation 10s infinite linear;
                 &-txt{
-                    width: 19.5vw;
+                    width: 20.3vw;
                     height: 12.8vw;
                     position: absolute;
 
