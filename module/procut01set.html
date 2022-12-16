@@ -9,6 +9,72 @@
 
 <main class="l-container js-main-container uptprodcut" role="main" id="product-show-view">
 
+<!-- 定期商品 -->
+
+
+
+    
+        <section class="uptproduct__fv">
+            <!-- ここから -->
+            <div class="uptblc__buyblc">
+                <div class="uptblc__buyblc--img">
+                    <img src="/assets/images/uptorigin/0914/product_setimage.jpg" alt="Upt SKINCARE SET" width="auto" height="auto" class="pcImg">
+                    <img src="/assets/images/uptorigin/0914/product_setimage-sp.png" alt="Upt SKINCARE SET" width="auto" height="auto" class="spImg">
+                </div>
+        
+                <div class="uptblc__buyblc__spborder"></div>
+        
+                <div class="uptblc__buyblc--s">
+                    <div class="uptblc__buyblc--rblc">
+                        <div class="uptblc__buyblc--contents">
+                            <div>
+                             <h1 class="headingttl">【定期】Upt SKINCARE SET ウプト スキンケアセット</h1>   
+                            <p class="upt__name uptblc__buyblc--txt00">Upt<br>SKINCARE SET</p>
+                            <p class="uptblc__buyblc--txt01">【定期】ウプト スキンケアセット</p>
+                            <p class="uptblc__buyblc--txt02">肌に密度の⾼いうるおいを与えるスマートスキンケアセット。3つのアイテムをライン使いしていただくことで保湿⼒とテクスチャーの良さをより実感いただけます。</p>
+        
+                            <p class="upt__price uptblc__buyblc--txt03">¥7,590 (tax in)</p>
+                        
+        
+                            <div class="uptblc__buyblc--btn">
+                                <!-- 商品選択フォーム -->
+                                <form action="/shop/cart/add" method="post">
+                                    <div style="display: none">
+                                    <!-- 規格選択 -->
+                                    <input id="variant-id" type="hidden" name="variant_id" value="{{ product.master.id }}">
+                                    <div id="option_types"></div>
+        
+                                    <!-- 数量選択 -->
+                                    <label>数量</label>
+                                    <input id="text-out-of-stock" value="在庫切れ" disabled style="display:none;">
+                                    <select id="quantity" name="quantity" style="display:none;"></select>
+        
+                                    <!-- 再入荷お知らせ -->
+                                    <a id="btn-stock-waiting-list" href="javascript:void(0);" style='display:none;'>再入荷お知らせ</a>
+                                    </div>
+                                    <!-- /display: none -->
+                                    
+                                    <!-- カート追加 -->
+                                    <button id="btn-add"><p class="txt">購入はこちら</p><span></span></button>
+        
+                                </form>
+        
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ここまで -->
+        </section>
+    
+
+
+<!-- /セット商品 -->
+
+
+
+
 <!-- セット商品 -->
     
 
@@ -18,8 +84,8 @@
             <!-- ここから -->
             <div class="uptblc__buyblc">
                 <div class="uptblc__buyblc--img">
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/product_setimage.jpg" alt="Upt SKINCARE SET" width="auto" height="auto" class="pcImg">
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/product_setimage-sp.png" alt="Upt SKINCARE SET" width="auto" height="auto" class="spImg">
+                    <img src="/assets/images/uptorigin/0914/product_setimage.jpg" alt="Upt SKINCARE SET" width="auto" height="auto" class="pcImg">
+                    <img src="/assets/images/uptorigin/0914/product_setimage-sp.png" alt="Upt SKINCARE SET" width="auto" height="auto" class="spImg">
                 </div>
         
                 <div class="uptblc__buyblc__spborder"></div>
@@ -84,8 +150,8 @@
         <!-- ここから -->
         <div class="uptblc__buyblc">
             <div class="uptblc__buyblc--img">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_toner.jpg" alt="ウプト バランシングトナー" width="auto" height="auto" class="pcImg">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_toner-sp.jpg" alt="ウプト バランシングトナー" width="auto" height="auto" class="spImg">
+                <img src="/assets/images/uptorigin/0926/img_toner.jpg" alt="ウプト バランシングトナー" width="auto" height="auto" class="pcImg">
+                <img src="/assets/images/uptorigin/0926/img_toner-sp.jpg" alt="ウプト バランシングトナー" width="auto" height="auto" class="spImg">
             </div>
 
             <div class="uptblc__buyblc__spborder"></div>
@@ -97,7 +163,7 @@
                             <div class="uptblc__buyblc--singleblc">
                                 <h1 class="headingttl">Upt BALANCING TONER ウプト バランシングトナー</h1>
                                 <p class="upt__name uptblc__buyblc--single-ttl">BALANCING<br>TONER</p>
-                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set01.png" alt="ウプト バランシングトナー" width="auto" height="auto">
+                                <img src="/assets/images/uptorigin/0914/point_set01.png" alt="ウプト バランシングトナー" width="auto" height="auto">
                             </div>
                             <p class="uptblc__buyblc--single-jp">ウプト バランシングトナー<br>〈化粧⽔〉</p>
                             <p class="uptblc__buyblc--single-it">155mL</p>
@@ -142,8 +208,8 @@
 
         <div class="uptproduct__extop">
             <div class="uptproduct__extop--img">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_toner-ex02.jpg" alt="ウプト バランシングトナー" width="auto" height="auto" class="pcImg">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_toner-ex02-sp.jpg" alt="ウプト バランシングトナー" width="auto" height="auto" class="spImg">
+                <img src="/assets/images/uptorigin/0926/img_toner-ex02.jpg" alt="ウプト バランシングトナー" width="auto" height="auto" class="pcImg">
+                <img src="/assets/images/uptorigin/0926/img_toner-ex02-sp.jpg" alt="ウプト バランシングトナー" width="auto" height="auto" class="spImg">
             </div>
             <div class="uptproduct__ex--line">
                 <div class="uptproduct__extop--inner">
@@ -160,8 +226,8 @@
                 <div class="uptproduct__exbtm--no">
                     <p class="uptproduct__exbtm--subttl">5つのフリー処方</p>
                     <div class="uptproduct__exbtm--noimg">
-                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_toner.svg" alt="バランシングトナー フリー処方" width="auto" height="auto" class="pcImg">
-                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_toner-sp.svg" alt="バランシングトナー フリー処方" width="auto" height="auto" class="spImg">
+                        <img src="/assets/images/uptorigin/0926/component_toner.svg" alt="バランシングトナー フリー処方" width="auto" height="auto" class="pcImg">
+                        <img src="/assets/images/uptorigin/0926/component_toner-sp.svg" alt="バランシングトナー フリー処方" width="auto" height="auto" class="spImg">
                     </div>
                 </div>
             </div>
@@ -189,8 +255,8 @@
         <!-- ここから -->
         <div class="uptblc__buyblc">
             <div class="uptblc__buyblc--img">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_milk.jpg" alt="コンディショニングミルク" width="auto" height="auto" class="pcImg">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_milk-sp.jpg" alt="コンディショニングミルク" width="auto" height="auto" class="spImg">
+                <img src="/assets/images/uptorigin/0926/img_milk.jpg" alt="コンディショニングミルク" width="auto" height="auto" class="pcImg">
+                <img src="/assets/images/uptorigin/0926/img_milk-sp.jpg" alt="コンディショニングミルク" width="auto" height="auto" class="spImg">
             </div>
 
             <div class="uptblc__buyblc__spborder"></div>
@@ -202,7 +268,7 @@
                             <div class="uptblc__buyblc--singleblc">
                                 <h1 class="headingttl">Upt CONDITIONING MILK ウプト コンディショニングミルク</h1>
                                 <p class="upt__name uptblc__buyblc--single-ttl">CONDITIONING<br>MILK</p>
-                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set02.png" alt="コンディショニングミルク" width="auto" height="auto">
+                                <img src="/assets/images/uptorigin/0914/point_set02.png" alt="コンディショニングミルク" width="auto" height="auto">
                             </div>
                             <h2 class="uptblc__buyblc--single-jp">ウプト コンディショニングミルク<br>〈乳液〉</h2>
                             <p class="uptblc__buyblc--single-it">120mL</p>
@@ -248,8 +314,8 @@
 
         <div class="uptproduct__extop">
             <div class="uptproduct__extop--img">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_milk-ex.jpg" alt="ウプト コンディショニングミルク" width="auto" height="auto" class="pcImg">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_milk-ex-sp.jpg" alt="ウプト コンディショニングミルク" width="auto" height="auto" class="spImg">
+                <img src="/assets/images/uptorigin/0926/img_milk-ex.jpg" alt="ウプト コンディショニングミルク" width="auto" height="auto" class="pcImg">
+                <img src="/assets/images/uptorigin/0926/img_milk-ex-sp.jpg" alt="ウプト コンディショニングミルク" width="auto" height="auto" class="spImg">
             </div>
             <div class="uptproduct__ex--line">
                 <div class="uptproduct__extop--inner">
@@ -267,8 +333,8 @@
                 <div class="uptproduct__exbtm--no">
                     <p class="uptproduct__exbtm--subttl">5つのフリー処方</p>
                     <div class="uptproduct__exbtm--noimg">
-                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_toner.svg" alt="フリー処方 コンディショニングミルク" width="auto" height="auto" class="pcImg">
-                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_toner-sp.svg" alt="フリー処方 コンディショニングミルク" width="auto" height="auto" class="spImg">
+                        <img src="/assets/images/uptorigin/0926/component_toner.svg" alt="フリー処方 コンディショニングミルク" width="auto" height="auto" class="pcImg">
+                        <img src="/assets/images/uptorigin/0926/component_toner-sp.svg" alt="フリー処方 コンディショニングミルク" width="auto" height="auto" class="spImg">
                     </div>
                 </div>
             </div>
@@ -297,8 +363,8 @@
         <!-- ここから -->
         <div class="uptblc__buyblc">
             <div class="uptblc__buyblc--img">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_cream.jpg" alt="MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="pcImg">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_cream-sp.jpg" alt="MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="spImg">
+                <img src="/assets/images/uptorigin/0926/img_cream.jpg" alt="MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="pcImg">
+                <img src="/assets/images/uptorigin/0926/img_cream-sp.jpg" alt="MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="spImg">
             </div>
 
             <div class="uptblc__buyblc__spborder"></div>
@@ -310,7 +376,7 @@
                             <div class="uptblc__buyblc--singleblc">
                                 <h1 class="headingttl">Upt MOISTURIZING CREAM ウプト モイスチャライジングクリーム</h1>
                                 <p class="upt__name uptblc__buyblc--single-ttl">MOISTURIZING<br>CREAM</p>
-                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set03.png" alt="モイスチャライジングクリーム" width="auto" height="auto">
+                                <img src="/assets/images/uptorigin/0914/point_set03.png" alt="モイスチャライジングクリーム" width="auto" height="auto">
                             </div>
                             <h2 class="uptblc__buyblc--single-jp">ウプト モイスチャライジングクリーム<br>〈クリーム〉</h2>
                             <p class="uptblc__buyblc--single-it">40g</p>
@@ -356,8 +422,8 @@
 
         <div class="uptproduct__extop">
             <div class="uptproduct__extop--img">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_cream-ex.jpg" alt="Upt MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="pcImg">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_cream-ex-sp.jpg" alt="Upt MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="spImg">
+                <img src="/assets/images/uptorigin/0926/img_cream-ex.jpg" alt="Upt MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="pcImg">
+                <img src="/assets/images/uptorigin/0926/img_cream-ex-sp.jpg" alt="Upt MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="spImg">
             </div>
             <div class="uptproduct__ex--line">
                 <div class="uptproduct__extop--inner">
@@ -376,8 +442,8 @@
                 <div class="uptproduct__exbtm--no">
                     <p class="uptproduct__exbtm--subttl">3つのフリー処方</p>
                     <div class="uptproduct__exbtm--noimg">
-                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_cream.svg" alt="Upt MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="pcImg">
-                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_cream-sp.svg" alt="Upt MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="spImg">
+                        <img src="/assets/images/uptorigin/0926/component_cream.svg" alt="Upt MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="pcImg">
+                        <img src="/assets/images/uptorigin/0926/component_cream-sp.svg" alt="Upt MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="spImg">
                     </div>
                 </div>
             </div>
@@ -561,8 +627,8 @@
     <section id="js-prodcutFv" class="uptprodcut__intro">
         <h2 class="uptprodcut__intro--txt">スキンケアを、<br>⼼安らぐ時間に</h2>
         <div class="uptprodcut__intro--relative">
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="安達祐実" width="auto" height="auto" class="pcImg">
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="安達祐実" width="auto" height="auto" class="spImg">
+            <img src="/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="安達祐実" width="auto" height="auto" class="pcImg">
+            <img src="/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="安達祐実" width="auto" height="auto" class="spImg">
             <div class="uptprodcut__intro--border" id="js-border"></div>
         </div>
 
@@ -575,7 +641,7 @@
                 <div class="uptproduct__setitem--blc">
                     <div class="uptproduct__setitem--blc-s border img">
                         <div class="uptproduct__setitem--img">
-                            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set01.png" width="auto" height="auto" alt="バランシングトナー">
+                            <img src="/assets/images/uptorigin/0914/img_set01.png" width="auto" height="auto" alt="バランシングトナー">
                         </div>
                     </div>
                     <div class="uptproduct__setitem--blc-s">
@@ -587,7 +653,7 @@
                                     <p class="uptproduct__setitem--name03 italic">155mL</p>
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
-                                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set01.png" width="auto" height="auto" alt="バランシングトナー">
+                                    <img src="/assets/images/uptorigin/0914/point_set01.png" width="auto" height="auto" alt="バランシングトナー">
                                 </div>
                             </div>
 
@@ -627,7 +693,7 @@
                 <div class="uptproduct__setitem--blc reverse">
                     <div class="uptproduct__setitem--blc-s img blc02">
                         <div class="uptproduct__setitem--img">
-                            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set02.png" alt="コンディショニングミルク" width="auto" height="auto">
+                            <img src="/assets/images/uptorigin/0914/img_set02.png" alt="コンディショニングミルク" width="auto" height="auto">
                         </div>
                     </div>
                     <div class="uptproduct__setitem--blc-s border">
@@ -639,7 +705,7 @@
                                     <p class="uptproduct__setitem--name03 italic">120mL</p>
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
-                                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set02.png" alt="コンディショニングミルク" width="auto" height="auto">
+                                    <img src="/assets/images/uptorigin/0914/point_set02.png" alt="コンディショニングミルク" width="auto" height="auto">
                                 </div>
                             </div>
 
@@ -680,7 +746,7 @@
                 <div class="uptproduct__setitem--blc">
                     <div class="uptproduct__setitem--blc-s border img">
                         <div class="uptproduct__setitem--img">
-                            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set03.png" alt="モイスチャライジングクリーム" width="auto" height="auto">
+                            <img src="/assets/images/uptorigin/0914/img_set03.png" alt="モイスチャライジングクリーム" width="auto" height="auto">
                         </div>
                     </div>
                     <div class="uptproduct__setitem--blc-s">
@@ -692,7 +758,7 @@
                                     <p class="uptproduct__setitem--name03 italic">40g</p>
                                 </div>
                                 <div class="uptproduct__setitem--name-img">
-                                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set03.png" alt="モイスチャライジングクリーム" width="auto" height="auto">
+                                    <img src="/assets/images/uptorigin/0914/point_set03.png" alt="モイスチャライジングクリーム" width="auto" height="auto">
                                 </div>
                             </div>
 
@@ -732,7 +798,7 @@
     </section>
 
     <section class="uptline"></section>
-    <script src="{{ theme_file_root_path }}/assets/uptproduct.js"></script>
+    <script src="/assets/uptproduct.js"></script>
 
 
 
@@ -794,7 +860,7 @@
         <li>
             <a href="/shop/products/upt_skincareset">
             <div>
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_prosductset.jpg" alt="ウプト スキンケアセット" width="auto" height="auto">
+                <img src="/assets/images/uptorigin/0926/img_prosductset.jpg" alt="ウプト スキンケアセット" width="auto" height="auto">
 
                 <div class="upthome__products--nameblc">
                     <h3 class="upthome__products--name">Upt SKINCARE SET</h3>
@@ -819,7 +885,7 @@
             <li>
                 <a href="/shop/products/balancing_toner">
                     <div>
-                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/home_prodcut01b.jpg" alt="バランシングトナー" width="auto" height="auto">
+                        <img src="/assets/images/uptorigin/0926/home_prodcut01b.jpg" alt="バランシングトナー" width="auto" height="auto">
 
                         <div class="upthome__products--nameblc">
                             <h3 class="upthome__products--name">BALANCING TONER</h3>
@@ -847,7 +913,7 @@
             <li>
                 <a href="/shop/products/conditioning_milk">
                 <div>
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut02.png" alt="コンディショニングミルク" width="auto" height="auto">
+                    <img src="/assets/images/uptorigin/0914/home_prodcut02.png" alt="コンディショニングミルク" width="auto" height="auto">
 
                     <div class="upthome__products--nameblc">
                         <h3 class="upthome__products--name">CONDITIONING MILK</h3>
@@ -873,7 +939,7 @@
         <li>
             <a href="/shop/products/moisturizing_cream">
             <div>
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut03.png" alt="モイスチャライジングクリーム" width="auto" height="auto">
+                <img src="/assets/images/uptorigin/0914/home_prodcut03.png" alt="モイスチャライジングクリーム" width="auto" height="auto">
 
                 <div class="upthome__products--nameblc">
                     <h3 class="upthome__products--name">MOISTURIZING CREAM</h3>

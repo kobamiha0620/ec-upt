@@ -227,7 +227,7 @@
                 align-items: center;
                 padding: 0;
                 &--wrapper {
-                    width: 158px;
+                    width: 180px;
                     margin: 0 auto;
                 }
 
@@ -477,6 +477,11 @@
         &--insta{
             background: url(var.$imgpath + "0914/icon_menu_insta.svg") no-repeat 0 0;
             @include var.bg;
+        }
+        &--line{
+            background: url(var.$imgpath + "icon_menu_line.svg") no-repeat 0 0;
+            @include var.bg;
+
         }
         &--twitter{
             background: url(var.$imgpath + "0914/icon_menu_twitter.svg") no-repeat 0 0;

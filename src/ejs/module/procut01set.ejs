@@ -20,8 +20,8 @@ var pageinit = {
 
 %>
 <%
-var imgpath = '{{ theme_file_root_path }}';
-// var imgpath =    '';
+// var imgpath = '{{ theme_file_root_path }}';
+var imgpath =    '';
 
 %>
 
@@ -35,6 +35,76 @@ var imgpath = '{{ theme_file_root_path }}';
 
 
 <main class="l-container js-main-container uptprodcut" role="main" id="product-show-view">
+
+<!-- 定期商品 -->
+<% if (pageinit.ecforce === 'true') { %>
+    {% if product.id == 8 %}
+    <% } %>
+
+
+    <% if ((pageinit.product === 'set') || (pageinit.product === 'all')) { %>
+        <section class="uptproduct__fv">
+            <!-- ここから -->
+            <div class="uptblc__buyblc">
+                <div class="uptblc__buyblc--img">
+                    <img src="<%- imgpath %>/assets/images/uptorigin/0914/product_setimage.jpg" alt="Upt SKINCARE SET" width="auto" height="auto" class="pcImg">
+                    <img src="<%- imgpath %>/assets/images/uptorigin/0914/product_setimage-sp.png" alt="Upt SKINCARE SET" width="auto" height="auto" class="spImg">
+                </div>
+        
+                <div class="uptblc__buyblc__spborder"></div>
+        
+                <div class="uptblc__buyblc--s">
+                    <div class="uptblc__buyblc--rblc">
+                        <div class="uptblc__buyblc--contents">
+                            <div>
+                             <h1 class="headingttl">【定期】Upt SKINCARE SET ウプト スキンケアセット</h1>   
+                            <p class="upt__name uptblc__buyblc--txt00">Upt<br>SKINCARE SET</p>
+                            <p class="uptblc__buyblc--txt01">【定期】ウプト スキンケアセット</p>
+                            <p class="uptblc__buyblc--txt02">肌に密度の⾼いうるおいを与えるスマートスキンケアセット。3つのアイテムをライン使いしていただくことで保湿⼒とテクスチャーの良さをより実感いただけます。</p>
+        
+                            <p class="upt__price uptblc__buyblc--txt03">¥7,590 (tax in)</p>
+                        
+        
+                            <div class="uptblc__buyblc--btn">
+                                <!-- 商品選択フォーム -->
+                                <form action="/shop/cart/add" method="post">
+                                    <div style="display: none">
+                                    <!-- 規格選択 -->
+                                    <input id="variant-id" type="hidden" name="variant_id" value="{{ product.master.id }}">
+                                    <div id="option_types"></div>
+        
+                                    <!-- 数量選択 -->
+                                    <label>数量</label>
+                                    <input id="text-out-of-stock" value="在庫切れ" disabled style="display:none;">
+                                    <select id="quantity" name="quantity" style="display:none;"></select>
+        
+                                    <!-- 再入荷お知らせ -->
+                                    <a id="btn-stock-waiting-list" href="javascript:void(0);" style='display:none;'>再入荷お知らせ</a>
+                                    </div>
+                                    <!-- /display: none -->
+                                    
+                                    <!-- カート追加 -->
+                                    <button id="btn-add"><p class="txt">購入はこちら</p><span></span></button>
+        
+                                </form>
+        
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ここまで -->
+        </section>
+    <% } %>
+
+<% if (pageinit.ecforce === 'true') { %>
+    {% endif %}
+<% } %>
+<!-- /セット商品 -->
+
+
+
 
 <!-- セット商品 -->
     <% if (pageinit.ecforce === 'true') { %>

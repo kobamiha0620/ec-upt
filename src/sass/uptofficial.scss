@@ -85,15 +85,21 @@ body {
             white-space: nowrap;
             text-indent: -9999px;
             display: block;
-            background: url(var.$imgpath + "icon_pcInsta.svg") no-repeat 0 0;
+            background: url(var.$imgpath + "icon_instab.svg") no-repeat 0 0;
             background-size: 100% auto;
         }
-
+        &--line {
+            white-space: nowrap;
+            text-indent: -9999px;
+            display: block;
+            background: url(var.$imgpath + "icon_line.svg") no-repeat 0 0;
+            background-size: 100% auto;
+        }
         &--twitter {
             white-space: nowrap;
             text-indent: -9999px;
             display: block;
-            background: url(var.$imgpath + "icon_pctwitter.svg") no-repeat 0 0;
+            background: url(var.$imgpath + "icon_twb.svg") no-repeat 0 0;
             background-size: 100% auto;
         }
 
