@@ -112,6 +112,7 @@ $(function () {
       bg.fadeOut();
       window.location.href = '/shop/products/';
     });
+
   }
   
   // some function which should run once a day
@@ -124,12 +125,19 @@ $(function () {
 
   }
   
+
+  function Lpbnr(){
+    $('#js-modallink-close').on('click', function(){
+      $('#Lpbnr').fadeOut();
+
+    });
+  }
   
   runOncePerDay(); // run the code
 
   runOncePerDay(); // does not run the code
-
-
+  
+  Lpbnr();
     
 });
 

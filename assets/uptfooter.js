@@ -38,5 +38,13 @@ $(function(){
     });
 });
 
-
+//こちら
+function subscFaq(){
+    $('.js-faq').on('click', function () {
+        $(this).next('.js-answer').slideToggle();
+        $(this).toggleClass('active');
+      })
+    
+}
+subscFaq();
 });
