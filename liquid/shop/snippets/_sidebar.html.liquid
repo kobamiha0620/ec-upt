@@ -6,7 +6,7 @@
   </button>
   <div class="c-account_menu__container">
     <div class="c-account_menu__container__block u-color__border--border">
-      <a class="c-account_menu__container__block__top" href="//customer">
+      <a class="c-account_menu__container__block__top" href="/shop/customer">
         <i class="u-icon--home u-color--head"></i>
         <span class="u-text--subhead">{{ 'account.general.mypage.value' | t }}</span>
       </a>
@@ -18,26 +18,26 @@
       </div>
       <ul class="c-account_menu__container__block__list">
         <li class="c-account_menu__container__block__list__item">
-          <a class="c-account_menu__container__block__list__item__inner" href="//customer/favorites">
+          <a class="c-account_menu__container__block__list__item__inner" href="/shop/customer/favorites">
             <i class="u-icon--dot u-color--head"></i>
             <span class="u-text--body">{{ 'products.favorites.favorite_list.value' | t }}</span>
           </a>
         </li>
-        <li class="c-account_menu__container__block__list__item">
-          <a class="c-account_menu__container__block__list__item__inner" href="//customer/subs_orders">
+ <li class="c-account_menu__container__block__list__item">
+          <a class="c-account_menu__container__block__list__item__inner" href="/shop/customer/subs_orders">
             <i class="u-icon--dot u-color--head"></i>
             <span class="u-text--body">{{ 'subs_orders.general.subs_orders.value' | t }}</span>
           </a>
-        </li>
+        </li> 
         <li class="c-account_menu__container__block__list__item">
-          <a class="c-account_menu__container__block__list__item__inner" href="//customer/orders">
+          <a class="c-account_menu__container__block__list__item__inner" href="/shop/customer/orders">
             <i class="u-icon--dot u-color--head"></i>
             <span class="u-text--body">{{ 'orders.history.purchase_history.value' | t }}</span>
           </a>
         </li>
         {% if base_info.use_point? %}
           <li class="c-account_menu__container__block__list__item">
-            <a class="c-account_menu__container__block__list__item__inner" href="//customer/points">
+            <a class="c-account_menu__container__block__list__item__inner" href="/shop/customer/points">
               <i class="u-icon--dot u-color--head"></i>
               <span class="u-text--body">{{ 'points.general.point_info.value' | t }}</span>
             </a>
@@ -52,33 +52,33 @@
       </div>
       <ul class="c-account_menu__container__block__list">
         <li class="c-account_menu__container__block__list__item">
-          <a class="c-account_menu__container__block__list__item__inner" href="//customer/edit">
+          <a class="c-account_menu__container__block__list__item__inner" href="/shop/customer/edit">
             <i class="u-icon--dot u-color--head"></i>
             <span class="u-text--body">{{ 'account.general.member_info.value' | t }}</span>
           </a>
         </li>
         <li class="c-account_menu__container__block__list__item">
-          <a class="c-account_menu__container__block__list__item__inner" href="//customer/shipping_addresses">
+          <a class="c-account_menu__container__block__list__item__inner" href="/shop/customer/shipping_addresses">
             <i class="u-icon--dot u-color--head"></i>
             <span class="u-text--body">{{ 'orders.shipping_address.shipping_addresses.value' | t }}</span>
           </a>
         </li>
         <li class="c-account_menu__container__block__list__item">
-          <a class="c-account_menu__container__block__list__item__inner" href="//customer/cards">
+          <a class="c-account_menu__container__block__list__item__inner" href="/shop/customer/cards">
             <i class="u-icon--dot u-color--head"></i>
             <span class="u-text--body">{{ 'payments.credit_card.credit_card_info.value' | t }}</span>
           </a>
         </li>
         {% if base_info.use_invite_coupon? %}
           <li class="c-account_menu__container__block__list__item">
-            <a class="c-account_menu__container__block__list__item__inner" href="//customer/invite_coupons">
+            <a class="c-account_menu__container__block__list__item__inner" href="/shop/customer/invite_coupons">
               <i class="u-icon--dot u-color--head"></i>
               <span class="u-text--body">{{ 'orders.coupon.invite_coupon.value' | t }}</span>
             </a>
           </li>
         {% endif %}
         <li class="c-account_menu__container__block__list__item">
-          <a class="c-account_menu__container__block__list__item__inner" href="//customer/password/edit">
+          <a class="c-account_menu__container__block__list__item__inner" href="/shop/customer/password/edit">
             <i class="u-icon--dot u-color--head"></i>
             <span class="u-text--body">{{ 'account.password.password_change.value' | t }}</span>
           </a>
@@ -94,13 +94,13 @@
       </div>
       <ul class="c-account_menu__container__block__list">
         <li class="c-account_menu__container__block__list__item">
-          <a class="c-account_menu__container__block__list__item__inner" href="//faq">
+          <a class="c-account_menu__container__block__list__item__inner" href="/shop/faq">
             <i class="u-icon--dot u-color--head"></i>
             <span class="u-text--body">{{ 'contact.general.faq.value' | t }}</span>
           </a>
         </li>
         <li class="c-account_menu__container__block__list__item">
-          <a class="c-account_menu__container__block__list__item__inner" href="//contact/draft">
+          <a class="c-account_menu__container__block__list__item__inner" href="/shop/contact/draft">
             <i class="u-icon--dot u-color--head"></i>
             <span class="u-text--body">{{ 'contact.general.contact_title.value' | t }}</span>
           </a>
@@ -108,7 +108,7 @@
       </ul>
     </div>
     <div class="c-account_menu__container__block u-color__border--border">
-      <a class="c-account_menu__container__block__logout u-text--btn u-color__btn--bg" href="//customers/sign_out">
+      <a class="c-account_menu__container__block__logout u-text--btn u-color__btn--bg" href="/shop/customers/sign_out">
         <i class="u-icon--logout"></i>
         <span>{{ 'account.general.logout.value' | t }}</span>
       </a>

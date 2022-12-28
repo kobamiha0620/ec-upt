@@ -17,8 +17,13 @@ var pageinit = {
   jsfunc:['setPhotoChanger ();','startScroll ();','setVideo();']
 };
 %>
+<%
+// var imgpath = '{{ theme_file_root_path }}';
+var imgpath = '';
+
+%>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=HTMLPictureElement"></script>
 
 <header class="l-header u-color__bg--base u-color__border--border logo--{{section.settings.align_logo}}"
     data-section-id='header' data-section-type='header-section'>
@@ -54,11 +59,16 @@ var pageinit = {
         {% assign top_only_message_flg = true %}
         {% endif %}
         {% unless top and top_only_message_flg %} {% comment %} unless a && !b {% endcomment %}
-        <div class="c-announce_bar uptheader__anounce">
+        {% comment %} <a class="c-announce_bar uptheader__anounce" href="/shop/information/202212">
             <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use
             escape{% endcomment %}
             <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
-        </div>
+        </a> {% endcomment %}
+       <div class="c-announce_bar uptheader__anounce">
+            <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use
+            escape{% endcomment %}
+            <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
+        </div> 
 
         {% endunless %}
         {% endif %}
@@ -283,6 +293,15 @@ var pageinit = {
                                     <a href="/shop/contact/draft">CONTACT</a>
                                 </li>
                             </ul>
+                            <div class="uptgmenu__bnr--wrapper">
+                            <a href="https://uptofficial.jp/lp?u=official_lp_3trial" class="uptgmenu__bnr" target="_blank">
+                                <picture>
+                                    <source srcset="<%= imgpath %>/assets/images/uptorigin/Upt_subscBnr-sp.webp" type="image/webp">
+                                    <img src="<%= imgpath %>/assets/images/uptorigin/Upt_subscBnr-sp.jpg" alt="定期セット sp" width="684px"
+                                        height="184px">
+                                </picture>
+                            </a>
+                        </div>
                             <div class="uptgmenu__sns">
                                 <!-- <p class="uptgmenu__sns__ttl">FOLLOW US</p> -->
                                 <div class="uptgmenu__sns__list--wrapper">
@@ -291,13 +310,14 @@ var pageinit = {
                                             <a href="https://www.instagram.com/_upt_official/"
                                                 class="gmenu__sns--insta" target="_blank">Instagram</a>
                                         </li>
-                                        <li>
-                                            <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=upt_official"
-                                                class="gmenu__sns--line" target="_blank">Line</a>
-                                        </li>
+
                                         <li>
                                             <a href="https://twitter.com/_upt_official"
                                                 class="gmenu__sns--twitter" target="_blank">Twitter</a>
+                                        </li>
+                                        <li>
+                                            <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=upt_official"
+                                                class="gmenu__sns--line" target="_blank">Line</a>
                                         </li>
                                         <li>
                                             <a href="https://www.youtube.com/channel/UCK78cTfeqqzgKOT1OVKhw8Q"
@@ -311,7 +331,9 @@ var pageinit = {
                         <section class="uptgmenu__btm">
                             <p class="uptgmenu__btm--logo"><a href="/">Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト。</a></p>
                             <ul class="uptgmenu__btm--links">
-
+                                <li>
+                                <a href="/shop/products/upt_skincareset-subscribe/">定期お届けコース</a>
+                            </li>
                                 <li>
                                     <a href="/shop/faq/">FAQ / </a> <a href="/shop/guide/">ご利用ガイド</a>
                                 </li>

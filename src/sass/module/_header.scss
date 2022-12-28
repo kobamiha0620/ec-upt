@@ -514,3 +514,35 @@
         opacity: 0;
     }
 }
+//修正
+.uptheader .uptgmenu__sns{
+    padding-top: 30px;
+}
+
+.uptgmenu__bnr{
+    display: block;
+    margin: 0 auto;
+    max-width: 360px;
+    width: 100%;
+    margin-top: 30px;
+    img{
+        width: 100%;
+    }
+    &--wrapper{
+        padding: 0 40px;
+    }
+
+}
+@media screen and (max-width: 400px) {
+    .uptgmenu__bnr{
+        margin-top: 10px;
+
+    }
+    .uptheader .uptgmenu__sns{
+        padding-top: 20px;
+    }
+    .uptheader .uptgmenu__btm{
+        padding: 26px 0 18px;
+    }
+    
+}

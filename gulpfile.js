@@ -95,4 +95,4 @@ function compile(done) {
 //----------------------------------------------------------------------
 exports.compile = series(compile, watchTask);
 exports.minify = series(minify);
-exports.bs = series(bsInit, bsReload, watchTask);
+exports.bs = series(bsInit, bsReload, watchTask); 
