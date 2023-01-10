@@ -1607,3 +1607,15 @@
 .uptprodcut__intro{
     border-top: solid 1px var.$bg_dark;
 }
+
+//追記
+
+
+.uptsubsc__customer--txt{
+    text-align: center;
+    line-height: 1.2;
+    span{
+        @include var.fz(14);
+        font-weight: normal;
+    }
+}

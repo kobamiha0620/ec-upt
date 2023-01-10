@@ -49,9 +49,20 @@
                 </div>
             </div>
             <div class="upthome__intro--img">
-                <img src="/assets/images/uptorigin/0914/img_about-pc.png" alt="安達祐実" width="auto" height="auto" class="pcImg">
 
-                <img src="/assets/images/uptorigin/0914/img_about-sp.png" alt="安達祐実"  width="auto" height="auto" class="spImg">
+                <picture class="pcImg">
+                    <source srcset="/assets/images/uptorigin/img_about-pc.webp" type="image/webp">
+                  
+                    <img src="/assets/images/uptorigin/0914/img_about-pc.png"  alt="安達祐実" width="auto" height="auto">
+
+                </picture>
+
+                <picture class="spImg">
+                    <source srcset="/assets/images/uptorigin/img_about-sp.webp" type="image/webp">
+                  
+                    <img src="/assets/images/uptorigin/0914/img_about-sp.png" alt="安達祐実"  width="auto" height="auto">
+                </picture>
+
 
 
             </div>
@@ -118,7 +129,11 @@
             <li>
                 <a href="/shop/products/balancing_toner">
                     <div>
-                        <img src="/assets/images/uptorigin/0926/home_prodcut01b.jpg" alt="BALANCING TONER バランシングトナー" width="auto" height="auto">
+                        <picture>
+                            <source srcset="/assets/images/uptorigin/home_prodcut01.webp" type="image/webp">
+                          
+                            <img src="/assets/images/uptorigin/0926/home_prodcut01b.jpg" alt="BALANCING TONER バランシングトナー" width="auto" height="auto">
+                        </picture>
 
                         <div class="upthome__products--nameblc">
                             <h3 class="upthome__products--name">BALANCING TONER</h3>
@@ -133,8 +148,11 @@
             <li>
                 <a href="/shop/products/conditioning_milk">
                     <div>
-                        <img src="/assets/images/uptorigin/0914/home_prodcut02.png" alt="CONDITIONING MILK コンディショニングミルク" width="auto" height="auto">
-
+                        <picture>
+                            <source srcset="/assets/images/uptorigin/home_prodcut02.webp" type="image/webp">
+                          
+                            <img src="/assets/images/uptorigin/0914/home_prodcut02.png" alt="CONDITIONING MILK コンディショニングミルク" width="auto" height="auto">
+                        </picture>
                         <div class="upthome__products--nameblc">
                             <h3 class="upthome__products--name">CONDITIONING MILK</h3>
                             <p class="upthome__products--jpname">コンディショニングミルク<span class="italic">120mL</span></p>
@@ -148,8 +166,11 @@
             <li>
                 <a href="/shop/products/moisturizing_cream">
                     <div>
-                        <img src="/assets/images/uptorigin/0914/home_prodcut03.png" width="auto" height="auto" alt="MOISTURIZING CREAM モイスチャライジングクリーム">
-
+                        <picture>
+                            <source srcset="/assets/images/uptorigin/home_prodcut03.webp" type="image/webp">
+                          
+                            <img src="/assets/images/uptorigin/0914/home_prodcut03.png" width="auto" height="auto" alt="MOISTURIZING CREAM モイスチャライジングクリーム">
+                        </picture>
                         <div class="upthome__products--nameblc">
                             <h3 class="upthome__products--name">MOISTURIZING CREAM</h3>
                             <p class="upthome__products--jpname">モイスチャライジングクリーム<span class="italic">40g</span></p>
@@ -199,9 +220,15 @@
         <section class="uptline"></section>
 
         <div class="upthome__yumi--blc">
-            <img src="/assets/images/uptorigin/0914/img_producer-pc02.jpg" alt="プロデューサー" class="pcImg" width="auto" height="auto">
+            <picture  class="pcImg">
+                <source srcset="/assets/images/uptorigin/img_producer-pc02.webp" type="image/webp">
+                <img src="/assets/images/uptorigin/0914/img_producer-pc02.jpg" alt="プロデューサー" width="auto" height="auto">
+            </picture>
 
-            <img src="/assets/images/uptorigin/0914/img_producer-sp02.jpg" alt="プロデューサー" class="spImg" width="auto" height="auto">
+            <picture  class="spImg">
+                <source srcset="/assets/images/uptorigin/img_producer-sp02.webp" type="image/webp">
+                <img src="/assets/images/uptorigin/0914/img_producer-sp02.jpg" alt="プロデューサー" width="auto" height="auto">
+            </picture>
         </div>
     </section>
 
@@ -268,6 +295,7 @@
     </picture>
 </a>
 <div class="modal__link--close" id="js-modallink-close">
+    
     <img src="/assets/images/uptorigin/closebtn.svg" alt="CLOSE" width="16px" height="16px">
 </div>
 </div>

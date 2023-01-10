@@ -1,5 +1,6 @@
 @use "./module/variable"as var;
 
+
 .upthome {}
 
 .upthome {
@@ -7,7 +8,7 @@
         margin: 0 calc(50% - 50vw);
         width: 100vw;
         @include var.bg;
-        background-image: url(var.$imgpath + '0914/fv_pc04.jpg');
+        // background-image: url(var.$imgpath + 'fv_pc04.jpg');
         line-height: 0;
         font-size: 0;
         // padding-top: 100%;
@@ -21,7 +22,6 @@
         background-color: #D4D2DF;
         background-size: auto calc(100% - 30px);
         height: 100vh;
-
         &--logo {
             @include var.bg;
             background-image: url(var.$imgpath + '0914/fv_logo.svg');
@@ -159,7 +159,7 @@
                 width: 100%;
                 position: relative;
                 @include var.bg;
-                background-image: url(var.$imgpath + '0914/home_setimg-pc.png');
+                // background-image: url(var.$imgpath   + '0914/home_setimg-pc.png');
 
                 p {
                     display: inline-block;
@@ -496,7 +496,7 @@
     @media screen and (max-width: var.$spbp) {
         &__fv {
             @include var.bg;
-            background-image: url(var.$imgpath + '0914/fv_sp.jpg');
+            // background-image: url(var.$imgpath + '0914/fv_sp.jpg');
             background-position: center bottom;
             height: 90vh;
             margin-top: calc(-16.5vw - 30px);
@@ -592,7 +592,7 @@
                     height: 118vw;
                     position: relative;
                     @include var.bg;
-                    background-image: url(var.$imgpath + '0914/home_setimg-sp.png');
+                    // background-image: url(var.$imgpath + '0914/home_setimg-sp.png');
 
                     p {
                         display: inline-block;
@@ -1237,4 +1237,53 @@ h2.upthome__illust--ttl {
     }
 }
 
+//画像サイズ変更
+.upthome__intro--img{
+    img{
+        margin: 0 auto;
+    }
 
+
+    @media screen and (max-width: var.$spbp) {
+        .pcImg {
+            display: none;
+        }
+    
+        .spImg {
+            display: block;
+        }
+    
+    }
+
+
+}
+
+
+
+.upthome__yumi{
+    @media screen and (max-width: var.$spbp) {
+        .pcImg {
+            display: none;
+        }
+    
+        .spImg {
+            display: block;
+        }
+    
+    }
+
+}
+
+
+// @include var.webpBg('.uptBg', './img/my-bg', 'png');
+@include var.webpBg('.upthome__fv', var.$imgpath +'fv_pc04');
+@include var.webpBg('.upthome__set--img-in', var.$imgpath +'home_setimg-pc');
+@include var.webpBg('.upthome__producer', var.$imgpath +'bg_yumi-pc', 'png');
+
+
+@media screen and (max-width: var.$spbp) {
+    @include var.webpBg('.upthome__fv', var.$imgpath +'fv_sp');
+    @include var.webpBg('.upthome__set--img-in', var.$imgpath +'home_setimg-sp', 'png');
+    @include var.webpBg('.upthome__producer', var.$imgpath +'bg_yumi-sp02');
+
+}

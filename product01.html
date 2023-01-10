@@ -89,33 +89,54 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   </head>
   <body>
 <!-- BGとして ここから -->
+
+
+
+<!-- BGとして ここから -->
 <div class="bg__repeatWrapper">
     <div class="bg__repeatBlc">
         <div class="bgw1">
             <div class="maskbg1">
-                <img class="" src="https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/0922_20220920155336/ec_force/assets/images/uptorigin/bg01b-min.png" alt="">
-                <img class="" src="https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/0922_20220920155336/ec_force/assets/images/uptorigin/bg01b-min.png" alt="">
+                <picture class="bgImg01">
+                    <source srcset="/assets/images/uptorigin/bg01b-min.webp" type="image/webp">
+                    <source srcset="/assets/images/uptorigin/bg01b-min.webp" type="image/webp">
+                  
+                    <img class="imgFirst" src="/assets/images/uptorigin/bg01b-min.jpg" alt="背景画像1" width="auto" height="auto">
+                    <img class="" src="/assets/images/uptorigin/bg01b-min.jpg" alt="背景画像1" width="auto" height="auto">
+                </picture>
             </div>
         </div>
 
         <div class="bgw2">
             <div class="pc">
                 <div class="maskbg2">
-                    <img class="" src="https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/0922_20220920155336/ec_force/assets/images/uptorigin/bg02b.png" alt="">
-                    <img class="" src="https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/0922_20220920155336/ec_force/assets/images/uptorigin/bg02b.png" alt="">
-                </div>
+
+                <picture>
+                    <source srcset="/assets/images/uptorigin/bg02b.webp" type="image/webp">
+                    <source srcset="/assets/images/uptorigin/bg02b.webp" type="image/webp">
+                    <img class="imgFirst" src="/assets/images/uptorigin/0914/bg02b.jpg" alt="背景画像2" width="auto" height="auto">
+                    <img class="" src="/assets/images/uptorigin/0914/bg02b.jpg" alt="背景画像2" width="auto" height="auto">
+                </picture>
 
             </div>
+            </div>
             <div class="sp">
-                <div class="maskbg2">
-                    <img class="" src="https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/0922_20220920155336/ec_force/assets/images/uptorigin/bg03spb.png" alt="">
-                    <img class="" src="https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/0922_20220920155336/ec_force/assets/images/uptorigin/bg03spb.png" alt="">
-                </div>
+
+                <picture class="maskbg2">
+                    <source srcset="/assets/images/uptorigin/bg03spb.webp" type="image/webp">
+                    <source srcset="/assets/images/uptorigin/bg03spb.webp" type="image/webp">
+                    <img class="imgFirst" src="/assets/images/uptorigin/bg03spb.png" alt="背景画像2" width="auto" height="auto">
+                    <img class="" src="/assets/images/uptorigin/bg03spb.png" alt="背景画像2" width="auto" height="auto">
+                </picture>
             </div>
         </div>
     </div>
 
 </div>
+<!-- BGとして　ここまで -->
+
+
+
 <!-- BGとして　ここまで -->
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GKCJKC"
@@ -561,9 +582,6 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
 
 
-{{ 'shop/products' | javascript_include_tag }}
-{% assign p = product %}
-
 
 
 <main class="l-container js-main-container uptprodcut" role="main" id="product-show-view">
@@ -571,8 +589,6 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
 
     <!-- 定期商品 -->
-    
-    {% if product.id == 8 %}
     
 
     
@@ -584,13 +600,13 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
     <div class="uptblc__buyblc">
         <div class="uptblc__buyblc--img">
             <picture class="pc">
-                <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_subsc.webp" type="image/webp">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_subsc.jpg" alt="定期セット" width="auto"
+                <source srcset="/assets/images/uptorigin/img_subsc.webp" type="image/webp">
+                <img src="/assets/images/uptorigin/img_subsc.jpg" alt="定期セット" width="auto"
                     height="auto">
             </picture>
             <picture class="sp">
-                <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_subsc-sp.webp" type="image/webp">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_subsc-sp.jpg" alt="定期セット sp" width="auto"
+                <source srcset="/assets/images/uptorigin/img_subsc-sp.webp" type="image/webp">
+                <img src="/assets/images/uptorigin/img_subsc-sp.jpg" alt="定期セット sp" width="auto"
                     height="auto">
             </picture>
         </div>
@@ -627,32 +643,32 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
     <ul class="uptsubsc__adv--list">
         <li>
             <p class="uptsubsc__adv--num">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/num1_subsc.svg" alt="1" width="41px" height="41px">
+                <img src="/assets/images/uptorigin/num1_subsc.svg" alt="1" width="41px" height="41px">
             </p>
             <p class="uptsubsc__adv--subttl">送料無料</p>
             <p class="uptsubsc__adv--img">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/adv1_subsc.svg" alt="1" width="109px" height="66px">
+                <img src="/assets/images/uptorigin/adv1_subsc.svg" alt="1" width="109px" height="66px">
             </p>
             <p class="uptsubsc__adv--txt">毎回のお届けが送料無料になりますので、通常の注文よりお得にお買い物いただけます。</p>
         </li>
         <li>
             <p class="uptsubsc__adv--num">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/num2_subsc.svg" alt="2" width="41px" height="41px">
+                <img src="/assets/images/uptorigin/num2_subsc.svg" alt="2" width="41px" height="41px">
             </p>
             <p class="uptsubsc__adv--subttl">2回目以降26％お得</p>
             <p class="uptsubsc__adv--img">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/adv2_subsc.svg" alt="1" width="109px" height="89px">
+                <img src="/assets/images/uptorigin/adv2_subsc.svg" alt="1" width="109px" height="89px">
             </p>
             <p class="uptsubsc__adv--txt">
                 初回は約7日間のトライアルセット1,980円（税込）で、2回目以降は3商品の本品を5,980円(税込)で通常の注文より26%お得にご購入いただけます。</p>
         </li>
         <li>
             <p class="uptsubsc__adv--num">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/num3_subsc.svg" alt="3" width="41px" height="41px">
+                <img src="/assets/images/uptorigin/num3_subsc.svg" alt="3" width="41px" height="41px">
             </p>
             <p class="uptsubsc__adv--subttl">限定プレゼントがついてくる</p>
             <p class="uptsubsc__adv--img">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/adv3_subsc.svg" alt="1" width="109px" height="70px">
+                <img src="/assets/images/uptorigin/adv3_subsc.svg" alt="1" width="109px" height="70px">
             </p>
             <p class="uptsubsc__adv--txt">定期お届けコース限定のプレゼントを定期的にお届けします。</p>
         </li>
@@ -665,8 +681,8 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
         <h2 class="uptsubsc__product--ttl">Uptスキンケアセット<br>定期お届けコース</h2>
         <div class="uptsubsc__product--img">
             <picture>
-                <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_prodcut--trial.webp" type="image/webp">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_prodcut--trial.jpg" alt="定期セット" width="auto"
+                <source srcset="/assets/images/uptorigin/img_prodcut--trial.webp" type="image/webp">
+                <img src="/assets/images/uptorigin/img_prodcut--trial.jpg" alt="定期セット" width="auto"
                     height="auto">
             </picture>
         </div>
@@ -768,7 +784,23 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
             <div class="uptsubsc__faq--a js-answer">
                 <div class="uptsubsc__faq--ainner">
                 <div class="uptsubsc__faq--subttl">A. </div>
-                <p class="uptsubsc__faq--atxt">継続のお約束はございません。いつでもマイページより変更できます。<br>次回配送予定日の4日前まで変更可能です。</p>
+                <p class="uptsubsc__faq--atxt">継続のお約束はございません。</p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="uptsubsc__faq--q js-faq">
+                <div class="uptsubsc__faq--qinner">
+                    <div class="uptsubsc__faq--subttl">Q. </div>
+                    <p class="uptsubsc__faq--qtxt">定期便の一時停止や延期はできないですか？</p>
+                </div>
+                <span class="uptsubsc__faq--img"></span>
+            </div>
+            <div class="uptsubsc__faq--a js-answer">
+                <div class="uptsubsc__faq--ainner">
+                <div class="uptsubsc__faq--subttl">A. </div>
+                <p class="uptsubsc__faq--atxt">1ヶ月間の休止が可能です。ただし、連続での休止は対応しておりません。<br>
+                    次回発送予定日の4営業日前までにお問い合わせフォームよりご連絡くださいませ。</p>
                 </div>
             </div>
         </li>
@@ -777,10 +809,12 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
 <div class="sp">
     <section class="uptline"></section>
-    <h2 class="uptsubsc__customer--ttl">お問い合わせ先</h2>
+    <h2 class="uptsubsc__customer--ttl">お問い合わせ先<br>
+
+    </h2>
 </div>
 <div class="uptsubsc__customer">
-    <p class="uptsubsc__customer--txt">Uptカスタマーサポート</p>
+    <p class="uptsubsc__customer--txt">Uptカスタマーサポート<br><span>営業時間：平日10:00〜19:00</span></p>
     <a href="https://uptofficial.jp/shop/contact/draft" class="uptsubsc__customer--link">
         <span class="uptsubsc__customer--linkmail"></span><span>お問い合わせ</span><span class="uptsubsc__customer--linkarrow"></span>
     </a>
@@ -789,331 +823,34 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
     
 
     
-    {% endif %}
-    
     <!-- /定期商品 -->
 
 
     <!-- セット商品 -->
     
-    {% if product.id == 5 %}
-    
 
 
     
 
-    <section class="uptproduct__fv">
-    <!-- ここから -->
-    <div class="uptblc__buyblc">
-        <div class="uptblc__buyblc--img">
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/product_setimage.jpg" alt="Upt SKINCARE SET"
-                width="auto" height="auto" class="pcImg">
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/product_setimage-sp.png" alt="Upt SKINCARE SET"
-                width="auto" height="auto" class="spImg">
-        </div>
-
-        <div class="uptblc__buyblc__spborder"></div>
-
-        <div class="uptblc__buyblc--s">
-            <div class="uptblc__buyblc--rblc">
-                <div class="uptblc__buyblc--contents">
-                    <div>
-                        <h1 class="headingttl">Upt SKINCARE SET ウプト スキンケアセット</h1>
-                        <p class="upt__name uptblc__buyblc--txt00">Upt<br>SKINCARE SET</p>
-                        <p class="uptblc__buyblc--txt01">ウプト スキンケアセット</p>
-                        <p class="uptblc__buyblc--txt02">
-                            肌に密度の⾼いうるおいを与えるスマートスキンケアセット。3つのアイテムをライン使いしていただくことで保湿⼒とテクスチャーの良さをより実感いただけます。</p>
-
-                        <p class="upt__price uptblc__buyblc--txt03">¥7,590 (tax in)</p>
-
-
-                        <div class="uptblc__buyblc--btn">
-                            <!-- 商品選択フォーム -->
-                            <form action="/shop/cart/add" method="post">
-                                <div style="display: none">
-                                    <!-- 規格選択 -->
-                                    <input id="variant-id" type="hidden" name="variant_id"
-                                        value="{{ product.master.id }}">
-                                    <div id="option_types"></div>
-
-                                    <!-- 数量選択 -->
-                                    <label>数量</label>
-                                    <input id="text-out-of-stock" value="在庫切れ" disabled style="display:none;">
-                                    <select id="quantity" name="quantity" style="display:none;"></select>
-
-                                    <!-- 再入荷お知らせ -->
-                                    <a id="btn-stock-waiting-list" href="javascript:void(0);"
-                                        style='display:none;'>再入荷お知らせ</a>
-                                </div>
-                                <!-- /display: none -->
-
-                                <!-- カート追加 -->
-                                <button id="btn-add">
-                                    <p class="txt">購入はこちら</p><span></span>
-                                </button>
-
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ここまで -->
-</section>
-
-
-    
-
-    
-    {% endif %}
     
     <!-- /セット商品 -->
 
 
     <!-- トナー化粧品 -->
     
-    {% if product.id == 2 %}
-    
 
     
 
-        <section class="uptproduct__fv">
-    <!-- ここから -->
-    <div class="uptblc__buyblc">
-        <div class="uptblc__buyblc--img">
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_toner.jpg" alt="ウプト バランシングトナー" width="auto"
-                height="auto" class="pcImg">
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_toner-sp.jpg" alt="ウプト バランシングトナー" width="auto"
-                height="auto" class="spImg">
-        </div>
-
-        <div class="uptblc__buyblc__spborder"></div>
-
-        <div class="uptblc__buyblc--s">
-            <div class="uptblc__buyblc--rblc">
-                <div class="uptblc__buyblc--contents">
-                    <div class="uptblc__buyblc--single">
-                        <div class="uptblc__buyblc--singleblc">
-                            <h1 class="headingttl">Upt BALANCING TONER ウプト バランシングトナー</h1>
-                            <p class="upt__name uptblc__buyblc--single-ttl">BALANCING<br>TONER</p>
-                            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set01.png"
-                                alt="ウプト バランシングトナー" width="auto" height="auto">
-                        </div>
-                        <p class="uptblc__buyblc--single-jp">ウプト バランシングトナー<br>〈化粧⽔〉</p>
-                        <p class="uptblc__buyblc--single-it">155mL</p>
-                        <p class="uptblc__buyblc--single-txt">
-                            適量を手に取り、両手でお顔全体を包み込むようにハンドプレスして優しくなじませて。これは今日の疲れを忘れるリラックスタイムだから。お肌が潤いで満ちるまで好きなだけ重ね付けして。
-                        </p>
-                        <p class="upt__price uptblc__buyblc--txt03">¥2,420 (tax in)</p>
-
-
-                        <div class="uptblc__buyblc--btn">
-                            <!-- 商品選択フォーム -->
-                            <form action="/shop/cart/add" method="post">
-                                <div style="display: none">
-                                    <!-- 規格選択 -->
-                                    <input id="variant-id" type="hidden" name="variant_id"
-                                        value="{{ product.master.id }}">
-                                    <div id="option_types"></div>
-
-                                    <!-- 数量選択 -->
-                                    <label>数量</label>
-                                    <input id="text-out-of-stock" value="在庫切れ" disabled style="display:none;">
-                                    <select id="quantity" name="quantity" style="display:none;"></select>
-
-                                    <!-- 再入荷お知らせ -->
-                                    <a id="btn-stock-waiting-list" href="javascript:void(0);"
-                                        style='display:none;'>再入荷お知らせ</a>
-                                </div>
-                                <!-- /display: none -->
-
-                                <!-- カート追加 -->
-                                <button id="btn-add">
-                                    <p class="txt">購入はこちら</p><span></span>
-                                </button>
-
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ここまで -->
-</section>
-
-
-<section class="uptproduct__ex">
-
-    <div class="uptproduct__extop">
-        <div class="uptproduct__extop--img">
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_toner-ex02.jpg" alt="ウプト バランシングトナー"
-                width="auto" height="auto" class="pcImg">
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_toner-ex02-sp.jpg" alt="ウプト バランシングトナー"
-                width="auto" height="auto" class="spImg">
-        </div>
-        <div class="uptproduct__ex--line">
-            <div class="uptproduct__extop--inner">
-                <div>
-                    <p class="uptproduct__ex--ttl">水ってやっぱり気持ちいい</p>
-                    <p class="uptproduct__ex--txt">
-                        真夏の炎天下、汗だくの帰宅。カラカラの身体で大急ぎでお水を飲んだあのころの記憶……。スキンケアの基礎となる化粧水だから、パシャパシャと水浴びをするような、乾いた喉を潤すような、そんな感覚にしたかった。
-                        だからできるだけとろみをなくしたサラッとした肌触りで、しっかり潤わせてくれることが大事。何度重ね付けしても、気持ちいい。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="uptproduct__exbtm">
-        <div class="uptproduct__ex--line02">
-            <div class="uptproduct__exbtm--no">
-                <p class="uptproduct__exbtm--subttl">5つのフリー処方</p>
-                <div class="uptproduct__exbtm--noimg">
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_toner.svg" alt="バランシングトナー フリー処方"
-                        width="auto" height="auto" class="pcImg">
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_toner-sp.svg"
-                        alt="バランシングトナー フリー処方" width="auto" height="auto" class="spImg">
-                </div>
-            </div>
-        </div>
-        <div class="uptproduct__exbtm--seibun">
-            <p class="uptproduct__ex--ttl2">成分</p>
-            <p class="uptproduct__ex--txt2">
-                温泉水、水、ＢＧ、グリセリン、ジグリセリン、ペンチレングリコール、プロパンジオール、セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ、サッカロミセス／コメ発酵液、アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３、パルミチン酸アスコルビルリン酸３Ｎａ、ナイアシンアミド、加水分解ヒアルロン酸アルキル（Ｃ１２－１３）グリセリル、ヒアルロン酸ジメチルシラノール、ヒアルロン酸Ｎａ、水溶性プロテオグリカン、ＰＥＧ－８、ベタイン、ＰＣＡ－Ｎａ、デキストラン、ポリクオタニウム－５１、フィトステロールズ、ＰＥＧ－２０ソルビタンココエート、水添レシチン、ＰＥＧ－６０水添ヒマシ油、クエン酸Ｎａ、クエン酸、カプリルヒドロキサム酸、ペンテト酸５Ｎａ、フェノキシエタノール、イランイラン花油、ニオイテンジクアオイ油
-            </p>
-        </div>
-    </div>
-</section>
-
-
-    
-
-    
-    {% endif %}
     
     <!-- /トナー化粧品 -->
 
 
     <!-- ミルク乳液 -->
     
-    {% if product.id == 3 %}
-    
 
 
     
-        <section class="uptproduct__fv">
-    <!-- ここから -->
-    <div class="uptblc__buyblc">
-        <div class="uptblc__buyblc--img">
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_milk.jpg" alt="コンディショニングミルク" width="auto"
-                height="auto" class="pcImg">
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_milk-sp.jpg" alt="コンディショニングミルク" width="auto"
-                height="auto" class="spImg">
-        </div>
 
-        <div class="uptblc__buyblc__spborder"></div>
-
-        <div class="uptblc__buyblc--s">
-            <div class="uptblc__buyblc--rblc">
-                <div class="uptblc__buyblc--contents">
-                    <div class="uptblc__buyblc--single">
-                        <div class="uptblc__buyblc--singleblc">
-                            <h1 class="headingttl">Upt CONDITIONING MILK ウプト コンディショニングミルク</h1>
-                            <p class="upt__name uptblc__buyblc--single-ttl">CONDITIONING<br>MILK</p>
-                            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set02.png"
-                                alt="コンディショニングミルク" width="auto" height="auto">
-                        </div>
-                        <h2 class="uptblc__buyblc--single-jp">ウプト コンディショニングミルク<br>〈乳液〉</h2>
-                        <p class="uptblc__buyblc--single-it">120mL</p>
-                        <p class="uptblc__buyblc--single-txt">適量を手に取り、お顔全体に優しくなじませて。
-                            乾燥やハリ不足を感じる部分には重ね付けを。首やデコルテまでしっかり保湿すれば、朝まで心地良い潤いを感じられるはず。</p>
-                        <p class="upt__price uptblc__buyblc--txt03">¥2,420 (tax in)</p>
-
-
-                        <div class="uptblc__buyblc--btn">
-                            <!-- 商品選択フォーム -->
-                            <form action="/shop/cart/add" method="post">
-                                <div style="display: none">
-                                    <!-- 規格選択 -->
-                                    <input id="variant-id" type="hidden" name="variant_id"
-                                        value="{{ product.master.id }}">
-                                    <div id="option_types"></div>
-
-                                    <!-- 数量選択 -->
-                                    <label>数量</label>
-                                    <input id="text-out-of-stock" value="在庫切れ" disabled style="display:none;">
-                                    <select id="quantity" name="quantity" style="display:none;"></select>
-
-                                    <!-- 再入荷お知らせ -->
-                                    <a id="btn-stock-waiting-list" href="javascript:void(0);"
-                                        style='display:none;'>再入荷お知らせ</a>
-                                </div>
-                                <!-- /display: none -->
-
-                                <!-- カート追加 -->
-                                <button id="btn-add">
-                                    <p class="txt">購入はこちら</p><span></span>
-                                </button>
-
-                            </form>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ここまで -->
-</section>
-
-
-<section class="uptproduct__ex">
-
-    <div class="uptproduct__extop">
-        <div class="uptproduct__extop--img">
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_milk-ex.jpg" alt="ウプト コンディショニングミルク"
-                width="auto" height="auto" class="pcImg">
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_milk-ex-sp.jpg" alt="ウプト コンディショニングミルク"
-                width="auto" height="auto" class="spImg">
-        </div>
-        <div class="uptproduct__ex--line">
-            <div class="uptproduct__extop--inner">
-                <div>
-                    <p class="uptproduct__ex--ttl">さらさらのミルクが欲しかった</p>
-                    <p class="uptproduct__ex--txt">どうしても乳液が苦手だった。
-                        肌のうるおいを保つために必要なのはわかるけど、使い心地と仕上がりを両立した商品が難しいのではないかという思い。<br>
-                        だから、ミルク感はちゃんとキープしながら、出来るだけさらさらと、しっかり肌に馴染むものを目指して何度も調整した理想のさらさら感に。</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="uptproduct__exbtm">
-        <div class="uptproduct__ex--line02">
-            <div class="uptproduct__exbtm--no">
-                <p class="uptproduct__exbtm--subttl">5つのフリー処方</p>
-                <div class="uptproduct__exbtm--noimg">
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_toner.svg"
-                        alt="フリー処方 コンディショニングミルク" width="auto" height="auto" class="pcImg">
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_toner-sp.svg"
-                        alt="フリー処方 コンディショニングミルク" width="auto" height="auto" class="spImg">
-                </div>
-            </div>
-        </div>
-        <div class="uptproduct__exbtm--seibun">
-            <p class="uptproduct__ex--ttl2">成分</p>
-            <p class="uptproduct__ex--txt2">
-                水、温泉水、ＢＧ、グリセリン、ベタイン、エチルヘキシルグリセリン、カプリル酸グリセリル、セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ、アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３、スクワラン、リン酸アスコルビルＭｇ、パルミチン酸アスコルビルリン酸３Ｎａ、３－Ｏ－エチルアスコルビン酸、ナイアシンアミド、デキストラン、ラウロイルグルタミン酸ジ（フィトステリル／オクチルドデシル）、フィトステロールズ、ミリスチン酸オクチルドデシル、ジフェニルシロキシフェニルトリメチコン、ジメチコン、カルボマー、キサンタンガム、ＰＥＧ－２０ソルビタンココエート、水添レシチン、ＰＥＧ－６０水添ヒマシ油、水酸化Ｋ、フェノキシエタノール、イランイラン花油、ニオイテンジクアオイ油
-            </p>
-        </div>
-    </div>
-</section>
-
-    
-
-    
-    {% endif %}
     
     <!-- /ミルク乳液 -->
 
@@ -1121,123 +858,10 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
     <!-- クリーム -->
     
-    {% if product.id == 4 %}
-    
 
 
     
-        
-    <section class="uptproduct__fv">
-        <!-- ここから -->
-        <div class="uptblc__buyblc">
-            <div class="uptblc__buyblc--img">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_cream.jpg"
-                    alt="MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="pcImg">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_cream-sp.jpg"
-                    alt="MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="spImg">
-            </div>
 
-            <div class="uptblc__buyblc__spborder"></div>
-
-            <div class="uptblc__buyblc--s">
-                <div class="uptblc__buyblc--rblc">
-                    <div class="uptblc__buyblc--contents">
-                        <div class="uptblc__buyblc--single">
-                            <div class="uptblc__buyblc--singleblc">
-                                <h1 class="headingttl">Upt MOISTURIZING CREAM ウプト モイスチャライジングクリーム</h1>
-                                <p class="upt__name uptblc__buyblc--single-ttl">MOISTURIZING<br>CREAM</p>
-                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set03.png"
-                                    alt="モイスチャライジングクリーム" width="auto" height="auto">
-                            </div>
-                            <h2 class="uptblc__buyblc--single-jp">ウプト モイスチャライジングクリーム<br>〈クリーム〉</h2>
-                            <p class="uptblc__buyblc--single-it">40g</p>
-                            <p class="uptblc__buyblc--single-txt">手のひらで温めてからお顔全体になじませて。
-                                お顔全体に広げたあとに、ゼラニウム＆イランイランの香りを感じながら深呼吸をすると“わたし、今日もがんばった”って思える。</p>
-                            <p class="upt__price uptblc__buyblc--txt03">¥2,750 (tax in)</p>
-
-
-                            <div class="uptblc__buyblc--btn">
-                                <!-- 商品選択フォーム -->
-                                <form action="/shop/cart/add" method="post">
-                                    <div style="display: none">
-                                        <!-- 規格選択 -->
-                                        <input id="variant-id" type="hidden" name="variant_id"
-                                            value="{{ product.master.id }}">
-                                        <div id="option_types"></div>
-
-                                        <!-- 数量選択 -->
-                                        <label>数量</label>
-                                        <input id="text-out-of-stock" value="在庫切れ" disabled style="display:none;">
-                                        <select id="quantity" name="quantity" style="display:none;"></select>
-
-                                        <!-- 再入荷お知らせ -->
-                                        <a id="btn-stock-waiting-list" href="javascript:void(0);"
-                                            style='display:none;'>再入荷お知らせ</a>
-                                    </div>
-                                    <!-- /display: none -->
-
-                                    <!-- カート追加 -->
-                                    <button id="btn-add">
-                                        <p class="txt">購入はこちら</p><span></span>
-                                    </button>
-
-                                </form>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- ここまで -->
-    </section>
-
-
-    <section class="uptproduct__ex">
-
-        <div class="uptproduct__extop">
-            <div class="uptproduct__extop--img">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_cream-ex.jpg"
-                    alt="Upt MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="pcImg">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_cream-ex-sp.jpg"
-                    alt="Upt MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="spImg">
-            </div>
-            <div class="uptproduct__ex--line">
-                <div class="uptproduct__extop--inner">
-                    <div>
-                        <p class="uptproduct__ex--ttl">なるだけ手間をなくせるように</p>
-                        <p class="uptproduct__ex--txt">子供のこと、仕事のこと、みんな忙しい日々をおくっているから、できるだけスキンケアの手数を減らしたくて。<br>
-                            3ステップでまとめるのが目標だったから、クリームでいかに潤いを留めるかが重要だった。<br>
-                            こってりしすぎず、ほど良く滑らかなテクスチャーは“1日のご褒美”のような心地よさ。<br>
-                            水分をしっかり留めて保ってくれる。</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="uptproduct__exbtm">
-            <div class="uptproduct__ex--line02">
-                <div class="uptproduct__exbtm--no">
-                    <p class="uptproduct__exbtm--subttl">3つのフリー処方</p>
-                    <div class="uptproduct__exbtm--noimg">
-                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_cream.svg"
-                            alt="Upt MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="pcImg">
-                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/component_cream-sp.svg"
-                            alt="Upt MOISTURIZING CREAM ウプト モイスチャライジングクリーム" width="auto" height="auto" class="spImg">
-                    </div>
-                </div>
-            </div>
-            <div class="uptproduct__exbtm--seibun">
-                <p class="uptproduct__ex--ttl2">成分</p>
-                <p class="uptproduct__ex--txt2">
-                    温泉水、ミネラルオイル、スクワラン、ＢＧ、ベヘニルアルコール、ジメチコン、ＰＥＧ－１５０、マルチトール、セテアリルアルコール、ペンチレングリコール、ステアリン酸グリセリル、ステアロイルグルタミン酸Ｎａ、エチルヘキシルグリセリン、カプリル酸グリセリル、セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ、アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３、パルミチン酸アスコルビルリン酸３Ｎａ、ナイアシンアミド、エリンギウムマリチムムカルス培養液、加水分解コラーゲン、水溶性コラーゲン、水溶性コラーゲンクロスポリマー、デキストラン、マカデミアナッツ脂肪酸フィトステリル、フィトステロールズ、水、水添レシチン、グリセリン、ＥＤＴＡ－２Ｎａ、フェノキシエタノール、イランイラン花油、ニオイテンジクアオイ油
-                </p>
-            </div>
-        </div>
-    </section>
-    
-
-    
-    {% endif %}
     
     <!-- /クリーム -->
 
@@ -1412,201 +1036,9 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
     <!-- セット商品 -->
     
-    {% if product.id == 5 %}
-    
-
-    
-    <section id="js-prodcutFv" class="uptprodcut__intro">
-        <h2 class="uptprodcut__intro--txt">スキンケアを、<br>⼼安らぐ時間に</h2>
-        <div class="uptprodcut__intro--relative">
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="安達祐実" width="auto"
-                height="auto" class="pcImg">
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="安達祐実" width="auto"
-                height="auto" class="spImg">
-            <div class="uptprodcut__intro--border" id="js-border"></div>
-        </div>
-
-    </section>
-    <section class="uptline"></section>
-
-    <section class="uptproduct__setitem">
-        <h2 class="uptblc__ttl">SET ITEM</h2>
-
-        <div class="uptproduct__setitem--blc">
-            <div class="uptproduct__setitem--blc-s border img">
-                <div class="uptproduct__setitem--img">
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set01.png" width="auto" height="auto"
-                        alt="バランシングトナー">
-                </div>
-            </div>
-            <div class="uptproduct__setitem--blc-s">
-                <div class="uptproduct__setitem--exp">
-                    <div class="uptproduct__setitem--name">
-                        <div class="uptproduct__setitem--name-txt">
-                            <h3 class="uptproduct__setitem--name01">BALANCING TONER</h3>
-                            <p class="uptproduct__setitem--name02">バランシングトナー<br>〈化粧⽔〉</p>
-                            <p class="uptproduct__setitem--name03 italic">155mL</p>
-                        </div>
-                        <div class="uptproduct__setitem--name-img">
-                            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set01.png" width="auto"
-                                height="auto" alt="バランシングトナー">
-                        </div>
-                    </div>
-
-                    <div class="uptproduct__setitem--setsumei">
-                        <p class="uptproduct__setitem--setsumei--ttl">水ってやっぱり気持ちいい</p>
-                        <p>お肌に乗せた瞬間にすーっとなじんでうるおいに満ちたお肌に。</p>
-                    </div>
-
-                    <div class="uptproduct__setitem--absolute">
-                        <ul class="uptproduct__setitem--list" id="js-accordion01">
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">使用感<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>とろみのないみずみずしいテクスチャーが角質層のすみずみまで浸透。
-                                        お肌の水分をチャージしキメを整えます。</p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">成分<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>温泉水、水、ＢＧ、グリセリン、ジグリセリン、ペンチレングリコール、プロパンジオール、セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ、サッカロミセス／コメ発酵液、アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３、パルミチン酸アスコルビルリン酸３Ｎａ、ナイアシンアミド、加水分解ヒアルロン酸アルキル（Ｃ１２－１３）グリセリル、ヒアルロン酸ジメチルシラノール、ヒアルロン酸Ｎａ、水溶性プロテオグリカン、ＰＥＧ－８、ベタイン、ＰＣＡ－Ｎａ、デキストラン、ポリクオタニウム－５１、フィトステロールズ、ＰＥＧ－２０ソルビタンココエート、水添レシチン、ＰＥＧ－６０水添ヒマシ油、クエン酸Ｎａ、クエン酸、カプリルヒドロキサム酸、ペンテト酸５Ｎａ、フェノキシエタノール、イランイラン花油、ニオイテンジクアオイ油
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">使い方<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>適量を手に取り、両手でお顔全体を包み込むようにハンドプレスして優しくなじませる。お肌がうるおいで満ちるまで好きなだけ重ね付けして。</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="uptproduct__setitem--blc reverse">
-            <div class="uptproduct__setitem--blc-s img blc02">
-                <div class="uptproduct__setitem--img">
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set02.png" alt="コンディショニングミルク" width="auto"
-                        height="auto">
-                </div>
-            </div>
-            <div class="uptproduct__setitem--blc-s border">
-                <div class="uptproduct__setitem--exp">
-                    <div class="uptproduct__setitem--name">
-                        <div class="uptproduct__setitem--name-txt">
-                            <h3 class="uptproduct__setitem--name01">CONDITIONING MILK</h3>
-                            <p class="uptproduct__setitem--name02">コンディショニングミルク<br>〈乳液〉</p>
-                            <p class="uptproduct__setitem--name03 italic">120mL</p>
-                        </div>
-                        <div class="uptproduct__setitem--name-img">
-                            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set02.png" alt="コンディショニングミルク"
-                                width="auto" height="auto">
-                        </div>
-                    </div>
-
-                    <div class="uptproduct__setitem--setsumei">
-                        <p class="uptproduct__setitem--setsumei--ttl">さらさらのミルクが欲しかった</p>
-                        <p>まるで水のような新感覚テクスチャーがしっとりうるおうお肌に。</p>
-                    </div>
-
-                    <div class="uptproduct__setitem--absolute">
-                        <ul class="uptproduct__setitem--list" id="js-accordion02">
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">使用感<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>ベタつき感のないさらさらとしたミルクのようなテクスチャーで包み込む。
-                                        みずみずしく柔らかなお肌へ導きます。</p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">成分<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>水、温泉水、ＢＧ、グリセリン、ベタイン、エチルヘキシルグリセリン、カプリル酸グリセリル、セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ、アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３、スクワラン、リン酸アスコルビルＭｇ、パルミチン酸アスコルビルリン酸３Ｎａ、３－Ｏ－エチルアスコルビン酸、ナイアシンアミド、デキストラン、ラウロイルグルタミン酸ジ（フィトステリル／オクチルドデシル）、フィトステロールズ、ミリスチン酸オクチルドデシル、ジフェニルシロキシフェニルトリメチコン、ジメチコン、カルボマー、キサンタンガム、ＰＥＧ－２０ソルビタンココエート、水添レシチン、ＰＥＧ－６０水添ヒマシ油、水酸化Ｋ、フェノキシエタノール、イランイラン花油、ニオイテンジクアオイ油
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">使い方<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>適量を手に取り、お顔全体に優しくなじませる。
-                                        乾燥やハリ不足を感じる部分には重ね付けを。
-                                        首やデコルテまで塗り広げてケアするのもおすすめ。</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="uptproduct__setitem--blc">
-            <div class="uptproduct__setitem--blc-s border img">
-                <div class="uptproduct__setitem--img">
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/img_set03.png" alt="モイスチャライジングクリーム"
-                        width="auto" height="auto">
-                </div>
-            </div>
-            <div class="uptproduct__setitem--blc-s">
-                <div class="uptproduct__setitem--exp">
-                    <div class="uptproduct__setitem--name">
-                        <div class="uptproduct__setitem--name-txt">
-                            <h3 class="uptproduct__setitem--name01">MOISTURIZING CREAM</h3>
-                            <p class="uptproduct__setitem--name02">モイスチャライジングクリーム<br>〈クリーム〉</p>
-                            <p class="uptproduct__setitem--name03 italic">40g</p>
-                        </div>
-                        <div class="uptproduct__setitem--name-img">
-                            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/point_set03.png" alt="モイスチャライジングクリーム"
-                                width="auto" height="auto">
-                        </div>
-                    </div>
-
-                    <div class="uptproduct__setitem--setsumei">
-                        <p class="uptproduct__setitem--setsumei--ttl">なるだけ手間をなくせるように</p>
-                        <p>お肌全体をうるおいヴェールで包みこみ、吸い付くようなしなやかなお肌へ。</p>
-                    </div>
-
-                    <div class="uptproduct__setitem--absolute">
-                        <ul class="uptproduct__setitem--list" id="js-accordion03">
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">使用感<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>お肌の上でとろけるテクスチャーが水分をしっかり閉じ込め密着。
-                                        お肌を柔らかくなめらかに仕上げます。</p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">成分<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>温泉水、ミネラルオイル、スクワラン、ＢＧ、ベヘニルアルコール、ジメチコン、ＰＥＧ－１５０、マルチトール、セテアリルアルコール、ペンチレングリコール、ステアリン酸グリセリル、ステアロイルグルタミン酸Ｎａ、エチルヘキシルグリセリン、カプリル酸グリセリル、セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ、アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３、パルミチン酸アスコルビルリン酸３Ｎａ、ナイアシンアミド、エリンギウムマリチムムカルス培養液、加水分解コラーゲン、水溶性コラーゲン、水溶性コラーゲンクロスポリマー、デキストラン、マカデミアナッツ脂肪酸フィトステリル、フィトステロールズ、水、水添レシチン、グリセリン、ＥＤＴＡ－２Ｎａ、フェノキシエタノール、イランイラン花油、ニオイテンジクアオイ油
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">使い方<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>手のひらで温めてからお顔全体になじませる。
-                                        お顔全体に広げたあとに、ゼラニウム＆イランイランの香りを感じながら深呼吸。</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="uptline"></section>
-    <script src="{{ theme_file_root_path }}/assets/uptproduct.js"></script>
 
     
 
-    
-    {% endif %}
     
     <!-- /セット商品 -->
 
@@ -1614,267 +1046,15 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
     <!-- 定期商品以外 -->
     
-        {% if product.id != 8 %}
-    
 
     
-
-    <!-- 共通block/point -->
-    <section class="uptproduct__point">
-        <h2 class="uptblc__ttl">POINT</h2>
-        <div class="uptproduct__point--con">
-            <ul class="uptproduct__point--contxt">
-                <li class="uptproduct__point--contxt01">
-                    <h3 class="uptproduct__point--ttl">TEXTURE</h3>
-                    <p class="uptproduct__point--subttl">つけ心地の良さを最優先</p>
-                    <span class="uptproduct__point--border"></span>
-                    <p class="uptproduct__point--txt">スキンケア後のベタつき感を減らし、メイクの前でも寝る前でも邪魔をしない気持ちのいい手触りに仕上げました。
-                        重さやベタつき感がなく、お肌に馴染みうるおいが続きます。</p>
-                </li>
-                <li class="uptproduct__point--contxt02">
-                    <h3 class="uptproduct__point--ttl">COMPONENT</h3>
-                    <p class="uptproduct__point--subttl">最適なバランスを探究</p>
-                    <span class="uptproduct__point--border"></span>
-                    <p class="uptproduct__point--txt">毎日のスキンケアを手軽に、年代問わず使ってほしいからシンプルな処方にこだわりました。
-                        厳選した3種のペプチド<span>※1</span> / ビタミンC誘導体<span>※2</span> / ナイアシンアミド /
-                        5種のナノセラミド<span>※3</span>の4つを保湿成分としてバランス良く配合し、水の代わりに可能な限り温泉水を使用することで、皮膚にうるおいを与えハリツヤのあるお肌に導きます。
-                        <br><span>
-                            ※1 アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３　※2 パルミチン酸アスコルビルリン酸３Ｎａ　※3
-                            セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ</span></p>
-                </li>
-                <li class="uptproduct__point--contxt03">
-                    <h3 class="uptproduct__point--ttl">FRAGRANCE</h3>
-                    <p class="uptproduct__point--subttl">甘すぎない爽やかな香りを</p>
-                    <span class="uptproduct__point--border"></span>
-                    <p class="uptproduct__point--txt">ゼラニウム<span>※1</span> &イランイラン<span>※2</span>
-                        の天然精油を配合し、つけた瞬間心地よい香りで包み込みます。
-                        甘すぎないエキゾチックな香りが心にも身体にもなじむよう。
-                        3ステップ終えたあとにほど良く香りが残るようにこだわりました。
-                        <br>
-                        <span>※1 ニオイテンジクアオイ油　※2 イランイラン花油</span></p>
-                </li>
-            </ul>
-        </div>
-
-    </section>
-    <!-- セット商品 -->
-
-
-    <!-- 定期商品 -->
-    <section class="uptprodcut__subsc">
-        <a href="/shop/products/upt_skincareset-subscribe/">
-            <div class="uptprodcut__subsc--wrapper">
-                <div class="uptprodcut__subsc--blc">
-                    <picture class="pc">
-                        <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_trial.webp" type="image/webp">
-                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_trial.jpg" alt="定期セット" width="auto"
-                            height="auto">
-                    </picture>
-                    <picture class="sp">
-                        <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_trial-sp.webp" type="image/webp">
-                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_trial-sp.jpg" alt="定期セット sp" width="auto"
-                            height="auto">
-                    </picture>
-                </div>
-                <div class="uptprodcut__subsc--blc2">
-                    <div>
-                        <p class="uptprodcut__subsc--ttl">Uptスキンケアセット<br>
-                            定期お届けコースについて</p>
-                        <p class="uptprodcut__subsc--txt">
-                            初回トライアル<span class="italic">¥1,980(tax in)</span><br>
-                            2回目以降<span class="italic">¥5,980(tax in)</span>
-                        </p>
-                        <a class="upthome__products--linkbtn" href="/shop/products/upt_skincareset-subscribe/">
-                            <span>詳細はこちら</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </section>
-    <section class="uptline"></section>
-
-    <!-- /定期商品 -->
-
-    <section class="uptproduct__others">
-        <h2 class="uptblc__ttl">OTHER ITEM</h2>
-        <div class="uptproduct__others--con">
-
-            <!-- 共通部分・商品ページ -->
-            <section class="upthome__products">
-                <ul class="upthome__products--blc">
-
-                    <!-- セット化粧品 -->
-                    
-                    {% if product.id != 5 %}
-
-
-                    
-
-                    
-
-                    <li>
-                        <a href="/shop/products/upt_skincareset">
-                            <div>
-                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/img_prosductset.jpg"
-                                    alt="ウプト スキンケアセット" width="auto" height="auto">
-
-                                <div class="upthome__products--nameblc">
-                                    <h3 class="upthome__products--name">Upt SKINCARE SET</h3>
-                                    <p class="upthome__products--jpname">ウプト スキンケアセット</p>
-                                </div>
-                            </div>
-                            <p class="upthome__products--linkbtn">
-                                <span>詳細はこちら</span>
-                            </p>
-                        </a>
-                    </li>
-
-
-                    
-
-                    
-                        {% endif %}
-                        
-                    <!-- /セット化粧品 -->
-
-                    <!-- トナー化粧品 -->
-                    
-                    {% if product.id != 2 %}
-                    
-
-                    
-
-                    <li>
-                        <a href="/shop/products/balancing_toner">
-                            <div>
-                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/home_prodcut01b.jpg"
-                                    alt="バランシングトナー" width="auto" height="auto">
-
-                                <div class="upthome__products--nameblc">
-                                    <h3 class="upthome__products--name">BALANCING TONER</h3>
-                                    <p class="upthome__products--jpname">バランシングトナー<span class="italic">155mL</span></p>
-                                </div>
-                            </div>
-                            <p class="upthome__products--linkbtn">
-                                <span>詳細はこちら</span>
-                            </p>
-                        </a>
-                    </li>
-                    
-
-                    
-                    {% endif %}
-                    
-                    <!-- /トナー化粧品 -->
-
-
-
-                    <!-- ミルク乳液 -->
-                    
-                    {% if product.id != 3 %}
-                    
-
-                    
-
-
-                    <li>
-                        <a href="/shop/products/conditioning_milk">
-                            <div>
-                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut02.png"
-                                    alt="コンディショニングミルク" width="auto" height="auto">
-
-                                <div class="upthome__products--nameblc">
-                                    <h3 class="upthome__products--name">CONDITIONING MILK</h3>
-                                    <p class="upthome__products--jpname">コンディショニングミルク<span class="italic">120mL</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="upthome__products--linkbtn">
-                                <span>詳細はこちら</span>
-                            </p>
-                        </a>
-                    </li>
-                    
-
-                    
-                    {% endif %}
-                    
-                    <!-- /ミルク乳液 -->
-
-                    <!-- クリーム -->
-                    
-                    {% if product.id != 4 %}
-                    
-
-                    
-
-
-                    <li>
-                        <a href="/shop/products/moisturizing_cream">
-                            <div>
-                                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut03.png"
-                                    alt="モイスチャライジングクリーム" width="auto" height="auto">
-
-                                <div class="upthome__products--nameblc">
-                                    <h3 class="upthome__products--name">MOISTURIZING CREAM</h3>
-                                    <p class="upthome__products--jpname">モイスチャライジングクリーム<span class="italic">40g</span>
-                                    </p>
-                                </div>
-                            </div>
-                            <p class="upthome__products--linkbtn">
-                                <span>詳細はこちら</span>
-                            </p>
-                        </a>
-                    </li>
-                    
-
-                    
-                    {% endif %}
-                    
-                    <!-- /クリーム -->
-
-
-                </ul>
-            </section>
-            <!-- 共通部分・商品ページ -->
-
-        </div>
-    </section>
-        <!-- /.定期商品 -->
         
-        
-            {% endif %}
-        
-    
-    <!-- /.定期商品以外 -->
-
-    {% comment %} review {% endcomment %}
-    {% if base_info.use_review? %}
-    {% section 'products_show_review' %}
-    {% endif %}
-    {% comment %} 関連商品 {% endcomment %}
-    {% if base_info.use_related_products_on_detail? and p.active_related_products.size != 0 %}
-    {% section 'products_show_recommend' %}
-    {% endif %}
     
 
 </main>
 
 
 <!-- product01 -->
-
-
-<link rel="stylesheet" href="{{ theme_file_root_path }}/assets/product.css" type="text/css">
-
-{% content_for meta_description %}
-{% endcontent_for %}
-
-{% content_for meta_keywords %}
-{% endcontent_for %}
-
-{% content_for title %}
-{% endcontent_for %}
 
 
 

@@ -533,6 +533,12 @@
     }
 
 }
+@media screen and (max-width: var.$spbp) {
+    .uptheader .uptgmenu__btm{
+        padding-bottom: 5vh;
+    }
+}
+
 @media screen and (max-width: 400px) {
     .uptgmenu__bnr{
         margin-top: 10px;

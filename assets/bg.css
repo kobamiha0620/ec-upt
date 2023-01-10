@@ -118,8 +118,8 @@ body {
   line-height: 0;
 }
 .bgw1 .maskbg1 {
-  -webkit-mask-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_subscription0105_20221228122836/ec_force/assets/images/uptorigin/bg1_mask.png");
-  mask-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_subscription0105_20221228122836/ec_force/assets/images/uptorigin/bg1_mask.png");
+  -webkit-mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/theme_subscription0110_20230106154548/ec_force/assets/images/uptorigin/bg1_mask.png");
+  mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/theme_subscription0110_20230106154548/ec_force/assets/images/uptorigin/bg1_mask.png");
   -webkit-mask-size: 100% auto;
           mask-size: 100% auto;
   -webkit-mask-position: center top;
@@ -127,8 +127,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   .bgw1 .maskbg1 {
-    -webkit-mask-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_subscription0105_20221228122836/ec_force/assets/images/uptorigin/bg1_mask.png");
-    mask-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_subscription0105_20221228122836/ec_force/assets/images/uptorigin/bg1_mask.png");
+    -webkit-mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/theme_subscription0110_20230106154548/ec_force/assets/images/uptorigin/bg1_mask.png");
+    mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/theme_subscription0110_20230106154548/ec_force/assets/images/uptorigin/bg1_mask.png");
     -webkit-mask-position: center top -24vw;
             mask-position: center top -24vw;
     -webkit-mask-size: 200% auto;
@@ -154,8 +154,8 @@ body {
   line-height: 0;
 }
 .bgw2 .maskbg2 {
-  -webkit-mask-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_subscription0105_20221228122836/ec_force/assets/images/uptorigin/bg2_mask.png");
-  mask-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_subscription0105_20221228122836/ec_force/assets/images/uptorigin/bg2_mask.png");
+  -webkit-mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/theme_subscription0110_20230106154548/ec_force/assets/images/uptorigin/bg2_mask.png");
+  mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/theme_subscription0110_20230106154548/ec_force/assets/images/uptorigin/bg2_mask.png");
   -webkit-mask-size: 100% auto;
           mask-size: 100% auto;
   -webkit-mask-position: center top;
@@ -166,8 +166,8 @@ body {
 }
 @media screen and (max-width: 768px) {
   .bgw2 .maskbg2 {
-    -webkit-mask-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_subscription0105_20221228122836/ec_force/assets/images/uptorigin/bg2_mask.png");
-    mask-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_subscription0105_20221228122836/ec_force/assets/images/uptorigin/bg2_mask.png");
+    -webkit-mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/theme_subscription0110_20230106154548/ec_force/assets/images/uptorigin/bg2_mask.png");
+    mask-image: url("https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/theme_subscription0110_20230106154548/ec_force/assets/images/uptorigin/bg2_mask.png");
     -webkit-mask-position: center top -24vw;
             mask-position: center top -24vw;
     -webkit-mask-size: 100% auto;
@@ -187,7 +187,17 @@ body {
   }
 }
 
-.bgw1 img:first-child {
+.bgImg01 .imgFirst {
+  -webkit-animation: loop 600s -300s linear infinite;
+          animation: loop 600s -300s linear infinite;
+}
+
+.bgImg01 img:last-child {
+  -webkit-animation: loop2 600s linear infinite;
+          animation: loop2 600s linear infinite;
+}
+
+.bgw1 .imgFirst {
   -webkit-animation: loop 600s -300s linear infinite;
           animation: loop 600s -300s linear infinite;
 }
@@ -197,7 +207,17 @@ body {
           animation: loop2 600s linear infinite;
 }
 
-.bgw2 img:first-child {
+.bgw2 .imgFirst {
+  -webkit-animation: loop 300s -150s linear infinite;
+          animation: loop 300s -150s linear infinite;
+}
+
+.bgw2 img:last-child {
+  -webkit-animation: loop2 300s linear infinite;
+          animation: loop2 300s linear infinite;
+}
+
+.bgw2 .imgFirst {
   -webkit-animation: loop 300s -150s linear infinite;
           animation: loop 300s -150s linear infinite;
 }
@@ -208,11 +228,11 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .bgw1 img:first-child {
+  .bgImg01 .imgFirst {
     -webkit-animation: loop 1400s -700s linear infinite;
             animation: loop 1400s -700s linear infinite;
   }
-  .bgw1 img:last-child {
+  .bgImg01 img:last-child {
     -webkit-animation: loop2 1400s linear infinite;
             animation: loop2 1400s linear infinite;
   }

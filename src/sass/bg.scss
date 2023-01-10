@@ -106,15 +106,28 @@ body {
     }
 }
 
-.bgw1 img:first-child {
+.bgImg01 .imgFirst {
+    animation: loop 600s -300s linear infinite;
+}
+
+.bgImg01 img:last-child {
+    animation: loop2 600s linear infinite;
+}
+.bgw1 .imgFirst {
     animation: loop 600s -300s linear infinite;
 }
 
 .bgw1 img:last-child {
     animation: loop2 600s linear infinite;
 }
+.bgw2 .imgFirst {
+    animation: loop 300s -150s linear infinite;
+}
 
-.bgw2 img:first-child {
+.bgw2 img:last-child {
+    animation: loop2 300s linear infinite;
+}
+.bgw2 .imgFirst {
     animation: loop 300s -150s linear infinite;
 }
 
@@ -122,11 +135,11 @@ body {
     animation: loop2 300s linear infinite;
 }
 @media screen and (max-width: var.$spbp) {
-    .bgw1 img:first-child {
+    .bgImg01 .imgFirst {
         animation: loop 1400s -700s linear infinite;
     }
     
-    .bgw1 img:last-child {
+    .bgImg01 img:last-child {
         animation: loop2 1400s linear infinite;
     }
     

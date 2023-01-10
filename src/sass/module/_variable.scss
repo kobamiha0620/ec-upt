@@ -9,13 +9,13 @@ $bg: #F7F8F8;
 $bg_dark: #32667A;
 $bg2: #d8d8e4;
 // $imgpath: '/assets/images/uptorigin/';
-$imgpath: 'https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_subscription0105_20221228122836/ec_force/assets/images/uptorigin/';
+$imgpath: 'https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/theme_subscription0110_20230106154548/ec_force/assets/images/uptorigin/';
 @mixin bg(){
     background-size: 100% auto;
-    display: block;
     white-space: nowrap;
     text-indent: -9999px;
     background-repeat: no-repeat;
+    display: block;
 }
 @mixin fz($size) {
 	font-size: calc($size / 16) + rem;
@@ -37,6 +37,26 @@ $imgpath: 'https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_
 .monserrat{
     font-family: 'Montserrat', sans-serif;
 }
+
+// ## webp classes
+$webpClassName: '.is-webp';
+$noWebpClassName: '.is-no-webp';
+
+// $selector にする background-image で、webp を出し分ける
+// ※親要素に $webpClassName / $noWebpClassName が付与されることが前提
+// --------------------------------------------------------
+// $selector      {string} css セレクタ (default: jpg)
+// $imgpath      {string} 背景画像ファイルパス
+// $fileExtension {string} 背景画像拡張子
+@mixin webpBg($selector, $imgpath, $fileExtension: 'jpg') {
+  #{$noWebpClassName} #{$selector} {
+    background-image: url(#{$imgpath}.#{$fileExtension});
+  }
+  #{$webpClassName} #{$selector} {
+    background-image: url(#{$imgpath}.webp);
+  }
+}
+
 
 //フェードイ
 .fadein00 {
