@@ -1,0 +1,121 @@
+@use "./module/variable"as var;
+
+.uptnews{
+    padding: 40px 0;
+    border-bottom: dashed 1px var.$bg2;
+
+    a{
+        text-decoration: none;
+
+    }
+    &__ttl{
+        color: #494949;
+        font-size: 22px!important;
+        margin: 0 0 16px!important;
+        line-height: 1;
+        font-weight: 500;
+    }
+    &__gazo{
+        margin: 0 20px 0 0;
+        min-width: 180px;
+        width: 180px;
+        max-width: 180px;
+        img{
+            margin: 0 0!important;
+        }
+    }
+    &__contents{
+        display: flex;
+        &--name{
+            margin: 0 8px 0 0!important;
+            display: inline-block;
+            background: var.$bg2;
+            color: #494949;
+            border-radius: 20px;
+            padding: 5px 10px;
+            line-height: 1!important;
+            white-space: nowrap;
+        }
+        &--txt{
+            margin: 4px 0 0!important;
+            color: #494949;
+            line-height: 1.2!important;
+            padding-left: 3px;
+            padding-top: 5px;
+            span{
+                font-size: 0.7em;
+            }
+        }
+        &--subtxt{
+            margin:0 0 20px!important;
+            @include var.fz(12);
+            line-height: 1.4!important;
+        }
+        &--nameblc{
+            display: flex;
+            // align-items: center;
+            margin: 0 0 10px 0;
+            p{
+                margin: 0!important;
+            }
+        }
+        &--nameblc2{
+            display: block;
+            // align-items: center;
+            margin: 0 0 0;
+
+        }
+    }
+    &__link{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        &--img{
+            margin-right: 16px;
+        }
+
+    }
+    &__img{
+        border: solid 1px var.$bg2;
+        width: 80px;
+        min-width: 80px;
+        margin: 0 0!important;
+    }
+    // &__namettl{
+    //     color: var.$bc2;
+    //     display: inline-block;
+    //     @include var.fz(12);
+    //     font-weight: bold;
+
+    // }
+    // &__name{
+    //     display: inline-block;
+    //     border-radius: 30px;
+    //     @include var.fz(12);
+    // }
+}
+
+@media screen and (max-width: var.$spbp) {
+    .uptnews__gazo{
+        min-width: 120px;
+        width: 120px;
+        max-width: 120px;
+        margin: 0 10px 0 0;
+
+    }
+    .uptnews__ttl{
+        font-size: 16px!important;
+        margin-bottom: 10px!important;
+    }
+    .uptnews__contents--txt{
+        font-size: 12px!important;
+    }
+    .uptnews__contents--subtxt{
+        font-size: 12px!important;
+
+    }
+}
+
+
+
+
