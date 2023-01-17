@@ -9,7 +9,7 @@ var pageinit = {
   path: '',
   ogimage : '' ,
   path : '' ,   
-  ecforce : 'false',
+  ecforce : 'true',
   category : ['main'] ,
   pagename : '',
   css: [],
@@ -18,85 +18,565 @@ var pageinit = {
 };
 %>
 <%
-var imgpath = 'https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/theme_subscription0110_20230106154548/ec_force';
+var imgpath = 'https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/theme_subscription0117_20230116184845/ec_force';
 // var imgpath = '';
 
 %>
 
-
-
-
-
-<div class="uptnews">
-
-    <div class="uptnews__contents">
+<ol class="uptnews">
+    <!-- 2月号 -->
+    <li>
         <div class="uptnews__gazo">
-            <img src="<%= imgpath %>/assets/images/uptorigin/IMG_4206.jpg" alt="画像１" width="auto" height="auto" class="">
+            <img src="<%= imgpath %>/assets/images/uptorigin/img_rosy2302.jpg" alt="画像１" width="auto" height="auto"
+                class="">
         </div>
-        <div>
+        <div class="uptnews__contens">
+            <h2 class="uptnews__ttl">＆ROSY 2月号</h2>
+
+            <div class="uptnews__contents--nameblc">
+                <p><span class="uptnews__contents--name">企画名</span></p>
+                <p class="uptnews__contents--txt">安達祐実さんの2022ビューティストーリー</p>
+            </div>
+
+            <a href="/shop/products/upt_skincareset" class="uptnews__link--blc"> 
+
+
+                <div class="uptnews__link">
+                    <div class="uptnews__link--img">
+                        <picture>
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/news_setimg.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/news_setimg.jpg" alt="set" width="1200px"
+                                height="1200px" class="uptnews__img">
+                        </picture>
+                    </div>
+                    <div>
+                        <div class="uptnews__contents--nameblc2">
+                             <p><span class="uptnews__contents--name">掲載商品</span></p>
+                        </div>
+                        <p class="uptnews__contents--txt">Upt SKINCARE SET<br><span>ウプト スキンケアセット</span></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </li>
+    <li>
+        <div class="uptnews__gazo">
+            <img src="<%= imgpath %>/assets/images/uptorigin/noimage.jpg" alt="画像１" width="auto" height="auto"
+                class="" style="border: solid 1px #eee;">
+        </div>
+        <div class="uptnews__contens">
+            <h2 class="uptnews__ttl">LDK the Beauty 2月号</h2>
+
+            <div class="uptnews__contents--nameblc">
+                <p><span class="uptnews__contents--name">企画名</span></p>
+                <p class="uptnews__contents--txt">フェイスクリームABC判定 50+α</p>
+            </div>
+
+            <a href="/shop/products/moisturizing_cream" class="uptnews__link--blc"> 
+
+
+                <div class="uptnews__link">
+                    <div class="uptnews__link--img">
+                        <picture>
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/news_creamimg.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/news_creamimg.jpg" alt="set" width="1200px"
+                                height="1200px" class="uptnews__img">
+                        </picture>
+                    </div>
+                    <div>
+                        <div class="uptnews__contents--nameblc2">
+                             <p><span class="uptnews__contents--name">掲載商品</span></p>
+                        </div>
+                        <p class="uptnews__contents--txt">MOISTURIZING CREAM <br><span>モイスチャライジングクリーム〈クリーム〉</span></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </li>
+    <!-- 1月号 -->
+    <li>
+        <div class="uptnews__gazo">
+            <img src="<%= imgpath %>/assets/images/uptorigin/img_vivi2301.jpg" alt="画像１" width="auto" height="auto"
+                class="">
+        </div>
+        <div class="uptnews__contens">
+            <h2 class="uptnews__ttl">ViVi 1月号</h2>
+
+            <div class="uptnews__contents--nameblc">
+                <p><span class="uptnews__contents--name">企画名</span></p>
+                <p class="uptnews__contents--txt">ViViコスメアワード<br>ニコルのアワードコスメTALK</p>
+            </div>
+
+            <!-- <p class="uptnews__contents--subtxt">> <a href="https://otonamuse.jp/beauty/15332/" target="_blank" rel="noopener noreferrer">otonaMUSE web 09.25</a></p> -->
+            <a href="/shop/products/balancing_toner" class="uptnews__link--blc">
+
+                <div class="uptnews__link">
+                    <div class="uptnews__link--img">
+                        <picture>
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/news_tonerimg.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/news_tonerimg.jpg" alt="set" width="1200px"
+                                height="1200px" class="uptnews__img">
+                        </picture>
+                    </div>
+                    <div>
+                        <div class="uptnews__contents--nameblc2">
+                             <p><span class="uptnews__contents--name">掲載商品</span></p>
+                        </div>
+                        <p class="uptnews__contents--txt">BALANCING TONER<br><span>ウプト バランシングトナー〈化粧⽔〉</span></p>
+                    </div>
+                </div>
+            </a>    
+
+
+        </div>
+
+    </li>
+
+    <!-- 12月号 -->
+    <li>
+        <div class="uptnews__gazo">
+            <img src="<%= imgpath %>/assets/images/uptorigin/noimage.jpg" alt="画像１" width="auto" height="auto"
+                class="" style="border: solid 1px #eee;">
+        </div>
+        <div class="uptnews__contens">
+            <h2 class="uptnews__ttl">LDK the Beauty 12月号</h2>
+
+            <div class="uptnews__contents--nameblc">
+                <p><span class="uptnews__contents--name">企画名</span></p>
+                <p class="uptnews__contents--txt">謎コスメアナタに代わって全力リサーチ</p>
+            </div>
+
+            <!-- <p class="uptnews__contents--subtxt">> <a href="https://otonamuse.jp/beauty/15332/" target="_blank" rel="noopener noreferrer">otonaMUSE web 09.25</a></p> -->
+            <a href="/shop/products/balancing_toner" class="uptnews__link--blc">
+
+                <div class="uptnews__link">
+                    <div class="uptnews__link--img">
+                        <picture>
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/news_tonerimg.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/news_tonerimg.jpg" alt="set" width="1200px"
+                                height="1200px" class="uptnews__img">
+                        </picture>
+                    </div>
+                    <div>
+                        <div class="uptnews__contents--nameblc2">
+                             <p><span class="uptnews__contents--name">掲載商品</span></p>
+                        </div>
+                        <p class="uptnews__contents--txt">BALANCING TONER<br><span>ウプト バランシングトナー〈化粧⽔〉</span></p>
+                    </div>
+                </div>
+            </a>    
+            <a href="/shop/products/conditioning_milk" class="uptnews__link--blc">
+
+
+                    <div class="uptnews__link">
+                        <div class="uptnews__link--img">
+                            <picture>
+                                <source srcset="<%= imgpath %>/assets/images/uptorigin/news_milkimg.webp" type="image/webp">
+                                <img src="<%= imgpath %>/assets/images/uptorigin/news_milkimg.jpg" alt="set" width="1200px"
+                                    height="1200px" class="uptnews__img">
+                            </picture>
+                        </div>
+                        <div>
+                            <div class="uptnews__contents--nameblc2">
+                                 <p><span class="uptnews__contents--name">掲載商品</span></p>
+                            </div>
+                            <p class="uptnews__contents--txt">CONDITIONING MILK
+                                <br><span>ウプト コンディショニングミルク〈乳液〉</span></p>
+                        </div>
+                    </div>
+                </a>
+
+        </div>
+
+    </li>
+    
+    <!-- 11月号 -->
+    <li>
+        <div class="uptnews__gazo">
+            <img src="<%= imgpath %>/assets/images/uptorigin/img_anan1107.jpg" alt="画像１" width="auto" height="auto"
+                class="">
+        </div>
+        <div class="uptnews__contens">
+            <h2 class="uptnews__ttl">anan 11月9日号</h2>
+
+            <div class="uptnews__contents--nameblc">
+                <p><span class="uptnews__contents--name">企画名</span></p>
+                <p class="uptnews__contents--txt">美容の坂道のぼり隊</p>
+            </div>
+
+            <!-- <p class="uptnews__contents--subtxt">> <a href="https://otonamuse.jp/beauty/15332/" target="_blank" rel="noopener noreferrer">otonaMUSE web 09.25</a></p> -->
+            <a href="/shop/products/balancing_toner" class="uptnews__link--blc">
+
+                <div class="uptnews__link">
+                    <div class="uptnews__link--img">
+                        <picture>
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/news_tonerimg.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/news_tonerimg.jpg" alt="set" width="1200px"
+                                height="1200px" class="uptnews__img">
+                        </picture>
+                    </div>
+                    <div>
+                        <div class="uptnews__contents--nameblc2">
+                             <p><span class="uptnews__contents--name">掲載商品</span></p>
+                        </div>
+                        <p class="uptnews__contents--txt">BALANCING TONER<br><span>ウプト バランシングトナー〈化粧⽔〉</span></p>
+                    </div>
+                </div>
+            </a>    
+            <a href="/shop/products/conditioning_milk" class="uptnews__link--blc">
+
+
+                    <div class="uptnews__link">
+                        <div class="uptnews__link--img">
+                            <picture>
+                                <source srcset="<%= imgpath %>/assets/images/uptorigin/news_milkimg.webp" type="image/webp">
+                                <img src="<%= imgpath %>/assets/images/uptorigin/news_milkimg.jpg" alt="set" width="1200px"
+                                    height="1200px" class="uptnews__img">
+                            </picture>
+                        </div>
+                        <div>
+                            <div class="uptnews__contents--nameblc2">
+                                 <p><span class="uptnews__contents--name">掲載商品</span></p>
+                            </div>
+                            <p class="uptnews__contents--txt">CONDITIONING MILK
+                                <br><span>ウプト コンディショニングミルク〈乳液〉</span></p>
+                        </div>
+                    </div>
+                </a>
+
+        </div>
+
+    </li>
+    <li>
+        <div class="uptnews__gazo">
+            <img src="<%= imgpath %>/assets/images/uptorigin/img_maquia2211.jpg" alt="画像１" width="auto" height="auto"
+                class="">
+        </div>
+        <div class="uptnews__contens">
+            <h2 class="uptnews__ttl">MAQUIA 11月号</h2>
+
+            <div class="uptnews__contents--nameblc">
+                <p><span class="uptnews__contents--name">企画名</span></p>
+                <p class="uptnews__contents--txt">つややかに、ナチュラルに、心地よく。安達祐実肌の作りかた</p>
+            </div>
+
+            <!-- <p class="uptnews__contents--subtxt">> <a href="https://otonamuse.jp/beauty/15332/" target="_blank" rel="noopener noreferrer">otonaMUSE web 09.25</a></p>-->
+            <a href="/shop/products/upt_skincareset" class="uptnews__link--blc"> 
+
+
+                <div class="uptnews__link">
+                    <div class="uptnews__link--img">
+                        <picture>
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/news_setimg.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/news_setimg.jpg" alt="set" width="1200px"
+                                height="1200px" class="uptnews__img">
+                        </picture>
+                    </div>
+                    <div>
+                        <div class="uptnews__contents--nameblc2">
+                             <p><span class="uptnews__contents--name">掲載商品</span></p>
+                        </div>
+                        <p class="uptnews__contents--txt">Upt SKINCARE SET<br><span>ウプト スキンケアセット</span></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </li>
+
+    <!-- 10月号 -->
+    <li>
+        <div class="uptnews__gazo">
+            <img src="<%= imgpath %>/assets/images/uptorigin/IMG_4206.jpg" alt="画像１" width="auto" height="auto"
+                class="">
+        </div>
+        <div class="uptnews__contens">
             <h2 class="uptnews__ttl">otonaMUSE 10月号</h2>
 
-            <div class="uptnews__contents--nameblc"><p><span class="uptnews__contents--name">企画名</span></p> <p class="uptnews__contents--txt">安達祐実と秋服と秋メイク安達祐実と秋服と秋メイク安達祐実と秋服と秋メイク安達祐実と秋服と秋メイク</p></div>
-
-           <a href="/shop/products/upt_skincareset" class="uptnews__link--blc">
-            
-
-            <div class="uptnews__link">
-                <div class="uptnews__link--img">
-                    <picture>
-                        <source srcset="<%= imgpath %>/assets/images/uptorigin/news_setimg.webp" type="image/webp">
-                        <img src="<%= imgpath %>/assets/images/uptorigin/news_setimg.jpg" alt="set" width="1200px" height="1200px" class="uptnews__img">
-                    </picture>
-                </div>
-                <div>
-                    <div class="uptnews__contents--nameblc2"><p class="uptnews__contents--name">掲載商品</p></div>
-                    <p class="uptnews__contents--txt">Upt SKINCARE SET<br><span>ウプト スキンケアセット</span></p>
-                </div>
+            <div class="uptnews__contents--nameblc">
+                <p><span class="uptnews__contents--name">企画名</span></p>
+                <p class="uptnews__contents--txt">安達祐実と秋服と秋メイク</p>
             </div>
-        </a>
+
+            <a href="/shop/products/upt_skincareset" class="uptnews__link--blc">
+
+
+                <div class="uptnews__link">
+                    <div class="uptnews__link--img">
+                        <picture>
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/news_setimg.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/news_setimg.jpg" alt="set" width="1200px"
+                                height="1200px" class="uptnews__img">
+                        </picture>
+                    </div>
+                    <div>
+                        <div class="uptnews__contents--nameblc2">
+                             <p><span class="uptnews__contents--name">掲載商品</span></p>
+                        </div>
+                        <p class="uptnews__contents--txt">Upt SKINCARE SET<br><span>ウプト スキンケアセット</span></p>
+                    </div>
+                </div>
+            </a>
         </div>
 
-
-
-    </div>
-
-
-</div>
-
-
-<div class="uptnews">
-
-    <div class="uptnews__contents">
+    </li>
+    <li>
         <div class="uptnews__gazo">
-            <img src="<%= imgpath %>/assets/images/uptorigin/IMG_4206.jpg" alt="画像１" width="auto" height="auto" class="">
+            <img src="<%= imgpath %>/assets/images/uptorigin/img_finboy2210.jpg" alt="画像１" width="auto" height="auto"
+                class="">
         </div>
-        <div>
-            <h2 class="uptnews__ttl">otonaMUSE 10月号</h2>
+        <div class="uptnews__contens">
+            <h2 class="uptnews__ttl">FINEBOYS＋plus BEAUTY vol.6号</h2>
 
-            <div class="uptnews__contents--nameblc"><p><span class="uptnews__contents--name">企画名</span></p> <p class="uptnews__contents--txt">安達祐実と秋服と秋メイク安達祐実と秋服と秋メイク安達祐実と秋服と秋メイク安達祐実と秋服と秋メイク</p></div>
-
-           <p class="uptnews__contents--subtxt">テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</p>
-           <a href="/shop/products/upt_skincareset" class="uptnews__link--blc">
-            
-
-            <div class="uptnews__link">
-                <div class="uptnews__link--img">
-                    <picture>
-                        <source srcset="<%= imgpath %>/assets/images/uptorigin/news_setimg.webp" type="image/webp">
-                        <img src="<%= imgpath %>/assets/images/uptorigin/news_setimg.jpg" alt="set" width="1200px" height="1200px" class="uptnews__img">
-                    </picture>
-                </div>
-                <div>
-                    <div class="uptnews__contents--nameblc2"><p class="uptnews__contents--name">掲載商品</p></div>
-                    <p class="uptnews__contents--txt">Upt SKINCARE SET<br><span>ウプト スキンケアセット</span></p>
-                </div>
+            <div class="uptnews__contents--nameblc">
+                <p><span class="uptnews__contents--name">企画名</span></p>
+                <p class="uptnews__contents--txt">ネクストブレイクが判明！トレンド最前線！</p>
             </div>
-        </a>
+
+            <a href="/shop/products/conditioning_milk" class="uptnews__link--blc">
+
+
+                <div class="uptnews__link">
+                    <div class="uptnews__link--img">
+                        <picture>
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/news_milkimg.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/news_milkimg.jpg" alt="set" width="1200px"
+                                height="1200px" class="uptnews__img">
+                        </picture>
+                    </div>
+                    <div>
+                        <div class="uptnews__contents--nameblc2">
+                             <p><span class="uptnews__contents--name">掲載商品</span></p>
+                        </div>
+                        <p class="uptnews__contents--txt">CONDITIONING MILK
+                            <br><span>ウプト コンディショニングミルク〈乳液〉</span></p>
+                    </div>
+                </div>
+            </a>
         </div>
 
+    </li>
+    <li>
+        <div class="uptnews__gazo">
+            <img src="<%= imgpath %>/assets/images/uptorigin/noimage.jpg" alt="画像１" width="auto" height="auto"
+                class="" style="border: solid 1px #eee;">
+        </div>
+        <div class="uptnews__contens">
+            <h2 class="uptnews__ttl">MAQUIA ONLINE 10.15</h2>
+
+            <div class="uptnews__contents--nameblc">
+                <p><span class="uptnews__contents--name">企画名</span></p>
+                <p class="uptnews__contents--txt">安達祐実さんの愛用スキンケア。こだわりから手順まで、すべて見せます！</p>
+            </div>
+
+            <p class="uptnews__contents--subtxt">> <a href="https://maquia.hpplus.jp/skincare/news/75518/" target="_blank" rel="noopener noreferrer">MAQUIA ONLINE 10.15</a></p>
+            <a href="/shop/products/upt_skincareset" class="uptnews__link--blc">
 
 
-    </div>
+                <div class="uptnews__link">
+                    <div class="uptnews__link--img">
+                        <picture>
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/news_setimg.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/news_setimg.jpg" alt="set" width="1200px"
+                                height="1200px" class="uptnews__img">
+                        </picture>
+                    </div>
+                    <div>
+                        <div class="uptnews__contents--nameblc2">
+                             <p><span class="uptnews__contents--name">掲載商品</span></p>
+                        </div>
+                        <p class="uptnews__contents--txt">Upt SKINCARE SET<br><span>ウプト スキンケアセット</span></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </li>
+
+    <li>
+        <div class="uptnews__gazo">
+            <img src="<%= imgpath %>/assets/images/uptorigin/noimage.jpg" alt="画像１" width="auto" height="auto"
+                class="" style="border: solid 1px #eee;">
+        </div>
+        <div class="uptnews__contens">
+            <h2 class="uptnews__ttl">MAQUIA ONLINE 10.10</h2>
+
+            <div class="uptnews__contents--nameblc">
+                <p><span class="uptnews__contents--name">企画名</span></p>
+                <p class="uptnews__contents--txt">安達祐実さんのLOVE♡なスキンケア。リアルな愛用品を公開！</p>
+            </div>
+
+            <p class="uptnews__contents--subtxt">> <a href="https://maquia.hpplus.jp/skincare/news/75517/" target="_blank" rel="noopener noreferrer">MAQUIA ONLINE 10.10</a></p>
+            <a href="/shop/products/upt_skincareset" class="uptnews__link--blc">
 
 
-</div>
+                <div class="uptnews__link">
+                    <div class="uptnews__link--img">
+                        <picture>
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/news_setimg.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/news_setimg.jpg" alt="set" width="1200px"
+                                height="1200px" class="uptnews__img">
+                        </picture>
+                    </div>
+                    <div>
+                        <div class="uptnews__contents--nameblc2">
+                             <p><span class="uptnews__contents--name">掲載商品</span></p>
+                        </div>
+                        <p class="uptnews__contents--txt">Upt SKINCARE SET<br><span>ウプト スキンケアセット</span></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </li>
+
+    <!-- 9月号 -->
+    <li>
+        <div class="uptnews__gazo">
+            <img src="<%= imgpath %>/assets/images/uptorigin/noimage.jpg" alt="画像１" width="auto" height="auto"
+                class="" style="border: solid 1px #eee;">
+        </div>
+        <div class="uptnews__contens">
+            <h2 class="uptnews__ttl">ELLE digital 09.30</h2>
+
+            <div class="uptnews__contents--nameblc">
+                <p><span class="uptnews__contents--name">企画名</span></p>
+                <p class="uptnews__contents--txt">"MEGUMIと安達祐実”、美肌すぎる最強の2人がバッグ&メイクポーチを披露！</p>
+            </div>
+
+            <p class="uptnews__contents--subtxt">> <a href="https://www.elle.com/jp/beauty/makeup-skincare/a41387896/megumiandyumi-bagandpouch-22-09/" target="_blank" rel="noopener noreferrer">ELLE digital 09.30</a></p>
+            <a href="/shop/products/upt_skincareset" class="uptnews__link--blc">
+
+
+                <div class="uptnews__link">
+                    <div class="uptnews__link--img">
+                        <picture>
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/news_setimg.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/news_setimg.jpg" alt="set" width="1200px"
+                                height="1200px" class="uptnews__img">
+                        </picture>
+                    </div>
+                    <div>
+                        <div class="uptnews__contents--nameblc2">
+                             <p><span class="uptnews__contents--name">掲載商品</span></p>
+                        </div>
+                        <p class="uptnews__contents--txt">Upt SKINCARE SET<br><span>ウプト スキンケアセット</span></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </li>
+    <li>
+        <div class="uptnews__gazo">
+            <img src="<%= imgpath %>/assets/images/uptorigin/noimage.jpg" alt="画像１" width="auto" height="auto"
+                class="" style="border: solid 1px #eee;">
+        </div>
+        <div class="uptnews__contens">
+            <h2 class="uptnews__ttl">otonaMUSE web 09.25</h2>
+
+            <div class="uptnews__contents--nameblc">
+                <p><span class="uptnews__contents--name">企画名</span></p>
+                <p class="uptnews__contents--txt">【Upt（ウプト）】安達祐実さんプロデュースのコスメがデビュー！</p>
+            </div>
+
+            <p class="uptnews__contents--subtxt">> <a href="https://otonamuse.jp/beauty/15332/" target="_blank" rel="noopener noreferrer">otonaMUSE web 09.25</a></p>
+            <a href="/shop/products/upt_skincareset" class="uptnews__link--blc">
+
+
+                <div class="uptnews__link">
+                    <div class="uptnews__link--img">
+                        <picture>
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/news_setimg.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/news_setimg.jpg" alt="set" width="1200px"
+                                height="1200px" class="uptnews__img">
+                        </picture>
+                    </div>
+                    <div>
+                        <div class="uptnews__contents--nameblc2">
+                             <p><span class="uptnews__contents--name">掲載商品</span></p>
+                        </div>
+                        <p class="uptnews__contents--txt">Upt SKINCARE SET<br><span>ウプト スキンケアセット</span></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </li>
+    <li>
+        <div class="uptnews__gazo">
+            <img src="<%= imgpath %>/assets/images/uptorigin/noimage.jpg" alt="画像１" width="auto" height="auto"
+                class="" style="border: solid 1px #eee;">
+        </div>
+        <div class="uptnews__contens">
+            <h2 class="uptnews__ttl">otonaMUSE web 09.24</h2>
+
+            <div class="uptnews__contents--nameblc">
+                <p><span class="uptnews__contents--name">企画名</span></p>
+                <p class="uptnews__contents--txt">【安達祐実×秋メイク③】温かなニットには、トープな目元でクリーンなギャップを
+                </p>
+            </div>
+
+            <p class="uptnews__contents--subtxt">> <a href="https://otonamuse.jp/beauty/15312/" target="_blank" rel="noopener noreferrer">otonaMUSE web 09.24 </a></p>
+            <a href="/shop/products/upt_skincareset" class="uptnews__link--blc">
+
+
+                <div class="uptnews__link">
+                    <div class="uptnews__link--img">
+                        <picture>
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/news_setimg.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/news_setimg.jpg" alt="set" width="1200px"
+                                height="1200px" class="uptnews__img">
+                        </picture>
+                    </div>
+                    <div>
+                        <div class="uptnews__contents--nameblc2">
+                             <p><span class="uptnews__contents--name">掲載商品</span></p>
+                        </div>
+                        <p class="uptnews__contents--txt">Upt SKINCARE SET<br><span>ウプト スキンケアセット</span></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </li>
+    <li>
+        <div class="uptnews__gazo">
+            <img src="<%= imgpath %>/assets/images/uptorigin/img_anan0907.jpg" alt="画像１" width="auto" height="auto"
+                class="">
+        </div>
+        <div class="uptnews__contens">
+            <h2 class="uptnews__ttl">anan 9月7日号</h2>
+
+            <div class="uptnews__contents--nameblc">
+                <p><span class="uptnews__contents--name">企画名</span></p>
+                <p class="uptnews__contents--txt">秋のビューティーニューススペシャル</p>
+            </div>
+
+            <!-- <p class="uptnews__contents--subtxt">テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト</p> -->
+            <a href="/shop/products/upt_skincareset" class="uptnews__link--blc">
+
+
+                <div class="uptnews__link">
+                    <div class="uptnews__link--img">
+                        <picture>
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/news_setimg.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/news_setimg.jpg" alt="set" width="1200px"
+                                height="1200px" class="uptnews__img">
+                        </picture>
+                    </div>
+                    <div>
+                        <div class="uptnews__contents--nameblc2">
+                             <p><span class="uptnews__contents--name">掲載商品</span></p>
+                        </div>
+                        <p class="uptnews__contents--txt">Upt SKINCARE SET<br><span>ウプト スキンケアセット</span></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+    </li>
+
+</ol>
