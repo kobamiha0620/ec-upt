@@ -3487,12 +3487,13 @@ h2.upthome__illust--ttl {
 
 .uptsubsc__customer--txt {
   text-align: center;
-  line-height: 1.2;
+  line-height: 1;
 }
 .uptsubsc__customer--txt span {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
   font-weight: normal;
+  line-height: 1;
 }
 
 main#productIndex .c-product_item__actions {

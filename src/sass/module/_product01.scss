@@ -1613,9 +1613,10 @@
 
 .uptsubsc__customer--txt{
     text-align: center;
-    line-height: 1.2;
+    line-height: 1;
     span{
-        @include var.fz(14);
+        @include var.fz(12);
         font-weight: normal;
+        line-height: 1;
     }
 }
