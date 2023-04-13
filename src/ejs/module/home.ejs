@@ -9,7 +9,7 @@ var pageinit = {
   path: '',
   ogimage : '' ,
   path : '' ,   
-  ecforce : 'false',
+  ecforce : 'true',
   category : ['main'] ,
   pagename : '',
   css: [],
@@ -18,8 +18,8 @@ var pageinit = {
 };
 %>
 <%
-// var imgpath = '{{ theme_file_root_path }}';
-var imgpath = '';
+var imgpath = '{{ theme_file_root_path }}';
+// var imgpath = '';
 
 %>
 
@@ -102,11 +102,8 @@ var imgpath = '';
                             </picture>
                         </div>
                         <p class="upthome__wash--blc-balm">
-                            <picture>
-                                <source srcset="<%= imgpath %>/assets/images/uptorigin/txt_balm.webp" type="image/webp">
-                                <img src="<%= imgpath %>/assets/images/uptorigin/txt_balm.png" alt="安達祐実" width="838"
-                                    height="88">
-                            </picture>
+                            <img src="<%= imgpath %>/assets/images/uptorigin/txt_balm.svg" alt="安達祐実" width="420"
+                            height="44">
                         </p>
                     </div>
                     <div class="sp">
@@ -118,11 +115,8 @@ var imgpath = '';
                             </picture>
                         </div>
                         <p class="upthome__wash--blc-balm">
-                            <picture>
-                                <source srcset="<%= imgpath %>/assets/images/uptorigin/txt_balm-sp2.webp" type="image/webp">
-                                <img src="<%= imgpath %>/assets/images/uptorigin/txt_balm-sp.png" alt="安達祐実" width="270"
-                                    height="102">
-                            </picture>
+                            <img src="<%= imgpath %>/assets/images/uptorigin/txt_balm-sp.svg" alt="安達祐実" width="270"
+                            height="102">
                         </p>
                     </div>
                     <p class="upthome__wash--blc-feature"></p>
@@ -141,11 +135,8 @@ var imgpath = '';
                         </picture>
                     </div>
                     <p class="upthome__wash--blc-balm">
-                        <picture>
-                            <source srcset="<%= imgpath %>/assets/images/uptorigin/txt_wash.webp" type="image/webp">
-                            <img src="<%= imgpath %>/assets/images/uptorigin/txt_wash.png" alt="安達祐実" width="970"
-                                height="88">
-                        </picture>
+                        <img src="<%= imgpath %>/assets/images/uptorigin/txt_wash.svg" alt="安達祐実" width="485"
+                        height="44">
                     </p>
                 </div>
                 <div class="sp">
@@ -157,11 +148,8 @@ var imgpath = '';
                         </picture>
                     </div>
                     <p class="upthome__wash--blc-balm">
-                        <picture>
-                            <source srcset="<%= imgpath %>/assets/images/uptorigin/txt_wash-sp2.webp" type="image/webp">
-                            <img src="<%= imgpath %>/assets/images/uptorigin/txt_wash-sp.png" alt="安達祐実" width="270"
-                                height="102">
-                        </picture>
+                        <img src="<%= imgpath %>/assets/images/uptorigin/txt_wash-sp.svg" alt="安達祐実" width="270"
+                        height="102">
                     </p>
                 </div>
                     <p class="upthome__wash--blc-feature"></p>
@@ -172,21 +160,31 @@ var imgpath = '';
         </ul>
 
         <a href="/shop/products/upt_cleansingset" class="upthome__wash--img">
-            <div class="pc">
-                <picture>
-                    <source srcset="<%= imgpath %>/assets/images/uptorigin/img_washset-top2.webp" type="image/webp">
-                    <img src="<%= imgpath %>/assets/images/uptorigin/img_washset-top2.jpg" alt="安達祐実" width="2201"
-                        height="966">
-                </picture>
-            </div>
-            <div class="sp">
-                <div class="upthome__wash--spblc">
+            <div class="upthome__wash--img-imgblc">
+                <div class="pc">
                     <picture>
-                        <source srcset="<%= imgpath %>/assets/images/uptorigin/img_washset-top-sp.webp"
-                            type="image/webp">
-                        <img src="<%= imgpath %>/assets/images/uptorigin/img_washset-top-sp.jpg" alt="安達祐実" width="690"
-                            height="1946">
+                        <source srcset="<%= imgpath %>/assets/images/uptorigin/upthome__wash--img01pc.webp" type="image/webp">
+                        <img src="<%= imgpath %>/assets/images/uptorigin/upthome__wash--img01pc.jpg" alt="安達祐実" width="1332"
+                            height="968">
                     </picture>
+                </div>
+                <div class="sp">
+                    <picture>
+                        <source srcset="<%= imgpath %>/assets/images/uptorigin/upthome__wash--img01sp.webp"
+                            type="image/webp">
+                        <img src="<%= imgpath %>/assets/images/uptorigin/upthome__wash--img01sp.jpg" alt="安達祐実" width="1035"
+                            height="1329">
+                    </picture>
+                </div>
+            </div>
+            <div class="upthome__wash--img-txtblc">
+                <div class="pc">
+                    <img src="<%= imgpath %>/assets/images/uptorigin/upthome__wash--img02pc.svg" alt="安達祐実" width="436"
+                    height="413">
+                </div>
+                <div class="sp">
+                    <img src="<%= imgpath %>/assets/images/uptorigin/upthome__wash--img02sp.svg" alt="安達祐実" width="346"
+                    height="487">
                 </div>
             </div>
         </a>
@@ -262,30 +260,31 @@ var imgpath = '';
     <section class="upthome__sets">
         <a href="/shop/products/upt_skincareset" class="upthome__wash--img">
 
-            <picture class="pc">
-                <source srcset="<%= imgpath %>/assets/images/uptorigin/img_skincareset-top2.webp" type="image/webp">
-                <img src="<%= imgpath %>/assets/images/uptorigin/img_skincareset-top2.jpg" alt="安達祐実" width="2201"
-                    height="1110">
-            </picture>
-            <div class="sp">
-                <div class="upthome__sets--img">
+            <div class="upthome__wash--img-imgblc">
+                <div class="pc">
                     <picture>
-
-                        <source srcset="<%= imgpath %>/assets/images/uptorigin/img_skincareset-top-sp01.webp"
-                            type="image/webp">
-                        <img src="<%= imgpath %>/assets/images/uptorigin/img_skincareset-top-sp01.jpg" alt="安達祐実"
-                            width="690" height="886">
+                        <source srcset="<%= imgpath %>/assets/images/uptorigin/upthome__set--img01pc.webp" type="image/webp">
+                        <img src="<%= imgpath %>/assets/images/uptorigin/upthome__set--img01pc.jpg" alt="安達祐実" width="1332"
+                            height="1114">
                     </picture>
-
                 </div>
-                <div class="upthome__sets--img02">
+                <div class="sp">
                     <picture>
-
-                        <source srcset="<%= imgpath %>/assets/images/uptorigin/img_skincareset-top-sp02.webp"
+                        <source srcset="<%= imgpath %>/assets/images/uptorigin/upthome__set--img01sp.webp"
                             type="image/webp">
-                        <img src="<%= imgpath %>/assets/images/uptorigin/img_skincareset-top-sp02.jpg" alt="安達祐実"
-                            width="692" height="1180">
+                        <img src="<%= imgpath %>/assets/images/uptorigin/upthome__set--img01sp.jpg" alt="安達祐実" width="1035"
+                            height="1329">
                     </picture>
+                </div>
+            </div>
+            <div class="upthome__wash--img-txtblc">
+                <div class="pc">
+                    <img src="<%= imgpath %>/assets/images/uptorigin/upthome__set--img02pc.svg" alt="安達祐実" width="436"
+                    height="484">
+                </div>
+                <div class="sp">
+                    <img src="<%= imgpath %>/assets/images/uptorigin/upthome__set--img02sp.svg" alt="安達祐実" width="346"
+                    height="590">
                 </div>
             </div>
 

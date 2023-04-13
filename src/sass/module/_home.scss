@@ -449,6 +449,7 @@
 
         &--txt {
             @include var.fz(14);
+            font-size: 14px;
             line-height: 2.4;
             color: var.$bg_dark;
             text-align: center;
@@ -1443,12 +1444,12 @@ h2.upthome__illust--ttl {
     
         .upthome__fv--feature-txt {
             z-index: 4;
-            top: 30vw;
+            top: 29vw;
             @include var.bg;
             background-image: url(var.$imgpath + 'renew_featuretxt.svg');
-            width: 66px;
-            height: 40px;
-            right: 15.6vw;
+            width: 17.6vw;
+            height: 11vw;
+            right: 14.8vw;
         }
     }
 }
@@ -1509,8 +1510,7 @@ h2.upthome__illust--ttl {
         top: 144px;
         @include var.bg;
         background-image: url(var.$imgpath + 'renew_featuretxt.svg');
-        width: 90px;
-        height: 54px;
+
     }
 }
 
@@ -1637,10 +1637,22 @@ h2.upthome__illust--ttl {
         }
         &--spblc{
             padding-bottom: 13vw;
+            background: #FFF;
         }
         &--img{
             font-size: 0;
-            margin: -1px 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            &-imgblc{
+                border-right: solid 1px var.$bg_dark;
+                width: 60%;
+                min-width: 60%;
+            }
+            &-txtblc{
+                width: 40%;
+                min-width: 40%;
+            }
             img{
                 height: auto;
                 width: 100%;
@@ -1649,6 +1661,33 @@ h2.upthome__illust--ttl {
                 opacity: 0.7;
             }
         }
+        @media screen and (max-width: var.$spbp) {
+            &--img{
+
+                display: block;
+        
+                &-imgblc{
+                    border-right: none;
+                    width:100%;
+                    min-width:100%;
+                    border-bottom: solid 1px var.$bg_dark;
+
+                }
+                &-txtblc{
+                    width: 100%;
+                    min-width: 100%;
+                    padding: 11.46vw 0;
+                }
+                img{
+                    height: auto;
+                    width: 100%;
+                }
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+
     }
     @media screen and (max-width: var.$spbp) {
         .upthome__wash--blc{
@@ -1675,6 +1714,7 @@ h2.upthome__illust--ttl {
                 height: auto;
             }
         }
+    
         .uptblc__ttl{
             font-size: 22px;
         }
@@ -1697,8 +1737,10 @@ h2.upthome__illust--ttl {
     }
 }
 
-
-
+.upthome__yumi--txt{
+    font-size: 14px;
+    line-height: 2;
+}
 // @include var.webpBg('.uptBg', './img/my-bg', 'png');
 @include var.webpBg('.upthome__fv', var.$imgpath +'fv_pc04');
 @include var.webpBg('.upthome__set--img-in', var.$imgpath +'home_setimg-pc');

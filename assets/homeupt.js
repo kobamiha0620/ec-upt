@@ -158,14 +158,7 @@ conceptLink.onclick = () => {
     location = '/shop/#PRODUCER'
   }
 }
-const aboutLink = document.querySelector("[href='/shop#ABOUT']")
-aboutLink.onclick = () => {
-  if (location.pathname == '/shop/') {
-  location = '/shop/index#ABOUT'
-  } else {
-    location = '/shop/#ABOUT'
-  }
-}
+
 
 
 //tuiki 
