@@ -11,14 +11,18 @@ $(function () {
         if (point > homefv - header - 100) { // スクロール地点>ドキュメントの高さ-表示領域-footerの高さ
             $('.uptheader').addClass('bg__header');
             $('.js-logo').addClass('active');
+            $('#Lpbnr').addClass('active');
 
         } else {
             $('.uptheader').removeClass('bg__header');
             $('.js-logo').removeClass('active');
+            $('#Lpbnr').removeClass('active');
         }
         if (point > homefv - header -180) { // スクロール地点>ドキュメントの高さ-表示領域-footerの高さ
             $('.upthome__fv--logo').addClass('is-hidden'); //footerより下にスクロールしたらis-hiddenを追加
-        } else {
+          
+        
+          } else {
             $('.upthome__fv--logo').removeClass('is-hidden'); //footerより上にスクロールしたらis-hiddenを削除
         }
 
@@ -164,3 +168,20 @@ aboutLink.onclick = () => {
 }
 
 
+//tuiki 
+
+
+const swiper = new Swiper('.upthomeSWiper', {
+  // Optional parameters
+  loop: true,
+  slidesPerView: 1,
+  effect: "fade",
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+  autoplay: {
+    delay: 2400 //3秒ごとにスライダを切り替える
+  }
+
+});

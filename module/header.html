@@ -8,10 +8,71 @@
     <div class="uptheader bg__header">
 
         
-        <div class="c-announce_bar uptheader__anounce">
-            <div class="c-announce_bar__text">NEWS 22.09.14 Upt start!!</div>
-            <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
+
+
+        {% if production != true and customize_preview_mode %}
+        <div class="customize_notice">
+            <p>※プレビュー表示が崩れた場合は、一度保存してください。</p>
         </div>
+        {% endif %}
+
+        {% comment %} To use the inversion result in an if condition {% endcomment %}
+        {% if shop_root %}
+        {% assign top = false %}
+        {% else %}
+        {% assign top = true %}
+        {% endif %}
+
+        {% comment %} annoucement bar {% endcomment %}
+        {% if section.settings.message == true or section.settings.message == 'true' %}
+        {% comment %} Converted to boolean for use in if conditions {% endcomment %}
+        {% if section.settings.top_only_message == false or section.settings.top_only_message == 'false' %}
+        {% assign top_only_message_flg = false %}
+        {% else %}
+        {% assign top_only_message_flg = true %}
+        {% endif %}
+        {% unless top and top_only_message_flg %} {% comment %} unless a && !b {% endcomment %}
+        {% comment %} <a class="c-announce_bar uptheader__anounce" href="/shop/information/202212">
+            <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use
+            escape{% endcomment %}
+            <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
+        </a> {% endcomment %}
+       <div class="c-announce_bar uptheader__anounce">
+            <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use
+            escape{% endcomment %}
+            <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
+        </div> 
+
+        {% endunless %}
+        {% endif %}
+        {% comment %} end of announcement bar {% endcomment %}
+
+        {% if section.settings.banner == true or section.settings.banner == 'true' %}
+        {% if smartphone %}
+        {% assign header_banner = section.settings.banner_sp %}
+        {% else %}
+        {% assign header_banner = section.settings.banner_pc %}
+        {% endif %}
+        {% if header_banner.size > 0 %}
+        {% comment %} Converted to boolean for use in if conditions {% endcomment %}
+        {% if section.settings.top_only_banner == false or section.settings.top_only_banner == 'false' %}
+        {% assign top_only_banner_flg = false %}
+        {% else %}
+        {% assign top_only_banner_flg = true %}
+        {% endif %}
+
+        {% unless top and top_only_banner_flg %} {% comment %} unless a && !b {% endcomment %}
+        <div class="p-banner p-banner--header">
+            {% assign image_url = header_banner | generate_image_url: theme_file_root_path %}
+            <p class="p-banner__image" style="background-image: url('{{ image_url }}')"></p>
+            {% if section.settings.banner_link.size > 0 %}
+            <a class="p-banner__link" href="{{section.settings.banner_link}}"></a>
+            {% endif %}
+        </div>
+        {% endunless %}
+        {% endif %}
+        {% endif %}
+
         
 
 
@@ -34,6 +95,13 @@
 
                                 <i class="u-icon--cart"></i>
                                 
+                                {% comment %} {% if order.completed? %}
+                                <span class="count u-color__bg--alert u-color__text--base">0</span>
+                                {% else %}
+                                <span
+                                    class="count u-color__bg--alert u-color__text--base">{% if current_order %}{{ current_order.quantity }}{% else %}{{ order.quantity }}{% endif %}</span>
+                                {% endif %} {% endcomment %}
+                                
                             </a>
                         </div>
                         <div class="l-header__inner__block u-color--head">
@@ -53,6 +121,8 @@
 
         </div>
 
+        
+        {% comment %} global nav {% endcomment %}
         
         <div class="c-gmenu uptgmenu">
             <div class="c-gmenu__overlay js-close-menu"></div>
@@ -184,7 +254,7 @@
                                     <a href="/shop/products">PRODUCTS</a>
                                 </li>
                                 <li>
-                                    <a href="/shop#ABOUT">ABOUT</a>
+                                    <a href="/shop/pages/about">ABOUT</a>
                                 </li>
                                 <li>
                                     <a href="/shop#PRODUCER">PRODUCER</a>
@@ -199,8 +269,8 @@
                             <div class="uptgmenu__bnr--wrapper">
                             <a href="https://uptofficial.jp/lp?u=official_lp_3trial" class="uptgmenu__bnr" target="_blank">
                                 <picture>
-                                    <source srcset="/assets/images/uptorigin/Upt_subscBnr-sp.webp" type="image/webp">
-                                    <img src="/assets/images/uptorigin/Upt_subscBnr-sp.jpg" alt="定期セット sp" width="684px"
+                                    <source srcset="{{ theme_file_root_path }}/assets/images/Upt_subscBnr-sp.webp" type="image/webp">
+                                    <img src="{{ theme_file_root_path }}/assets/images/Upt_subscBnr-sp.png" alt="定期セット sp" width="684px"
                                         height="184px">
                                 </picture>
                             </a>
@@ -261,6 +331,9 @@
                 </div>
             </nav>
         </div>
+        
+
+        {% comment %} search menu {% endcomment %}
         
 
         <div style="display: none;">

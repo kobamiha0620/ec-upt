@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_123" data-name="長方形 123" width="56" height="56" fill="none" stroke="#ec6448" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="グループ_279" data-name="グループ 279" transform="translate(0 0)">
+    <g id="グループ_278" data-name="グループ 278" transform="translate(0 0)" clip-path="url(#clip-path)">
+      <path id="パス_544" data-name="パス 544" d="M55.11,27.654A27.455,27.455,0,1,1,27.656.2,27.453,27.453,0,0,1,55.11,27.654Z" transform="translate(0.345 0.346)" fill="none" stroke="#ec6448" stroke-linejoin="round" stroke-width="1"/>
+      <circle id="楕円形_37" data-name="楕円形 37" cx="6.088" cy="6.088" r="6.088" transform="translate(21.912 0.546)" fill="none" stroke="#ec6448" stroke-linejoin="round" stroke-width="1"/>
+      <circle id="楕円形_38" data-name="楕円形 38" cx="6.088" cy="6.088" r="6.088" transform="translate(21.912 43.278)" fill="none" stroke="#ec6448" stroke-linejoin="round" stroke-width="1"/>
+      <path id="パス_545" data-name="パス 545" d="M10.384,4.936A6.089,6.089,0,1,1,2.067,7.165,6.088,6.088,0,0,1,10.384,4.936Z" transform="translate(2.157 7.108)" fill="none" stroke="#ec6448" stroke-linejoin="round" stroke-width="1"/>
+      <path id="パス_546" data-name="パス 546" d="M23.963,12.776A6.089,6.089,0,1,1,15.646,15,6.088,6.088,0,0,1,23.963,12.776Z" transform="translate(25.583 20.633)" fill="none" stroke="#ec6448" stroke-linejoin="round" stroke-width="1"/>
+      <path id="パス_547" data-name="パス 547" d="M4.3,12.776a6.089,6.089,0,1,1-2.232,8.317A6.087,6.087,0,0,1,4.3,12.776Z" transform="translate(2.156 20.633)" fill="none" stroke="#ec6448" stroke-linejoin="round" stroke-width="1"/>
+      <path id="パス_548" data-name="パス 548" d="M17.875,4.936a6.089,6.089,0,1,1-2.229,8.317A6.088,6.088,0,0,1,17.875,4.936Z" transform="translate(25.583 7.108)" fill="none" stroke="#ec6448" stroke-linejoin="round" stroke-width="1"/>
+      <path id="パス_549" data-name="パス 549" d="M37.163,16.652a6.939,6.939,0,0,0-1.248-1.507A9.16,9.16,0,0,1,33.1,10.076a6.826,6.826,0,0,0-.97-2.409A7.176,7.176,0,0,0,26.442,4.6a7.246,7.246,0,0,0-2.363.229,9.841,9.841,0,0,1-5.965.019,6.981,6.981,0,0,0-9.225,5.521,7.94,7.94,0,0,1-2.477,4.57,7.775,7.775,0,0,0-2.036,3.652,6.664,6.664,0,0,0,.5,5.369,6.841,6.841,0,0,0,1.251,1.512,9.325,9.325,0,0,1,2.818,5.112,6.848,6.848,0,0,0,.932,2.319,7.069,7.069,0,0,0,5.271,3.06,7.529,7.529,0,0,0,2.706-.155,10.328,10.328,0,0,1,6.061-.046,6.98,6.98,0,0,0,9.233-5.513,7.947,7.947,0,0,1,2.477-4.573,7.735,7.735,0,0,0,2.038-3.654A6.666,6.666,0,0,0,37.163,16.652Z" transform="translate(6.977 7.683)" fill="none" stroke="#ec6448" stroke-linejoin="round" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

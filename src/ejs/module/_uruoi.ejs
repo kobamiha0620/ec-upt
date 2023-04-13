@@ -1,0 +1,248 @@
+<%
+// 以下の設定値を記入のこと
+
+var pageinit = {
+    product: 'all',
+    title : '' ,
+    keywords : '' ,
+    description : '' ,
+    ogurl : '' ,
+    ogimage : '' ,
+    path : '' ,
+    ecforce : 'true',
+    path : '' ,
+    category : ['main'] ,
+    pagename : '',
+    css: [],
+    js:[],
+    // jsfunc:['setPhotoChanger ();','startScroll ();','setVideo();'],
+    
+};
+
+%>
+
+
+    <!-- 共通block/point -->
+    <section class="uptline"></section>
+    <section class="uptproduct__point">
+        <h2 class="uptblc__ttl">POINT</h2>
+        <div class="uptproduct__point--con">
+            <ul class="uptproduct__point--contxt">
+                <li class="uptproduct__point--contxt01">
+                    <h3 class="uptproduct__point--ttl">TEXTURE</h3>
+                    <p class="uptproduct__point--subttl">つけ心地の良さを最優先</p>
+                    <span class="uptproduct__point--border"></span>
+                    <p class="uptproduct__point--txt">スキンケア後のベタつき感を減らし、メイクの前でも寝る前でも邪魔をしない気持ちのいい手触りに仕上げました。
+                        重さやベタつき感がなく、お肌に馴染みうるおいが続きます。</p>
+                </li>
+                <li class="uptproduct__point--contxt02">
+                    <h3 class="uptproduct__point--ttl">COMPONENT</h3>
+                    <p class="uptproduct__point--subttl">最適なバランスを探究</p>
+                    <span class="uptproduct__point--border"></span>
+                    <p class="uptproduct__point--txt">毎日のスキンケアを手軽に、年代問わず使ってほしいからシンプルな処方にこだわりました。
+                        厳選した3種のペプチド<span>※1</span> / ビタミンC誘導体<span>※2</span> / ナイアシンアミド /
+                        5種のナノセラミド<span>※3</span>の4つを保湿成分としてバランス良く配合し、水の代わりに可能な限り温泉水を使用することで、皮膚にうるおいを与えハリツヤのあるお肌に導きます。
+                        <br><span>
+                            ※1 アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３　※2 パルミチン酸アスコルビルリン酸３Ｎａ　※3
+                            セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ</span></p>
+                </li>
+                <li class="uptproduct__point--contxt03">
+                    <h3 class="uptproduct__point--ttl">FRAGRANCE</h3>
+                    <p class="uptproduct__point--subttl">甘すぎない爽やかな香りを</p>
+                    <span class="uptproduct__point--border"></span>
+                    <p class="uptproduct__point--txt">ゼラニウム<span>※1</span> &イランイラン<span>※2</span>
+                        の天然精油を配合し、つけた瞬間心地よい香りで包み込みます。
+                        甘すぎないエキゾチックな香りが心にも身体にもなじむよう。
+                        3ステップ終えたあとにほど良く香りが残るようにこだわりました。
+                        <br>
+                        <span>※1 ニオイテンジクアオイ油　※2 イランイラン花油</span></p>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+    <!-- セット商品 -->
+
+
+    <!-- 定期商品 -->
+    <section class="uptprodcut__subsc">
+        <a href="/shop/products/upt_skincareset-subscribe/">
+            <div class="uptprodcut__subsc--wrapper">
+                <div class="uptprodcut__subsc--blc">
+                    <picture class="pc">
+                        <source srcset="<%= imgpath %>/assets/images/uptorigin/img_trial.webp" type="image/webp">
+                        <img src="<%= imgpath %>/assets/images/uptorigin/img_trial.jpg" alt="定期セット" width="auto"
+                            height="auto">
+                    </picture>
+                    <picture class="sp">
+                        <source srcset="<%= imgpath %>/assets/images/uptorigin/img_trial-sp.webp" type="image/webp">
+                        <img src="<%= imgpath %>/assets/images/uptorigin/img_trial-sp.jpg" alt="定期セット sp" width="auto"
+                            height="auto">
+                    </picture>
+                </div>
+                <div class="uptprodcut__subsc--blc2">
+                    <div>
+                        <p class="uptprodcut__subsc--ttl">Uptスキンケアセット<br>
+                            定期お届けコースについて</p>
+                        <p class="uptprodcut__subsc--txt">
+                            初回トライアル<span class="italic">¥1,980(tax in)</span><br>
+                            2回目以降<span class="italic">¥5,980(tax in)</span>
+                        </p>
+                        <a class="upthome__products--linkbtn" href="/shop/products/upt_skincareset-subscribe/">
+                            <span>詳細はこちら</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </section>
+    <section class="uptline"></section>
+
+    <!-- /定期商品 -->
+
+    <section class="uptproduct__others">
+        <h2 class="uptblc__ttl">OTHER ITEM</h2>
+        <div class="uptproduct__others--con">
+
+            <!-- 共通部分・商品ページ -->
+            <section class="upthome__products">
+                <ul class="upthome__products--blc">
+
+                    <!-- セット化粧品 -->
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% if product.id != 5 %}
+
+
+                    <% } %>
+
+                    <% if ((pageinit.product !== 'set') || (pageinit.product === 'all')) { %>
+
+                    <li>
+                        <a href="/shop/products/upt_skincareset">
+                            <div>
+                                <img src="<%= imgpath %>/assets/images/uptorigin/0926/img_prosductset.jpg"
+                                    alt="ウプト スキンケアセット" width="auto" height="auto">
+
+                                <div class="upthome__products--nameblc">
+                                    <h3 class="upthome__products--name">Upt SKINCARE SET</h3>
+                                    <p class="upthome__products--jpname">ウプト スキンケアセット</p>
+                                </div>
+                            </div>
+                            <p class="upthome__products--linkbtn">
+                                <span>詳細はこちら</span>
+                            </p>
+                        </a>
+                    </li>
+
+
+                    <% } %>
+
+                    <% if (pageinit.ecforce === 'true') { %>
+                        {% endif %}
+                        <% } %>
+                    <!-- /セット化粧品 -->
+
+                    <!-- トナー化粧品 -->
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% if product.id != 2 %}
+                    <% } %>
+
+                    <% if ((pageinit.product !== 'toner') || (pageinit.product === 'all')) { %>
+
+                    <li>
+                        <a href="/shop/products/balancing_toner">
+                            <div>
+                                <img src="<%= imgpath %>/assets/images/uptorigin/0926/home_prodcut01b.jpg"
+                                    alt="バランシングトナー" width="auto" height="auto">
+
+                                <div class="upthome__products--nameblc">
+                                    <h3 class="upthome__products--name">BALANCING TONER</h3>
+                                    <p class="upthome__products--jpname">バランシングトナー<span class="italic">155mL</span></p>
+                                </div>
+                            </div>
+                            <p class="upthome__products--linkbtn">
+                                <span>詳細はこちら</span>
+                            </p>
+                        </a>
+                    </li>
+                    <% } %>
+
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% endif %}
+                    <% } %>
+                    <!-- /トナー化粧品 -->
+
+
+
+                    <!-- ミルク乳液 -->
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% if product.id != 3 %}
+                    <% } %>
+
+                    <% if ((pageinit.product !== 'milk') || (pageinit.product === 'all')) { %>
+
+
+                    <li>
+                        <a href="/shop/products/conditioning_milk">
+                            <div>
+                                <img src="<%= imgpath %>/assets/images/uptorigin/0914/home_prodcut02.png"
+                                    alt="コンディショニングミルク" width="auto" height="auto">
+
+                                <div class="upthome__products--nameblc">
+                                    <h3 class="upthome__products--name">CONDITIONING MILK</h3>
+                                    <p class="upthome__products--jpname">コンディショニングミルク<span class="italic">120mL</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="upthome__products--linkbtn">
+                                <span>詳細はこちら</span>
+                            </p>
+                        </a>
+                    </li>
+                    <% } %>
+
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% endif %}
+                    <% } %>
+                    <!-- /ミルク乳液 -->
+
+                    <!-- クリーム -->
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% if product.id != 4 %}
+                    <% } %>
+
+                    <% if ((pageinit.product !== 'cream') || (pageinit.product === 'all')) { %>
+
+
+                    <li>
+                        <a href="/shop/products/moisturizing_cream">
+                            <div>
+                                <img src="<%= imgpath %>/assets/images/uptorigin/0914/home_prodcut03.png"
+                                    alt="モイスチャライジングクリーム" width="auto" height="auto">
+
+                                <div class="upthome__products--nameblc">
+                                    <h3 class="upthome__products--name">MOISTURIZING CREAM</h3>
+                                    <p class="upthome__products--jpname">モイスチャライジングクリーム<span class="italic">40g</span>
+                                    </p>
+                                </div>
+                            </div>
+                            <p class="upthome__products--linkbtn">
+                                <span>詳細はこちら</span>
+                            </p>
+                        </a>
+                    </li>
+                    <% } %>
+
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% endif %}
+                    <% } %>
+                    <!-- /クリーム -->
+
+
+                </ul>
+            </section>
+            <!-- 共通部分・商品ページ -->
+
+        </div>
+    </section>
+        <!-- /.定期商品 -->

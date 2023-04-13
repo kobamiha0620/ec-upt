@@ -1,0 +1,70 @@
+<%
+// 以下の設定値を記入のこと
+
+var pageinit = {
+  title : '' ,
+  keywords : '' ,
+  description : '' ,
+  ogurl : '' ,
+  path: '',
+  ogimage : '' ,
+  path : '' ,   
+  ecforce : 'true',
+  category : ['main'] ,
+  pagename : '',
+  css: [],
+  js:[],
+  jsfunc:['setPhotoChanger ();','startScroll ();','setVideo();']
+};
+%>
+<%
+var imgpath = 'https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/theme_230428_20230411220037/ec_force/assets/images/uptorigin/';
+// var imgpath = '';
+
+%>
+
+<div class="about" id="about">
+
+    <section class="upthome__intro">
+       <div class="upthome__intro--inner">
+           <div class="upthome__intro--blc">
+               <div class="upthome__intro--txtblc">
+                   <div class="upthome__intro--txtblc-inner">
+                       <p class="upthome__intro--ttl">化粧なんて、なんとなくでいい</p>
+                       <p class="upthome__intro--txt">歳を重ねていくのは素敵なことだ</p>
+                       <p class="upthome__intro--txt">泣きたい気持ちを堪える日々や<br>にがく悲しい思い出も</p>
+                       <p class="upthome__intro--txt">張り裂けそうな愛情や<br>穏やかさに包まれた愛しい経験も</p>
+                       <p class="upthome__intro--txt">出会いや別れ<br>味わい深い出来事のひとつひとつが<br>きっと顔に表れてくる</p>
+                       <p class="upthome__intro--txt">だから、化粧なんてなんとなくでいい</p>
+                       <p class="upthome__intro--txt">だけどなんとなくじゃ納得できないから<br>日々が化粧に費やされてしまう<br>
+                           受け入れるしなやかな精神と<br>それを補うパートナーがほしい</p>
+                       <p class="upthome__intro--txt">毎日歯を磨くように<br>シャワーを浴びるように<br>手間を減らしてシンプルに<br>
+                           なるだけナチュラルに生活の一部に</p>
+                       <p class="upthome__intro--txt">これは、そんなわたしの願いを込めた<br>大切な贈り物のようなもの</p>
+
+                   </div>
+               </div>
+           </div>
+           <div class="upthome__intro--img">
+
+               <picture class="pcImg">
+                   <source srcset="<%= imgpath %>img_aboutpc.webp" type="image/webp">
+                 
+                   <img src="<%= imgpath %>img_aboutpc.jpg"  alt="安達祐実" width="1599" height="1766">
+
+               </picture>
+
+               <picture class="spImg">
+                   <source srcset="<%= imgpath %>img_about-sp.webp" type="image/webp">
+                 
+                   <img src="<%= imgpath %>0914/img_about-sp.png" alt="安達祐実"  width="auto" height="auto">
+               </picture>
+
+
+
+           </div>
+       </div>
+   </section>
+
+</div>
+   <section class="uptline"></section> 
