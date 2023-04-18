@@ -1589,7 +1589,7 @@
             color: #FFF;
             max-width: 313px;
             margin: 0;
-            display: flex;
+            display: flex;  
 
             background: var.$bc;
             text-align: center;
@@ -1861,14 +1861,17 @@
     &--txt {
         color: var.$bc;
         @include var.fz(15);
-        line-height: 1.1;
+        line-height: 1.2;
         margin: 0;
+        span {
+            font-size: 0.8em;
+        }
     }
 
     &--note {
         color: var.$bc;
         @include var.fz(11);
-        line-height: 1.1;
+        line-height: 1.2;
         margin: 5px 0 0;
     }
 
@@ -1898,7 +1901,9 @@
                 @include var.fz(21);
                 line-height: 1;
                 margin: 0 0 26px;
-                font-weight: bold;
+           
+                letter-spacing: 0.1em;
+                font-weight: 600;
             }
 
             h4 {
@@ -1906,7 +1911,9 @@
                 @include var.fz(20);
                 line-height: 1;
                 margin: 30px 0 10px;
-                font-weight: bold;
+           
+                letter-spacing: 0.1em;
+                font-weight: 600;
 
             }
         }
@@ -1960,12 +1967,13 @@
 
                 h3 {
                     margin: 0 0 24px;
+                    font-weight: 600;
                 }
 
                 h4 {
 
                     margin: 23px 0 10px;
-
+                    font-weight: 600;
                 }
             }
         }
