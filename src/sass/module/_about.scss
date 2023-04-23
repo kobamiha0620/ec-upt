@@ -1,5 +1,12 @@
 @use "./module/variable"as var;
 @media screen and (min-width: var.$spbp + 1) {
+    .uptplane__ttl{
+        h1{
+            font-family: "Montserrat", "Noto Sans JP", sans-serif;
+
+        }
+    }
+
 
 .about{
     width: 100%;

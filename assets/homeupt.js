@@ -137,10 +137,9 @@ $(function () {
     });
   }
   
-  runOncePerDay(); // run the code
+  // runOncePerDay(); // run the code
 
-  runOncePerDay(); // does not run the code
-  
+  modal();
   Lpbnr();
     
 });
