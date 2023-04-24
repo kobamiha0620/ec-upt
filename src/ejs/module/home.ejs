@@ -9,7 +9,7 @@ var pageinit = {
   path: '',
   ogimage : '' ,
   path : '' ,   
-  ecforce : 'false',
+  ecforce : 'true',
   category : ['main'] ,
   pagename : '',
   css: [],
@@ -18,8 +18,8 @@ var pageinit = {
 };
 %>
 <%
-// var imgpath = '{{ theme_file_root_path }}';
-var imgpath = '';
+var imgpath = '{{ theme_file_root_path }}';
+// var imgpath = '';
 
 %>
 
@@ -527,10 +527,12 @@ var imgpath = '';
 <div class="modal-content">
         <div class="modal__contents">
             <div class="modal__contents--inner">
+                <a href="/shop/products/upt_cleansingset" style="display: block;">
                 <img src="<%= imgpath %>/assets/images/uptorigin/popup_pc0424.png" id="modalcontents" width="1012" height="1460" alt="単品発売開始"
                     class="pcImg">
                 <img src="<%= imgpath %>/assets/images/uptorigin/popup_sp0424.png" id="modalcontentsSp" width="1294" height="2052" alt="単品発売開始"
                     class="spImg">
+                </a>
 
 
                 <div class="modal__btn js_modal_close" id="js_closemodal"></div>
