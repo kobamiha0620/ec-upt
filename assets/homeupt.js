@@ -139,7 +139,7 @@ $(function () {
   
   // runOncePerDay(); // run the code
 
-  modal();
+  // modal();
   Lpbnr();
     
 });

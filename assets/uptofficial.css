@@ -2128,6 +2128,7 @@ h2.upthome__illust--ttl {
   top: 54px;
   white-space: nowrap;
   text-indent: -9999px;
+  background-repeat: no-repeat;
 }
 .upthome__wash--blc li {
   list-style-type: none;
