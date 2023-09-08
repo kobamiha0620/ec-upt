@@ -359,8 +359,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div class="uptgmenu__bnr--wrapper">
                             <a href="https://uptofficial.jp/lp?u=official_lp_3trial" class="uptgmenu__bnr" target="_blank">
                                 <picture>
-                                    <source srcset="/assets/images/uptorigin/Upt_subscBnr-sp0428.webp" type="image/webp">
-                                    <img src="/assets/images/uptorigin/Upt_subscBnr-sp0428.png" alt="定期セット sp" width="684px"
+                                    <source srcset="/assets/images/uptorigin/uptbnr_1980-sp.webp" type="image/webp">
+                                    <img src="/assets/images/uptorigin/uptbnr_1980-sp.png" alt="定期セット sp" width="684px"
                                         height="184px">
                                 </picture>
                             </a>
@@ -1613,28 +1613,26 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
                             <!-- 商品選択フォーム -->
                             <form action="/shop/cart/add" method="post">
                                 <div style="display: none">
-                                    <!-- 規格選択 -->
                                     <input id="variant-id" type="hidden" name="variant_id"
                                         value="{{ product.master.id }}">
                                     <div id="option_types"></div>
 
-                                    <!-- 数量選択 -->
                                     <label>数量</label>
                                     <input id="text-out-of-stock" value="在庫切れ" disabled style="display:none;">
                                     <select id="quantity" name="quantity" style="display:none;"></select>
 
-                                    <!-- 再入荷お知らせ -->
                                     <a id="btn-stock-waiting-list" href="javascript:void(0);"
                                         style='display:none;'>再入荷お知らせ</a>
                                 </div>
-                                <!-- /display: none -->
 
-                                <!-- カート追加 -->
                                 <button id="btn-add">
                                     <p class="txt">購入はこちら</p><span></span>
                                 </button>
 
                             </form>
+
+
+                            
 
                         </div>
                     </div>
@@ -2808,6 +2806,32 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
 
 <!-- /共通block -->
+
+
+<div id="Lpbnr">
+        <a href="https://uptofficial.jp/lp?u=official_lp_3trial" target="_blank" class="modal__link" id="js-modallink">
+            <picture class="pc">
+                <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/uptbnr_1980-pc.webp" type="image/webp">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/uptbnr_1980-pc.png" alt="定期セット" width="840" height="121">
+            </picture>
+            <picture class="sp">
+                <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/uptbnr_1980-sp.webp" type="image/webp">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/uptbnr_1980-sp.png" alt="定期セット sp" width="684" height="184">
+            </picture>
+        </a>
+        <div class="modal__link--close" id="js-modallink-close">
+
+            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/closebtn.svg" alt="CLOSE" width="16px" height="16px">
+        </div>
+</div>
+
+
+
+
+
+<script src="{{ theme_file_root_path }}/assets/lpbnr.js"></script>
+
+
 
       
       

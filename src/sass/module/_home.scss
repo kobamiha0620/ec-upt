@@ -843,7 +843,10 @@
     }
 
 }
-
+#Lpbnr{
+    position: fixed;
+    z-index: 10;
+}
 .modal {
     &__link {
         display: block;
@@ -1737,6 +1740,8 @@ h2.upthome__illust--ttl {
 
     }
 }
+
+
 
 .upthome__yumi--txt{
     font-size: 14px;

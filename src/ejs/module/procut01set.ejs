@@ -602,3 +602,10 @@ var pageinit = {
 
 
 <!-- /共通block -->
+<%- include('./lpbnr'); %>
+<% if (pageinit.ecforce !== 'true') { %>
+
+<script src="/assets/lpbnr.js"></script>
+<% } else { %>
+<script src="{{ theme_file_root_path }}/assets/lpbnr.js"></script>
+<% } %>

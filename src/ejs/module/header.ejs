@@ -59,11 +59,11 @@ var imgpath = '';
         {% assign top_only_message_flg = true %}
         {% endif %}
         {% unless top and top_only_message_flg %} {% comment %} unless a && !b {% endcomment %}
-        {% comment %} <a class="c-announce_bar uptheader__anounce" href="/shop/information/202212">
+         {% comment %} <a class="c-announce_bar uptheader__anounce" href="/shop/information/202212">
             <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use
             escape{% endcomment %}
             <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
-        </a> {% endcomment %}
+        </a>  {% endcomment %}
        <div class="c-announce_bar uptheader__anounce">
             <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use
             escape{% endcomment %}
@@ -74,7 +74,7 @@ var imgpath = '';
         {% endif %}
         {% comment %} end of announcement bar {% endcomment %}
 
-        {% if section.settings.banner == true or section.settings.banner == 'true' %}
+        {% if section.settings.banner == true or section.settings.banner == w'true' %}
         {% if smartphone %}
         {% assign header_banner = section.settings.banner_sp %}
         {% else %}
@@ -296,8 +296,8 @@ var imgpath = '';
                             <div class="uptgmenu__bnr--wrapper">
                             <a href="https://uptofficial.jp/lp?u=official_lp_3trial" class="uptgmenu__bnr" target="_blank">
                                 <picture>
-                                    <source srcset="<%= imgpath %>/assets/images/uptorigin/Upt_subscBnr-sp0428.webp" type="image/webp">
-                                    <img src="<%= imgpath %>/assets/images/uptorigin/Upt_subscBnr-sp0428.png" alt="定期セット sp" width="684px"
+                                    <source srcset="<%= imgpath %>/assets/images/uptorigin/uptbnr_1980-sp.webp" type="image/webp">
+                                    <img src="<%= imgpath %>/assets/images/uptorigin/uptbnr_1980-sp.png" alt="定期セット sp" width="684px"
                                         height="184px">
                                 </picture>
                             </a>

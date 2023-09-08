@@ -30,11 +30,17 @@
         {% assign top_only_message_flg = true %}
         {% endif %}
         {% unless top and top_only_message_flg %} {% comment %} unless a && !b {% endcomment %}
-        <a class="c-announce_bar uptheader__anounce" href="/shop/information/202212">
+        <a class="c-announce_bar uptheader__anounce" href="/shop/information/2023summer">
             <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use
             escape{% endcomment %}
             <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
         </a>
+        {% comment %} 通常 4.24〜 落とすケア新登場！ 4.28〜全国のロフトにて店頭発売も開始（※一部店舗を除く）
+        <div class="c-announce_bar uptheader__anounce">
+            <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use
+            escape{% endcomment %}
+            <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
+        </div>  {% endcomment %}
         {% comment %} <div class="c-announce_bar uptheader__anounce">
             <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use
             escape{% endcomment %}
@@ -266,8 +272,8 @@
                             <div class="uptgmenu__bnr--wrapper">
                             <!-- <a href="https://uptofficial.jp/lp?u=official_lp_3trial" class="uptgmenu__bnr" target="_blank">
                                 <picture>
-                                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin//assets/images/uptorigin/Upt_subscBnr-sp0428.webp" type="image/webp">
-                                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin//assets/images/uptorigin/Upt_subscBnr-sp0428.png" alt="定期セット sp" width="684px"
+                                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin//assets/images/uptorigin/uptbnr_1980-sp.webp" type="image/webp">
+                                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin//assets/images/uptorigin/uptbnr_1980-sp.png" alt="定期セット sp" width="684px"
                                         height="184px">
                                 </picture>
                             </a> -->

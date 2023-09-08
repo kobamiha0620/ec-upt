@@ -1,0 +1,108 @@
+@use "./module/variable"as var;
+
+:root {
+    --width: 500px;
+}
+
+.p-page_content__inner p {
+    font-size: 100%;
+
+}
+
+.uptshoplist {
+    width: var(--width);
+    margin: 0 auto;
+
+    &__area{
+        @include var.fz(16);
+
+        position: fixed;
+        bottom: 80px;
+        left: calc(50% - 360px);
+        transform: translateX(-50%);
+        color: var.$bg_dark;
+        a{
+            text-decoration: none;
+            @include var.fz(14);
+        }
+        li{
+            padding: 5px 0;
+            &.areaActive{
+                a{
+                    border-bottom: solid 1px  var.$bg_dark;
+                }
+            }
+        }
+        opacity: 1;
+        transition: all 0.5s;
+
+        &.hide{
+            opacity: 0;
+            transition: all 0.5s;
+
+        }
+    }
+    &__shoplist{
+        li{
+            color: var.$bg_dark;
+            @include var.fz(14);
+            padding: 20px;
+            border-bottom: solid 1px #e3e3e1;
+        }
+        &--pre{
+            display: inline-block;
+            border-radius: 30px;
+            padding: 6px     10px;
+            border: solid 1px var.$bg_dark;
+        }
+
+    }
+    &__blc{
+        padding-top: 100px;
+    }
+    p {
+        &.uptshoplist__shoplist--pre{
+            margin: 0;
+            line-height: 1;
+        }
+        &.uptshoplist__shoplist--name{
+            margin-top: 6px;
+            line-height: 1.5;
+        }
+        &.uptshoplist__areaTtl{
+            background: var.$bg_dark;
+            color: #FFF;
+            padding-left: 12px;
+            @include var.fz(18);
+        }
+        &.uptshoplist__ttl {
+            text-align: center;
+            @include var.fz(48);
+            font-weight: 500;
+            margin: 0 auto 10px;
+            line-height: 1;
+            color: var.$bg_dark;
+        }
+        &.uptshoplist__ttljp{
+            text-align: center;
+            @include var.fz(18);
+            line-height: 1;
+            color: var.$bg_dark;
+            margin: 0 auto 70px;
+        }
+        &.uptshoplist__txt{
+            text-align: center;
+            margin: 20px auto 0;
+            color: var.$bg_dark;
+
+        }
+    }
+    @media screen and (max-width: var.$spbp) {
+        width: 100%;
+        &__area{
+            position: relative;
+        }
+    }
+}
+
+
