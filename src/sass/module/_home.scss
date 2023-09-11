@@ -1747,16 +1747,135 @@ h2.upthome__illust--ttl {
     font-size: 14px;
     line-height: 2;
 }
+
+
+//ハンドクリーム追記 23-09-14 ----------------------------------------------
+.upthome{
+    &__products{
+        &--feature{
+            background-image: url(var.$imgpath + '0914/home_set-feature.svg');
+            background-size: 100% auto;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 12px;
+            top: 12px;
+            animation: rotation 10s infinite linear;
+            &txt{
+                background-image: url(var.$imgpath + 'feature_wash.svg');
+                background-size: 100% auto;
+                width: 64px;
+                height: 17px;
+                position: absolute;
+                left: 31px;
+                top: 54px;
+                white-space: nowrap;
+                text-indent: -9999px;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    &__products--blc{
+        &-box{
+            position: relative;
+        }
+        margin-top: -1px;
+        .upthome__products--name{
+            margin: 0 auto 4px;
+        }
+        &+.upthome__products--blc{
+            border-top: solid 1px var.$bg_dark;
+        }
+        &.deverse{
+            flex-direction: row-reverse;     
+            li{
+                &:last-child{
+                    border-right: solid 1px var.$bg_dark;
+                }
+                &:first-child{
+                    border-right: none;
+                }
+            }    
+        }
+    }
+    &__producer{
+        background-image: url(var.$imgpath + 'bg_newproducer-pc.png');
+        @media screen and (max-width: 1080px) {
+            background-image: url(var.$imgpath + 'bg_newproducer-pcmiddle.jpg');
+
+        }
+
+    }
+    &__yumi--blc{
+        &.right{
+            border-left: none;
+        }
+    }
+
+    @media screen and (max-width: var.$spbp) {
+        &__products{
+
+        }
+        &__products--blc{
+            &-box{
+            }
+            margin-top: -1px;
+
+            &+.upthome__products--blc{
+                border-top: solid 1px var.$bg_dark;
+            }
+
+            &.deverse{
+                flex-direction: row;
+                li{
+                    &:last-child{
+                        border-right: none;
+                    }
+
+                }
+            }
+        }
+        &__producer{
+            background-image: url(var.$imgpath + 'bg_newproducer-sp.jpg');
+    
+        }
+    }
+}
+@media screen and (min-width: var.$spbp) {
+    .third{
+        .upthome__fv--logo{
+            bottom: 17vh;
+            left: calc(50% - 23vw);
+            
+        }
+    }
+}
+@media screen and (min-width: 1200px) {
+    .third{
+        .upthome__fv--logo{
+            bottom: 17vh;
+            left: calc(50% - 360px);
+            
+        }
+    }
+}
+
+
+
 // @include var.webpBg('.uptBg', './img/my-bg', 'png');
 @include var.webpBg('.upthome__fv', var.$imgpath +'fv_pc04');
 @include var.webpBg('.upthome__set--img-in', var.$imgpath +'home_setimg-pc');
-@include var.webpBg('.upthome__producer', var.$imgpath +'bg_yumi-pc', 'png');
+@include var.webpBg('.upthome__producer', var.$imgpath +'bg_newproducer-pc', 'png');
 @include var.webpBg('.upthome__washset--img', var.$imgpath +'img--washset-tp');
 
+@media screen and (max-width: 1080px) {
+    @include var.webpBg('.upthome__producer', var.$imgpath +'bg_newproducer-pcmiddle');
+
+}
 
 @media screen and (max-width: var.$spbp) {
     @include var.webpBg('.upthome__fv', var.$imgpath +'fv_sp');
     @include var.webpBg('.upthome__set--img-in', var.$imgpath +'home_setimg-sp', 'png');
-    @include var.webpBg('.upthome__producer', var.$imgpath +'bg_yumi-sp02');
+    @include var.webpBg('.upthome__producer', var.$imgpath +'bg_newproducer-sp');
 
 }

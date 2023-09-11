@@ -1,0 +1,252 @@
+<section class="p-product_list" data-section-id='products_index_content' data-section-type='products_index_content-section'>
+  {% paginate products_all %}
+    <div class="l-container__row u-margin__top--60">
+      {% if page_url contains 'search' %}
+        <header class="p-list_header">
+          <div class="p-list_header__inner">
+            <h1 class="p-list_header__inner__title u-text--head">{{ 'general.searches.search_result.value' | t }}</h1>
+            {% include 'ec_force/shop/snippets/product_sort.html' %}
+          </div>
+        </header>
+      {% elsif page_url contains 'product_categories' %}
+        <div class="p-category_tool">
+          <div class="p-category_tool__inner">
+            {% include 'ec_force/shop/snippets/product_sort.html' %}
+          </div>
+        </div>
+      {% else %} {% comment %} products {% endcomment %}
+        <header class="p-list_header">
+          <div class="p-list_header__inner">
+            <h1 class="p-list_header__inner__title u-text--head">{{ 'products.general.all_product.value' | t }}</h1>
+            {% include 'ec_force/shop/snippets/product_sort.html' %}
+          </div>
+        </header>
+      {% endif %}
+    </div>
+
+    <div class="l-container__row u-margin__top--60">
+      {% if page_url contains 'search' %}
+        {% if labels.size > 0 %}
+          <div class="c-search_cond u-text--subhead">
+            <div class="c-search_cond__inner">
+              <div class="c-search_cond__label">
+                <span>絞り込み条件：</span>
+              </div>
+              <div class="c-search_cond__values">
+                {% for label in labels %}
+                <div class="c-search_cond__condition u-color__border--border">
+                  <span class="c-search_cond__condition__val">{{ label }}</span>
+                  {% comment %}
+                    検索結果の条件を削除できるボタン（バツ印のボタン）だが
+                    ボタン押下で検索結果が変わるわけでもないので一旦コメントアウト。
+                    一連の実装が完了した後でコメントを外す。
+
+                    1. ボタン押下
+                    2. 検索条件を変えて再度検索（JSでフォームを送信する？）
+                    3. 検索結果のページを表示（リロード？）
+
+                    <button type="button" class="c-search_cond__condition__btn">
+                      <i class="u-icon--close"></i>
+                    </button>
+                  {% endcomment %}
+                </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+
+      <ul class="p-product_list__list">
+        {% for product in paginate.collection %}
+          {% assign is_new = false %}
+          {% if product.variants.size > 1 %}
+            {% for variant in product.variants %}
+              {% if variant.is_new %}
+                {% assign is_new = true %}
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            {% if product.master.is_new %}
+              {% assign is_new = true %}
+            {% endif %}
+          {% endif %}
+
+          {% assign is_sold = false %}
+          {% unless product.master.stock_item.stock_unlimited %}
+
+            {% assign stock = 0 %}
+            {% if product.variants.size > 1 %}
+              {% for variant in product.variants %}
+                {% assign stock = stock | plus: variant.stock_item.stock %}
+              {% endfor %}
+            {% else %}
+              {% assign stock = stock | plus: product.master.stock_item.stock %}
+            {% endif %}
+
+            {% if stock < 1 %}
+              {% assign is_sold = true %}
+            {% endif %}
+
+          {% endunless %}
+          <li class="p-product_list__list__item medium-up--one-{{section.settings.product_size}}">
+            <div class="c-product_item">
+              <a class="c-product_item__link" href="/shop/products/{{ product.master.sku }}"></a>
+              <div class="c-product_item__inner__eyecatch">
+                {% if product.thumbnail.url %}
+                  {% assign thumbnail = product.thumbnail.url %}
+                {% else %}
+                  {% assign thumbnail = 'missing' | image_url  %}
+                {% endif %}
+                <div class="c-product_item__inner__eyecatch__img" style="background-size:contain;background-image:url({{ thumbnail }})"></div>
+
+                {% if is_new or is_sold %}
+                  <div class="c-product_item__inner__eyecatch__tags">
+                    {% if is_new %}
+                      <div class="c-product_item__inner__eyecatch__tags__new u-color__bg--base">{{ 'products.general.new.value' | t }}</div>
+                    {% endif %}
+
+                    {% if is_sold %}
+                      <div class="c-product_item__inner__eyecatch__tags__soldout">{{ 'products.stock.sold_out.value' | t }}</div>
+                    {% endif %}
+                  </div>
+                {% endif %}
+
+                <div class="c-product_item__actions">
+                  {% unless is_sold %}
+                    <form class="c-product_item__form c-product_item__form--cart" action="/shop/cart/add" method="post">
+                      {% authenticity_token_tag %}
+                      <input name="variant_id" type="hidden" value="{{ product.master.id }}">
+                      <input name="quantity" type="hidden" value="{{ product.master.min_quantity }}">
+                      <button class="c-product_item__button c-product_item__button--cart u-color__btn--text u-color__btn--bg" type="submit">
+                        <i class="u-icon--cart"></i>
+                      </button>
+                    </form>
+                  {% endunless %}
+
+                  {% assign is_favorite = product.id | check_current_customer_favorite %}
+                  {% if is_favorite %}
+                    <form
+                      class="c-product_item__form c-product_item__form--favorite"
+                      action="/shop/products/{{ product.master.sku }}/unfavorite?customer_return_to=%2Fshop%2Fproducts%2F{{ product.master.sku }}"
+                      method="post">
+                      {% authenticity_token_tag %}
+                      <button class="c-product_item__button c-product_item__button--favorite u-color__btn u-color__btn--text--bg" type="submit">
+                        <i class="u-icon--heart"></i>
+                      </button>
+                    </form>
+                  {% else %}
+                    <form
+                      class="c-product_item__form c-product_item__form--favorite"
+                      action="/shop/products/{{ product.master.sku }}/favorite?customer_return_to=%2Fshop%2Fproducts%2F{{ product.master.sku }}"
+                      method="post">
+                      {% authenticity_token_tag %}
+                      <button class="c-product_item__button c-product_item__button--favorite u-color__btn--text u-color__btn--bg" type="submit">
+                        <i class="u-icon--heart"></i>
+                      </button>
+                    </form>
+                  {% endif %}
+                </div>
+              </div>
+              <div class="c-product_item__inner__content">
+                <div class="c-product_item__inner__title u-text--subhead">{{ product.name }}</div>
+                <div class="c-product_item__inner__category u-text--subhead">
+                  {% assign _category = '' %}
+                  {% for category in product.product_categories %}
+                    {% if category.product_category_visibility %}
+                      {% unless _category == '' %}
+                        {% assign _category = _category | append: ', ' %}
+                      {% endunless %}
+                      {% assign _category = _category | append: category.name %}
+                    {% endif %}
+                  {% endfor %}
+                  {{ _category }}
+                </div>
+                <div class="c-product_item__inner__price u-text--body">
+                  {% if product.set.set_sale_method_product_price? %}
+                    {% if product.master.list_price > product.set.lowest_price %}
+                      <span class="origin">&yen;{{ product.master.list_price | number_with_delimiter }}</span>
+                      <span class="sale u-color__text--alert">&yen;{{ product.set.lowest_price | number_with_delimiter }}~</span>
+                      <span>&nbsp;({{ 'products.price.tax_included.value' | t }}</span>
+                      <span id="sale u-color__text--alert">&yen;{{ product.set.lowest_price_include_tax | number_with_delimiter }}~</span>
+                      <span>)</span>
+                    {% else %}
+                      <span class="price">&yen;{{ product.set.lowest_price | number_with_delimiter }}~</span>
+                      <span>&nbsp;({{ 'products.price.tax_included.value' | t }}</span>
+                      <span id="price">&yen;{{ product.set.lowest_price_include_tax | number_with_delimiter }}~</span>
+                      <span>)</span>
+                    {% endif %}
+                  {% elsif product.master.list_price > product.first_price %}
+                    <span class="origin">&yen;{{ product.master.list_price | number_with_delimiter }}</span>
+                    <span class="sale u-color__text--alert">&yen;{{ product.first_price | number_with_delimiter }}</span>
+                    <span>&nbsp;({{ 'products.price.tax_included.value' | t }}</span>
+                    <span id="sale u-color__text--alert">&yen;{{ product.first_price_include_tax | number_with_delimiter }}</span>
+                    <span>)</span>
+                  {% else %}
+                    <span class="price">&yen;{{ product.first_price | number_with_delimiter }}</span>
+                    <span>&nbsp;({{ 'products.price.tax_included.value' | t }}</span>
+                    <span id="price">&yen;{{ product.first_price_include_tax | number_with_delimiter }}</span>
+                    <span>)</span>
+                  {% endif %}
+                </div>
+                {% if section.settings.product_show == true or section.settings.product_show == 'true' %}
+                  {% if product.parsed_description %}
+                    <div class="c-product_item__inner__price u-text--body" style="word-break: break-all;">
+                      {% assign product_show_description_size = section.settings.product_show_description_size | times: 1 %}
+                      {% if smartphone %}
+                        {% assign parsed_description_mobile = product.parsed_description_mobile | strip_html | strip_newlines %}
+                        {% if parsed_description_mobile.size > product_show_description_size %}
+                          {{ parsed_description_mobile | truncate: product_show_description_size, '' | append: '...' }}
+                        {% else %}
+                          {{ parsed_description_mobile | truncate: product_show_description_size, '' }}
+                        {% endif %}
+                      {% else %}
+                        {% assign parsed_description = product.parsed_description | strip_html | strip_newlines %}
+                        {% if parsed_description.size > product_show_description_size %}
+                          {{ parsed_description | truncate: product_show_description_size, '' | append: '...' }}
+                        {% else %}
+                          {{ parsed_description | truncate: product_show_description_size, '' }}
+                        {% endif %}
+                      {% endif %}
+                    </div>
+                  {% endif %}
+                {% endif %}
+              </div>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="l-container__row u-margin__top--80 u-margin__bottom--100">
+      <div class="c-pagination">
+        <ul class="c-pagination__list u-color__border--border u-color--head">
+          {% if paginate.previous %}
+            <li class="c-pagination__list__item">
+              <a class="c-pagination__list__item__prev" href="{{ paginate.previous.url }}">
+                <i class="u-icon--arrow"></i>
+              </a>
+            </li>
+          {% endif %}
+          {% for page in paginate.parts %}
+            <li class="c-pagination__list__item u-color__border--main {% if paginate.current_page == page.title %} is-active{% endif %}">
+              {% if paginate.current_page == page.title %}
+                <span class="c-pagination__list__item__page">{{ page.title }}</span>
+              {% elsif page.is_link %}
+                <a class="c-pagination__list__item__page" href="{{ page.url }}">{{ page.title }}</a>
+              {% else %}
+                <span class="c-pagination__list__item__page">{{ page.title }}</span>
+              {% endif %}
+            </li>
+          {% endfor %}
+          {% if paginate.next %}
+            <li class="c-pagination__list__item">
+              <a class="c-pagination__list__item__next" href="{{ paginate.next.url }}">
+                <i class="u-icon--arrow"></i>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  {% endpaginate %}
+</section>

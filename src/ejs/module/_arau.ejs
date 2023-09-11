@@ -1,0 +1,39 @@
+<%
+// 以下の設定値を記入のこと
+
+var pageinit = {
+    product: 'all',
+    title : '' ,
+    keywords : '' ,
+    description : '' ,
+    ogurl : '' ,
+    ogimage : '' ,
+    path : '' ,
+    ecforce : 'false',
+    path : '' ,
+    category : ['main'] ,
+    pagename : '',
+    css: [],
+    js:[],
+    // jsfunc:['setPhotoChanger ();','startScroll ();','setVideo();'],
+    
+};
+
+%>
+
+
+
+<section class="uptline"></section>
+
+    <section class="uptproduct__others">
+        <h2 class="uptblc__ttl">OTHER ITEM</h2>
+        <div class="uptproduct__others--con">
+
+            <!-- 共通部分・商品ページ -->
+            <%- include('./_araucare', { meta: imgpath }); %>
+
+            <!-- 共通部分・商品ページ -->
+
+        </div>
+    </section>
+        <!-- /.定期商品 -->

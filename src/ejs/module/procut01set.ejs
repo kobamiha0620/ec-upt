@@ -2,14 +2,14 @@
 // 以下の設定値を記入のこと
 
 var pageinit = {
-    product: 'all',
+    product: 'wash',
     title : '' ,
     keywords : '' ,
     description : '' ,
     ogurl : '' ,
     ogimage : '' ,
     path : '' ,
-    ecforce : 'true',
+    ecforce : 'false',
     path : '' ,
     category : ['main'] ,
     pagename : '',
@@ -22,8 +22,8 @@ var pageinit = {
 %>
 
 <% 
-    // imgpath =  '';   
-    imgpath = '{{ theme_file_root_path }}';
+    imgpath =  '';   
+    // imgpath = '{{ theme_file_root_path }}';
 
 %>
 
@@ -36,6 +36,23 @@ var pageinit = {
 
 
 <main class="l-container js-main-container uptprodcut" role="main" id="product-show-view">
+
+
+    <!-- handcream ハンドクリーム -->
+    <% if (pageinit.ecforce === 'true') { %>
+        {% if product.id == 15 %}
+        <% } %>
+    
+        <% if ((pageinit.product === 'handcream') || (pageinit.product === 'all')) { %>
+        
+        <%- include('./_handcream', { meta: imgpath }); %>
+    
+        <% } %>
+    
+    <% if (pageinit.ecforce === 'true') { %>
+    {% endif %}
+    <% } %>
+    <!-- /ハンドクリーム -->
 
     <!-- cset クレンジングセット -->
     <% if (pageinit.ecforce === 'true') { %>
@@ -557,15 +574,47 @@ var pageinit = {
     <!-- 潤い商品ONLYONLY -->
     <% if (pageinit.ecforce === 'true') { %>
         {% if product.id == 2 or product.id == 3 or product.id == 4 or product.id == 5 %}
- <% } %>
+    <% } %>
 
     <% if ((pageinit.product === 'toner') ||(pageinit.product === 'milk') ||(pageinit.product === 'cream') ||(pageinit.product === 'set') || (pageinit.product === 'all')) { %>
         <%- include('./_uruoi', { meta: imgpath }); %>
+    <% } %>
+    <% if (pageinit.ecforce == 'true') { %>
+        {% endif %}
+    <% } %>
+
+
+
+    
+    <% if (pageinit.ecforce === 'true') { %>
+        {% if product.id == 10 or product.id == 11 %}
+ <% } %>
+
+    <% if ((pageinit.product === 'wash') ||(pageinit.product === 'balm')  || (pageinit.product === 'all')) { %>
+        <%- include('./_arau', { meta: imgpath }); %>
     <% } %>
 
     <% if (pageinit.ecforce == 'true') { %>
         {% endif %}
     <% } %>
+
+
+    <% if (pageinit.ecforce === 'true') { %>
+        {% if product.id == 15 %}
+ <% } %>
+
+
+    <% if ((pageinit.product === 'toner') ||(pageinit.product === 'milk') ||(pageinit.product === 'cream') ||(pageinit.product === 'handcream')  || (pageinit.product === 'all')) { %>
+        <%- include('./_uruou', { meta: imgpath }); %>
+    <% } %>
+
+
+    <% if (pageinit.ecforce == 'true') { %>
+        {% endif %}
+    <% } %>
+
+
+
     <% if (pageinit.ecforce === 'true') { %>
     <!-- /.潤い商品ONLYONLY -->
 

@@ -18,8 +18,9 @@ var pageinit = {
 };
 %>
 <%
-var imgpath = 'https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/theme_230424_20230418171537/ec_force/assets/images/uptorigin/';
+var imgpath = '{{ theme_file_root_path }}';
 // var imgpath = '';
+
 
 %>
 
@@ -48,16 +49,16 @@ var imgpath = 'https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/theme
            <div class="upthome__intro--img">
 
                <picture class="pcImg">
-                   <source srcset="<%= imgpath %>img_aboutpc.webp" type="image/webp">
+                   <source srcset="<%= imgpath %>/assets/images/uptorigin/about_img-pc.webp" type="image/webp">
                  
-                   <img src="<%= imgpath %>img_aboutpc.jpg"  alt="安達祐実" width="1599" height="1766">
+                   <img src="<%= imgpath %>/assets/images/uptorigin/about_img-pc.jpg"  alt="安達祐実" width="1599" height="1766">
 
                </picture>
 
                <picture class="spImg">
-                   <source srcset="<%= imgpath %>img_about-sp.webp" type="image/webp">
+                   <source srcset="<%= imgpath %>/assets/images/uptorigin/about_img-sp.webp" type="image/webp">
                  
-                   <img src="<%= imgpath %>0914/img_about-sp.png" alt="安達祐実"  width="auto" height="auto">
+                   <img src="<%= imgpath %>/assets/images/uptorigin/about_img-sp.png" alt="安達祐実"  width="1276" height="1932">
                </picture>
 
 
