@@ -2325,6 +2325,42 @@ h2.upthome__illust--ttl {
     left: calc(50% - 360px);
   }
 }
+@media screen and (max-width: 768px) {
+  .upthome__renew {
+    margin: 0 calc(50% - 50vw);
+    width: auto;
+    position: relative;
+    line-height: 0;
+    font-size: 0;
+    margin-top: -89px;
+    height: 100vh;
+    height: 100svh;
+  }
+  .upthome__renew .upthomeSWiper {
+    z-index: 1;
+    margin: 0 0 0;
+    font-size: 0;
+    width: auto;
+    height: 100vh;
+    height: 100svh;
+    background-color: #dfe4ea;
+  }
+  .upthome__renew .upthomeSWiper img {
+    width: auto;
+    height: 100vh;
+    height: 100svh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .upthome__renew .swiper-wrapper .spImg {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .upthome__renew .upthome__renew--rightline, .upthome__renew .upthome__renew--leftline {
+    height: 100vh;
+    height: 100svh;
+  }
+}
 .is-no-webp .upthome__fv {
   background-image: url(https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/add_handcream_20230908134431/ec_force/assets/images/uptorigin/fv_pc04.jpg);
 }
@@ -4645,6 +4681,7 @@ h2.upthome__illust--ttl {
 @media screen and (max-width: 768px) {
   .cleandingblc.tereco.tereco {
     margin-top: 0;
+    border-top: none;
   }
   .cleandingblc.tereco.tereco .cleandingblc__dright img {
     margin: 0;
@@ -4660,6 +4697,9 @@ h2.upthome__illust--ttl {
 }
 @media screen and (max-width: 768px) {
   .cleandingblc {
+    border-top: solid 1px #32667A;
+  }
+  .cleandingblc.tereco {
     border-top: none;
   }
 }
@@ -4737,6 +4777,31 @@ h2.upthome__illust--ttl {
 
 .uptprodcut .uptblc__buyblc--txt00 {
   line-height: 1.3;
+}
+
+.cleandingblc__setitem--list li.handimage .cleandingblc__setitem--list-txt {
+  padding: 40px 10.5% 20px;
+}
+@media screen and (max-width: 768px) {
+  .cleandingblc__setitem--list li.handimage .cleandingblc__setitem--list-txt {
+    padding: 10vw 0 6vw;
+  }
+}
+.cleandingblc__setitem--list li.wash .cleandingblc__setitem--list-txt {
+  padding: 40px 5% 20px;
+}
+@media screen and (max-width: 768px) {
+  .cleandingblc__setitem--list li.wash .cleandingblc__setitem--list-txt {
+    padding: 10vw 0 6vw;
+  }
+}
+.cleandingblc__setitem--list li.balm .cleandingblc__setitem--list-txt {
+  padding: 40px 5% 20px;
+}
+@media screen and (max-width: 768px) {
+  .cleandingblc__setitem--list li.balm .cleandingblc__setitem--list-txt {
+    padding: 10vw 0 6vw;
+  }
 }
 
 main#productIndex .c-product_item__actions {

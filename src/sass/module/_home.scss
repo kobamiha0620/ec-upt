@@ -1860,6 +1860,49 @@ h2.upthome__illust--ttl {
     }
 }
 
+@media screen and (max-width: var.$spbp) {
+    .upthome__renew{
+        margin: 0 calc(50% - 50vw);
+        width: auto;
+        position: relative;
+        // background-image: url(var.$imgpath + 'fv_pc04.jpg');
+        line-height: 0;
+        font-size: 0;
+        // padding-top: 100%;
+        margin-top: -89px;
+        height: 100vh;
+        height: 100svh;
+
+        .upthomeSWiper {
+            z-index: 1;
+            margin: 0 0 0;
+            font-size: 0;
+            width: auto;
+            height: 100vh;
+            height: 100svh;
+            // height: 100vh;
+            background-color: #dfe4ea;
+            img{
+                width: auto;
+                height: 100vh;
+                height: 100svh;
+                object-fit: cover;
+            }
+        }
+     .swiper-wrapper{
+        .spImg {
+            object-fit: contain;
+        }
+     } 
+
+     .upthome__renew--rightline, .upthome__renew--leftline{
+        height: 100vh;
+        height: 100svh;
+
+     }
+    }
+}
+
 
 
 // @include var.webpBg('.uptBg', './img/my-bg', 'png');
