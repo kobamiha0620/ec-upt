@@ -5,12 +5,30 @@ let footDistance = footer.getBoundingClientRect().top + window.scrollY;
 
 
 //各位置の距離
-// const areas = ['kanto', 'tyubu', 'kinki', 'chugoku', 'kyushu'];
-// let area0 = document.getElementById(areas[0]);
-// let areaDist0 = (area0.getBoundingClientRect().top + window.scrollY) - area0Height;
+let area = document.getElementsByClassName('uptshoplist__blc');
+const len =  area.length;	
+let areaPositions =[];
+
+for (let i=0; i < len; i++) {
+    let pos = area[i].getBoundingClientRect().top; 
+    areaPositions.push(pos);
+};
+
+const btn = document.getElementById('uptshoplist__area').children;
+const lists = Array.from(document.querySelectorAll("li"));
+
+// btn.on('click', function() {
+//     const index = btn.index(this);
+//     $('html,body').animate({scrollTop: position[index]});
+// });
 
 
-//メニュー
+
+
+console.log(areaPositions);
+// const kanto = document.getElementById(areas[0]);
+// let kantoH = kanto.getBoundingClientRect().top;
+
 
 
 

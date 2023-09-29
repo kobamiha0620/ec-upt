@@ -25,6 +25,9 @@ $(function(){
     $(window).on('resize scroll',function(event){
         snslocate();
     });
+
+
+    
     //カーソル画像
     const cursor =$("#cursor");                // カーソルになる要素を指定
     $(document).on("mousemove",function(e){ // マウスカーソルが動いた時に実行
@@ -47,6 +50,7 @@ function subscFaq(){
     
 }
 subscFaq();
+
 });
 
 
@@ -83,3 +87,7 @@ async function supportsWebp() {
   
 
 
+
+
+
+  

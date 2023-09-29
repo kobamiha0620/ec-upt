@@ -2361,6 +2361,22 @@ h2.upthome__illust--ttl {
     height: 100svh;
   }
 }
+.upthome__yumi {
+  flex-direction: row;
+}
+
+@media screen and (max-width: 768px) {
+  .upthome__yumi {
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+    flex-direction: column-reverse;
+  }
+  .upthome__yumi--blc {
+    width: 100%;
+    min-width: 100%;
+  }
+}
 .is-no-webp .upthome__fv {
   background-image: url(https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/add_handcream_20230908134431/ec_force/assets/images/uptorigin/fv_pc04.jpg);
 }

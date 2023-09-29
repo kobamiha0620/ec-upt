@@ -1904,6 +1904,25 @@ h2.upthome__illust--ttl {
 }
 
 
+.upthome__yumi{
+    flex-direction: row;
+}
+@media screen and (max-width: var.$spbp) {
+    .upthome__yumi{
+        display: flex;
+        width: 100%;
+        flex-flow: column;
+        flex-direction: column-reverse;
+        &--blc{
+            width: 100%;
+            min-width: 100%;
+        }
+    }
+    
+}
+
+
+
 
 // @include var.webpBg('.uptBg', './img/my-bg', 'png');
 @include var.webpBg('.upthome__fv', var.$imgpath +'fv_pc04');

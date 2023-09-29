@@ -115,7 +115,7 @@ var imgpath = '{{ theme_file_root_path }}';
             <section class="upthome__producer">
                 <div class="upthome__producer--inner">
                     <div class="producer__inner">
-                        <div id="PRODUCER">
+                        <div>
                             <h2 class="headingttl">PRODUCER</h2>
                         </div>
                     </div>
@@ -218,9 +218,24 @@ var imgpath = '{{ theme_file_root_path }}';
 
 
 
+    <section class="upthome__yumi" id="">
+        <div class="upthome__yumi--blc">
+            <div id="PRODUCER" style="padding-top: 90px; margin-top: -90px;"></div>
 
-    <section class="upthome__yumi">
+            <picture class="pcImg">
+                <source srcset="<%= imgpath %>/assets/images/uptorigin/img_producer-yumi-pc.webp" type="image/webp">
+                <img src="<%= imgpath %>/assets/images/uptorigin/img_producer-yumi-pc.jpg" alt="プロデューサー" width="1653"
+                    height="2022">
+            </picture>
 
+            <picture class="spImg">
+                <source srcset="<%= imgpath %>/assets/images/uptorigin/img_producer-yumi-sp.webp" type="image/webp">
+                <img src="<%= imgpath %>/assets/images/uptorigin/img_producer-yumi-sp.jpg" alt="プロデューサー" width="1380"
+                    height="2264">
+            </picture>
+        </div>
+
+        <section class="uptline"></section>
         <div class="upthome__yumi--blc right">
             <div class="upthome__yumi--sblc">
                 <p class="upthome__yumi--txt">年齢を重ねることは、老いていくとか、<br>
@@ -242,21 +257,7 @@ var imgpath = '{{ theme_file_root_path }}';
                 <p class="upthome__yumi--sign">Yumi Adachi</p>
             </div>
         </div>
-        <section class="uptline"></section>
 
-        <div class="upthome__yumi--blc">
-            <picture class="pcImg">
-                <source srcset="<%= imgpath %>/assets/images/uptorigin/img_producer-yumi-pc.webp" type="image/webp">
-                <img src="<%= imgpath %>/assets/images/uptorigin/img_producer-yumi-pc.jpg" alt="プロデューサー" width="1653"
-                    height="2022">
-            </picture>
-
-            <picture class="spImg">
-                <source srcset="<%= imgpath %>/assets/images/uptorigin/img_producer-yumi-sp.webp" type="image/webp">
-                <img src="<%= imgpath %>/assets/images/uptorigin/img_producer-yumi-sp.jpg" alt="プロデューサー" width="1380"
-                    height="2264">
-            </picture>
-        </div>
     </section>
 
     <section class="uptline"></section>

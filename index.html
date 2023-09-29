@@ -639,15 +639,16 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
                 
 
 
+
 <ul class="upthome__products--blc deverse">
     <li>
         <a href="/shop/products/handcream">
             <div class="upthome__products--blc-box">
                 <picture>
-                    <source srcset="/assets/images/uptorigin/home_product-handcream.webp"
+                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/home_product-handcream.webp"
                         type="image/webp">
 
-                    <img src="/assets/images/uptorigin/home_product-handcream.png"
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/home_product-handcream.png"
                         alt="HAND CREAM ハンドクリーム" width="1104" height="1095">
                 </picture>
 
@@ -668,10 +669,10 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
         <a href="/shop/products/creamy_whipwash">
             <div class="upthome__products--blc-box">
                 <picture>
-                    <source srcset="/assets/images/uptorigin/home_product-wash.webp"
+                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/home_product-wash.webp"
                         type="image/webp">
 
-                    <img src="/assets/images/uptorigin/home_product-wash.png"
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/home_product-wash.png"
                         alt="CREAMY WHIP WASH クリーミーホイップウォッシュ" width="1104" height="1095">
                 </picture>
                 <div class="upthome__products--nameblc">
@@ -688,10 +689,10 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
         <a href="/shop/products/cleansing_balm">
             <div class="upthome__products--blc-box">
                 <picture>
-                    <source srcset="/assets/images/uptorigin/home_product-balm.webp"
+                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/home_product-balm.webp"
                         type="image/webp">
 
-                    <img src="/assets/images/uptorigin/home_product-balm.png"
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/home_product-balm.png"
                         alt="CLEANSING BALM クレンジングバーム" width="1104" height="1095">
                 </picture>
 
@@ -709,15 +710,17 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
 </ul>
 
 
-                <ul class="upthome__products--blc">
+                
+
+<ul class="upthome__products--blc">
     <li>
         <a href="/shop/products/balancing_toner">
             <div class="upthome__products--blc-box">
                 <picture>
-                    <source srcset="/assets/images/uptorigin/home_prodcut01.webp"
+                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/home_prodcut01.webp"
                         type="image/webp">
 
-                    <img src="/assets/images/uptorigin/0926/home_prodcut01b.jpg"
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/home_prodcut01b.jpg"
                         alt="BALANCING TONER バランシングトナー" width="auto" height="auto">
                 </picture>
 
@@ -735,10 +738,10 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
         <a href="/shop/products/conditioning_milk">
             <div class="upthome__products--blc-box">
                 <picture>
-                    <source srcset="/assets/images/uptorigin/home_prodcut02.webp"
+                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/home_prodcut02.webp"
                         type="image/webp">
 
-                    <img src="/assets/images/uptorigin/0914/home_prodcut02.png"
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut02.png"
                         alt="CONDITIONING MILK コンディショニングミルク" width="auto" height="auto">
                 </picture>
                 <div class="upthome__products--nameblc">
@@ -755,10 +758,10 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
         <a href="/shop/products/moisturizing_cream">
             <div class="upthome__products--blc-box">
                 <picture>
-                    <source srcset="/assets/images/uptorigin/home_prodcut03.webp"
+                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/home_prodcut03.webp"
                         type="image/webp">
 
-                    <img src="/assets/images/uptorigin/0914/home_prodcut03.png" width="auto"
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut03.png" width="auto"
                         height="auto" alt="MOISTURIZING CREAM モイスチャライジングクリーム">
                 </picture>
                 <div class="upthome__products--nameblc">
@@ -779,7 +782,7 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
             <section class="upthome__producer">
                 <div class="upthome__producer--inner">
                     <div class="producer__inner">
-                        <div id="PRODUCER">
+                        <div>
                             <h2 class="headingttl">PRODUCER</h2>
                         </div>
                     </div>
@@ -882,9 +885,24 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
 
 
 
+    <section class="upthome__yumi" id="">
+        <div class="upthome__yumi--blc">
+            <div id="PRODUCER" style="padding-top: 90px; margin-top: -90px;"></div>
 
-    <section class="upthome__yumi">
+            <picture class="pcImg">
+                <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_producer-yumi-pc.webp" type="image/webp">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_producer-yumi-pc.jpg" alt="プロデューサー" width="1653"
+                    height="2022">
+            </picture>
 
+            <picture class="spImg">
+                <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_producer-yumi-sp.webp" type="image/webp">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_producer-yumi-sp.jpg" alt="プロデューサー" width="1380"
+                    height="2264">
+            </picture>
+        </div>
+
+        <section class="uptline"></section>
         <div class="upthome__yumi--blc right">
             <div class="upthome__yumi--sblc">
                 <p class="upthome__yumi--txt">年齢を重ねることは、老いていくとか、<br>
@@ -906,21 +924,7 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
                 <p class="upthome__yumi--sign">Yumi Adachi</p>
             </div>
         </div>
-        <section class="uptline"></section>
 
-        <div class="upthome__yumi--blc">
-            <picture class="pcImg">
-                <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_producer-yumi-pc.webp" type="image/webp">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_producer-yumi-pc.jpg" alt="プロデューサー" width="1653"
-                    height="2022">
-            </picture>
-
-            <picture class="spImg">
-                <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_producer-yumi-sp.webp" type="image/webp">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_producer-yumi-sp.jpg" alt="プロデューサー" width="1380"
-                    height="2264">
-            </picture>
-        </div>
     </section>
 
     <section class="uptline"></section>
