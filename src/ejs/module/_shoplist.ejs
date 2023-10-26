@@ -22,15 +22,28 @@ var imgpath = 'https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/theme
 // var imgpath = '';
 
 %>
+
+
 <div class="uptshoplist">
-    <ul class="uptshoplist__area" id="uptshoplist__area">
-        <li class=""><a href="#hokkaido">北海道・東北地方</a></li>
-        <li><a href="#kanto">関東地方</a></li>
-        <li><a href="#tyubu">中部地方</a></li>
-        <li><a href="#kinki">近畿地方</a></li>
-        <li><a href="#chugoku">中国・四国地方</a></li>
-        <li><a href="#kyushu">九州地方・沖縄県</a></li>
-    </ul>
+    <nav id="menuArea">
+        <ul class="uptshoplist__area" id="uptshoplist__area">
+            <li class="is-active"><a href="#hokkaido" class="mScroll">北海道・東北地方</a></li>
+            <li><a href="#kanto" class="mScroll">関東地方</a></li>
+            <li><a href="#tyubu" class="mScroll">中部地方</a></li>
+            <li><a href="#kinki" class="mScroll">近畿地方</a></li>
+            <li><a href="#chugoku" class="mScroll">中国・四国地方</a></li>
+            <li><a href="#kyushu" class="mScroll">九州地方・沖縄県</a></li>
+        </ul>
+        
+        <ul class="uptshoplist__areasp active" id="uptshoplist__areasp">
+            <li><a href="#hokkaido">北海道・東北地方</a></li>
+            <li><a href="#kanto">関東地方</a></li>
+            <li><a href="#tyubu">中部地方</a></li>
+            <li><a href="#kinki">近畿地方</a></li>
+            <li><a href="#chugoku">中国・四国地方</a></li>
+            <li><a href="#kyushu">九州地方・沖縄県</a></li>
+        </ul>
+    </nav>
     <div>
         <p class="uptshoplist__ttl">SHOP LIST</p>
         <p class="uptshoplist__ttljp">取扱い店舗</p>
@@ -39,86 +52,60 @@ var imgpath = 'https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/theme
             在庫状況などは各店舗にてご確認ください。</p>
         <div id="hokkaido" class="uptshoplist__blc">
             <p class="uptshoplist__areaTtl">北海道・東北地方</p>
-            <ul class="uptshoplist__shoplist">
-                <li>
-                    <p class="uptshoplist__shoplist--pre">北海道</p>
-                    <p class="uptshoplist__shoplist--name">アットコスメストア 名古屋タカシマヤゲートタワーモール店</p>
-                </li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
+            <ul class="uptshoplist__shoplist--details" id="shoplist__hokkaiArea">
+                <li><a href="#北海道">北海道</a></li>
+                <li><a href="#北海道">北海道</a></li>
+                <li><a href="#北海道">北海道</a></li>
+                <li><a href="#北海道">北海道</a></li>
+                <li><a href="#北海道">北海道</a></li>
+            </ul>
+            <div>
+                <div class="hokkaido__ditails" id="hokkaido__ditails">
+                    <a href="" class="ken_details"></a>
+                </div>
+            </div>
+
+            <ul class="uptshoplist__shoplist" id="hokkaidoList">
+
             </ul>
         </div>
 
         <div id="kanto" class="uptshoplist__blc">
             <p class="uptshoplist__areaTtl">関東地方</p>
-            <ul class="uptshoplist__shoplist">
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
+            <ul class="uptshoplist__shoplist" id="kantoList">
             </ul>
         </div>
 
         <div id="tyubu" class="uptshoplist__blc">
             <p class="uptshoplist__areaTtl">中部地方</p>
-            <ul class="uptshoplist__shoplist">
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
+            <ul class="uptshoplist__shoplist" id="chubuList">
+
             </ul>
         </div>
 
         <div id="kinki" class="uptshoplist__blc">
             <p class="uptshoplist__areaTtl">近畿地方</p>
-            <ul class="uptshoplist__shoplist">
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
+            <ul class="uptshoplist__shoplist" id="kinkiList">
+
             </ul>
         </div>
         
         <div id="chugoku" class="uptshoplist__blc">
             <p class="uptshoplist__areaTtl">中国・四国地方</p>
-            <ul class="uptshoplist__shoplist">
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
+            <ul class="uptshoplist__shoplist" id="tyugokuList">
+
             </ul>
         </div>
         <div id="kyushu" class="uptshoplist__blc">
             <p class="uptshoplist__areaTtl">九州地方・沖縄県</p>
-            <ul class="uptshoplist__shoplist">
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
-                <li>店舗名</li>
+            <ul class="uptshoplist__shoplist" id="kyushuList">
+
             </ul>
         </div>
     </div>
     
 
 </div>
-
 
 
 

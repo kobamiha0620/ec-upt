@@ -4943,6 +4943,9 @@ a {
   width: var(--width);
   margin: 0 auto;
 }
+.uptshoplist__areasp {
+  display: none;
+}
 .uptshoplist__area {
   font-size: 1rem;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
@@ -4965,6 +4968,36 @@ a {
 .uptshoplist__area li.areaActive a {
   border-bottom: solid 1px #32667A;
 }
+.uptshoplist__area li:hover a::after {
+  transition: all 0.3s;
+  transform: scale(0.2, 1); /*X方向に0.2スケール拡大*/
+  transform: scale(1, 1); /*X方向にスケール拡大*/
+}
+.uptshoplist__area li.is-active a::after {
+  transition: all 0.3s;
+  transform: scale(0.2, 1); /*X方向に0.2スケール拡大*/
+  transform: scale(1, 1); /*X方向にスケール拡大*/
+}
+.uptshoplist__area li a {
+  position: relative;
+  padding: 2px 0;
+  display: inline-block;
+}
+.uptshoplist__area li a::after {
+  content: "";
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  /*線の形状*/
+  width: 100%;
+  height: 1px;
+  background: #32667A;
+  /*アニメーションの指定*/
+  transition: all 0.3s;
+  transform: scale(0, 1); /*X方向にスケール拡大*/
+  transform-origin: left bottom; /*左上基点*/
+}
 .uptshoplist__area.hide {
   opacity: 0;
   transition: all 0.5s;
@@ -4973,8 +5006,10 @@ a {
   color: #32667A;
   font-size: 0.875rem;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
-  padding: 20px;
+  padding: 10px 0;
   border-bottom: solid 1px #e3e3e1;
+  display: flex;
+  align-items: center;
 }
 .uptshoplist__shoplist--pre {
   display: inline-block;
@@ -4982,21 +5017,26 @@ a {
   padding: 6px 10px;
   border: solid 1px #32667A;
 }
+.uptshoplist__shoplist--details {
+  display: none;
+}
 .uptshoplist__blc {
   padding-top: 100px;
 }
 .uptshoplist p.uptshoplist__shoplist--pre {
-  margin: 0;
   line-height: 1;
+  margin: 0 8px 0 0;
 }
 .uptshoplist p.uptshoplist__shoplist--name {
-  margin-top: 6px;
   line-height: 1.5;
+  margin: 0;
 }
 .uptshoplist p.uptshoplist__areaTtl {
   background: #32667A;
   color: #FFF;
   padding-left: 12px;
+  white-space: nowrap;
+  margin: 0 0 20px;
   font-size: 1.125rem;
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
@@ -5027,7 +5067,61 @@ a {
     width: 100%;
   }
   .uptshoplist__area {
-    position: relative;
+    display: none;
+  }
+  .uptshoplist__areasp {
+    display: flex;
+    background: #FFF;
+    overflow-x: scroll;
+    border-top: solid 1px #32667A;
+    border-bottom: solid 1px #32667A;
+    width: 100%;
+  }
+  .uptshoplist__areasp li {
+    text-align: center;
+    border-right: dashed 1px #32667A;
+    min-width: 40%;
+  }
+  .uptshoplist__areasp li a {
+    display: inline-block;
+    padding: 16px 0;
+    text-decoration: none;
+    color: #32667A;
+    font-size: 1rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    white-space: nowrap;
+  }
+  .uptshoplist__areasp.active {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+  .uptshoplist__blc {
+    padding-top: 100px;
+  }
+  .uptshoplist__shoplist--pre {
+    white-space: nowrap;
+  }
+  .uptshoplist__shoplist--details {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 40px;
+  }
+  .uptshoplist__shoplist--details li {
+    margin: 0 5px 5px 0;
+  }
+  .uptshoplist__shoplist--details li a {
+    color: #32667A;
+    display: inline-block;
+    border-radius: 30px;
+    font-size: 0.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    background: #FFF;
+    text-decoration: none;
+    padding: 5px 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    border: solid 2px #32667A;
   }
 }
 

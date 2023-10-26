@@ -96,3 +96,28 @@ function compile(done) {
 exports.compile = series(compile, watchTask);
 exports.minify = series(minify);
 exports.bs = series(bsInit, bsReload, watchTask); 
+
+
+// const csvFilePath = './src/shoplist.csv';
+// const jsonFilePath = './assets/shoplist.json';
+
+// const csv = require('csvtojson');
+// const moment = require('moment');
+// const fs = require('fs');
+
+// csv()
+// .fromFile(csvFilePath)
+// .then((rows)=>{
+//   rows = rows.map((row) => {
+//     row.id = new Number(row.id)
+//     row.success = new Boolean(row.success)
+//     row.registrationDate = moment(row.registrationDate).format("YYYY-MM-DD")
+//     return row
+//   })
+//   fs.writeFile(jsonFilePath, JSON.stringify(rows, null, 2), (err) => {
+//     if (err) {
+//       throw err;
+//     }
+//     console.log("JSON generated.");
+//   })
+// })

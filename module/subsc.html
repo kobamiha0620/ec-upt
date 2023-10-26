@@ -5,13 +5,13 @@
     <div class="uptblc__buyblc">
         <div class="uptblc__buyblc--img">
             <picture class="pc">
-                <source srcset="/assets/images/uptorigin/img_subsc.webp" type="image/webp">
-                <img src="/assets/images/uptorigin/img_subsc.jpg" alt="定期セット" width="auto"
+                <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_subsc.webp" type="image/webp">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_subsc.jpg" alt="定期セット" width="auto"
                     height="auto">
             </picture>
             <picture class="sp">
-                <source srcset="/assets/images/uptorigin/img_subsc-sp.webp" type="image/webp">
-                <img src="/assets/images/uptorigin/img_subsc-sp.jpg" alt="定期セット sp" width="auto"
+                <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_subsc-sp.webp" type="image/webp">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_subsc-sp.jpg" alt="定期セット sp" width="auto"
                     height="auto">
             </picture>
         </div>
@@ -48,32 +48,32 @@
     <ul class="uptsubsc__adv--list">
         <li>
             <p class="uptsubsc__adv--num">
-                <img src="/assets/images/uptorigin/num1_subsc.svg" alt="1" width="41px" height="41px">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/num1_subsc.svg" alt="1" width="41px" height="41px">
             </p>
             <p class="uptsubsc__adv--subttl">送料無料</p>
             <p class="uptsubsc__adv--img">
-                <img src="/assets/images/uptorigin/adv1_subsc.svg" alt="1" width="109px" height="66px">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/adv1_subsc.svg" alt="1" width="109px" height="66px">
             </p>
             <p class="uptsubsc__adv--txt">毎回のお届けが送料無料になりますので、通常の注文よりお得にお買い物いただけます。</p>
         </li>
         <li>
             <p class="uptsubsc__adv--num">
-                <img src="/assets/images/uptorigin/num2_subsc.svg" alt="2" width="41px" height="41px">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/num2_subsc.svg" alt="2" width="41px" height="41px">
             </p>
             <p class="uptsubsc__adv--subttl">2回目以降26％お得</p>
             <p class="uptsubsc__adv--img">
-                <img src="/assets/images/uptorigin/adv2_subsc.svg" alt="1" width="109px" height="89px">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/adv2_subsc.svg" alt="1" width="109px" height="89px">
             </p>
             <p class="uptsubsc__adv--txt">
                 初回は約7日間のトライアルセット1,980円（税込）で、2回目以降は3商品の本品を5,980円(税込)で通常の注文より26%お得にご購入いただけます。</p>
         </li>
         <li>
             <p class="uptsubsc__adv--num">
-                <img src="/assets/images/uptorigin/num3_subsc.svg" alt="3" width="41px" height="41px">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/num3_subsc.svg" alt="3" width="41px" height="41px">
             </p>
             <p class="uptsubsc__adv--subttl">限定プレゼントがついてくる</p>
             <p class="uptsubsc__adv--img">
-                <img src="/assets/images/uptorigin/adv3_subsc.svg" alt="1" width="109px" height="70px">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/adv3_subsc.svg" alt="1" width="109px" height="70px">
             </p>
             <p class="uptsubsc__adv--txt">定期お届けコース限定のプレゼントを定期的にお届けします。</p>
         </li>
@@ -86,8 +86,8 @@
         <h2 class="uptsubsc__product--ttl">Uptスキンケアセット<br>定期お届けコース</h2>
         <div class="uptsubsc__product--img">
             <picture>
-                <source srcset="/assets/images/uptorigin/img_prodcut--trial.webp" type="image/webp">
-                <img src="/assets/images/uptorigin/img_prodcut--trial.jpg" alt="定期セット" width="auto"
+                <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_prodcut--trial.webp" type="image/webp">
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_prodcut--trial.jpg" alt="定期セット" width="auto"
                     height="auto">
             </picture>
         </div>
@@ -175,7 +175,8 @@
             <div class="uptsubsc__faq--a js-answer">
                 <div class="uptsubsc__faq--ainner">
                 <div class="uptsubsc__faq--subttl">A. </div>
-                <p class="uptsubsc__faq--atxt">配送サイクルの変更、休止を承ることができません。</p>
+                <p class="uptsubsc__faq--atxt">配送サイクルの変更は承っておりませんが、次回配送のスキップは「マイページ」 > 「定期便情報」 > 「定期便詳細」 > 「配送情報を変更する」から変更可能です。
+                </p>
                 </div>
             </div>
         </li>
@@ -205,8 +206,9 @@
             <div class="uptsubsc__faq--a js-answer">
                 <div class="uptsubsc__faq--ainner">
                 <div class="uptsubsc__faq--subttl">A. </div>
-                <p class="uptsubsc__faq--atxt">1ヶ月間の休止が可能です。ただし、連続での休止は対応しておりません。<br>
-                    次回発送予定日の4営業日前までにお問い合わせフォームよりご連絡くださいませ。</p>
+                <p class="uptsubsc__faq--atxt">次回配送のスキップは「マイページ」より承っております。<br>
+                    「マイページ」 > 「定期便情報」 > 「定期便詳細」 > 「配送情報を変更する」から変更可能です。
+                </p>
                 </div>
             </div>
         </li>

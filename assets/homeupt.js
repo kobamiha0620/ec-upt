@@ -21,7 +21,7 @@ $(function () {
         if (point > homefv - header -180) { // スクロール地点>ドキュメントの高さ-表示領域-footerの高さ
             $('.upthome__fv--logo').addClass('is-hidden'); //footerより下にスクロールしたらis-hiddenを追加
           
-        
+      
           } else {
             $('.upthome__fv--logo').removeClass('is-hidden'); //footerより上にスクロールしたらis-hiddenを削除
         }
