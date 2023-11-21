@@ -8,7 +8,46 @@
     font-size: 100%;
 
 }
+.prefecture{
+    padding-bottom: 200px;
+    li{
+        padding-top: 160px;
+        margin-bottom: -140px;
+        overflow: hidden;        
+        &:last-child{
+            margin-bottom: -220px;
+        }
+    }
+    &__ttl{
+        font-weight: bold;
+        margin: 0;
+        display: inline-block;
+        color: var.$bg_dark;
+        @include var.fz(17);
+        margin-right: 10px;
+    }
+    &__name{
+        margin: 0!important;
+        color: var.$bg_dark;
+        @include var.fz(16);
+        display: inline-block;
+    }
+    @media screen and (max-width: var.$spbp) {
+        li{
+            padding-top: 160px;
+            margin-bottom: -152px;
+        }
+        &__ttl{
 
+            @include var.fz(14);
+            margin-right: 6px;
+        }
+        &__name{
+
+            @include var.fz(13);
+        }
+    }
+}
 .uptshoplist {
     width: var(--width);
     margin: 0 auto;
@@ -105,11 +144,30 @@
             border: solid 1px var.$bg_dark;
         }
         &--details{
-            display: none;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 0 -140px;
+            li{
+                margin: 0 5px 5px 0;
+                a{
+                    color: var.$bg_dark;
+                    display: inline-block;
+                    border-radius: 30px;
+                    @include var.fz(14);
+                    background: #FFF;
+                    text-decoration: none;
+                    padding: 5px 10px;
+                    white-space: nowrap;
+                    font-weight: bold;
+                    border: solid 2px var.$bg_dark;
+                }
+            }
         }
     }
     &__blc{
         padding-top: 100px;
+        &--wrap{
+        }
     }
     p {
         &.uptshoplist__shoplist--pre{
@@ -128,6 +186,10 @@
             white-space: nowrap;
             margin: 0 0 20px;
             @include var.fz(18);
+            @media screen and (max-width: var.$spbp) {
+                @include var.fz(15);
+
+            }
         }
         &.uptshoplist__ttl {
             text-align: center;
@@ -148,6 +210,15 @@
             text-align: center;
             margin: 20px auto 0;
             color: var.$bg_dark;
+            @media screen and (max-width: var.$spbp) {
+                @include var.fz(13);
+                padding: 0 5vw;
+                br{
+                    display: none;
+                   
+                }
+            }
+
 
         }
     }
@@ -168,12 +239,13 @@
                 border-right: dashed 1px var.$bg_dark;
                 min-width: 40%;
                 a{
-                    
+                    width: 100%;
                     display: inline-block;
                     padding: 16px 0;
                     text-decoration: none;
                     color: var.$bg_dark;
-                    @include var.fz(16);
+                    @include var.fz(14);
+                    line-height: 1;
                     white-space: nowrap;
                 }
             }
@@ -184,7 +256,11 @@
             }
         }
         &__blc{
-            padding-top: 100px;
+            padding-top: 90px;
+            &--wrap{
+                padding: 0 5%;
+                margin: 0;
+            }
         }
         &__shoplist{
 
@@ -194,7 +270,7 @@
             &--details{
                 display: flex;
                 flex-wrap: wrap;
-                margin: 0 0 40px;
+                margin: 0 0 -140px;
                 li{
                     margin: 0 5px 5px 0;
                     a{
@@ -204,6 +280,7 @@
                         @include var.fz(14);
                         background: #FFF;
                         text-decoration: none;
+                        line-height: 1;
                         padding: 5px 10px;
                         white-space: nowrap;
                         font-weight: bold;

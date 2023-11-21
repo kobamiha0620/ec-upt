@@ -9,7 +9,7 @@ var pageinit = {
   path: '',
   ogimage : '' ,
   path : '' ,
-  ecforce : 'false',
+  ecforce : 'true',
   category : ['about'] ,
   pagename : '',
   css: [],
@@ -18,8 +18,8 @@ var pageinit = {
 };
 %>
 <%
-// var imgpath = '{{ theme_file_root_path }}';
-var imgpath = '';
+var imgpath = '{{ theme_file_root_path }}';
+// var imgpath = '';
 
 %>
 <!-- Footer -->
@@ -70,6 +70,9 @@ var imgpath = '';
     <ul class="uptfooter__links">
         <li>
             <a href="/shop/products/upt_skincareset-subscribe/">定期お届けコース</a>
+        </li>
+        <li>
+            <a href="/shop/pages/shoplist/">ショップリスト</a>
         </li>
         <li>
             <a href="/shop/pages/magazine">メディア掲載情報</a>

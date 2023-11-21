@@ -1,16 +1,24 @@
 <%
-var imgpath = '{{ theme_file_root_path }}';
-// var imgpath = '';
+// var imgpath = '{{ theme_file_root_path }}';
+var imgpath = '';
 
 %>
 
 <div id="Lpbnr">
         <a href="https://uptofficial.jp/lp?u=official_lp_3trial" target="_blank" class="modal__link" id="js-modallink">
             <div class="pc">
-                <img src="<%= imgpath %>/assets/images/uptorigin/bnr_pc-230914.png" alt="定期セット" width="840" height="121">
+                <picture>
+                    <source srcset="<%= imgpath %>/assets/images/uptorigin/Upt_subscBnr-pc0428.webp" type="image/webp">
+                    <img src="<%= imgpath %>/assets/images/uptorigin/Upt_subscBnr-pc0428.png" alt="安達祐実" width="1680"
+                        height="242">
+                </picture>
             </div>
             <div class="sp">
-                <img src="<%= imgpath %>/assets/images/uptorigin/bnr_sp-230914.png" alt="定期セット sp" width="684" height="184">
+                <picture>
+                    <source srcset="<%= imgpath %>/assets/images/uptorigin/Upt_subscBnr-sp0428.webp" type="image/webp">
+                    <img src="<%= imgpath %>/assets/images/uptorigin/Upt_subscBnr-sp0428.png" alt="安達祐実" width="1360"
+                        height="368">
+                </picture>
             </div>
         </a>
         <div class="modal__link--close" id="js-modallink-close">

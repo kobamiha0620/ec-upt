@@ -1,1316 +1,1535 @@
 [
   {
-    "id": 1,
-    "shopname": "アインズ＆トルペ 地下街店",
-    "area": "北海道・東北地方",
-    "prefecture": "北海道"
+      "shopname": "アインズ＆トルペ 地下街店",
+      "areaID": "area-1",
+      "area": "北海道・東北地方",
+      "prefectureID": "ken-1",
+      "prefecture": "北海道"
   },
   {
-    "id": 2,
-    "shopname": "アットコスメストア TSUTAYA 函館蔦屋書店",
-    "area": "北海道・東北地方",
-    "prefecture": "北海道"
+      "shopname": "アットコスメストア TSUTAYA 函館蔦屋書店",
+      "areaID": "area-1",
+      "area": "北海道・東北地方",
+      "prefectureID": "ken-1",
+      "prefecture": "北海道"
   },
   {
-    "id": 3,
-    "shopname": "アットコスメストア TSUTAYA 札幌美しが丘店",
-    "area": "北海道・東北地方",
-    "prefecture": "北海道"
+      "shopname": "アットコスメストア TSUTAYA 札幌美しが丘店",
+      "areaID": "area-1",
+      "area": "北海道・東北地方",
+      "prefectureID": "ken-1",
+      "prefecture": "北海道"
   },
   {
-    "id": 4,
-    "shopname": "ハンズ札幌店",
-    "area": "北海道・東北地方",
-    "prefecture": "北海道"
+      "shopname": "ハンズ札幌店",
+      "areaID": "area-1",
+      "area": "北海道・東北地方",
+      "prefectureID": "ken-1",
+      "prefecture": "北海道"
   },
   {
-    "id": 5,
-    "shopname": "ロフト青森店",
-    "area": "北海道・東北地方",
-    "prefecture": "青森"
+      "shopname": "ロフト青森店",
+      "areaID": "area-1",
+      "area": "北海道・東北地方",
+      "prefectureID": "ken-2",
+      "prefecture": "青森県"
   },
   {
-    "id": 6,
-    "shopname": "ロフト弘前店",
-    "area": "北海道・東北地方",
-    "prefecture": "青森"
+      "shopname": "ロフト弘前店",
+      "areaID": "area-1",
+      "area": "北海道・東北地方",
+      "prefectureID": "ken-2",
+      "prefecture": "青森県"
   },
   {
-    "id": 7,
-    "shopname": "盛岡ロフト",
-    "area": "北海道・東北地方",
-    "prefecture": "岩手"
+      "shopname": "盛岡ロフト",
+      "areaID": "area-1",
+      "area": "北海道・東北地方",
+      "prefectureID": "ken-3",
+      "prefecture": "岩手県"
   },
   {
-    "id": 8,
-    "shopname": "秋田ロフト",
-    "area": "北海道・東北地方",
-    "prefecture": "秋田"
+      "shopname": "秋田ロフト",
+      "areaID": "area-1",
+      "area": "北海道・東北地方",
+      "prefectureID": "ken-5",
+      "prefecture": "秋田県"
   },
   {
-    "id": 9,
-    "shopname": "アリー秋田店",
-    "area": "北海道・東北地方",
-    "prefecture": "秋田"
+      "shopname": "アリー秋田店",
+      "areaID": "area-1",
+      "area": "北海道・東北地方",
+      "prefectureID": "ken-5",
+      "prefecture": "秋田県"
   },
   {
-    "id": 10,
-    "shopname": "仙台ロフト",
-    "area": "北海道・東北地方",
-    "prefecture": "宮城"
+      "shopname": "仙台ロフト",
+      "areaID": "area-1",
+      "area": "北海道・東北地方",
+      "prefectureID": "ken-4",
+      "prefecture": "宮城県"
   },
   {
-    "id": 11,
-    "shopname": "仙台長町ロフト",
-    "area": "北海道・東北地方",
-    "prefecture": "宮城"
+      "shopname": "仙台長町ロフト",
+      "areaID": "area-1",
+      "area": "北海道・東北地方",
+      "prefectureID": "ken-4",
+      "prefecture": "宮城県"
   },
   {
-    "id": 12,
-    "shopname": "ローズマリー宇都宮インターパーク店",
-    "area": "関東地方",
-    "prefecture": "栃木"
+      "shopname": "ローズマリー宇都宮インターパーク店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-9",
+      "prefecture": "栃木県"
   },
   {
-    "id": 13,
-    "shopname": "宇都宮インターパークロフト",
-    "area": "関東地方",
-    "prefecture": "栃木"
+      "shopname": "宇都宮インターパークロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-9",
+      "prefecture": "栃木県"
   },
   {
-    "id": 14,
-    "shopname": "宇都宮ロフト",
-    "area": "関東地方",
-    "prefecture": "栃木"
+      "shopname": "宇都宮ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-9",
+      "prefecture": "栃木県"
   },
   {
-    "id": 15,
-    "shopname": "前橋ロフト",
-    "area": "関東地方",
-    "prefecture": "群馬"
+      "shopname": "前橋ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-10",
+      "prefecture": "群馬県"
   },
   {
-    "id": 16,
-    "shopname": "伊勢崎ロフト",
-    "area": "関東地方",
-    "prefecture": "群馬"
+      "shopname": "伊勢崎ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-10",
+      "prefecture": "群馬県"
   },
   {
-    "id": 17,
-    "shopname": "R.O.U水戸内原店 ビューティケア売場",
-    "area": "関東地方",
-    "prefecture": "茨城"
+      "shopname": "R.O.U水戸内原店 ビューティケア売場",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-8",
+      "prefecture": "茨城県"
   },
   {
-    "id": 18,
-    "shopname": "水戸ロフト",
-    "area": "関東地方",
-    "prefecture": "茨城"
+      "shopname": "水戸ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-8",
+      "prefecture": "茨城県"
   },
   {
-    "id": 19,
-    "shopname": "R.O.Uイオンレイクタウン店",
-    "area": "関東地方",
-    "prefecture": "埼玉"
+      "shopname": "R.O.Uイオンレイクタウン店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-11",
+      "prefecture": "埼玉県"
   },
   {
-    "id": 20,
-    "shopname": "シャンドエルブ 熊谷店",
-    "area": "関東地方",
-    "prefecture": "埼玉"
+      "shopname": "シャンドエルブ 熊谷店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-11",
+      "prefecture": "埼玉県"
   },
   {
-    "id": 21,
-    "shopname": "大宮ロフト",
-    "area": "関東地方",
-    "prefecture": "埼玉"
+      "shopname": "大宮ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-11",
+      "prefecture": "埼玉県"
   },
   {
-    "id": 22,
-    "shopname": "ロフト大宮宮原店",
-    "area": "関東地方",
-    "prefecture": "埼玉"
+      "shopname": "ロフト大宮宮原店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-11",
+      "prefecture": "埼玉県"
   },
   {
-    "id": 23,
-    "shopname": "川越ロフト",
-    "area": "関東地方",
-    "prefecture": "埼玉"
+      "shopname": "川越ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-11",
+      "prefecture": "埼玉県"
   },
   {
-    "id": 24,
-    "shopname": "浦和ロフト",
-    "area": "関東地方",
-    "prefecture": "埼玉"
+      "shopname": "浦和ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-11",
+      "prefecture": "埼玉県"
   },
   {
-    "id": 25,
-    "shopname": "鷲宮ロフト",
-    "area": "関東地方",
-    "prefecture": "埼玉"
+      "shopname": "鷲宮ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-11",
+      "prefecture": "埼玉県"
   },
   {
-    "id": 26,
-    "shopname": "所沢ロフト",
-    "area": "関東地方",
-    "prefecture": "埼玉"
+      "shopname": "所沢ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-11",
+      "prefecture": "埼玉県"
   },
   {
-    "id": 27,
-    "shopname": "川口ロフト",
-    "area": "関東地方",
-    "prefecture": "埼玉"
+      "shopname": "川口ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-11",
+      "prefecture": "埼玉県"
   },
   {
-    "id": 28,
-    "shopname": "深谷ロフト",
-    "area": "関東地方",
-    "prefecture": "埼玉"
+      "shopname": "深谷ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-11",
+      "prefecture": "埼玉県"
   },
   {
-    "id": 29,
-    "shopname": "アインズ＆トルペ ペリエ海浜幕張店",
-    "area": "関東地方",
-    "prefecture": "千葉"
+      "shopname": "アインズ＆トルペ ペリエ海浜幕張店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-12",
+      "prefecture": "千葉県"
   },
   {
-    "id": 30,
-    "shopname": "ロフト幕張店",
-    "area": "関東地方",
-    "prefecture": "千葉"
+      "shopname": "ロフト幕張店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-12",
+      "prefecture": "千葉県"
   },
   {
-    "id": 31,
-    "shopname": "インキューブ イオンモール千葉ニュータウン店",
-    "area": "関東地方",
-    "prefecture": "千葉"
+      "shopname": "インキューブ イオンモール千葉ニュータウン店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-12",
+      "prefecture": "千葉県"
   },
   {
-    "id": 32,
-    "shopname": "雑貨館インキューブ ユニモちはら台店",
-    "area": "関東地方",
-    "prefecture": "千葉"
+      "shopname": "雑貨館インキューブ ユニモちはら台店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-12",
+      "prefecture": "千葉県"
   },
   {
-    "id": 33,
-    "shopname": "流山ロフト",
-    "area": "関東地方",
-    "prefecture": "千葉"
+      "shopname": "流山ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-12",
+      "prefecture": "千葉県"
   },
   {
-    "id": 34,
-    "shopname": "アリー成田店",
-    "area": "関東地方",
-    "prefecture": "千葉"
+      "shopname": "アリー成田店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-12",
+      "prefecture": "千葉県"
   },
   {
-    "id": 35,
-    "shopname": "千葉ロフト",
-    "area": "関東地方",
-    "prefecture": "千葉"
+      "shopname": "千葉ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-12",
+      "prefecture": "千葉県"
   },
   {
-    "id": 36,
-    "shopname": "新三郷ロフト",
-    "area": "関東地方",
-    "prefecture": "千葉"
+      "shopname": "新三郷ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-12",
+      "prefecture": "千葉県"
   },
   {
-    "id": 37,
-    "shopname": "市原ロフト",
-    "area": "関東地方",
-    "prefecture": "千葉"
+      "shopname": "市原ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-12",
+      "prefecture": "千葉県"
   },
   {
-    "id": 38,
-    "shopname": "柏沼南ロフト",
-    "area": "関東地方",
-    "prefecture": "千葉"
+      "shopname": "柏沼南ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-12",
+      "prefecture": "千葉県"
   },
   {
-    "id": 39,
-    "shopname": "船橋ロフト",
-    "area": "関東地方",
-    "prefecture": "千葉"
+      "shopname": "船橋ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-12",
+      "prefecture": "千葉県"
   },
   {
-    "id": 40,
-    "shopname": "市川ロフト",
-    "area": "関東地方",
-    "prefecture": "千葉"
+      "shopname": "市川ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-12",
+      "prefecture": "千葉県"
   },
   {
-    "id": 41,
-    "shopname": "アインズ＆トルペ ペリエ海浜幕張店",
-    "area": "関東地方",
-    "prefecture": "千葉"
+      "shopname": "アインズ＆トルペ ペリエ海浜幕張店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-12",
+      "prefecture": "千葉県"
   },
   {
-    "id": 42,
-    "shopname": "アインズ＆トルペ 新宿東口店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "アインズ＆トルペ 新宿東口店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 43,
-    "shopname": "アットコスメストア ルミネエスト新宿",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "アットコスメストア ルミネエスト新宿",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 44,
-    "shopname": "ハンズ新宿店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "ハンズ新宿店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 45,
-    "shopname": "ハンズ渋谷スクランブルスクエア店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "ハンズ渋谷スクランブルスクエア店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 46,
-    "shopname": "渋谷ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "渋谷ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 47,
-    "shopname": "シャンドエルブ 恵比寿店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "シャンドエルブ 恵比寿店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 48,
-    "shopname": "池袋ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "池袋ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 49,
-    "shopname": "アインズ＆トルペ 池袋西武店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "アインズ＆トルペ 池袋西武店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 50,
-    "shopname": "アインズ＆トルペ 東京駅店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "アインズ＆トルペ 東京駅店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 51,
-    "shopname": "アインズ＆トルペ 光が丘IMA店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "アインズ＆トルペ 光が丘IMA店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 52,
-    "shopname": "二子玉川ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "二子玉川ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 53,
-    "shopname": "経堂ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "経堂ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 54,
-    "shopname": "アインズ＆トルペ 日比谷シャンテ店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "アインズ＆トルペ 日比谷シャンテ店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 55,
-    "shopname": "アーバンコンフォート有楽町店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "アーバンコンフォート有楽町店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 56,
-    "shopname": "銀座ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "銀座ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 57,
-    "shopname": "MS･Style Echika表参道店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "MS･Style Echika表参道店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 58,
-    "shopname": "吉祥寺ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "吉祥寺ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 59,
-    "shopname": "ショップイン国分寺ミーツ店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "ショップイン国分寺ミーツ店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 60,
-    "shopname": "国分寺ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "国分寺ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 61,
-    "shopname": "シャンドエルブ田端店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "シャンドエルブ田端店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 62,
-    "shopname": "京王アートマン京王八王子店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "京王アートマン京王八王子店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 63,
-    "shopname": "京王アートマン高幡店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "京王アートマン高幡店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 64,
-    "shopname": "京王アートマン聖蹟桜ヶ丘店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "京王アートマン聖蹟桜ヶ丘店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 65,
-    "shopname": "京王アートマン多摩センター店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "京王アートマン多摩センター店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 66,
-    "shopname": "京王アートマン府中店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "京王アートマン府中店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 67,
-    "shopname": "町田ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "町田ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 68,
-    "shopname": "高田馬場ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "高田馬場ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 69,
-    "shopname": "北千住ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "北千住ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 70,
-    "shopname": "上野ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "上野ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 71,
-    "shopname": "亀有ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "亀有ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 72,
-    "shopname": "ソラマチロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "ソラマチロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 73,
-    "shopname": "八王子ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "八王子ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 74,
-    "shopname": "武蔵境ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "武蔵境ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 75,
-    "shopname": "錦糸町ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "錦糸町ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 76,
-    "shopname": "ルミネ立川ロフト",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "ルミネ立川ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 77,
-    "shopname": "コスメロフトイクスピアリ店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "コスメロフトイクスピアリ店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 78,
-    "shopname": "コスメロフトnonowa国立店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "コスメロフトnonowa国立店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 79,
-    "shopname": "コスメロフトグランスタ東京店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "コスメロフトグランスタ東京店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 80,
-    "shopname": "コスメロフト武蔵小金井店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "コスメロフト武蔵小金井店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 81,
-    "shopname": "ロフト大森店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "ロフト大森店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 82,
-    "shopname": "ロフト木場店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "ロフト木場店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 83,
-    "shopname": "ロフト葛西店",
-    "area": "関東地方",
-    "prefecture": "東京"
+      "shopname": "ロフト葛西店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-13",
+      "prefecture": "東京都"
   },
   {
-    "id": 84,
-    "shopname": "横浜ロフト",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "横浜ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 85,
-    "shopname": "横浜港北ロフト",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "横浜港北ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 86,
-    "shopname": "新横浜ロフト",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "新横浜ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 87,
-    "shopname": "ハンズららぽーと横浜店",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "ハンズららぽーと横浜店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 88,
-    "shopname": "Beauty5Senses HAIFUKIYA 溝の口店",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "Beauty5Senses HAIFUKIYA 溝の口店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 89,
-    "shopname": "武蔵小杉ロフト",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "武蔵小杉ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 90,
-    "shopname": "京王アートマン新百合ヶ丘店",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "京王アートマン新百合ヶ丘店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 91,
-    "shopname": "川崎ロフト",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "川崎ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 92,
-    "shopname": "京急百貨店 ボーデガール 上大岡店",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "京急百貨店 ボーデガール 上大岡店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 93,
-    "shopname": "東戸塚ロフト",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "東戸塚ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 94,
-    "shopname": "橋本ロフト",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "橋本ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 95,
-    "shopname": "小田原ロフト",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "小田原ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 96,
-    "shopname": "海老名ロフト",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "海老名ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 97,
-    "shopname": "辻堂ロフト",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "辻堂ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 98,
-    "shopname": "横須賀ロフト",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "横須賀ロフト",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 99,
-    "shopname": "アインズ＆トルペ ボーノ 相模大野店",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "アインズ＆トルペ ボーノ 相模大野店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 100,
-    "shopname": "コスメロフト本厚木ミロード店",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "コスメロフト本厚木ミロード店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 101,
-    "shopname": "ロフト大和鶴間店",
-    "area": "関東地方",
-    "prefecture": "神奈川"
+      "shopname": "ロフト大和鶴間店",
+      "areaID": "area-2",
+      "area": "関東地方",
+      "prefectureID": "ken-14",
+      "prefecture": "神奈川県"
   },
   {
-    "id": 102,
-    "shopname": "新潟ロフト",
-    "area": "中部地方",
-    "prefecture": "新潟"
+      "shopname": "新潟ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-15",
+      "prefecture": "新潟県"
   },
   {
-    "id": 103,
-    "shopname": "富山ロフト",
-    "area": "中部地方",
-    "prefecture": "富山"
+      "shopname": "富山ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-16",
+      "prefecture": "富山県"
   },
   {
-    "id": 104,
-    "shopname": "マルート富山ロフト",
-    "area": "中部地方",
-    "prefecture": "富山"
+      "shopname": "マルート富山ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-16",
+      "prefecture": "富山県"
   },
   {
-    "id": 105,
-    "shopname": "新金沢ロフト",
-    "area": "中部地方",
-    "prefecture": "石川"
+      "shopname": "新金沢ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-17",
+      "prefecture": "石川県"
   },
   {
-    "id": 106,
-    "shopname": "新福井ロフト",
-    "area": "中部地方",
-    "prefecture": "福井"
+      "shopname": "新福井ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-18",
+      "prefecture": "福井県"
   },
   {
-    "id": 107,
-    "shopname": "アリー松本店",
-    "area": "中部地方",
-    "prefecture": "長野"
+      "shopname": "アリー松本店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-20",
+      "prefecture": "長野県"
   },
   {
-    "id": 108,
-    "shopname": "上田ロフト",
-    "area": "中部地方",
-    "prefecture": "長野"
+      "shopname": "上田ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-20",
+      "prefecture": "長野県"
   },
   {
-    "id": 109,
-    "shopname": "南松本ロフト",
-    "area": "中部地方",
-    "prefecture": "長野"
+      "shopname": "南松本ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-20",
+      "prefecture": "長野県"
   },
   {
-    "id": 110,
-    "shopname": "甲府昭和ロフト",
-    "area": "中部地方",
-    "prefecture": "山梨"
+      "shopname": "甲府昭和ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-19",
+      "prefecture": "山梨県"
   },
   {
-    "id": 111,
-    "shopname": "R.O.Uマークイズ静岡店",
-    "area": "中部地方",
-    "prefecture": "静岡"
+      "shopname": "R.O.Uマークイズ静岡店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-22",
+      "prefecture": "静岡県"
   },
   {
-    "id": 112,
-    "shopname": "静岡パルコロフト",
-    "area": "中部地方",
-    "prefecture": "静岡"
+      "shopname": "静岡パルコロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-22",
+      "prefecture": "静岡県"
   },
   {
-    "id": 113,
-    "shopname": "ハンズ浜松店",
-    "area": "中部地方",
-    "prefecture": "静岡"
+      "shopname": "ハンズ浜松店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-22",
+      "prefecture": "静岡県"
   },
   {
-    "id": 114,
-    "shopname": "オンセブンデイズ富塚店",
-    "area": "中部地方",
-    "prefecture": "静岡"
+      "shopname": "オンセブンデイズ富塚店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-22",
+      "prefecture": "静岡県"
   },
   {
-    "id": 115,
-    "shopname": "沼津ロフト",
-    "area": "中部地方",
-    "prefecture": "静岡"
+      "shopname": "沼津ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-22",
+      "prefecture": "静岡県"
   },
   {
-    "id": 116,
-    "shopname": "R.O.U常滑店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "R.O.U常滑店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 117,
-    "shopname": "ロフト名古屋",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "ロフト名古屋",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 118,
-    "shopname": "アットコスメストア 名古屋タカシマヤゲートタワーモール店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "アットコスメストア 名古屋タカシマヤゲートタワーモール店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 119,
-    "shopname": "栄ロフト",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "栄ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 120,
-    "shopname": "ハンズ名古屋店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "ハンズ名古屋店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 121,
-    "shopname": "名古屋みなとロフト",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "名古屋みなとロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 122,
-    "shopname": "オンセブンデイズ安城今池店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "オンセブンデイズ安城今池店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 123,
-    "shopname": "オンセブンデイズ岩田店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "オンセブンデイズ岩田店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 124,
-    "shopname": "オンセブンデイズ曙店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "オンセブンデイズ曙店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 125,
-    "shopname": "オンセブンデイズ上志段味店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "オンセブンデイズ上志段味店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 126,
-    "shopname": "オンセブンデイズ西尾店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "オンセブンデイズ西尾店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 127,
-    "shopname": "オンセブンデイズ前山店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "オンセブンデイズ前山店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 128,
-    "shopname": "オンセブンデイズ滝の水店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "オンセブンデイズ滝の水店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 129,
-    "shopname": "オンセブンデイズ長久手店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "オンセブンデイズ長久手店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 130,
-    "shopname": "オンセブンデイズ如意申店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "オンセブンデイズ如意申店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 131,
-    "shopname": "オンセブンデイズ半田店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "オンセブンデイズ半田店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 132,
-    "shopname": "オンセブンデイズ豊川本店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "オンセブンデイズ豊川本店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 133,
-    "shopname": "オンセブンデイズ緑丘店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "オンセブンデイズ緑丘店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 134,
-    "shopname": "東郷ロフト",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "東郷ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 135,
-    "shopname": "岡崎ロフト",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "岡崎ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 136,
-    "shopname": "春日井ロフト",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "春日井ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 137,
-    "shopname": "名駅ロフト",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "名駅ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 138,
-    "shopname": "星ヶ丘ロフト",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "星ヶ丘ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 139,
-    "shopname": "メイクアップソリューション星ヶ丘店",
-    "area": "中部地方",
-    "prefecture": "愛知"
+      "shopname": "メイクアップソリューション星ヶ丘店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-23",
+      "prefecture": "愛知県"
   },
   {
-    "id": 140,
-    "shopname": "岐阜ロフト",
-    "area": "中部地方",
-    "prefecture": "岐阜"
+      "shopname": "岐阜ロフト",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-21",
+      "prefecture": "岐阜県"
   },
   {
-    "id": 141,
-    "shopname": "カラフルタウン岐阜",
-    "area": "中部地方",
-    "prefecture": "岐阜"
+      "shopname": "カラフルタウン岐阜",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-21",
+      "prefecture": "岐阜県"
   },
   {
-    "id": 142,
-    "shopname": "オンセブンデイズ東島店",
-    "area": "中部地方",
-    "prefecture": "岐阜"
+      "shopname": "オンセブンデイズ東島店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-21",
+      "prefecture": "岐阜県"
   },
   {
-    "id": 143,
-    "shopname": "R.O.U各務原店",
-    "area": "中部地方",
-    "prefecture": "岐阜"
+      "shopname": "R.O.U各務原店",
+      "areaID": "area-3",
+      "area": "中部地方",
+      "prefectureID": "ken-21",
+      "prefecture": "岐阜県"
   },
   {
-    "id": 144,
-    "shopname": "オンセブンデイズ四日市日永店",
-    "area": "近畿地方",
-    "prefecture": "三重"
+      "shopname": "オンセブンデイズ四日市日永店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-24",
+      "prefecture": "三重県"
   },
   {
-    "id": 145,
-    "shopname": "草津ロフト",
-    "area": "近畿地方",
-    "prefecture": "滋賀"
+      "shopname": "草津ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-25",
+      "prefecture": "滋賀県"
   },
   {
-    "id": 146,
-    "shopname": "京都ロフト",
-    "area": "近畿地方",
-    "prefecture": "京都"
+      "shopname": "京都ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-26",
+      "prefecture": "京都府"
   },
   {
-    "id": 147,
-    "shopname": "洛北ロフト",
-    "area": "近畿地方",
-    "prefecture": "京都"
+      "shopname": "洛北ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-26",
+      "prefecture": "京都府"
   },
   {
-    "id": 148,
-    "shopname": "ショップインなんばマルイ店",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "ショップインなんばマルイ店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 149,
-    "shopname": "なんばロフト",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "なんばロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 150,
-    "shopname": "ショップイン堺ららぽーと店",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "ショップイン堺ららぽーと店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 151,
-    "shopname": "堺ロフト",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "堺ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 152,
-    "shopname": "ショップイン天王寺ミオ店",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "ショップイン天王寺ミオ店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 153,
-    "shopname": "ハンズあべのキューズモール店",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "ハンズあべのキューズモール店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 154,
-    "shopname": "あべのロフト",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "あべのロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 155,
-    "shopname": "梅田ロフト",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "梅田ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 156,
-    "shopname": "阪神梅田コスメティックキューブ",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "阪神梅田コスメティックキューブ",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 157,
-    "shopname": "R.O.U大阪ドームシティ店",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "R.O.U大阪ドームシティ店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 158,
-    "shopname": "R.O.U四條畷店",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "R.O.U四條畷店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 159,
-    "shopname": "カラーフィールド千里中央店",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "カラーフィールド千里中央店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 160,
-    "shopname": "アットコスメストア ルクア大阪店",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "アットコスメストア ルクア大阪店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 161,
-    "shopname": "ルクア大阪ロフト",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "ルクア大阪ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 162,
-    "shopname": "ショップイン大阪ディアモール店",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "ショップイン大阪ディアモール店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 163,
-    "shopname": "千里バンパクロフト",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "千里バンパクロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 164,
-    "shopname": "新くずはロフト",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "新くずはロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 165,
-    "shopname": "大阪和泉ロフト",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "大阪和泉ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 166,
-    "shopname": "天王寺MIOロフト",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "天王寺MIOロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 167,
-    "shopname": "高槻ロフト",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "高槻ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 168,
-    "shopname": "八尾ロフト",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "八尾ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 169,
-    "shopname": "ショップイン京橋京阪モール店",
-    "area": "近畿地方",
-    "prefecture": "大阪"
+      "shopname": "ショップイン京橋京阪モール店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-27",
+      "prefecture": "大阪府"
   },
   {
-    "id": 170,
-    "shopname": "アインズ＆トルペ エキソアレ西神中央店",
-    "area": "近畿地方",
-    "prefecture": "兵庫"
+      "shopname": "アインズ＆トルペ エキソアレ西神中央店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-28",
+      "prefecture": "兵庫県"
   },
   {
-    "id": 171,
-    "shopname": "アレックスコンフォートクレフィ三宮店",
-    "area": "近畿地方",
-    "prefecture": "兵庫"
+      "shopname": "アレックスコンフォートクレフィ三宮店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-28",
+      "prefecture": "兵庫県"
   },
   {
-    "id": 172,
-    "shopname": "甲子園ロフト",
-    "area": "近畿地方",
-    "prefecture": "兵庫"
+      "shopname": "甲子園ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-28",
+      "prefecture": "兵庫県"
   },
   {
-    "id": 173,
-    "shopname": "つかしんロフト",
-    "area": "近畿地方",
-    "prefecture": "兵庫"
+      "shopname": "つかしんロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-28",
+      "prefecture": "兵庫県"
   },
   {
-    "id": 174,
-    "shopname": "西宮ロフト",
-    "area": "近畿地方",
-    "prefecture": "兵庫"
+      "shopname": "西宮ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-28",
+      "prefecture": "兵庫県"
   },
   {
-    "id": 175,
-    "shopname": "姫路ロフト",
-    "area": "近畿地方",
-    "prefecture": "兵庫"
+      "shopname": "姫路ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-28",
+      "prefecture": "兵庫県"
   },
   {
-    "id": 176,
-    "shopname": "アットコスメストア 神戸マルイ店",
-    "area": "近畿地方",
-    "prefecture": "兵庫"
+      "shopname": "アットコスメストア 神戸マルイ店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-28",
+      "prefecture": "兵庫県"
   },
   {
-    "id": 177,
-    "shopname": "新神戸ロフト",
-    "area": "近畿地方",
-    "prefecture": "兵庫"
+      "shopname": "新神戸ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-28",
+      "prefecture": "兵庫県"
   },
   {
-    "id": 178,
-    "shopname": "加古川ロフト",
-    "area": "近畿地方",
-    "prefecture": "兵庫"
+      "shopname": "加古川ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-28",
+      "prefecture": "兵庫県"
   },
   {
-    "id": 179,
-    "shopname": "チャーリーウッディタウン店",
-    "area": "近畿地方",
-    "prefecture": "兵庫"
+      "shopname": "チャーリーウッディタウン店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-28",
+      "prefecture": "兵庫県"
   },
   {
-    "id": 180,
-    "shopname": "チャーリーサザンモール六甲店",
-    "area": "近畿地方",
-    "prefecture": "兵庫"
+      "shopname": "チャーリーサザンモール六甲店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-28",
+      "prefecture": "兵庫県"
   },
   {
-    "id": 181,
-    "shopname": "ショップイン甲子園ららぽーと店",
-    "area": "近畿地方",
-    "prefecture": "兵庫"
+      "shopname": "ショップイン甲子園ららぽーと店",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-28",
+      "prefecture": "兵庫県"
   },
   {
-    "id": 182,
-    "shopname": "生駒ロフト",
-    "area": "近畿地方",
-    "prefecture": "奈良"
+      "shopname": "生駒ロフト",
+      "areaID": "area-4",
+      "area": "近畿地方",
+      "prefectureID": "ken-29",
+      "prefecture": "奈良県"
   },
   {
-    "id": 183,
-    "shopname": "倉敷ロフト",
-    "area": "中国・四国地方",
-    "prefecture": "岡山"
+      "shopname": "倉敷ロフト",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-33",
+      "prefecture": "岡山県"
   },
   {
-    "id": 184,
-    "shopname": "岡山ロフト",
-    "area": "中国・四国地方",
-    "prefecture": "岡山"
+      "shopname": "岡山ロフト",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-33",
+      "prefecture": "岡山県"
   },
   {
-    "id": 185,
-    "shopname": "ショップイン岡山一番街店",
-    "area": "中国・四国地方",
-    "prefecture": "岡山"
+      "shopname": "ショップイン岡山一番街店",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-33",
+      "prefecture": "岡山県"
   },
   {
-    "id": 186,
-    "shopname": "廿日市ロフト",
-    "area": "中国・四国地方",
-    "prefecture": "広島"
+      "shopname": "廿日市ロフト",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-34",
+      "prefecture": "広島県"
   },
   {
-    "id": 187,
-    "shopname": "福山ポートプラザロフト",
-    "area": "中国・四国地方",
-    "prefecture": "広島"
+      "shopname": "福山ポートプラザロフト",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-34",
+      "prefecture": "広島県"
   },
   {
-    "id": 188,
-    "shopname": "R.O.U広島府中店",
-    "area": "中国・四国地方",
-    "prefecture": "広島"
+      "shopname": "R.O.U広島府中店",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-34",
+      "prefecture": "広島県"
   },
   {
-    "id": 189,
-    "shopname": "広島ローズマリー",
-    "area": "中国・四国地方",
-    "prefecture": "広島"
+      "shopname": "広島ローズマリー",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-34",
+      "prefecture": "広島県"
   },
   {
-    "id": 190,
-    "shopname": "ゆめタウン徳島ロフト",
-    "area": "中国・四国地方",
-    "prefecture": "徳島"
+      "shopname": "ゆめタウン徳島ロフト",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-36",
+      "prefecture": "徳島県"
   },
   {
-    "id": 191,
-    "shopname": "徳島ロフト",
-    "area": "中国・四国地方",
-    "prefecture": "徳島"
+      "shopname": "徳島ロフト",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-36",
+      "prefecture": "徳島県"
   },
   {
-    "id": 192,
-    "shopname": "チャーリー沖浜店",
-    "area": "中国・四国地方",
-    "prefecture": "徳島"
+      "shopname": "チャーリー沖浜店",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-36",
+      "prefecture": "徳島県"
   },
   {
-    "id": 193,
-    "shopname": "チャーリーレインボーロード店",
-    "area": "中国・四国地方",
-    "prefecture": "香川"
+      "shopname": "チャーリーレインボーロード店",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-37",
+      "prefecture": "香川県"
   },
   {
-    "id": 194,
-    "shopname": "チャーリー丸亀店",
-    "area": "中国・四国地方",
-    "prefecture": "香川"
+      "shopname": "チャーリー丸亀店",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-37",
+      "prefecture": "香川県"
   },
   {
-    "id": 195,
-    "shopname": "イズミゆめタウン高松店 ア・フルール",
-    "area": "中国・四国地方",
-    "prefecture": "香川"
+      "shopname": "イズミゆめタウン高松店 ア・フルール",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-37",
+      "prefecture": "香川県"
   },
   {
-    "id": 196,
-    "shopname": "ハンズ松山店",
-    "area": "中国・四国地方",
-    "prefecture": "愛媛"
+      "shopname": "ハンズ松山店",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-38",
+      "prefecture": "愛媛県"
   },
   {
-    "id": 197,
-    "shopname": "松山ロフト",
-    "area": "中国・四国地方",
-    "prefecture": "愛媛"
+      "shopname": "松山ロフト",
+      "areaID": "area-5",
+      "area": "中国・四国地方",
+      "prefectureID": "ken-38",
+      "prefecture": "愛媛県"
   },
   {
-    "id": 198,
-    "shopname": "アインズ＆トルペ ららぽーと福岡店",
-    "area": "九州地方・沖縄",
-    "prefecture": "福岡"
+      "shopname": "アインズ＆トルペ ららぽーと福岡店",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-40",
+      "prefecture": "福岡県"
   },
   {
-    "id": 199,
-    "shopname": "天神ロフト",
-    "area": "九州地方・沖縄",
-    "prefecture": "福岡"
+      "shopname": "天神ロフト",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-40",
+      "prefecture": "福岡県"
   },
   {
-    "id": 200,
-    "shopname": "ハンズ博多店",
-    "area": "九州地方・沖縄",
-    "prefecture": "福岡"
+      "shopname": "ハンズ博多店",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-40",
+      "prefecture": "福岡県"
   },
   {
-    "id": 201,
-    "shopname": "ららぽーと福岡ロフト",
-    "area": "九州地方・沖縄",
-    "prefecture": "福岡"
+      "shopname": "ららぽーと福岡ロフト",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-40",
+      "prefecture": "福岡県"
   },
   {
-    "id": 202,
-    "shopname": "アインズ＆トルペ 福岡天神西通り店",
-    "area": "九州地方・沖縄",
-    "prefecture": "福岡"
+      "shopname": "アインズ＆トルペ 福岡天神西通り店",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-40",
+      "prefecture": "福岡県"
   },
   {
-    "id": 203,
-    "shopname": "小倉ロフト",
-    "area": "九州地方・沖縄",
-    "prefecture": "福岡"
+      "shopname": "小倉ロフト",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-40",
+      "prefecture": "福岡県"
   },
   {
-    "id": 204,
-    "shopname": "インキューブ サンリブシティ小倉店",
-    "area": "九州地方・沖縄",
-    "prefecture": "福岡"
+      "shopname": "インキューブ サンリブシティ小倉店",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-40",
+      "prefecture": "福岡県"
   },
   {
-    "id": 205,
-    "shopname": "インキューブ 木の葉モール橋本店",
-    "area": "九州地方・沖縄",
-    "prefecture": "福岡"
+      "shopname": "インキューブ 木の葉モール橋本店",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-40",
+      "prefecture": "福岡県"
   },
   {
-    "id": 206,
-    "shopname": "イズミゆめタウン久留米店 ア・フルール",
-    "area": "九州地方・沖縄",
-    "prefecture": "福岡"
+      "shopname": "イズミゆめタウン久留米店 ア・フルール",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-40",
+      "prefecture": "福岡県"
   },
   {
-    "id": 207,
-    "shopname": "久留米ロフト",
-    "area": "九州地方・沖縄",
-    "prefecture": "福岡"
+      "shopname": "久留米ロフト",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-40",
+      "prefecture": "福岡県"
   },
   {
-    "id": 208,
-    "shopname": "佐賀ロフト",
-    "area": "九州地方・沖縄",
-    "prefecture": "佐賀"
+      "shopname": "佐賀ロフト",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-41",
+      "prefecture": "佐賀県"
   },
   {
-    "id": 209,
-    "shopname": "ハンズ長崎店",
-    "area": "九州地方・沖縄",
-    "prefecture": "長崎"
+      "shopname": "ハンズ長崎店",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-42",
+      "prefecture": "長崎県"
   },
   {
-    "id": 210,
-    "shopname": "長崎ロフト",
-    "area": "九州地方・沖縄",
-    "prefecture": "長崎"
+      "shopname": "長崎ロフト",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-42",
+      "prefecture": "長崎県"
   },
   {
-    "id": 211,
-    "shopname": "アインズ＆トルペ アミュプラザくまもと店",
-    "area": "九州地方・沖縄",
-    "prefecture": "熊本"
+      "shopname": "アインズ＆トルペ アミュプラザくまもと店",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-43",
+      "prefecture": "熊本県"
   },
   {
-    "id": 212,
-    "shopname": "イズミゆめタウン光の森店 ア・フルール",
-    "area": "九州地方・沖縄",
-    "prefecture": "熊本"
+      "shopname": "イズミゆめタウン光の森店 ア・フルール",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-43",
+      "prefecture": "熊本県"
   },
   {
-    "id": 213,
-    "shopname": "ゆめタウン光の森ロフト",
-    "area": "九州地方・沖縄",
-    "prefecture": "熊本"
+      "shopname": "ゆめタウン光の森ロフト",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-43",
+      "prefecture": "熊本県"
   },
   {
-    "id": 214,
-    "shopname": "ゆめタウンはませんロフト",
-    "area": "九州地方・沖縄",
-    "prefecture": "熊本"
+      "shopname": "ゆめタウンはませんロフト",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-43",
+      "prefecture": "熊本県"
   },
   {
-    "id": 215,
-    "shopname": "大分ロフト",
-    "area": "九州地方・沖縄",
-    "prefecture": "大分"
+      "shopname": "大分ロフト",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-44",
+      "prefecture": "大分県"
   },
   {
-    "id": 216,
-    "shopname": "宮崎ロフト",
-    "area": "九州地方・沖縄",
-    "prefecture": "宮崎"
+      "shopname": "宮崎ロフト",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-45",
+      "prefecture": "宮崎県"
   },
   {
-    "id": 217,
-    "shopname": "鹿児島ロフト",
-    "area": "九州地方・沖縄",
-    "prefecture": "鹿児島"
+      "shopname": "鹿児島ロフト",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-46",
+      "prefecture": "鹿児島県"
   },
   {
-    "id": 218,
-    "shopname": "ライカムロフト",
-    "area": "九州地方・沖縄",
-    "prefecture": "沖縄"
+      "shopname": "ライカムロフト",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-47",
+      "prefecture": "沖縄県"
   },
   {
-    "id": 219,
-    "shopname": "豊崎ロフト",
-    "area": "九州地方・沖縄",
-    "prefecture": "沖縄"
+      "shopname": "豊崎ロフト",
+      "areaID": "area-6",
+      "area": "九州地方・沖縄",
+      "prefectureID": "ken-47",
+      "prefecture": "沖縄県"
   }
 ]

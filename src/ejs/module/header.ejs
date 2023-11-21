@@ -74,7 +74,7 @@ var imgpath = '';
         {% endif %}
         {% comment %} end of announcement bar {% endcomment %}
 
-        {% if section.settings.banner == true or section.settings.banner == w'true' %}
+        {% if section.settings.banner == true or section.settings.banner == 'true' %}
         {% if smartphone %}
         {% assign header_banner = section.settings.banner_sp %}
         {% else %}
@@ -295,8 +295,11 @@ var imgpath = '';
                             </ul>
                             <div class="uptgmenu__bnr--wrapper">
                             <a href="https://uptofficial.jp/lp?u=official_lp_3trial" class="uptgmenu__bnr" target="_blank">
-                                    <img src="<%= imgpath %>/assets/images/uptorigin/bnr_sp-230914.png" alt="定期セット sp" width="684px"
-                                        height="184px">
+                                <picture>
+                                    <source srcset="<%= imgpath %>/assets/images/uptorigin/Upt_subscBnr-sp0428.webp" type="image/webp">
+                                    <img src="<%= imgpath %>/assets/images/uptorigin/Upt_subscBnr-sp0428.png" alt="安達祐実" width="1360"
+                                        height="368">
+                                </picture>
                             </a>
                         </div>
                             <div class="uptgmenu__sns">
@@ -329,7 +332,7 @@ var imgpath = '';
                             <p class="uptgmenu__btm--logo"><a href="/">Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト。</a></p>
                             <ul class="uptgmenu__btm--links">
                                 <li>
-                                    <a href="/shop/products/upt_skincareset-subscribe/">定期お届けコース</a>
+                                    <a href="/shop/products/upt_skincareset-subscribe/">定期お届けコース ｜ </a><a href="/shop/pages/shoplist" target="_blank">ショップリスト</a>
                                 </li>
                                 <li>
                                     <a href="/shop/pages/magazine">メディア掲載情報</a> 
