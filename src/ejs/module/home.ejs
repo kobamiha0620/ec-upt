@@ -9,7 +9,7 @@ var pageinit = {
   path: '',
   ogimage : '' ,
   path : '' ,   
-  ecforce : 'false',
+  ecforce : 'true',
   category : ['main'] ,
   pagename : '',
   css: [],
@@ -18,8 +18,8 @@ var pageinit = {
 };
 %>
 <%
-// var imgpath = '{{ theme_file_root_path }}';
-var imgpath = '';
+var imgpath = '{{ theme_file_root_path }}';
+// var imgpath = '';
 
 %>
 
@@ -92,8 +92,8 @@ var imgpath = '';
         </div>
         <div class="upthome__renew--rightline"></div>
         <div class="upthome__renew--leftline"></div>
-        <div class="upthome__fv--feature"></div>
-        <p class="upthome__fv--feature-txt">Produced by YumiAdachi</p>
+        <!-- <div class="upthome__fv--feature"></div>
+        <p class="upthome__fv--feature-txt">Produced by YumiAdachi</p> -->
         <div class="sp">
             <h1 class="upthome__fv--logo"> Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト</h1>
         </div>
@@ -317,7 +317,6 @@ var imgpath = '';
     <% } %>
 
 </main>
-
 <!-- <div class="modal__bg js_modal_close" id="modal_bg" style="display: none;"></div> -->
 <!-- <div class="modal" id="js_modal">
 
@@ -326,9 +325,9 @@ var imgpath = '';
         <div class="modal__contents">
             <div class="modal__contents--inner">
                 <a href="/shop/products/upt_cleansingset" style="display: block;">
-                <img src="<%= imgpath %>/assets/images/uptorigin/popup_pc0424.png" id="modalcontents" width="1012" height="1460" alt="単品発売開始"
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/popup_pc0424.png" id="modalcontents" width="1012" height="1460" alt="単品発売開始"
                     class="pcImg">
-                <img src="<%= imgpath %>/assets/images/uptorigin/popup_sp0424.png" id="modalcontentsSp" width="1294" height="2052" alt="単品発売開始"
+                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/popup_sp0424.png" id="modalcontentsSp" width="1294" height="2052" alt="単品発売開始"
                     class="spImg">
                 </a>
 
@@ -339,7 +338,6 @@ var imgpath = '';
         </div>
     </div> 
 </div> -->
-
 
 <%- include('./lpbnr'); %>
 

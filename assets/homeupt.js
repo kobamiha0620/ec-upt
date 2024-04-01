@@ -106,16 +106,16 @@ $(function () {
       modal.fadeOut();
       bg.fadeOut();
     });
-    $('#modalcontents').on('click', function(){
-      modal.fadeOut();
-      bg.fadeOut();
-      window.location.href = '/shop/products/';
-    });
-    $('#modalcontentsSp').on('click', function(){
-      modal.fadeOut();
-      bg.fadeOut();
-      window.location.href = '/shop/products/';
-    });
+    // $('#modalcontents').on('click', function(){
+    //   modal.fadeOut();
+    //   bg.fadeOut();
+    //   window.location.href = '/shop/products/';
+    // });
+    // $('#modalcontentsSp').on('click', function(){
+    //   modal.fadeOut();
+    //   bg.fadeOut();
+    //   window.location.href = '/shop/products/';
+    // });
 
   }
   
@@ -139,7 +139,7 @@ $(function () {
   
   // runOncePerDay(); // run the code
 
-  // modal();
+  modal();
   Lpbnr();
     
 });
