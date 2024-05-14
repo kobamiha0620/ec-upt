@@ -2662,7 +2662,8 @@
 
     @media screen and (max-width: var.$spbp) {
         border-top: solid 1px var.$bg_dark;
-        &.tereco{
+
+        &.tereco {
             border-top: none;
 
         }
@@ -2671,121 +2672,298 @@
 }
 
 
-    // ------------------------
-    .smallcart {
-        .uptblc__buyblc--btn #btn-add {
-            padding: 18px 0;
-        }
+// ------------------------
+.smallcart {
+    .uptblc__buyblc--btn #btn-add {
+        padding: 18px 0;
+    }
 
-        .uptblc__buyblc--btn {
-            margin-top: 20px;
-        }
+    .uptblc__buyblc--btn {
+        margin-top: 20px;
+    }
 
-        .uptblc__buyblc--btn button .txt {
-            @include var.fz(18);
-        }
+    .uptblc__buyblc--btn button .txt {
+        @include var.fz(18);
+    }
+
+}
+
+.product {
+    &__subttl {
+        font-family: "Montserrat", "Noto Sans JP", sans-serif;
+        color: var.$bg_dark;
+        font-weight: 600;
+        @include var.fz(26);
+        line-height: 1.2;
+        margin: 0 auto 13px;
 
     }
 
-    .product {
-        &__subttl {
+    &__txt {
+        color: var.$bg_dark;
+
+        &--italic {
+            @include var.fz(17);
             font-family: "Montserrat", "Noto Sans JP", sans-serif;
             color: var.$bg_dark;
-            font-weight: 600;
-            @include var.fz(26);
-            line-height: 1.2;
-            margin: 0 auto 13px;
+            font-style: italic;
+        }
+    }
+}
 
+//アイコン配置
+.uptproducts__position {
+    position: relative;
+
+    &--icon {
+        @include var.bg;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: right center;
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 16px;
+        width: 64px;
+        height: 64px;
+
+        &.handcream {
+            background-image: url(var.$imgpath + 'icon_handcream.png');
         }
 
-        &__txt {
-            color: var.$bg_dark;
+        &.wash {
+            background-image: url(var.$imgpath + 'point_icon_cleansingset02.svg');
+            top: 0;
+        }
 
-            &--italic {
-                @include var.fz(17);
-                font-family: "Montserrat", "Noto Sans JP", sans-serif;
-                color: var.$bg_dark;
-                font-style: italic;
-            }
+        &.balm {
+            background-image: url(var.$imgpath +'point_icon_cleansingset01.svg');
         }
     }
 
-    //アイコン配置
-    .uptproducts__position{
-        position: relative;
+    @media screen and (max-width: var.$spbp) {
         &--icon {
-            @include var.bg;
-            background-repeat: no-repeat;
-            background-size: 100% auto;
-            background-position: right center;
-            margin: 0;
-            position: absolute;
-            right: 0;
-            top: 16px;
-            width: 64px;
-            height: 64px;
-            &.handcream{
-                background-image: url(var.$imgpath + 'icon_handcream.png');
+            width: 14vw;
+            height: 14vw;
+            top: 0;
+
+            &.handcream {
+                top: -1.6vw;
+
             }
-            &.wash{
-                background-image: url(var.$imgpath + 'point_icon_cleansingset02.svg');
-                top: 0;
+        }
+    }
+}
+
+.uptprodcut .uptblc__buyblc--txt00 {
+    line-height: 1.3;
+}
+
+
+.cleandingblc__setitem--list {
+
+    li {
+        &.handimage {
+            .cleandingblc__setitem--list-txt {
+                padding: 40px 10.5% 20px;
+
+                @media screen and (max-width: var.$spbp) {
+                    padding: 10vw 0 6vw;
+                }
             }
-            &.balm{
-                background-image: url(var.$imgpath +'point_icon_cleansingset01.svg');
+
+        }
+
+        &.wash {
+            .cleandingblc__setitem--list-txt {
+                padding: 40px 5% 20px;
+
+                @media screen and (max-width: var.$spbp) {
+                    padding: 10vw 0 6vw;
+                }
+            }
+
+        }
+
+        &.balm {
+            .cleandingblc__setitem--list-txt {
+                padding: 40px 5% 20px;
+
+                @media screen and (max-width: var.$spbp) {
+                    padding: 10vw 0 6vw;
+                }
+            }
+
+        }
+    }
+
+
+
+}
+
+
+// 追記2404--------------------------------------------------------
+#mask {
+    .uptblc__buyblc--txt01 {
+        @include var.fz(16);
+
+
+    }
+
+    .uptproducts__position {
+        &--icon {
+            &.mask {
+                background-image: url(var.$imgpath + 'icon_mask.png');
             }
         }
 
-        @media screen and (max-width: var.$spbp) {
+    }
+
+    @media screen and (min-width: var.$spbp) {
+        .uptproducts__position {
+            position: relative;
+
             &--icon {
-                width: 14vw;
-                height: 14vw;
-                top: 0;
-                &.handcream{
-                    top: -1.6vw;
+                @include var.bg;
+                background-repeat: no-repeat;
+                background-size: 100% auto;
+                background-position: right center;
+                margin: 0;
+                position: absolute;
+                right: 0;
+                top: 16px;
+                width: 64px;
+                height: 64px;
 
-                }
             }
         }
     }
-    .uptprodcut .uptblc__buyblc--txt00{
-        line-height: 1.3;
+
+}
+
+#mask03 {
+    @media screen and (max-width: var.$spbp) {
+        .cleansing__point--blc-txt {
+            padding-right: clamp(20px, 9.5%, 52px);
+            padding-left: clamp(20px, 9.5%, 52px);
+
+        }
+
     }
 
+    .cleansing__point--txt {
+        @include var.fz(15);
+        line-height: 17px;
+        margin: 0 0 1em;
 
-    .cleandingblc__setitem--list{
+        sup {
+            font-size: 0.8em;
+            vertical-align: bottom;
+        }
 
-        li{
-            &.handimage{
-                .cleandingblc__setitem--list-txt{
-                    padding: 40px 10.5% 20px;
-                    @media screen and (max-width: var.$spbp) {
-                        padding: 10vw 0 6vw;
-                    }
-                }
-                
+        span {
+            font-size: 0.7em !important;
+            font-size: 18px;
+            display: inline-block;
+            margin-right: 3px;
+            vertical-align: middle;
+        }
+    }
+
+    .mt40 {
+        margin-top: 40px;
+    }
+
+    @media screen and (min-width: var.$spbp) {
+
+
+        .cleansing__point--txt {
+            @include var.fz(13);
+            line-height: 17px;
+            margin: 0 0 1em;
+
+            sup {
+                font-size: 0.8em;
+                vertical-align: bottom;
             }
-            &.wash{
-                .cleandingblc__setitem--list-txt{
-                    padding: 40px 5% 20px;
-                    @media screen and (max-width: var.$spbp) {
-                        padding: 10vw 0 6vw;
-                    }
-                }
-                
-            }
-            &.balm{
-                .cleandingblc__setitem--list-txt{
-                    padding: 40px 5% 20px;
-                    @media screen and (max-width: var.$spbp) {
-                        padding: 10vw 0 6vw;
-                    }
-                }
-                
+
+            span {
+                font-size: 0.7em !important;
+                font-size: 18px;
+                display: inline-block;
+                margin-right: 3px;
+                vertical-align: middle;
             }
         }
 
-        
+        .mt40 {
+            margin-top: 40px;
+        }
+    }
+}
 
+.uptblc__buyblc--txt02 {
+    margin-bottom: 26px;
+
+    sup {
+        font-size: 0.6em;
+        vertical-align: top;
+    }
+}
+
+.uptblc__buyblc--subttl {
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    color: var.$bg_dark;
+    @include var.fz(17);
+    line-height: 23px;
+    font-weight: 500;
+    margin: 50px 0 13px;
+
+    sup {
+        font-size: 0.6em;
+        vertical-align: top;
+    }
+}
+
+.uptblc__buyblc--txt01,
+.cleandingblc__setitem--toptxt {
+    br {
+        display: none;
+
+        @media screen and (max-width: 1080px) {
+            display: block;
+            line-height: 1.25;
+            margin-bottom: 8px;
+        }
     }
 
+    &.handcream {
+        br {
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: var.$spbp) {
+
+
+    .cleandingblc__setitem--top {
+        &.mask {
+            padding-right: clamp(20px, 9.5%, 52px);
+            padding-left: clamp(20px, 9.5%, 52px);
+
+        }
+    }
+
+}
+
+.productblc__ti{
+    margin: 0;
+    padding: 0;
+    margin-top: 4px;
+    li{
+        font-size:0.9em;
+        padding-left: 1.3em;
+        text-indent: -1.3em;
+    }
+}

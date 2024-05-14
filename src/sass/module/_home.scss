@@ -843,10 +843,12 @@
     }
 
 }
-#Lpbnr{
+
+#Lpbnr {
     position: fixed;
     z-index: 10;
 }
+
 .modal {
     &__link {
         display: block;
@@ -1296,6 +1298,7 @@ h2.upthome__illust--ttl {
     // padding-top: 100%;
     margin-top: -71px;
     height: calc(100vh - 28px);
+
     .upthomeSWiper {
         z-index: 1;
         margin: 0 0 0;
@@ -1371,7 +1374,8 @@ h2.upthome__illust--ttl {
     .uptb.uptheader .uptheader__iconslc__inner {
         z-index: 3;
     }
-    .upthome__fv--logo{
+
+    .upthome__fv--logo {
         @include var.bg;
         background-image: url(var.$imgpath + 'logo_renew.svg');
         width: 315px;
@@ -1379,6 +1383,7 @@ h2.upthome__illust--ttl {
         bottom: 40px;
         z-index: 3;
     }
+
     @media screen and (max-width: var.$spbp) {
         margin-top: -15.6vw;
         // height: calc(100vh - 28px);
@@ -1387,28 +1392,30 @@ h2.upthome__illust--ttl {
         .upthomeSWiper {
             z-index: 1;
         }
-        .swiper-pagination{
+
+        .swiper-pagination {
             display: none;
         }
+
         .swiper-wrapper {
             .spImg {
                 object-fit: cover;
             }
         }
-    
+
         img {
             width: 100vw;
             height: calc(100vh - 28px);
             height: calc(100dvh - 28px);
 
             // height: calc(100vh - 28px);
-    
+
             // object-fit: cover;
             object-fit: cover;
             display: block;
             margin: 0 auto;
         }
-    
+
         &--rightline {
             height: calc(100vh - 28px);
             height: calc(100dvh - 28px);
@@ -1418,7 +1425,7 @@ h2.upthome__illust--ttl {
             transform: none;
 
         }
-    
+
         &--leftline {
             height: calc(100vh - 28px);
             height: calc(100dvh - 28px);
@@ -1427,11 +1434,12 @@ h2.upthome__illust--ttl {
             transform: none;
         }
 
-    
+
         .uptb.uptheader .uptheader__iconslc__inner {
             z-index: 3;
         }
-        .upthome__fv--logo{
+
+        .upthome__fv--logo {
             @include var.bg;
             background-image: url(var.$imgpath + 'logo_renew.svg');
             width: 64vw;
@@ -1439,12 +1447,13 @@ h2.upthome__illust--ttl {
             bottom: 4.5vw;
             z-index: 3;
         }
+
         .upthome__fv--feature {
             z-index: 3;
             top: 20vw;
             right: 8.8vw
         }
-    
+
         .upthome__fv--feature-txt {
             z-index: 4;
             top: 29vw;
@@ -1562,45 +1571,51 @@ h2.upthome__illust--ttl {
 }
 
 
-.upthome{
+.upthome {
 
-    &__sets{
+    &__sets {
         display: block;
         font-size: 0;
-        &--img{
+
+        &--img {
             border-bottom: solid 1px var.$bg_dark;
         }
-        &--img02{
+
+        &--img02 {
             padding: 13vw 0;
         }
 
     }
-    &__wash{
 
-        &--blc{
+    &__wash {
+
+        &--blc {
             display: flex;
             margin: -1px 0 0 0;
             padding: 0;
             border-bottom: solid 1px var.$bg_dark;
-            &-balm{
+
+            &-balm {
                 padding: 15px 0;
 
-                img{
+                img {
                     width: auto;
                     height: 44px;
                     margin: 0 auto;
                     display: block;
                 }
             }
-            &-img{
-                img{
+
+            &-img {
+                img {
                     width: 100%;
                     height: auto;
                     border: solid 1px var.$bg_dark;
                     border-radius: 167px;
                 }
             }
-            &-feature{
+
+            &-feature {
                 background-image: url(var.$imgpath + '0914/home_set-feature.svg');
                 background-size: 100% auto;
                 width: 100px;
@@ -1609,7 +1624,8 @@ h2.upthome__illust--ttl {
                 left: 12px;
                 top: 12px;
                 animation: rotation 10s infinite linear;
-                &txt{
+
+                &txt {
                     background-image: url(var.$imgpath + 'feature_wash.svg');
                     background-size: 100% auto;
                     width: 64px;
@@ -1622,81 +1638,97 @@ h2.upthome__illust--ttl {
                     background-repeat: no-repeat;
                 }
             }
-            li{
+
+            li {
                 list-style-type: none;
                 width: 50%;
-                a{
+
+                a {
                     display: block;
                     position: relative;
-                    &:hover{
+
+                    &:hover {
                         opacity: 0.7;
                     }
                 }
-                &:first-child{
+
+                &:first-child {
                     border-right: solid 1px var.$bg_dark;
                 }
 
             }
 
         }
-        &--spblc{
+
+        &--spblc {
             padding-bottom: 13vw;
             background: #FFF;
         }
-        &--img{
+
+        &--img {
             font-size: 0;
             margin: 0;
             display: flex;
             align-items: center;
-            &-imgblc{
+
+            &-imgblc {
                 border-right: solid 1px var.$bg_dark;
                 width: 60%;
                 min-width: 60%;
             }
-            &-txtblc{
+
+            &-txtblc {
                 width: 40%;
                 min-width: 40%;
             }
-            img{
+
+            img {
                 height: auto;
                 width: 100%;
             }
-            &:hover{
+
+            &:hover {
                 opacity: 0.7;
             }
         }
+
         @media screen and (max-width: var.$spbp) {
-            &--img{
+            &--img {
 
                 display: block;
-        
-                &-imgblc{
+
+                &-imgblc {
                     border-right: none;
-                    width:100%;
-                    min-width:100%;
+                    width: 100%;
+                    min-width: 100%;
                     border-bottom: solid 1px var.$bg_dark;
 
                 }
-                &-txtblc{
+
+                &-txtblc {
                     width: 100%;
                     min-width: 100%;
                     padding: 11.46vw 0;
                 }
-                img{
+
+                img {
                     height: auto;
                     width: 100%;
                 }
-                &:hover{
+
+                &:hover {
                     opacity: 1;
                 }
             }
         }
 
     }
+
     @media screen and (max-width: var.$spbp) {
-        .upthome__wash--blc{
+        .upthome__wash--blc {
             display: block;
-            li{
+
+            li {
                 width: 100%;
                 border-right: none;
                 border-bottom: solid 1px var.$bg_dark;
@@ -1704,22 +1736,25 @@ h2.upthome__illust--ttl {
             }
 
         }
-        .upthome__wash--blc-img{
-            img{
+
+        .upthome__wash--blc-img {
+            img {
                 border-radius: 50%;
             }
         }
-        .upthome__wash--blc-balm{
+
+        .upthome__wash--blc-balm {
             width: 72vw;
             padding: 4vw 0 8vw;
             margin: 0 auto;
-            img{
+
+            img {
                 width: 100%;
                 height: auto;
             }
         }
-    
-        .uptblc__ttl{
+
+        .uptblc__ttl {
             font-size: 22px;
         }
     }
@@ -1743,16 +1778,16 @@ h2.upthome__illust--ttl {
 
 
 
-.upthome__yumi--txt{
+.upthome__yumi--txt {
     font-size: 14px;
     line-height: 2;
 }
 
 
 //ハンドクリーム追記 23-09-14 ----------------------------------------------
-.upthome{
-    &__products{
-        &--feature{
+.upthome {
+    &__products {
+        &--feature {
             background-image: url(var.$imgpath + '0914/home_set-feature.svg');
             background-size: 100% auto;
             width: 100px;
@@ -1761,7 +1796,8 @@ h2.upthome__illust--ttl {
             left: 12px;
             top: 12px;
             animation: rotation 10s infinite linear;
-            &txt{
+
+            &txt {
                 background-image: url(var.$imgpath + 'feature_wash.svg');
                 background-size: 100% auto;
                 width: 64px;
@@ -1775,93 +1811,107 @@ h2.upthome__illust--ttl {
             }
         }
     }
-    &__products--blc{
-        &-box{
+
+    &__products--blc {
+        &-box {
             position: relative;
         }
+
         margin-top: -1px;
-        .upthome__products--name{
+
+        .upthome__products--name {
             margin: 0 auto 4px;
         }
-        &+.upthome__products--blc{
+
+        &+.upthome__products--blc {
             border-top: solid 1px var.$bg_dark;
         }
-        &.deverse{
-            flex-direction: row-reverse;     
-            li{
-                &:last-child{
+
+        &.deverse {
+            flex-direction: row-reverse;
+
+            li {
+                &:last-child {
                     border-right: solid 1px var.$bg_dark;
                 }
-                &:first-child{
+
+                &:first-child {
                     border-right: none;
                 }
-            }    
+            }
         }
     }
-    &__producer{
+
+    &__producer {
         background-image: url(var.$imgpath + 'bg_newproducer-pc.png');
+
         @media screen and (max-width: 1080px) {
             background-image: url(var.$imgpath + 'bg_newproducer-pcmiddle.jpg');
 
         }
 
     }
-    &__yumi--blc{
-        &.right{
+
+    &__yumi--blc {
+        &.right {
             border-left: none;
         }
     }
 
     @media screen and (max-width: var.$spbp) {
-        &__products{
+        &__products {}
 
-        }
-        &__products--blc{
-            &-box{
-            }
+        &__products--blc {
+            &-box {}
+
             margin-top: -1px;
 
-            &+.upthome__products--blc{
+            &+.upthome__products--blc {
                 border-top: solid 1px var.$bg_dark;
             }
 
-            &.deverse{
+            &.deverse {
                 flex-direction: row;
-                li{
-                    &:last-child{
+
+                li {
+                    &:last-child {
                         border-right: none;
                     }
 
                 }
             }
         }
-        &__producer{
+
+        &__producer {
             background-image: url(var.$imgpath + 'bg_newproducer-sp.jpg');
-    
+
         }
     }
 }
+
 @media screen and (min-width: var.$spbp) {
-    .third{
-        .upthome__fv--logo{
+    .third {
+        .upthome__fv--logo {
             bottom: 17vh;
             left: calc(50% - 23vw);
-            
+
         }
     }
 }
+
 @media screen and (min-width: 1200px) {
-    .third{
-        .upthome__fv--logo{
+    .third {
+
+        .upthome__fv--logo {
             bottom: 17vh;
             left: calc(50% - 360px);
-            
+
         }
     }
 }
 
 @media screen and (max-width: var.$spbp) {
-    .upthome__renew{
+    .upthome__renew {
         margin: 0 calc(50% - 50vw);
         width: auto;
         position: relative;
@@ -1882,62 +1932,244 @@ h2.upthome__illust--ttl {
             height: 100svh;
             // height: 100vh;
             background-color: #dfe4ea;
-            img{
+
+            img {
                 width: auto;
                 height: 100vh;
                 height: 100svh;
                 object-fit: cover;
             }
         }
-     .swiper-wrapper{
-        .spImg {
-            object-fit: contain;
+
+        .swiper-wrapper {
+            .spImg {
+                object-fit: contain;
+            }
         }
-     } 
 
-     .upthome__renew--rightline, .upthome__renew--leftline{
-        height: 100vh;
-        height: 100svh;
+        .upthome__renew--rightline,
+        .upthome__renew--leftline {
+            height: 100vh;
+            height: 100svh;
 
-     }
+        }
     }
 }
 
 
-.upthome__yumi{
+.upthome__yumi {
     flex-direction: row;
 }
+
 @media screen and (max-width: var.$spbp) {
-    .upthome__yumi{
+    .upthome__yumi {
         display: flex;
         width: 100%;
         flex-flow: column;
         flex-direction: column-reverse;
-        &--blc{
+
+        &--blc {
             width: 100%;
             min-width: 100%;
         }
     }
-    
+
 }
 
 
+//追記 -2405------------------------------------------------------------
+.movie {
+    background-color: #fffcd3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    .pcImg {
+        max-width: 1098px;
+        width: 100% !important;
+        height: auto !important;
+
+        img {
+            width: 100% !important;
+            height: auto !important;
+        }
+    }
+
+
+    @media screen and (max-width: var.$spbp) {
+        position: relative;
+        flex-flow: column;
+        justify-content: center;
+        min-height: 100vh;
+        height: 100dvh;
+        height: 100vh;
+        max-height: 100dvh;
+        max-height: 100vh;
+
+        &Img {
+            position: relative;
+
+            img {
+                width: 100% !important;
+                height: auto !important;
+            }
+
+            &__copy {
+                position: absolute;
+                width: 17%;
+                top: 7%;
+                right: 13%;
+            }
+        }
+
+        &Txt {
+            padding: 10vw 5vw 0;
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            &__inner {
+                display: block;
+            }
+
+            &__ttl {
+                width: 80%;
+                margin: 0 auto 6%;
+            }
+
+            &__txt01 {
+                width: 82%;
+                margin: 0 auto 6%;
+            }
+
+            &__txt02 {
+                width: 90%;
+                margin: 0 auto;
+            }
+
+            &__wrap {
+                width: 90%;
+                margin: 3% auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &--neko01 {
+                    width: 20%;
+                    margin: 0 5%;
+                }
+
+                &--neko02 {
+
+                    width: 25%;
+                    margin: 0 2% 0 3%;
+                }
+            }
+
+            img {
+                width: 100% !important;
+                height: auto !important;
+
+            }
+        }
+    }
+}
+
+.upthome__products--blc {
+
+
+    &.maskblc {
+        display: flex;
+        li {
+            width: 50%;
+            display: flex;
+            align-items: stretch;
+            flex-direction: unset;
+
+            a {
+                display: block;
+                margin-top: -1px;
+            }
+        }
+
+        img {
+            border-radius: 190px;
+            border: solid 1px var.$bg_dark;
+        }
+
+        .mask {
+            border-top: solid 1px var.$bg_dark;
+            border-bottom: solid 1px var.$bg_dark;
+
+            a {
+                display: block;
+                height: 100%;
+            }
+
+            img {
+                border: none;
+                border-radius: 0;
+                object-fit: cover;
+            }
+
+        }
+        @media screen and (max-width: var.$spbp) {
+            border-bottom: none;
+            img{
+                border-radius: 50%;
+            }
+            .mask {
+                display: none;
+            }
+
+        }
+    }
+
+
+
+    @media screen and (min-width: var.$spbp) {
+        .upthome__products--linkbtn {
+            max-width: 210px;
+            margin: 0 auto 30px;
+            @include var.fz(14);
+
+            span {
+                background-size: 16px 8px;
+                padding-right: 24px;
+            }
+        }
+    }
+}
+
+.upthome__producer {
+    background-image: url(var.$imgpath + 'bg_producer2405-pc.jpg');
+    @media screen and (max-width: 1080px) {
+
+    background-image: url(var.$imgpath + 'bg_producer2405-tb.jpg');
+
+}
+
+    @media screen and (max-width: var.$spbp) {
+        background-image: url(var.$imgpath + 'bg_producer2405b-sp.jpg');
+
+    }
+}
 
 // @include var.webpBg('.uptBg', './img/my-bg', 'png');
 @include var.webpBg('.upthome__fv', var.$imgpath +'fv_pc04');
 @include var.webpBg('.upthome__set--img-in', var.$imgpath +'home_setimg-pc');
-@include var.webpBg('.upthome__producer', var.$imgpath +'bg_newproducer-pc', 'png');
+@include var.webpBg('.upthome__producer', var.$imgpath +'bg_producer2405-pc');
 @include var.webpBg('.upthome__washset--img', var.$imgpath +'img--washset-tp');
 
 @media screen and (max-width: 1080px) {
-    @include var.webpBg('.upthome__producer', var.$imgpath +'bg_newproducer-pcmiddle');
+    @include var.webpBg('.upthome__producer', var.$imgpath +'bg_producer2405-tb');
 
 }
 
 @media screen and (max-width: var.$spbp) {
     @include var.webpBg('.upthome__fv', var.$imgpath +'fv_sp');
     @include var.webpBg('.upthome__set--img-in', var.$imgpath +'home_setimg-sp', 'png');
-    @include var.webpBg('.upthome__producer', var.$imgpath +'bg_newproducer-sp');
+    @include var.webpBg('.upthome__producer', var.$imgpath +'bg_producer2405b-sp');
 
 }

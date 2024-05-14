@@ -15,7 +15,6 @@ var pageinit = {
     pagename : '',
     css: [],
     js:[],
-    // jsfunc:['setPhotoChanger ();','startScroll ();','setVideo();'],
     
 };
 
@@ -36,6 +35,23 @@ var pageinit = {
 
 
 <main class="l-container js-main-container uptprodcut" role="main" id="product-show-view">
+
+
+    <!-- mask マスク -->
+    <% if (pageinit.ecforce === 'true') { %>
+        {% if product.id == 17 %}
+        <% } %>
+    
+        <% if ((pageinit.product === 'mask') || (pageinit.product === 'all')) { %>
+        
+        <%- include('./_mask', { meta: imgpath }); %>
+    
+        <% } %>
+    
+    <% if (pageinit.ecforce === 'true') { %>
+    {% endif %}
+    <% } %>
+    <!-- /マスク -->
 
 
     <!-- handcream ハンドクリーム -->
