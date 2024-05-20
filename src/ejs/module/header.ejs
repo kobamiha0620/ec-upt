@@ -9,7 +9,7 @@ var pageinit = {
   path: '',
   ogimage : '' ,
   path : '' ,
-  ecforce : 'false',
+  ecforce : 'true',
   category : ['about'] ,
   pagename : '',
   css: [],
@@ -18,9 +18,9 @@ var pageinit = {
 };
 %>
 <%
-// var imgpath = '{{ theme_file_root_path }}';
-var imgpath = '';
-
+var imgpath = '{{ theme_file_root_path }}';
+// var imgpath = '';
+// 
 %>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=HTMLPictureElement"></script>
@@ -296,11 +296,10 @@ var imgpath = '';
                             <div class="uptgmenu__bnr--wrapper">
                             <a href="https://uptofficial.jp/lp?u=official_lp_3trial" class="uptgmenu__bnr" target="_blank">
                                 <picture>
-                                    <source srcset="<%= imgpath %>/assets/images/uptorigin/Upt_subscBnr-sp24.webp" type="image/webp">
-                                    <img src="<%= imgpath %>/assets/images/uptorigin/Upt_subscBnr-sp24.png" alt="安達祐実" width="1360"
-                                        height="368">
-                                </picture>
-                            </a>
+                                <source srcset="<%= imgpath %>/assets/images/uptorigin/bnr_sp240517.webp" type="image/webp">
+                                <img src="<%= imgpath %>/assets/images/uptorigin/bnr_sp240517.png" alt="安達祐実" width="1360"
+                                    height="368">
+                            </picture>
                         </div>
                             <div class="uptgmenu__sns">
                                 <!-- <p class="uptgmenu__sns__ttl">FOLLOW US</p> -->

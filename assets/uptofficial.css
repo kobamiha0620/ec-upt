@@ -2313,87 +2313,23 @@ h2.upthome__illust--ttl {
     min-width: 100%;
   }
 }
-.movie {
-  background-color: #fffcd3;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.movie .pcImg {
-  max-width: 1098px;
-  width: 100% !important;
-  height: auto !important;
-}
-.movie .pcImg img {
-  width: 100% !important;
-  height: auto !important;
-}
-@media screen and (max-width: 768px) {
-  .movie {
-    position: relative;
-    flex-flow: column;
-    justify-content: center;
-    min-height: 100vh;
-    height: 100dvh;
-    height: 100vh;
-    max-height: 100dvh;
-    max-height: 100vh;
-  }
-  .movieImg {
-    position: relative;
-  }
-  .movieImg img {
-    width: 100% !important;
-    height: auto !important;
-  }
-  .movieImg__copy {
-    position: absolute;
-    width: 17%;
-    top: 7%;
-    right: 13%;
-  }
-  .movieTxt {
-    padding: 10vw 5vw 0;
+@media screen and (min-width: 768px) {
+  .movieTpPc {
+    background-color: #fffcd3;
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .movieTxt__inner {
-    display: block;
+  .movieTpPc .pcImg {
+    max-width: 1098px;
+    width: 100% !important;
+    height: auto !important;
   }
-  .movieTxt__ttl {
-    width: 80%;
-    margin: 0 auto 6%;
-  }
-  .movieTxt__txt01 {
-    width: 82%;
-    margin: 0 auto 6%;
-  }
-  .movieTxt__txt02 {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .movieTxt__wrap {
-    width: 90%;
-    margin: 3% auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .movieTxt__wrap--neko01 {
-    width: 20%;
-    margin: 0 5%;
-  }
-  .movieTxt__wrap--neko02 {
-    width: 25%;
-    margin: 0 2% 0 3%;
-  }
-  .movieTxt img {
+  .movieTpPc .pcImg img {
     width: 100% !important;
     height: auto !important;
   }
 }
-
 .upthome__products--blc.maskblc {
   display: flex;
 }
@@ -4910,9 +4846,23 @@ h2.upthome__illust--ttl {
     margin: 0;
     position: absolute;
     right: 0;
-    top: 16px;
+    top: 0;
     width: 64px;
     height: 64px;
+  }
+}
+
+#mask02 .uptproduct__exbtm--noimg {
+  justify-content: center;
+}
+#mask02 .uptproduct__exbtm--noimg img {
+  max-width: 320px;
+}
+@media screen and (max-width: 768px) {
+  #mask02 .uptproduct__exbtm--noimg img {
+    max-width: 90%;
+    display: block;
+    margin: 0 auto;
   }
 }
 
@@ -5019,6 +4969,11 @@ h2.upthome__illust--ttl {
   font-size: 0.9em;
   padding-left: 1.3em;
   text-indent: -1.3em;
+}
+
+.uptprodcut .uptblc__buyblc--txt00 {
+  font-size: 1.75rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
 }
 
 main#productIndex .c-product_item__actions {

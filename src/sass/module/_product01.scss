@@ -2831,7 +2831,7 @@
                 margin: 0;
                 position: absolute;
                 right: 0;
-                top: 16px;
+                top: 0;
                 width: 64px;
                 height: 64px;
 
@@ -2840,9 +2840,25 @@
     }
 
 }
+#mask02{
+    .uptproduct__exbtm--noimg{
+        justify-content: center;
+        img{
+            max-width: 320px;
+        }
+        @media screen and (max-width: var.$spbp) {
 
+            img{
+                max-width: 90%;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}
 #mask03 {
     @media screen and (max-width: var.$spbp) {
+        
         .cleansing__point--blc-txt {
             padding-right: clamp(20px, 9.5%, 52px);
             padding-left: clamp(20px, 9.5%, 52px);
@@ -2944,6 +2960,7 @@
     }
 }
 
+
 @media screen and (max-width: var.$spbp) {
 
 
@@ -2951,7 +2968,6 @@
         &.mask {
             padding-right: clamp(20px, 9.5%, 52px);
             padding-left: clamp(20px, 9.5%, 52px);
-
         }
     }
 
@@ -2966,4 +2982,10 @@
         padding-left: 1.3em;
         text-indent: -1.3em;
     }
+}
+
+//フォントサイズの統一
+.uptprodcut .uptblc__buyblc--txt00{
+    @include var.fz(28);
+
 }

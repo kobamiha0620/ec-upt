@@ -1978,103 +1978,26 @@ h2.upthome__illust--ttl {
 
 
 //追記 -2405------------------------------------------------------------
-.movie {
-    background-color: #fffcd3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .pcImg {
-        max-width: 1098px;
-        width: 100% !important;
-        height: auto !important;
-
-        img {
+@media screen and (min-width: var.$spbp) {
+    .movieTpPc {
+        background-color: #fffcd3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        .pcImg {
+            max-width: 1098px;
             width: 100% !important;
             height: auto !important;
-        }
-    }
-
-
-    @media screen and (max-width: var.$spbp) {
-        position: relative;
-        flex-flow: column;
-        justify-content: center;
-        min-height: 100vh;
-        height: 100dvh;
-        height: 100vh;
-        max-height: 100dvh;
-        max-height: 100vh;
-
-        &Img {
-            position: relative;
-
+    
             img {
                 width: 100% !important;
                 height: auto !important;
-            }
-
-            &__copy {
-                position: absolute;
-                width: 17%;
-                top: 7%;
-                right: 13%;
-            }
-        }
-
-        &Txt {
-            padding: 10vw 5vw 0;
-            display: flex;
-
-            justify-content: center;
-            align-items: center;
-
-            &__inner {
-                display: block;
-            }
-
-            &__ttl {
-                width: 80%;
-                margin: 0 auto 6%;
-            }
-
-            &__txt01 {
-                width: 82%;
-                margin: 0 auto 6%;
-            }
-
-            &__txt02 {
-                width: 90%;
-                margin: 0 auto;
-            }
-
-            &__wrap {
-                width: 90%;
-                margin: 3% auto;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-
-                &--neko01 {
-                    width: 20%;
-                    margin: 0 5%;
-                }
-
-                &--neko02 {
-
-                    width: 25%;
-                    margin: 0 2% 0 3%;
-                }
-            }
-
-            img {
-                width: 100% !important;
-                height: auto !important;
-
             }
         }
     }
 }
+
 
 .upthome__products--blc {
 

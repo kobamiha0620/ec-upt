@@ -1,8 +1,4 @@
-<%
-var imgpath = '{{ theme_file_root_path }}';
-// var imgpath = '';
 
-%>
 <section class="uptproduct__fv" id="mask">
      <!-- ここから -->
      <div class="uptblc__buyblc">
@@ -34,17 +30,17 @@ var imgpath = '{{ theme_file_root_path }}';
                                  <div class="pc">
                                      <picture>
                                          <source
-                                             srcset="<%= imgpath %>/assets/images/uptorigin/fvimg_mask02.webp"
+                                             srcset="<%= imgpath %>/assets/images/uptorigin/fvimg_mask02b.webp"
                                              type="image/webp">
-                                         <img src="<%= imgpath %>/assets/images/uptorigin/fvimg_mask02.jpg"
-                                         alt="CELMING SERUM MASK" width="2205" height="2524">
+                                         <img src="<%= imgpath %>/assets/images/uptorigin/fvimg_mask02b.jpg"
+                                         alt="CELMING SERUM MASK" width="2192" height="2508">
                                         </picture>
                                  </div>
                                  <div class="sp">
                                   <picture>
-                                    <source srcset="<%= imgpath %>/assets/images/uptorigin/fvimg_mask02-sp.webp"
+                                    <source srcset="<%= imgpath %>/assets/images/uptorigin/fvimg_mask02b-sp.webp"
                                         type="image/webp">
-                                    <img src="<%= imgpath %>/assets/images/uptorigin/fvimg_mask02-sp.jpg"
+                                    <img src="<%= imgpath %>/assets/images/uptorigin/fvimg_mask02b-sp.jpg"
                                         alt="CELMING SERUM MASK" width="1381" height="1604">
                                 </picture>
                                  </div>
@@ -115,11 +111,18 @@ var imgpath = '{{ theme_file_root_path }}';
          <div class="uptblc__buyblc__spborder"></div>
 
          <div class="uptblc__buyblc--s">
-             <div class="uptblc__buyblc--rblc">
+             <div class="uptblc__buyblc--rblc"> 
                  <div class="uptblc__buyblc--contents">
                      <div class="uptproducts__position">
-                         <h2 class="upt__name uptblc__buyblc--txt00">CALMING<br>SERUM MASK</h2>
-                         <div class="uptproducts__position--icon mask">ハンドクリームのアイコン</div>
+
+                        <div class="uptblc__buyblc--singleblc">
+                            <h1 class="headingttl">Upt CALMING SERUM MASK ウプト カーミングセラムマスク</h1>
+
+                         <h2 class="upt__name uptblc__buyblc--single-ttl">CALMING<br>SERUM MASK</h2>
+                         <img src="<%= imgpath %>/assets/images/uptorigin/icon_mask.png"
+                         alt="マスク" width="auto" height="auto">
+                        </div>
+
                          <h3 class="uptblc__buyblc--txt01">ウプト カーミングセラムマスク<br>〈シートマスク〉<br>
                           4枚入り<span style="font-style: italic">（1枚あたり美容液25mL）</span></h3>
 
@@ -201,22 +204,15 @@ var imgpath = '{{ theme_file_root_path }}';
                     <p class="cleandingblc__setitem--list-ttl">6つのフリー処方<span></span></p>
                     <div class="cleandingblc__setitem--list-txt">
                         <div class="uptproduct__exbtm--noimg">
-                            <div class="pc">
-                                <picture>
+
+
+                            <picture>
                                     <source srcset="<%= imgpath %>/assets/images/uptorigin/mask_free.webp"
                                         type="image/webp">
                                     <img src="<%= imgpath %>/assets/images/uptorigin/mask_free.png"
                                         alt="6つのフリー処方" width="643" height="464">
                                 </picture>   
-                            </div>
-                            <div class="sp">
-                                <picture>
-                                    <source srcset="<%= imgpath %>/assets/images/uptorigin/mask_free-sp.webp"
-                                        type="image/webp">
-                                    <img src="<%= imgpath %>/assets/images/uptorigin/mask_free-sp.png"
-                                        alt="6つのフリー処方" width="835" height="1347">
-                                </picture>   
-                            </div>
+
                         </div>
                     </div>
                 </li>

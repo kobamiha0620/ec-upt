@@ -9,7 +9,7 @@ var pageinit = {
   path: '',
   ogimage : '' ,
   path : '' ,   
-  ecforce : 'false',
+  ecforce : 'true',
   category : ['main'] ,
   pagename : '',
   css: [],
@@ -18,8 +18,8 @@ var pageinit = {
 };
 %>
 <%
-// var imgpath = '{{ theme_file_root_path }}';
-var imgpath = '';
+var imgpath = '{{ theme_file_root_path }}';
+// var imgpath = '';
 
 %>
 
@@ -46,8 +46,8 @@ var imgpath = '';
                     </picture>
                     <picture class="spImg">
                         <source srcset="<%= imgpath %>/assets/images/uptorigin/img_2405top01-sp.webp" type="image/webp">
-                        <img src="<%= imgpath %>/assets/images/uptorigin/img_2405top01-sp.jpg" alt="安達祐実" width="1624"
-                            height="1624">
+                        <img src="<%= imgpath %>/assets/images/uptorigin/img_2405top01-sp.jpg" alt="安達祐実" width="3252"
+                            height="3248">
                     </picture>
                     <div class="pc">
                         <h1 class="upthome__fv--logo"> Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト</h1>
@@ -67,8 +67,8 @@ var imgpath = '';
                     </picture>
                     <picture class="spImg">
                         <source srcset="<%= imgpath %>/assets/images/uptorigin/img_2405top02-sp.webp" type="image/webp">
-                        <img src="<%= imgpath %>/assets/images/uptorigin/img_2405top02-sp.jpg" alt="安達祐実" width="1624"
-                            height="1624">
+                        <img src="<%= imgpath %>/assets/images/uptorigin/img_2405top02-sp.jpg" alt="安達祐実" width="3252"
+                            height="3248">
                     </picture>
                     <div class="pc">
                         <h1 class="upthome__fv--logo"> Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト</h1>
@@ -79,84 +79,35 @@ var imgpath = '';
                     <div class="upthome__fv--feature"></div>
                     <p class="upthome__fv--feature-txt">新商品発売開始</p>
                 </div>
-                <!-- <div class="swiper-slide third">
-                    <picture class="pcImg">
-                        <source srcset="<%= imgpath %>/assets/images/uptorigin/movie.webp" type="image/webp">
-                        <img src="<%= imgpath %>/assets/images/uptorigin/movie.jpg" alt="安達祐実" width="1920"
-                            height="1080">
-                    </picture>
 
-                    <picture class="spImg">
-                        <source srcset="<%= imgpath %>/assets/images/uptorigin/img_fvswiper03mod-sp.webp" type="image/webp">
-                        <img src="<%= imgpath %>/assets/images/uptorigin/img_fvswiper03mod-sp.jpg" alt="安達祐実" width="1125"
-                            height="2436">
-                    </picture>
-                    <div class="pc">
-                        <h1 class="upthome__fv--logo"> Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト</h1>
-                    </div>
-                </div> -->
+                <div class="swiper-slide movieTpPc">
 
-                <a href="https://mikazuki-movie.com/" target="_blank" class="swiper-slide movie">
-                    <picture class="pcImg">
-                        <source srcset="<%= imgpath %>/assets/images/uptorigin/movie.webp" type="image/webp">
-                        <img src="<%= imgpath %>/assets/images/uptorigin/movie.jpg" alt="安達祐実" width="1920"
-                            height="1080">
-                    </picture>
+                    <a href="https://mikazuki-movie.com/" target="_blank" class="">
+                        <picture class="pcImg">
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/movie.webp" type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/movie.jpg" alt="安達祐実" width="1920"
+                                height="1080">
+                        </picture>
+                        <picture class="spImg">
+                            <source srcset="<%= imgpath %>/assets/images/uptorigin/top_movie2_sp.webp"
+                                type="image/webp">
+                            <img src="<%= imgpath %>/assets/images/uptorigin/top_movie2_sp.jpg" alt="安達祐実" width="3252"
+                                height="3248">
+                        </picture>
+                    </a>
+                </div>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
-                    <div class="sp">
-                        <div class="movieImg">
-                            <img src="<%= imgpath %>/assets/images/uptorigin/topmv_main_sp.jpeg" alt="安達祐実" width="1171"
-                                height="778">
-                            <p class="movieImg__copy">
-                                <img src="<%= imgpath %>/assets/images/uptorigin/copy01.png" alt="" width="805"
-                                    height="940">
-                            </p>
-                        </div>
-                        <div class="movieTxt">
-                            <div class="movieTxt__inner">
-                                <p class="movieTxt__ttl">
-                                    <img src="<%= imgpath %>/assets/images/uptorigin/titlelogo.png" alt="" width="1417"
-                                        height="224">
-                                </p>
-                                <p class="movieTxt__txt01">
-                                    <img src="<%= imgpath %>/assets/images/uptorigin/billing.png" alt="" width="1405"
-                                        height="650">
-                                </p>
-                                <div class="movieTxt__wrap">
-                                    <div class="movieTxt__wrap--neko01">
-                                        <img src="<%= imgpath %>/assets/images/uptorigin/neko01.png" alt="" width="500"
-                                            height="698">
-                                    </div>
-                                    <div class="movieTxt__wrap--neko02">
-                                        <img src="<%= imgpath %>/assets/images/uptorigin/neko02.png" alt="" width="640"
-                                            height="500">
-                                    </div>
-                                </div>
-
-                                <p class="movieTxt__txt02">
-                                    <img src="<%= imgpath %>/assets/images/uptorigin/copy02.png" alt="" width="1405"
-                                        height="58">
-                                </p>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-                </a>
             </div>
-            <!-- If we need pagination -->
-            <div class="swiper-pagination"></div>
-
-        </div>
-        <div class="upthome__renew--rightline"></div>
-        <div class="upthome__renew--leftline"></div>
+            <div class="upthome__renew--rightline"></div>
+            <div class="upthome__renew--leftline"></div>
 
 
-        <!-- <div class="sp">
+            <!-- <div class="sp">
             <h1 class="upthome__fv--logo"> Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト</h1>
         </div> -->
-        <!-- <h1 class="upthome__fv--logo"> Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト</h1> -->
+            <!-- <h1 class="upthome__fv--logo"> Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト</h1> -->
     </section>
     <section class="uptline"></section>
 
