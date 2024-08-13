@@ -9,7 +9,7 @@ var pageinit = {
   path: '',
   ogimage : '' ,
   path : '' ,
-  ecforce : 'true',
+  ecforce : 'false',
   category : ['about'] ,
   pagename : '',
   css: [],
@@ -18,10 +18,12 @@ var pageinit = {
 };
 %>
 <%
-var imgpath = '{{ theme_file_root_path }}';
-// var imgpath = '';
+// var imgpath = '{{ theme_file_root_path }}';
+var imgpath = '';
 // 
 %>
+
+  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=HTMLPictureElement"></script>
 
@@ -29,13 +31,17 @@ var imgpath = '{{ theme_file_root_path }}';
     data-section-id='header' data-section-type='header-section'>
     <div class="uptheader bg__header">
 
-        <% if (pageinit.ecforce !== 'true') { %>
-        <div class="c-announce_bar uptheader__anounce">
-            <div class="c-announce_bar__text">NEWS 22.09.14 Upt start!!</div>
-            <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
-        </div>
+        <% if (pageinit.ecforce === 'true') { %>
+        <div class="c-announce_bar">
+        <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>
+        <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
+      </div>
         <% } else { %>
-
+        <div class="c-announce_bar">
+            <div class="c-announce_bar__text">テキストteskisuto</div>
+            <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
+            </div>
+         <% } %>
 
         {% if production != true and customize_preview_mode %}
         <div class="customize_notice">
@@ -504,7 +510,13 @@ var imgpath = '{{ theme_file_root_path }}';
 
     </div>
 </header>
+<style>
 
+    .c-announce_bar {
+      background-color: {{section.settings.color_bg}};
+      color: {{section.settings.color_text}};
+    }
+  </style>
 
 <div class="uptplane">
     <div class="uptplane__inner">

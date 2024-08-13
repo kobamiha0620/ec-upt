@@ -177,3 +177,10 @@ const swiper = new Swiper('.upthomeSWiper', {
   }
 
 });
+
+const toppage = () =>{
+    document.body.classList.add('topPage');
+ }
+ toppage();
+
+  

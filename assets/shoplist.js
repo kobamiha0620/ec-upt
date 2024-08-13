@@ -243,7 +243,7 @@ func = async () => {
 //データを取る
 getData = () => {
     return new Promise(resolve => {
-        const url = 'https://d2w53g1q050m78.cloudfront.net/uptofficialjp/uploads/themes/theme_after1year_20231115143131/ec_force/assets/shoplist.json';
+        const url = 'https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/shoplist2405.json';
         fetch(url)
             .then(response => response.json())
             .then(data => formatJSON(data));

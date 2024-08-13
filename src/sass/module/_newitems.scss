@@ -1,0 +1,318 @@
+@use "./module/variable"as var;
+
+.newitems {
+  width: 100%;
+  margin-top: -60px;
+  .copyright{
+    text-align: center;
+    color: #9f857e;
+    @include var.fz(13);
+
+  }
+  hr{
+    max-width: 336px;
+    display: block;
+    margin: 0 auto 100px;
+  }
+  &__inner {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__new {
+    @include var.bg;
+    background-image: url(var.$imgpath + 'newitems_ttl.png');
+    width: 138px;
+    height: 59px;
+    margin: 30px auto;
+  }
+
+  &__txt {
+    @include var.bg;
+    background-image: url(var.$imgpath + 'img_newitemstxt.jpg');
+    margin: 0 auto 109px !important;
+    width: 582px;
+    height: 122px;
+  }
+
+  &__subttl {
+    @include var.bg;
+    background-image: url(var.$imgpath + 'newitems_date.jpg');
+    margin: 0 auto 41px;
+    width: 324px;
+    height: 38px;
+  }
+  &__subtxt01{
+    margin: 0 auto 34px;
+      @include var.bg;
+
+    &.basetxt01{
+      background-image: url(var.$imgpath + 'newitems__basetxt01.jpg');
+      width: 256px;
+      height: 60px;
+    }
+    &.color01{
+      background-image: url(var.$imgpath + 'newitems__colortxt01.jpg');
+      width: 317px;
+      height: 60px;
+    }
+    &.eyetxt01{
+      background-image: url(var.$imgpath + 'newitems__eyetxt01.jpg');
+      width: 280px;
+      height: 60px;
+    }
+    &.riptxt01{
+      background-image: url(var.$imgpath + 'newitems__riptxt01.jpg');
+      width: 260px;
+      height: 60px;
+    }
+  }
+  &__subtxt02{
+    margin: 0 auto 34px;
+    @include var.bg;
+
+    &.basetxt02{
+      background-image: url(var.$imgpath + 'newitems__basetxt02.jpg');
+      width: 406px;
+      height: 42px;
+    }
+    &.color02{
+      background-image: url(var.$imgpath + 'newitems__colortxt02.jpg');
+      width: 266px;
+      height: 67px;
+  
+    }
+    &.eyetxt02{
+      background-image: url(var.$imgpath + 'newitems__eyetxt02.jpg');
+      width: 414px;
+      height: 42px;
+    }
+    &.riptxt02{
+      background-image: url(var.$imgpath + 'newitems__riptxt02.jpg');
+      width: 287px;
+      height: 42px;
+  
+    }
+  }
+  &__subtxt03{
+    margin: 0 auto 36px;
+    @include var.bg;
+
+    &.basetxt03{
+      background-image: url(var.$imgpath + 'newitems__basetxt03.jpg');
+      width: 170px;
+      height: 27px;
+    }
+    &.color03{
+      background-image: url(var.$imgpath + 'newitems__colortxt03.jpg');
+      width: 176px;
+      height: 32px;
+    }
+    &.eyetxt03{
+      background-image: url(var.$imgpath + 'newitems__eyetxt03.jpg');
+      width: 268px;
+      height: 132px;
+    }
+    &.riptxt03{
+      background-image: url(var.$imgpath + 'newitems__riptxt03.jpg');
+      width: 242px;
+      height: 111px;
+    }
+  }
+
+  &__insta{
+    display: block;
+    padding: 0 5%;
+    margin:  0 auto 100px;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__image {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 20px;
+
+    img {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      animation: ChangeImage 10s infinite;
+      opacity: 0;
+
+      &:nth-of-type(1) {
+        animation-delay: 0s;
+   }
+
+   &:nth-of-type(2) {
+    animation-delay: 5s;
+
+      }
+    }
+
+  }
+}
+
+@keyframes ChangeImage {
+  0%{ opacity: 0;}
+  25%{ opacity: 1;}
+  50%{ opacity: 1;}
+  75%{ opacity: 0;}
+  100%{ opacity: 0;}
+}
+
+@media screen and (max-width: var.$spbp) {
+  .newitems {
+    width: 100%;
+    margin-top: -60px;
+    .copyright{
+      @include var.fz(8);
+  
+    }
+    hr{
+      width: 70%;
+      max-width: 336px;
+      margin: 0 auto 16%;
+    }
+    &__new {
+      width: 23vw;
+      height: 10vw;
+      margin: 5vw auto;
+    }
+  
+    &__txt {
+      margin: 0 auto 19vw!important;
+      width: 97vw;
+      height: 20.3vw;
+    }
+  
+    &__subttl {
+      margin: 0 auto 7vw;
+      width: 54vw;
+      height: 6.3vw;
+    }
+    &__subtxt01{
+      margin: 0 auto 5.6vw;  
+      &.basetxt01{
+        width: 42.6vw;
+        height: 10vw;
+      }
+      &.color01{
+        width: 42.6vw;
+        height: 10vw;
+      }
+      &.eyetxt01{
+        width: 46.6vw;
+        height: 10vw;
+      }
+      &.riptxt01{
+        width: 43.3vw;
+        height: 10vw;
+      }
+    }
+    &__subtxt02{
+      margin: 0 auto 5.6vw;
+  
+      &.basetxt02{
+        width: 67.6vw;
+        height: 7vw;
+      }
+      &.color02{
+        width: 44.3vw;
+        height: 11.2vw;
+    
+      }
+      &.eyetxt02{
+        width: 69vw;
+        height: 7vw;
+      }
+      &.riptxt02{
+        width: 47.8vw;
+        height: 7vw;
+    
+      }
+    }
+    &__subtxt03{
+      margin: 0 auto 6vw;
+      &.basetxt03{
+        width: 170px;
+        height: 27px;
+      }
+      &.color03{
+        background-image: url(var.$imgpath + 'newitems__colortxt03.jpg');
+        width: 28.4vw;
+        height: 5.4vw;
+      }
+      &.eyetxt03{
+        width: 44.6vw;
+        height: 22vw;
+      }
+      &.riptxt03{
+        width: 40.3vw;
+        height: 18.5vw;
+      }
+    }
+  
+  
+    &__image {
+      position: relative;
+      width: 70vw;
+      height: 70vw;
+      margin: 0 auto 5vw;
+  
+  
+    }
+  }
+}
+
+
+
+
+
+
+@include var.webpBg('.newitems__new', var.$imgpath +'newitems_ttl');
+@include var.webpBg('.newitems__txt', var.$imgpath +'img_newitemstxt');
+@include var.webpBg('.newitems__subttl', var.$imgpath +'newitems_date');
+@include var.webpBg('.basetxt01', var.$imgpath +'newitems__basetxt01');
+@include var.webpBg('.basetxt02', var.$imgpath +'newitems__basetxt02');
+@include var.webpBg('.basetxt03', var.$imgpath +'newitems__basetxt03');
+@include var.webpBg('.color01', var.$imgpath +'newitems__colortxt01');
+@include var.webpBg('.color02', var.$imgpath +'newitems__colortxt02');
+@include var.webpBg('.color03', var.$imgpath +'newitems__colortxt03');
+@include var.webpBg('.eyetxt01', var.$imgpath +'newitems__eyetxt01');
+@include var.webpBg('.eyetxt02', var.$imgpath +'newitems__eyetxt02');
+@include var.webpBg('.eyetxt03', var.$imgpath +'newitems__eyetxt03');
+@include var.webpBg('.riptxt01', var.$imgpath +'newitems__riptxt01');
+@include var.webpBg('.riptxt02', var.$imgpath +'newitems__riptxt02');
+@include var.webpBg('.riptxt03', var.$imgpath +'newitems__riptxt03');
+@media screen and (max-width: 1080px) {}
+
+@media screen and (max-width: var.$spbp) {}
+
+.fadein {
+  opacity: 0;
+  transform: translate(0,0);
+  transition: all 1.5s;
+&.fadein-left{
+    transform: translate(-30px,0);
+}
+&.fadein-right{
+    transform: translate(30px,0);
+}
+&.fadein-up{
+    transform: translate(0,-30px);
+}
+&.fadein-bottom{
+    transform: translate(0,30px);
+}
+&.scrollin{
+  opacity: 1 !important;
+  transform: translate(0, 0) !important;
+}
+}

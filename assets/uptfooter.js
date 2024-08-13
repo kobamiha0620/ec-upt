@@ -26,19 +26,19 @@ $(function(){
         snslocate();
     });
 
-
+    
     
     //カーソル画像
-    const cursor =$("#cursor");                // カーソルになる要素を指定
-    $(document).on("mousemove",function(e){ // マウスカーソルが動いた時に実行
-    let x=e.clientX - 11;                      // カーソルの横座標を取得
-    let y=e.clientY - 11;                      // カーソルの縦座標を取得
+    // const cursor =$("#cursor");                // カーソルになる要素を指定
+    // $(document).on("mousemove",function(e){ // マウスカーソルが動いた時に実行
+    // let x=e.clientX - 11;                      // カーソルの横座標を取得
+    // let y=e.clientY - 11;                      // カーソルの縦座標を取得
 
-    //  取得した座標をCSSに反映させる
-    cursor.css({
-        "top":y+"px",
-        "left":x+"px"
-    });
+    // //  取得した座標をCSSに反映させる
+    // cursor.css({
+    //     "top":y+"px",
+    //     "left":x+"px"
+    // });
 });
 
 //こちら
@@ -88,6 +88,3 @@ async function supportsWebp() {
 
 
 
-
-
-  

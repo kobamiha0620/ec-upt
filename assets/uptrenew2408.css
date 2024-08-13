@@ -1,0 +1,255 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Shippori+Mincho:wght@400;500;600;700;800&family=Sorts+Mill+Goudy&display=swap");
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.monserrat {
+  font-family: "Montserrat", sans-serif;
+}
+
+.fadein00 {
+  animation-name: fadeInAnime;
+  animation-duration: 3s;
+  animation-delay: 0.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.fadein01 {
+  animation-name: fadeInAnime;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.fadein02 {
+  animation-name: fadeInAnime;
+  animation-duration: 3s;
+  animation-delay: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.fadein03 {
+  animation-name: fadeInAnime;
+  animation-duration: 3s;
+  animation-delay: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.fadein04 {
+  animation-name: fadeInAnime;
+  animation-duration: 3s;
+  animation-delay: 2.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+.uptfooter {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  background: #32667A;
+  padding: 34px 0 10px;
+}
+.uptfooter__links {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 26px;
+}
+.uptfooter__links li a {
+  display: inline-block;
+  color: #FFF;
+  padding: 0 1em;
+  border-right: 1px #FFF solid;
+  font-size: 0.625rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.uptfooter__links li a:hover {
+  opacity: 0.8;
+}
+.uptfooter__links li:last-child a {
+  border: none;
+}
+.uptfooter__copy {
+  text-align: center;
+}
+.uptfooter__copy small {
+  color: #FFF;
+  font-family: Montserrat;
+  font-size: 0.6875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+@media screen and (max-width: 768px) {
+  .uptfooter {
+    padding: 9.8vw 0 10px;
+  }
+  .uptfooter__links {
+    display: block;
+    margin: 0 0 7.9vw;
+  }
+  .uptfooter__links li {
+    text-align: center;
+  }
+  .uptfooter__links li a {
+    padding: 0;
+    border: none;
+    font-size: 0.625rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .uptfooter__copy {
+    text-align: center;
+  }
+  .uptfooter__copy small {
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 0.6875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+}
+
+.uptfooter__links + .uptfooter__links {
+  margin-top: -20px;
+}
+
+body.topPage .c-announce_bar {
+  background-color: #967860;
+}
+
+.uptfootersns__list {
+  width: 400px;
+  margin: 0 auto;
+  align-items: center;
+}
+.uptfootersns__list li a i {
+  display: block;
+  font-size: 2.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 0;
+}
+.uptfootersns__list li a i.fa-facebook {
+  font-size: 2.25rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.uptfootersns__list li a i.fa-facebook::before {
+  font-family: "Font Awesome 6 Brands";
+}
+.uptfootersns__list li a i.fa-instagram {
+  font-size: 2.25rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.uptfootersns__list li a i.fa-instagram::before {
+  font-family: "Font Awesome 6 Brands";
+}
+.uptfootersns__list li a i.fa-youtube {
+  font-size: 2.25rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.uptfootersns__list li a i.fa-youtube::before {
+  font-family: "Font Awesome 6 Brands";
+}
+.uptfootersns__list li a i.fa-x-twitter {
+  font-size: 2.25rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.uptfootersns__list li a i.fa-x-twitter::before {
+  font-family: "Font Awesome 6 Brands";
+}
+@media screen and (max-width: 768px) {
+  .uptfootersns__list {
+    width: 68vw;
+    max-width: 256px;
+  }
+  .uptfootersns__list li a i {
+    display: block;
+    line-height: 1;
+    font-size: 2.25rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    line-height: 0;
+  }
+  .uptfootersns__list li a i.fa-facebook {
+    font-size: 1.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .uptfootersns__list li a i.fa-instagram {
+    font-size: 1.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .uptfootersns__list li a i.fa-youtube {
+    font-size: 1.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .uptfootersns__list li a i.fa-x-twitter {
+    font-size: 1.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+}
+
+body.topPage {
+  /* TOP背景 */
+  /* TOP見出し */
+  /* TOPリンク */
+  /* 本文 */
+}
+body.topPage .uptfooter {
+  background: #898989;
+}
+body.topPage .uptfootersns__ttl {
+  color: #898989;
+}
+body.topPage .uptfootersns__list li a {
+  color: #898989;
+}
+body.topPage .uptfooter__links li a {
+  color: #F7F8F8;
+}
+
+/* アニメーション（右から左に移動） */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutAnime {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body.topPage .c-announce_bar {
+  background-color: #898989;
+}
+
+body {
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/bg_newcosme.jpg");
+  background-repeat: repeat-y !important;
+  background-size: 100% auto !important;
+}
+
+body.is-webp {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/bg_newcosme.webp");
+}

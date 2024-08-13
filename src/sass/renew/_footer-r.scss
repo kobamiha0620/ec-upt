@@ -1,0 +1,215 @@
+@use "./module/variable"as var;
+
+
+.uptfooter {
+    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+    background: var.$bg_dark;
+    padding: 34px 0 10px;
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        margin: 0 0 26px;
+
+        li {
+
+            a {
+                display: inline-block;
+                color: #FFF;
+                padding: 0 1em;
+                border-right: 1px #FFF solid;
+                @include var.fz(10);
+
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            &:last-child {
+                a {
+                    border: none;
+                }
+            }
+        }
+
+    }
+
+    &__copy {
+        text-align: center;
+
+        small {
+            color: #FFF;
+            font-family: Montserrat;
+            @include var.fz(11);
+        }
+
+    }
+
+    //SP
+    @media screen and (max-width: var.$spbp) {
+        padding: 9.8vw 0 10px;
+
+        &__links {
+            display: block;
+            margin: 0 0 7.9vw;
+
+            li {
+                text-align: center;
+
+                a {
+                    padding: 0;
+                    border: none;
+                    @include var.fz(10);
+                }
+
+            }
+
+        }
+
+        &__copy {
+            text-align: center;
+
+            small {
+                color: #FFF;
+                font-family: Montserrat;
+                @include var.fz(11);
+            }
+
+        }
+    }
+}
+
+
+.uptfooter__links{
+    &+.uptfooter__links{
+        margin-top: -20px;
+    }
+}
+
+//追記
+body.topPage{
+    .c-announce_bar {
+        background-color: #967860;
+      }
+}
+.uptfootersns__list {
+    width: 400px;
+    margin: 0 auto;
+    align-items: center;
+
+    li {
+
+        a {
+
+            i {
+                display: block;
+
+                @include var.fz(46);
+                line-height: 0;
+                &::before{
+                    
+                }
+                &.fa-facebook {
+                    @include var.fz(36);
+
+                    &::before {
+                        font-family: "Font Awesome 6 Brands";
+                    }
+
+                }
+
+                &.fa-instagram {
+                    @include var.fz(36);
+
+                    &::before {
+                        font-family: "Font Awesome 6 Brands";
+                    }
+                }
+
+                &.fa-youtube {
+                    @include var.fz(36);
+
+                    &::before {
+                        font-family: "Font Awesome 6 Brands";
+                    }
+                }
+
+                &.fa-x-twitter {
+                    @include var.fz(36);
+
+                    &::before {
+                        font-family: "Font Awesome 6 Brands";
+                    }
+                }
+
+            }
+        }
+    }
+    @media screen and (max-width: var.$spbp) {
+        width: 68vw;
+        max-width: 256px;
+    li {
+        a {
+
+            i {
+                display: block;
+                line-height: 1;
+
+                @include var.fz(36);
+                line-height: 0;
+
+                &.fa-facebook {
+                    @include var.fz(30);
+                }
+
+                &.fa-instagram {
+                    @include var.fz(30);
+                }
+
+                &.fa-youtube {
+                    @include var.fz(30);
+                }
+
+                &.fa-x-twitter {
+                    @include var.fz(30);
+
+                }
+
+            }
+        }
+    }
+        
+    }
+}
+
+body.topPage {
+    /* TOP背景 */
+
+    .uptfooter {
+        background: #898989;
+    }
+
+    /* TOP見出し */
+
+    .uptfootersns__ttl {
+        color: #898989;
+    }
+
+    /* TOPリンク */
+
+    .uptfootersns__list li a {
+        color: #898989;
+    }
+
+    /* 本文 */
+    .uptfooter__links li a {
+        color: #F7F8F8;
+    }
+}
+
+
+//タブレット
+@media screen and (max-width: var.$tabw) {}
+
+//SP
+@media screen and (max-width: var.$spbp) {}

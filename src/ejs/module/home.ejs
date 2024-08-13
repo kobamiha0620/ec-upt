@@ -9,7 +9,7 @@ var pageinit = {
   path: '',
   ogimage : '' ,
   path : '' ,   
-  ecforce : 'true',
+  ecforce : 'false',
   category : ['main'] ,
   pagename : '',
   css: [],
@@ -18,8 +18,8 @@ var pageinit = {
 };
 %>
 <%
-var imgpath = '{{ theme_file_root_path }}';
-// var imgpath = '';
+// var imgpath = '{{ theme_file_root_path }}';
+var imgpath = '';
 
 %>
 
@@ -30,7 +30,7 @@ var imgpath = '{{ theme_file_root_path }}';
 {{ 'shop/base' | javascript_include_tag }}
 <% } %>
 
-
+<script src="https://kit.fontawesome.com/7304ec542e.js" crossorigin="anonymous"></script>
 <main class="l-container js-main-container upthome" role="main">
 
     <section class="upthome__renew" id="js-uptHome">
@@ -166,21 +166,6 @@ var imgpath = '{{ theme_file_root_path }}';
         </a>
 
     </section>
-    <!-- <section class="upthome__fv" id="js-uptHome">
-        <div class="upthome__fvblc">
-
-            <h1 href="/" class="upthome__fv--logo"> Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト</h1>
-
-            <div class="upthome__fv--feature"></div>
-            <p class="upthome__fv--feature-txt">Produced by YumiAdachi</p>
-
-
-            <div class="about__inner">
-                <h2 id="ABOUT" class="headingttl">ABOUT</h2>
-            </div>
-        </div>
-    </section> -->
-
 
 
 
@@ -330,18 +315,21 @@ var imgpath = '{{ theme_file_root_path }}';
     <% } %>
 
 </main>
-<!-- <div class="modal__bg js_modal_close" id="modal_bg" style="display: none;"></div> -->
-<!-- <div class="modal" id="js_modal">
+<!-- <div class="modal__bg js_modal_close" id="modal_bg" style=""></div>
+<div class="modal" id="js_modal">
 
 
 <div class="modal-content">
         <div class="modal__contents">
             <div class="modal__contents--inner">
-                <a href="/shop/products/upt_cleansingset" style="display: block;">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/popup_pc0424.png" id="modalcontents" width="1012" height="1460" alt="単品発売開始"
-                    class="pcImg">
-                <img src="{{ theme_file_root_path }}/assets/images/uptorigin/popup_sp0424.png" id="modalcontentsSp" width="1294" height="2052" alt="単品発売開始"
-                    class="spImg">
+                <a href="https://uptofficial.jp/shop/pages/newitems2408" style="display: block;">
+                    
+
+    <picture>
+        <source srcset="<%= imgpath %>/assets/images/uptorigin/newitems_banner00.webp" type="image/webp">
+        <img src="<%= imgpath %>/assets/images/uptorigin/newitems_banner00.png" alt="安達祐実" width="1800" height="1230">
+      </picture>
+
                 </a>
 
 
@@ -364,3 +352,4 @@ var imgpath = '{{ theme_file_root_path }}';
 <% } else { %>
 <script src="{{ theme_file_root_path }}/assets/homeupt.js"></script>
 <% } %>
+

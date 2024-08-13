@@ -9,6 +9,7 @@ var pageinit = {
   path: '',
   ogimage : '' ,
   path : '' ,
+  pages: ['top'],
   ecforce : 'false',
   category : ['about'] ,
   pagename : '',
@@ -22,89 +23,224 @@ var pageinit = {
 var imgpath = '';
 
 %>
-<!-- Footer -->
-    <ul class="upthome__fvblc--sns" id="js-sns">
-        <li>
-            <a href="https://www.instagram.com/_upt_official/" class="main__sns--insta" target="_blank">Instagram</a>
-        </li>
+<% if (pageinit.ecforce === 'true') { %>
+<% } else { %>
+<% } %>
 
-        <li>
-            <a href="https://twitter.com/_upt_official" class="main__sns--twitter" target="_blank">Twitter</a>
-        </li>
-        <li>
-            <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=upt_official" class="main__sns--line" target="_blank">Line</a>
-        </li>
-        <li>
-            <a href="https://www.youtube.com/channel/UCK78cTfeqqzgKOT1OVKhw8Q" class="main__sns--youtube" target="_blank">Twitter</a>
-        </li>
-    </ul>  
 </div>
 </div>
-<div class="uptblc top" id="uptfootersns">
+<% if (pageinit.ecforce === 'true') { %>
+
+<style>
+    /* 背景 */
+    .footer_bg, .uptfooter{
+      background: {{section.settings.color_footer_bg}};
+    }
+    /* 見出し */
+    .footer_head, .uptfootersns__ttl {
+      color: {{section.settings.color_footer_head}};
+    }
+    /* リンク */
+    .footer_link, .uptfootersns__list li a{
+      color: {{section.settings.color_footer_link}};
+    }
+    /* 本文 */
+    .footer_body, .uptfooter__links li a {
+      color: {{section.settings.color_footer_body}};
+    }
+
+    /* TOP背景 */
+    body.topPage .uptfooter{
+      background: {{section.settings.color_footer_bg-top}};
+    }
+    /* TOP見出し */
+    body.topPage .uptfootersns__ttl {
+        color: {{color_footer_head_top}};
+    }
+     /* TOPリンク */
+     body.topPage .uptfootersns__list li a{
+      color: {{section.settings.color_footer_link-top}};
+    }
+    /* 本文 */
+    body.topPage .uptfooter__links li a {
+      color: {{section.settings.color_footer_body-top}};
+    }
+
+  </style>
+<% } %>
+
+<div class="uptblc" id="uptfootersns">
     <div class="uptblc__inner">
         <div class="uptfootersns">
             <h2 class="uptfootersns__ttl">FOLLOW US</h2>
             <div class="uptfootersns__list--wrapper">
-            <ul class="uptfootersns__list">
-                <li>
-                    <a href="https://www.instagram.com/_upt_official/" class="main__sns--insta" target="_blank">Instagram</a>
-                </li>
-                <li>
-                    <a href="https://twitter.com/_upt_official" class="main__sns--twitter" target="_blank">Twitter</a>
-                </li>
-                <li>
-                    <a href="https://liff.line.me/1645278921-kWRPP32q/?accountId=upt_official" class="main__sns--line" target="_blank">Line</a>
-                </li>
+                <ul class="uptfootersns__list">
+                    <!-- facebook -->
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% if section.settings.facebook_account_text.size > 0 %}
+                    <% } %>
+                    <li>
+                        <a class="" href="{{section.settings.facebook_account_text}}" target="_blank"
+                            rel="noopener noreferrer nofollow">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                    </li>
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% endif %}
+                    
+                    <% } %>
 
-                <li>
-                    <a href="https://www.youtube.com/channel/UCK78cTfeqqzgKOT1OVKhw8Q" class="main__sns--youtube" target="_blank">Twitter</a>
-                </li>
-            </ul>
+
+                    <!-- Instagram -->
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% if section.settings.twitter_account_text.size > 0 %}
+                    <% } %>
+                    <li>
+                        <a href="{{section.settings.instagram_account_text}}" target="_blank"
+                            rel="noopener noreferrer nofollow">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% endif %}
+
+
+                    <% } %>
+
+                    <!-- twitter -->
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% if section.settings.twitter_account_text.size > 0 %}
+                    <% } %>
+                    <li>
+                        <a href="{{section.settings.twitter_account_text}}" target="_blank"
+                            rel="noopener noreferrer nofollow">
+                            <i class="fa-brands fa-x-twitter"></i>
+
+                        </a>
+                    </li>
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% endif %}
+                    <% } %>
+
+                    <!-- Line -->
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% if section.settings.twitter_account_text.size > 0 %}
+                    <% } %>
+                    <li>
+                        <a href="{{section.settings.line_account_text}}" target="_blank"
+                            rel="noopener noreferrer nofollow">
+                            <i class="u-icon--line"></i>
+                        </a>
+                    </li>
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% endif %}
+                    <% } %>
+
+
+                    <!-- youtube -->
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% if section.settings.twitter_account_text.size > 0 %}
+                    <% } %>
+                    <li>
+                        <a href="{{section.settings.youtube_account_text}}" target="_blank"
+                            rel="noopener noreferrer nofollow">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </li>
+                    <% if (pageinit.ecforce === 'true') { %>
+                    {% endif %}
+                    <% } %>
+
+
+                </ul>
+            </div>
         </div>
-        </div>
-    </div> 
+    </div>
 </div>
 
 <footer class="uptfooter" data-section-id='footer' data-section-type='footer-section'>
+    <% if (pageinit.ecforce === 'true') { %>
+    {% for menu in section.settings.footer_menu %}
+    <% } %>
+
 
     <ul class="uptfooter__links">
+        <% if (pageinit.ecforce === 'true') { %>
+        {% unless menu.link_text1 == "" or menu.link_text1 == null %}
         <li>
-            <a href="/shop/products/upt_skincareset-subscribe/">定期お届けコース</a>
+            <a href="{{menu.link_url1}}">
+                {{ menu.link_text1 | escape }}
+            </a>
         </li>
+        {% endunless %}
+        <% } else { %>
+            <li><a href="">キャンセル・変更規定・返品に関して</a></li>
+        <% } %>
+
+
+        <% if (pageinit.ecforce === 'true') { %>
+        {% unless menu.link_text2 == "" or menu.link_text2 == null %}
         <li>
-            <a href="/shop/pages/shoplist/">ショップリスト</a>
+        <a href="{{menu.link_url1}}">{{ menu.link_text2 | escape }}</a>
         </li>
-        <li>
-            <a href="/shop/pages/magazine">メディア掲載情報</a>
-        </li>
-        <li>
-            <a href="/shop/faq/">FAQ</a>
-        </li>
-        <li>
-            <a href="/shop/guide/">ご利用ガイド</a>
-        </li>
-        <li>
-            <a href="https://mano-mano.co.jp/" target="_blank">会社概要</a>
-        </li>
-        <li>
-            <a href="/shop/law_info/">特定商取引に基づく表記</a>
-        </li>
-        <li>
-            <a href="/shop/privacy/">プライバシーポリシー</a>
-        </li>
-        <li>
-            <a href="/shop/customer_term/">利用規約</a>
-        </li>
+        {% endunless %}
+        <% } else { %>
+            <li><a href="">特定商取引に基づく表記</a></li>
+        <% } %>
+
+    
+
+
+        <% if (pageinit.ecforce === 'true') { %>
+            {% unless menu.link_text3 == "" or menu.link_text3 == null %}
+            <li>
+            <a href="{{menu.link_url1}}">{{ menu.link_text3 | escape }}</a>
+            </li>
+            {% endunless %}
+        <% } %>
+        <% if (pageinit.ecforce === 'true') { %>
+            {% unless menu.link_text4 == "" or menu.link_text4 == null %}
+            <li>
+            <a href="{{menu.link_url1}}">{{ menu.link_text4 | escape }}</a>
+            </li>
+            {% endunless %}
+        <% } else { %>
+            <li><a href="">プライバシーポリシー </a></li>
+        <% } %>
+
+        <% if (pageinit.ecforce === 'true') { %>
+            {% unless menu.link_text5 == "" or menu.link_text5 == null %}
+            <li>
+            <a href="{{menu.link_url1}}">{{ menu.link_text5 | escape }}</a>
+            </li>
+            {% endunless %}
+        <% } else { %>
+            <li><a href="">利用規約 </a></li>
+        <% } %>
+
+        <% if (pageinit.ecforce === 'true') { %>
+            {% unless menu.link_text6 == "" or menu.link_text6 == null %}
+            <li>
+            <a href="{{menu.link_url1}}">{{ menu.link_text6 | escape }}</a>
+            </li>
+            {% endunless %}
+        <% } else { %>
+            <li><a href="">送料に関して </a></li>
+        <% } %>
+
 
     </ul>
-
+    <% if (pageinit.ecforce === 'true') { %>
+    {% endfor %}
+    <% } %>
 
     <p class="uptfooter__copy"><small>© 2022 Upt All Rights Reserved</small></p>
 
 </footer>
 <!-- Footer -->
 
-    <div id="cursor">
+<!-- <div id="cursor">
         <img src="<%= imgpath %>/assets/images/uptorigin/0914/cursor.svg" alt="カーソル" width="22px" height="22px">
-    </div>
-    <script src="<%= imgpath %>/assets/uptfooter.js"></script>
+    </div> -->
+<script src="<%= imgpath %>/assets/uptfooter.js"></script>
+<script src="https://kit.fontawesome.com/7304ec542e.js" crossorigin="anonymous"></script>

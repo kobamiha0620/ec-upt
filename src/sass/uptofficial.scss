@@ -820,16 +820,16 @@ h3 {
 
 
 body {
-    cursor: none;
+    // cursor: none;
 
     /*本物のカーソルを非表示に*/
     // cursor:  url(var.$imgpath + '0914/cursor.svg', auto);
     @media screen and (max-width: var.$spbp) {
-        cursor: auto;
+        // cursor: auto;
 
-        #cursor {
-            display: none;
-        }
+        // #cursor {
+        //     display: none;
+        // }
 
         #js-sns {
             display: none;
@@ -838,14 +838,14 @@ body {
 
 }
 
-#cursor {
-    position: fixed;
-    /* 絶対位置になるように指定 */
-    z-index: 201;
-    /* 重なり順を上に指定。他の要素に合わせて数字を大きくしてください。 */
-    pointer-events: none;
-    /*【重要】マウス直下に常に画像があるので、全てをクリックできなくなる。noneにして対応*/
-}
+// #cursor {
+//     position: fixed;
+//     /* 絶対位置になるように指定 */
+//     z-index: 201;
+//     /* 重なり順を上に指定。他の要素に合わせて数字を大きくしてください。 */
+//     pointer-events: none;
+//     /*【重要】マウス直下に常に画像があるので、全てをクリックできなくなる。noneにして対応*/
+// }
 
 
 .uptline {
@@ -858,29 +858,29 @@ body {
 
 * {
 
-    a,
-    button {
-        cursor: none;
+    // a,
+    // button {
+    //     cursor: none;
 
-        @media screen and (max-width: var.$spbp) {
-            cursor: auto;
+    //     @media screen and (max-width: var.$spbp) {
+    //         cursor: auto;
 
-            &:hover {
-                opacity: 1 !important;
-            }
-        }
-    }
+    //         &:hover {
+    //             opacity: 1 !important;
+    //         }
+    //     }
+    // }
 
 }
 
-.c-gmenu__overlay {
-    cursor: none;
+// .c-gmenu__overlay {
+//     cursor: none;
 
-    @media screen and (max-width: var.$spbp) {
-        cursor: auto;
+//     @media screen and (max-width: var.$spbp) {
+//         cursor: auto;
 
-    }
-}
+//     }
+// }
 
 #js-sns {
     opacity: 1;
