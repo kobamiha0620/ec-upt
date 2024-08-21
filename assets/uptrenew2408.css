@@ -214,6 +214,11 @@ body.topPage .uptfooter__links li a {
   color: #F7F8F8;
 }
 
+@media screen and (max-width: 768px) {
+  .uptfootersns {
+    padding-bottom: 5vw;
+  }
+}
 /* アニメーション（右から左に移動） */
 @keyframes scroll {
   0% {
@@ -239,17 +244,1758 @@ body.topPage .uptfooter__links li a {
     opacity: 0;
   }
 }
+.uptHeader__toppc {
+  display: none;
+}
+
 body.topPage .c-announce_bar {
   background-color: #898989;
+}
+body.topPage .uptblc__inner {
+  border: none;
+}
+body.topPage .uptHeader__toppc {
+  width: 100%;
+  display: block;
+}
+body.topPage .uptHeader__toppc--inner {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body.topPage .uptHeader__toppc--logo {
+  background-size: 100% auto;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  display: block;
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/logo_uptHeader__toppc.png");
+  width: 91px;
+  height: 49px;
+  margin-left: 68px;
+  color: #444;
+}
+body.topPage .uptHeader__toppc--list {
+  color: white;
+  display: flex;
+  width: 898px;
+  justify-content: space-between;
+  align-items: center;
+}
+body.topPage .uptHeader__toppc--list li {
+  font-size: 1.125rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+}
+body.topPage .uptHeader__toppc.active {
+  background-color: #F7F8F8;
+}
+@media screen and (max-width: 1279px) {
+  body.topPage .uptHeader__toppc--inner {
+    max-width: 980px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  body.topPage .uptHeader__toppc--logo {
+    width: 73px;
+    height: 40px;
+    margin-left: 0;
+  }
+  body.topPage .uptHeader__toppc--list {
+    width: 75%;
+    justify-content: space-between;
+  }
+  body.topPage .uptHeader__toppc--list li {
+    font-size: 0.9375rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    font-weight: 600;
+  }
+}
+@media screen and (max-width: 768px) {
+  body.topPage .uptHeader__toppc {
+    display: none;
+  }
+}
+body.topPage .uptHeader__toppc.active .uptHeader__toppc--list {
+  color: #898989;
+}
+body.topPage .uptHeader__toppc.active .uptHeader__toppc--logo {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/logo_uptHeader__toppc-gray.png");
+}
+body.topPage .uptheader .uptblc {
+  display: none;
+}
+body.topPage .uptheader .c-gmenu .u-icon--close {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/closemenu_gray.svg");
+}
+body.topPage .uptheader .c-gmenu.is-active .u-icon--cart {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/icon_cart-gray.svg");
+}
+body.topPage .uptheader .c-gmenu.is-active .u-icon--account {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/icon_mypage-gray.svg");
+}
+@media screen and (max-width: 768px) {
+  body.topPage .uptheader {
+    background-image: none;
+  }
+  body.topPage .uptheader.bg__header .u-icon--menu {
+    color: #898989;
+  }
+  body.topPage .uptheader.bg__header .u-icon--menu {
+    background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/openmenu_gray.png");
+    width: 40px;
+    height: 17px;
+  }
+  body.topPage .uptheader.bg__header .u-icon--cart {
+    background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/icon_cart-gray.svg");
+  }
+  body.topPage .uptheader.bg__header .u-icon--account {
+    background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/icon_mypage-gray.svg");
+  }
+  body.topPage .uptheader .uptblc {
+    display: block;
+  }
+  body.topPage .uptheader .u-icon--menu {
+    background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/openmenu_white.png");
+    width: 40px;
+    height: 17px;
+  }
+  body.topPage .uptheader .u-icon--cart {
+    background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/icon_cart-white.svg");
+  }
+  body.topPage .uptheader .u-icon--account {
+    background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/icon_mypage-white.svg");
+  }
+  body.topPage .uptheader .uptheader__icons--logo a {
+    background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/logo_uptHeader__toppc-gray.png");
+  }
+  body.topPage .uptheader .uptblc__inner {
+    border: none;
+  }
+  body.topPage .uptheader .uptheader__icons {
+    padding: 28px 3vw;
+  }
+  body.topPage .uptheader .uptgmenu__btm {
+    width: 101dvw;
+    width: 101vw;
+  }
+}
+
+body.topPage .uptplane__inner {
+  border: none;
+}
+body.topPage .uptblc.top {
+  border-top: none;
+}
+
+body.renewPage .uptblc__inner {
+  border: none;
+}
+body.renewPage .uptplane__inner {
+  border: none;
+}
+body.renewPage .uptblc.top {
+  border-top: none;
+}
+body.renewPage .uptheader {
+  background: none;
+}
+body.renewPage .uptheader .uptheader__icons {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 0;
+  padding-left: 0;
+}
+body.renewPage .uptheader .uptblc__inner {
+  border: none;
+}
+body.renewPage .uptheader .uptheader__icons .uptheader__icons--logo a {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/logo_uptHeader__toppc-brown.png");
+}
+body.renewPage .uptheader .uptheader__icons .u-icon--menu {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/openmenu_brawn.png");
+  width: 40px;
+  height: 17px;
+}
+body.renewPage .uptheader .uptheader__icons .u-icon--cart {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/icon_cart-brown.svg");
+}
+body.renewPage .uptheader .uptheader__icons .u-icon--account {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/icon_mypage-brown.svg");
+}
+@media screen and (max-width: 768px) {
+  body.renewPage .uptheader {
+    background-image: none;
+  }
+  body.renewPage .uptheader .uptblc__inner {
+    border: none;
+  }
+  body.renewPage .uptheader .uptheader__icons {
+    padding: 28px 3vw;
+  }
+}
+
+.uptheader .c-gmenu .u-icon--close {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/closemenu_gray.svg");
+}
+.uptheader .c-gmenu .u-icon--menu {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/openmenu_gray.png");
+  width: 40px;
+  height: 17px;
+}
+.uptheader .c-gmenu .u-icon--cart {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/icon_cart-gray.svg");
+}
+.uptheader .c-gmenu .u-icon--account {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/icon_mypage-gray.svg");
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: solid 1px #FFF;
+  display: inline-block;
+  margin: 0 24px !important;
+  opacity: 1;
+  background: transparent;
+}
+.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #FFF;
+}
+@media screen and (max-width: 768px) {
+  .swiper-pagination {
+    display: block !important;
+    z-index: 3;
+  }
+  .swiper-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 12px 0 !important;
+    opacity: 1;
+  }
+  .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #FFF;
+  }
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  width: 100%;
+  height: auto;
+  top: auto;
+  bottom: 30px;
+  left: 50%;
+  overflow: hidden;
+  transform: translateY(0);
+  transform: translateX(-50%);
+}
+@media screen and (max-width: 768px) {
+  .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    width: 14px;
+    height: 104px;
+    top: 50%;
+    left: auto;
+    right: 6.6vw;
+    overflow: hidden;
+    transform: translateY(-50%);
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 1222px) {
+  .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    margin-bottom: 0;
+  }
+}
+body.topPage .upthome__yumi--txt {
+  color: #898989;
+}
+body.topPage .upthome__illust--ttl {
+  color: #898989;
+}
+body.topPage .upthome__illust--txt {
+  color: #898989;
+}
+body.topPage .upthome__yumi--sign {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/sign_yumi2408.svg");
+}
+body.topPage .upthome__illust {
+  margin-bottom: 75px;
+}
+@media screen and (max-width: 768px) {
+  body.topPage .upthome__illust {
+    margin-bottom: 0;
+  }
+}
+
+.upthome__renew--logo {
+  width: 58.6vw;
+  height: 31.6vw;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 13.3vw;
+  z-index: 4;
+}
+.upthome__renew--logo img.upthome__renew--logo-img {
+  width: 100%;
+  height: auto;
+}
+.upthome__renewbtn {
+  margin: 0 auto 100px;
+}
+.upthome__renewbtn a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: #898989;
+  max-width: 262px;
+  padding: 20px 0;
+  margin: 0 auto 30px;
+}
+.upthome__renewbtn a span {
+  color: #FFF;
+  font-size: 1.25rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  display: inline-block;
+}
+@media screen and (max-width: 768px) {
+  .upthome__renewbtn {
+    margin: 0 auto 5vw;
+  }
+  .upthome__renewbtn a {
+    max-width: 72vw;
+    padding: 20px 0;
+    margin: 0 auto 5vw;
+  }
+  .upthome__renewbtn a span {
+    font-size: 1.1875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+}
+
+.top__ttl {
+  text-align: center;
+  color: #898989;
+  font-size: 2.5rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+}
+.top__ttl span {
+  display: inline-block;
+  border-bottom: solid 1px #898989;
+}
+@media screen and (max-width: 768px) {
+  .top__ttl {
+    font-size: 1.4375rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+}
+
+.lineup {
+  margin: 0 auto 44px;
+}
+.lineup__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 932px;
+  margin: 0 auto;
+  width: 100%;
+}
+.lineup__list li {
+  width: 200px;
+  max-width: 200px;
+  margin: 0 16px 56px;
+  color: #967860;
+}
+.lineup__list li a {
+  display: block;
+}
+.lineup__list--badge {
+  position: absolute;
+  top: -20px;
+  left: -10px;
+  width: 64px;
+  height: 64px;
+  background: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/lineup-bg_new.png") no-repeat 0 0;
+  background-size: 100% auto;
+  animation: rotation 10s infinite linear;
+}
+.lineup__list--badge-new {
+  color: white;
+  background: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/lineup-bg_new-txt.png") no-repeat 0 0;
+  width: 40px;
+  height: 11px;
+  background-size: cover;
+  background-size: 100% auto;
+  white-space: nowrap;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  display: block;
+  position: absolute;
+  top: 7px;
+  left: 2px;
+  display: block;
+}
+.lineup__list--img {
+  position: relative;
+  margin: 0 0 16px;
+}
+.lineup__list--img img {
+  border-radius: 19px;
+}
+.lineup__list--name {
+  font-size: 0.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1.2;
+  font-weight: 600;
+  text-align: center;
+  margin: 0 auto 8px;
+}
+.lineup__list--namejp {
+  font-size: 0.8125rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  text-align: center;
+  line-height: 1.3;
+  margin: 0 auto 10px;
+}
+.lineup__list--color {
+  width: 76px;
+  margin: 0 auto;
+}
+.lineup__list--color img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .lineup__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 80vw;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .lineup__list li {
+    width: 37vw;
+    max-width: 37vw;
+    margin: 0 0 5vw;
+  }
+  .lineup__list--badge {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 45px;
+    height: 45px;
+  }
+  .lineup__list--badge-new {
+    width: 29px;
+    height: 8px;
+    top: 9px;
+    left: -1px;
+  }
+  .lineup__list--img {
+    position: relative;
+    margin: 0 0 9px;
+  }
+  .lineup__list--img img {
+    border-radius: 19px;
+  }
+  .lineup__list--name {
+    font-size: 0.6875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 0 auto 4px;
+  }
+  .lineup__list--namejp {
+    font-size: 0.625rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 0 auto 8px;
+  }
+  .lineup__list--color {
+    width: 50px;
+  }
+}
+
+.concept {
+  max-width: 820px;
+  margin: 0 auto;
+  padding-top: 100px;
+}
+.concept__img {
+  position: relative;
+  margin: 40px auto 80px;
+}
+.concept__img img {
+  width: 100%;
+  height: auto;
+}
+.concept__img--txtblc {
+  position: absolute;
+  display: inline-block;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.concept__img--txt01 {
+  text-align: center;
+  color: #FFF;
+  font-size: 1.75rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 500;
+}
+.concept__img--txt02 {
+  text-align: center;
+  color: #FFF;
+  font-size: 1.75rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  white-space: nowrap;
+}
+.concept__txt {
+  text-align: center;
+  color: #898989;
+  font-size: 0.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 2.2;
+  margin: 0 auto 40px;
+}
+.concept__txt--wrapper {
+  padding-bottom: 70px;
+}
+@media screen and (max-width: 768px) {
+  .concept {
+    max-width: 80vw;
+    margin: 0 auto 10vw;
+    padding-top: 21.3vw;
+  }
+  .concept__more {
+    margin-bottom: 0;
+  }
+  .concept__img {
+    position: relative;
+    margin: 15vw auto 7.2vw;
+  }
+  .concept__img img {
+    width: 100%;
+    height: auto;
+  }
+  .concept__img--txtblc {
+    position: relative;
+    display: block;
+    left: auto;
+    top: auto;
+    transform: translate(0, 0);
+    margin-top: 10vw;
+  }
+  .concept__img--txt01 {
+    text-align: left;
+    color: #898989;
+    font-size: 0.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .concept__img--txt02 {
+    text-align: left;
+    color: #898989;
+    font-size: 0.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .concept__txt {
+    text-align: left;
+    font-size: 0.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    line-height: 1.5;
+    margin: 0 auto 1em;
+  }
+  .concept__txt--wrapper {
+    margin-top: 6vw;
+    display: none;
+    padding-bottom: 0;
+  }
+  .concept__more {
+    display: inline-block;
+    border-radius: 30px;
+    border: solid 1px #898989;
+    font-size: 0.8125rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    padding: 5px 36px;
+    color: #898989;
+    cursor: pointer;
+  }
+}
+
+.cosme {
+  margin: 0 auto;
+}
+.cosme__ttl {
+  color: #967860;
+  text-align: center;
+  font-size: 1.75rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  margin: 30px 0;
+}
+.cosme .lineup__list--name,
+.cosme .lineup__list--namejp {
+  color: #967860;
+}
+@media screen and (max-width: 768px) {
+  .cosme__ttl {
+    font-size: 1.25rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 8vw 0 3vw;
+  }
+}
+
+.skincare {
+  margin: 0 auto;
+}
+.skincare__ttl {
+  color: #32667A;
+  text-align: center;
+  font-size: 1.75rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  margin: 30px 0;
+}
+.skincare .lineup__list--name,
+.skincare .lineup__list--namejp {
+  color: #32667A;
+}
+@media screen and (max-width: 768px) {
+  .skincare__ttl {
+    font-size: 1.25rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 8vw 0 3vw;
+  }
+}
+
+.set {
+  margin: 0 auto;
+}
+.set__ttl {
+  color: #898989;
+  text-align: center;
+  font-size: 1.75rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  margin: 30px 0;
+}
+.set .lineup__list li {
+  width: 256px;
+  max-width: 256px;
+  margin: 0 16px 56px;
+}
+.set .lineup__list li a {
+  display: block;
+}
+.set .lineup__list--name,
+.set .lineup__list--namejp {
+  color: #32667A;
+}
+.set .lineup__list--price {
+  font-size: 0.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  color: #32667A;
+  text-align: center;
+}
+.set .lineup__list--price span {
+  font-style: italic;
+}
+@media screen and (max-width: 768px) {
+  .set {
+    margin: 0 autot 8vw;
+  }
+  .set .lineup__list {
+    margin: 0 auto 0;
+    display: block;
+  }
+  .set .lineup__list li {
+    width: 72vw;
+    max-width: 72vw;
+    margin: 0 auto 8vw;
+  }
+  .set .lineup__list li a {
+    display: block;
+  }
+  .set__ttl {
+    font-size: 1.4375rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 86px 0 48px;
+  }
+}
+
+.modal.rb .modal__btn {
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: none;
+}
+.modal.rb .modal__contents {
+  position: fixed;
+  display: block;
+  z-index: 10;
+  right: 20px;
+  bottom: 20px;
+  left: auto;
+  top: auto;
+  max-width: 518px;
+  max-height: 207px;
+  width: 100%;
+  height: 100%;
+  transform: none;
+}
+.modal.rb .modal__contents--inner {
+  position: relative;
+  font-size: 0;
+  line-height: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+.modal.rb .modal__contents--inner img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 768px) {
+  .modal.rb .modal__contents {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    top: auto;
+    max-width: 100vw;
+    max-height: calc(40vw + 30px);
+    width: 100%;
+    height: 100%;
+  }
+  .modal.rb .modal__contents--inner {
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px 10px 20px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .set {
+    margin: 0 8vw;
+  }
+  .upthome__yumi--blc {
+    max-width: 80vv;
+    width: 80vw;
+    margin: 0 auto;
+    min-width: 80vw;
+  }
+  .upthome__illust {
+    max-width: 80vw;
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+@keyframes fadeInAnime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeOutAnime {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body.topPage {
+  background: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/bg_top-pc.jpg");
+  background-position: 0 -100vh !important;
+}
+@media screen and (max-width: 768px) {
+  body.topPage {
+    background: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/bg_top.jpg");
+  }
+}
+body.topPage.is-webp {
+  background: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/bg_top-pc.webp");
+}
+@media screen and (max-width: 768px) {
+  body.topPage.is-webp {
+    background: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/bg_top.webp");
+  }
+}
+
+.cosme {
+  max-width: 540px;
+  margin: 50px auto 0;
+}
+.cosme .uptblc__buyblc--btn #btn-add {
+  background-color: #967860;
+  margin: 0 auto 150px;
+  max-width: 440px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .cosme {
+    max-width: 80vw;
+    margin: 0 auto;
+  }
+  .cosme .uptblc__buyblc--btn #btn-add {
+    margin: 0 auto 18vw;
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.item__swiper {
+  margin: 0 auto;
+  max-width: 440px;
+}
+.item__swiper .cosmeSwiper {
+  margin: 0 auto 26px;
+}
+.item__swiper .cosmeSwiper .swiper-slide img {
+  border-radius: 30px;
+}
+.item__swiper .thumb__blc {
+  position: relative;
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+  /* 前への矢印 */
+  /* 次への矢印 */
+  /* 前へ次への矢印カスタマイズ */
+  /* 前へ次への矢印カスタマイズ */
+  /* 前への矢印カスタマイズ */
+  /* 次への矢印カスタマイズ */
+}
+.item__swiper .thumb__blc .swiper-button-prev {
+  left: 0;
+}
+.item__swiper .thumb__blc .swiper-button-next {
+  right: 0;
+}
+.item__swiper .thumb__blc .swiper-button-prev,
+.item__swiper .thumb__blc .swiper-button-next {
+  height: 30px;
+  width: 14px;
+  top: 54px;
+}
+.item__swiper .thumb__blc .swiper-button-prev::after,
+.item__swiper .thumb__blc .swiper-button-next::after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 30px;
+  margin: auto;
+  width: 14px;
+}
+.item__swiper .thumb__blc .swiper-button-prev::after {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/arrow_left.png");
+}
+.item__swiper .thumb__blc .swiper-button-next::after {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/arrow_right.png");
+}
+.item__swiper .cosmeSwiper__thumb {
+  max-width: 366px;
+  width: 100%;
+  margin: 0 auto;
+}
+.item__swiper .cosmeSwiper__thumb .swiper-slide img {
+  border-radius: 16px;
+}
+.item__swiper .cosmeSwiper__thumb .swiper-slide-thumb-active,
+.item__swiper .cosmeSwiper__thumb .swiper-slide-active {
+  font-size: 0;
+  line-height: 0;
+}
+.item__swiper .cosmeSwiper__thumb .swiper-slide-thumb-active img,
+.item__swiper .cosmeSwiper__thumb .swiper-slide-active img {
+  border: solid 1px #967860;
+}
+@media screen and (max-width: 768px) {
+  .item__swiper .cosmeSwiper {
+    margin: 0 auto 5vw;
+  }
+  .item__swiper .cosmeSwiper .swiper-slide img {
+    border-radius: 3.4vw;
+  }
+  .item__swiper .thumb__blc {
+    /* 前へ次への矢印カスタマイズ */
+  }
+  .item__swiper .thumb__blc .swiper-button-prev,
+.item__swiper .thumb__blc .swiper-button-next {
+    height: 30px;
+    width: 14px;
+    top: 10vw;
+  }
+  .item__swiper .cosmeSwiper__thumb {
+    max-width: 64vw;
+  }
+  .item__swiper .cosmeSwiper__thumb .swiper-slide img {
+    border-radius: 1.7vw;
+  }
+}
+
+.item__details {
+  max-width: 440px;
+  margin: 30px auto 0;
+  width: 100%;
+}
+.item__details--inner {
+  display: flex;
+  justify-content: space-between;
+}
+.item__details--inner.aic {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.item__details--lblc {
+  width: 82%;
+}
+.item__details--name {
+  color: #967860;
+  font-weight: 600;
+  font-size: 1.375rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.item__details--jpname {
+  color: #967860;
+  font-size: 1rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  margin: 10px 0 10px;
+}
+.item__details--price {
+  color: #967860;
+  font-size: 1.4375rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1;
+}
+.item__details--icon {
+  width: 64px;
+}
+.item__details--icon img {
+  width: 100%;
+  height: auto;
+}
+.item__details--color {
+  width: 52%;
+  display: flex;
+}
+.item__details--color li {
+  width: 34px;
+  height: 34px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  margin: 0 6px 12px 6px;
+}
+.item__details--color.eye li:first-child {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/eye_color01.png");
+  margin: 0 6px 0 0;
+}
+.item__details--color.eye li:nth-child(2) {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/eye_color02.png");
+}
+.item__details--color.eye li:nth-child(3) {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/eye_color03.png");
+}
+.item__details--color.eye li.active:first-child {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/eye_color01-active.png");
+}
+.item__details--color.eye li.active:nth-child(2) {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/eye_color02-active.png");
+}
+.item__details--color.eye li.active:nth-child(3) {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/eye_color03-active.png");
+}
+.item__details--color.rip li:first-child {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/rip_color01.png");
+  margin: 0 6px 0 0;
+}
+.item__details--color.rip li:nth-child(2) {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/rip_color02.png");
+}
+.item__details--color.rip li:nth-child(3) {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/rip_color03.png");
+}
+.item__details--color.rip li.active:first-child {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/rip_color01-active.png");
+}
+.item__details--color.rip li.active:nth-child(2) {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/rip_color02-active.png");
+}
+.item__details--color.rip li.active:nth-child(3) {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/rip_color03-active.png");
+}
+.item__details--kikaku {
+  color: #967860;
+  font-size: 1.125rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1;
+  font-weight: 600;
+  margin-top: 12px;
+}
+.item__name {
+  color: #967860;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  letter-spacing: 1px;
+  margin: 0 auto 30px;
+}
+.item__intro {
+  margin: 0 auto 60px;
+}
+.item__intro img {
+  width: 100%;
+  height: auto;
+}
+.item__intro--name {
+  text-align: center;
+  color: #967860;
+  font-size: 1.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  margin: 38px 0 24px;
+}
+.item__intro--txt {
+  text-align: center;
+  color: #967860;
+  font-size: 1rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1.5;
+}
+.item__intro--txt inf {
+  font-size: 0.6em;
+}
+.item__intro--txt sup {
+  font-size: 0.6em;
+}
+.item__variation {
+  margin: 0 auto 100px;
+}
+.item__variation.rip {
+  max-width: 440px;
+  width: 100%;
+}
+.item__variation.eye {
+  max-width: 540px;
+  width: 100%;
+}
+.item__variation.eye .item__variation--himg {
+  max-width: 440px;
+  width: 100%;
+}
+.item__variation li {
+  margin-bottom: 110px;
+}
+.item__variation--himg {
+  display: block;
+  margin: 0 auto 10px;
+}
+.item__variation--himg img {
+  width: 100%;
+  height: auto;
+  border-radius: 27px;
+}
+.item__variation--name {
+  font-size: 1.125rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  color: #967860;
+  text-align: center;
+  line-height: 1.4;
+  font-weight: 600;
+  margin: 10px 0 4px;
+}
+.item__variation--namejp {
+  font-size: 0.6875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  color: #967860;
+  text-align: center;
+  line-height: 1.4;
+  margin: 0 0 15px;
+}
+.item__variation--txt {
+  font-size: 0.9375rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  color: #967860;
+  text-align: center;
+  line-height: 1.5;
+}
+.item__ripv--ttl {
+  text-align: center;
+  color: #967860;
+  font-weight: 600;
+  font-size: 1.4375rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.item__ripv--img {
+  margin: 0 auto;
+  max-width: 440px;
+  width: 100%;
+}
+.item__vbcream {
+  max-width: 400px;
+  width: 100%;
+  margin: -10px auto 100px;
+}
+.item__vbcream img {
+  width: 100%;
+  height: auto;
+}
+.item__vbpallet {
+  max-width: 540px;
+  width: 100%;
+  margin: -10px auto 100px;
+}
+.item__vbpallet img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (max-width: 768px) {
+  .item__details {
+    margin: 5vw auto 0;
+    width: 100%;
+  }
+  .item__details--inner.aic {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .item__details--lblc {
+    width: 82%;
+  }
+  .item__details--name {
+    font-size: 1.125rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    letter-spacing: 0;
+  }
+  .item__details--jpname {
+    font-size: 0.75rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 2vw 0;
+  }
+  .item__details--price {
+    font-size: 1.4375rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .item__details--icon {
+    width: 13vw;
+  }
+  .item__details--color {
+    width: 52%;
+    display: flex;
+  }
+  .item__details--color li {
+    width: 6.4vw;
+    height: 6.4vw;
+    margin: 0 6px 12px 6px;
+  }
+  .item__details--kikaku {
+    font-size: 1rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin-top: 8px;
+  }
+  .item__name {
+    font-size: 1.4375rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    letter-spacing: 0;
+    margin: 0 auto 5vw;
+  }
+  .item__intro {
+    margin: 0 auto 8vw;
+  }
+  .item__intro--name {
+    font-size: 1.4375rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 7vw -6vw 5vw;
+  }
+  .item__intro--txt {
+    font-size: 0.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 0 -6vw;
+  }
+  .item__variation {
+    margin: 0 auto 18vw;
+    width: 80vw;
+  }
+  .item__variation li {
+    margin-bottom: 18vw;
+  }
+  .item__variation--name {
+    font-size: 1rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 10px 0 4px;
+  }
+  .item__variation--namejp {
+    font-size: 0.625rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 0 0 15px;
+  }
+  .item__variation--txt {
+    font-size: 0.875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .item__ripv--ttl {
+    font-size: 1.125rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .item__ripv--img {
+    margin: 0 auto;
+    max-width: 100%;
+    width: 100%;
+  }
+  .item__vbcream {
+    max-width: 70vw;
+    width: 100%;
+    margin: -10px auto 18vw;
+  }
+  .item__vbpalle {
+    max-width: 100%;
+    width: 100%;
+    margin: -10px auto 18vw;
+  }
+}
+
+.point {
+  margin: 0 auto 80px;
+}
+.point__subttl {
+  text-align: center;
+  color: #967860;
+  font-size: 1.25rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  margin: 0 auto 14px;
+  line-height: 1;
+}
+.point__txtwrap {
+  margin: 0 auto 40px;
+  max-width: 440px;
+  width: 100%;
+}
+.point__txtwrap.point1 {
+  margin: 0 auto 10px;
+}
+.point__flxb {
+  display: flex;
+  justify-content: space-between;
+}
+.point__flxb--img {
+  min-width: 206px;
+  max-width: 206px;
+  width: 206px;
+  margin-left: 20px;
+}
+.point__flxb--img img {
+  width: 100%;
+  height: auto;
+}
+.point__flxb--img02 {
+  min-width: 138px;
+  max-width: 138px;
+  width: 138px;
+  margin-left: 37px;
+}
+.point__flxb--img02 img {
+  width: 100%;
+  height: auto;
+}
+.point__txt {
+  color: #967860;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-weight: 500;
+  font-size: 0.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.point__txt.center {
+  text-align: center;
+}
+.point__txt inf {
+  font-size: 0.6em;
+}
+.point__small {
+  font-size: 0.8125rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #967860;
+  margin-top: 10px;
+}
+.point__small inf {
+  font-size: 0.6em;
+}
+.point__small sup {
+  font-size: 0.6em;
+}
+.point__notice {
+  font-size: 0.6875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  color: #967860;
+}
+.point__eyeimg {
+  margin: 0 auto 30px;
+  max-width: 280px;
+  width: 100%;
+}
+.point__bcreamimg {
+  margin: 0 auto 80px;
+  max-width: 440px;
+  width: 100%;
+}
+.point__img {
+  margin: 0 auto 50px;
+  max-width: 440px;
+  width: 100%;
+}
+.point__img img {
+  width: 100%;
+  height: auto;
+}
+.point__steps {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto 80px;
+}
+.point__steps li {
+  color: #967860;
+  margin: 0 0 30px;
+}
+.point__steps--ttl {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+.point__steps--ttl .icon {
+  font-size: 0.9375rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 1px;
+}
+.point__steps--ttl inf {
+  font-size: 0.6em;
+}
+.point__steps--txt {
+  font-size: 0.8125rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1.4;
+  padding-left: 8px;
+}
+@media screen and (max-width: 768px) {
+  .point {
+    margin: 0 auto 12vw;
+    max-width: 80vw;
+  }
+  .point__txtwrap {
+    margin: 0 auto 6vw;
+    max-width: 80vw;
+  }
+  .point__txtwrap.point1 {
+    margin: 0 auto 2vw;
+  }
+  .point__txt {
+    font-size: 0.6875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .point__small {
+    font-size: 0.6875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin-top: 10px;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #967860;
+  }
+  .point__notice {
+    font-size: 0.625rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+  .point__eyeimg {
+    margin: 0 auto 7vw;
+    max-width: 64vw;
+  }
+  .point__bcreamimg {
+    margin: 0 auto 15vw;
+    max-width: 100%;
+    width: 100%;
+  }
+  .point__img {
+    margin: 0 auto 11vw;
+    max-width: 80vw;
+  }
+  .point__steps {
+    max-width: 80vw;
+    margin: 0 auto 10vw;
+  }
+  .point__steps li {
+    margin: 0 0 8vw;
+  }
+  .point__steps--ttl {
+    font-size: 0.6875rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 0 0 3vw;
+    line-height: 1.2;
+  }
+  .point__steps--ttl .icon {
+    font-size: 0.75rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin-right: 3px;
+  }
+  .point__steps--txt {
+    font-size: 0.625rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    line-height: 1.2;
+    padding-left: 8px;
+  }
+}
+
+.prescription {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto 80px;
+}
+.prescription__arrow--plus {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  position: relative;
+}
+.prescription__arrow--plus::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 1px;
+  height: 14px;
+  background-color: #967860;
+  transform: rotate(90deg);
+}
+.prescription__arrow--plus::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 1px;
+  height: 14px;
+  background-color: #967860;
+}
+.prescription__blc {
+  border: solid 1px #967860;
+  border-radius: 32px;
+  margin-bottom: 20px;
+}
+.prescription__blc--small {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 54px;
+  cursor: pointer;
+}
+.prescription__blc.show .prescription__arrow--plus::after {
+  opacity: 0;
+}
+.prescription__blc.show .prescription__arrow--plus::before {
+  transform: translateY(0%) rotate(90deg);
+}
+.prescription__ttl {
+  color: #967860;
+  font-size: 1rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1;
+}
+.prescription__sblc {
+  padding: 17px 54px 47px;
+  transition: all 0.4s ease-out;
+}
+.prescription__sblc--two {
+  margin: 0 auto;
+  padding-top: 20px;
+  max-width: 201px;
+}
+.prescription__sblc--two img {
+  width: 100%;
+  height: auto;
+}
+.prescription__sblc--three {
+  margin: 0 auto;
+  padding-top: 20px;
+  max-width: 268px;
+}
+.prescription__sblc--three img {
+  width: 100%;
+  height: auto;
+}
+.prescription__sblc--four {
+  margin: 0 auto;
+  padding-top: 20px;
+  max-width: 370px;
+}
+.prescription__sblc--ttl {
+  color: #967860;
+}
+.prescription__sblc--ttl.mt20 {
+  margin-top: 20px;
+}
+.prescription__sblc--seibun {
+  color: #967860;
+  font-size: 0.75rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1.3;
+  margin-top: 5px;
+}
+@media screen and (max-width: 768px) {
+  .prescription {
+    margin: 0 auto 8vw;
+  }
+  .prescription__blc {
+    border-radius: 8vw;
+    margin-bottom: 4vw;
+  }
+  .prescription__blc--small {
+    padding: 4vw 5vw;
+  }
+  .prescription__ttl {
+    color: #967860;
+    font-size: 1rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    line-height: 1;
+  }
+  .prescription__sblc {
+    padding: 3vw 5vw 8vw;
+  }
+  .prescription__sblc--two {
+    margin: 0 auto;
+    padding-top: 5vw;
+    max-width: 40vw;
+  }
+  .prescription__sblc--three {
+    margin: 0 auto;
+    padding-top: 5vw;
+    max-width: 50vw;
+  }
+  .prescription__sblc--four {
+    margin: 0 auto;
+    padding-top: 5vw;
+    max-width: 70vw;
+  }
+  .prescription__sblc--four {
+    margin: 0 auto;
+    padding-top: 20px;
+    max-width: 370px;
+  }
+  .prescription__sblc--seibun {
+    font-size: 0.75rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    line-height: 1.3;
+    margin-top: 5px;
+  }
+}
+
+.itemlast {
+  max-width: 540px;
+  width: 100%;
+  margin: 0 auto 120px;
+}
+.itemlast__img {
+  margin: 0 auto 36px;
+}
+.itemlast__img img {
+  width: 100%;
+  height: auto;
+}
+.itemlast__txt {
+  text-align: center;
+  color: #967860;
+  font-size: 1.625rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+@media screen and (max-width: 768px) {
+  .itemlast {
+    width: 100%;
+    margin: 0 auto 17vw;
+  }
+  .itemlast__img {
+    margin: 0 auto 18px;
+  }
+  .itemlast__txt {
+    font-size: 0.9375rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  }
+}
+
+.otheritem__ttl {
+  font-size: 1.875rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+  text-align: center;
+  color: #967860;
+  font-weight: 600;
+  margin: 0 auto 60px;
+}
+.otheritem .lineup__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 434px;
+  width: 100%;
+  margin: 0 auto;
+}
+.otheritem .lineup__list li {
+  margin: 0 0 75px;
+  width: 200px;
+}
+@media screen and (max-width: 768px) {
+  .otheritem__ttl {
+    font-size: 1.3125rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 0 auto 12vw;
+  }
+  .otheritem .lineup__list {
+    max-width: 80vw;
+  }
+  .otheritem .lineup__list li {
+    margin: 0 0 10vw;
+    width: 38vw;
+  }
 }
 
 body {
   font-family: "Montserrat", "Noto Sans JP", sans-serif;
-  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/bg_newcosme.jpg");
   background-repeat: repeat-y !important;
   background-size: 100% auto !important;
 }
 
-body.is-webp {
-  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/bg_newcosme.webp");
+body {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/bg_origin-pc.jpg");
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/bg_origin.jpg");
+  }
+}
+
+body.renewPage {
+  background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/bg_newcosme-pc.jpg");
+}
+@media screen and (max-width: 768px) {
+  body.renewPage {
+    background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/bg_newcosme.jpg");
+  }
+}
+
+.gmenu__sns--insta {
+  background: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/icon_menu_insta2408.svg") no-repeat 0 0;
+}
+.gmenu__sns--line {
+  background: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/icon_menu_line2408.svg") no-repeat 0 0;
+}
+.gmenu__sns--twitter {
+  background: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/icon_menu_twitter2408.svg") no-repeat 0 0;
+}
+.gmenu__sns--youtube {
+  background: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/icon_menu_youtube2408.svg") no-repeat 0 0;
+}
+
+.uptheader .uptgmenu__upperlinks li a {
+  color: #898989;
+}
+.uptheader .uptgmenu__head {
+  background-image: none;
+}
+.uptheader .uptgmenu__innerline {
+  border-right: none;
+  border-left: none;
+}
+.uptheader .uptgmenu__btm {
+  background: #898989;
+}
+
+@media screen and (max-width: 768px) {
+  body.is-web {
+    background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/bg_origin.webp");
+  }
+  .renewPage.is-webp {
+    background-image: url("https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/bg_newcosme.webp");
+  }
+}
+.content__ttl {
+  margin: 0 auto 60px;
+  text-align: center;
+  font-weight: 600;
+  color: #967860;
+  font-size: 2rem;
+  font-family: "Montserrat", "Noto Sans JP", sans-serif;
+}
+.content__ttl span {
+  display: inline-block;
+  padding: 0 13px;
+  border-bottom: solid 1px #967860;
+}
+.content__smallblc {
+  max-width: 440px;
+  margin: 0 auto;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .content {
+    font-size: 1.4375rem;
+    font-family: "Montserrat", "Noto Sans JP", sans-serif;
+    margin: 0 auto 11vw;
+  }
+  .content__ttl {
+    margin: 0 auto 8vw;
+  }
+  .content__smallblc {
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+  }
+}
+
+.c-announce_bar {
+  padding: 3px 60px;
+}
+
+summary {
+  display: block;
+  list-style: none;
+}
+
+/* 一部ブラウザで消えなかった場合は以下も追記 */
+summary::-webkit-details-marker {
+  display: none;
 }

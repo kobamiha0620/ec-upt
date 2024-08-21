@@ -2,14 +2,14 @@
 // 以下の設定値を記入のこと
 
 var pageinit = {
-    product: 'all',
+    product: 'eye',
     title : '',
     keywords : '' ,
     description : '' ,
     ogurl : '' ,
     ogimage : '' ,
     path : '' ,
-    ecforce : 'true',
+    ecforce : '',
     path : '' ,
     category : ['main'] ,
     pagename : '',
@@ -21,8 +21,8 @@ var pageinit = {
 %>
 
 <% 
-    // imgpath =  '';   
-    imgpath = '{{ theme_file_root_path }}';
+    imgpath =  '';   
+    // imgpath = '{{ stheme_file_root_path }}';
 
 %>
 
@@ -35,6 +35,72 @@ var pageinit = {
 
 
 <main class="l-container js-main-container uptprodcut" role="main" id="product-show-view">
+
+
+    <!-- アイメイク -->
+    <% if (pageinit.ecforce === 'true') { %>
+        {% if product.id == 20 %}
+        <% } %>
+    
+        <% if ((pageinit.product === 'eye') || (pageinit.product === 'all')) { %>
+        
+        <%- include('./_eye') %>
+
+        <% } %>
+    
+    <% if (pageinit.ecforce === 'true') { %>
+    {% endif %}
+    <% } %>
+    <!-- /アイメイク -->
+
+
+    <!-- リップ -->
+    <% if (pageinit.ecforce === 'true') { %>
+        {% if product.id == 21 %}
+        <% } %>
+    
+        <% if ((pageinit.product === 'rip') || (pageinit.product === 'all')) { %>
+        
+        <%- include('./_rip') %>
+
+        <% } %>
+    
+    <% if (pageinit.ecforce === 'true') { %>
+    {% endif %}
+    <% } %>
+    <!-- /リップ -->
+
+    <!-- スキンベースクリーム -->
+    <% if (pageinit.ecforce === 'true') { %>
+        {% if product.id == 19 %}
+        <% } %>
+    
+        <% if ((pageinit.product === 'bpallet') || (pageinit.product === 'all')) { %>
+        
+        <%- include('./_bpallet') %>
+
+        <% } %>
+    
+    <% if (pageinit.ecforce === 'true') { %>
+    {% endif %}
+    <% } %>
+    <!-- /スキンベースクリーム -->
+
+    <!-- スキンベースクリーム -->
+    <% if (pageinit.ecforce === 'true') { %>
+        {% if product.id == 18 %}
+        <% } %>
+    
+        <% if ((pageinit.product === 'bcream') || (pageinit.product === 'all')) { %>
+        
+        <%- include('./_bcream') %>
+
+        <% } %>
+    
+    <% if (pageinit.ecforce === 'true') { %>
+    {% endif %}
+    <% } %>
+    <!-- /スキンベースクリーム -->
 
 
     <!-- mask マスク -->
@@ -593,8 +659,9 @@ var pageinit = {
     <% } %>
 
     <% if ((pageinit.product === 'toner') ||(pageinit.product === 'milk') ||(pageinit.product === 'cream') ||(pageinit.product === 'set') || (pageinit.product === 'all')) { %>
-        <%- include('./_uruoi', { meta: imgpath }); %>
+        <%- include('./_uruou', { meta: imgpath }); %>
     <% } %>
+
     <% if (pageinit.ecforce == 'true') { %>
         {% endif %}
     <% } %>
@@ -620,9 +687,9 @@ var pageinit = {
  <% } %>
 
 
-    <% if ((pageinit.product === 'toner') ||(pageinit.product === 'milk') ||(pageinit.product === 'cream') ||(pageinit.product === 'handcream')  || (pageinit.product === 'all')) { %>
-        <%- include('./_uruou', { meta: imgpath }); %>
-    <% } %>
+    <!-- <a#% if ((pageinit.product === 'toner') ||(pageinit.product === 'milk') ||(pageinit.product === 'cream') ||(pageinit.product === 'handcream')  || (pageinit.product === 'all')) { %>
+        <#%- include('./_uruou', { meta: imgpath }); %>
+    <3% } %> -->
 
 
     <% if (pageinit.ecforce == 'true') { %>
@@ -642,6 +709,7 @@ var pageinit = {
     {% if base_info.use_related_products_on_detail? and p.active_related_products.size != 0 %}
     {% section 'products_show_recommend' %}
     {% endif %}
+
     <% } %>
 
 </main>
@@ -649,8 +717,13 @@ var pageinit = {
 
 <!-- product01 -->
 <% if (pageinit.ecforce === 'true') { %>
+        {% if product.id == 15 %}
+ <% } %>
 
 <link rel="stylesheet" href="{{ theme_file_root_path }}/assets/product.css" type="text/css">
+<!-- <link rel="stylesheet" href="{{ theme_file_root_path }}/assets/product_renew.css" type="text/css"> -->
+
+<% if (pageinit.ecforce === 'true') { %>
 
 {% content_for meta_description %}
 {% endcontent_for %}
@@ -660,17 +733,45 @@ var pageinit = {
 
 {% content_for title %}
 {% endcontent_for %}
-
-
+ {% endif %}
 <% } %>
 
 
 
-<!-- /共通block -->
-<%- include('./lpbnr'); %>
-<% if (pageinit.ecforce !== 'true') { %>
 
-<script src="/assets/lpbnr.js"></script>
-<% } else { %>
-<script src="{{ theme_file_root_path }}/assets/lpbnr.js"></script>
+
+
+<!-- Face -->
+<% if (pageinit.ecforce === 'true') { %>
+    {% if product.id == 18 or product.id == 19 or product.id == 20 or product.id == 21 %}
+
+ <% } %>
+
+    <% if (pageinit.product === 'eye' || pageinit.product === 'rip' || pageinit.product === 'bcream' ||  pageinit.product === 'bpallet' ||  pageinit.product === 'all') { %>
+        <!-- <link rel="stylesheet" href="<%= imgpath %>/assets/product_renew.css" type="text/css"> -->
+        <script src="<%= imgpath %>/assets/renewproduct.js"></script>
+        <script src="<%= imgpath %>/assets/swiperRenew.js"></script>
+    <% } %>
+
+<% if (pageinit.ecforce === 'true') { %>
+{% endif %}
 <% } %>
+<!-- Face -->
+
+<!-- /skincare -->
+<% if (pageinit.ecforce === 'true') { %>
+    {% if product.id == 2 or product.id == 3 or product.id == 4 or product.id == 5  or product.id == 9  or product.id == 10  or product.id == 11  or product.id == 15 or product.id == 16 or product.id == 17 %}
+
+ <% } %>
+ 
+    <% if ( pageinit.product === 'toner' || pageinit.product === 'milk' ||  pageinit.product === 'subsc' || pageinit.product === 'set' ||  pageinit.product === 'handcream' ||   pageinit.product === 'cream' ||   pageinit.product === 'cset' || pageinit.product === 'mask' || pageinit.product === 'balm' ||  pageinit.product === 'wash' ||  pageinit.product === 'all'){ %>
+        <%- include('./lpbnr'); %>
+        <script src="<%= imgpath %>/assets/lpbnr.js"></script>
+    <% } %>
+
+<% if (pageinit.ecforce === 'true') { %>
+{% endif %}
+<% } %>
+<!-- skincare -->
+
+

@@ -51,8 +51,6 @@ function subscFaq(){
 }
 subscFaq();
 
-});
-
 
 
 async function supportsWebp() {

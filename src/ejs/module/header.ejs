@@ -30,18 +30,11 @@ var imgpath = '';
 <header class="l-header u-color__bg--base u-color__border--border logo--{{section.settings.align_logo}}"
     data-section-id='header' data-section-type='header-section'>
     <div class="uptheader bg__header">
-
-        <% if (pageinit.ecforce === 'true') { %>
         <div class="c-announce_bar">
         <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>
         <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
       </div>
-        <% } else { %>
-        <div class="c-announce_bar">
-            <div class="c-announce_bar__text">テキストteskisuto</div>
-            <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
-            </div>
-         <% } %>
+
 
         {% if production != true and customize_preview_mode %}
         <div class="customize_notice">
@@ -106,7 +99,6 @@ var imgpath = '';
         {% endif %}
         {% endif %}
 
-        <% } %>
 
 
 
@@ -510,13 +502,7 @@ var imgpath = '';
 
     </div>
 </header>
-<style>
 
-    .c-announce_bar {
-      background-color: {{section.settings.color_bg}};
-      color: {{section.settings.color_text}};
-    }
-  </style>
 
 <div class="uptplane">
     <div class="uptplane__inner">

@@ -1781,7 +1781,7 @@ h2.upthome__illust--ttl {
   position: relative;
   line-height: 0;
   font-size: 0;
-  margin-top: -71px;
+  margin-top: -75px;
   height: calc(100vh - 28px);
 }
 .upthome__renew .upthomeSWiper {
@@ -1827,22 +1827,6 @@ h2.upthome__illust--ttl {
   left: calc(50% - 550px);
   transform: translateX(-50%);
   z-index: 2;
-}
-.upthome__renew .swiper-pagination {
-  z-index: 3;
-}
-.upthome__renew .swiper-pagination .swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  border: solid 1px #FF583B;
-  display: inline-block;
-  margin: 15px 0;
-  opacity: 1;
-  background: transparent;
-}
-.upthome__renew .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: #FF583B;
 }
 .upthome__renew .uptb.uptheader .uptheader__iconslc__inner {
   z-index: 3;
@@ -4701,8 +4685,17 @@ h2.upthome__illust--ttl {
   opacity: 1;
 }
 
+.cosmeSwiper__thumb .swiper-slide {
+  line-height: 0;
+  font-size: 0;
+}
+
 .cleansingSwiper {
   height: 91px;
+}
+.cleansingSwiper .swiper-slide {
+  line-height: 0;
+  font-size: 0;
 }
 
 .mySwiper2 {

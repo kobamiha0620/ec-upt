@@ -55,10 +55,6 @@
   animation-iteration-count: 1;
 }
 
-body {
-  background: #F7F8F8;
-}
-
 .bg__repeatWrapper {
   position: fixed;
   top: 0;

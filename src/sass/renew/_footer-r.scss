@@ -92,6 +92,7 @@ body.topPage{
         background-color: #967860;
       }
 }
+
 .uptfootersns__list {
     width: 400px;
     margin: 0 auto;
@@ -212,4 +213,8 @@ body.topPage {
 @media screen and (max-width: var.$tabw) {}
 
 //SP
-@media screen and (max-width: var.$spbp) {}
+@media screen and (max-width: var.$spbp) {
+    .uptfootersns{
+        padding-bottom: 5vw;
+    }
+}

@@ -1,0 +1,357 @@
+@use "./module/variable"as var;
+
+// タブレット
+@media screen and (max-width: var.$tabw) {}
+
+//SP
+@media screen and (max-width: var.$spbp) {}
+
+/* アニメーション（右から左に移動） */
+@keyframes scroll {
+    0% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-100%)
+    }
+}
+
+@keyframes fadeInAnime{
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes fadeOutAnime{
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.uptHeader__toppc{
+    display: none;
+}
+
+body.topPage{
+
+  .c-announce_bar {
+    background-color: #898989;
+  }
+
+  .uptblc__inner{
+    border: none;
+  }
+  
+  .uptHeader__toppc{
+    width: 100%;
+    display: block;
+    &--inner{
+        max-width: 1280px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 12px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &--logo{
+        @include var.bg();
+        background-image: url(var.$imgpath + "logo_uptHeader__toppc.png");
+        width: 91px;
+        height: 49px;
+        margin-left: 68px;
+        color: #444;
+
+    }
+    &--list{
+        color: white;
+        display: flex;
+        width: 898px;
+        justify-content: space-between;
+        align-items: center;
+        li{
+            @include var.fz(18);
+            font-weight: 600;
+        }
+    }
+    &.active{
+        background-color: #F7F8F8;       
+    }
+    @media screen and (max-width: 1279px) {
+
+        &--inner{
+            max-width: 980px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        &--logo{
+            width: 73px;
+            height: 40px;
+            margin-left: 0;
+        }
+        &--list{
+            width: 75%;
+            justify-content: space-between;
+            li{
+                @include var.fz(15);
+                font-weight: 600;
+            }
+        }
+    
+    }
+    @media screen and (max-width: var.$spbp) {
+        display: none;
+    }
+    &.active{
+        .uptHeader__toppc--list{
+            color: #898989;
+
+        }
+        .uptHeader__toppc--logo{
+            background-image: url(var.$imgpath + "logo_uptHeader__toppc-gray.png");
+
+        }
+    }
+  }
+  .uptheader{
+    
+    .uptblc{
+        display: none;
+    }
+    .c-gmenu{
+        .u-icon--close{
+            background-image: url(var.$imgpath + "closemenu_gray.svg");
+        }
+        &.is-active {
+            .u-icon--cart{
+                background-image: url(var.$imgpath + "icon_cart-gray.svg");
+            }
+            .u-icon--account{
+                background-image: url(var.$imgpath + "icon_mypage-gray.svg");
+            }
+        }
+    }
+    @media screen and (max-width: var.$spbp) {
+        &.bg__header{
+            .u-icon--menu{
+                color: #898989;
+            }    
+            .u-icon--menu{
+                background-image: url(var.$imgpath + "openmenu_gray.png");
+                width: 40px;
+                height: 17px;
+            }
+            .u-icon--cart {
+                background-image: url(var.$imgpath + "icon_cart-gray.svg");
+    
+            }
+            .u-icon--account{
+                background-image: url(var.$imgpath + "icon_mypage-gray.svg");
+    
+            }
+        }
+        background-image: none;
+        .uptblc{
+            display: block;
+        }
+        .u-icon--menu{
+            background-image: url(var.$imgpath + "openmenu_white.png");
+            width: 40px;
+            height: 17px;
+        }
+        .u-icon--cart {
+            background-image: url(var.$imgpath + "icon_cart-white.svg");
+
+        }
+        .u-icon--account{
+            background-image: url(var.$imgpath + "icon_mypage-white.svg");
+
+        }
+        .uptheader__icons--logo{
+            a{
+                background-image: url(var.$imgpath + "logo_uptHeader__toppc-gray.png");
+
+            }
+        }
+        .uptblc__inner{
+            border:none;
+        }
+        .uptheader__icons{
+            padding: 28px 3vw;
+        }
+        .uptgmenu__btm{
+            width: 101dvw;
+            width: 101vw;
+        }
+    }
+
+  }
+}
+body.topPage{
+
+    .uptplane__inner{
+        border: none;
+
+    }
+    .uptblc.top{
+        border-top: none;
+      }
+}
+body.renewPage{
+    
+    .uptblc__inner{
+        border: none;
+    }
+    .uptplane__inner{
+        border: none;
+    }
+    .uptblc.top{
+        border-top: none;
+      }
+    .uptheader{
+        background: none;
+        .uptheader__icons{
+            max-width: 440px;
+            width: 100%;
+            margin: 0 auto;
+            padding-right: 0;
+            padding-left: 0;
+        }
+        .uptblc__inner{
+            border: none;
+        }
+        .uptheader__icons{
+            .uptheader__icons--logo a{
+                background-image: url(var.$imgpath + "logo_uptHeader__toppc-brown.png");
+            }
+            .u-icon--menu{
+                background-image: url(var.$imgpath + "openmenu_brawn.png");
+                width: 40px;
+                height: 17px;
+            }
+            .u-icon--cart {
+                background-image: url(var.$imgpath + "icon_cart-brown.svg");
+    
+            }
+            .u-icon--account{
+                background-image: url(var.$imgpath + "icon_mypage-brown.svg");
+    
+            }
+    
+        }
+        @media screen and (max-width: var.$spbp) {
+            
+            background-image: none;
+
+
+            .uptblc__inner{
+                border:none;
+            }
+            .uptheader__icons{
+                padding: 28px 3vw;
+            }
+        }
+    
+      }
+}
+.uptheader{
+    .c-gmenu{
+        .u-icon--close{
+            background-image: url(var.$imgpath + "closemenu_gray.svg");
+        }
+        .u-icon--menu{
+            background-image: url(var.$imgpath + "openmenu_gray.png");
+            width: 40px;
+            height: 17px;
+        }
+        .u-icon--cart {
+            background-image: url(var.$imgpath + "icon_cart-gray.svg");
+
+        }
+        .u-icon--account{
+            background-image: url(var.$imgpath + "icon_mypage-gray.svg");
+
+        }
+
+
+    }
+}
+
+
+
+
+.swiper-pagination {
+    .swiper-pagination-bullet {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        border: solid 1px #FFF;
+        display: inline-block;
+        margin: 0 24px!important;
+        opacity: 1;
+        background: transparent;
+        &.swiper-pagination-bullet-active {
+            background-color: #FFF;
+        }
+    }
+    @media screen and (max-width: var.$spbp) {
+        display: block!important;
+        z-index: 3;
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            margin: 12px 0!important;
+            opacity: 1;
+    
+            &.swiper-pagination-bullet-active {
+                background-color: #FFF;
+            }
+        }
+    }
+}
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    width: 100%;
+    height: auto;
+    top: auto;
+    bottom: 30px;
+    left: 50%;
+    overflow: hidden;
+    transform: translateY(0);
+    transform: translateX(-50%);
+    @media screen and (max-width: var.$spbp) {
+        width: 14px;
+        height: 104px;
+        top: 50%;
+        left: auto;
+        right: 6.6vw;
+        overflow: hidden;
+        transform: translateY(-50%);
+        transform: translateX(0);
+    }
+}
+
+@media screen and (min-width: 1222px) {
+    .swiper-horizontal>.swiper-pagination-bullets,
+    .swiper-pagination-bullets.swiper-pagination-horizontal,
+    .swiper-pagination-custom,
+    .swiper-pagination-fraction {
+
+        margin-bottom: 0;
+
+    }
+}

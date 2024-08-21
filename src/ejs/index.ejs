@@ -97,15 +97,18 @@ var pageinit = {
 
 
 <link rel="stylesheet" type="text/css" media="all" href="./assets/uptofficial.css" />
-<link rel="stylesheet" type="text/css" media="all" href="./assets/uptrenew2408.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="./assets/uptrenew2408.css" />
 <link rel="stylesheet" type="text/css" media="all" href="./assets/bg.css" />
 
   </head>
   <body>
 
-      <div class="l-wrapper-none u-font__jp u-color__bg--base u-color__text--main">
+  
     
-        <%- include('./module/header'); %>
+
+    
+      <div class="l-wrapper-none u-font__jp u-color__bg--base u-color__text--main">
+        <%- include("./renew/header-r"); %> 
 
 
       <script>
@@ -115,8 +118,7 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
 </script>
       <script src="/assets/shop/base-d0abd894bcb21ec773ae85046859ae7d5fac60358dd1256d7dbc5e6233e8c58e.js"></script>      
       
-<%- include('./module/home'); %>
-
+<%- include('./renew/home_r'); %>
 <%- include('./module/footer'); %>
 
 

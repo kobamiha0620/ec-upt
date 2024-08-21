@@ -77,68 +77,19 @@
 
 
 <link rel="stylesheet" type="text/css" media="all" href="./assets/uptofficial.css" />
-<link rel="stylesheet" type="text/css" media="all" href="./assets/uptrenew2408.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="./assets/uptrenew2408.css" />
 <link rel="stylesheet" type="text/css" media="all" href="./assets/bg.css" />
 
   </head>
   <body>
-    
 
-
-<!-- BGとして ここから -->
-<!-- <div class="bg__repeatWrapper">
-    <div class="bg__repeatBlc">
-        <div class="bgw1">
-            <div class="maskbg1">
-                <picture class="bgImg01">
-                    <source srcset="/assets/images/uptorigin/bg01b-min.webp" type="image/webp">
-                    <source srcset="/assets/images/uptorigin/bg01b-min.webp" type="image/webp">
-                  
-                    <img class="imgFirst" src="/assets/images/uptorigin/bg01b-min.jpg" alt="背景画像1" width="auto" height="auto">
-                    <img class="" src="/assets/images/uptorigin/bg01b-min.jpg" alt="背景画像1" width="auto" height="auto">
-                </picture>
-            </div>
-        </div>
-
-        <div class="bgw2">
-            <div class="pc">
-                <div class="maskbg2">
-
-                <picture>
-                    <source srcset="/assets/images/uptorigin/bg02b.webp" type="image/webp">
-                    <source srcset="/assets/images/uptorigin/bg02b.webp" type="image/webp">
-                    <img class="imgFirst" src="/assets/images/uptorigin/0914/bg02b.jpg" alt="背景画像2" width="auto" height="auto">
-                    <img class="" src="/assets/images/uptorigin/0914/bg02b.jpg" alt="背景画像2" width="auto" height="auto">
-                </picture>
-
-            </div>
-            </div>
-            <div class="sp">
-
-                <picture class="maskbg2">
-                    <source srcset="/assets/images/uptorigin/bg03spb.webp" type="image/webp">
-                    <source srcset="/assets/images/uptorigin/bg03spb.webp" type="image/webp">
-                    <img class="imgFirst" src="/assets/images/uptorigin/bg03spb.png" alt="背景画像2" width="auto" height="auto">
-                    <img class="" src="/assets/images/uptorigin/bg03spb.png" alt="背景画像2" width="auto" height="auto">
-                </picture>
-            </div>
-        </div>
-    </div>
-
-</div> -->
-<!-- BGとして　ここまで -->
-
-
-
-    
-
-
+  
     
 
     
       <div class="l-wrapper-none u-font__jp u-color__bg--base u-color__text--main">
-    
         
+
 
 
   
@@ -150,12 +101,14 @@
     <div class="uptheader bg__header">
 
         
-      <div class="c-announce_bar">
-        <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>
-        <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
-      </div>
-        
+        <div class="c-announce_bar">
+            <div class="c-announce_bar__text">テキストteskisuto</div>
+            <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
+          </div>
+         
 
+         
+        
 
 
         <div class="uptblc">
@@ -345,6 +298,7 @@
                                 <img src="/assets/images/uptorigin/bnr_sp240517.png" alt="安達祐実" width="1360"
                                     height="368">
                             </picture>
+                            </a>
                         </div>
                             <div class="uptgmenu__sns">
                                 <!-- <p class="uptgmenu__sns__ttl">FOLLOW US</p> -->
@@ -376,14 +330,7 @@
                             <p class="uptgmenu__btm--logo"><a href="/">Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト。</a></p>
                             <ul class="uptgmenu__btm--links">
                                 <li>
-                                    <a href="/shop/products/upt_skincareset-subscribe/">定期お届けコース ｜ </a><a href="/shop/pages/shoplist" target="_blank">ショップリスト</a>
-                                </li>
-                                <li>
-                                    <a href="/shop/pages/magazine">メディア掲載情報</a> 
-                                </li>
-
-                                <li>
-                                    <a href="/shop/guide/">ご利用ガイド ｜ </a><a href="https://mano-mano.co.jp/" target="_blank">会社概要</a>
+                                    <a href="/shop/guide/">キャンセル・変更規定・返品に関して</a>
                                 </li>
                                 <li>
                                     <a href="/shop/law_info/">特定商取引に基づく表記</a>
@@ -394,6 +341,10 @@
                                 <li>
                                     <a href="/shop/customer_term/">利用規約</a>
                                 </li>
+                                <li>
+                                    <a href="/shop/guide/">送料に関して</a>
+                                </li>
+
                             </ul>
                             <p class="uptgmenu__btm--copy"><small>© 2022 Upt All Rights Reserved</small></p>
 
@@ -545,18 +496,41 @@
         </div>
 
     </div>
+
+    <section class="uptHeader__toppc">
+        <div class="uptHeader__toppc--inner">
+
+
+        <div class="uptHeader__toppc--logo"> 
+            <a href="/">Upt</a>
+        </div>
+        <ul class="uptHeader__toppc--list">
+            <li><a href="#concept">CONCEPT</a></li>
+            <li><a href="#lineup">LINEUP</a></li> 
+            <li><a href="#topCosme">COSME</a></li>
+            <li><a href="#skincare">SKINCARE</a></li>
+            <li><a href="/shop/pages/about  ">ABOUT</a></li>
+            <li><a href="/shop/pages/shoplist/">SHOP LIST</a></li>
+        </ul>
+    </div>
+    </section>
+
 </header>
 <style>
-
-    .c-announce_bar {
-      background-color: {{section.settings.color_bg}};
-      color: {{section.settings.color_text}};
+    .uptheader .uptheader__anounce{
+      background-color: transparent;
     }
-  </style>
+        .c-announce_bar {
+          background-color: {{section.settings.color_bg}}!important;
+          color: {{section.settings.color_text}};
+        }
+        body.topPage .c-announce_bar {
+        background-color: #898989!important;  }
+    </style>
 
 <div class="uptplane">
-    <div class="uptplane__inner">
 
+    <div class="uptplane__inner"> 
 
 
       <script>
@@ -576,509 +550,436 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
 <script src="https://kit.fontawesome.com/7304ec542e.js" crossorigin="anonymous"></script>
 <main class="l-container js-main-container upthome" role="main">
 
-    <section class="upthome__renew" id="js-uptHome">
-        <div class="upthomeSWiper">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
-                <!-- Slides -->
-                <div class="swiper-slide">
-                    <picture class="pcImg">
-                        <source srcset="/assets/images/uptorigin/img_2405top01-pc.webp" type="image/webp">
-                        <img src="/assets/images/uptorigin/img_2405top01-pc.jpg" alt="安達祐実" width="4098"
-                            height="2304">
-                    </picture>
-                    <picture class="spImg">
-                        <source srcset="/assets/images/uptorigin/img_2405top01-sp.webp" type="image/webp">
-                        <img src="/assets/images/uptorigin/img_2405top01-sp.jpg" alt="安達祐実" width="3252"
-                            height="3248">
-                    </picture>
-                    <div class="pc">
-                        <h1 class="upthome__fv--logo"> Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト</h1>
-                    </div>
-                    <div class="sp">
-                        <h1 class="upthome__fv--logo"> Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト</h1>
-                    </div>
-                    <div class="upthome__fv--feature"></div>
-                    <p class="upthome__fv--feature-txt">新商品発売開始</p>
-                </div>
+  <section class="upthome__renew" id="js-uptHome">
+    <div class="upthomeSWiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <picture class="pcImg">
+            <source srcset="/assets/images/uptorigin/swipe_img01-pc.webp" type="image/webp">
+            <img src="/assets/images/uptorigin/swipe_img01-pc.jpg" alt="安達祐実" width="5464" height="3072">
+          </picture>
+          <picture class="spImg">
+            <source srcset="/assets/images/uptorigin/swipe_img01-sp.webp" type="image/webp">
+            <img src="/assets/images/uptorigin/swipe_img01-sp.jpg" alt="安達祐実" width="3252" height="3248">
+          </picture>
 
-                <div class="swiper-slide">
-                    <picture class="pcImg">
-                        <source srcset="/assets/images/uptorigin/img_2405top02-pc.webp" type="image/webp">
-                        <img src="/assets/images/uptorigin/img_2405top02-pc.jpg" alt="安達祐実" width="4098"
-                            height="2304">
-                    </picture>
-                    <picture class="spImg">
-                        <source srcset="/assets/images/uptorigin/img_2405top02-sp.webp" type="image/webp">
-                        <img src="/assets/images/uptorigin/img_2405top02-sp.jpg" alt="安達祐実" width="3252"
-                            height="3248">
-                    </picture>
-                    <div class="pc">
-                        <h1 class="upthome__fv--logo"> Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト</h1>
-                    </div>
-                    <div class="sp">
-                        <h1 class="upthome__fv--logo"> Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト</h1>
-                    </div>
-                    <div class="upthome__fv--feature"></div>
-                    <p class="upthome__fv--feature-txt">新商品発売開始</p>
-                </div>
-
-                <div class="swiper-slide movieTpPc">
-
-                    <a href="https://mikazuki-movie.com/" target="_blank" class="">
-                        <picture class="pcImg">
-                            <source srcset="/assets/images/uptorigin/movie.webp" type="image/webp">
-                            <img src="/assets/images/uptorigin/movie.jpg" alt="安達祐実" width="1920"
-                                height="1080">
-                        </picture>
-                        <picture class="spImg">
-                            <source srcset="/assets/images/uptorigin/top_movie2_sp.webp"
-                                type="image/webp">
-                            <img src="/assets/images/uptorigin/top_movie2_sp.jpg" alt="安達祐実" width="3252"
-                                height="3248">
-                        </picture>
-                    </a>
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-
-            </div>
-            <div class="upthome__renew--rightline"></div>
-            <div class="upthome__renew--leftline"></div>
-
-
-            <!-- <div class="sp">
-            <h1 class="upthome__fv--logo"> Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト</h1>
-        </div> -->
-            <!-- <h1 class="upthome__fv--logo"> Upt 安達祐実プロデュースコスメブランド『Upt (ウプト) 』公式ブランドサイト</h1> -->
-    </section>
-    <section class="uptline"></section>
-
-    <section class="upthome__wash">
-        <h2 class="uptblc__ttl">PRODUCTS</h2>
-        <!-- 共通部分・商品ページ -->
-        <section class="upthome__products">
-            
-
-
-
-
-<ul class="upthome__products--blc maskblc">
-    <li>
-        <a href="/shop/products/4595121188332">
-            <div class="upthome__products--blc-box">
-                <div class="pc">
-                    <picture>
-                        <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_mask01.webp"
-                            type="image/webp">
-    
-                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_mask01.jpg"
-                            alt="CALMING SERUM MASK" width="1650" height="1095">
-                    </picture>
-                </div>
-                <div class="sp">
-                    <picture>
-                        <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_mask01-sp.webp"
-                            type="image/webp">
-    
-                        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_mask01-sp.jpg"
-                            alt="CALMING SERUM MASK" width="690" height="690">
-                    </picture>
-                </div>
-
-
-
-                <div class="upthome__products--nameblc">
-                    <h3 class="upthome__products--name">CALMING SERUM MASK</h3>
-                    <p class="upthome__products--jpname">カーミングセラムマスク<span class="italic">4sheets</span></p>
-                </div>
-                <p class="upthome__products--feature"></p>
-                <p class="upthome__products--featuretxt">New</p>
-
-            </div>
-            <p class="upthome__products--linkbtn">
-                <span>詳細はこちら</span>
-            </p>
-        </a>
-    </li>
-    <li class="mask">
-        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_mask02b.jpg"
-        alt="CALMING SERUM MASK" width="2204" height="1968">
-
-    </li>
-
-</ul>
-
-            
-
-
-
-<ul class="upthome__products--blc deverse">
-    <li>
-        <a href="/shop/products/handcream">
-            <div class="upthome__products--blc-box">
-                <picture>
-                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/home_product-handcream.webp"
-                        type="image/webp">
-
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/home_product-handcream.png"
-                        alt="HAND CREAM ハンドクリーム" width="1104" height="1095">
-                </picture>
-
-                <div class="upthome__products--nameblc">
-                    <h3 class="upthome__products--name">HAND CREAM</h3>
-                    <p class="upthome__products--jpname">ハンドクリーム<span class="italic">20g</span></p>
-                </div>
-                <!-- <p class="upthome__products--feature"></p>
-                <p class="upthome__products--featuretxt">New</p> -->
-
-            </div>
-            <p class="upthome__products--linkbtn">
-                <span>詳細はこちら</span>
-            </p>
-        </a>
-    </li>
-    <li>
-        <a href="/shop/products/creamy_whipwash">
-            <div class="upthome__products--blc-box">
-                <picture>
-                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/home_product-wash.webp"
-                        type="image/webp">
-
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/home_product-wash.png"
-                        alt="CREAMY WHIP WASH クリーミーホイップウォッシュ" width="1104" height="1095">
-                </picture>
-                <div class="upthome__products--nameblc">
-                    <h3 class="upthome__products--name">CREAMY WHIP WASH</h3>
-                    <p class="upthome__products--jpname">クリーミーホイップウォッシュ<span class="italic">200mL</span></p>
-                </div>
-            </div>
-            <p class="upthome__products--linkbtn">
-                <span>詳細はこちら</span>
-            </p>
-        </a>
-    </li>
-    <li>
-        <a href="/shop/products/cleansing_balm">
-            <div class="upthome__products--blc-box">
-                <picture>
-                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/home_product-balm.webp"
-                        type="image/webp">
-
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/home_product-balm.png"
-                        alt="CLEANSING BALM クレンジングバーム" width="1104" height="1095">
-                </picture>
-
-                <div class="upthome__products--nameblc">
-                    <h3 class="upthome__products--name">CLEANSING BALM</h3>
-                    <p class="upthome__products--jpname">クレンジングバーム<span class="italic">100g</span></p>
-                </div>
-            </div>
-            <p class="upthome__products--linkbtn">
-                <span>詳細はこちら</span>
-            </p>
-        </a>
-    </li>
-
-</ul>
-
-
-            
-
-<ul class="upthome__products--blc">
-    <li>
-        <a href="/shop/products/balancing_toner">
-            <div class="upthome__products--blc-box">
-                <picture>
-                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/home_prodcut01.webp"
-                        type="image/webp">
-
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0926/home_prodcut01b.jpg"
-                        alt="BALANCING TONER バランシングトナー" width="auto" height="auto">
-                </picture>
-
-                <div class="upthome__products--nameblc">
-                    <h3 class="upthome__products--name">BALANCING TONER</h3>
-                    <p class="upthome__products--jpname">バランシングトナー<span class="italic">155mL</span></p>
-                </div>
-            </div>
-            <p class="upthome__products--linkbtn">
-                <span>詳細はこちら</span>
-            </p>
-        </a>
-    </li>
-    <li>
-        <a href="/shop/products/conditioning_milk">
-            <div class="upthome__products--blc-box">
-                <picture>
-                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/home_prodcut02.webp"
-                        type="image/webp">
-
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut02.png"
-                        alt="CONDITIONING MILK コンディショニングミルク" width="auto" height="auto">
-                </picture>
-                <div class="upthome__products--nameblc">
-                    <h3 class="upthome__products--name">CONDITIONING MILK</h3>
-                    <p class="upthome__products--jpname">コンディショニングミルク<span class="italic">120mL</span></p>
-                </div>
-            </div>
-            <p class="upthome__products--linkbtn">
-                <span>詳細はこちら</span>
-            </p>
-        </a>
-    </li>
-    <li>
-        <a href="/shop/products/moisturizing_cream">
-            <div class="upthome__products--blc-box">
-                <picture>
-                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/home_prodcut03.webp"
-                        type="image/webp">
-
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/0914/home_prodcut03.png" width="auto"
-                        height="auto" alt="MOISTURIZING CREAM モイスチャライジングクリーム">
-                </picture>
-                <div class="upthome__products--nameblc">
-                    <h3 class="upthome__products--name">MOISTURIZING CREAM</h3>
-                    <p class="upthome__products--jpname">モイスチャライジングクリーム<span class="italic">40g</span></p>
-                </div>
-            </div>
-            <p class="upthome__products--linkbtn">
-                <span>詳細はこちら</span>
-            </p>
-        </a>
-    </li>
-</ul>
-
-
-        </section>
-        <!-- 共通部分・商品ページ -->
-        <section class="upthome__producer">
-            <div class="upthome__producer--inner">
-                <div class="producer__inner">
-                    <div>
-                        <h2 class="headingttl">PRODUCER</h2>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <h2 class="uptblc__ttl">落とすケア</h2>
-        <a href="/shop/products/upt_cleansingset" class="upthome__wash--img">
-            <div class="upthome__wash--img-imgblc">
-                <div class="pc">
-                    <picture>
-                        <source srcset="/assets/images/uptorigin/upthome__wash--img01pc.webp"
-                            type="image/webp">
-                        <img src="/assets/images/uptorigin/upthome__wash--img01pc.jpg" alt="安達祐実"
-                            width="1332" height="968">
-                    </picture>
-                </div>
-                <div class="sp">
-                    <picture>
-                        <source srcset="/assets/images/uptorigin/upthome__wash--img01sp.webp"
-                            type="image/webp">
-                        <img src="/assets/images/uptorigin/upthome__wash--img01sp.jpg" alt="安達祐実"
-                            width="1035" height="1329">
-                    </picture>
-                </div>
-            </div>
-            <div class="upthome__wash--img-txtblc">
-                <div class="pc">
-                    <img src="/assets/images/uptorigin/upthome__wash--img02pc.svg" alt="安達祐実" width="436"
-                        height="413">
-                </div>
-                <div class="sp">
-                    <img src="/assets/images/uptorigin/upthome__wash--img02sp.svg" alt="安達祐実" width="346"
-                        height="487">
-                </div>
-            </div>
-        </a>
-
-    </section>
-
-
-
-
-
-    <section class="uptline"></section>
-
-    <h2 class="uptblc__ttl">うるおうケア</h2>
-
-    <section class="upthome__sets">
-        <a href="/shop/products/upt_skincareset" class="upthome__wash--img">
-
-            <div class="upthome__wash--img-imgblc">
-                <div class="pc">
-                    <picture>
-                        <source srcset="/assets/images/uptorigin/upthome__set--img01pc.webp"
-                            type="image/webp">
-                        <img src="/assets/images/uptorigin/upthome__set--img01pc.jpg" alt="安達祐実"
-                            width="1332" height="1114">
-                    </picture>
-                </div>
-                <div class="sp">
-                    <picture>
-                        <source srcset="/assets/images/uptorigin/upthome__set--img01sp.webp"
-                            type="image/webp">
-                        <img src="/assets/images/uptorigin/upthome__set--img01sp.jpg" alt="安達祐実"
-                            width="1035" height="1329">
-                    </picture>
-                </div>
-            </div>
-            <div class="upthome__wash--img-txtblc">
-                <div class="pc">
-                    <img src="/assets/images/uptorigin/upthome__set--img02pc.svg" alt="安達祐実" width="436"
-                        height="484">
-                </div>
-                <div class="sp">
-                    <img src="/assets/images/uptorigin/upthome__set--img02sp.svg" alt="安達祐実" width="346"
-                        height="590">
-                </div>
-            </div>
-
-        </a>
-
-    </section>
-    <section class="uptline"></section>
-
-
-
-
-
-    <section class="upthome__yumi" id="">
-        <div class="upthome__yumi--blc">
-            <div id="PRODUCER" style="padding-top: 90px; margin-top: -90px;"></div>
-
-            <picture class="pcImg">
-                <source srcset="/assets/images/uptorigin/img_producer2405-pc.webp" type="image/webp">
-                <img src="/assets/images/uptorigin/img_producer2405-pc.jpg" alt="プロデューサー" width="1653"
-                    height="2022">
-            </picture>
-
-            <picture class="spImg">
-                <source srcset="/assets/images/uptorigin/img_producer2405-sp.webp" type="image/webp">
-                <img src="/assets/images/uptorigin/img_producer2405-sp.jpg" alt="プロデューサー" width="1380"
-                    height="2264">
-            </picture>
         </div>
 
-        <section class="uptline"></section>
-        <div class="upthome__yumi--blc right">
-            <div class="upthome__yumi--sblc">
-                <p class="upthome__yumi--txt">年齢を重ねることは、老いていくとか、<br>
-                    人生の残り時間が減っていくと<br>
-                    感じることもあるかもしれません。<br>
-                    でもそれだけではなく、<br>
-                    日々人生を重ねて、経験や思い出を増やして、<br>
-                    豊かになることでもあると思うのです。<br>
-                    美しさとは、内面や人生が滲み出てこそ<br>
-                    際立つものだと考えます。<br>
-                    <br>
-                    お肌は自分を表現する一つの要素に過ぎない。<br>
-                    だけどとても大切な要素。<br>
-                    <br>
-                    Uptが、持って生まれたものを愛すること、<br>
-                    受け入れて更新していく事に繋がれば、<br>
-                    とても嬉しいです。</p>
+        <div class="swiper-slide">
+          <picture class="pcImg">
+            <source srcset="/assets/images/uptorigin/swipe_img02-pc.webp" type="image/webp">
+            <img src="/assets/images/uptorigin/swipe_img02-pc.jpg" alt="安達祐実" width="5464" height="3072">
+          </picture>
+          <picture class="spImg">
+            <source srcset="/assets/images/uptorigin/swipe_img02-sp.webp" type="image/webp">
+            <img src="/assets/images/uptorigin/swipe_img02-sp.jpg" alt="安達祐実" width="3252" height="3248">
+          </picture>
 
-                <p class="upthome__yumi--sign">Yumi Adachi</p>
-            </div>
+
         </div>
 
-    </section>
+        <div class="swiper-slide">
 
-    <section class="uptline"></section>
+          <picture class="pcImg">
+            <source srcset="/assets/images/uptorigin/swipe_img03-pc.webp" type="image/webp">
+            <img src="/assets/images/uptorigin/swipe_img03-pc.jpg" alt="安達祐実" width="5464" height="3072">
+          </picture>
+          <picture class="spImg">
+            <source srcset="/assets/images/uptorigin/swipe_img03-sp.webp" type="image/webp">
+            <img src="/assets/images/uptorigin/swipe_img03-sp.jpg" alt="安達祐実" width="3252" height="3248">
+          </picture>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
 
-
-    <section class="upthome__illust">
-        <p class="upthome__illust--ttl">安達 祐実（あだち ゆみ）</p>
-        <p class="upthome__illust--txt">
-            1981年9月14日生まれ。2歳からキッズモデルとして活動を始め、94年の日本テレビ系ドラマ『家なき子』で本格的にブレイク。同作品の台詞は、新語・流行語大賞にも選ばれるなど社会現象となった。以降も幅広い役をこなす実力派俳優として数々のドラマ、映画に出演する他、ファッションブランドのプロデュース等、活動は多岐に渡る。
+      </div>
+      <div class="sp">
+        <p class="upthome__renew--logo">
+          
+          <img src="/assets/images/uptorigin/logo_upt-sptop.png" alt="Upt"
+            class="upthome__renew--logo-img" width="880" height="475">
         </p>
-    </section>
 
-    
+      </div>
+  </section>
+
+  <section id="concept" class="concept">
+    <h2 class="top__ttl"><span>CONCEPT</span></h2>
+    <div class="concept__img">
+      <div class="pc">
+        <picture>
+          <source srcset="/assets/images/uptorigin/img_concept2408.webp" type="image/webp">
+          <img src="/assets/images/uptorigin/img_concept2408.jpg" alt="プロデューサー" width="1638"
+            height="1092">
+        </picture>
+      </div>
+
+      <div class="sp">
+        <picture>
+          <source srcset="/assets/images/uptorigin/img_concept--topsp.webp" type="image/webp">
+          <img src="/assets/images/uptorigin/img_concept--topsp.jpg" alt="" width="1200" height="1445">
+        </picture>
+      </div>
+      <div class="concept__img--txtblc">
+        <p class="concept__img--txt01">UP TO YOU</p>
+        <p class="concept__img--txt02">もっと自由に、変化の中で生きていく</p>
+      </div>
+
+    </div>
+    <div class="sp">
+      <p class="concept__more" id="conceptMore">MORE</p>
+    </div>
+    <div class="concept__txt--wrapper" id="conceptMore__txts">
+      <p class="concept__txt">メイクは私にとって日々の“遊び”だと思っています。<br>
+        その日の気分に合わせて、私を変化させてくれる魔法の遊び。</p>
+      <p class="concept__txt">昨日の自分はあんまり好きになれなかったけど、今日の自分はなんだか好き。<br>
+        気分は毎日のように変わるし、固定的な自分なんていない。<br>
+        変化の中で生きること自体が自分らしさの一部となるし、<br>
+        それは裏返せば、いつだってなりたい自分になれるということ。</p>
+      <p class="concept__txt">メイクはそんな自分らしさを表現してくれるものだから、<br>
+        どんな気分だって、楽しく受け入れてくれるようなものにしたかった。<br>
+        その日の気分がアガって、一日中ウキウキするような楽しいコスメに。<br>
+        もっと自由に、もっとメイクが楽しくなりますように。</p>
+    </div>
+  </section>
+
+  <section id="lineup" class="lineup">
+    <h2 class="top__ttl"><span>LINE UP</span></h2>
+
+    <div id="topCosme" class="topCosme">
+      <h3 class="cosme__ttl">COSMETICS</h3>
+      
+
+<ul class="lineup__list">
+  <li>
+    <a href="/shop/products/4595121188356">
+      <div class="lineup__list--img">
+        <picture>
+          <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_cosme-product01.webp" type="image/webp">
+          <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_cosme-product01.jpg" alt="" width="400"
+            height="400">
+        </picture>
+        <div class="lineup__list--badge"></div>
+        <span class="lineup__list--badge-new">NEW</span>
+      </div>
+      <p class="lineup__list--name">SKIN BASE CREAM</p>
+      <p class="lineup__list--namejp">スキンベースクリーム</p>
+    </a>
+  </li>
+  <li>
+    <a href="/shop/products/4595121188394">
+      <div class="lineup__list--img">
+        <picture>
+          <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_cosme-product02.webp" type="image/webp">
+          <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_cosme-product02.jpg" alt="" width="400"
+            height="400">
+        </picture>
+        <div class="lineup__list--badge"></div>
+        <span class="lineup__list--badge-new">NEW</span>
+      </div>
+      <p class="lineup__list--name">PERFECT BASE PALETTE</p>
+      <p class="lineup__list--namejp">パーフェクトベースパレット</p>
+    </a>
+  </li>
+  <li>
+    <a href="/shop/products/4595121188363">
+      <div class="lineup__list--img">
+        <picture>
+          <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_cosme-product03.webp" type="image/webp">
+          <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_cosme-product03.jpg" alt="" width="400"
+            height="400">
+        </picture>
+        <div class="lineup__list--badge"></div>
+        <span class="lineup__list--badge-new">NEW</span>
 
 
+      </div>
+      <p class="lineup__list--name">EYE COLOR PALETTE</p>
+      <p class="lineup__list--namejp">アイカラーパレット</p>
+      <div class="lineup__list--color">
+        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/color_cosme-eye.png" alt="" width="151" height="27">
+      </div>
+    </a>
+  </li>
+  <li>
+    <a href="/shop/products/4595121188424">
+      <div class="lineup__list--img">
+        <picture>
+          <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/img_cosme-product04.webp" type="image/webp">
+          <img src="{{ theme_file_root_path }}/assets/images/uptorigin/img_cosme-product04.jpg" alt="" width="400"
+            height="400">
+        </picture>
+        <div class="lineup__list--badge"></div>
+        <span class="lineup__list--badge-new">NEW</span>
 
-    
 
-    <div class="c-movie_modal">
-        <div class="c-movie_modal__inner">
-            <i class="c-movie_modal__inner__close u-icon--close u-color__text--base js-close-movie"></i>
-            <div class="c-movie_modal__inner__content">
-                <div id='ytplayer-modal'></div>
-            </div>
-        </div>
+      </div>
+      <p class="lineup__list--name">WATERY SHEER LIP</p>
+      <p class="lineup__list--namejp">ウォータリーシアーリップ</p>
+      <div class="lineup__list--color">
+        <img src="{{ theme_file_root_path }}/assets/images/uptorigin/color_cosme-rip.png" alt="" width="151" height="27">
+      </div>
+    </a>
+  </li>
+</ul>
+
     </div>
 
-    
 
-</main>
-<!-- <div class="modal__bg js_modal_close" id="modal_bg" style=""></div>
-<div class="modal" id="js_modal">
+    <div id="skincare" class="skincare">
+      <h3 class="skincare__ttl">SKINCARE</h3>
+      <ul class="lineup__list">
+        <li>
+          <a href="/shop/products/4595121188332">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="/assets/images/uptorigin/img_skincare-product01.webp" type="image/webp">
+                <img src="/assets/images/uptorigin/img_skincare-product01.jpg" alt="" width="400"
+                  height="400">
+              </picture>
+
+            </div>
+            <p class="lineup__list--name">CALMING SERUM MASK</p>
+            <p class="lineup__list--namejp">カーミングセラムマスク</p>
+          </a>
+        </li>
+        <li>
+          <a href="/shop/products/balancing_toner">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="/assets/images/uptorigin/img_skincare-product02.webp" type="image/webp">
+                <img src="/assets/images/uptorigin/img_skincare-product02.jpg" alt="" width="400"
+                  height="400">
+              </picture>
+
+            </div>
+            <p class="lineup__list--name">BALANCING TONER</p>
+            <p class="lineup__list--namejp">バランシングトナー</p>
+          </a>
+        </li>
+        <li>
+          <a href="/shop/products/conditioning_milk">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="/assets/images/uptorigin/img_skincare-product03.webp" type="image/webp">
+                <img src="/assets/images/uptorigin/img_skincare-product03.jpg" alt="" width="400"
+                  height="400">
+              </picture>
 
 
-<div class="modal-content">
-        <div class="modal__contents">
-            <div class="modal__contents--inner">
-                <a href="https://uptofficial.jp/shop/pages/newitems2408" style="display: block;">
-                    
+            </div>
+            <p class="lineup__list--name">CONDITIONING MILK</p>
+            <p class="lineup__list--namejp">コンディショニングミルク</p>
 
-    <picture>
-        <source srcset="/assets/images/uptorigin/newitems_banner00.webp" type="image/webp">
-        <img src="/assets/images/uptorigin/newitems_banner00.png" alt="安達祐実" width="1800" height="1230">
+          </a>
+        </li>
+        <li>
+          <a href="/shop/products/moisturizing_cream">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="/assets/images/uptorigin/img_skincare-product04.webp" type="image/webp">
+                <img src="/assets/images/uptorigin/img_skincare-product04.jpg" alt="" width="400"
+                  height="400">
+              </picture>
+            </div>
+            <p class="lineup__list--name">MOISTURIZING CREAM</p>
+            <p class="lineup__list--namejp">モイスチャライジングクリーム</p>
+          </a>
+        </li>
+        <li>
+          <a href="/shop/products/cleansing_balm">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="/assets/images/uptorigin/img_skincare-product05.webp" type="image/webp">
+                <img src="/assets/images/uptorigin/img_skincare-product05.jpg" alt="" width="400"
+                  height="400">
+              </picture>
+            </div>
+            <p class="lineup__list--name">CLEANSING BALM</p>
+            <p class="lineup__list--namejp">クレンジングバーム</p>
+          </a>
+        </li>
+        <li>
+          <a href="/shop/products/creamy_whipwash">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="/assets/images/uptorigin/img_skincare-product06.webp" type="image/webp">
+                <img src="/assets/images/uptorigin/img_skincare-product06.jpg" alt="" width="400"
+                  height="400">
+              </picture>
+            </div>
+            <p class="lineup__list--name">CREAMY WHIP WASH</p>
+            <p class="lineup__list--namejp">クリーミーホイップウォッシュ</p>
+          </a>
+        </li>
+        <li>
+          <a href="/shop/products/handcream">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="/assets/images/uptorigin/img_skincare-product07.webp" type="image/webp">
+                <img src="/assets/images/uptorigin/img_skincare-product07.jpg" alt="" width="400"
+                  height="400">
+              </picture>
+            </div>
+            <p class="lineup__list--name">HAND CREAM</p>
+            <p class="lineup__list--namejp">ハンドクリーム</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="set" class="set">
+      <h3 class="skincare__ttl">SET</h3>
+      <ul class="lineup__list">
+        <li>
+          <a href="/shop/products/upt_skincareset">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="/assets/images/uptorigin/img_set-product01.webp" type="image/webp">
+                <img src="/assets/images/uptorigin/img_set-product01.jpg" alt="" width="552" height="400">
+              </picture>
+
+            </div>
+            <p class="lineup__list--name">Upt SKINCARE SET</p>
+            <p class="lineup__list--namejp">ウプト スキンケアセット</p>
+            <!-- <p class="lineup__list--price">¥7,590<span>(tax in)</span></p> -->
+
+          </a>
+        </li>
+        <li>
+          <a href="/shop/products/upt_cleansingset">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="/assets/images/uptorigin/img_set-product02.webp" type="image/webp">
+                <img src="/assets/images/uptorigin/img_set-product02.jpg" alt="" width="552" height="400">
+              </picture>
+
+            </div>
+            <p class="lineup__list--name">Upt CLEANSING SET</p>
+            <p class="lineup__list--namejp">ウプト クレンジングセット</p>
+            <!-- <p class="lineup__list--price">¥5,280<span>(tax in)</span></p> -->
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section class="upthome__renewbtn">
+    <a href="/shop/pages/shoplist/">
+      <span>SHOP LIST</span>
+    </a>
+    <a href="/shop/pages/magazine/">
+      <span>MEDIA</span>
+
+    </a>
+  </section>
+
+  <section class="upthome__yumi" id="">
+    <div class="upthome__yumi--blc">
+      <div id="PRODUCER" style="padding-top: 90px; margin-top: -90px;"></div>
+
+      <picture class="pcImg">
+        <source srcset="/assets/images/uptorigin/img_producer2408-pc.webp" type="image/webp">
+        <img src="/assets/images/uptorigin/img_producer2408-pc.jpg" alt="プロデューサー" width="1653"
+          height="2022">
       </picture>
 
-                </a>
+      <picture class="spImg">
+        <source srcset="/assets/images/uptorigin/img_producer2408-sp.webp" type="image/webp">
+        <img src="/assets/images/uptorigin/img_producer2408-sp.jpg" alt="プロデューサー" width="1380"
+          height="2264">
+      </picture>
+    </div>
+
+    <div class="upthome__yumi--blc right">
+      <div class="upthome__yumi--sblc">
+        <p class="upthome__yumi--txt">年齢を重ねることは、老いていくとか、<br>
+          人生の残り時間が減っていくと<br>
+          感じることもあるかもしれません。<br>
+          でもそれだけではなく、<br>
+          日々人生を重ねて、経験や思い出を増やして、<br>
+          豊かになることでもあると思うのです。<br>
+          美しさとは、内面や人生が滲み出てこそ<br>
+          際立つものだと考えます。<br>
+          <br>
+          お肌は自分を表現する一つの要素に過ぎない。<br>
+          だけどとても大切な要素。<br>
+          <br>
+          Uptが、持って生まれたものを愛すること、<br>
+          受け入れて更新していく事に繋がれば、<br>
+          とても嬉しいです。</p>
+
+        <p class="upthome__yumi--sign">Yumi Adachi</p>
+      </div>
+    </div>
+
+  </section>
 
 
-                <div class="modal__btn js_modal_close" id="js_closemodal"></div>
-
-            </div>
-        </div>
-    </div> 
-</div> -->
 
 
+  <section class="upthome__illust">
+    <p class="upthome__illust--ttl">安達 祐実（あだち ゆみ）</p>
+    <p class="upthome__illust--txt">
+      1981年9月14日生まれ。2歳からキッズモデルとして活動を始め、94年の日本テレビ系ドラマ『家なき子』で本格的にブレイク。同作品の台詞は、新語・流行語大賞にも選ばれるなど社会現象となった。以降も幅広い役をこなす実力派俳優として数々のドラマ、映画に出演する他、ファッションブランドのプロデュース等、活動は多岐に渡る。
+    </p>
+  </section>
 
-<div id="Lpbnr">
-        <a href="https://uptofficial.jp/lp?u=official_lp_3trial" target="_blank" class="modal__link" id="js-modallink">
-            <div class="pc">
-                <picture>
-                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/bnr_pc240517.webp" type="image/webp">
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/bnr_pc240517.png" alt="安達祐実" width="1680"
-                        height="242">
-                </picture>
-            </div>
-            <div class="sp">
-                <picture>
-                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/bnr_sp240517.webp" type="image/webp">
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/bnr_sp240517.png" alt="安達祐実" width="1360"
-                        height="368">
-                </picture>
-            </div>
-        </a>
-        <div class="modal__link--close" id="js-modallink-close">
+  
 
-            <img src="{{ theme_file_root_path }}/assets/images/uptorigin/closebtn.svg" alt="CLOSE" width="16px" height="16px">
-        </div>
-</div>
 
+
+  
+
+  <div class="c-movie_modal">
+    <div class="c-movie_modal__inner">
+      <i class="c-movie_modal__inner__close u-icon--close u-color__text--base js-close-movie"></i>
+      <div class="c-movie_modal__inner__content">
+        <div id='ytplayer-modal'></div>
+      </div>
+    </div>
+  </div>
+
+  
+
+</main>
 
 
 
 
 <!-- home -->
 
+<div class="modal rb" id="js_modal">
+
+  <div class="modal-content">
+    <div class="modal__contents">
+      <div class="modal__contents--inner">
+        <a href="https://uptofficial.jp/shop/information/campagin2408" style="display: block;">
+
+
+          <picture>
+            <source srcset="/assets/images/uptorigin/banner_campaign_240821.webp" type="image/webp">
+            <img src="/assets/images/uptorigin/banner_campaign_240821.png" alt="安達祐実" width="1036"
+              height="413">
+          </picture>
+
+        </a>
+
+
+        <div class="modal__btn js_modal_close" id="js_closemodal"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
 
 <script src="/assets/homeupt.js"></script>
-
-
-
 
 
 
@@ -1194,9 +1095,7 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
 </footer>
 <!-- Footer -->
 
-<!-- <div id="cursor">
-        <img src="/assets/images/uptorigin/0914/cursor.svg" alt="カーソル" width="22px" height="22px">
-    </div> -->
+
 <script src="/assets/uptfooter.js"></script>
 <script src="https://kit.fontawesome.com/7304ec542e.js" crossorigin="anonymous"></script>
 

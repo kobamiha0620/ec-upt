@@ -8,13 +8,75 @@
 <header class="l-header u-color__bg--base u-color__border--border logo--{{section.settings.align_logo}}"
     data-section-id='header' data-section-type='header-section'>
     <div class="uptheader bg__header">
-
-        
-      <div class="c-announce_bar">
+        <div class="c-announce_bar">
         <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>
         <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
       </div>
-        
+
+
+        {% if production != true and customize_preview_mode %}
+        <div class="customize_notice">
+            <p>※プレビュー表示が崩れた場合は、一度保存してください。</p>
+        </div>
+        {% endif %}
+
+        {% comment %} To use the inversion result in an if condition {% endcomment %}
+        {% if shop_root %}
+        {% assign top = false %}
+        {% else %}
+        {% assign top = true %}
+        {% endif %}
+
+        {% comment %} annoucement bar {% endcomment %}
+        {% if section.settings.message == true or section.settings.message == 'true' %}
+        {% comment %} Converted to boolean for use in if conditions {% endcomment %}
+        {% if section.settings.top_only_message == false or section.settings.top_only_message == 'false' %}
+        {% assign top_only_message_flg = false %}
+        {% else %}
+        {% assign top_only_message_flg = true %}
+        {% endif %}
+        {% unless top and top_only_message_flg %} {% comment %} unless a && !b {% endcomment %}
+         {% comment %} <a class="c-announce_bar uptheader__anounce" href="/shop/information/202212">
+            <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use
+            escape{% endcomment %}
+            <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
+        </a>  {% endcomment %}
+       <div class="c-announce_bar uptheader__anounce">
+            <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use
+            escape{% endcomment %}
+            <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
+        </div> 
+
+        {% endunless %}
+        {% endif %}
+        {% comment %} end of announcement bar {% endcomment %}
+
+        {% if section.settings.banner == true or section.settings.banner == 'true' %}
+        {% if smartphone %}
+        {% assign header_banner = section.settings.banner_sp %}
+        {% else %}
+        {% assign header_banner = section.settings.banner_pc %}
+        {% endif %}
+        {% if header_banner.size > 0 %}
+        {% comment %} Converted to boolean for use in if conditions {% endcomment %}
+        {% if section.settings.top_only_banner == false or section.settings.top_only_banner == 'false' %}
+        {% assign top_only_banner_flg = false %}
+        {% else %}
+        {% assign top_only_banner_flg = true %}
+        {% endif %}
+
+        {% unless top and top_only_banner_flg %} {% comment %} unless a && !b {% endcomment %}
+        <div class="p-banner p-banner--header">
+            {% assign image_url = header_banner | generate_image_url: theme_file_root_path %}
+            <p class="p-banner__image" style="background-image: url('{{ image_url }}')"></p>
+            {% if section.settings.banner_link.size > 0 %}
+            <a class="p-banner__link" href="{{section.settings.banner_link}}"></a>
+            {% endif %}
+        </div>
+        {% endunless %}
+        {% endif %}
+        {% endif %}
+
 
 
 
@@ -406,13 +468,7 @@
 
     </div>
 </header>
-<style>
 
-    .c-announce_bar {
-      background-color: {{section.settings.color_bg}};
-      color: {{section.settings.color_text}};
-    }
-  </style>
 
 <div class="uptplane">
     <div class="uptplane__inner">

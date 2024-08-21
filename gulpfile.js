@@ -85,7 +85,7 @@ function compile(done) {
 
 //   }"../assets/css/
   const watchTask = (done) => {
-	watch(["./**", "!./assets/uptofficial.css", "!./index.html","!./news.html","!./shoplist.html","!./about.html","!./product01.html", "!./terms.html", "!./module/**",  "!./assets/bg.css", "!./assets/**"], series(ejsmode, compile, bsReload));
+	watch(["./**", "!./assets/uptofficial.css", "!./assets/uptrenew2408.css", "!./assets/product_renew.css", "!./index.html","!./news.html","!./shoplist.html","!./about.html","!./product01.html", "!./terms.html", "!./module/**",   "!./assets/bg.css", "!./assets/**"], series(ejsmode, compile, bsReload));
 
 	done();
 };

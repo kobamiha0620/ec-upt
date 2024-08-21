@@ -9,19 +9,19 @@ $(function () {
         let point = window.pageYOffset; // 現在のスクロール地点 
         
         if (point > homefv - header - 100) { // スクロール地点>ドキュメントの高さ-表示領域-footerの高さ
-            $('.uptheader').addClass('bg__header');
-            $('.js-logo').addClass('active');
+          $('.uptHeader__toppc').addClass('active');
+          $('.uptheader').addClass('bg__header');
+          $('.js-logo').addClass('active');
             $('#Lpbnr').addClass('active');
 
         } else {
+         　 $('.uptHeader__toppc').removeClass('active');
             $('.uptheader').removeClass('bg__header');
             $('.js-logo').removeClass('active');
             $('#Lpbnr').removeClass('active');
         }
         if (point > homefv - header -180) { // スクロール地点>ドキュメントの高さ-表示領域-footerの高さ
             $('.upthome__fv--logo').addClass('is-hidden'); //footerより下にスクロールしたらis-hiddenを追加
-          
-      
           } else {
             $('.upthome__fv--logo').removeClass('is-hidden'); //footerより上にスクロールしたらis-hiddenを削除
         }
@@ -183,4 +183,10 @@ const toppage = () =>{
  }
  toppage();
 
-  
+// MORE-------
+function moreSride(){
+  $("#conceptMore").on('click', function(){
+    $('#conceptMore__txts').slideToggle(300);
+  });
+}
+moreSride();

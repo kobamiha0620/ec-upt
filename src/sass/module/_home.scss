@@ -1295,7 +1295,7 @@ h2.upthome__illust--ttl {
     line-height: 0;
     font-size: 0;
     // padding-top: 100%;
-    margin-top: -71px;
+    margin-top: -75px;
     height: calc(100vh - 28px);
 
     .upthomeSWiper {
@@ -1351,24 +1351,24 @@ h2.upthome__illust--ttl {
         z-index: 2;
     }
 
-    .swiper-pagination {
-        z-index: 3;
+    // .swiper-pagination {
+    //     z-index: 3;
 
-        .swiper-pagination-bullet {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            border: solid 1px var.$bc;
-            display: inline-block;
-            margin: 15px 0;
-            opacity: 1;
-            background: transparent;
+    //     .swiper-pagination-bullet {
+    //         width: 8px;
+    //         height: 8px;
+    //         border-radius: 50%;
+    //         border: solid 1px var.$bc;
+    //         display: inline-block;
+    //         margin: 15px 0;
+    //         opacity: 1;
+    //         background: transparent;
 
-            &.swiper-pagination-bullet-active {
-                background-color: var.$bc;
-            }
-        }
-    }
+    //         &.swiper-pagination-bullet-active {
+    //             background-color: var.$bc;
+    //         }
+    //     }
+    // }
 
     .uptb.uptheader .uptheader__iconslc__inner {
         z-index: 3;

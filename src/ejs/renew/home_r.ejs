@@ -1,0 +1,423 @@
+<%
+// 以下の設定値を記入のこと
+
+var pageinit = {
+  title : '' ,
+  keywords : '' ,
+  description : '' ,
+  ogurl : '' ,
+  path: '',
+  ogimage : '' ,
+  path : '' ,   
+  ecforce : '',
+  category : ['main'] ,
+  pagename : '',
+  css: [],
+  js:[],
+  jsfunc:['setPhotoChanger ();','startScroll ();','setVideo();'],
+};
+%>
+<%
+var imgpath = '{{ theme_file_root_path }}';
+var imgpath = '';
+%>
+
+
+<!-- home -->
+<% if (pageinit.ecforce === 'true') { %>
+<!-- ０１０５から -->
+{{ 'shop/base' | javascript_include_tag }}
+<% } %>
+
+<script src="https://kit.fontawesome.com/7304ec542e.js" crossorigin="anonymous"></script>
+<main class="l-container js-main-container upthome" role="main">
+
+  <section class="upthome__renew" id="js-uptHome">
+    <div class="upthomeSWiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <picture class="pcImg">
+            <source srcset="<%= imgpath %>/assets/images/uptorigin/swipe_img01-pc.webp" type="image/webp">
+            <img src="<%= imgpath %>/assets/images/uptorigin/swipe_img01-pc.jpg" alt="安達祐実" width="5464" height="3072">
+          </picture>
+          <picture class="spImg">
+            <source srcset="<%= imgpath %>/assets/images/uptorigin/swipe_img01-sp.webp" type="image/webp">
+            <img src="<%= imgpath %>/assets/images/uptorigin/swipe_img01-sp.jpg" alt="安達祐実" width="3252" height="3248">
+          </picture>
+
+        </div>
+
+        <div class="swiper-slide">
+          <picture class="pcImg">
+            <source srcset="<%= imgpath %>/assets/images/uptorigin/swipe_img02-pc.webp" type="image/webp">
+            <img src="<%= imgpath %>/assets/images/uptorigin/swipe_img02-pc.jpg" alt="安達祐実" width="5464" height="3072">
+          </picture>
+          <picture class="spImg">
+            <source srcset="<%= imgpath %>/assets/images/uptorigin/swipe_img02-sp.webp" type="image/webp">
+            <img src="<%= imgpath %>/assets/images/uptorigin/swipe_img02-sp.jpg" alt="安達祐実" width="3252" height="3248">
+          </picture>
+
+
+        </div>
+
+        <div class="swiper-slide">
+
+          <picture class="pcImg">
+            <source srcset="<%= imgpath %>/assets/images/uptorigin/swipe_img03-pc.webp" type="image/webp">
+            <img src="<%= imgpath %>/assets/images/uptorigin/swipe_img03-pc.jpg" alt="安達祐実" width="5464" height="3072">
+          </picture>
+          <picture class="spImg">
+            <source srcset="<%= imgpath %>/assets/images/uptorigin/swipe_img03-sp.webp" type="image/webp">
+            <img src="<%= imgpath %>/assets/images/uptorigin/swipe_img03-sp.jpg" alt="安達祐実" width="3252" height="3248">
+          </picture>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+      </div>
+      <div class="sp">
+        <p class="upthome__renew--logo">
+          
+          <img src="<%= imgpath %>/assets/images/uptorigin/logo_upt-sptop.png" alt="Upt"
+            class="upthome__renew--logo-img" width="880" height="475">
+        </p>
+
+      </div>
+  </section>
+
+  <section id="concept" class="concept">
+    <h2 class="top__ttl"><span>CONCEPT</span></h2>
+    <div class="concept__img">
+      <div class="pc">
+        <picture>
+          <source srcset="<%= imgpath %>/assets/images/uptorigin/img_concept2408.webp" type="image/webp">
+          <img src="<%= imgpath %>/assets/images/uptorigin/img_concept2408.jpg" alt="プロデューサー" width="1638"
+            height="1092">
+        </picture>
+      </div>
+
+      <div class="sp">
+        <picture>
+          <source srcset="<%= imgpath %>/assets/images/uptorigin/img_concept--topsp.webp" type="image/webp">
+          <img src="<%= imgpath %>/assets/images/uptorigin/img_concept--topsp.jpg" alt="" width="1200" height="1445">
+        </picture>
+      </div>
+      <div class="concept__img--txtblc">
+        <p class="concept__img--txt01">UP TO YOU</p>
+        <p class="concept__img--txt02">もっと自由に、変化の中で生きていく</p>
+      </div>
+
+    </div>
+    <div class="sp">
+      <p class="concept__more" id="conceptMore">MORE</p>
+    </div>
+    <div class="concept__txt--wrapper" id="conceptMore__txts">
+      <p class="concept__txt">メイクは私にとって日々の“遊び”だと思っています。<br>
+        その日の気分に合わせて、私を変化させてくれる魔法の遊び。</p>
+      <p class="concept__txt">昨日の自分はあんまり好きになれなかったけど、今日の自分はなんだか好き。<br>
+        気分は毎日のように変わるし、固定的な自分なんていない。<br>
+        変化の中で生きること自体が自分らしさの一部となるし、<br>
+        それは裏返せば、いつだってなりたい自分になれるということ。</p>
+      <p class="concept__txt">メイクはそんな自分らしさを表現してくれるものだから、<br>
+        どんな気分だって、楽しく受け入れてくれるようなものにしたかった。<br>
+        その日の気分がアガって、一日中ウキウキするような楽しいコスメに。<br>
+        もっと自由に、もっとメイクが楽しくなりますように。</p>
+    </div>
+  </section>
+
+  <section id="lineup" class="lineup">
+    <h2 class="top__ttl"><span>LINE UP</span></h2>
+
+    <div id="topCosme" class="topCosme">
+      <h3 class="cosme__ttl">COSMETICS</h3>
+      <%- include('../module/_cosmeOther', { meta: imgpath }); %>
+
+    </div>
+
+
+    <div id="skincare" class="skincare">
+      <h3 class="skincare__ttl">SKINCARE</h3>
+      <ul class="lineup__list">
+        <li>
+          <a href="/shop/products/4595121188332">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="<%= imgpath %>/assets/images/uptorigin/img_skincare-product01.webp" type="image/webp">
+                <img src="<%= imgpath %>/assets/images/uptorigin/img_skincare-product01.jpg" alt="" width="400"
+                  height="400">
+              </picture>
+
+            </div>
+            <p class="lineup__list--name">CALMING SERUM MASK</p>
+            <p class="lineup__list--namejp">カーミングセラムマスク</p>
+          </a>
+        </li>
+        <li>
+          <a href="/shop/products/balancing_toner">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="<%= imgpath %>/assets/images/uptorigin/img_skincare-product02.webp" type="image/webp">
+                <img src="<%= imgpath %>/assets/images/uptorigin/img_skincare-product02.jpg" alt="" width="400"
+                  height="400">
+              </picture>
+
+            </div>
+            <p class="lineup__list--name">BALANCING TONER</p>
+            <p class="lineup__list--namejp">バランシングトナー</p>
+          </a>
+        </li>
+        <li>
+          <a href="/shop/products/conditioning_milk">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="<%= imgpath %>/assets/images/uptorigin/img_skincare-product03.webp" type="image/webp">
+                <img src="<%= imgpath %>/assets/images/uptorigin/img_skincare-product03.jpg" alt="" width="400"
+                  height="400">
+              </picture>
+
+
+            </div>
+            <p class="lineup__list--name">CONDITIONING MILK</p>
+            <p class="lineup__list--namejp">コンディショニングミルク</p>
+
+          </a>
+        </li>
+        <li>
+          <a href="/shop/products/moisturizing_cream">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="<%= imgpath %>/assets/images/uptorigin/img_skincare-product04.webp" type="image/webp">
+                <img src="<%= imgpath %>/assets/images/uptorigin/img_skincare-product04.jpg" alt="" width="400"
+                  height="400">
+              </picture>
+            </div>
+            <p class="lineup__list--name">MOISTURIZING CREAM</p>
+            <p class="lineup__list--namejp">モイスチャライジングクリーム</p>
+          </a>
+        </li>
+        <li>
+          <a href="/shop/products/cleansing_balm">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="<%= imgpath %>/assets/images/uptorigin/img_skincare-product05.webp" type="image/webp">
+                <img src="<%= imgpath %>/assets/images/uptorigin/img_skincare-product05.jpg" alt="" width="400"
+                  height="400">
+              </picture>
+            </div>
+            <p class="lineup__list--name">CLEANSING BALM</p>
+            <p class="lineup__list--namejp">クレンジングバーム</p>
+          </a>
+        </li>
+        <li>
+          <a href="/shop/products/creamy_whipwash">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="<%= imgpath %>/assets/images/uptorigin/img_skincare-product06.webp" type="image/webp">
+                <img src="<%= imgpath %>/assets/images/uptorigin/img_skincare-product06.jpg" alt="" width="400"
+                  height="400">
+              </picture>
+            </div>
+            <p class="lineup__list--name">CREAMY WHIP WASH</p>
+            <p class="lineup__list--namejp">クリーミーホイップウォッシュ</p>
+          </a>
+        </li>
+        <li>
+          <a href="/shop/products/handcream">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="<%= imgpath %>/assets/images/uptorigin/img_skincare-product07.webp" type="image/webp">
+                <img src="<%= imgpath %>/assets/images/uptorigin/img_skincare-product07.jpg" alt="" width="400"
+                  height="400">
+              </picture>
+            </div>
+            <p class="lineup__list--name">HAND CREAM</p>
+            <p class="lineup__list--namejp">ハンドクリーム</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div id="set" class="set">
+      <h3 class="skincare__ttl">SET</h3>
+      <ul class="lineup__list">
+        <li>
+          <a href="/shop/products/upt_skincareset">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="<%= imgpath %>/assets/images/uptorigin/img_set-product01.webp" type="image/webp">
+                <img src="<%= imgpath %>/assets/images/uptorigin/img_set-product01.jpg" alt="" width="552" height="400">
+              </picture>
+
+            </div>
+            <p class="lineup__list--name">Upt SKINCARE SET</p>
+            <p class="lineup__list--namejp">ウプト スキンケアセット</p>
+            <!-- <p class="lineup__list--price">¥7,590<span>(tax in)</span></p> -->
+
+          </a>
+        </li>
+        <li>
+          <a href="/shop/products/upt_cleansingset">
+            <div class="lineup__list--img">
+              <picture>
+                <source srcset="<%= imgpath %>/assets/images/uptorigin/img_set-product02.webp" type="image/webp">
+                <img src="<%= imgpath %>/assets/images/uptorigin/img_set-product02.jpg" alt="" width="552" height="400">
+              </picture>
+
+            </div>
+            <p class="lineup__list--name">Upt CLEANSING SET</p>
+            <p class="lineup__list--namejp">ウプト クレンジングセット</p>
+            <!-- <p class="lineup__list--price">¥5,280<span>(tax in)</span></p> -->
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section class="upthome__renewbtn">
+    <a href="/shop/pages/shoplist/">
+      <span>SHOP LIST</span>
+    </a>
+    <a href="/shop/pages/magazine/">
+      <span>MEDIA</span>
+
+    </a>
+  </section>
+
+  <section class="upthome__yumi" id="">
+    <div class="upthome__yumi--blc">
+      <div id="PRODUCER" style="padding-top: 90px; margin-top: -90px;"></div>
+
+      <picture class="pcImg">
+        <source srcset="<%= imgpath %>/assets/images/uptorigin/img_producer2408-pc.webp" type="image/webp">
+        <img src="<%= imgpath %>/assets/images/uptorigin/img_producer2408-pc.jpg" alt="プロデューサー" width="1653"
+          height="2022">
+      </picture>
+
+      <picture class="spImg">
+        <source srcset="<%= imgpath %>/assets/images/uptorigin/img_producer2408-sp.webp" type="image/webp">
+        <img src="<%= imgpath %>/assets/images/uptorigin/img_producer2408-sp.jpg" alt="プロデューサー" width="1380"
+          height="2264">
+      </picture>
+    </div>
+
+    <div class="upthome__yumi--blc right">
+      <div class="upthome__yumi--sblc">
+        <p class="upthome__yumi--txt">年齢を重ねることは、老いていくとか、<br>
+          人生の残り時間が減っていくと<br>
+          感じることもあるかもしれません。<br>
+          でもそれだけではなく、<br>
+          日々人生を重ねて、経験や思い出を増やして、<br>
+          豊かになることでもあると思うのです。<br>
+          美しさとは、内面や人生が滲み出てこそ<br>
+          際立つものだと考えます。<br>
+          <br>
+          お肌は自分を表現する一つの要素に過ぎない。<br>
+          だけどとても大切な要素。<br>
+          <br>
+          Uptが、持って生まれたものを愛すること、<br>
+          受け入れて更新していく事に繋がれば、<br>
+          とても嬉しいです。</p>
+
+        <p class="upthome__yumi--sign">Yumi Adachi</p>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <section class="upthome__illust">
+    <p class="upthome__illust--ttl">安達 祐実（あだち ゆみ）</p>
+    <p class="upthome__illust--txt">
+      1981年9月14日生まれ。2歳からキッズモデルとして活動を始め、94年の日本テレビ系ドラマ『家なき子』で本格的にブレイク。同作品の台詞は、新語・流行語大賞にも選ばれるなど社会現象となった。以降も幅広い役をこなす実力派俳優として数々のドラマ、映画に出演する他、ファッションブランドのプロデュース等、活動は多岐に渡る。
+    </p>
+  </section>
+
+  <% if (pageinit.ecforce === 'true') { %>
+
+  {{ 'notice' | flash: 'control-alert alert-success', 'text u-color__bg--bg u-color__text--alert' }}
+  {{ 'alert' | flash: 'control-alert alert-danger', 'text u-color__bg--bg u-color__text--alert' }}
+  {{ content_for_index }}
+
+  {% comment %} welcome modal {% endcomment %}
+  {% comment %} {% unless customer_signed_in %}
+  <div class="c-welcome_modal">
+    <div class="c-welcome_modal__overlay"></div>
+    <div class="c-welcome_modal__win u-color__bg--base">
+      <div class="c-welcome_modal__win__title u-font__both">NEWS LETTER</div>
+      <div class="c-welcome_modal__win__lead">新商品、お得なお知らせなどを定期的に配信中、<br />今機会に是非登録してください。</div>
+      <form class="c-subscribe_form">
+        <input class="c-subscribe_form__input u-color__bg--base u-color__border--input" type="email">
+        <button class="c-subscribe_form__btn u-color__bg--accent u-color__text--base">登録</button>
+      </form>
+      <button class="c-welcome_modal__win__btn"><i class="u-icon--close"></i></button>
+    </div>
+  </div>
+  {% endunless %} {% endcomment %}
+  {% comment %} end of welcome modal {% endcomment %}
+  <% } %>
+
+
+
+  <% if (pageinit.ecforce === 'true') { %>
+
+  {% comment %} movie modal {% endcomment %}
+  <% } %>
+
+  <div class="c-movie_modal">
+    <div class="c-movie_modal__inner">
+      <i class="c-movie_modal__inner__close u-icon--close u-color__text--base js-close-movie"></i>
+      <div class="c-movie_modal__inner__content">
+        <div id='ytplayer-modal'></div>
+      </div>
+    </div>
+  </div>
+
+  <% if (pageinit.ecforce === 'true') { %>
+
+
+  {% comment %} end of movie modal {% endcomment %}
+  <% } %>
+
+</main>
+
+
+<%#- include('../module/lpbnr'); %>
+
+<!-- home -->
+
+<div class="modal rb" id="js_modal">
+
+  <div class="modal-content">
+    <div class="modal__contents">
+      <div class="modal__contents--inner">
+        <a href="https://uptofficial.jp/shop/information/campagin2408" style="display: block;">
+
+
+          <picture>
+            <source srcset="<%= imgpath %>/assets/images/uptorigin/banner_campaign_240821.webp" type="image/webp">
+            <img src="<%= imgpath %>/assets/images/uptorigin/banner_campaign_240821.png" alt="安達祐実" width="1036"
+              height="413">
+          </picture>
+
+        </a>
+
+
+        <div class="modal__btn js_modal_close" id="js_closemodal"></div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<% if (pageinit.ecforce !== 'true') { %>
+
+<script src="/assets/homeupt.js"></script>
+<% } else { %>
+<script src="{{ theme_file_root_path }}/assets/homeupt.js"></script>
+<% } %>

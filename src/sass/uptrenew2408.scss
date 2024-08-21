@@ -5,12 +5,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Shippori+Mincho:wght@400;500;600;700;800&family=Sorts+Mill+Goudy&display=swap');
 
 body {
-    font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+  font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+  background-repeat: repeat-y !important;
+  background-size: 100% auto !important;
+}
+
+body {
+  background-image: url(var.$imgpath + 'bg_origin-pc.jpg');
+
+  @media screen and (max-width: var.$spbp) {
+    background-image: url(var.$imgpath + 'bg_origin.jpg');
+  }
+}
+
+body.renewPage {
+  background-image: url(var.$imgpath + 'bg_newcosme-pc.jpg');
+
+  @media screen and (max-width: var.$spbp) {
     background-image: url(var.$imgpath + 'bg_newcosme.jpg');
-    background-repeat: repeat-y!important;
-    background-size: 100% auto!important;
   }
 
+}
+
+.gmenu {
+  &__sns {
+    &--insta {
+      background: url(var.$imgpath + "icon_menu_insta2408.svg") no-repeat 0 0;
+    }
+
+    &--line {
+      background: url(var.$imgpath + "icon_menu_line2408.svg") no-repeat 0 0;
+    }
+
+    &--twitter {
+      background: url(var.$imgpath + "icon_menu_twitter2408.svg") no-repeat 0 0;
+    }
+
+    &--youtube {
+      background: url(var.$imgpath + "icon_menu_youtube2408.svg") no-repeat 0 0;
+    }
+  }
+}
+
+.uptheader {
+  .uptgmenu {
+    &__upperlinks {
+      li {
+        a {
+          color: #898989;
+
+        }
+      }
+    }
+    &__head{
+      background-image: none;
+    }
+    &__innerline {
+      border-right: none;
+      border-left: none;
+    }
+
+    &__btm {
+      background: #898989;
+    }
+  }
+}
 
 
 
@@ -18,9 +77,63 @@ body {
 @media screen and (max-width: var.$tabw) {}
 
 //SP
-@media screen and (max-width: var.$spbp) {}
+@media screen and (max-width: var.$spbp) {
+  body.is-web {
+    background-image: url(var.$imgpath + 'bg_origin.webp');
 
-body.is-webp{
-  background-image: url(var.$imgpath + 'bg_newcosme.webp');
+  }
 
+  .renewPage.is-webp {
+    background-image: url(var.$imgpath + 'bg_newcosme.webp');
+  }
+}
+
+.content {
+  &__ttl {
+    margin: 0 auto 60px;
+    text-align: center;
+    font-weight: 600;
+    color: var.$brown;
+    @include var.fz(32);
+
+    span {
+      display: inline-block;
+      padding: 0 13px;
+      border-bottom: solid 1px var.$brown;
+
+    }
+  }
+
+  &__smallblc {
+    max-width: 440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  @media screen and (max-width: var.$spbp) {
+    @include var.fz(23);
+    margin: 0 auto 11vw;
+    &__ttl {
+      margin: 0 auto 8vw;
+
+    }
+    &__smallblc {
+      max-width: 100%;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+}
+.c-announce_bar{
+  padding: 3px 60px;
+}
+
+summary {
+  display: block;
+  list-style: none;
+}
+
+/* 一部ブラウザで消えなかった場合は以下も追記 */
+summary::-webkit-details-marker {
+  display:none;
 }
