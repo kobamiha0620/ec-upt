@@ -99,17 +99,54 @@ body.topPage{
     align-items: center;
 
     li {
-
+        font-size: 0;
+        line-height: 0;
         a {
+            display: block;
+            font-size: 0;
+            line-height: 0;;
+            .fa-x-twitter {
+                    // font-family: "Font Awesome 6 Brands";
+                    background: url(var.$imgpath + "twix.svg") no-repeat 0 0;
+                    width: 40px;
+                    height: 40px;
+                    background-size: 100% auto;
+                    display: block;
 
+            }
+            .fa-instagram  {
+                    // font-family: "Font Awesome 6 Brands";
+                    background: url(var.$imgpath + "insta.svg") no-repeat 0 0;
+                    width: 40px;
+                    height: 40px;
+                    background-size: 100% auto;
+                    display: block;
+                
+            }
+            .fa-youtube  {
+                // font-family: "Font Awesome 6 Brands";
+                background: url(var.$imgpath + "youtube.svg") no-repeat 0 0;
+                width: 40px;
+                height: 40px;
+                background-size: 100% auto;
+                display: block;
+            
+        }
+        .fa-line  {
+            // font-family: "Font Awesome 6 Brands";
+            background: url(var.$imgpath + "line.svg") no-repeat 0 0;
+            width: 40px;
+            height: 40px;
+            background-size: 100% auto;
+            display: block;
+        
+    }
             i {
                 display: block;
-
-                @include var.fz(46);
+                width: 30px;
+                height: 30px;
                 line-height: 0;
-                &::before{
-                    
-                }
+    
                 &.fa-facebook {
                     @include var.fz(36);
 
@@ -119,30 +156,23 @@ body.topPage{
 
                 }
 
-                &.fa-instagram {
-                    @include var.fz(36);
+                // &.fa-instagram {
+                //     @include var.fz(36);
 
-                    &::before {
-                        font-family: "Font Awesome 6 Brands";
-                    }
-                }
+                //     &::before {
+                //         font-family: "Font Awesome 6 Brands";
+                //     }
+                // }
 
-                &.fa-youtube {
-                    @include var.fz(36);
+                // &.fa-youtube {
+                //     @include var.fz(36);
 
-                    &::before {
-                        font-family: "Font Awesome 6 Brands";
-                    }
-                }
+                //     &:before {
+                //         font-family: "Font Awesome 6 Brands";
+                //     }
+                // }
 
-                &.fa-x-twitter {
-                    @include var.fz(36);
-
-                    &::before {
-                        font-family: "Font Awesome 6 Brands";
-                    }
-                }
-
+               
             }
         }
     }
@@ -155,26 +185,40 @@ body.topPage{
             i {
                 display: block;
                 line-height: 1;
-
+                width: 30px;
+                height: 30px;
                 @include var.fz(36);
                 line-height: 0;
 
                 &.fa-facebook {
-                    @include var.fz(30);
+                    // @include var.fz(30);
+                    width: 30px;
+                    height: 30px;
                 }
 
                 &.fa-instagram {
-                    @include var.fz(30);
+                    // @include var.fz(30);
+                    width: 30px;
+                    height: 30px;
                 }
 
                 &.fa-youtube {
-                    @include var.fz(30);
+                    // @include var.fz(30);
+                    width: 30px;
+                    height: 30px;
                 }
 
                 &.fa-x-twitter {
-                    @include var.fz(30);
+                    // @include var.fz(30);
+                    width: 30px;
+                    height: 30px;
 
                 }
+                &.fa-line  {
+                    // font-family: "Font Awesome 6 Brands";
+                    width: 30px;
+                    height: 30px;
+            }
 
             }
         }
@@ -208,7 +252,9 @@ body.topPage {
     }
 }
 
-
+.uptfootersns__ttl {
+    color: #898989;
+}
 //タブレット
 @media screen and (max-width: var.$tabw) {}
 

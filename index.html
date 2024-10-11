@@ -610,22 +610,22 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
     <div class="concept__img">
       <div class="pc">
         <picture>
-          <source srcset="/assets/images/uptorigin/img_concept2408.webp" type="image/webp">
-          <img src="/assets/images/uptorigin/img_concept2408.jpg" alt="プロデューサー" width="1638"
+          <source srcset="/assets/images/uptorigin/0962_pc.webp" type="image/webp">
+          <img src="/assets/images/uptorigin/0962_pc.jpg" alt="プロデューサー" width="1638"
             height="1092">
         </picture>
       </div>
 
       <div class="sp">
         <picture>
-          <source srcset="/assets/images/uptorigin/img_concept--topsp.webp" type="image/webp">
-          <img src="/assets/images/uptorigin/img_concept--topsp.jpg" alt="" width="1200" height="1445">
+          <source srcset="/assets/images/uptorigin/0962_sp.webp" type="image/webp">
+          <img src="/assets/images/uptorigin/0962_sp.jpg" alt="" width="1200" height="1445">
         </picture>
       </div>
-      <div class="concept__img--txtblc">
+      <!-- <div class="concept__img--txtblc">
         <p class="concept__img--txt01">UP TO YOU</p>
         <p class="concept__img--txt02">もっと自由に、変化の中で生きていく</p>
-      </div>
+      </div> -->
 
     </div>
     <div class="sp">
@@ -952,18 +952,16 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
 
 <!-- home -->
 
-<div class="modal rb" id="js_modal">
-
+ <!-- <div class="modal center" id="js_modal">
   <div class="modal-content">
     <div class="modal__contents">
-      <div class="modal__contents--inner">
-        <a href="https://uptofficial.jp/shop/information/campagin2408" style="display: block;">
+      <div class="modal__contents--inner">  
 
-
+        <a href="https://uptofficial.jp/lp?u=official_2nd-anniversary" target="_blank">
           <picture>
-            <source srcset="/assets/images/uptorigin/banner_campaign_240821.webp" type="image/webp">
-            <img src="/assets/images/uptorigin/banner_campaign_240821.png" alt="安達祐実" width="1036"
-              height="413">
+            <source srcset="/assets/images/uptorigin/banner_campaign_240914.webp" type="image/webp">
+            <img src="/assets/images/uptorigin/banner_campaign_240914.png" alt="安達祐実" width="1026"
+              height="1286">
           </picture>
 
         </a>
@@ -974,7 +972,7 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
       </div>
     </div>
   </div>
-</div>
+</div>  -->
 
 
 
@@ -990,6 +988,62 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
 </div>
 
 
+<style>
+    /* 背景 */
+    .footer_bg, .uptfooter{
+      background: {{section.settings.color_footer_bg}};
+    }
+    /* 見出し */
+    .footer_head, .uptfootersns__ttl {
+        color: {{color_footer_head_top}};
+    }
+    /* リンク */
+    .footer_link, .uptfootersns__list li a{
+      color: {{section.settings.color_footer_link}};
+    }
+    /* 本文 */
+    .footer_body, .uptfooter__links li a {
+      color: {{section.settings.color_footer_body}};
+    }
+
+    /* TOP背景 */
+    body.topPage .uptfooter{
+      background: {{section.settings.color_footer_bg-top}};
+    }
+    /* TOP見出し */
+    body.topPage .uptfootersns__ttl {
+        color: {{color_footer_head_top}};
+    }
+     /* TOPリンク */
+     body.topPage .uptfootersns__list li a{
+      color: {{section.settings.color_footer_link-top}};
+    }
+    /* 本文 */
+    body.topPage .uptfooter__links li a {
+      color: {{section.settings.color_footer_body-top}};
+    }
+
+
+        /* TOP背景 */
+.uptfooter{
+      background: {{section.settings.color_footer_bg-top}};
+    }
+    /* TOP見出し */
+ .uptfootersns__ttl {
+        color: {{color_footer_head_top}};
+    }
+     /* TOPリンク */
+     .uptfootersns__list li a{
+      color: {{section.settings.color_footer_link-top}};
+    }
+    /* 本文 */
+ .uptfooter__links li a {
+      color: {{section.settings.color_footer_body-top}};
+    }
+
+  </style>
+
+
 <div class="uptblc" id="uptfootersns">
     <div class="uptblc__inner">
         <div class="uptfootersns">
@@ -998,6 +1052,8 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
                 <ul class="uptfootersns__list">
                     <!-- facebook -->
                     
+                    {% if section.settings.facebook_account_text.size > 0 %}
+                    
                     <li>
                         <a class="" href="{{section.settings.facebook_account_text}}" target="_blank"
                             rel="noopener noreferrer nofollow">
@@ -1005,9 +1061,14 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
                         </a>
                     </li>
                     
+                    {% endif %}
+                    
+                    
 
 
                     <!-- Instagram -->
+                    
+                    {% if section.settings.twitter_account_text.size > 0 %}
                     
                     <li>
                         <a href="{{section.settings.instagram_account_text}}" target="_blank"
@@ -1016,30 +1077,44 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
                         </a>
                     </li>
                     
+                    {% endif %}
+
+
+                    
 
                     <!-- twitter -->
+                    
+                    {% if section.settings.twitter_account_text.size > 0 %}
                     
                     <li>
                         <a href="{{section.settings.twitter_account_text}}" target="_blank"
                             rel="noopener noreferrer nofollow">
-                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fa-brands fa-x-twitter "></i>
 
                         </a>
                     </li>
+                    
+                    {% endif %}
                     
 
                     <!-- Line -->
                     
+                    {% if section.settings.twitter_account_text.size > 0 %}
+                    
                     <li>
                         <a href="{{section.settings.line_account_text}}" target="_blank"
                             rel="noopener noreferrer nofollow">
-                            <i class="u-icon--line"></i>
+                            <i class="fa-brands fa-line"></i>
                         </a>
                     </li>
+                    
+                    {% endif %}
                     
 
 
                     <!-- youtube -->
+                    
+                    {% if section.settings.twitter_account_text.size > 0 %}
                     
                     <li>
                         <a href="{{section.settings.youtube_account_text}}" target="_blank"
@@ -1047,6 +1122,8 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
                             <i class="fa-brands fa-youtube"></i>
                         </a>
                     </li>
+                    
+                    {% endif %}
                     
 
 
@@ -1058,36 +1135,69 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
 
 <footer class="uptfooter" data-section-id='footer' data-section-type='footer-section'>
     
+    {% for menu in section.settings.footer_menu %}
+    
 
 
     <ul class="uptfooter__links">
         
-            <li><a href="">キャンセル・変更規定・返品に関して</a></li>
+        {% unless menu.link_text1 == "" or menu.link_text1 == null %}
+        <li>
+            <a href="{{menu.link_url1}}">
+                {{ menu.link_text1 | escape }}
+            </a>
+        </li>
+        {% endunless %}
         
 
 
         
-            <li><a href="">特定商取引に基づく表記</a></li>
+        {% unless menu.link_text2 == "" or menu.link_text2 == null %}
+        <li>
+        <a href="{{menu.link_url1}}">{{ menu.link_text2 | escape }}</a>
+        </li>
+        {% endunless %}
         
 
     
 
 
         
+            {% unless menu.link_text3 == "" or menu.link_text3 == null %}
+            <li>
+            <a href="{{menu.link_url2}}">{{ menu.link_text3 | escape }}</a>
+            </li>
+            {% endunless %}
         
-            <li><a href="">プライバシーポリシー </a></li>
+        
+            {% unless menu.link_text4 == "" or menu.link_text4 == null %}
+            <li>
+            <a href="{{menu.link_url3}}">{{ menu.link_text4 | escape }}</a>
+            </li>
+            {% endunless %}
         
 
         
-            <li><a href="">利用規約 </a></li>
+            {% unless menu.link_text5 == "" or menu.link_text5 == null %}
+            <li>
+            <a href="{{menu.link_url4}}">{{ menu.link_text5 | escape }}</a>
+            </li>
+            {% endunless %}
         
 
         
-            <li><a href="">送料に関して </a></li>
+            {% unless menu.link_text6 == "" or menu.link_text6 == null %}
+            <li>
+            <a href="{{menu.link_url5}}">{{ menu.link_text6 | escape }}</a>
+            </li>
+            {% endunless %}
         
 
 
     </ul>
+
+    
+    {% endfor %}
     
 
     <p class="uptfooter__copy"><small>© 2022 Upt All Rights Reserved</small></p>
@@ -1096,8 +1206,7 @@ window.Constants={};Constants.prefecture_addr01_read_only=false;Constants.email=
 <!-- Footer -->
 
 
-<script src="/assets/uptfooter.js"></script>
-<script src="https://kit.fontawesome.com/7304ec542e.js" crossorigin="anonymous"></script>
+
 
 
 

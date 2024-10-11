@@ -2,14 +2,14 @@
 // 以下の設定値を記入のこと
 
 var pageinit = {
-    product: 'eye',
+    product: 'all',
     title : '',
     keywords : '' ,
     description : '' ,
     ogurl : '' ,
     ogimage : '' ,
     path : '' ,
-    ecforce : '',
+    ecforce : 'true',
     path : '' ,
     category : ['main'] ,
     pagename : '',
@@ -21,8 +21,8 @@ var pageinit = {
 %>
 
 <% 
-    imgpath =  '';   
-    // imgpath = '{{ stheme_file_root_path }}';
+    // imgpath =  '';   
+    imgpath = '{{ stheme_file_root_path }}';
 
 %>
 
@@ -228,6 +228,7 @@ var pageinit = {
     <% if ((pageinit.product === 'toner') || (pageinit.product === 'all')) { %>
 
         <%- include('./_toner', { meta: imgpath }); %>
+        <%- include('./_uruoi', { meta: imgpath }); %>
 
     <% } %>
 
@@ -245,6 +246,8 @@ var pageinit = {
 
     <% if ((pageinit.product === 'milk') || (pageinit.product === 'all')) { %>
         <%- include('./_milk', { meta: imgpath }); %>
+        <%- include('./_uruoi', { meta: imgpath }); %>
+
     <% } %>
 
     <% if (pageinit.ecforce === 'true') { %>
@@ -262,6 +265,8 @@ var pageinit = {
 
     <% if ((pageinit.product === 'cream') || (pageinit.product === 'all')) { %>
         <%- include('./_cream', { meta: imgpath }); %>
+        <%- include('./_uruoi', { meta: imgpath }); %>
+
     <% } %>
 
     <% if (pageinit.ecforce === 'true') { %>
@@ -437,206 +442,6 @@ var pageinit = {
 
 
 
-
-    <!-- セット商品 -->
-    <% if (pageinit.ecforce === 'true') { %>
-    {% if product.id == 5 %}
-    <% } %>
-
-    <% if ((pageinit.product === 'set') || (pageinit.product === 'all')) { %>
-    <section id="js-prodcutFv" class="uptprodcut__intro">
-        <h2 class="uptprodcut__intro--txt">スキンケアを、<br>⼼安らぐ時間に</h2>
-        <div class="uptprodcut__intro--relative">
-            <img src="<%= imgpath %>/assets/images/uptorigin/0914/img_product-yumipc02.jpg" alt="安達祐実" width="auto"
-                height="auto" class="pcImg">
-            <img src="<%= imgpath %>/assets/images/uptorigin/0914/img_product-yumisp02.jpg" alt="安達祐実" width="auto"
-                height="auto" class="spImg">
-            <div class="uptprodcut__intro--border" id="js-border"></div>
-        </div>
-
-    </section>
-    <section class="uptline"></section>
-
-    <section class="uptproduct__setitem">
-        <h2 class="uptblc__ttl">SET ITEM</h2>
-
-        <div class="uptproduct__setitem--blc">
-            <div class="uptproduct__setitem--blc-s border img">
-                <div class="uptproduct__setitem--img">
-                    <img src="<%= imgpath %>/assets/images/uptorigin/0914/img_set01.png" width="auto" height="auto"
-                        alt="バランシングトナー">
-                </div>
-            </div>
-            <div class="uptproduct__setitem--blc-s">
-                <div class="uptproduct__setitem--exp">
-                    <div class="uptproduct__setitem--name">
-                        <div class="uptproduct__setitem--name-txt">
-                            <h3 class="uptproduct__setitem--name01">BALANCING TONER</h3>
-                            <p class="uptproduct__setitem--name02">バランシングトナー<br>〈化粧⽔〉</p>
-                            <p class="uptproduct__setitem--name03 italic">155mL</p>
-                        </div>
-                        <div class="uptproduct__setitem--name-img">
-                            <img src="<%= imgpath %>/assets/images/uptorigin/0914/point_set01.png" width="auto"
-                                height="auto" alt="バランシングトナー">
-                        </div>
-                    </div>
-
-                    <div class="uptproduct__setitem--setsumei">
-                        <p class="uptproduct__setitem--setsumei--ttl">水ってやっぱり気持ちいい</p>
-                        <p>お肌に乗せた瞬間にすーっとなじんでうるおいに満ちたお肌に。</p>
-                    </div>
-
-                    <div class="uptproduct__setitem--absolute">
-                        <ul class="uptproduct__setitem--list" id="js-accordion01">
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">使用感<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>とろみのないみずみずしいテクスチャーが角質層のすみずみまで浸透。
-                                        お肌の水分をチャージしキメを整えます。</p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">成分<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>温泉水、水、ＢＧ、グリセリン、ジグリセリン、ペンチレングリコール、プロパンジオール、セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ、サッカロミセス／コメ発酵液、アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３、パルミチン酸アスコルビルリン酸３Ｎａ、ナイアシンアミド、加水分解ヒアルロン酸アルキル（Ｃ１２－１３）グリセリル、ヒアルロン酸ジメチルシラノール、ヒアルロン酸Ｎａ、水溶性プロテオグリカン、ＰＥＧ－８、ベタイン、ＰＣＡ－Ｎａ、デキストラン、ポリクオタニウム－５１、フィトステロールズ、ＰＥＧ－２０ソルビタンココエート、水添レシチン、ＰＥＧ－６０水添ヒマシ油、クエン酸Ｎａ、クエン酸、カプリルヒドロキサム酸、ペンテト酸５Ｎａ、フェノキシエタノール、イランイラン花油、ニオイテンジクアオイ油
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">使い方<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>適量を手に取り、両手でお顔全体を包み込むようにハンドプレスして優しくなじませる。お肌がうるおいで満ちるまで好きなだけ重ね付けして。</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="uptproduct__setitem--blc reverse">
-            <div class="uptproduct__setitem--blc-s img blc02">
-                <div class="uptproduct__setitem--img">
-                    <img src="<%= imgpath %>/assets/images/uptorigin/0914/img_set02.png" alt="コンディショニングミルク" width="auto"
-                        height="auto">
-                </div>
-            </div>
-            <div class="uptproduct__setitem--blc-s border">
-                <div class="uptproduct__setitem--exp">
-                    <div class="uptproduct__setitem--name">
-                        <div class="uptproduct__setitem--name-txt">
-                            <h3 class="uptproduct__setitem--name01">CONDITIONING MILK</h3>
-                            <p class="uptproduct__setitem--name02">コンディショニングミルク<br>〈乳液〉</p>
-                            <p class="uptproduct__setitem--name03 italic">120mL</p>
-                        </div>
-                        <div class="uptproduct__setitem--name-img">
-                            <img src="<%= imgpath %>/assets/images/uptorigin/0914/point_set02.png" alt="コンディショニングミルク"
-                                width="auto" height="auto">
-                        </div>
-                    </div>
-
-                    <div class="uptproduct__setitem--setsumei">
-                        <p class="uptproduct__setitem--setsumei--ttl">さらさらのミルクが欲しかった</p>
-                        <p>まるで水のような新感覚テクスチャーがしっとりうるおうお肌に。</p>
-                    </div>
-
-                    <div class="uptproduct__setitem--absolute">
-                        <ul class="uptproduct__setitem--list" id="js-accordion02">
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">使用感<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>ベタつき感のないさらさらとしたミルクのようなテクスチャーで包み込む。
-                                        みずみずしく柔らかなお肌へ導きます。</p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">成分<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>水、温泉水、ＢＧ、グリセリン、ベタイン、エチルヘキシルグリセリン、カプリル酸グリセリル、セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ、アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３、スクワラン(植物由来)、リン酸アスコルビルＭｇ、パルミチン酸アスコルビルリン酸３Ｎａ、３－Ｏ－エチルアスコルビン酸、ナイアシンアミド、デキストラン、ラウロイルグルタミン酸ジ（フィトステリル／オクチルドデシル）、フィトステロールズ、ミリスチン酸オクチルドデシル、ジフェニルシロキシフェニルトリメチコン、ジメチコン、カルボマー、キサンタンガム、ＰＥＧ－２０ソルビタンココエート、水添レシチン、ＰＥＧ－６０水添ヒマシ油、水酸化Ｋ、フェノキシエタノール、イランイラン花油、ニオイテンジクアオイ油
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">使い方<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>適量を手に取り、お顔全体に優しくなじませる。
-                                        乾燥やハリ不足を感じる部分には重ね付けを。
-                                        首やデコルテまで塗り広げてケアするのもおすすめ。</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="uptproduct__setitem--blc">
-            <div class="uptproduct__setitem--blc-s border img">
-                <div class="uptproduct__setitem--img">
-                    <img src="<%= imgpath %>/assets/images/uptorigin/0914/img_set03.png" alt="モイスチャライジングクリーム"
-                        width="auto" height="auto">
-                </div>
-            </div>
-            <div class="uptproduct__setitem--blc-s">
-                <div class="uptproduct__setitem--exp">
-                    <div class="uptproduct__setitem--name">
-                        <div class="uptproduct__setitem--name-txt">
-                            <h3 class="uptproduct__setitem--name01">MOISTURIZING CREAM</h3>
-                            <p class="uptproduct__setitem--name02">モイスチャライジングクリーム<br>〈クリーム〉</p>
-                            <p class="uptproduct__setitem--name03 italic">40g</p>
-                        </div>
-                        <div class="uptproduct__setitem--name-img">
-                            <img src="<%= imgpath %>/assets/images/uptorigin/0914/point_set03.png" alt="モイスチャライジングクリーム"
-                                width="auto" height="auto">
-                        </div>
-                    </div>
-
-                    <div class="uptproduct__setitem--setsumei">
-                        <p class="uptproduct__setitem--setsumei--ttl">なるだけ手間をなくせるように</p>
-                        <p>お肌全体をうるおいヴェールで包みこみ、吸い付くようなしなやかなお肌へ。</p>
-                    </div>
-
-                    <div class="uptproduct__setitem--absolute">
-                        <ul class="uptproduct__setitem--list" id="js-accordion03">
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">使用感<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>お肌の上でとろけるテクスチャーが水分をしっかり閉じ込め密着。
-                                        お肌を柔らかくなめらかに仕上げます。</p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">成分<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>温泉水、ミネラルオイル、スクワラン(植物由来)、ＢＧ、ベヘニルアルコール、ジメチコン、ＰＥＧ－１５０、マルチトール、セテアリルアルコール、ペンチレングリコール、ステアリン酸グリセリル、ステアロイルグルタミン酸Ｎａ、エチルヘキシルグリセリン、カプリル酸グリセリル、セラミドＮＧ、セラミドＡＰ、セラミドＡＧ、セラミドＮＰ、セラミドＥＯＰ、アセチルデカペプチド－３、オリゴペプチド－２０、カプロオイルテトラペプチド－３、パルミチン酸アスコルビルリン酸３Ｎａ、ナイアシンアミド、エリンギウムマリチムムカルス培養液、加水分解コラーゲン、水溶性コラーゲン、水溶性コラーゲンクロスポリマー、デキストラン、マカデミアナッツ脂肪酸フィトステリル、フィトステロールズ、水、水添レシチン、グリセリン、ＥＤＴＡ－２Ｎａ、フェノキシエタノール、イランイラン花油、ニオイテンジクアオイ油
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <p class="uptproduct__setitem--list-ttl">使い方<span></span></p>
-                                <div class="uptproduct__setitem--list-txt">
-                                    <p>手のひらで温めてからお顔全体になじませる。
-                                        お顔全体に広げたあとに、ゼラニウム＆イランイランの香りを感じながら深呼吸。</p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <script src="<%= imgpath %>/assets/uptproduct.js"></script>
-
-    <% } %>
-
-    <% if (pageinit.ecforce == 'true') { %>
-    {% endif %}
-    <% } %>
-    <!-- /セット商品 -->
-
     <!-- クレンジングセット -->
     <% if (pageinit.ecforce === 'true') { %>
         {% if product.id == 9 %}
@@ -767,11 +572,12 @@ var pageinit = {
     <% if ( pageinit.product === 'toner' || pageinit.product === 'milk' ||  pageinit.product === 'subsc' || pageinit.product === 'set' ||  pageinit.product === 'handcream' ||   pageinit.product === 'cream' ||   pageinit.product === 'cset' || pageinit.product === 'mask' || pageinit.product === 'balm' ||  pageinit.product === 'wash' ||  pageinit.product === 'all'){ %>
         <%- include('./lpbnr'); %>
         <script src="<%= imgpath %>/assets/lpbnr.js"></script>
+
     <% } %>
 
 <% if (pageinit.ecforce === 'true') { %>
 {% endif %}
 <% } %>
 <!-- skincare -->
-
+        <!-- <#%- include('./lpbnr'); %> -->
 

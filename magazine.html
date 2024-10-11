@@ -192,13 +192,13 @@
                             o = function (e, t) {
                                 var r = this;
                                 return e && "object" == typeof e ? t && "object" == typeof t ? (Object.assign(
-                                        this, t), void Object.entries(e).forEach((function (e) {
-                                        var t = e[0],
-                                            n = e[1];
-                                        r[t] = n
-                                    }))) : console.error(
-                                        "setting a Configurable requires a model to set its initial properties"
-                                        ) : console.error("setting a Configurable requires an object as input")
+                                    this, t), void Object.entries(e).forEach((function (e) {
+                                    var t = e[0],
+                                        n = e[1];
+                                    r[t] = n
+                                }))) : console.error(
+                                    "setting a Configurable requires a model to set its initial properties"
+                                ) : console.error("setting a Configurable requires an object as input")
                             },
                             a = {
                                 beacon: i.ce.beacon,
@@ -734,7 +734,7 @@
                             !o.port && a[1] && (o.port = a[1].split("/")[0].split("@").pop().split(":")[1]), o
                                 .port && "0" !== o.port || (o.port = "https" === a[0] ? "443" : "80"), o
                                 .hostname = t.hostname || r.hostname, o.pathname = t.pathname, o.protocol = a[
-                                0], "/" !== o.pathname.charAt(0) && (o.pathname = "/" + o.pathname);
+                                    0], "/" !== o.pathname.charAt(0) && (o.pathname = "/" + o.pathname);
                             var c = !t.protocol || ":" === t.protocol || t.protocol === r.protocol,
                                 u = t.hostname === r.hostname && t.port === r.port;
                             return o.sameOrigin = c && (!t.hostname || u), "/" === o.pathname && (i[e] = o), o
@@ -893,13 +893,13 @@
                                 "regex" in e[n] ? "string" != typeof e[n].regex && e[n].regex.constructor !==
                                     RegExp && (console && console.warn && console.warn(
                                         'An obfuscation replacement rule contains a "regex" value with an invalid type (must be a string or RegExp)'
-                                        ), r = !0) : (console && console.warn && console.warn(
+                                    ), r = !0) : (console && console.warn && console.warn(
                                         'An obfuscation replacement rule was detected missing a "regex" value.'
-                                        ), r = !0);
+                                    ), r = !0);
                                 var i = e[n].replacement;
                                 i && "string" != typeof i && (console && console.warn && console.warn(
                                     'An obfuscation replacement rule contains a "replacement" value with an invalid type (must be a string)'
-                                    ), t = !0)
+                                ), t = !0)
                             }
                             return !t && !r
                         }
@@ -1086,7 +1086,8 @@
                         i || (o = !0, (i = document.createElement("script")).charset = "utf-8", i.timeout = 120,
                             __webpack_require__.nc && i.setAttribute("nonce", __webpack_require__.nc), i
                             .setAttribute("data-webpack", dataWebpackPrefix + r), i.src = e), inProgress[e] = [
-                            t];
+                            t
+                        ];
                         var s = function (t, r) {
                                 i.onerror = i.onload = null, clearTimeout(f);
                                 var n = inProgress[e];
@@ -1685,7 +1686,7 @@
                             if ("addEventListener" in document) {
                                 i.fiRecorded = !1;
                                 ["click", "keydown", "mousedown", "pointerdown", "touchstart"].forEach((function (
-                                e) {
+                                    e) {
                                     document.addEventListener(e, (function () {
                                         var e;
                                         return (e = i).captureInteraction.apply(e,
@@ -1697,10 +1698,10 @@
                                 var e;
                                 return (e = i).captureVisibilityChange.apply(e, arguments)
                             }, "addEventListener" in document && S && document.addEventListener(S, (
-                        function () {
-                                j && document[j] ? o(document[j]) : document[P] ? o("hidden") : o(
-                                    "visible")
-                            }), (0, r.m)(!1)), i
+                                function () {
+                                    j && document[j] ? o(document[j]) : document[P] ? o("hidden") : o(
+                                        "visible")
+                                }), (0, r.m)(!1)), i
                         }
                         i = e, (t = o).prototype = Object.create(i.prototype), t.prototype.constructor = t, T(t, i);
                         var a = o.prototype;
@@ -1743,7 +1744,8 @@
                                     };
                                 this.addConnectionAttributes(r), t <= (0, y.zO)() ? r.fid = (0, y.zO)() - t :
                                     t > (0, y.os)() && t <= Date.now() ? (t -= (0, y.os)(), r.fid = (0, y.zO)
-                                    () - t) : t = (0, y.zO)(), this.fiRecorded = !0, (0, g.p)("timing", ["fi",
+                                        () - t) : t = (0, y.zO)(), this.fiRecorded = !0, (0, g.p)("timing", [
+                                        "fi",
                                         t, r
                                     ], void 0, void 0, this.ee)
                             }
@@ -1783,7 +1785,7 @@
                                 try {
                                     return !!window.angular || (!!document.querySelector(
                                         ".ng-binding, [ng-app], [data-ng-app], [ng-controller], [data-ng-controller], [ng-repeat], [data-ng-repeat]"
-                                        ) || !!document.querySelector(
+                                    ) || !!document.querySelector(
                                         'script[src*="angular.js"], script[src*="angular.min.js"]'))
                                 } catch (e) {
                                     return !1
@@ -1856,7 +1858,7 @@
                                 }), void 0, n.ee), n
                         }
                         r = e, (t = i).prototype = Object.create(r.prototype), t.prototype.constructor = t, re(t,
-                        r);
+                            r);
                         var o = i.prototype;
                         return o.recordSupportability = function (e, t) {
                             var r = ["sm", e, {
@@ -1903,14 +1905,14 @@
                                                 K = navigator.serviceWorker.register;
                                                 try {
                                                     self.navigator.serviceWorker.register = (t = K,
-                                                function () {
-                                                        for (var e, r = arguments.length, n = new Array(
-                                                                r), i = 0; i < r; i++) n[i] = arguments[
-                                                            i];
-                                                        return o("Service", null == (e = n[1]) ?
-                                                            void 0 : e.type), t.apply(navigator
-                                                            .serviceWorker, n)
-                                                    })
+                                                        function () {
+                                                            for (var e, r = arguments.length, n = new Array(
+                                                                    r), i = 0; i < r; i++) n[i] = arguments[
+                                                                i];
+                                                            return o("Service", null == (e = n[1]) ?
+                                                                void 0 : e.type), t.apply(navigator
+                                                                .serviceWorker, n)
+                                                        })
                                                 } catch (e) {
                                                     a(e, "Service")
                                                 }
@@ -2087,12 +2089,12 @@
                         a = "-start";
                     return r.inPlace(self, [n, "setImmediate"], "setTimeout-"), r.inPlace(self, [i],
                         "setInterval-"), r.inPlace(self, [o, "clearImmediate"], "clearTimeout-"), t.on(i + a, (
-                            function (e, t, n) {
-                                e[0] = r(e[0], "fn-", null, n)
-                            })), t.on(n + a, (function (e, t, n) {
-                            this.method = n, this.timerDuration = isNaN(e[1]) ? 0 : +e[1], e[0] = r(e[0],
-                                "fn-", this, n)
-                        })), t
+                        function (e, t, n) {
+                            e[0] = r(e[0], "fn-", null, n)
+                        })), t.on(n + a, (function (e, t, n) {
+                        this.method = n, this.timerDuration = isNaN(e[1]) ? 0 : +e[1], e[0] = r(e[0],
+                            "fn-", this, n)
+                    })), t
                 }
                 var Ee = {};
 
@@ -2121,7 +2123,8 @@
                         i = window.history && window.history.constructor && window.history.constructor.prototype,
                         o = window.history;
                     return i && i.pushState && i.replaceState && (o = i), r.inPlace(o, ["pushState",
-                        "replaceState"], "-"), t
+                        "replaceState"
+                    ], "-"), t
                 }
                 var je = {};
 
@@ -2287,7 +2290,7 @@
                 })), He.dev && s.ee.on("fn-err", (function (e, t, r) {
                     Be(r.stack)
                 })), He.dev && (Be("NR AGENT IN DEVELOPMENT MODE"), Be("flags: " + (0, m.D)(He, (function (e,
-                t) {
+                    t) {
                     return e
                 })).join(", ")));
                 var De = "nr@seenError",
@@ -2522,7 +2525,8 @@
                                             o.newrelicHeader && (r.setRequestHeader("newrelic", o
                                                 .newrelicHeader), a = !0), o.traceContextParentHeader && (r
                                                 .setRequestHeader("traceparent", o
-                                                .traceContextParentHeader), o.traceContextStateHeader && r
+                                                    .traceContextParentHeader), o.traceContextStateHeader &&
+                                                r
                                                 .setRequestHeader("tracestate", o.traceContextStateHeader),
                                                 a = !0), a && (this.dt = o)
                                         }
@@ -2606,7 +2610,7 @@
                                         var n = i.generateTracePayload(this.parsedOrigin);
                                         if (n && (n.newrelicHeader || n.traceContextParentHeader))
                                             if ("string" == typeof e[0] || self.URL && e[0] && e[
-                                                0] instanceof URL) {
+                                                    0] instanceof URL) {
                                                 var o = {};
                                                 for (var a in r) o[a] = r[a];
                                                 o.headers = new Headers(r.headers || {}), c(o.headers, n) && (
@@ -2661,7 +2665,8 @@
                                                 .loadCaptureCalled || 4 !== e.readyState ? null == t
                                                 .status && (t.status = 0) : E(this, e), r.cbTime = this
                                                 .cbTime, n("xhr", [t, r, this.startTime, this.endTime,
-                                                    "xhr"], this))
+                                                    "xhr"
+                                                ], this))
                                         }
                                     }
 
@@ -2855,7 +2860,7 @@
                                                     } catch (e) {
                                                         throw n.emit("fn-err", [arguments, this,
                                                             "string" == typeof e ? new Error(
-                                                            e) : e
+                                                                e) : e
                                                         ], i), e
                                                     } finally {
                                                         n.emit("fn-end", [(0, y.zO)()], i)
@@ -2886,7 +2891,7 @@
                     var Et = (0, Ot.K)(t.Z);
                     Et.page_view_event && new A(t.Z), Et.page_view_timing && new q(t.Z), Et.metrics && new ne(t.Z,
                             xt), Et.jserrors && new Me(t.Z), Et.ajax && new rt(t.Z), Et.session_trace && new _t(t
-                        .Z), Et.page_action && new wt(t.Z), gt = "pro", void 0 === yt && (yt = 1e3), mt ?
+                            .Z), Et.page_action && new wt(t.Z), gt = "pro", void 0 === yt && (yt = 1e3), mt ?
                         setTimeout((function () {
                             return p(gt)
                         }), yt) : n.B ? c((function () {
@@ -4504,9 +4509,246 @@
 
                     <div class="l-container__row u-margin__top--60 u-margin__bottom--100">
                         <section class="p-page_content">
-                            <div class="p-page_content__inner u-text--body">w
+                            <div class="p-page_content__inner u-text--body">
                                 <!-- 本文 -->
                                 <ol class="uptnews">
+                                    <li>
+                                        <div class="uptnews__gazo">
+                                            <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/toAdapt_CMS_20240826133307/ec_force/assets/images/uptorigin/img_magazine2410maquia.jpg"
+                                                alt="画像１" width="auto" height="auto" class="">
+                                        </div>
+                                        <div class="uptnews__contens">
+                                            <h2 class="uptnews__ttl">MAQUIA 2024年11月号</h2>
+
+                                            <div class="uptnews__contents--nameblc">
+                                                <p><span class="uptnews__contents--name">企画名</span></p>
+                                                <p class="uptnews__contents--txt">美女子ネタ</p>
+                                            </div>
+
+                                            <span class="uptnews__link--blc">
+
+                                                <span class="uptnews__link">
+                                                    <a haref="/shop/products/4595121188363" class="uptnews__link--img">
+                                                        <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/eyeshadow01.jpg"
+                                                            alt="set" width="160px" height="160px" class="uptnews__img">
+
+                                                    </a>
+                                                    <div>
+                                                        <div class="uptnews__contents--nameblc2">
+                                                            <p><span class="uptnews__contents--name">掲載商品</span></p>
+                                                        </div>
+                                                        <p class="uptnews__contents--txt">Eye Color
+                                                            Pallet<br><span>アイカラーパレット 01 amber more</span></p>
+                                                    </div>
+                                                </span>
+                                            </span>
+
+                                            
+
+                                            <span class="uptnews__link--blc">
+
+                                                <span class="uptnews__link">
+                                                    <a href="/shop/products/4595121188424" class="uptnews__link--img">
+                                                        <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/rip01.jpg"
+                                                            alt="set" width="160px" height="160px" class="uptnews__img">
+
+                                                    </a>
+                                                    <div>
+                                                        <div class="uptnews__contents--nameblc2">
+                                                            <p><span class="uptnews__contents--name">掲載商品</span></p>
+                                                        </div>
+                                                        <p class="uptnews__contents--txt">Watery Sheer
+                                                            Rip<br><span>ウォータリーシアーリップ 01 warm nude </span></p>
+                                                    </div>
+                                                </span>
+                                            </span>
+
+
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="uptnews__gazo">
+                                            <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/toAdapt_CMS_20240826133307/ec_force/assets/images/uptorigin/img_magazine2410ar.jpg"
+                                                alt="画像１" width="auto" height="auto" class="">
+                                        </div>
+                                        <div class="uptnews__contens">
+                                            <h2 class="uptnews__ttl">ar 2024年10月号</h2>
+
+                                            <div class="uptnews__contents--nameblc">
+                                                <p><span class="uptnews__contents--name">企画名</span></p>
+                                                <p class="uptnews__contents--txt">ご指名アイパレで垢抜け顔</p>
+                                            </div>
+
+
+                                            <span class="uptnews__link--blc">
+
+                                                <span class="uptnews__link">
+                                                    <a href="/shop/products/4595121188363" class="uptnews__link--img">
+                                                        <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/eyeshadow02.jpg"
+                                                            alt="set" width="160px" height="160px" class="uptnews__img">
+
+                                                    </a>
+                                                    <div>
+                                                        <div class="uptnews__contents--nameblc2">
+                                                            <p><span class="uptnews__contents--name">掲載商品</span></p>
+                                                        </div>
+                                                        <p class="uptnews__contents--txt">Eye Color
+                                                            Pallet<br><span>アイカラーパレット 02 melty mellow
+
+
+                                                            </span></p>
+                                                    </div>
+                                                </span>
+                                            </span>
+
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="uptnews__gazo">
+                                            <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/toAdapt_CMS_20240826133307/ec_force/assets/images/uptorigin/202409_maquia.jpg"
+                                                alt="画像１" width="auto" height="auto" class="">
+                                        </div>
+                                        <div class="uptnews__contens">
+                                            <h2 class="uptnews__ttl">MAQUIA 2024年9月号</h2>
+
+                                            <div class="uptnews__contents--nameblc">
+                                                <p><span class="uptnews__contents--name">企画名</span></p>
+                                                <p class="uptnews__contents--txt">夏からハマる！3つの最旬フェイス<br>
+                                                    連載「コスメカレンダーエクスプレス」</p>
+                                            </div>
+
+
+                                            <span class="uptnews__link--blc">
+
+                                                <span class="uptnews__link">
+                                                    <a href="/shop/products/4595121188394" class="uptnews__link--img">
+                                                        <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/base.jpg"
+                                                            alt="set" width="160px" height="160px" class="uptnews__img">
+                                                    </a>
+                                                    <div>
+                                                        <div class="uptnews__contents--nameblc2">
+                                                            <p><span class="uptnews__contents--name">掲載商品</span></p>
+                                                        </div>
+                                                        <p class="uptnews__contents--txt">Perfect Base Pallet
+                                                            Nature<br><span>パーフェクトベースパレット ナチュラル</span></p>
+                                                    </div>
+                                                </span>
+                                            </span>
+                                            <span class="uptnews__link--blc">
+
+                                                <span class="uptnews__link">
+                                                    <a href="/shop/products/4595121188363" class="uptnews__link--img">
+                                                        <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/eyeshadow02.jpg"
+                                                            alt="set" width="160px" height="160px" class="uptnews__img">
+
+                                                    </a>
+                                                    <div>
+                                                        <div class="uptnews__contents--nameblc2">
+                                                            <p><span class="uptnews__contents--name">掲載商品</span></p>
+                                                        </div>
+                                                        <p class="uptnews__contents--txt">Eye Color
+                                                            Pallet<br><span>アイカラーパレット 02 melty mellow
+
+
+                                                            </span></p>
+                                                    </div>
+                                                </span>
+                                            </span>
+
+
+                                            <span class="uptnews__link" style="margin-top: 5px">
+                                                <a href="/shop/products/4595121188363" class="uptnews__link--img">
+                                                    <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/eyeshadow03.jpg"
+                                                        alt="set" width="160px" height="160px" class="uptnews__img">
+
+                                                </a>
+                                                <div>
+                                                    <div class="uptnews__contents--nameblc2">
+                                                        <p><span class="uptnews__contents--name">掲載商品</span></p>
+                                                    </div>
+                                                    <p class="uptnews__contents--txt">Eye Color
+                                                        Pallet<br><span>アイカラーパレット 03 teddy coco
+
+
+                                                        </span></p>
+                                                </div>
+                                            </span>
+
+
+
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="uptnews__gazo">
+                                            <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/toAdapt_CMS_20240826133307/ec_force/assets/images/uptorigin/img_baila2410.jpg"
+                                                alt="画像１" width="auto" height="auto" class="">
+                                        </div>
+                                        <div class="uptnews__contens">
+                                            <h2 class="uptnews__ttl">BAILA 2024年10月号</h2>
+
+                                            <div class="uptnews__contents--nameblc">
+                                                <p><span class="uptnews__contents--name">企画名</span></p>
+                                                <p class="uptnews__contents--txt">
+                                                    「夏のお疲れ肌をたった一枚で一発逆転！<br>美容のプロが自腹で買ってる推しシートマスク35」</p>
+                                            </div>
+
+                                            <span class="uptnews__link--blc">
+
+                                                <a href="/shop/products/4595121188332" class="uptnews__link">
+                                                    <div class="uptnews__link--img">
+                                                        <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_240425_20240425153628/ec_force/assets/images/uptorigin/news_mask.jpg"
+                                                            alt="set" width="160px" height="160px" class="uptnews__img">
+                                                    </div>
+                                                    <div>
+                                                        <div class="uptnews__contents--nameblc2">
+                                                            <p><span class="uptnews__contents--name">掲載商品</span></p>
+                                                        </div>
+                                                        <p class="uptnews__contents--txt">CALMING SERUM
+                                                            MUSK<br><span>Upt カーミングセラムマスク</span></p>
+                                                    </div>
+                                                </a>
+                                            </span>
+
+                                        </div>
+
+                                    </li>
+                                    <li>
+                                        <div class="uptnews__gazo">
+                                            <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_beforerenew_20240812143613/ec_force/assets/images/uptorigin/magazine_biteki2410.png"
+                                                alt="画像１" width="auto" height="auto" class="">
+                                        </div>
+                                        <div class="uptnews__contens">
+                                            <h2 class="uptnews__ttl">美的 2024年10月号</h2>
+
+                                            <div class="uptnews__contents--nameblc">
+                                                <p><span class="uptnews__contents--name">企画名</span></p>
+                                                <p class="uptnews__contents--txt">
+                                                    「シートマスク＆ナイトマスクのMyベスト1を探せ」</p>
+                                            </div>
+
+                                            <span class="uptnews__link--blc">
+
+                                                <a href="/shop/products/4595121188332" class="uptnews__link">
+                                                    <div class="uptnews__link--img">
+                                                        <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_240425_20240425153628/ec_force/assets/images/uptorigin/news_mask.jpg"
+                                                            alt="set" width="160px" height="160px" class="uptnews__img">
+                                                    </div>
+                                                    <div>
+                                                        <div class="uptnews__contents--nameblc2">
+                                                            <p><span class="uptnews__contents--name">掲載商品</span></p>
+                                                        </div>
+                                                        <p class="uptnews__contents--txt">CALMING SERUM
+                                                            MUSK<br><span>Upt カーミングセラムマスク</span></p>
+                                                    </div>
+                                                </a>
+                                            </span>
+
+                                        </div>
+
+                                    </li>
                                     <li>
                                         <div class="uptnews__gazo">
                                             <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/202409_biteki.jpg"
@@ -4525,10 +4767,10 @@
                                             <span class="uptnews__link--blc">
 
                                                 <span class="uptnews__link">
-                                                    <div class="uptnews__link--img">
+                                                    <a href="/shop/products/4595121188394" class="uptnews__link--img">
                                                         <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/base.jpg"
                                                             alt="set" width="160px" height="160px" class="uptnews__img">
-                                                    </div>
+                                                    </a>
                                                     <div>
                                                         <div class="uptnews__contents--nameblc2">
                                                             <p><span class="uptnews__contents--name">掲載商品</span></p>
@@ -4541,11 +4783,11 @@
                                             <span class="uptnews__link--blc">
 
                                                 <span class="uptnews__link">
-                                                    <div class="uptnews__link--img">
+                                                    <a haref="/shop/products/4595121188363" class="uptnews__link--img">
                                                         <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/eyeshadow01.jpg"
                                                             alt="set" width="160px" height="160px" class="uptnews__img">
 
-                                                    </div>
+                                                    </a>
                                                     <div>
                                                         <div class="uptnews__contents--nameblc2">
                                                             <p><span class="uptnews__contents--name">掲載商品</span></p>
@@ -4557,55 +4799,57 @@
                                             </span>
 
                                             <span class="uptnews__link" style="margin-top: 5px">
-                                                <div class="uptnews__link--img">
+                                                <a href="/shop/products/4595121188363" class="uptnews__link--img">
                                                     <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/eyeshadow02.jpg"
                                                         alt="set" width="160px" height="160px" class="uptnews__img">
 
-                                                </div>
+                                                </a>
                                             </span>
                                             <span class="uptnews__link" style="margin-top: 5px">
-                                                <div class="uptnews__link--img">
+                                                <a href="/shop/products/4595121188363" class="uptnews__link--img">
                                                     <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/eyeshadow03.jpg"
                                                         alt="set" width="160px" height="160px" class="uptnews__img">
 
-                                                </div>
+                                                </a>
                                             </span>
 
                                             <span class="uptnews__link--blc">
 
                                                 <span class="uptnews__link">
-                                                    <div class="uptnews__link--img">
+                                                    <a href="/shop/products/4595121188424" class="uptnews__link--img">
                                                         <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/rip01.jpg"
                                                             alt="set" width="160px" height="160px" class="uptnews__img">
 
-                                                    </div>
+                                                    </a>
                                                     <div>
                                                         <div class="uptnews__contents--nameblc2">
                                                             <p><span class="uptnews__contents--name">掲載商品</span></p>
                                                         </div>
-                                                        <p class="uptnews__contents--txt">Watery Sheer Rip<br><span>ウォータリーシアーリップ 全色</span></p>
+                                                        <p class="uptnews__contents--txt">Watery Sheer
+                                                            Rip<br><span>ウォータリーシアーリップ 全色</span></p>
                                                     </div>
                                                 </span>
                                             </span>
 
                                             <span class="uptnews__link" style="margin-top: 5px">
-                                                <div class="uptnews__link--img">
+                                                <a href="/shop/products/4595121188424" class="uptnews__link--img">
                                                     <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/rip02.jpg"
                                                         alt="set" width="160px" height="160px" class="uptnews__img">
 
-                                                </div>
+                                                </a>
                                             </span>
                                             <span class="uptnews__link" style="margin-top: 5px">
-                                                <div class="uptnews__link--img">
+                                                <a href="/shop/products/4595121188424" class="uptnews__link--img">
                                                     <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/03.jpg"
                                                         alt="set" width="160px" height="160px" class="uptnews__img">
 
-                                                </div>
+                                                </a>
                                             </span>
 
                                         </div>
 
                                     </li>
+
                                     <li>
                                         <div class="uptnews__gazo">
                                             <img src="https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/images/uptorigin/202409_cancam.jpg"

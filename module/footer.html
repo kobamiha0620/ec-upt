@@ -7,6 +7,62 @@
 </div>
 
 
+<style>
+    /* 背景 */
+    .footer_bg, .uptfooter{
+      background: {{section.settings.color_footer_bg}};
+    }
+    /* 見出し */
+    .footer_head, .uptfootersns__ttl {
+        color: {{color_footer_head_top}};
+    }
+    /* リンク */
+    .footer_link, .uptfootersns__list li a{
+      color: {{section.settings.color_footer_link}};
+    }
+    /* 本文 */
+    .footer_body, .uptfooter__links li a {
+      color: {{section.settings.color_footer_body}};
+    }
+
+    /* TOP背景 */
+    body.topPage .uptfooter{
+      background: {{section.settings.color_footer_bg-top}};
+    }
+    /* TOP見出し */
+    body.topPage .uptfootersns__ttl {
+        color: {{color_footer_head_top}};
+    }
+     /* TOPリンク */
+     body.topPage .uptfootersns__list li a{
+      color: {{section.settings.color_footer_link-top}};
+    }
+    /* 本文 */
+    body.topPage .uptfooter__links li a {
+      color: {{section.settings.color_footer_body-top}};
+    }
+
+
+        /* TOP背景 */
+.uptfooter{
+      background: {{section.settings.color_footer_bg-top}};
+    }
+    /* TOP見出し */
+ .uptfootersns__ttl {
+        color: {{color_footer_head_top}};
+    }
+     /* TOPリンク */
+     .uptfootersns__list li a{
+      color: {{section.settings.color_footer_link-top}};
+    }
+    /* 本文 */
+ .uptfooter__links li a {
+      color: {{section.settings.color_footer_body-top}};
+    }
+
+  </style>
+
+
 <div class="uptblc" id="uptfootersns">
     <div class="uptblc__inner">
         <div class="uptfootersns">
@@ -15,6 +71,8 @@
                 <ul class="uptfootersns__list">
                     <!-- facebook -->
                     
+                    {% if section.settings.facebook_account_text.size > 0 %}
+                    
                     <li>
                         <a class="" href="{{section.settings.facebook_account_text}}" target="_blank"
                             rel="noopener noreferrer nofollow">
@@ -22,9 +80,14 @@
                         </a>
                     </li>
                     
+                    {% endif %}
+                    
+                    
 
 
                     <!-- Instagram -->
+                    
+                    {% if section.settings.twitter_account_text.size > 0 %}
                     
                     <li>
                         <a href="{{section.settings.instagram_account_text}}" target="_blank"
@@ -33,30 +96,44 @@
                         </a>
                     </li>
                     
+                    {% endif %}
+
+
+                    
 
                     <!-- twitter -->
+                    
+                    {% if section.settings.twitter_account_text.size > 0 %}
                     
                     <li>
                         <a href="{{section.settings.twitter_account_text}}" target="_blank"
                             rel="noopener noreferrer nofollow">
-                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fa-brands fa-x-twitter "></i>
 
                         </a>
                     </li>
+                    
+                    {% endif %}
                     
 
                     <!-- Line -->
                     
+                    {% if section.settings.twitter_account_text.size > 0 %}
+                    
                     <li>
                         <a href="{{section.settings.line_account_text}}" target="_blank"
                             rel="noopener noreferrer nofollow">
-                            <i class="u-icon--line"></i>
+                            <i class="fa-brands fa-line"></i>
                         </a>
                     </li>
+                    
+                    {% endif %}
                     
 
 
                     <!-- youtube -->
+                    
+                    {% if section.settings.twitter_account_text.size > 0 %}
                     
                     <li>
                         <a href="{{section.settings.youtube_account_text}}" target="_blank"
@@ -64,6 +141,8 @@
                             <i class="fa-brands fa-youtube"></i>
                         </a>
                     </li>
+                    
+                    {% endif %}
                     
 
 
@@ -75,36 +154,69 @@
 
 <footer class="uptfooter" data-section-id='footer' data-section-type='footer-section'>
     
+    {% for menu in section.settings.footer_menu %}
+    
 
 
     <ul class="uptfooter__links">
         
-            <li><a href="">キャンセル・変更規定・返品に関して</a></li>
+        {% unless menu.link_text1 == "" or menu.link_text1 == null %}
+        <li>
+            <a href="{{menu.link_url1}}">
+                {{ menu.link_text1 | escape }}
+            </a>
+        </li>
+        {% endunless %}
         
 
 
         
-            <li><a href="">特定商取引に基づく表記</a></li>
+        {% unless menu.link_text2 == "" or menu.link_text2 == null %}
+        <li>
+        <a href="{{menu.link_url1}}">{{ menu.link_text2 | escape }}</a>
+        </li>
+        {% endunless %}
         
 
     
 
 
         
+            {% unless menu.link_text3 == "" or menu.link_text3 == null %}
+            <li>
+            <a href="{{menu.link_url2}}">{{ menu.link_text3 | escape }}</a>
+            </li>
+            {% endunless %}
         
-            <li><a href="">プライバシーポリシー </a></li>
+        
+            {% unless menu.link_text4 == "" or menu.link_text4 == null %}
+            <li>
+            <a href="{{menu.link_url3}}">{{ menu.link_text4 | escape }}</a>
+            </li>
+            {% endunless %}
         
 
         
-            <li><a href="">利用規約 </a></li>
+            {% unless menu.link_text5 == "" or menu.link_text5 == null %}
+            <li>
+            <a href="{{menu.link_url4}}">{{ menu.link_text5 | escape }}</a>
+            </li>
+            {% endunless %}
         
 
         
-            <li><a href="">送料に関して </a></li>
+            {% unless menu.link_text6 == "" or menu.link_text6 == null %}
+            <li>
+            <a href="{{menu.link_url5}}">{{ menu.link_text6 | escape }}</a>
+            </li>
+            {% endunless %}
         
 
 
     </ul>
+
+    
+    {% endfor %}
     
 
     <p class="uptfooter__copy"><small>© 2022 Upt All Rights Reserved</small></p>
@@ -113,5 +225,3 @@
 <!-- Footer -->
 
 
-<script src="/assets/uptfooter.js"></script>
-<script src="https://kit.fontawesome.com/7304ec542e.js" crossorigin="anonymous"></script>

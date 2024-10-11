@@ -23,18 +23,31 @@
     
     }
 }
+.swiper-container {
+    overflow: visible;
+}
 
 .item__swiper {
     margin: 0 auto;
     max-width: 440px;
+    .swiper-slide{
+        background-color: #F7F8F8;
+        padding-bottom: 2px;
+        overflow: visible;
+        img{
+            object-fit: unset;
+        }
+    }
     .cosmeSwiper {
         margin: 0 auto 26px;
-
+        position: relative;
         .swiper-slide {
             img {
                 border-radius: 30px;
             }
         }
+
+    
     }
 
     .thumb__blc {
@@ -90,17 +103,32 @@
         margin: 0 auto;
 
         .swiper-slide {
+            font-size: 0;
+            line-height: 0;
+            vertical-align: bottom;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding: 0;
             img {
                 border-radius: 16px;
+                font-size: 0;
+                line-height: 0;
+                vertical-align: bottom;
+                object-fit: cover;
+                display: block;
             }
         }
 
-        .swiper-slide-thumb-active,
-        .swiper-slide-active {
+        .swiper-slide-thumb-active {
             font-size: 0;
             line-height: 0;
+            // background-color: var.$brown;
+            border-radius: 14px;
+                
             img {
                 border: solid 1px var.$brown;
+                background-color: var.$brown;
+
             }
         }
     }
@@ -110,8 +138,15 @@
             margin: 0 auto 5vw;
 
             .swiper-slide {
+                border-radius: 3.4vw;
+                font-size: 0;
+                line-height: 0;
+                margin-left: -1px;
                 img {
                     border-radius: 3.4vw;
+                    object-fit: unset;
+                    width: 100%;
+                    height: auto;
                 }
             }
         }
@@ -657,18 +692,36 @@
         max-width: 80vw;
 
         &__txtwrap {
-            margin: 0 auto 6vw;
+            margin: 0 auto 10vw;
             max-width: 80vw;
             &.point1{
                 margin: 0 auto 2vw;
             }
         }
+        &__flxb{
+
+            &--img{
+                min-width: 47%;
+                max-width: 47%;
+                width: 47%;
+                margin-left: 5%;
+
+            }
+            &--img02{
+                min-width: 32%;
+                max-width: 32%;
+                width: 32%;
+                margin-left: 8.4%;
+
+            }
+        }
+    
         &__txt{
             @include var.fz(11);
         }
         &__small {
             @include var.fz(11);
-            margin-top: 10px;
+            margin-top: 2˜vw;
             line-height: 1.4;
             font-weight: 400;
             color: var.$brown;

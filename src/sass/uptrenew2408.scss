@@ -126,6 +126,10 @@ body.renewPage {
 }
 .c-announce_bar{
   padding: 3px 60px;
+  @media screen and (max-width: var.$spbp) {
+    padding: 3px 8px;
+  }
+
 }
 
 summary {

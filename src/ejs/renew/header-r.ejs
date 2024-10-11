@@ -68,9 +68,10 @@ var imgpath = '';
         {% assign top_only_message_flg = true %}
         {% endif %}
         {% unless top and top_only_message_flg %} {% comment %} unless a && !b {% endcomment %}
-         {% comment %} <a class="c-announce_bar uptheader__anounce" href="/shop/information/202212">
-            <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>{% comment %}Don't use
-            escape{% endcomment %}
+         {% comment %} 
+         <a class="c-announce_bar uptheader__anounce" href="/shop/information/2nd-anniversary">
+            <div class="c-announce_bar__text">{{ section.settings.message_text }}</div>
+            {% comment %}Don't use escape{% endcomment %}
             <button class="c-announce_bar__close" type="button"><i class="u-icon--close"></i></button>
         </a>  {% endcomment %}
        <!-- <div class="c-announce_bar uptheader__anounce">

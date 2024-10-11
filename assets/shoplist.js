@@ -19,23 +19,42 @@ const hokkaidoDetails = document.getElementById('hokkaido__ditails');
 function formatJSON(data) {
     const map1 = new Map();
     const prefecture = []; //都道府県名
-    
-
+    const cosme = [];
+    const skincare = [];
     //各配列の定義
     const area = [];
 
     let area1 = [];
     let areaname1 = [];
+    let skincare1 = [];
+    let cosme1 = [];
+    
     let area2 = [];
     let areaname2 = [];
+    let skincare2 = [];
+    let cosme2 = [];
+    
     let area3 = [];
     let areaname3 = [];
+    let skincare3 = [];
+    let cosme3 = [];
+    
     let area4 = [];
     let areaname4 = [];
+    let skincare4 = [];
+    let cosme4 = [];
+    
     let area5 = [];
     let areaname5 = [];
+    let skincare5 = [];
+    let cosme5 = [];
+    
+
     let area6 = [];
     let areaname6 = [];
+    let skincare6 = [];
+    let cosme6 = [];
+    
 
 
     let kenarea = [];
@@ -48,22 +67,34 @@ function formatJSON(data) {
         if (data[i].areaID == ('area-1')) {
             area1.push(data[i].prefectureID);
             areaname1.push(data[i].prefecture);
+            skincare1.push(data[i].skincare);
+            cosme1.push(data[i].cosme);
 
         }else if(data[i].areaID == ('area-2')) {
             area2.push(data[i].prefectureID);
             areaname2.push(data[i].prefecture);
+            skincare2.push(data[i].skincare);
+            cosme2.push(data[i].cosme);
         }else if(data[i].areaID == ('area-3')) {
             area3.push(data[i].prefectureID);
             areaname3.push(data[i].prefecture); 
+            skincare3.push(data[i].skincare);
+            cosme3.push(data[i].cosme);
         }else if(data[i].areaID == ('area-4')) {
             area4.push(data[i].prefectureID);
             areaname4.push(data[i].prefecture); 
+            skincare4.push(data[i].skincare);
+            cosme4.push(data[i].cosme);
         }else if(data[i].areaID == ('area-5')) {
             area5.push(data[i].prefectureID);
             areaname5.push(data[i].prefecture); 
+            skincare5.push(data[i].skincare);
+            cosme5.push(data[i].cosme);
         }else if(data[i].areaID == ('area-6')) {
             area6.push(data[i].prefectureID);
             areaname6.push(data[i].prefecture); 
+            skincare6.push(data[i].skincare);
+            cosme6.push(data[i].cosme);
         }
     }
 
@@ -110,17 +141,83 @@ function formatJSON(data) {
 
     for (let i in data) {
         if(data[i].areaID == "area-1"){
-            kenarea[0].insertAdjacentHTML('beforeend', '<li id="'+ data[i].prefectureID + '"><span class="prefecture__ttl">' + data[i].prefecture + '</span><span class="prefecture__name">' +  data[i].shopname + '</span></li>');
+            kenarea[0].insertAdjacentHTML('beforeend', 
+                `<li id="${data[i].prefectureID}">
+                    <div class="prefecture__blc">
+                        <span class="prefecture__ttl">${data[i].prefecture}</span>
+                        <span class="prefecture__name">${data[i].shopname}</span>
+                    </div>
+                    <div class="prefecture__sort">
+                        ${data[i].skincare ? `<span class="prefecture__skincare">${data[i].skincare}</span>` : ''}
+                        ${data[i].cosme ? `<span class="prefecture__cosme">${data[i].cosme}</span>` : ''}
+                    </div>
+                </li>`);
+
+            // kenarea[0].insertAdjacentHTML('beforeend', '<li id="'+ data[i].prefectureID + '"><div class="prefecture__blc"><span class="prefecture__ttl">' + data[i].prefecture + '</span><span class="prefecture__name">' +  data[i].shopname + '</span></div><div class="prefecture__sort"><span class="prefecture__skincare">' +  data[i].skincare + '</span><span class="prefecture__cosme">' +  data[i].cosme + '</span></div></li>');
         }else if(data[i].areaID == "area-2"){
-            kenarea[1].insertAdjacentHTML('beforeend', '<li id="'+ data[i].prefectureID + '"><span class="prefecture__ttl">' + data[i].prefecture + '</span><span class="prefecture__name">' +  data[i].shopname + '</span></li>');
+            kenarea[1].insertAdjacentHTML('beforeend', 
+                `<li id="${data[i].prefectureID}">
+                    <div class="prefecture__blc">
+                        <span class="prefecture__ttl">${data[i].prefecture}</span>
+                        <span class="prefecture__name">${data[i].shopname}</span>
+                    </div>
+                    <div class="prefecture__sort">
+                        ${data[i].skincare ? `<span class="prefecture__skincare">${data[i].skincare}</span>` : ''}
+                        ${data[i].cosme ? `<span class="prefecture__cosme">${data[i].cosme}</span>` : ''}
+                    </div>
+                </li>`);
         }else if(data[i].areaID == "area-3"){
-            kenarea[2].insertAdjacentHTML('beforeend', '<li id="'+ data[i].prefectureID + '"><span class="prefecture__ttl">' + data[i].prefecture + '</span><span class="prefecture__name">' +  data[i].shopname + '</span></li>');
+            kenarea[2].insertAdjacentHTML('beforeend', 
+                `<li id="${data[i].prefectureID}">
+                    <div class="prefecture__blc">
+                        <span class="prefecture__ttl">${data[i].prefecture}</span>
+                        <span class="prefecture__name">${data[i].shopname}</span>
+                    </div>
+                    <div class="prefecture__sort">
+                        ${data[i].skincare ? `<span class="prefecture__skincare">${data[i].skincare}</span>` : ''}
+                        ${data[i].cosme ? `<span class="prefecture__cosme">${data[i].cosme}</span>` : ''}
+                    </div>
+                </li>`);
+            // kenarea[2].insertAdjacentHTML('beforeend', '<li id="'+ data[i].prefectureID + '"><div class="prefecture__blc"><span class="prefecture__ttl">' + data[i].prefecture + '</span><span class="prefecture__name">' +  data[i].shopname + '</span></div><div class="prefecture__sort"><span class="prefecture__skincare">' +  data[i].skincare + '</span><span class="prefecture__cosme">' +  data[i].cosme + '</span></div></li>');
         }else if(data[i].areaID == "area-4"){
-            kenarea[3].insertAdjacentHTML('beforeend', '<li id="'+ data[i].prefectureID + '"><span class="prefecture__ttl">' + data[i].prefecture + '</span><span class="prefecture__name">' +  data[i].shopname + '</span></li>');
+            kenarea[3].insertAdjacentHTML('beforeend', 
+                `<li id="${data[i].prefectureID}">
+                    <div class="prefecture__blc">
+                        <span class="prefecture__ttl">${data[i].prefecture}</span>
+                        <span class="prefecture__name">${data[i].shopname}</span>
+                    </div>
+                    <div class="prefecture__sort">
+                        ${data[i].skincare ? `<span class="prefecture__skincare">${data[i].skincare}</span>` : ''}
+                        ${data[i].cosme ? `<span class="prefecture__cosme">${data[i].cosme}</span>` : ''}
+                    </div>
+                </li>`);
+            // kenarea[3].insertAdjacentHTML('beforeend', '<li id="'+ data[i].prefectureID + '"><div class="prefecture__blc"><span class="prefecture__ttl">' + data[i].prefecture + '</span><span class="prefecture__name">' +  data[i].shopname + '</span></div><div class="prefecture__sort"><span class="prefecture__skincare">' +  data[i].skincare + '</span><span class="prefecture__cosme">' +  data[i].cosme + '</span></div></li>');
         }else if(data[i].areaID == "area-5"){
-            kenarea[4].insertAdjacentHTML('beforeend', '<li id="'+ data[i].prefectureID + '"><span class="prefecture__ttl">' + data[i].prefecture + '</span><span class="prefecture__name">' +  data[i].shopname + '</span></li>');
+            kenarea[4].insertAdjacentHTML('beforeend', 
+                `<li id="${data[i].prefectureID}">
+                    <div class="prefecture__blc">
+                        <span class="prefecture__ttl">${data[i].prefecture}</span>
+                        <span class="prefecture__name">${data[i].shopname}</span>
+                    </div>
+                    <div class="prefecture__sort">
+                        ${data[i].skincare ? `<span class="prefecture__skincare">${data[i].skincare}</span>` : ''}
+                        ${data[i].cosme ? `<span class="prefecture__cosme">${data[i].cosme}</span>` : ''}
+                    </div>
+                </li>`);
+            // kenarea[4].insertAdjacentHTML('beforeend', '<li id="'+ data[i].prefectureID + '"><div class="prefecture__blc"><span class="prefecture__ttl">' + data[i].prefecture + '</span><span class="prefecture__name">' +  data[i].shopname + '</span></div><div class="prefecture__sort"><span class="prefecture__skincare">' +  data[i].skincare + '</span><span class="prefecture__cosme">' +  data[i].cosme + '</span></div></li>');
         }else if(data[i].areaID == "area-6"){
-            kenarea[5].insertAdjacentHTML('beforeend', '<li id="'+ data[i].prefectureID + '"><span class="prefecture__ttl">' + data[i].prefecture + '</span><span class="prefecture__name">' +  data[i].shopname + '</span></li>');
+            kenarea[5].insertAdjacentHTML('beforeend', 
+                `<li id="${data[i].prefectureID}">
+                    <div class="prefecture__blc">
+                        <span class="prefecture__ttl">${data[i].prefecture}</span>
+                        <span class="prefecture__name">${data[i].shopname}</span>
+                    </div>
+                    <div class="prefecture__sort">
+                        ${data[i].skincare ? `<span class="prefecture__skincare">${data[i].skincare}</span>` : ''}
+                        ${data[i].cosme ? `<span class="prefecture__cosme">${data[i].cosme}</span>` : ''}
+                    </div>
+                </li>`);
+            // kenarea[5].insertAdjacentHTML('beforeend', '<li id="'+ data[i].prefectureID + '"><div class="prefecture__blc"><span class="prefecture__ttl">' + data[i].prefecture + '</span><span class="prefecture__name">' +  data[i].shopname + '</span></div><div class="prefecture__sort"><span class="prefecture__skincare">' +  data[i].skincare + '</span><span class="prefecture__cosme">' +  data[i].cosme + '</span></div></li>');
         }
 
 
@@ -243,7 +340,7 @@ func = async () => {
 //データを取る
 getData = () => {
     return new Promise(resolve => {
-        const url = 'https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/addmask_2405_20240513155516/ec_force/assets/shoplist2405.json';
+        const url = 'https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/toAdapt_CMS_20240826133307/ec_force/assets/shoplis0913b.json';
         fetch(url)
             .then(response => response.json())
             .then(data => formatJSON(data));

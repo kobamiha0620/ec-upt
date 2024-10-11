@@ -1,9 +1,9 @@
 <% 
 var pageinit = {
-  ecforce : '',
+  ecforce : 'true',
 };
     imgpath =  '';   
-    // imgpath = '{{ theme_file_root_path }}';
+    imgpath = '{{ theme_file_root_path }}';
 %>
 
 
@@ -13,6 +13,7 @@ var pageinit = {
   <!-- {% comment %} 商品名 {% endcomment %} -->
 
   <h1 class="item__name" id="item__name">EYE COLOR PALETTE</h1>
+
   <div class="item__swiper">
     <!-- Slider main container -->
     <div class="swiper cosmeSwiper">
@@ -74,9 +75,13 @@ var pageinit = {
 
     </div>
 
-
     <div class="thumb__blc">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+
     <!-- Slider main container -->
+
     <div class="swiper cosmeSwiper__thumb">
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
@@ -132,12 +137,14 @@ var pageinit = {
         </div>
 
       </div>
-
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
     </div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+
+
+
   </div>
-  </div>
+
 
 
   <div class="item__details">
@@ -214,7 +221,7 @@ var pageinit = {
     <p class="item__intro--name">EYE COLOR PALETTE</p>
     <% } %>
     <p class="item__intro--txt">
-      捨て色なしで使い方に迷わない<br>異なる3つの質感と色のレイヤードを楽しむアイカラー
+      捨て色なしで使い方に迷わない異なる3つの質感と<br>色のレイヤードを楽しむアイカラー
     </p>
 
 

@@ -914,8 +914,8 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        max-width: 842px;
-        max-height: 720px;
+        // max-width: 842px;
+        // max-height: 720px;
         width: 50%;
 
         &--inner {
@@ -1475,7 +1475,9 @@ h2.upthome__illust--ttl {
         .uptblc__inner {
             border-right: solid 1px var.$bg_dark;
             border-left: solid 1px var.$bg_dark;
+
         }
+
     }
 }
 

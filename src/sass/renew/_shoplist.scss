@@ -1,0 +1,318 @@
+@use "./module/variable"as var;
+
+:root {
+    --width: 500px;
+}
+
+.p-page_content__inner p {
+    font-size: 100%;
+
+}
+.prefecture{
+    padding-bottom: 200px;
+    li{
+        padding-top: 160px;
+        margin-bottom: -140px;
+        overflow: hidden;        
+        &:last-child{
+            margin-bottom: -220px;
+        }
+    }
+    &__blc{
+        overflow: hidden;
+    }
+    &__sort{
+        overflow: hidden;
+        margin-top: 3px;
+    }
+    &__cosme{
+        color: #FFF;
+        background-color: var.$brown;
+        display: inline-block;
+        padding: 1px 10px;
+        border-radius: 10px;
+        margin-right: 10px;
+    }
+    &__skincare{
+        color: #FFF;
+        display: inline-block;
+
+        background-color: var.$bg_dark;
+        padding: 1px 10px;
+        border-radius: 10px;
+    }
+    &__ttl{
+        font-weight: bold;
+        margin: 0;
+        display: inline-block;
+        color: var.$bg_dark;
+        @include var.fz(17);
+        margin-right: 10px;
+    }
+    &__name{
+        margin: 0!important;
+        color: var.$bg_dark;
+        @include var.fz(16);
+        display: inline-block;
+    }
+    @media screen and (max-width: var.$spbp) {
+        li{
+            padding-top: 160px;
+            margin-bottom: -152px;
+        }
+        &__ttl{
+
+            @include var.fz(14);
+            margin-right: 6px;
+        }
+        &__name{
+
+            @include var.fz(13);
+        }
+    }
+}
+.uptshoplist {
+    width: var(--width);
+    margin: 0 auto;
+    &__areasp{
+        display: none;
+    }
+    &__area{
+        @include var.fz(16);
+
+        position: fixed;
+        bottom: 80px;
+        left: calc(50% - 360px);
+        transform: translateX(-50%);
+        color: var.$bg_dark;
+        a{
+            text-decoration: none;
+            @include var.fz(14);
+        }
+        li{
+            padding: 5px 0;
+
+            &.areaActive{
+                a{
+                    border-bottom: solid 1px  var.$bg_dark;
+                }
+            }
+            &:hover{
+                a{
+                    &::after{
+                        transition: all .3s;
+
+                        transform: scale(0.2, 1);/*X方向に0.2スケール拡大*/
+                        transform: scale(1, 1);/*X方向にスケール拡大*/
+
+                    }
+                }
+            }
+            &.is-active{
+                a{
+                    &::after{
+                        transition: all .3s;
+
+                        transform: scale(0.2, 1);/*X方向に0.2スケール拡大*/
+                        transform: scale(1, 1);/*X方向にスケール拡大*/
+
+                    }
+                }
+            
+            }
+            a{
+                position: relative;
+                padding: 2px 0;
+                display: inline-block;
+
+                &::after{
+                    content: '';
+                    /*絶対配置で線の位置を決める*/
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    /*線の形状*/
+                    width: 100%;
+                    height: 1px;
+                    background: var.$bg_dark;
+                    /*アニメーションの指定*/
+                    transition: all .3s;
+                    transform: scale(0, 1);/*X方向にスケール拡大*/
+                    transform-origin: left bottom;/*左上基点*/
+                }
+            }
+        }
+        opacity: 1;
+        transition: all 0.5s;
+
+        &.hide{
+            opacity: 0;
+            transition: all 0.5s;
+
+        }
+    }
+    &__shoplist{
+        li{
+            color: var.$bg_dark;
+            @include var.fz(14);
+            padding: 10px 0;
+            border-bottom: solid 1px #e3e3e1;
+            display: flex;
+            align-items: center;
+        }
+        &--pre{
+            display: inline-block;
+            border-radius: 30px;
+            padding: 6px 10px;
+            border: solid 1px var.$bg_dark;
+        }
+        &--details{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 0 -140px;
+            li{
+                margin: 0 5px 5px 0;
+                a{
+                    color: var.$bg_dark;
+                    display: inline-block;
+                    border-radius: 30px;
+                    @include var.fz(14);
+                    background: #FFF;
+                    text-decoration: none;
+                    padding: 5px 10px;
+                    white-space: nowrap;
+                    font-weight: bold;
+                    border: solid 2px var.$bg_dark;
+                }
+            }
+        }
+    }
+    &__blc{
+        padding-top: 100px;
+        &--wrap{
+        }
+    }
+    p {
+        &.uptshoplist__shoplist--pre{
+            line-height: 1;
+            margin: 0 8px 0 0;
+
+        }
+        &.uptshoplist__shoplist--name{
+            line-height: 1.5;
+            margin: 0;
+        }
+        &.uptshoplist__areaTtl{
+            background: var.$bg_dark;
+            color: #FFF;
+            padding-left: 12px;
+            white-space: nowrap;
+            margin: 0 0 20px;
+            @include var.fz(18);
+            @media screen and (max-width: var.$spbp) {
+                @include var.fz(15);
+
+            }
+        }
+        &.uptshoplist__ttl {
+            text-align: center;
+            @include var.fz(48);
+            font-weight: 500;
+            margin: 0 auto 10px;
+            line-height: 1;
+            color: var.$bg_dark;
+        }
+        &.uptshoplist__ttljp{
+            text-align: center;
+            @include var.fz(18);
+            line-height: 1;
+            color: var.$bg_dark;
+            margin: 0 auto 70px;
+        }
+        &.uptshoplist__txt{
+            text-align: center;
+            margin: 20px auto 0;
+            color: var.$bg_dark;
+            @media screen and (max-width: var.$spbp) {
+                @include var.fz(13);
+                padding: 0 5vw;
+                br{
+                    display: none;
+                   
+                }
+            }
+
+
+        }
+    }
+    @media screen and (max-width: var.$spbp) {
+        width: 100%;
+        &__area{
+            display: none;
+        }
+        &__areasp{
+            display: flex;
+            background: #FFF;
+            overflow-x: scroll;
+            border-top: solid 1px var.$bg_dark;
+            border-bottom: solid 1px var.$bg_dark;
+            width: 100%;
+            li{
+                text-align: center;
+                border-right: dashed 1px var.$bg_dark;
+                min-width: 40%;
+                a{
+                    width: 100%;
+                    display: inline-block;
+                    padding: 16px 0;
+                    text-decoration: none;
+                    color: var.$bg_dark;
+                    @include var.fz(14);
+                    line-height: 1;
+                    white-space: nowrap;
+                }
+            }
+            &.active{
+                position: fixed;
+                bottom: 0;
+                left: 0;
+            }
+        }
+        &__blc{
+            padding-top: 90px;
+            &--wrap{
+                padding: 0 5%;
+                margin: 0;
+            }
+        }
+        &__shoplist{
+
+            &--pre{
+                white-space: nowrap;
+            }
+            &--details{
+                display: flex;
+                flex-wrap: wrap;
+                margin: 0 0 -140px;
+                li{
+                    margin: 0 5px 5px 0;
+                    a{
+                        color: var.$bg_dark;
+                        display: inline-block;
+                        border-radius: 30px;
+                        @include var.fz(14);
+                        background: #FFF;
+                        text-decoration: none;
+                        line-height: 1;
+                        padding: 5px 10px;
+                        white-space: nowrap;
+                        font-weight: bold;
+                        border: solid 2px var.$bg_dark;
+                    }
+                }
+            }
+        }
+    }
+}
+
+

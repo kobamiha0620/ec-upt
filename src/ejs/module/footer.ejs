@@ -10,7 +10,7 @@ var pageinit = {
   ogimage : '' ,
   path : '' ,
   pages: ['top'],
-  ecforce : 'false',
+  ecforce : 'true',
   category : ['about'] ,
   pagename : '',
   css: [],
@@ -38,7 +38,7 @@ var imgpath = '';
     }
     /* 見出し */
     .footer_head, .uptfootersns__ttl {
-      color: {{section.settings.color_footer_head}};
+        color: {{color_footer_head_top}};
     }
     /* リンク */
     .footer_link, .uptfootersns__list li a{
@@ -63,6 +63,24 @@ var imgpath = '';
     }
     /* 本文 */
     body.topPage .uptfooter__links li a {
+      color: {{section.settings.color_footer_body-top}};
+    }
+
+
+        /* TOP背景 */
+.uptfooter{
+      background: {{section.settings.color_footer_bg-top}};
+    }
+    /* TOP見出し */
+ .uptfootersns__ttl {
+        color: {{color_footer_head_top}};
+    }
+     /* TOPリンク */
+     .uptfootersns__list li a{
+      color: {{section.settings.color_footer_link-top}};
+    }
+    /* 本文 */
+ .uptfooter__links li a {
       color: {{section.settings.color_footer_body-top}};
     }
 
@@ -114,7 +132,7 @@ var imgpath = '';
                     <li>
                         <a href="{{section.settings.twitter_account_text}}" target="_blank"
                             rel="noopener noreferrer nofollow">
-                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fa-brands fa-x-twitter "></i>
 
                         </a>
                     </li>
@@ -129,7 +147,7 @@ var imgpath = '';
                     <li>
                         <a href="{{section.settings.line_account_text}}" target="_blank"
                             rel="noopener noreferrer nofollow">
-                            <i class="u-icon--line"></i>
+                            <i class="fa-brands fa-line"></i>
                         </a>
                     </li>
                     <% if (pageinit.ecforce === 'true') { %>
@@ -174,7 +192,7 @@ var imgpath = '';
         </li>
         {% endunless %}
         <% } else { %>
-            <li><a href="">キャンセル・変更規定・返品に関して</a></li>
+            <li><a href="/shop/guide/">キャンセル・変更規定・返品に関して</a></li>
         <% } %>
 
 
@@ -185,7 +203,7 @@ var imgpath = '';
         </li>
         {% endunless %}
         <% } else { %>
-            <li><a href="">特定商取引に基づく表記</a></li>
+            <li><a href="/shop/law_info/">特定商取引に基づく表記</a></li>
         <% } %>
 
     
@@ -194,42 +212,43 @@ var imgpath = '';
         <% if (pageinit.ecforce === 'true') { %>
             {% unless menu.link_text3 == "" or menu.link_text3 == null %}
             <li>
-            <a href="{{menu.link_url1}}">{{ menu.link_text3 | escape }}</a>
+            <a href="{{menu.link_url2}}">{{ menu.link_text3 | escape }}</a>
             </li>
             {% endunless %}
         <% } %>
         <% if (pageinit.ecforce === 'true') { %>
             {% unless menu.link_text4 == "" or menu.link_text4 == null %}
             <li>
-            <a href="{{menu.link_url1}}">{{ menu.link_text4 | escape }}</a>
+            <a href="{{menu.link_url3}}">{{ menu.link_text4 | escape }}</a>
             </li>
             {% endunless %}
         <% } else { %>
-            <li><a href="">プライバシーポリシー </a></li>
+            <li><a href="/shop/privacy/">プライバシーポリシー </a></li>
         <% } %>
 
         <% if (pageinit.ecforce === 'true') { %>
             {% unless menu.link_text5 == "" or menu.link_text5 == null %}
             <li>
-            <a href="{{menu.link_url1}}">{{ menu.link_text5 | escape }}</a>
+            <a href="{{menu.link_url4}}">{{ menu.link_text5 | escape }}</a>
             </li>
             {% endunless %}
         <% } else { %>
-            <li><a href="">利用規約 </a></li>
+            <li><a href="/shop/customer_term/">利用規約 </a></li>
         <% } %>
 
         <% if (pageinit.ecforce === 'true') { %>
             {% unless menu.link_text6 == "" or menu.link_text6 == null %}
             <li>
-            <a href="{{menu.link_url1}}">{{ menu.link_text6 | escape }}</a>
+            <a href="{{menu.link_url5}}">{{ menu.link_text6 | escape }}</a>
             </li>
             {% endunless %}
         <% } else { %>
-            <li><a href="">送料に関して </a></li>
+            <li><a href="/shop/guide/">送料に関して </a></li>
         <% } %>
 
 
     </ul>
+
     <% if (pageinit.ecforce === 'true') { %>
     {% endfor %}
     <% } %>
@@ -240,5 +259,3 @@ var imgpath = '';
 <!-- Footer -->
 
 
-<script src="<%= imgpath %>/assets/uptfooter.js"></script>
-<script src="https://kit.fontawesome.com/7304ec542e.js" crossorigin="anonymous"></script>

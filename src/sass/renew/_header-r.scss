@@ -46,10 +46,16 @@ body.topPage{
     background-color: #898989;
   }
 
+  .c-announce_bar + .uptblc{
+    .uptblc__inner{
+        border: none;
+        display: none;
+      }
+  }
+
   .uptblc__inner{
     border: none;
   }
-  
   .uptHeader__toppc{
     width: 100%;
     display: block;
@@ -126,7 +132,10 @@ body.topPage{
     }
   }
   .uptheader{
-    
+    @media screen and (max-width: var.$spbp) {
+        display: block;
+    }
+
     .uptblc{
         display: none;
     }
@@ -144,6 +153,7 @@ body.topPage{
         }
     }
     @media screen and (max-width: var.$spbp) {
+
         &.bg__header{
             .u-icon--menu{
                 color: #898989;
@@ -161,6 +171,15 @@ body.topPage{
                 background-image: url(var.$imgpath + "icon_mypage-gray.svg");
     
             }
+            .uptblc__inner {
+                background-color: #F7F8F8;
+
+            }
+            .uptblc{
+                background-color: #F7F8F8;
+
+            }
+        }
         }
         background-image: none;
         .uptblc{
@@ -189,7 +208,7 @@ body.topPage{
             border:none;
         }
         .uptheader__icons{
-            padding: 28px 3vw;
+            padding: 6vw 3vw;
         }
         .uptgmenu__btm{
             width: 101dvw;
@@ -198,7 +217,7 @@ body.topPage{
     }
 
   }
-}
+
 body.topPage{
 
     .uptplane__inner{
@@ -213,6 +232,7 @@ body.renewPage{
     
     .uptblc__inner{
         border: none;
+        background-color: #F7F8F8;
     }
     .uptplane__inner{
         border: none;
@@ -228,9 +248,12 @@ body.renewPage{
             margin: 0 auto;
             padding-right: 0;
             padding-left: 0;
+            padding-bottom: 16px;
         }
         .uptblc__inner{
             border: none;
+            background-color: #F7F8F8;
+
         }
         .uptheader__icons{
             .uptheader__icons--logo a{
@@ -258,9 +281,11 @@ body.renewPage{
 
             .uptblc__inner{
                 border:none;
+                background-color: #F7F8F8;
+
             }
             .uptheader__icons{
-                padding: 28px 3vw;
+                padding: 6vw 3vw;
             }
         }
     
