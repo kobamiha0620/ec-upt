@@ -744,7 +744,10 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
           
   
         <p class="item__details--jpname">アイカラーパレット</p>
-        <p class="item__details--price">¥2,420 <i>(tax in)</i></p>
+        <!-- <p class="item__details--price">¥2,420 <i>(tax in)</i></p> -->
+          <p class="item__details--price dashed">¥2,420 <i>(tax in)</i></p>
+          <p class="item__details--price sale"><span class="item__details--price-feature">10%OFF</span>¥2,178 <i>(tax in)</i></p>
+         
       </div>
       <div class="item__details--icon">
         
@@ -1670,14 +1673,22 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
           <img src="{{ theme_file_root_path }}/assets/images/uptorigin/icon_bpallete.png" alt="" width="" height="">
         </div>
       </div>
-
-
-
     </div>
-
 
     <div class="uptblc__buyblc--btn">
       <!-- 商品選択フォーム -->
+      
+        {% if variant.stock_item.stock == 0 %}
+
+      
+        <div id="btn-add" class="soldout">
+          <p class="txt">SOLD OUT</p><span></span>
+        </div>
+
+
+      
+        {% elsif variant.stock_item.stock > 0 %}
+      
       <form action="/shop/cart/add" method="post">
         <div style="display: none">
           <!-- 規格選択 -->
@@ -1700,9 +1711,11 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
         </button>
 
       </form>
-
+      
+      
+        {% endif %}
+        
     </div>
-
 
     <div class="item__intro">
       <picture>
@@ -1935,12 +1948,10 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
         
         
 
-
 <div class="cosme bcream" id="bcream">
 
   <section class="item">
     <!-- {% comment %} 商品名 {% endcomment %} -->
-
     <h1 class="item__name" id="item__name">SKIN BASE CREAM</h1>
 
     <!-- item__swiper -->
@@ -2112,8 +2123,21 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
     </div>
 
 
+
     <div class="uptblc__buyblc--btn">
       <!-- 商品選択フォーム -->
+      
+        {% if variant.stock_item.stock == 0 %}
+
+      
+        <div id="btn-add" class="soldout">
+          <p class="txt">SOLD OUT</p><span></span>
+        </div>
+
+
+      
+        {% elsif variant.stock_item.stock > 0 %}
+      
       <form action="/shop/cart/add" method="post">
         <div style="display: none">
           <!-- 規格選択 -->
@@ -2136,9 +2160,11 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
         </button>
 
       </form>
-
+      
+      
+        {% endif %}
+        
     </div>
-
 
     <div class="item__intro">
       <picture>
@@ -5624,7 +5650,7 @@ window.Constants={};Constants.line_redirect_url="/shop/products/upt_0004";Consta
 
 <div id="Lpbnr">
     <!-- <a href="https://uptofficial.jp/lp?u=official_lp_3trial" target="_blank" class="modal__link" id="js-modallink"> -->
-        <a href="https://uptofficial.jp/lp?u=official_2nd-anniversary" target="_blank" class="modal__link" id="js-modallink">
+        <a href="https://uptofficial.jp/lp?u=official_lp_3trial" target="_blank" class="modal__link" id="js-modallink">
             <div class="pc">
                 <picture>
                     <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/bnr_pc240517.webp" type="image/webp">

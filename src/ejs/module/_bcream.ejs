@@ -6,12 +6,10 @@ var pageinit = {
     imgpath = '{{ theme_file_root_path }}';
 %>
 
-
 <div class="cosme bcream" id="bcream">
 
   <section class="item">
     <!-- {% comment %} 商品名 {% endcomment %} -->
-
     <h1 class="item__name" id="item__name">SKIN BASE CREAM</h1>
 
     <!-- item__swiper -->
@@ -185,8 +183,21 @@ var pageinit = {
     </div>
 
 
+
     <div class="uptblc__buyblc--btn">
       <!-- 商品選択フォーム -->
+      <% if (pageinit.ecforce === 'true') { %>
+        {% if variant.stock_item.stock == 0 %}
+
+      <% } %>
+        <div id="btn-add" class="soldout">
+          <p class="txt">SOLD OUT</p><span></span>
+        </div>
+
+
+      <% if (pageinit.ecforce === 'true') { %>
+        {% elsif variant.stock_item.stock > 0 %}
+      <% } %>
       <form action="/shop/cart/add" method="post">
         <div style="display: none">
           <!-- 規格選択 -->
@@ -209,9 +220,11 @@ var pageinit = {
         </button>
 
       </form>
-
+      
+      <% if (pageinit.ecforce === 'true') { %>
+        {% endif %}
+        <% } %>
     </div>
-
 
     <div class="item__intro">
       <picture>

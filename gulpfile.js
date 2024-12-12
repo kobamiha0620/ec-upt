@@ -56,7 +56,7 @@ function compile(done) {
   function ejsmode(done){
     src(["./src/ejs/**/*.ejs", "!" + "./src/ejs/**/_*.ejs"])
     .pipe(plumber())
-    .pipe(ejs({}, {}, { ext: '.html' }))
+    .pipe(ejs({}, { }, { ext: '.html' }))
     .pipe(rename({ extname: ".html" })) //拡張子をhtmlに
     .pipe(gulp.dest("./")); //出力先
 

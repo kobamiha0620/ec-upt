@@ -2097,19 +2097,18 @@ h2.upthome__illust--ttl {
     }
 }
 // @include var.webpBg('.uptBg', './img/my-bg', 'png');
-@include var.webpBg('.upthome__fv', var.$imgpath +'fv_pc04');
-@include var.webpBg('.upthome__set--img-in', var.$imgpath +'home_setimg-pc');
-@include var.webpBg('.upthome__producer', var.$imgpath +'bg_producer2405-pc');
-@include var.webpBg('.upthome__washset--img', var.$imgpath +'img--washset-tp');
+@include var.webpBg('.upthome__fv', var.$imgpath (+"fv_pc04"));
+@include var.webpBg('.upthome__set--img-in', var.$imgpath (+"home_setimg-pc"));
+@include var.webpBg('.upthome__producer', var.$imgpath (+"bg_producer2405-pc"));
+@include var.webpBg('.upthome__washset--img', var.$imgpath (+"img--washset-tp"));
 
-@media screen and (max-width: 1080px) {
-    @include var.webpBg('.upthome__producer', var.$imgpath +'bg_producer2405-tb');
-
-}
+// @media screen and (max-width: 1080px) {
+//     @include var.webpBg('.upthome__producer', var.$imgpath +'bg_producer2405-tb');
+// }
 
 @media screen and (max-width: var.$spbp) {
-    @include var.webpBg('.upthome__fv', var.$imgpath +'fv_sp');
-    @include var.webpBg('.upthome__set--img-in', var.$imgpath +'home_setimg-sp', 'png');
-    @include var.webpBg('.upthome__producer', var.$imgpath +'bg_producer2405b-sp');
+    @include var.webpBg('.upthome__fv', var.$imgpath (+'fv_sp'));
+    @include var.webpBg('.upthome__set--img-in', var.$imgpath (+"home_setimg-sp"), 'png');
+    @include var.webpBg('.upthome__producer', var.$imgpath (+'bg_producer2405b-sp'));
 
 }

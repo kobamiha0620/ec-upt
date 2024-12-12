@@ -658,7 +658,7 @@ body.topPage {
 // @include var.webpBg('.upthome__washset--img', var.$imgpath +'img--washset-tp');
 
 @media screen and (max-width: 1080px) {
-  // @include var.webpBg('.upthome__producer', var.$imgpath +'bg_producer2405-tb');
+  @include var.webpBg('.upthome__producer', var.$imgpath (+"bg_producer2405-tb"));
 
 }
 

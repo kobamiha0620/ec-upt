@@ -340,7 +340,7 @@ func = async () => {
 //データを取る
 getData = () => {
     return new Promise(resolve => {
-        const url = 'https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_soldout_20241108144211/ec_force/assets/shoplist241121.json';
+        const url = 'https://ec-force.s3.amazonaws.com/uptofficialjp/uploads/themes/theme_soldout_20241108144211/ec_force/assets/shoplist241121c.json';
         fetch(url)
             .then(response => response.json())
             .then(data => formatJSON(data));

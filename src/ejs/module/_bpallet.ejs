@@ -159,14 +159,22 @@ var pageinit = {
           <img src="<%= imgpath %>/assets/images/uptorigin/icon_bpallete.png" alt="" width="" height="">
         </div>
       </div>
-
-
-
     </div>
-
 
     <div class="uptblc__buyblc--btn">
       <!-- 商品選択フォーム -->
+      <% if (pageinit.ecforce === 'true') { %>
+        {% if variant.stock_item.stock == 0 %}
+
+      <% } %>
+        <div id="btn-add" class="soldout">
+          <p class="txt">SOLD OUT</p><span></span>
+        </div>
+
+
+      <% if (pageinit.ecforce === 'true') { %>
+        {% elsif variant.stock_item.stock > 0 %}
+      <% } %>
       <form action="/shop/cart/add" method="post">
         <div style="display: none">
           <!-- 規格選択 -->
@@ -189,9 +197,11 @@ var pageinit = {
         </button>
 
       </form>
-
+      
+      <% if (pageinit.ecforce === 'true') { %>
+        {% endif %}
+        <% } %>
     </div>
-
 
     <div class="item__intro">
       <picture>

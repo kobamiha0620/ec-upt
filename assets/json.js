@@ -2,7 +2,7 @@
 
 // 起動時の処理
 window.addEventListener("load", ()=>{
-	fetch("./assets/shoplist2405.json")
+	fetch("./assets/shoplist241121.json")
     .then(response => {
         return response.json();
      })

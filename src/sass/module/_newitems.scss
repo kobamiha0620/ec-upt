@@ -38,7 +38,7 @@
 
   &__subttl {
     @include var.bg;
-    background-image: url(var.$imgpath + 'newitems_date.jpg');
+    background-image: url(var.$imgpath (+"newitems_date"));
     margin: 0 auto 41px;
     width: 324px;
     height: 38px;
@@ -276,21 +276,21 @@
 
 
 
-@include var.webpBg('.newitems__new', var.$imgpath +'newitems_ttl');
-@include var.webpBg('.newitems__txt', var.$imgpath +'img_newitemstxt');
-@include var.webpBg('.newitems__subttl', var.$imgpath +'newitems_date');
-@include var.webpBg('.basetxt01', var.$imgpath +'newitems__basetxt01');
-@include var.webpBg('.basetxt02', var.$imgpath +'newitems__basetxt02');
-@include var.webpBg('.basetxt03', var.$imgpath +'newitems__basetxt03');
-@include var.webpBg('.color01', var.$imgpath +'newitems__colortxt01');
-@include var.webpBg('.color02', var.$imgpath +'newitems__colortxt02');
-@include var.webpBg('.color03', var.$imgpath +'newitems__colortxt03');
-@include var.webpBg('.eyetxt01', var.$imgpath +'newitems__eyetxt01');
-@include var.webpBg('.eyetxt02', var.$imgpath +'newitems__eyetxt02');
-@include var.webpBg('.eyetxt03', var.$imgpath +'newitems__eyetxt03');
-@include var.webpBg('.riptxt01', var.$imgpath +'newitems__riptxt01');
-@include var.webpBg('.riptxt02', var.$imgpath +'newitems__riptxt02');
-@include var.webpBg('.riptxt03', var.$imgpath +'newitems__riptxt03');
+@include var.webpBg('.newitems__new', var.$imgpath (+'newitems_ttl'));
+@include var.webpBg('.newitems__txt',  var.$imgpath (+"img_newitemstxt"));
+@include var.webpBg('.newitems__subttl', var.$imgpath (+"newitems_date"));
+@include var.webpBg('.basetxt01', var.$imgpath (+"newitems__basetxt01"));
+
+@include var.webpBg('.basetxt03', var.$imgpath (+"newitems__basetxt03"));
+@include var.webpBg('.color01', var.$imgpath (+"newitems__colortxt01"));
+@include var.webpBg('.color02', var.$imgpath (+"newitems__colortxt02"));
+@include var.webpBg('.color03', var.$imgpath (+"newitems__colortxt03"));
+@include var.webpBg('.eyetxt01', var.$imgpath (+"newitems__eyetxt01"));
+@include var.webpBg('.eyetxt02', var.$imgpath (+'newitems__eyetxt02'));
+@include var.webpBg('.eyetxt03', var.$imgpath (+'newitems__eyetxt03'));
+@include var.webpBg('.riptxt01', var.$imgpath (+'newitems__riptxt01'));
+@include var.webpBg('.riptxt02', var.$imgpath (+'newitems__riptxt02'));
+@include var.webpBg('.riptxt03', var.$imgpath (+'newitems__riptxt03'));
 @media screen and (max-width: 1080px) {}
 
 @media screen and (max-width: var.$spbp) {}

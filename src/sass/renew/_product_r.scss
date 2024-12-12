@@ -10,6 +10,17 @@
         margin: 0 auto 150px;
         max-width: 440px;
         width: 100%;
+        &.soldout{
+            background-color: #888;
+            border-radius: 50px;
+            .txt{
+                margin: 0 auto;
+                text-align: center;
+                color: #FFF;
+                @include var.fz(20);
+                display: block;
+            }
+        }
     }
     @media screen and (max-width: var.$spbp) {
         max-width: 80vw;
@@ -218,6 +229,9 @@
             color: var.$brown;
             @include var.fz(23);
             line-height: 1;
+            &.dashed{
+                
+            }
         }
 
         &--icon {
@@ -1033,3 +1047,36 @@
 
 
 @media only screen and (min-width: var.$spbp) and (max-width: 1200px) {}
+.item{
+    &__details--price{
+        white-space: nowrap;
+        &.dashed{
+            text-decoration: line-through;
+        }
+        &.sale{
+            color: red;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            margin-top: 16px;
+            @include var.fz(26);
+            i{
+                font-size: 0.8em;
+                display: inline-block;
+                margin-left: 2px;
+            }
+        }
+    }
+    &__details--price-feature{
+        color: #FFF;
+        background-color: red;
+        padding: 3px 8px;
+        font-weight: normal;
+        font-size: 0.8em;
+        margin-right: 10px;
+    }
+    &__details--price-block{
+        display: flex;
+        align-items: center;
+    }
+}
