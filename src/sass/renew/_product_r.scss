@@ -1054,7 +1054,7 @@
             text-decoration: line-through;
         }
         &.sale{
-            color: red;
+            color: #AB0006;
             font-weight: bold;
             display: flex;
             align-items: center;
@@ -1069,7 +1069,7 @@
     }
     &__details--price-feature{
         color: #FFF;
-        background-color: red;
+        background-color: #AB0006;
         padding: 3px 8px;
         font-weight: normal;
         font-size: 0.8em;

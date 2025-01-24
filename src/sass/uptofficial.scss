@@ -937,3 +937,33 @@ main {
     height: 0;
     display: none;
 }
+
+.upt{
+    &__price{
+        &.dashed{
+            text-decoration: line-through;
+        }
+        &.sale{
+            color: #AB0006;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            margin-top: 16px;
+            i{
+                font-size: 0.6em!important;
+                display: inline-block;
+                margin-left: 2px;
+            }
+        }
+    }
+    &__price--feature{
+        color: #FFF;
+        background-color: #AB0006;
+        padding: 3px 8px;
+        font-weight: normal;
+        font-size: 0.6em;
+        margin-right: 10px;
+
+    }
+}
+

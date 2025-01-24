@@ -175,6 +175,8 @@
   
         <p class="item__details--jpname">アイカラーパレット</p>
         <p class="item__details--price">¥2,420 <i>(tax in)</i></p>
+        <!-- <p class="item__details--price dashed">¥2,420 <i>(tax in)</i></p>
+        <p class="item__details--price sale"><span class="item__details--price-feature">10%OFF</span>¥2,178 <i>(tax in)</i></p> -->
          
       </div>
       <div class="item__details--icon">
@@ -185,11 +187,12 @@
 
     <div class="item__details--inner aic">
       <ul class="item__details--color eye" id="itemDetails">
-        <li class="item__details--colorlist active" data-name="01 amber more" data-masterid="20" onclick="click01();"></li>
-        <li class="item__details--colorlist" data-name="02 melty mellow" data-masterid="21" onclick="click02();"></li>
-        <li class="item__details--colorlist" data-name="03 teddy coco" data-masterid="22" onclick="click03();""></li>
+        <li class="item__details--colorlist" data-name="01 amber more" data-masterid="20" onclick="click01();" id="dataSoldOut"></li>
+        <li class="item__details--colorlist active" data-name="02 melty mellow" data-masterid="21" onclick="click02();"></li>
+        <li class="item__details--colorlist" data-name="03 teddy coco" data-masterid="22" onclick="click03();"></li>
       </ul>
-      <p class="item__details--kikaku" id="itemsKikaku">01 amber more</p>
+      <!-- <p class="item__details--kikaku" id="itemsKikaku">01 amber more</p> -->
+      <p class="item__details--kikaku" id="itemsKikaku">02 melty mellow</p>
     </div>
 
 
@@ -198,10 +201,14 @@
 
   <div class="uptblc__buyblc--btn">
     <!-- 商品選択フォーム -->
+
+
+
     <form action="/shop/cart/add" method="post">
         <div style="display: none">
             <!-- 規格選択 -->
-            <input id="variant-id" type="hidden" name="variant_id" value="{{ product.master.id }}">
+            <!-- <input id="variant-id" type="hidden" name="variant_id" value="{{ product.master.id }}"> -->
+            <input id="variant-id" type="hidden" name="variant_id" value="21">
             <div id="option_types"></div>
 
             <!-- 数量選択 -->
@@ -215,14 +222,22 @@
         <!-- /display: none -->
 
         <!-- カート追加 -->
-        <button id="btn-add">
-            <p class="txt">購入はこちら</p><span></span>
+        <button id="btn-add" class="">
+            <p class="txt" id="js-soldout">ご購入はこちら</p><span></span>
         </button>
 
     </form>
 
 </div>
 
+<style>
+  #btn-add.disable span{
+      display: none
+  }
+  #btn-add.disable{
+    background-color: #888!important;
+  }
+</style>
 
   <div class="item__intro">
     <picture>
@@ -644,6 +659,9 @@
   
         <p class="item__details--jpname">ウォータリーシアーリップ</p>
         <p class="item__details--price">¥1,980 <i>(tax in)</i></p>
+        <!-- <p class="item__details--price dashed">¥1,980<i>(tax in)</i></p>
+        <p class="item__details--price sale"><span class="item__details--price-feature">10%OFF</span>¥1,782 <i>(tax in)</i></p> -->
+         
       </div>
       <div class="item__details--icon">
         <img src="{{ theme_file_root_path }}/assets/images/uptorigin/icon_rip.png" alt="" width="" height="">
@@ -1545,12 +1563,7 @@
           <img src="{{ theme_file_root_path }}/assets/images/uptorigin/icon_bcream.png" alt="" width="" height="">
         </div>
       </div>
-
-
-
     </div>
-
-
 
     <div class="uptblc__buyblc--btn">
       <!-- 商品選択フォーム -->
@@ -1940,6 +1953,8 @@
                          <p class="uptblc__buyblc--txt02">たっぷりの美容液で手早くうるおいをチャージし、肌トラブルを防いで<sup>※2</sup>みずみずしく透明感<sup>※3</sup>のあるお肌に。密着性に優れた柔らかいシートがお肌にフィットし、 CICA<sup>※4</sup>、浸透型<sup>※5</sup>ビタミンC誘導体<sup>※6</sup>、ナイアシンアミド<sup>※7</sup>、3種のセラミド<sup>※8</sup>など、美容液成分を届けます。</p>
 
                          <p class="upt__price uptblc__buyblc--txt03">¥1,540 (tax in)</p>
+                         <!-- <p class="upt__price uptblc__buyblc--txt03 dashed">¥1,540 (tax in)</p>
+                         <p class="upt__price uptblc__buyblc--txt03 sale"><span class="upt__price--feature">10%OFF</span>¥1,386 (tax in)</p> -->
 
                          <div class="uptblc__buyblc--btn">
                              <!-- 商品選択フォーム -->
@@ -2326,6 +2341,9 @@
                             しっとりうるおいを残しながらベタつかないUptのスキンケアシリーズの使い心地で、イランイランとゼラニウムの香りがふわっと香ります。癒されるハンドケア時間を。</p>
 
                          <p class="upt__price uptblc__buyblc--txt03">¥1,100 (tax in)</p>
+                         <!-- <p class="upt__price uptblc__buyblc--txt03 dashed">¥1,100 (tax in)</p>
+                         <p class="upt__price uptblc__buyblc--txt03 sale"><span class="upt__price--feature">10%OFF</span>¥990 (tax in)</p> -->
+
 
                          <div class="uptblc__buyblc--btn">
                              <!-- 商品選択フォーム -->
@@ -2516,9 +2534,11 @@
                         </div>
                     <h3 class="uptblc__buyblc--txt01">ウプト クレンジングセット</h3>
                     <p class="uptblc__buyblc--txt02">優しく落としてうるおいを守るクレンジングセット。体温でとろけるバームタイプのクレンジング料ときめ細やかでクリーミーなフォームタイプの洗顔料で、お肌に負担をかけずに摩擦レスなクレンジングを体感いただけます。</p>
-
                     <p class="upt__price uptblc__buyblc--txt03">¥5,280 (tax in)</p>
-                
+
+                    <!-- <p class="upt__price uptblc__buyblc--txt03 dashed">¥5,280 (tax in)</p>
+                    <p class="upt__price uptblc__buyblc--txt03 sale"><span class="upt__price--feature">10%OFF</span>¥4,752 (tax in)</p> -->
+
 
                     <div class="uptblc__buyblc--btn">
                         <!-- 商品選択フォーム -->
@@ -2704,8 +2724,10 @@
                             なじませるとオイルに変化し<br>
                             摩擦を抑えながらつるんと落とします。
                          </p>
+                         <p class="upt__price uptblc__buyblc--txt03 ">¥2,750 (tax in)</p>
 
-                         <p class="upt__price uptblc__buyblc--txt03">¥2,750 (tax in)</p>
+                         <!-- <p class="upt__price uptblc__buyblc--txt03 dashed">¥2,750 (tax in)</p>
+                         <p class="upt__price uptblc__buyblc--txt03 sale"><span class="upt__price--feature">10%OFF</span>¥2,475 (tax in)</p> -->
 
 
                          <div class="uptblc__buyblc--btn">
@@ -3006,6 +3028,9 @@
                          </p>
 
                          <p class="upt__price uptblc__buyblc--txt03">¥2,530 (tax in)</p>
+                         <!-- <p class="upt__price uptblc__buyblc--txt03 dashed">¥2,530 (tax in)</p>
+                         <p class="upt__price uptblc__buyblc--txt03 sale"><span class="upt__price--feature">10%OFF</span>¥2,277 (tax in)</p> -->
+
 
                          <div class="uptblc__buyblc--btn">
                              <!-- 商品選択フォーム -->
@@ -3062,6 +3087,9 @@
                     つめかえ用<br>〈洗顔料〉</p>
                 <p class="product__txt--italic">180mL</p>
                 <p class="upt__price uptblc__buyblc--txt03">¥1,760 (tax in)</p>
+                <!-- <p class="upt__price uptblc__buyblc--txt03 dashed">¥1,760 (tax in)</p>
+                <p class="upt__price uptblc__buyblc--txt03 sale"><span class="upt__price--feature">10%OFF</span>¥1,584 (tax in)</p> -->
+
                 <div class="smallcart">
                     <div class="uptblc__buyblc--btn">
                         <!-- 商品選択フォーム -->
@@ -3271,7 +3299,8 @@
                     <p class="uptblc__subsc--ttl">Uptスキンケアセット<br>定期お届けコースについて</p>
                     <p class="uptblc__subsc--txt01">Uptスキンケアセットの定期お届けコースにご興味をお持ちいただき、ありがとうございます。</p>
                     <p class="uptblc__subsc--txt01b">Uptでは、長くご愛用いただくことでより効果を実感していただくために、便利でお得な定期コースをご用意しております。</p>
-                    <p class="uptblc__subsc--txt02">初回トライアル<span class="italic">¥1,980(tax in)</span><br>
+                    <!-- <p class="uptblc__subsc--txt02">初回トライアル<span class="italic">¥1,980(tax in)</span><br> -->
+                    <p class="uptblc__subsc--txt02">初回トライアル<span class="italic">¥2,530(tax in)</span><br>
                         2回目以降<span class="italic">¥5,980(tax in)</span></p>
                 </div>
             </div>
@@ -3310,7 +3339,7 @@
                 <img src="{{ theme_file_root_path }}/assets/images/uptorigin/adv2_subsc.svg" alt="1" width="109px" height="89px">
             </p>
             <p class="uptsubsc__adv--txt">
-                初回は約7日間のトライアルセット1,980円（税込）で、2回目以降は3商品の本品を5,980円(税込)で通常の注文より26%お得にご購入いただけます。</p>
+                初回は約7日間のトライアルセット2,530円（税込）で、2回目以降は3商品の本品を5,980円(税込)で通常の注文より26%お得にご購入いただけます。</p>
         </li>
         <li>
             <p class="uptsubsc__adv--num">
@@ -3337,7 +3366,7 @@
             </picture>
         </div>
         <p class="uptsubsc__product--txt">
-            初回トライアル<span class="italic">¥1,980(tax in)</span><br>
+            初回トライアル<span class="italic">¥2,530(tax in)</span><br>
             2回目以降<span class="italic">¥5,980(tax in)</span>
         </p>
         <div class="uptsubsc__product--linkwrap">
@@ -3516,6 +3545,8 @@
                             肌に密度の⾼いうるおいを与えるスマートスキンケアセット。3つのアイテムをライン使いしていただくことで保湿⼒とテクスチャーの良さをより実感いただけます。</p>
 
                         <p class="upt__price uptblc__buyblc--txt03">¥7,590 (tax in)</p>
+                        <!-- <p class="upt__price uptblc__buyblc--txt03 dashed">¥7,590 (tax in)</p> -->
+                        <!-- <p class="upt__price uptblc__buyblc--txt03 sale"><span class="upt__price--feature">10%OFF</span>¥6,831 (tax in)</p> -->
 
 
                         <div class="uptblc__buyblc--btn">
@@ -3823,6 +3854,7 @@
                             適量を手に取り、両手でお顔全体を包み込むようにハンドプレスして優しくなじませて。これは今日の疲れを忘れるリラックスタイムだから。お肌が潤いで満ちるまで好きなだけ重ね付けして。
                         </p>
                         <p class="upt__price uptblc__buyblc--txt03">¥2,420 (tax in)</p>
+                        <!-- <p class="upt__price uptblc__buyblc--txt03 sale"><span class="upt__price--feature">10%OFF</span>¥2,178 (tax in)</p> -->
 
 
                         <div class="uptblc__buyblc--btn">
@@ -3967,7 +3999,8 @@
                         <p class="uptprodcut__subsc--ttl">Uptスキンケアセット<br>
                             定期お届けコースについて</p>
                         <p class="uptprodcut__subsc--txt">
-                            初回トライアル<span class="italic">¥1,980(tax in)</span><br>
+                            初回トライアル<span class="italic">¥2,530(tax in)</span><br>
+                            <!-- 初回トライアル<span class="italic">¥1,980(tax in)</span><br> -->
                             2回目以降<span class="italic">¥5,980(tax in)</span>
                         </p>
                         <a class="upthome__products--linkbtn" href="/shop/products/upt_skincareset-subscribe/">
@@ -4023,6 +4056,7 @@
                         <p class="uptblc__buyblc--single-txt">適量を手に取り、お顔全体に優しくなじませて。
                             乾燥やハリ不足を感じる部分には重ね付けを。首やデコルテまでしっかり保湿すれば、朝まで心地良い潤いを感じられるはず。</p>
                         <p class="upt__price uptblc__buyblc--txt03">¥2,420 (tax in)</p>
+                        <!-- <p class="upt__price uptblc__buyblc--txt03 sale"><span class="upt__price--feature">10%OFF</span>¥2,178 (tax in)</p> -->
 
 
                         <div class="uptblc__buyblc--btn">
@@ -4169,7 +4203,8 @@
                         <p class="uptprodcut__subsc--ttl">Uptスキンケアセット<br>
                             定期お届けコースについて</p>
                         <p class="uptprodcut__subsc--txt">
-                            初回トライアル<span class="italic">¥1,980(tax in)</span><br>
+                            初回トライアル<span class="italic">¥2,530(tax in)</span><br>
+                            <!-- 初回トライアル<span class="italic">¥1,980(tax in)</span><br> -->
                             2回目以降<span class="italic">¥5,980(tax in)</span>
                         </p>
                         <a class="upthome__products--linkbtn" href="/shop/products/upt_skincareset-subscribe/">
@@ -4227,6 +4262,9 @@
                             <p class="uptblc__buyblc--single-txt">手のひらで温めてからお顔全体になじませて。
                                 お顔全体に広げたあとに、ゼラニウム＆イランイランの香りを感じながら深呼吸をすると“わたし、今日もがんばった”って思える。</p>
                             <p class="upt__price uptblc__buyblc--txt03">¥2,750 (tax in)</p>
+                            <!-- <p class="upt__price uptblc__buyblc--txt03 dashed">¥2,750 (tax in)</p> -->
+
+                            <!-- <p class="upt__price uptblc__buyblc--txt03 sale"><span class="upt__price--feature">10%OFF</span>¥2,475 (tax in)</p> -->
 
 
                             <div class="uptblc__buyblc--btn">
@@ -4373,7 +4411,8 @@
                         <p class="uptprodcut__subsc--ttl">Uptスキンケアセット<br>
                             定期お届けコースについて</p>
                         <p class="uptprodcut__subsc--txt">
-                            初回トライアル<span class="italic">¥1,980(tax in)</span><br>
+                            初回トライアル<span class="italic">¥2,530(tax in)</span><br>
+                            <!-- 初回トライアル<span class="italic">¥1,980(tax in)</span><br> -->
                             2回目以降<span class="italic">¥5,980(tax in)</span>
                         </p>
                         <a class="upthome__products--linkbtn" href="/shop/products/upt_skincareset-subscribe/">
@@ -5081,15 +5120,15 @@
         <a href="https://uptofficial.jp/lp?u=official_lp_3trial" target="_blank" class="modal__link" id="js-modallink">
             <div class="pc">
                 <picture>
-                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/bnr_pc240517.webp" type="image/webp">
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/bnr_pc240517.png" alt="安達祐実" width="1680"
+                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/bnr_subscript2501.webp" type="image/webp">
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/bnr_subscript2501.png" alt="安達祐実" width="1680"
                         height="242">
                 </picture>
             </div>
             <div class="sp">
                 <picture>
-                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/bnr_sp240517.webp" type="image/webp">
-                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/bnr_sp240517.png" alt="安達祐実" width="1360"
+                    <source srcset="{{ theme_file_root_path }}/assets/images/uptorigin/bnr_subscript2501_sp.webp" type="image/webp">
+                    <img src="{{ theme_file_root_path }}/assets/images/uptorigin/bnr_subscript2501_sp.png" alt="安達祐実" width="1360"
                         height="368">
                 </picture>
             </div>

@@ -55,7 +55,10 @@ window.addEventListener("load", () => {
   const tabname = document.getElementById('itemsKikaku');
   const tabs = document.querySelectorAll(".item__details--colorlist");
   const variantId = document.getElementById('variant-id');
-
+  
+  const soldout = document.getElementById('js-soldout');
+  const btnAdd = document.getElementById('btn-add');
+  const tabDataSoludOut = document.getElementById('dataSoldOut');
   tabs.forEach(function(tab) {
       tab.addEventListener("click", function() {
         let txtNeme = tab.dataset.name;
@@ -65,6 +68,22 @@ window.addEventListener("load", () => {
         variantId.value = txtID;
         // tabname.innerHTML = `${document.documentElement.innerHTML.replace(
         // )}`;
+
+        //追記部分 --売り切れ対応ここを消す
+        if(tabDataSoludOut){
+          if( txtID == 20){
+            soldout.innerHTML = 'SOLD OUT';
+            btnAdd.classList.add('disable');
+            btnAdd.disabled = "disabled";
+           }else{
+             btnAdd.classList.remove('disable');
+             soldout.innerHTML = '購入はこちら';
+             btnAdd.disabled = false;
+           }
+        }
+
+
+
         tabs.forEach(t => t.classList.remove('active'));
         this.classList.add('active');
       });

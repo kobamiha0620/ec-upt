@@ -2,7 +2,7 @@
 var pageinit = {
   ecforce : 'true',
 };
-    imgpath =  '';   
+    // imgpath =  '';   
     imgpath = '{{ theme_file_root_path }}';
 %>
 
@@ -162,6 +162,8 @@ var pageinit = {
   
         <p class="item__details--jpname">アイカラーパレット</p>
         <p class="item__details--price">¥2,420 <i>(tax in)</i></p>
+        <!-- <p class="item__details--price dashed">¥2,420 <i>(tax in)</i></p>
+        <p class="item__details--price sale"><span class="item__details--price-feature">10%OFF</span>¥2,178 <i>(tax in)</i></p> -->
          
       </div>
       <div class="item__details--icon">
@@ -172,11 +174,12 @@ var pageinit = {
 
     <div class="item__details--inner aic">
       <ul class="item__details--color eye" id="itemDetails">
-        <li class="item__details--colorlist active" data-name="01 amber more" data-masterid="20" onclick="click01();"></li>
-        <li class="item__details--colorlist" data-name="02 melty mellow" data-masterid="21" onclick="click02();"></li>
-        <li class="item__details--colorlist" data-name="03 teddy coco" data-masterid="22" onclick="click03();""></li>
+        <li class="item__details--colorlist" data-name="01 amber more" data-masterid="20" onclick="click01();" id="dataSoldOut"></li>
+        <li class="item__details--colorlist active" data-name="02 melty mellow" data-masterid="21" onclick="click02();"></li>
+        <li class="item__details--colorlist" data-name="03 teddy coco" data-masterid="22" onclick="click03();"></li>
       </ul>
-      <p class="item__details--kikaku" id="itemsKikaku">01 amber more</p>
+      <!-- <p class="item__details--kikaku" id="itemsKikaku">01 amber more</p> -->
+      <p class="item__details--kikaku" id="itemsKikaku">02 melty mellow</p>
     </div>
 
 
@@ -185,10 +188,14 @@ var pageinit = {
 
   <div class="uptblc__buyblc--btn">
     <!-- 商品選択フォーム -->
+
+
+
     <form action="/shop/cart/add" method="post">
         <div style="display: none">
             <!-- 規格選択 -->
-            <input id="variant-id" type="hidden" name="variant_id" value="{{ product.master.id }}">
+            <!-- <input id="variant-id" type="hidden" name="variant_id" value="{{ product.master.id }}"> -->
+            <input id="variant-id" type="hidden" name="variant_id" value="21">
             <div id="option_types"></div>
 
             <!-- 数量選択 -->
@@ -202,14 +209,22 @@ var pageinit = {
         <!-- /display: none -->
 
         <!-- カート追加 -->
-        <button id="btn-add">
-            <p class="txt">購入はこちら</p><span></span>
+        <button id="btn-add" class="">
+            <p class="txt" id="js-soldout">ご購入はこちら</p><span></span>
         </button>
 
     </form>
 
 </div>
 
+<style>
+  #btn-add.disable span{
+      display: none
+  }
+  #btn-add.disable{
+    background-color: #888!important;
+  }
+</style>
 
   <div class="item__intro">
     <picture>
